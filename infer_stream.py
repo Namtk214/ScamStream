@@ -90,7 +90,7 @@ class StreamingInferenceEngine:
         mask_t = enc["attention_mask"]  # [1, L]
 
         # Thêm vào buffer
-        buf = self._buffers.setdefault(dialogue_id, {"ids": [], "masks": [], "p_agg": 0.0})
+        buf = self._buffers.setdefault(dialogue_id, {"ids": [], "masks": []})
         buf["ids"].append(ids_t.squeeze(0))
         buf["masks"].append(mask_t.squeeze(0))
 
@@ -117,13 +117,8 @@ class StreamingInferenceEngine:
         turn_mask  = turn_mask.to(self.device)
 
         output = self.model(input_ids, attn_masks, turn_mask)
-        turn_probs = output["turn_probs"][0, :T].cpu().tolist()  # [T]
-        q_t = turn_probs[-1]   # per-turn evidence
-
-        # Online Noisy-OR update: p_agg = 1 - (1 - p_prev) * (1 - q_t)
-        p_agg_prev = buf["p_agg"]
-        p_agg = 1.0 - (1.0 - p_agg_prev) * (1.0 - q_t)
-        buf["p_agg"] = p_agg
+        q_t   = output["turn_probs"][0, T - 1].item()   # per-turn evidence
+        p_agg = output["p_agg"][0, T - 1].item()        # Noisy-OR cumulative (from model)
 
         turn_index = T - 1
 
@@ -133,7 +128,7 @@ class StreamingInferenceEngine:
             "p_agg":          p_agg,
             "is_scam":        p_agg >= self.cfg.alert_thresh,
             "probability":    p_agg,       # backward compat alias
-            "all_turn_probs": turn_probs,
+            "all_turn_probs": output["turn_probs"][0, :T].cpu().tolist(),
         }
 
     def predict_conversation(self, turns: list, dialogue_id: str = "default") -> list:

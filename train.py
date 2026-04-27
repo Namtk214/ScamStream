@@ -209,25 +209,19 @@ def _preview_stream(model, val_ds, val_dlg, device, cfg, max_samples=2):
             "turn_mask":  item["turn_mask"].unsqueeze(0).to(device),
         }
         output = model(batch["input_ids"], batch["attn_masks"], batch["turn_mask"])
-        probs  = output["turn_probs"][0, :n].cpu().tolist()
-        d_prob = output["dialogue_probs"][0].item()
+        probs  = output["turn_probs"][0, :n].cpu().tolist()    # per-turn evidence q_t
+        p_agg_list = output["p_agg"][0, :n].cpu().tolist()      # Noisy-OR cumulative
+        d_prob = output["dialogue_probs"][0].item()             # = p_agg at last turn
         pred   = "scam" if d_prob >= cfg.threshold else "harmless"
 
-        # Compute Noisy-OR p_agg for display
-        p_agg = 0.0
-        p_agg_list = []
-        for q in probs:
-            p_agg = 1.0 - (1.0 - p_agg) * (1.0 - q)
-            p_agg_list.append(p_agg)
-
         status = "✓" if pred == label else "✗"
-        print(f"    [{status}] true={label:8s} pred={pred:8s} p_final={d_prob:.3f} p_agg={p_agg_list[-1]:.3f} ({n} turns)")
+        print(f"    [{status}] true={label:8s} pred={pred:8s} p_agg={d_prob:.3f} ({n} turns)")
         for t in range(n):
-            p = probs[t]
+            q  = probs[t]
             pa = p_agg_list[t]
             alert = " ← ALERT" if pa >= cfg.threshold else ""
             text  = turns[t][:50]
-            print(f"      T{t+1:02d} q={p:.3f} p_agg={pa:.3f}{alert}  \"{text}{'...' if len(turns[t]) > 50 else ''}\"")
+            print(f"      T{t+1:02d} q={q:.3f} p_agg={pa:.3f}{alert}  \"{text}{'...' if len(turns[t]) > 50 else ''}\"")
         print()
 
 
@@ -338,9 +332,9 @@ def train(cfg: M1Config = None, dataset_option: str = None,
     print(f"\nLoading model: {cfg.model_name}")
     model = M1Classifier(cfg).to(device)
 
-    print(f"Loss: Focal(γ={cfg.focal_gamma}) × U-shape(floor={cfg.w_floor}) × class_w(harm={cfg.class_weight_harmless})")
+    print(f"Loss: Noisy-OR Focal(γ={cfg.focal_gamma}) × U-shape(floor={cfg.w_floor}) × class_w(harm={cfg.class_weight_harmless})")
     if cfg.weighted_lambda > 0:
-        print(f"      + Weighted Prefix auxiliary (λ={cfg.weighted_lambda}) — Noisy-OR cumulative BCE")
+        print(f"      + Weighted Prefix auxiliary (λ={cfg.weighted_lambda}) — FocalBCE on p_agg prefixes")
     else:
         print(f"      Weighted Prefix auxiliary: OFF (λ=0)")
     print(f"Trainable params (encoder frozen): {model.count_trainable_params():,}")

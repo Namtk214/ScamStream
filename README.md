@@ -1,6 +1,6 @@
 # ScamStream — Streaming Scam Call Detection
 
-Mô hình phát hiện cuộc gọi lừa đảo theo thời gian thực, sử dụng **HaLong Embedding** + **Causal CrossTurnAttention** + **Focal U-shape Loss** + **Weighted Prefix Auxiliary Loss (Noisy-OR)**.
+Mô hình phát hiện cuộc gọi lừa đảo theo thời gian thực, sử dụng **HaLong Embedding** + **Causal CrossTurnAttention** + **Noisy-OR Focal Loss** + **U-shape Weighted Prefix Auxiliary Loss**.
 
 ## Architecture
 
@@ -10,34 +10,46 @@ Turn text → HaLong Encoder ([CLS]) → Linear Proj → CrossTurnAttention (cau
 
 - **Encoder**: `contextboxai/halong_embedding` — Vietnamese pretrained embedding, không cần word segmentation
 - **CrossTurnAttention**: Causal attention — turn `t` chỉ attend tới các turn trước đó `0..t-1`
-- **Loss**: `L_total = L_focal_ushape + λ × L_weighted_prefix`
+- **Loss**: `L_total = L_main + λ × L_aux`
 
-### 1) Focal × U-shape Loss (Main)
+### 1) Noisy-OR Focal Loss (Main)
+
+Mô hình tính **Noisy-OR cumulative probability** trên toàn bộ dialogue:
+
+```
+q_t  = sigmoid(logit_t)                              ← evidence per-turn
+p_agg_t = 1 − ∏_{i=0}^{t} (1 − q_i)                 ← cumulative, monotonically non-decreasing
+```
+
+**Main loss** = FocalBCE trên `p_agg_final` (turn cuối cùng):
+
+```
+L_main = FocalBCE(p_agg_final, y) × class_weight
+```
 
 | Cơ chế | Công thức | Vai trò |
 |--------|-----------|---------|
 | **Focal** | `(1-p_t)^γ` | Focus vào hard examples, down-weight easy |
-| **U-shape** | `w(t,N) = (2t/N - 1)² × (1 - w_floor) + w_floor` | Trọng số cao ở đầu/cuối dialogue, thấp ở giữa |
+| **Noisy-OR** | `p_agg = 1 − ∏(1 − q_i)` | Tích lũy evidence qua các turns |
 | **Class weight** | `class_weight_harmless = 8.0` | Cân bằng imbalance scam/harmless ở sample level |
 
-### 2) Weighted Prefix Auxiliary Loss (from Streaming-Bert Noisy-OR)
+### 2) U-shape Weighted Prefix Auxiliary Loss
 
-Coi `turn_probs` là evidence probabilities `q_t`, tính xác suất tích lũy bằng **Noisy-OR**:
-
-```
-p_t_agg = 1 − ∏_{i=0}^{t} (1 − q_i)    ← cumulative, monotonically non-decreasing
-```
-
-Sau đó apply **weighted BCE** trên từng prefix:
+Apply **FocalBCE** trên `p_agg` tại **mỗi prefix** với trọng số U-shape:
 
 ```
-L_prefix = Σ (2t/N) × BCE(p_t_agg, y)    ← weight tuyến tính tăng (1-based)
+w(t, N) = (2t/N - 1)² × (1 - w_floor) + w_floor
+L_aux  = Σ w(t,N) × FocalBCE(p_agg_t, y)  /  Σ w(t,N)
 ```
 
-- **Turn đầu**: phạt nhẹ (model thiếu info)
-- **Turn cuối**: phạt nặng (đủ info mà vẫn sai)
-- **λ = 0**: tắt auxiliary → trở về pure Focal U-shape
-- **λ = 0.5** (default): kết hợp cả hai → thúc đẩy model predict đúng sớm dần
+| Vị trí | Weight | Ý nghĩa |
+|--------|--------|---------|
+| **Turn đầu** (t=0) | 1.0 (max) | Phạt nặng nếu miss sớm |
+| **Turn giữa** (t=N/2) | w_floor (0.1) | Phạt nhẹ — model thiếu info |
+| **Turn cuối** (t=N) | 1.0 (max) | Phạt nặng nếu đủ info mà vẫn sai |
+
+- **λ = 0**: tắt auxiliary → chỉ dùng Noisy-OR Focal loss
+- **λ = 0.5** (default): kết hợp cả hai → thúc đẩy early detection
 
 ### Streaming Inference — Noisy-OR Online
 
@@ -55,8 +67,8 @@ p_agg_t = 1 − (1 − p_agg_{t-1}) × (1 − q_t)    ← chỉ cần q_t mới 
 ```
 ScamStream/
 ├── config.py              # M1Config — hyperparameters & paths
-├── model.py               # M1Classifier, CrossTurnAttention, Focal U-shape Loss,
-│                          #   Weighted Prefix Auxiliary Loss (Noisy-OR)
+├── model.py               # M1Classifier, CrossTurnAttention, Noisy-OR Focal Loss,
+│                          #   U-shape Weighted Prefix Auxiliary Loss
 ├── dataset.py             # DialogueDataset, collate_fn, truncate_augment
 ├── train.py               # Training loop + streaming preview (q_t + p_agg)
 ├── test.py                # Evaluation & streaming report (per-turn + Noisy-OR metrics)
@@ -153,8 +165,7 @@ python test.py --model-dir outputs/best_model
 Output bao gồm:
 - **Dialogue-level metrics**: Accuracy, F1, AUROC
 - **Streaming metrics (per-turn)**: Detection rate, Avg delay, False alarm rate
-- **Noisy-OR p_agg metrics**: Detection rate (p_agg), False alarm (p_agg), Avg alert turn (p_agg)
-- **Early detection stats**: Median/Mean alert turn, Alert in 1st half
+- **Early detection stats**: Avg alert turn (p_agg), Median/Mean alert turn, Alert in 1st half
 - **Error analysis Excel**: Từng turn hiển thị `q_t` (evidence) + `p_agg` (Noisy-OR cumulative)
 
 ### 4. Streaming Inference
@@ -201,6 +212,6 @@ Bạn có thể thử các cấu hình loss khác nhau bằng cách thay đổi 
 
 | Cấu hình | `weighted_lambda` | Mô tả |
 |----------|-------------------|-------|
-| **Focal U-shape only** | `0.0` | Loss gốc, không có auxiliary |
-| **Focal + Prefix (default)** | `0.5` | Kết hợp cả hai, thúc đẩy early detection |
+| **Noisy-OR Focal only** | `0.0` | Chỉ main loss = FocalBCE(p_agg_final, y) |
+| **Focal + U-shape Prefix (default)** | `0.5` | Kết hợp cả hai, thúc đẩy early detection |
 | **Strong Prefix** | `1.0` | Đánh trọng số auxiliary bằng main loss |

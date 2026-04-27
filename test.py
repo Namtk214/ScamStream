@@ -28,17 +28,6 @@ from model import M1Classifier
 from metrics import compute_streaming_metrics, print_streaming_report, _first_alert_turn
 
 
-def _compute_p_agg(turn_probs):
-    """Compute Noisy-OR cumulative probability from per-turn probs."""
-    import numpy as np
-    p_agg = 0.0
-    p_agg_list = []
-    for q in turn_probs:
-        p_agg = 1.0 - (1.0 - p_agg) * (1.0 - float(q))
-        p_agg_list.append(p_agg)
-    return np.array(p_agg_list)
-
-
 @torch.no_grad()
 def run_inference(model, dataset, raw, device, threshold):
     model.eval()
@@ -66,8 +55,9 @@ def run_inference(model, dataset, raw, device, threshold):
             all_labels.append(int(labels[b].item()))
             all_d_probs.append(float(output["dialogue_probs"][b].item()))
             t_probs = output["turn_probs"][b, :n].cpu().numpy()
+            p_agg   = output["p_agg"][b, :n].cpu().numpy()
             all_t_probs.append(t_probs)
-            all_p_agg.append(_compute_p_agg(t_probs))
+            all_p_agg.append(p_agg)
 
     metrics = compute_streaming_metrics(all_labels, all_d_probs, all_t_probs, threshold)
     metrics["loss"] = total_loss / max(n_dlg, 1)
@@ -268,35 +258,23 @@ def main():
         model, dataset, raw, device, args.threshold
     )
 
-    # Add Noisy-OR p_agg based streaming metrics
-    p_agg_detected, p_agg_fa = 0, 0
-    num_scam = sum(1 for l in all_labels if l == 1)
-    num_harm = sum(1 for l in all_labels if l == 0)
-    p_agg_alert_turns = []
-    for label, pa_list in zip(all_labels, all_p_agg):
-        first_alert = None
-        for t, pa in enumerate(pa_list):
-            if pa >= args.threshold:
-                first_alert = t
-                break
-        if label == 1 and first_alert is not None:
-            p_agg_detected += 1
-            p_agg_alert_turns.append(first_alert)
-        elif label == 0 and first_alert is not None:
-            p_agg_fa += 1
-    metrics["p_agg_detection_rate"]   = p_agg_detected / max(num_scam, 1)
-    metrics["p_agg_false_alarm_rate"] = p_agg_fa / max(num_harm, 1)
-    if p_agg_alert_turns:
-        metrics["p_agg_avg_alert_turn"] = float(np.mean(p_agg_alert_turns))
-
     print_streaming_report(metrics)
 
-    # Print Noisy-OR p_agg specific metrics
-    print(f"\n  Noisy-OR p_agg Streaming Metrics:")
-    print(f"    Detection rate (p_agg):   {metrics['p_agg_detection_rate']:.4f} ({p_agg_detected}/{num_scam})")
-    print(f"    False alarm (p_agg):      {metrics['p_agg_false_alarm_rate']:.4f} ({p_agg_fa}/{num_harm})")
-    if "p_agg_avg_alert_turn" in metrics:
-        print(f"    Avg alert turn (p_agg):   {metrics['p_agg_avg_alert_turn']:.2f}")
+    # dialogue_probs is already p_agg_final (Noisy-OR at last turn)
+    # so the standard streaming metrics are already based on Noisy-OR
+    print(f"\n  Note: dialogue_probs = p_agg_final (Noisy-OR at last turn)")
+
+    # Compute early detection stats from p_agg
+    p_agg_alert_turns = []
+    for label, pa_list in zip(all_labels, all_p_agg):
+        if label == 1:  # scam
+            for t, pa in enumerate(pa_list):
+                if pa >= args.threshold:
+                    p_agg_alert_turns.append(t)
+                    break
+    if p_agg_alert_turns:
+        metrics["p_agg_avg_alert_turn"] = float(np.mean(p_agg_alert_turns))
+        print(f"  p_agg avg alert turn: {metrics['p_agg_avg_alert_turn']:.2f}")
 
     os.makedirs(out_dir, exist_ok=True)
     save_metrics_json(metrics, os.path.join(out_dir, "test_metrics.json"))
