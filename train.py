@@ -177,9 +177,20 @@ def _wandb_val_log(wandb_run, m, epoch, tr_loss):
     wandb_run.log(log)
 
 
+# ── Dataset option mapping ─────────────────────────────────────────
+
+DATASET_OPTIONS = {
+    "real":      {"train": "real_1.json",         "test": "real_2.json"},
+    "synthetic": {"train": "synthetic_data.json",  "test": "real_2.json"},
+    "tele":      {"train": "tele_data.json",       "test": "real_2.json"},
+    "real_syn":  {"train": "real_syn.json",        "test": "real_2.json"},
+    "real_tele": {"train": "real_tele.json",       "test": "real_2.json"},
+}
+
+
 # ── Main training ──────────────────────────────────────────────────
 
-def train(cfg: M1Config = None):
+def train(cfg: M1Config = None, dataset_option: str = None):
     if cfg is None:
         cfg = M1Config()
 
@@ -189,16 +200,27 @@ def train(cfg: M1Config = None):
     if device.type == "cuda":
         print(f"GPU: {torch.cuda.get_device_name(0)}")
 
-    # ── Load data — val = test.json ──
-    train_path = os.path.join(cfg.data_dir, "train.json")
-    val_path   = os.path.join(cfg.data_dir, "test.json")   # dùng test làm val
+    # ── Load data ──
+    if dataset_option and dataset_option in DATASET_OPTIONS:
+        # Use dataset/ directory with the selected option
+        ds_files  = DATASET_OPTIONS[dataset_option]
+        train_path = os.path.join(cfg.dataset_dir, ds_files["train"])
+        val_path   = os.path.join(cfg.dataset_dir, ds_files["test"])
+        print(f"\nDataset option: {dataset_option}")
+        print(f"  Train: {ds_files['train']}")
+        print(f"  Test:  {ds_files['test']}")
+    else:
+        # Default: use data_dir/train.json + test.json (legacy behavior)
+        train_path = os.path.join(cfg.data_dir, "train.json")
+        val_path   = os.path.join(cfg.data_dir, "test.json")
+        print(f"\nUsing default data from {cfg.data_dir}")
 
     for p in [train_path, val_path]:
         if not os.path.exists(p):
             print(f"ERROR: {p} not found.")
             return
 
-    print(f"\nLoading data from {cfg.data_dir}")
+    print(f"\nLoading data...")
     train_dlg = load_json(train_path)
     val_dlg   = load_json(val_path)
 
@@ -209,7 +231,7 @@ def train(cfg: M1Config = None):
         harm_n    = sum(1 for d in train_dlg if d["label"] == "harmless")
         print(f"Truncate aug: {before} → {len(train_dlg)} (scam={scam_n}, harmless={harm_n})")
 
-    print(f"Train: {len(train_dlg)} | Val (test.json): {len(val_dlg)}")
+    print(f"Train: {len(train_dlg)} | Test: {len(val_dlg)}")
 
     # ── Tokenizer ──
     print(f"\nLoading tokenizer: {cfg.model_name}")
@@ -348,6 +370,14 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Train M1: HaLong + CrossTurnAttention")
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--run-name",   default=None, help="Wandb run name")
+    parser.add_argument("--dataset",    default=None,
+                        choices=list(DATASET_OPTIONS.keys()),
+                        help="Dataset option: "
+                             "real (Real-1→Real-2), "
+                             "synthetic (Synthetic→Real-2), "
+                             "tele (Tele→Real-2), "
+                             "real_syn (Real-1+Synthetic→Real-2), "
+                             "real_tele (Real-1+Tele→Real-2)")
     parser.add_argument("--debug",      action="store_true",
                         help="2 epochs, batch_size=1, accum=4, no aug")
     parser.add_argument("--small",      action="store_true",
@@ -361,6 +391,10 @@ if __name__ == "__main__":
 
     if args.output_dir:
         cfg.output_dir = args.output_dir
+    elif args.dataset:
+        # Auto-set output dir based on dataset option
+        cfg.output_dir = os.path.join(_dir, "outputs", args.dataset)
+
     if args.debug:
         cfg.num_epochs       = 2
         cfg.batch_size       = 4
@@ -373,4 +407,4 @@ if __name__ == "__main__":
         cfg.batch_size = 2
         print("SMALL MODE: 5 epochs, batch_size=2")
 
-    train(cfg)
+    train(cfg, dataset_option=args.dataset)

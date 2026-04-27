@@ -3,6 +3,7 @@ import os
 
 BASELINE2_ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(os.path.dirname(BASELINE2_ROOT), "data", "data_processed")
+DATASET_DIR = os.path.join(BASELINE2_ROOT, "dataset")
 
 
 @dataclass
@@ -49,4 +50,5 @@ class M1Config:
 
     # Paths
     data_dir: str = field(default_factory=lambda: DATA_DIR)
+    dataset_dir: str = field(default_factory=lambda: DATASET_DIR)
     output_dir: str = field(default_factory=lambda: os.path.join(BASELINE2_ROOT, "outputs"))
