@@ -64,6 +64,14 @@ Dataset phải là file JSON với format sau:
 
 ## Quick Start
 
+### 0. Loading dataset
+
+```bash
+# Load dataset từ file Drive
+gdown --folder 1GWNfWB_ZAAdSSI4DaWB4DjDhTqsa5vPu
+
+```
+
 ### 1. Training
 
 ```bash
@@ -123,7 +131,7 @@ python infer_stream.py --model-dir outputs/best_model
 ## Requirements
 
 ```bash
-pip install torch transformers numpy scikit-learn openpyxl
+pip install torch transformers numpy scikit-learn openpyxl gdown
 ```
 
 - **Python 3.8+**
