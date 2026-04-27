@@ -62,6 +62,17 @@ Dataset phải là file JSON với format sau:
 | **Tele-data** | Dữ liệu tele (train+val+test gộp lại) | 3,600 (1,800 scam, 1,800 harmless) |
 | **Synthetic-data** | Dữ liệu synthetic (v1_v5 + v2 + v3) | 700 (445 scam, 255 harmless) |
 
+## Requirements
+
+```bash
+pip install torch transformers numpy scikit-learn openpyxl gdown
+```
+
+- **Python 3.8+**
+- **PyTorch** & **Transformers**: Core models
+- **numpy** & **scikit-learn**: Tính toán metrics (F1, Precision, Recall, v.v.)
+- **openpyxl**: Đọc file Excel (dùng khi chạy `prepare_datasets.py`)
+
 ## Quick Start
 
 ### 0. Loading dataset
@@ -128,13 +139,4 @@ python infer_stream.py --model-dir outputs/best_model
 | `unfreeze_epoch` | 3 | Epoch to unfreeze encoder (lr × 0.1) |
 | `truncate_aug` | True | Truncated conversation augmentation |
 
-## Requirements
 
-```bash
-pip install torch transformers numpy scikit-learn openpyxl gdown
-```
-
-- **Python 3.8+**
-- **PyTorch** & **Transformers**: Core models
-- **numpy** & **scikit-learn**: Tính toán metrics (F1, Precision, Recall, v.v.)
-- **openpyxl**: Đọc file Excel (dùng khi chạy `prepare_datasets.py`)
