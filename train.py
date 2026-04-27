@@ -155,6 +155,74 @@ def _print_val_metrics(epoch, elapsed, tr_loss, m):
     print(f"    False alarm rate: {m['false_alarm_rate']:.4f}  ({m['num_false_alarms']}/{m['num_harmless']})")
 
 
+def _dataset_overview(train_dlg, val_dlg):
+    """Print dataset overview before training."""
+    print(f"\n{'='*60}")
+    print(f"DATASET OVERVIEW")
+    print(f"{'='*60}")
+    for name, data in [("Train", train_dlg), ("Test", val_dlg)]:
+        scam_n    = sum(1 for d in data if d["label"] == "scam")
+        harm_n    = sum(1 for d in data if d["label"] == "harmless")
+        turn_lens = [len(d["turns"]) for d in data]
+        avg_turns = np.mean(turn_lens) if turn_lens else 0
+        min_turns = min(turn_lens) if turn_lens else 0
+        max_turns = max(turn_lens) if turn_lens else 0
+        print(f"  {name:6s}: {len(data):5d} dialogues  "
+              f"(scam={scam_n}, harmless={harm_n})  "
+              f"turns: avg={avg_turns:.1f}, min={min_turns}, max={max_turns}")
+    print(f"{'='*60}")
+
+
+@torch.no_grad()
+def _preview_stream(model, val_ds, val_dlg, device, cfg, max_samples=2):
+    """Streaming inference preview on random validation samples after each epoch."""
+    model.eval()
+    if len(val_dlg) == 0:
+        return
+
+    # Try to pick 1 scam + 1 harmless
+    scam_indices    = [i for i, d in enumerate(val_dlg) if d["label"] == "scam"]
+    harmless_indices = [i for i, d in enumerate(val_dlg) if d["label"] == "harmless"]
+    selected = []
+    if scam_indices:
+        selected.append(random.choice(scam_indices))
+    if harmless_indices:
+        selected.append(random.choice(harmless_indices))
+    # Fill remaining slots
+    while len(selected) < max_samples and len(val_dlg) > len(selected):
+        idx = random.randint(0, len(val_dlg) - 1)
+        if idx not in selected:
+            selected.append(idx)
+
+    print(f"\n  -- Streaming Inference Preview --")
+    for idx in selected:
+        dlg   = val_dlg[idx]
+        label = dlg["label"]
+        turns = dlg["turns"]
+        n     = len(turns)
+
+        # Build full input for all turns at once
+        item  = val_ds[idx]
+        batch = {
+            "input_ids":  item["input_ids"].unsqueeze(0).to(device),
+            "attn_masks": item["attn_masks"].unsqueeze(0).to(device),
+            "turn_mask":  item["turn_mask"].unsqueeze(0).to(device),
+        }
+        output = model(batch["input_ids"], batch["attn_masks"], batch["turn_mask"])
+        probs  = output["turn_probs"][0, :n].cpu().tolist()
+        d_prob = output["dialogue_probs"][0].item()
+        pred   = "scam" if d_prob >= cfg.threshold else "harmless"
+
+        status = "✓" if pred == label else "✗"
+        print(f"    [{status}] true={label:8s} pred={pred:8s} p_final={d_prob:.3f} ({n} turns)")
+        for t in range(n):
+            p = probs[t]
+            alert = " ← ALERT" if p >= cfg.threshold else ""
+            text  = turns[t][:50]
+            print(f"      T{t+1:02d} p={p:.3f}{alert}  \"{text}{'...' if len(turns[t]) > 50 else ''}\"")
+        print()
+
+
 def _wandb_val_log(wandb_run, m, epoch, tr_loss):
     pass
     # if wandb_run is None:
@@ -243,6 +311,9 @@ def train(cfg: M1Config = None, dataset_option: str = None,
 
     print(f"Train: {len(train_dlg)} | Test: {len(val_dlg)}")
 
+    # ── Dataset overview ──
+    _dataset_overview(train_dlg, val_dlg)
+
     # ── Tokenizer ──
     print(f"\nLoading tokenizer: {cfg.model_name}")
     tokenizer = AutoTokenizer.from_pretrained(cfg.model_name)
@@ -329,6 +400,9 @@ def train(cfg: M1Config = None, dataset_option: str = None,
         val_metrics = evaluate(model, val_loader, device, cfg.threshold)
         _print_val_metrics(epoch, time.time() - t0, tr_loss, val_metrics)
         _wandb_val_log(wandb_run, val_metrics, epoch, tr_loss)
+
+        # Streaming preview
+        _preview_stream(model, val_ds, val_dlg, device, cfg)
 
         if val_metrics["loss"] < best_val_loss:
             best_val_loss = val_metrics["loss"]
