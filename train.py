@@ -192,7 +192,8 @@ DATASET_OPTIONS = {
 
 # ── Main training ──────────────────────────────────────────────────
 
-def train(cfg: M1Config = None, dataset_option: str = None):
+def train(cfg: M1Config = None, dataset_option: str = None,
+          train_file: str = None, test_file: str = None):
     if cfg is None:
         cfg = M1Config()
 
@@ -203,7 +204,14 @@ def train(cfg: M1Config = None, dataset_option: str = None):
         print(f"GPU: {torch.cuda.get_device_name(0)}")
 
     # ── Load data ──
-    if dataset_option and dataset_option in DATASET_OPTIONS:
+    if train_file and test_file:
+        # Direct file paths provided by user
+        train_path = train_file
+        val_path   = test_file
+        print(f"\nUsing custom dataset paths:")
+        print(f"  Train: {train_path}")
+        print(f"  Test:  {val_path}")
+    elif dataset_option and dataset_option in DATASET_OPTIONS:
         # Use dataset/ directory with the selected option
         ds_files  = DATASET_OPTIONS[dataset_option]
         train_path = os.path.join(cfg.dataset_dir, ds_files["train"])
@@ -373,6 +381,10 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Train M1: HaLong + CrossTurnAttention")
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--run-name",   default=None, help="Wandb run name")
+    parser.add_argument("--train-file", default=None,
+                        help="Path to custom train JSON file")
+    parser.add_argument("--test-file",  default=None,
+                        help="Path to custom test JSON file")
     parser.add_argument("--dataset",    default=None,
                         choices=list(DATASET_OPTIONS.keys()),
                         help="Dataset option: "
@@ -410,4 +422,5 @@ if __name__ == "__main__":
         cfg.batch_size = 2
         print("SMALL MODE: 5 epochs, batch_size=2")
 
-    train(cfg, dataset_option=args.dataset)
+    train(cfg, dataset_option=args.dataset,
+          train_file=args.train_file, test_file=args.test_file)

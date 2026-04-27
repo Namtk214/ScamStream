@@ -39,7 +39,7 @@ ScamStream/
 
 ## Data Format
 
-Tất cả datasets dùng chung JSON format đơn giản:
+Dataset phải là file JSON với format sau:
 
 ```json
 [
@@ -64,44 +64,23 @@ Tất cả datasets dùng chung JSON format đơn giản:
 
 ## Quick Start
 
-### 1. Prepare Datasets
+### 1. Training
 
 ```bash
-python prepare_datasets.py
-```
+# Truyền đường dẫn dataset trực tiếp
+python train.py --train-file /path/to/train.json --test-file /path/to/test.json
 
-Đọc `Real.xlsx`, `Tele-data/`, `Synthetic-data/` từ thư mục cha, convert về JSON format và lưu vào `dataset/`.
+# Hoặc dùng preset dataset options
+python train.py --dataset real         # Real-1 → Real-2
+python train.py --dataset synthetic    # Synthetic → Real-2
+python train.py --dataset tele         # Tele → Real-2
+python train.py --dataset real_syn     # Real-1 + Synthetic → Real-2
+python train.py --dataset real_tele    # Real-1 + Tele → Real-2
 
-### 2. Training
-
-```bash
-# Real-1 train → Real-2 test
-python train.py --dataset real
-
-# Synthetic train → Real-2 test
-python train.py --dataset synthetic
-
-# Tele train → Real-2 test
-python train.py --dataset tele
-
-# Real-1 + Synthetic train → Real-2 test
-python train.py --dataset real_syn
-
-# Real-1 + Tele train → Real-2 test
-python train.py --dataset real_tele
-```
-
-### Training Modes
-
-```bash
-# Debug mode: 2 epochs, batch_size=4, no augmentation
-python train.py --dataset real --debug
-
-# Small mode: 5 epochs, batch_size=2
-python train.py --dataset real --small
-
-# Custom output directory
-python train.py --dataset real --output-dir ./my_experiment
+# Kết hợp với các flags khác
+python train.py --train-file train.json --test-file test.json --debug          # 2 epochs, no aug
+python train.py --train-file train.json --test-file test.json --small          # 5 epochs
+python train.py --train-file train.json --test-file test.json --output-dir ./out
 ```
 
 ### 3. Dataset Options Summary
@@ -116,16 +95,16 @@ python train.py --dataset real --output-dir ./my_experiment
 
 Output checkpoints tự động lưu vào `outputs/<dataset_option>/best_model/`.
 
-### 4. Evaluation
+### 2. Evaluation
 
 ```bash
-python test.py --model-dir outputs/real/best_model
+python test.py --model-dir outputs/best_model
 ```
 
-### 5. Streaming Inference
+### 3. Streaming Inference
 
 ```bash
-python infer_stream.py --model-dir outputs/real/best_model
+python infer_stream.py --model-dir outputs/best_model
 ```
 
 ## Key Hyperparameters
@@ -149,14 +128,11 @@ python infer_stream.py --model-dir outputs/real/best_model
 
 ## Requirements
 
-Cài đặt các thư viện cần thiết bằng lệnh sau:
-
 ```bash
-pip install torch transformers numpy scikit-learn openpyxl wandb
+pip install torch transformers numpy scikit-learn openpyxl
 ```
 
 - **Python 3.8+**
 - **PyTorch** & **Transformers**: Core models
 - **numpy** & **scikit-learn**: Tính toán metrics (F1, Precision, Recall, v.v.)
-- **openpyxl**: Dùng để đọc file Excel (`Real.xlsx`)
-- **wandb**: Dành cho visualization và logging (optional, nhưng được hỗ trợ trong code)
+- **openpyxl**: Đọc file Excel (dùng khi chạy `prepare_datasets.py`)
