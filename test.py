@@ -200,8 +200,10 @@ def save_errors_excel(raw, all_labels, all_d_probs, all_t_probs, all_p_agg,
 def parse_args():
     cfg = M1Config()
     parser = argparse.ArgumentParser(description="Test M1 Scam Classifier")
-    parser.add_argument("--data",      default=os.path.join(DATA_DIR, "test.json"))
-    parser.add_argument("--model",     default=os.path.join(cfg.output_dir, "best_model"))
+    parser.add_argument("--data",      required=True,
+                        help="Path to test JSON file")
+    parser.add_argument("--model",     default=os.path.join(cfg.output_dir, "best_model"),
+                        help="Path to model directory (default: outputs/best_model)")
     parser.add_argument("--threshold", type=float, default=cfg.threshold)
     parser.add_argument("--out-dir",   default=None,
                         help="Output directory (default: same as --model)")

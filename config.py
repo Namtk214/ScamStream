@@ -28,7 +28,7 @@ class M1Config:
     # L_total = L_focal_ushape + λ × L_weighted_prefix
     # L_weighted_prefix = Σ (2t/N) × BCE(p_t_agg, y)  — Noisy-OR cumulative
     # λ = 0 → tắt auxiliary, trở về pure Focal U-shape
-    weighted_lambda: float = 0.4
+    weighted_lambda: float = 0.3
 
     # Augmentation (Fix 02 from HSM-Net §03)
     truncate_aug: bool = True
