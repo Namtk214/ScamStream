@@ -28,10 +28,11 @@ from dataset import DialogueDataset, collate_fn, load_json, truncate_augment
 from model import M1Classifier
 from metrics import compute_streaming_metrics, print_streaming_report
 
-WANDB_API_KEY = os.environ.get(
-    "WANDB_API_KEY",
-    "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",
-)
+# WANDB_API_KEY = os.environ.get(
+#     "WANDB_API_KEY",
+#     "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",
+# )
+WANDB_API_KEY = None
 
 
 def set_seed(seed: int):
@@ -106,11 +107,11 @@ def run_epoch(model, loader, optimizer, scheduler, device, cfg, global_step: int
             optimizer.zero_grad()
             global_step += 1
 
-            if wandb_run is not None:
-                wandb_run.log({
-                    "train/loss": total_loss / max(n_dlg, 1),
-                    "train/lr":   scheduler.get_last_lr()[0],
-                }, step=global_step)
+            # if wandb_run is not None:
+            #     wandb_run.log({
+            #         "train/loss": total_loss / max(n_dlg, 1),
+            #         "train/lr":   scheduler.get_last_lr()[0],
+            #     }, step=global_step)
 
         del output, loss
         if step % 20 == 0 and device.type == "cuda":
@@ -155,26 +156,27 @@ def _print_val_metrics(epoch, elapsed, tr_loss, m):
 
 
 def _wandb_val_log(wandb_run, m, epoch, tr_loss):
-    if wandb_run is None:
-        return
-    log = {
-        "epoch":                  epoch,
-        "train/loss_epoch":       tr_loss,
-        "val/loss":               m["loss"],
-        "val/f1":                 m["dialogue_f1"],
-        "val/accuracy":           m["dialogue_accuracy"],
-        "val/detection_rate":     m["detection_rate"],
-        "val/false_alarm_rate":   m["false_alarm_rate"],
-    }
-    if not np.isnan(m.get("auroc", float("nan"))):
-        log["val/auroc"] = m["auroc"]
-    if not np.isnan(m["avg_detection_delay"]):
-        log["val/avg_turn"] = m["avg_detection_delay"]    # avg turn phát hiện scam
-    if "alert_at_half" in m:
-        log["val/alert_at_half"] = m["alert_at_half"]
-    if "median_lead_frac" in m:
-        log["val/median_lead_frac"] = m["median_lead_frac"]
-    wandb_run.log(log)
+    pass
+    # if wandb_run is None:
+    #     return
+    # log = {
+    #     "epoch":                  epoch,
+    #     "train/loss_epoch":       tr_loss,
+    #     "val/loss":               m["loss"],
+    #     "val/f1":                 m["dialogue_f1"],
+    #     "val/accuracy":           m["dialogue_accuracy"],
+    #     "val/detection_rate":     m["detection_rate"],
+    #     "val/false_alarm_rate":   m["false_alarm_rate"],
+    # }
+    # if not np.isnan(m.get("auroc", float("nan"))):
+    #     log["val/auroc"] = m["auroc"]
+    # if not np.isnan(m["avg_detection_delay"]):
+    #     log["val/avg_turn"] = m["avg_detection_delay"]    # avg turn phát hiện scam
+    # if "alert_at_half" in m:
+    #     log["val/alert_at_half"] = m["alert_at_half"]
+    # if "median_lead_frac" in m:
+    #     log["val/median_lead_frac"] = m["median_lead_frac"]
+    # wandb_run.log(log)
 
 
 # ── Dataset option mapping ─────────────────────────────────────────
@@ -269,18 +271,19 @@ def train(cfg: M1Config = None, dataset_option: str = None):
     )
 
     # ── Wandb ──
-    try:
-        import wandb
-        wandb.login(key=WANDB_API_KEY)
-        wandb_run = wandb.init(
-            project="viscam-m1",
-            name=f"m1-halong-ep{cfg.num_epochs}-bs{cfg.batch_size}",
-            config=dataclasses.asdict(cfg),
-        )
-        print(f"Wandb run: {wandb_run.url}")
-    except Exception as e:
-        print(f"[WARN] Wandb init failed: {e} — continuing without wandb")
-        wandb_run = None
+    # try:
+    #     import wandb
+    #     wandb.login(key=WANDB_API_KEY)
+    #     wandb_run = wandb.init(
+    #         project="viscam-m1",
+    #         name=f"m1-halong-ep{cfg.num_epochs}-bs{cfg.batch_size}",
+    #         config=dataclasses.asdict(cfg),
+    #     )
+    #     print(f"Wandb run: {wandb_run.url}")
+    # except Exception as e:
+    #     print(f"[WARN] Wandb init failed: {e} — continuing without wandb")
+    #     wandb_run = None
+    wandb_run = None
 
     # ── Training loop ──
     os.makedirs(cfg.output_dir, exist_ok=True)
@@ -325,10 +328,10 @@ def train(cfg: M1Config = None, dataset_option: str = None):
             no_improve    = 0
             _save_model(model, tokenizer, cfg, val_metrics)
             print(f"    * Best model saved (val_loss={best_val_loss:.4f})")
-            if wandb_run is not None:
-                wandb_run.summary["best_val_loss"] = best_val_loss
-                wandb_run.summary["best_epoch"]    = best_epoch
-                wandb_run.summary["best_val_f1"]   = val_metrics["dialogue_f1"]
+            # if wandb_run is not None:
+            #     wandb_run.summary["best_val_loss"] = best_val_loss
+            #     wandb_run.summary["best_epoch"]    = best_epoch
+            #     wandb_run.summary["best_val_f1"]   = val_metrics["dialogue_f1"]
         else:
             no_improve += 1
             print(f"    No improvement ({no_improve}/{patience})")
@@ -347,19 +350,19 @@ def train(cfg: M1Config = None, dataset_option: str = None):
         model.load_state_dict(torch.load(best_pt, map_location=device, weights_only=True))
         final_metrics = evaluate(model, val_loader, device, cfg.threshold)
         print_streaming_report(final_metrics)
-        if wandb_run is not None:
-            wandb_run.summary.update({
-                "final/loss":              final_metrics["loss"],
-                "final/f1":               final_metrics["dialogue_f1"],
-                "final/accuracy":         final_metrics["dialogue_accuracy"],
-                "final/avg_turn":         final_metrics.get("avg_detection_delay", float("nan")),
-                "final/auroc":            final_metrics.get("auroc", float("nan")),
-                "final/detection_rate":   final_metrics["detection_rate"],
-                "final/false_alarm_rate": final_metrics["false_alarm_rate"],
-            })
+        # if wandb_run is not None:
+        #     wandb_run.summary.update({
+        #         "final/loss":              final_metrics["loss"],
+        #         "final/f1":               final_metrics["dialogue_f1"],
+        #         "final/accuracy":         final_metrics["dialogue_accuracy"],
+        #         "final/avg_turn":         final_metrics.get("avg_detection_delay", float("nan")),
+        #         "final/auroc":            final_metrics.get("auroc", float("nan")),
+        #         "final/detection_rate":   final_metrics["detection_rate"],
+        #         "final/false_alarm_rate": final_metrics["false_alarm_rate"],
+        #     })
 
-    if wandb_run is not None:
-        wandb_run.finish()
+    # if wandb_run is not None:
+    #     wandb_run.finish()
 
     return model
 
