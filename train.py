@@ -49,7 +49,7 @@ def set_seed(seed: int):
 def evaluate(model, loader, device, threshold=0.5):
     model.eval()
     total_loss, n_dlg = 0.0, 0
-    all_labels, all_d_probs, all_t_probs = [], [], []
+    all_labels, all_d_probs, all_p_agg = [], [], []
 
     for batch in loader:
         input_ids  = batch["input_ids"].to(device)
@@ -68,13 +68,13 @@ def evaluate(model, loader, device, threshold=0.5):
             n = int(n_turns[b].item())
             all_labels.append(int(labels[b].item()))
             all_d_probs.append(float(output["dialogue_probs"][b].item()))
-            all_t_probs.append(output["turn_probs"][b, :n].cpu().numpy())
+            all_p_agg.append(output["p_agg"][b, :n].cpu().numpy())
 
         del output
         if device.type == "cuda":
             torch.cuda.empty_cache()
 
-    metrics = compute_streaming_metrics(all_labels, all_d_probs, all_t_probs, threshold)
+    metrics = compute_streaming_metrics(all_labels, all_d_probs, all_p_agg, threshold)
     metrics["loss"] = total_loss / max(n_dlg, 1)
     return metrics
 

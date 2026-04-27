@@ -59,7 +59,7 @@ def run_inference(model, dataset, raw, device, threshold):
             all_t_probs.append(t_probs)
             all_p_agg.append(p_agg)
 
-    metrics = compute_streaming_metrics(all_labels, all_d_probs, all_t_probs, threshold)
+    metrics = compute_streaming_metrics(all_labels, all_d_probs, all_p_agg, threshold)
     metrics["loss"] = total_loss / max(n_dlg, 1)
     return metrics, all_labels, all_d_probs, all_t_probs, all_p_agg
 

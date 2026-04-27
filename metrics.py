@@ -16,9 +16,15 @@ from typing import Dict, List, Optional
 def compute_streaming_metrics(
     all_dialogue_labels: List[int],
     all_dialogue_probs: List[float],
-    all_turn_probs: List[np.ndarray],
+    all_p_agg: List[np.ndarray],
     threshold: float = 0.5,
 ) -> Dict[str, float]:
+    """
+    Compute dialogue-level and streaming metrics.
+
+    all_dialogue_probs: p_agg at last turn (dialogue-level prediction)
+    all_p_agg:          Noisy-OR cumulative per turn [T] — dùng cho streaming detection
+    """
     d_labels = np.array(all_dialogue_labels)
     d_probs  = np.array(all_dialogue_probs)
     d_preds  = (d_probs >= threshold).astype(int)
@@ -33,10 +39,10 @@ def compute_streaming_metrics(
     num_harmless, num_false_alarms = 0, 0
     all_alert_turns, all_n_turns   = [], []
 
-    for label, turn_probs in zip(all_dialogue_labels, all_turn_probs):
-        first_alert = _first_alert_turn(turn_probs, threshold)
+    for label, p_agg in zip(all_dialogue_labels, all_p_agg):
+        first_alert = _first_alert_turn(p_agg, threshold)
         all_alert_turns.append(first_alert)
-        all_n_turns.append(len(turn_probs))
+        all_n_turns.append(len(p_agg))
 
         if label == 1:
             num_scam += 1
@@ -53,7 +59,7 @@ def compute_streaming_metrics(
         "dialogue_accuracy": float(accuracy_score(d_labels, d_preds)),
         "dialogue_f1":       float(f1_score(d_labels, d_preds, zero_division=0)),
         "auroc":             auroc,
-        # Streaming
+        # Streaming (based on p_agg threshold crossing)
         "detection_rate":      num_detected / max(num_scam, 1),
         "avg_detection_delay": float(np.mean(detection_delays)) if detection_delays else float("nan"),
         "false_alarm_rate":    num_false_alarms / max(num_harmless, 1),
@@ -103,7 +109,7 @@ def print_streaming_report(metrics: Dict[str, float]):
     if not np.isnan(metrics.get("auroc", float("nan"))):
         print(f"    AUROC:    {metrics['auroc']:.4f}")
 
-    print("\n  Streaming Detection (per-turn threshold):")
+    print("\n  Streaming Detection (p_agg threshold crossing):")
     print(
         f"    Detection rate:   {metrics['detection_rate']:.4f} "
         f"({metrics['num_detected']}/{metrics['num_scam']})"
