@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_ea63692dfd]
+  Caller thật: Thợ vận hành máy trộn bê tông (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên quản lý dự án xây dựng / Người phụ trách công trường @ Công ty xây dựng hoặc Ban quản lý dự án công cộng
+  Listener: Dịch vụ cá nhân và cộng đồng (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Thợ vận hành máy trộn bê tông làm việc tại công trường xây dựng các công trình công cộng (trường học, trung tâm cộng đồng, bệnh viện). Nhân viên quản lý dự án cần liên hệ với lãnh đạo dịch vụ cộng đồng để điều phối tiến độ, an toàn lao động, hoặc thông báo về các vấn đề liên quan đến công trình.
+  Pretext: Gọi dạo với danh nghĩa 'Nhân viên quản lý công trường dự án xây dựng Trung tâm Cộng đồng Quận X' để yêu cầu xác minh thông tin cá nhân phục vụ báo cáo an toàn lao động và bảo hiểm xã hội cho công nhân.
+  Listener traits: ['ham lợi dễ bị bait', 'nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Gia Nam ạ. Tôi là Vy, nhân viên quản lý công trường dự án xây dựng Trung tâm Cộng đồng Quận X đây. Tôi đang kiểm tra danh sách nhân viên để chuẩn bị báo cáo an toàn lao động và bảo hiểm xã hội. Anh Bùi Đức Gia Nam với mã số bảo hiểm xã hội 6079005108, đúng không ạ?
+      → phase: S1 | tactic: Giới thiệu bản thân và mục đích cuộc gọi, dùng VIC_FULLNAME và VIC_TAX_SOCIAL_ID để tạo sự tin cậy ban đầu.
+T02 [LISTENER] Tôi không chắc lắm về việc cung cấp thông tin, em có thể giải thích rõ hơn về mục đích kiểm tra này được không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, tôi hiểu sự lo lắng của anh. Việc này là bắt buộc để cập nhật thông tin bảo hiểm xã hội và dữ liệu cá nhân của tất cả cán bộ công nhân viên. Hiện tại, công ty đang rà soát lại toàn bộ hệ thống để đảm bảo quyền lợi và an toàn thông tin cho mọi người đó anh.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ, chuyển sang giai đoạn khai thác tâm lý khẩn cấp và thương hại bằng cách nhấn mạnh tính 'bắt buộc' và 'quyền lợi' của nạn nhân.
+T04 [LISTENER] Em cũng hiểu nhưng tôi vẫn cảm thấy chưa yên tâm lắm, liệu em có thể cung cấp thêm thông tin để tôi có thể tin tưởng hơn không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Anh Gia Nam cứ yên tâm, tôi là Vy, trưởng ban quản lý công trường bên dự án Trung tâm Cộng đồng Quận X. Thông tin mà tôi đang cần xác minh lại là để đảm bảo quyền lợi bảo hiểm xã hội của anh không bị gián đoạn. Nếu không cập nhật kịp thời, bảo hiểm của anh có thể sẽ bị tạm dừng đó ạ. Tôi cần anh xác nhận lại thêm một số chi tiết để đảm bảo an toàn cho tài khoản của anh.
+      → phase: S2 | tactic: Tăng cường độ khẩn cấp và mức độ uy hiếp tài chính bằng cách nhấn mạnh hậu quả của việc không hợp tác, đồng thời tái khẳng định vai trò của bản thân để tăng độ tin cậy.
+T06 [LISTENER] Tôi hiểu điều đó, nhưng em có thể cho tôi biết cụ thể những chi tiết nào em cần xác nhận không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T07 [CALLER] Vâng, để hoàn tất việc cập nhật, tôi cần anh vui lòng cung cấp số tài khoản ngân hàng, họ tên đầy đủ của chủ tài khoản, và gửi một ảnh chụp CCCD/CMND rõ nét qua Zalo cho tôi. Hoặc anh có thể truy cập đường link xác minh an toàn này [https://baohiemxahoi.gov.vn/xacminh_thongtin.html] để tự cập nhật, sẽ nhanh chóng và tiện lợi hơn cho anh ạ.
+      → phase: S3 | tactic: Trực tiếp yêu cầu thông tin nhạy cảm (tài khoản ngân hàng, CCCD) hoặc hướng dẫn truy cập link giả mạo, đạt mục tiêu credential_theft.
+T08 [LISTENER] Em không thể cung cấp thông tin nhạy cảm như vậy, tôi cần phải suy nghĩ thêm đã.
+      → action: REFUSAL | suspicion: 0.10 | disclosed: []
+
+T09 [CALLER] Anh Gia Nam, tôi hoàn toàn hiểu sự cẩn trọng của anh. Tuy nhiên, đây là quy trình bắt buộc từ công ty để đảm bảo quyền lợi bảo hiểm xã hội không bị ảnh hưởng. Nếu trong vòng 24 giờ tới anh không cập nhật, hệ thống sẽ tự động tạm dừng quyền lợi bảo hiểm của anh theo quy định mới. Anh nên cân nhắc kỹ để tránh những rắc rối không đáng có sau này.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách tạo áp lực thời gian và tình huống khó xử (Threat_Financial), nhấn mạnh đây là quy trình 'bắt buộc' và hậu quả của việc không hợp tác.
+T10 [LISTENER] Em hiểu nhưng tôi không cảm thấy thoải mái khi cung cấp thông tin nhạy cảm qua điện thoại, tôi cần thời gian để suy nghĩ thêm.
+      → action: REFUSAL | suspicion: 0.10 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=0.10
+TOKEN: in=20293 | out=2815
+COST : $0.015417
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_81144_17280\conv_ea63692dfd.json  [SCAM_REFUSE]

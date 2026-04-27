@@ -1,0 +1,234 @@
+{
+  "conversation_id": "conv_c60c868ef8",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0095",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đỗ Hữu Quang Bình",
+    "fake_age": 46,
+    "real_occupation": "Nhân viên hướng dẫn công viên chủ đề",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên quản lý vận tải / Điều phối logistics công viên chủ đề",
+    "caller_org": "Công viên chủ đề (bộ phận vận tải/logistics nội bộ)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả là nhân viên quản lý vận tải của công viên chủ đề, thông báo công viên vừa phát hiện 'khoản phí vận tải chưa thanh toán' hoặc 'tiền cọc dự án vận tải mới' liên quan đến tài khoản của Phan Công Phong. Dùng tên đầy đủ nạn nhân + CMND để tạo độ tin cậy cao, khẳng định đã kiểm tra hệ thống và tìm được số điện thoại này.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác thực: 'Anh Phong à, tôi là Minh từ bộ phận vận tải Công viên X. Tôi vừa kiểm tra hồ sơ của anh (CMND 079076623775) và phát hiện có khoản phí chưa thanh toán. Anh có nhận được thông báo không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + sợ hãi: 'Nếu không thanh toán trong 2 giờ, hệ thống sẽ khóa tài khoản của anh, không thể nhận thêm công việc vận tải nữa. Công viên sẽ phải báo cảnh sát về nợ công. Anh hiểu không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuyển ngay 5-10 triệu vào tài khoản này (cung cấp số tài khoản giả) để giải quyết. Sau khi kiểm tra, tôi sẽ xóa khoản nợ và anh vẫn tiếp tục làm việc bình thường.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy anh chờ thêm 1 giờ, sau đó tài khoản sẽ bị khóa vĩnh viễn. Tôi không thể giúp gì thêm.' (tạo áp lực tâm lý). Nếu chuyển tiền thành công: 'Cảm ơn anh, hệ thống đã cập nhật. Tài khoản anh sạch sẽ rồi. Chúc anh làm việc tốt!'"
+        }
+      ]
+    },
+    "scenario_context": "Công viên chủ đề cần vận chuyển thiết bị, hàng hóa định kỳ hoặc khẩn cấp; lái xe tải là đối tác vận tải thường xuyên hoặc được giới thiệu. Cuộc gọi để thỏa thuận công việc, xác nhận thông tin, hoặc xử lý tình huống vận tải liên quan."
+  },
+  "listener_card": {
+    "listener_id": "lis_0095",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1976,
+      "age": 49,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "83322",
+      "title": "Lái xe tải rơ móoc (bao gồm cả lái xe chính)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phan Công Phong",
+      "VIC_ID_DOC": "079076623775",
+      "VIC_ADDRESS": "TP 7, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Lái xe tải rơ móoc (bao gồm cả lái xe chính)",
+      "VIC_CONTACT": "0858178252",
+      "VIC_TAX_SOCIAL_ID": "8676044433"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "155451",
+      "VIC_CREDENTIAL": "640407",
+      "VIC_SIM_INFO": "0858178252",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "655070439607",
+      "VIC_CARD_DATA": "4379 **** **** 5833",
+      "VIC_BALANCE": "65 triệu đồng",
+      "VIC_ASSET": "203 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phan Công Phong",
+    "VIC_CONTACT": "0858178252",
+    "VIC_ASSET": "203 triệu đồng",
+    "VIC_ID_DOC": "079076623775"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý vận tải / Điều phối logistics công viên chủ đề",
+    "caller_org": "Công viên chủ đề (bộ phận vận tải/logistics nội bộ)",
+    "scenario_context": "Công viên chủ đề cần vận chuyển thiết bị, hàng hóa định kỳ hoặc khẩn cấp; lái xe tải là đối tác vận tải thường xuyên hoặc được giới thiệu. Cuộc gọi để thỏa thuận công việc, xác nhận thông tin, hoặc xử lý tình huống vận tải liên quan.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả là nhân viên quản lý vận tải của công viên chủ đề, thông báo công viên vừa phát hiện 'khoản phí vận tải chưa thanh toán' hoặc 'tiền cọc dự án vận tải mới' liên quan đến tài khoản của Phan Công Phong. Dùng tên đầy đủ nạn nhân + CMND để tạo độ tin cậy cao, khẳng định đã kiểm tra hệ thống và tìm được số điện thoại này.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác thực: 'Anh Phong à, tôi là Minh từ bộ phận vận tải Công viên X. Tôi vừa kiểm tra hồ sơ của anh (CMND 079076623775) và phát hiện có khoản phí chưa thanh toán. Anh có nhận được thông báo không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + sợ hãi: 'Nếu không thanh toán trong 2 giờ, hệ thống sẽ khóa tài khoản của anh, không thể nhận thêm công việc vận tải nữa. Công viên sẽ phải báo cảnh sát về nợ công. Anh hiểu không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuyển ngay 5-10 triệu vào tài khoản này (cung cấp số tài khoản giả) để giải quyết. Sau khi kiểm tra, tôi sẽ xóa khoản nợ và anh vẫn tiếp tục làm việc bình thường.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy anh chờ thêm 1 giờ, sau đó tài khoản sẽ bị khóa vĩnh viễn. Tôi không thể giúp gì thêm.' (tạo áp lực tâm lý). Nếu chuyển tiền thành công: 'Cảm ơn anh, hệ thống đã cập nhật. Tài khoản anh sạch sẽ rồi. Chúc anh làm việc tốt!'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công viên chủ đề liên hệ để xác nhận thông tin lái xe, thỏa thuận hợp đồng vận tải, hoặc thông báo công việc vận chuyển mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Phong, tôi là Minh từ bộ phận vận tải Công viên X. Hôm nay tôi gọi để xác nhận thông tin hợp tác vận tải của anh và thảo luận về dự án mới.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Công viên cần vận chuyển thiết bị từ kho tổng đến chi nhánh vào tuần sau. Anh có sẵn sàng không? Mức cước là X triệu, thanh toán sau khi hoàn thành. Anh cần gì thêm không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: 'Vậy anh xác nhận được công việc này. Tôi sẽ gửi hợp đồng qua zalo/email. Anh ký và gửi lại trước thứ 5. Nếu có vấn đề gì, anh gọi cho tôi nhé. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Anh Phong à, tôi là Đỗ Hữu Quang Bình từ bộ phận vận tải Công viên chủ đề đây. Tôi vừa kiểm tra hồ sơ của anh với số CMND 079076623775 và phát hiện có một khoản phí vận tải chưa thanh toán. Anh có nhận được thông báo nào về việc này không?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xác thực thông tin, sử dụng dữ liệu cá nhân của nạn nhân để tạo độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin, em gọi từ số mấy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ yên tâm, số điện thoại tôi đang dùng gọi cho anh đây là số nội bộ của công viên. Anh có thể lưu lại nếu cần. Bây giờ mình quay lại vấn đề chính nhé, khoản phí này nếu không được thanh toán trong vòng 2 giờ tới, hệ thống sẽ tự động khóa tài khoản vận tải của anh và công việc của anh ở công viên sẽ bị đình chỉ, đồng thời công viên sẽ chuyển hồ sơ nợ lên cảnh sát. Anh đã nắm được thông tin này chưa?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực khẩn cấp và đe dọa hậu quả pháp lý để nạn nhân cảm thấy sợ hãi và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu lắm về khoản phí này, tại sao em lại có thông tin của tôi và em có thể cho tôi biết thêm về nó không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Phong, như tôi đã nói, tôi là Đỗ Hữu Quang Bình, nhân viên quản lý vận tải của công viên. Chúng tôi có đầy đủ hồ sơ của anh, bao gồm cả số CMND và số điện thoại này từ hợp đồng vận tải anh đã ký. Nếu anh không tin, anh có thể tự mình gọi lên tổng đài công viên để xác minh thông tin của tôi, nhưng tôi có thể đảm bảo với anh rằng nếu khoản phí này không được giải quyết nhanh chóng, tài khoản của anh chắc chắn sẽ bị khóa. Anh có muốn tôi giúp anh giải quyết ngay bây giờ không?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề nghị nạn nhân tự xác minh thông tin, đồng thời tái khẳng định mối đe dọa và đưa ra giải pháp để tạo cảm giác cấp bách cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa nhận được thông tin rõ ràng về khoản phí này, anh có thể cho tôi biết cụ thể hơn được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Anh Phong, khoản phí này liên quan đến một dự án vận tải mới mà theo hệ thống, anh đã được phân công hoặc đăng ký tham gia. Có thể là anh chưa để ý đến thông báo mà chúng tôi đã gửi qua email hoặc tin nhắn. Bây giờ, điều quan trọng nhất là phải giải quyết nó nhanh chóng để tránh những hậu quả không mong muốn. Anh có muốn tôi hướng dẫn cách thanh toán để hệ thống có thể mở lại tài khoản cho anh ngay không?",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp một lý do mơ hồ nhưng có vẻ hợp lý về 'khoản phí', đồng thời tái khẳng định sự khẩn cấp và đề xuất giải pháp thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ có đăng ký tham gia dự án nào cả, em có thể cung cấp cho tôi thông tin chi tiết hơn về khoản phí này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Anh Phong, tôi hiểu anh có thể không nhớ, nhưng thông tin trên hệ thống là như vậy. Việc giải thích chi tiết hơn bây giờ sẽ tốn thời gian và có thể khiến tài khoản của anh bị khóa. Điều quan trọng nhất bây giờ là anh cần chuyển ngay từ 5 đến 10 triệu đồng vào tài khoản của công ty để giải quyết khoản phí này. Sau khi thanh toán, tôi sẽ xác nhận lại trên hệ thống và đảm bảo tài khoản của anh được mở lại ngay lập tức. Anh có muốn tôi đọc số tài khoản để anh chuyển tiền không?",
+      "current_phase": "S3",
+      "tactic_hint": "Bỏ qua yêu cầu giải thích chi tiết, nhấn mạnh sự khẩn cấp và chuyển ngay sang yêu cầu hành động chuyển tiền, đồng thời hứa hẹn giải quyết vấn đề ngay lập tức sau khi thanh toán."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Anh có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Em không thấy yên tâm khi chưa nhận được thông tin rõ ràng, anh có thể cho tôi biết số tài khoản và tên công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1860,
+      "output_tokens": 1470
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7879,
+      "output_tokens": 881
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10773,
+      "output_tokens": 366
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005052,
+    "output_usd": 0.009772,
+    "total_usd": 0.014824
+  }
+}

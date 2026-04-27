@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_bdebad853e]
+  Caller thật: Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp huyện (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Cán bộ Phòng Nông nghiệp và Phát triển nông thôn huyện @ Phòng Nông nghiệp và Phát triển nông thôn, UBND huyện
+  Listener: Lao động trồng, thu hoạch sản phẩm cây chè (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Cán bộ nông nghiệp huyện có lý do chính đáng gọi cho nông dân trồng chè: rà soát diện tích, hỗ trợ chính sách, thu thập dữ liệu nông thôn hoặc thông báo chương trình hỗ trợ. Đây là tiếp xúc tự nhiên trong hệ thống quản lý nông nghiệp địa phương.
+  Pretext: Cán bộ nông nghiệp huyện gọi để rà soát diện tích chè, xác nhận thông tin nông dân cho cơ sở dữ liệu chính thức, hoặc thông báo chương trình hỗ trợ thực tế từ cấp huyện/tỉnh (miễn phí, không yêu cầu phí).
+  Listener traits: ['nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Dũng ạ, em là Lý Hữu Vinh, cán bộ Phòng Nông nghiệp và Phát triển nông thôn của huyện mình ạ. Số điện thoại của cơ quan bên em là 02923. Em gọi đến để xác nhận thông tin anh Dương Tiến Tiến Dũng ở Quận 11, Cần Thơ mình có diện tích trồng chè đúng không ạ?
+      → phase: L1 | tactic: Giới thiệu bản thân và cơ quan rõ ràng, cung cấp thông tin liên hệ chính thức, xác nhận thông tin cơ bản của người nghe để tạo niềm tin và minh bạch.
+T02 [LISTENER] Dạ, đúng rồi em, tôi có trồng chè ở Quận 11.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, cảm ơn anh đã xác nhận. Hiện tại thì bên em đang rà soát lại thông tin nông dân để cập nhật vào cơ sở dữ liệu chính thức của huyện và cũng để thông báo về chương trình hỗ trợ phân bón hữu cơ sắp tới cho bà con trồng chè. Không biết hiện tại diện tích chè của nhà mình là khoảng bao nhiêu ha và có gặp khó khăn gì trong quá trình canh tác không ạ?
+      → phase: L2 | tactic: Tiếp tục xác nhận thông tin chi tiết về diện tích chè và những vấn đề đang gặp phải, đồng thời giới thiệu về chương trình hỗ trợ để tạo sự quan tâm và động lực cho người nghe chia sẻ thông tin.
+T04 [LISTENER] Tôi trồng khoảng 2 ha chè, nhưng hiện tại thì cũng có một vài khó khăn trong việc chăm sóc, em có thể giúp gì không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, 2 hecta là cũng khá lớn đó anh. Về khó khăn trong việc chăm sóc thì anh có thể nói rõ hơn giúp em được không? Ví dụ như là về sâu bệnh, hay là về nguồn nước tưới tiêu, hoặc là về kỹ thuật canh tác chẳng hạn.
+      → phase: L2 | tactic: Khuyến khích người nghe chia sẻ chi tiết hơn về khó khăn để cung cấp thông tin sát thực và chuẩn bị cho việc đề xuất giải pháp hoặc chương trình hỗ trợ phù hợp.
+T06 [LISTENER] Chủ yếu là tôi gặp khó khăn về sâu bệnh và kỹ thuật canh tác, em có thể tư vấn cho tôi cách xử lý được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, về sâu bệnh và kỹ thuật canh tác thì đây là vấn đề chung của nhiều bà con trồng chè mình đó anh. Hiện tại thì Phòng Nông nghiệp đang có chương trình tập huấn miễn phí về các biện pháp phòng trừ sâu bệnh hiệu quả và hướng dẫn kỹ thuật canh tác bền vững cho bà con. Anh có muốn em gửi thông tin chi tiết về lịch tập huấn và địa điểm tổ chức qua tin nhắn Zalo hoặc SMS cho mình không ạ?
+      → phase: L2 | tactic: Trấn an người nghe rằng vấn đề của họ là phổ biến, sau đó giới thiệu một chương trình hỗ trợ miễn phí và thực tế (tập huấn) để giải quyết khó khăn, đồng thời đề xuất gửi thông tin chi tiết qua kênh chính thức.
+T08 [LISTENER] Dạ, em có thể gửi thông tin chi tiết qua tin nhắn cho tôi được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ được chứ anh. Vậy anh cho em xin số điện thoại Zalo hoặc số điện thoại dùng để nhận tin nhắn SMS của mình để em gửi thông tin cụ thể về buổi tập huấn nha anh. Hoặc là nếu anh có tài khoản Zalo thì anh có thể kết bạn với số điện thoại của cơ quan em là 02923 này để em gửi thông tin cho mình.
+      → phase: L3 | tactic: Yêu cầu cung cấp kênh liên lạc an toàn để gửi thông tin chi tiết về chương trình hỗ trợ, đồng thời nhắc lại số điện thoại cơ quan để người nghe chủ động liên hệ.
+T10 [LISTENER] Tôi dùng số điện thoại 0765074679 để nhận tin nhắn nhé em.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_CONTACT']
+
+T11 [CALLER] Dạ vâng, em đã nhận được số điện thoại của anh rồi ạ. Em sẽ gửi thông tin chi tiết về lịch tập huấn và địa điểm tổ chức qua tin nhắn SMS đến số 0765074679 của anh ngay đây ạ. Anh kiểm tra tin nhắn giúp em nhé. Em cảm ơn anh đã hợp tác ạ. Chào anh.
+      → phase: L3 | tactic: Xác nhận đã nhận thông tin liên hệ, cam kết gửi thông tin như đã hứa, và kết thúc cuộc gọi một cách lịch sự, chuyên nghiệp.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=21342 | out=3064
+COST : $0.016605
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_10330_61122\conv_bdebad853e.json  [CALLER_END]

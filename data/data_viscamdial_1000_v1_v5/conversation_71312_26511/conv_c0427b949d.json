@@ -1,0 +1,274 @@
+{
+  "conversation_id": "conv_c0427b949d",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0050",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lê Ngọc Khánh Thúy",
+    "fake_age": 43,
+    "real_occupation": "Thợ dán giấy dán tường/trần",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhà thầu thi công nội thất / Quản lý dự án trang trí",
+    "caller_org": "cá nhân / công ty thi công nội thất tự do",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhà thầu thi công nội thất gọi cho nhà điêu khắc để phối hợp về phần trang trí, thống nhất thiết kế, tiến độ, và phương thức thanh toán hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: xưng danh rõ ràng, công ty/tên cá nhân, xác nhận người cần gọi. 'Chào anh Tạ Tiến Phong, tôi là Minh từ công ty thi công XYZ. Chúng tôi có dự án trang trí nội thất, được bạn chung giới thiệu. Anh có thời gian nói chuyện được không?'",
+          "dialogue": "Caller: 'Chào anh Phong! Tôi là Minh, làm nhà thầu thi công. Bạn chung của chúng tôi là anh Hùng giới thiệu anh cho dự án này. Anh có rảnh nói chuyện được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận chi tiết về phần điêu khắc cần làm, kích thước, chất liệu, tiến độ, giá cả, hình thức thanh toán (hợp đồng, VAT, phương thức chuyển khoản rõ ràng qua công ty chính thức).",
+          "dialogue": "Caller: 'Dự án này là trang trí sảnh chính tòa nhà, cần 3 bức điêu khắc gỗ kích thước 2x1.5m. Anh có thể làm được không? Tiến độ bao lâu? Giá bao nhiêu? Chúng tôi có hợp đồng rõ ràng, thanh toán 30% trước, 70% khi xong.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Gửi hợp đồng chính thức qua email, xác nhận lịch họp trực tiếp, hoặc ghi âm cuộc gọi. Kết thúc cuộc gọi một cách chuyên nghiệp, có tên đầy đủ, số điện thoại công ty chính thức.",
+          "dialogue": "Caller: 'Vậy anh cho tôi email để gửi hợp đồng và bản vẽ chi tiết. Chúng tôi sẽ gửi qua công ty chính thức. Sau đó anh review, nếu được thì chúng tôi gặp trực tiếp tuần sau. Số điện thoại công ty tôi là 0362XXXXXX, anh ghi lại nhé. Cảm ơn anh!'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà thầu thi công (chuyên dán giấy dán tường, trần) thường phối hợp với nhà điêu khắc để trang trí không gian — cả hai cùng làm việc trong dự án nội thất/trang trí công trình. Đây là mối liên hệ tự nhiên trong ngành xây dựng & trang trí."
+  },
+  "listener_card": {
+    "listener_id": "lis_0050",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1984,
+      "age": 41,
+      "province": "Hải Phòng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "26511",
+      "title": "Nhà điêu khắc",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Tiến Phong",
+      "VIC_ID_DOC": "031084607286",
+      "VIC_ADDRESS": "Quận 9, Hải Phòng",
+      "VIC_EMPLOYMENT": "Nhà điêu khắc",
+      "VIC_CONTACT": "0364150134",
+      "VIC_TAX_SOCIAL_ID": "9779260136"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "427533",
+      "VIC_CREDENTIAL": "557983",
+      "VIC_SIM_INFO": "0364150134",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "919252870322",
+      "VIC_CARD_DATA": "4508 **** **** 7735",
+      "VIC_BALANCE": "262 triệu đồng",
+      "VIC_ASSET": "198 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Tiến Phong",
+    "VIC_CONTACT": "0364150134",
+    "VIC_ASSET": "198 triệu đồng",
+    "VIC_ID_DOC": "031084607286"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhà thầu thi công nội thất / Quản lý dự án trang trí",
+    "caller_org": "cá nhân / công ty thi công nội thất tự do",
+    "scenario_context": "Nhà thầu thi công (chuyên dán giấy dán tường, trần) thường phối hợp với nhà điêu khắc để trang trí không gian — cả hai cùng làm việc trong dự án nội thất/trang trí công trình. Đây là mối liên hệ tự nhiên trong ngành xây dựng & trang trí.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để 'xác nhận thông tin thanh toán cho dự án trang trí công trình chung' — sử dụng tên đầy đủ của nạn nhân để tạo tin cậy rằng họ đã được liên hệ trước đó hoặc nằm trong danh sách dự án.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Tạ Tiến Phong, tôi là Minh từ công ty thi công nội thất XYZ. Chúng tôi đang thực hiện dự án trang trí cho khách hàng VIP và anh được đề cử làm phần điêu khắc trang trí. Anh có nhớ cuộc họp tuần trước không?' — tạo ấn tượng anh đã được thảo luận trước.",
+          "dialogue": "Caller: 'Anh Phong ơi, tôi là Minh. Bạn chung với tôi ở dự án Tòa nhà Vàng phải không? Chúng tôi cần xác nhận danh sách nhà thầu phụ để thanh toán công đợt đầu.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Dự án này rất quan trọng, khách hàng là doanh nhân lớn. Nếu anh hoàn thành phần điêu khắc trong tuần này, sẽ có thêm tiền thưởng 10-15 triệu. Nhưng trước tiên, công ty cần xác nhận tài khoản ngân hàng của anh để chuyển tiền cọc 50 triệu trước.'",
+          "dialogue": "Caller: 'Anh ơi, dự án này khách hàng rất kỳ vọng. Nếu xong trước, sẽ có bonus thêm. Nhưng công ty đang kiểm tra lại tài khoản của tất cả nhà thầu. Anh cần cung cấp số tài khoản để chúng tôi chuyển tiền cọc 50 triệu đồng. Anh sẽ bắt đầu công việc tuần sau được không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cung cấp số tài khoản ngân hàng và CMND của anh nhé. Hoặc anh có thể chuyển khoản xác nhận 2 triệu từ tài khoản của anh sang số tài khoản công ty, để chứng minh tài khoản hoạt động. Sau đó chúng tôi sẽ chuyển 50 triệu tiền cọc về cho anh.' — Nếu nạn nhân từ chối cung cấp tài khoản, chuyển sang yêu cầu OTP hoặc link xác thực giả mạo.",
+          "dialogue": "Caller: 'Anh cho tôi số tài khoản với CMND của anh đi. Hoặc nếu anh muốn nhanh, anh chuyển 2 triệu xác nhận cho tôi, rồi tôi chuyển 50 triệu về ngay. Anh có tài khoản ngân hàng nào không? Agribank hay Vietcombank?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, caller sẽ: (1) tạo áp lực thời gian: 'Anh quyết định nhanh đi, công ty chỉ chờ đến chiều nay. Nếu không gửi tài khoản, chúng tôi sẽ gọi nhà thầu khác'; (2) Nếu nạn nhân yêu cầu gặp trực tiếp, caller sẽ nói 'Anh bận dự án khác, tuần sau gặp được. Giờ chỉ cần xác nhận tài khoản thôi'; (3) Nếu nạn nhân kiểm tra lại số điện thoại công ty, caller sẽ nói 'Tôi đang dùng điện thoại cá nhân, số công ty đang bảo trì'.",
+          "dialogue": "Caller (nếu từ chối): 'Anh Phong ơi, công ty chỉ chờ đến 5h chiều nay. Nếu anh không xác nhận, chúng tôi sẽ mời nhà thầu khác. Dự án này trị giá 500 triệu, anh không muốn mất cơ hội sao?'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhà thầu thi công nội thất gọi cho nhà điêu khắc để phối hợp về phần trang trí, thống nhất thiết kế, tiến độ, và phương thức thanh toán hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: xưng danh rõ ràng, công ty/tên cá nhân, xác nhận người cần gọi. 'Chào anh Tạ Tiến Phong, tôi là Minh từ công ty thi công XYZ. Chúng tôi có dự án trang trí nội thất, được bạn chung giới thiệu. Anh có thời gian nói chuyện được không?'",
+          "dialogue": "Caller: 'Chào anh Phong! Tôi là Minh, làm nhà thầu thi công. Bạn chung của chúng tôi là anh Hùng giới thiệu anh cho dự án này. Anh có rảnh nói chuyện được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận chi tiết về phần điêu khắc cần làm, kích thước, chất liệu, tiến độ, giá cả, hình thức thanh toán (hợp đồng, VAT, phương thức chuyển khoản rõ ràng qua công ty chính thức).",
+          "dialogue": "Caller: 'Dự án này là trang trí sảnh chính tòa nhà, cần 3 bức điêu khắc gỗ kích thước 2x1.5m. Anh có thể làm được không? Tiến độ bao lâu? Giá bao nhiêu? Chúng tôi có hợp đồng rõ ràng, thanh toán 30% trước, 70% khi xong.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Gửi hợp đồng chính thức qua email, xác nhận lịch họp trực tiếp, hoặc ghi âm cuộc gọi. Kết thúc cuộc gọi một cách chuyên nghiệp, có tên đầy đủ, số điện thoại công ty chính thức.",
+          "dialogue": "Caller: 'Vậy anh cho tôi email để gửi hợp đồng và bản vẽ chi tiết. Chúng tôi sẽ gửi qua công ty chính thức. Sau đó anh review, nếu được thì chúng tôi gặp trực tiếp tuần sau. Số điện thoại công ty tôi là 0362XXXXXX, anh ghi lại nhé. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Tạ Tiến Phong, tôi là Lê Ngọc Khánh Thúy từ công ty thi công nội thất Sáng Tạo Việt. Chúng tôi có dự án trang trí nội thất đang cần tìm nhà điêu khắc và được một người bạn chung giới thiệu đến anh. Anh có tiện nói chuyện vài phút không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân, công ty, mục đích cuộc gọi và xác nhận người nghe, hỏi xem có tiện nói chuyện không."
+    },
+    {
+      "role": "listener",
+      "text": "Chào chị Thúy, tôi nghe chị nói rồi, nhưng cho tôi hỏi chị gọi từ số mấy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi gọi từ số 0912123456 ạ. Anh cứ lưu số lại nhé. Anh có tiện trao đổi thêm về dự án không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp thông tin số điện thoại theo yêu cầu của người nghe để tạo sự tin tưởng và tiếp tục dẫn dắt vào nội dung công việc."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn chị Thúy, nhưng tôi vẫn muốn kiểm tra chút thông tin về công ty trước ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra thông tin công ty Sáng Tạo Việt của tôi về các dự án thi công nội thất. Chúng tôi chuyên về mảng này và luôn có giấy tờ, hợp đồng rõ ràng. Anh muốn tôi gửi website hoặc hồ sơ năng lực qua Zalo hoặc email cho anh tiện tham khảo ngay bây giờ không?",
+      "current_phase": "L1",
+      "tactic_hint": "Khuyến khích người nghe kiểm tra thông tin công ty, đề xuất gửi tài liệu để tăng cường niềm tin và tiếp tục thúc đẩy cuộc trò chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn chị Thúy, nhưng tôi cần xem thông tin cụ thể hơn về các dự án trước khi quyết định tham gia ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng ạ, vậy thì tôi sẽ gửi cho anh một vài hình ảnh về các dự án đã thực hiện và mô tả cụ thể về hạng mục điêu khắc mà chúng tôi đang cần. Anh vui lòng cho tôi xin địa chỉ email hoặc Zalo để tôi gửi thông tin nhé.",
+      "current_phase": "L1",
+      "tactic_hint": "Đáp ứng yêu cầu của người nghe bằng cách đề xuất gửi thông tin cụ thể về dự án để tăng tính thuyết phục và thu thập thêm thông tin liên lạc."
+    },
+    {
+      "role": "listener",
+      "text": "Chị Thúy có thể cho tôi biết tên các dự án cụ thể mà công ty đã thực hiện không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, dự án gần đây nhất mà chúng tôi thực hiện là nội thất cho chuỗi nhà hàng Hương Vị Việt tại TP.HCM và khu nghỉ dưỡng biển Sun Beach Resort ở Phú Quốc. Ngoài ra, chúng tôi cũng vừa hoàn thành dự án trang trí cho biệt thự của anh Trần Minh tại Quận 2. Anh có thể tìm thấy thông tin trên website của chúng tôi. Anh có muốn tôi gửi đường link website qua tin nhắn không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp tên các dự án cụ thể để tăng tính xác thực và uy tín, đồng thời đề xuất gửi đường link website để người nghe dễ dàng kiểm chứng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi xin lỗi, nhưng tên các dự án không làm tôi yên tâm hơn, tôi vẫn cần thông tin cụ thể hơn về công ty nữa ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Vậy tôi có thể mời anh đến văn phòng công ty chúng tôi để trao đổi trực tiếp, xem hồ sơ năng lực và các giấy tờ pháp lý liên quan, đồng thời bàn bạc chi tiết về dự án được không ạ? Chúng tôi rất sẵn lòng giải đáp mọi thắc mắc của anh.",
+      "current_phase": "L1",
+      "tactic_hint": "Đề xuất gặp mặt trực tiếp tại văn phòng công ty để tăng cường niềm tin, cung cấp đầy đủ thông tin và giấy tờ pháp lý cần thiết, đồng thời thể hiện sự minh bạch."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần thêm thời gian để suy nghĩ trước khi quyết định, chị Thúy có thể cho tôi biết địa chỉ công ty được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ công ty chúng tôi là số 123 đường Nguyễn Du, Phường Bến Nghé, Quận 1, TP.HCM. Anh cứ sắp xếp thời gian tiện nhất cho mình rồi báo tôi một tiếng nhé. Tôi sẽ chuẩn bị sẵn sàng để đón tiếp anh.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp thông tin địa chỉ công ty theo yêu cầu của người nghe, thể hiện sự sẵn lòng và chuyên nghiệp để tiếp tục xây dựng lòng tin và hướng tới cuộc gặp trực tiếp."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn chị Thúy, nhưng tôi vẫn cần kiểm tra thêm thông tin trước khi quyết định đến gặp ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Vậy nếu anh cần thêm thông tin gì trước khi đến, anh cứ nhắn tin hoặc gọi lại cho tôi bất cứ lúc nào nhé. Tôi luôn sẵn sàng cung cấp. Còn về dự án điêu khắc của chúng tôi, tôi sẽ gửi tóm tắt qua email để anh tiện tham khảo trước, anh Tạ Tiến Phong có thể cho tôi xin địa chỉ email không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tôn trọng quyết định của người nghe, khẳng định sự sẵn lòng cung cấp thêm thông tin và tiếp tục yêu cầu thông tin liên lạc (email) để gửi tài liệu dự án, giữ cho cuộc trò chuyện không bị ngắt quãng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi xin lỗi, nhưng tôi không muốn cung cấp email ở thời điểm này.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1812,
+      "output_tokens": 2510
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12385,
+      "output_tokens": 1124
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 18812,
+      "output_tokens": 570
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007111,
+    "output_usd": 0.015702,
+    "total_usd": 0.022813
+  }
+}

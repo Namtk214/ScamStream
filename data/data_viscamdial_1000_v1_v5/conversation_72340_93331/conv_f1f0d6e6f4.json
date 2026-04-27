@@ -1,0 +1,207 @@
+{
+  "conversation_id": "conv_f1f0d6e6f4",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0014",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tô Bảo Liên",
+    "fake_age": 38,
+    "real_occupation": "Thợ sửa chữa xe đạp và thợ có liên quan",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Logistics / Trưởng phòng Vận chuyển (giả vờ từ công ty vận tải hoặc cảng)",
+    "caller_org": "Công ty Vận tải & Logistics Sài Gòn Port / Chi nhánh Hải Phòng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty vận tải cảng phát hiện sai sót trong bảng lương/thưởng của anh và cần xác minh thông tin tài khoản ngân hàng để chuyển khoản bổ sung 5-10 triệu đồng hoặc xử lý phí bảo hiểm lao động chưa khấu trừ đúng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là 'Phòng Nhân sự - Logistics Sài Gòn Port'. Gọi đúng tên 'Anh Đinh Quang Quân' (VIC_FULLNAME), nhắc lại số điện thoại để xác nhận danh tính, đề cập số CMND/BHXH (VIC_TAX_SOCIAL_ID) để tạo ấn tượng 'công ty đã kiểm tra hồ sơ của anh'. Tone: chuyên nghiệp, vội vã nhưng lịch sự."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo tình huống khẩn cấp + lợi ích nhỏ. Nói 'Anh làm việc tốt, công ty muốn thưởng thêm 7 triệu đồng nhưng hết hạn kỳ này', hoặc 'Phát hiện khấu trừ sai bảo hiểm, cần hoàn lại cho anh 5 triệu'. Nhấn mạnh: 'Hôm nay là ngày cuối cùng để xử lý, nếu không sẽ mất quyền'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần cung cấp số tài khoản ngân hàng để công ty chuyển tiền. Hoặc nếu muốn nhanh, anh có thể chuyển trước phí xác minh (500k-1 triệu) vào tài khoản công ty, rồi công ty sẽ hoàn lại cùng khoản thưởng'. Hoặc: 'Anh vào link này để cập nhật thông tin tài khoản' (malicious link phishing)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer nói 'Anh có thể gọi lại số công ty để xác nhận, nhưng đừng kể chuyện này cho ai vì là thưởng ngoài chính sách'. Nếu thành công, tắt máy ngay, không để nạn nhân có cơ hội xác minh."
+        }
+      ]
+    },
+    "scenario_context": "Thợ sửa chữa xe đạp có thể cung cấp dịch vụ bảo trì xe nâng, xe tải nhỏ cho công ty cảng/logistics. Ngược lại, quản lý logistics cần gọi cho các công nhân vận chuyển hàng (dockers) để thông báo lịch làm việc, yêu cầu bổ sung thông tin hoặc xử lý sự cố."
+  },
+  "listener_card": {
+    "listener_id": "lis_0014",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1978,
+      "age": 47,
+      "province": "Quảng Nam",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "93331",
+      "title": "Người mang vác hàng hóa xuống tàu và lên bờ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Quang Quân",
+      "VIC_ID_DOC": "049078461816",
+      "VIC_ADDRESS": "Huyện 12, Quảng Nam",
+      "VIC_EMPLOYMENT": "Người mang vác hàng hóa xuống tàu và lên bờ",
+      "VIC_CONTACT": "0905714801",
+      "VIC_TAX_SOCIAL_ID": "8160405946"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "481717",
+      "VIC_CREDENTIAL": "653145",
+      "VIC_SIM_INFO": "0905714801",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "884700505083",
+      "VIC_CARD_DATA": "4621 **** **** 3055",
+      "VIC_BALANCE": "15 triệu đồng",
+      "VIC_ASSET": "40 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Quang Quân",
+    "VIC_CONTACT": "0905714801",
+    "VIC_ASSET": "40 triệu đồng",
+    "VIC_TAX_SOCIAL_ID": "8160405946"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Logistics / Trưởng phòng Vận chuyển (giả vờ từ công ty vận tải hoặc cảng)",
+    "caller_org": "Công ty Vận tải & Logistics Sài Gòn Port / Chi nhánh Hải Phòng",
+    "scenario_context": "Thợ sửa chữa xe đạp có thể cung cấp dịch vụ bảo trì xe nâng, xe tải nhỏ cho công ty cảng/logistics. Ngược lại, quản lý logistics cần gọi cho các công nhân vận chuyển hàng (dockers) để thông báo lịch làm việc, yêu cầu bổ sung thông tin hoặc xử lý sự cố.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty vận tải cảng phát hiện sai sót trong bảng lương/thưởng của anh và cần xác minh thông tin tài khoản ngân hàng để chuyển khoản bổ sung 5-10 triệu đồng hoặc xử lý phí bảo hiểm lao động chưa khấu trừ đúng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là 'Phòng Nhân sự - Logistics Sài Gòn Port'. Gọi đúng tên 'Anh Đinh Quang Quân' (VIC_FULLNAME), nhắc lại số điện thoại để xác nhận danh tính, đề cập số CMND/BHXH (VIC_TAX_SOCIAL_ID) để tạo ấn tượng 'công ty đã kiểm tra hồ sơ của anh'. Tone: chuyên nghiệp, vội vã nhưng lịch sự."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo tình huống khẩn cấp + lợi ích nhỏ. Nói 'Anh làm việc tốt, công ty muốn thưởng thêm 7 triệu đồng nhưng hết hạn kỳ này', hoặc 'Phát hiện khấu trừ sai bảo hiểm, cần hoàn lại cho anh 5 triệu'. Nhấn mạnh: 'Hôm nay là ngày cuối cùng để xử lý, nếu không sẽ mất quyền'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần cung cấp số tài khoản ngân hàng để công ty chuyển tiền. Hoặc nếu muốn nhanh, anh có thể chuyển trước phí xác minh (500k-1 triệu) vào tài khoản công ty, rồi công ty sẽ hoàn lại cùng khoản thưởng'. Hoặc: 'Anh vào link này để cập nhật thông tin tài khoản' (malicious link phishing)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer nói 'Anh có thể gọi lại số công ty để xác nhận, nhưng đừng kể chuyện này cho ai vì là thưởng ngoài chính sách'. Nếu thành công, tắt máy ngay, không để nạn nhân có cơ hội xác minh."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cảng/logistics gọi để thông báo ca làm việc, xác nhận dữ liệu hồ sơ hoặc thông báo về chế độ bảo hiểm, lương thưởng hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác nhận: Xưng danh rõ ràng: 'Đây là Phòng Nhân sự - Công ty Vận tải ABC. Tôi là [Họ tên thật], mã nhân viên [xxx]. Anh là Đinh Quang Quân phải không? Có phải số điện thoại 0905714801 không?'. Xác nhận thông tin cơ bản."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo cụ thể: 'Tuần tới anh có ca nào không?', 'Cần cập nhật lại thông tin tài khoản ngân hàng để chuyển lương đúng hạn', 'Công ty vừa phát hiện sai sót bảo hiểm, cần anh xác nhận lại số CMND để sửa hồ sơ'. Tất cả đều có tài liệu hỗ trợ hoặc có thể xác minh qua hệ thống chính thức."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Anh vào văn phòng ký giấy vào thứ Hai', hoặc 'Anh gửi ảnh CMND qua email công ty theo địa chỉ [official email]', hoặc 'Chúng tôi sẽ gửi form cập nhật qua email, anh điền và gửi lại'. Chào tạm biệt lịch sự, để lại số điện thoại chính thức để anh có thể gọi lại xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Đinh Quang Quân ạ. Em là Tô Bảo Liên, bên phía Phòng Nhân sự của Logistics Sài Gòn Port chi nhánh Hải Phòng đây ạ. Em gọi từ số 0905714801 của anh đúng không ạ? Dạ công ty có phát hiện một số sai sót trong hồ sơ lương thưởng liên quan đến mã số BHXH 8160405946 của anh cần xác minh gấp ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, xác nhận danh tính nạn nhân bằng các thông tin đã biết để tạo uy tín và sự tin cậy ngay từ đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về sai sót nào trong hồ sơ lương thưởng của tôi được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cụ thể là phòng kế toán phát hiện bên em đã khấu trừ chưa đúng khoản phí bảo hiểm tai nạn nghề nghiệp của anh trong quý trước. Theo quy định mới nhất thì tiền này sẽ được hoàn lại trực tiếp cho anh, khoảng 5 triệu đồng lận ạ. Nhưng hôm nay là hạn chót để xử lý, nếu không thì khoản này sẽ tự động chuyển vào quỹ phúc lợi của công ty mất anh ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích sai sót theo hướng có lợi cho nạn nhân (hoàn tiền), tạo yếu tố khẩn cấp để thúc đẩy hành động (hạn chót hôm nay)."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói, nhưng tôi cần xác minh lại thông tin qua số điện thoại khác trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh Quân ơi, em hiểu sự cẩn trọng của anh. Nhưng thật sự đây là khoản tiền hoàn trả trực tiếp cho anh, không phải là yêu cầu đóng góp gì cả. Anh cứ xác nhận thông tin này với em, sau đó em sẽ tạo lệnh hoàn trả luôn. Nếu anh liên hệ qua số tổng đài thì có thể sẽ mất thời gian hơn và dễ bị lỡ mất hạn chót hôm nay đó ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, nhấn mạnh lợi ích và yếu tố khẩn cấp để thuyết phục nạn nhân hành động ngay, đồng thời giảm thiểu cơ hội nạn nhân xác minh thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng tôi vẫn muốn kiểm tra lại thông tin từ bên công ty khác trước khi quyết định.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1414,
+      "output_tokens": 1755
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4219,
+      "output_tokens": 498
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5785,
+      "output_tokens": 197
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003126,
+    "output_usd": 0.010138,
+    "total_usd": 0.013264
+  }
+}

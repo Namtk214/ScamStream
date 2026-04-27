@@ -1,0 +1,57 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_b65443a3c3]
+  Caller thật: Thợ làm bánh mỳ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý Chuỗi Cung Ứng / Trưởng phòng Kinh Doanh Công ty Lương Thực @ Công ty Cổ Phần Lương Thực Toàn Cầu (Global Grain Supply Co.)
+  Listener: Thợ vận hành máy nướng và các sản phẩm từ ngũ cốc (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Thợ làm bánh mỳ cần liên hệ với các nhà máy nướng ngũ cốc để đặt hàng nguyên liệu thô (bột mì, ngũ cốc) hoặc thảo luận hợp đồng cung cấp dài hạn. Đây là mối quan hệ B2B tự nhiên trong chuỗi sản xuất thực phẩm.
+  Pretext: Phạm Văn Khoa được liên hệ về một 'cơ hội đầu tư ưu đãi' trong dự án mở rộng nhà máy nướng ngũ cốc, với cam kêu lợi nhuận cao. Scammer sẽ giả vờ là nhân viên công ty lương thực, sử dụng tên của Khoa để tạo sự quen thuộc và tin tưởng.
+  Listener traits: ['cẩn thận và cảnh giác', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, xin chào anh Phạm Văn Khoa phải không ạ? Tôi là Đặng Ngọc Trang, Trưởng phòng Kinh doanh của Công ty Cổ phần Lương thực Toàn Cầu. Chúng tôi được một đối tác tin cậy giới thiệu đến anh để trao đổi về cơ hội đầu tư ưu đãi vào dự án mở rộng nhà máy nướng ngũ cốc của chúng tôi.
+      → phase: S1 | tactic: Giới thiệu bản thân và công ty, sử dụng VIC_FULLNAME để tạo sự quen thuộc và nhắc đến 'đối tác tin cậy' để xây dựng lòng tin.
+T02 [LISTENER] Chị gọi tôi có chuyện gì vậy ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng thưa anh Khoa, như tôi vừa đề cập, chúng tôi đang có một dự án trọng điểm mở rộng nhà máy nướng ngũ cốc với nguồn vốn đầu tư lớn. Hiện tại, chúng tôi chỉ còn 3 vị trí nhà đầu tư chiến lược với mức lợi nhuận hấp dẫn, khoảng 30-40% trong 6 tháng. Cơ hội này sẽ chính thức đóng lại sau 48 giờ thôi ạ.
+      → phase: S2 | tactic: Tạo cảm giác 'cơ hội hiếm có' và sự khan hiếm bằng cách nói về số lượng vị trí có hạn và thời gian còn lại, đồng thời đưa ra lợi nhuận cao để hấp dẫn nạn nhân.
+T04 [LISTENER] Chị có thể cho tôi biết thêm thông tin cụ thể về dự án và công ty được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, tất nhiên rồi. Công ty chúng tôi là Công ty Cổ phần Lương thực Toàn Cầu, với hơn 20 năm kinh nghiệm trong ngành chế biến ngũ cốc. Dự án lần này là mở rộng quy mô sản xuất để đáp ứng nhu cầu thị trường đang tăng cao, và chúng tôi chỉ tìm kiếm các nhà đầu tư chất lượng cao, có tiềm lực tài chính như anh để cùng đồng hành. Nhiều nhà đầu tư khác đã sẵn sàng ký hợp đồng rồi anh ạ, không biết anh có thực sự quan tâm đến cơ hội này không?
+      → phase: S2 | tactic: Củng cố niềm tin bằng cách cung cấp thông tin về công ty và dự án, đồng thời tạo áp lực bằng cách nói về các nhà đầu tư khác đã sẵn sàng để thúc đẩy nạn nhân ra quyết định.
+T06 [LISTENER] Tôi vẫn cần thời gian để xem xét kỹ lưỡng, chị có thể cho tôi biết thêm về các điều khoản và rủi ro không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, tôi hiểu anh cần thời gian xem xét. Tuy nhiên, như tôi đã nói, cơ hội này rất giới hạn và mang tính cấp bách. Để đảm bảo vị trí đầu tư cho mình trong 48 giờ tới và nhận được các tài liệu chi tiết về dự án và hợp đồng, anh Phạm Văn Khoa cần chuyển một khoản tiền ký quỹ ban đầu là 89 triệu đồng. Khoản tiền này sẽ được hoàn lại 100% trong vòng 7 ngày nếu anh không hài lòng với các điều khoản sau khi xem xét ạ.
+      → phase: S3 | tactic: Bắt đầu yêu cầu hành động, đưa ra số tiền ký quỹ cụ thể dựa trên VIC_ASSET và tạo cảm giác đây là một quy trình tiêu chuẩn, đồng thời cam kết hoàn tiền để giảm bớt sự nghi ngờ.
+T08 [LISTENER] Chị ơi, tôi vẫn cảm thấy lo lắng về việc chuyển khoản một số tiền lớn như vậy, có thể chị gửi cho tôi thông tin rõ hơn về hợp đồng và bảo đảm không rủi ro không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T09 [CALLER] Anh Khoa cứ yên tâm. Đây là quy trình chuẩn của công ty để đảm bảo sự nghiêm túc từ phía nhà đầu tư và giữ chỗ cho anh trong danh sách ưu tiên. Toàn bộ các điều khoản và cam kết hoàn tiền đều được ghi rõ trong hợp đồng chính thức. Anh có thể chuyển khoản vào số tài khoản sau để giữ chỗ trước khi chúng tôi duyệt các nhà đầu tư khác ạ.
+      → phase: S3 | tactic: Giảm bớt lo lắng của nạn nhân bằng cách nhấn mạnh tính 'chuẩn' của quy trình và cam kết bằng văn bản, đồng thời tạo áp lực về thời gian và cạnh tranh để thúc đẩy hành động chuyển tiền.
+T10 [LISTENER] Tôi vẫn chưa yên tâm, chị có thể cho tôi biết số tài khoản cụ thể được không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T11 [CALLER] Vâng, số tài khoản của chúng tôi là 1903xxxxxxxx, tại ngân hàng Techcombank, chi nhánh Hồ Chí Minh. Chủ tài khoản là Công ty Cổ phần Lương thực Toàn Cầu. Anh Khoa vui lòng ghi rõ nội dung chuyển khoản là 'Ký quỹ đầu tư dự án ngũ cốc - [Tên anh]' để chúng tôi tiện theo dõi và gửi hợp đồng về cho anh sớm nhất ạ.
+      → phase: S3 | tactic: Cung cấp chi tiết tài khoản ngân hàng và hướng dẫn nội dung chuyển khoản để nạn nhân có thể thực hiện giao dịch, nhấn mạnh đây là bước tiếp theo để nhận hợp đồng.
+T12 [LISTENER] Chị ơi, tôi vẫn cảm thấy không yên tâm về việc chuyển khoản, chị có thể cho tôi biết thêm thông tin về công ty và dự án không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T13 [CALLER] Vâng, tôi hiểu anh Khoa còn băn khoăn. Tuy nhiên, thời gian để giữ lại cơ hội đầu tư ưu đãi này cho anh chỉ còn rất ít. Nếu anh không tiến hành ký quỹ để giữ chỗ, chúng tôi buộc phải nhường vị trí này cho các nhà đầu tư khác đang chờ sẵn, và rất tiếc là anh sẽ bỏ lỡ một cơ hội lợi nhuận cực kỳ hấp dẫn. Anh nên cân nhắc kỹ trước khi đưa ra quyết định cuối cùng ạ.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách tạo áp lực về thời gian và hậu quả của việc bỏ lỡ cơ hội, nhấn mạnh rằng vị trí sẽ được trao cho người khác để thúc đẩy hành động nhanh chóng.
+T14 [LISTENER] Chị tạo áp lực quá, tôi cần thêm thời gian để kiểm tra thông tin và có quyết định chính xác, không thể vội vã như vậy được ạ.
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+T15 [CALLER] Tôi hiểu anh Khoa cần thêm thời gian, nhưng cơ hội này thực sự không chờ đợi ai. Nếu anh không sẵn sàng tham gia ngay, chúng tôi sẽ phải ưu tiên cho những nhà đầu tư khác đã bày tỏ thiện chí và sẵn sàng ký hợp đồng. Vậy tôi xin phép kết thúc cuộc gọi tại đây. Cảm ơn anh đã dành thời gian lắng nghe.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách lịch sự nhưng dứt khoát, ngụ ý rằng nạn nhân đã bỏ lỡ cơ hội, để lại sự tiếc nuối và áp lực tâm lý.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  15 turns | suspicion=1.20
+TOKEN: in=34767 | out=3852
+COST : $0.020696
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_75122_81604\conv_b65443a3c3.json  [CALLER_END]

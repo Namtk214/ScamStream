@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_f482f407ed]
+  Caller thật: Lao động trên đường phố và lao động có liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Giám sát an toàn hàng không - Cục Hàng không Dân dụng Việt Nam @ Phòng Kiểm tra An toàn Kỹ thuật - Cục Hàng không Dân dụng
+  Listener: Thợ sửa chữa động cơ máy bay (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Thợ sửa chữa động cơ máy bay cần tiếp nhận thông báo từ cơ quan quản lý về kiểm tra định kỳ, lịch bảo dưỡng, hoặc sự cố liên quan đến máy bay. Lao động trên đường phố có thể giả danh nhân viên cơ quan có thẩm quyền để gọi kiểm tra.
+  Pretext: Gọi thông báo kiểm tra an toàn định kỳ động cơ máy bay tại khu vực Bình Thuận. Scammer sử dụng tên đầy đủ của nạn nhân (Vũ Thùy Hồng Giang) để xác nhận danh tính, tạo ảo tưởng cuộc gọi hợp lệ từ cơ quan chính thức.
+  Listener traits: ['nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Vũ Thùy Hồng Giang, tôi là Mai Minh Bình từ Phòng Kiểm tra An toàn Kỹ thuật của Cục Hàng không Dân dụng. Chúng tôi có hồ sơ của chị ở khu vực Bình Thuận và cần xác nhận số điện thoại 0917470860 này có phải của chị không ạ?
+      → phase: S1 | tactic: Tiếp cận và xác nhận thông tin nạn nhân để tạo độ tin cậy ban đầu.
+T02 [LISTENER] Em nghe anh nói rồi, nhưng em muốn kiểm tra lại thông tin này có đúng không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Là thế này chị Giang ạ, hồ sơ của chị về bảo dưỡng động cơ máy bay tại khu vực Bình Thuận đang hiển thị một số lỗi an toàn nghiêm trọng. Chúng tôi đã tiến hành kiểm tra định kỳ và phát hiện ra việc này. Nếu chị không khắc phục trong vòng 24 giờ tới, máy bay sẽ bị đình chỉ hoạt động và chị sẽ phải chịu một khoản phạt hành chính rất lớn đấy ạ.
+      → phase: S2 | tactic: Tạo tình huống khẩn cấp và đe dọa hậu quả nghiêm trọng để nạn nhân lo sợ và hành động.
+T04 [LISTENER] Em rất lo lắng với những gì anh nói, nhưng em cũng muốn xem xét kỹ lưỡng trước khi hành động ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Tôi hiểu nỗi lo của chị. Tuy nhiên, tình hình rất cấp bách. Để tránh những hậu quả đáng tiếc và đảm bảo máy bay của chị có thể tiếp tục hoạt động, chị cần thanh toán phí xử lý sự cố và cập nhật hồ sơ là 2.5 triệu đồng. Chị vui lòng chuyển khoản ngay vào tài khoản công vụ của Cục Hàng không Dân dụng đã được công bố trên website chính thức để chúng tôi bắt đầu quy trình hỗ trợ pháp lý sớm nhất.
+      → phase: S3 | tactic: Yêu cầu thực hiện hành động cụ thể (chuyển tiền) dưới danh nghĩa 'phí xử lý sự cố' và cung cấp kênh thanh toán để tạo sự gấp gáp và hợp lệ.
+T06 [LISTENER] Em nghe anh nói 2.5 triệu đồng, nhưng em cần xác nhận tài khoản đó là của cơ quan nào trước khi chuyển tiền ạ.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Vâng, tất nhiên rồi chị. Tài khoản này là của Phòng Kiểm tra An toàn Kỹ thuật, Cục Hàng không Dân dụng Việt Nam. Số tài khoản là 1022718386, tại ngân hàng VietinBank. Chị có cần tôi đọc lại không ạ? Chị cứ kiểm tra kỹ, nhưng xin chị lưu ý về thời hạn 24 giờ. Nếu quá thời hạn này, chúng tôi rất tiếc phải báo cáo lên cấp trên để tiến hành các biện pháp chế tài.
+      → phase: S3 | tactic: Cung cấp thông tin tài khoản giả mạo để nạn nhân tin tưởng chuyển tiền, đồng thời nhắc lại và nhấn mạnh mối đe dọa về thời hạn để tạo áp lực.
+T08 [LISTENER] Em rất cảm ơn anh đã cung cấp thông tin này, nhưng em vẫn cần thời gian để xác minh và không thể chuyển tiền ngay lúc này ạ.
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Chị Giang, xin lỗi nhưng tôi không thể cho chị thêm thời gian được. Đây là quy trình bắt buộc và đã có thông báo rõ ràng. Nếu chị không hợp tác và hoàn tất thủ tục trong hôm nay, chúng tôi buộc phải đình chỉ hoạt động máy bay của chị và chuyển hồ sơ sang cơ quan điều tra để xử lý theo quy định của pháp luật. Tôi tin là chị không muốn mọi việc đi xa đến mức đó đâu.
+      → phase: S4 | tactic: Tăng cường đe dọa pháp lý và hậu quả nghiêm trọng để nạn nhân sợ hãi và tuân thủ. Nhấn mạnh việc không còn lựa chọn.
+T10 [LISTENER] Em thấy anh nói rất nghiêm trọng, nhưng em vẫn cần kiểm tra lại mọi thứ trước khi quyết định ạ.
+      → action: REFUSAL | suspicion: 1.90 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=1.90
+TOKEN: in=19466 | out=2793
+COST : $0.014873
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_95100_72322\conv_f482f407ed.json  [SCAM_REFUSE]

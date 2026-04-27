@@ -1,0 +1,59 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_1b71ae9a7c]
+  Caller thật: Nhà chuyên môn về hải quan của Chính phủ (Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước)
+  Caller đóng vai: Trưởng phòng Kiểm soát Hàng hóa xuất nhập khẩu — Chi cục Hải quan @ Chi cục Hải quan Cảng Thủ Đức / Tổng cục Hải quan Việt Nam
+  Listener: Nhà chăn nuôi (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Nhà chăn nuôi thường xuất khẩu hoặc nhập khẩu thức ăn gia súc, vật tư chăn nuôi, động vật sống — tất cả đều phải qua hải quan. Cơ quan hải quan có quyền gọi để xác minh, thông báo, hoặc yêu cầu hành động liên quan đến lô hàng, thuế, hoặc vi phạm.
+  Pretext: Phát hiện lô hàng nhập khẩu động vật có vấn đề về giấy tờ → Yêu cầu thanh toán phí xử phạt/phí kiểm dịch để tránh tịch thu hàng hoá. Sử dụng tên nạn nhân + số ID để tạo ảo tưởng rằng scammer đã tra cứu hệ thống.
+  Listener traits: ['hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Tạ Đức Nam, tôi là Dương Tiến Hùng, Trưởng phòng Kiểm soát Hàng hóa từ Chi cục Hải quan. Chúng tôi vừa phát hiện lô hàng nhập khẩu gia súc dưới tên anh, số CMND 048202850615, có vấn đề về giấy tờ kiểm dịch. Bây giờ anh có thể nghe máy tôi nói được không?
+      → phase: S1 | tactic: Giới thiệu bản thân, chức danh, tổ chức và thông báo vấn đề khẩn cấp liên quan đến nạn nhân bằng thông tin cá nhân chính xác để gây dựng lòng tin và sự cấp bách.
+T02 [LISTENER] Em nghe anh nói, nhưng em không rõ lắm về lô hàng này, anh có thể nói rõ hơn được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Lô hàng gia súc nhập khẩu này có nguồn gốc từ Úc, được khai báo là bò thịt. Theo hệ thống của chúng tôi, lô hàng này anh đứng tên nhận và có dấu hiệu sai lệch thông tin trong hồ sơ kiểm dịch đã nộp. Cụ thể là có sự chênh lệch giữa số lượng và trọng lượng thực tế so với giấy tờ. Nếu không xử lý ngay, hàng hóa sẽ bị tạm giữ và đối mặt với một khoản phạt tiền không hề nhỏ, anh có hiểu không?
+      → phase: S1 | tactic: Cung cấp thêm thông tin chi tiết (dù giả mạo) để tăng tính xác thực của câu chuyện và bắt đầu gây áp lực về hậu quả pháp lý/tài chính.
+T04 [LISTENER] Em biết lô hàng này là của mình, nhưng có đúng thông tin anh nói không ạ? Em muốn xác nhận lại trước khi tiếp tục.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Mọi thông tin đã được tôi kiểm tra kỹ lưỡng trên hệ thống của Tổng cục Hải quan, anh Nam ạ. Đặc biệt, đây là lô hàng có giá trị lớn, nếu để xảy ra sơ suất, không chỉ anh bị thiệt hại về kinh tế mà còn ảnh hưởng đến uy tín trong ngành chăn nuôi. Anh có đang ở gần máy tính để tôi hướng dẫn anh xem qua quy trình xử lý phạt không?
+      → phase: S1 | tactic: Nhấn mạnh độ chính xác của thông tin và hậu quả nghiêm trọng để tăng áp lực và tạo sự cấp thiết. Khuyến khích hành động tiếp theo để nạn nhân chủ động đi sâu vào vấn đề.
+T06 [LISTENER] Em vẫn chưa thấy rõ vấn đề lắm, anh có thể cung cấp thêm thông tin cụ thể về quy trình xử lý này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Thời hạn xử lý cho lô hàng này là cực kỳ gấp rút, chỉ còn khoảng 2 tiếng nữa thôi là sẽ hết thời gian để thực hiện các thủ tục hành chính. Nếu không xử lý kịp, toàn bộ lô hàng sẽ bị tịch thu và anh sẽ phải đối mặt với một khoản phạt lên đến 200 triệu đồng. Anh sẽ mất hết và còn bị ghi nhận vào danh sách doanh nghiệp vi phạm. Nhưng nếu anh hợp tác xử lý ngay bây giờ, chúng tôi có thể đưa ra một phương án giảm nhẹ mức phạt xuống còn 50 triệu thôi. Anh cần quyết định nhanh chóng.
+      → phase: S2 | tactic: Tạo áp lực thời gian và tâm lý sợ hãi về hậu quả mất mát tài sản, danh tiếng để thúc đẩy nạn nhân nhanh chóng đưa ra quyết định chuyển tiền, đồng thời đưa ra 'lối thoát' với mức phạt thấp hơn để tạo động lực.
+T08 [LISTENER] Em hiểu áp lực thời gian nhưng anh có thể cho em biết rõ hơn về những thủ tục cần thực hiện không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, để giải quyết ngay lập tức và tránh việc lô hàng bị tịch thu, anh cần chuyển khoản 50 triệu đồng vào tài khoản tạm giữ phí xử phạt của Chi cục Hải quan. Đây là số tiền phạt đã được giảm nhẹ. Tôi sẽ gửi số tài khoản này qua tin nhắn SMS cho anh ngay bây giờ. Sau khi chuyển, anh chụp lại biên lai gửi qua Zalo để chúng tôi hoàn tất thủ tục cấp giấy thông quan tạm thời, anh nghe rõ chưa?
+      → phase: S3 | tactic: Yêu cầu nạn nhân chuyển tiền ngay lập tức vào một tài khoản cụ thể, nhấn mạnh rằng đây là giải pháp duy nhất và khẩn cấp để giải quyết vấn đề, đồng thời tạo cảm giác rằng mọi thứ sẽ được giải quyết sau khi chuyển tiền.
+T10 [LISTENER] Em nghe chưa rõ lắm về tài khoản mà anh vừa nói, anh có thể gửi cho em thông tin cụ thể hơn trước được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Anh đừng lo lắng về thông tin tài khoản, tôi sẽ gửi cho anh qua tin nhắn SMS và Zalo ngay sau cuộc gọi này. Điều quan trọng nhất bây giờ là anh cần xác nhận sẽ thực hiện việc chuyển khoản 50 triệu đồng để tránh hậu quả nghiêm trọng hơn. Đây là quy trình bắt buộc và không thể thực hiện qua mạng trực tuyến được, anh Nam ạ.
+      → phase: S3 | tactic: Trấn an nạn nhân về việc cung cấp thông tin tài khoản, đồng thời tái khẳng định sự cần thiết và tính cấp bách của việc chuyển tiền. Nhấn mạnh rằng đây là quy trình bắt buộc và không có lựa chọn khác để thúc đẩy nạn nhân đồng ý hành động.
+T12 [LISTENER] Em cần thêm thời gian để xem xét kỹ lưỡng trước khi quyết định chuyển khoản, anh có thể cho em biết thêm chi tiết về tài khoản mà anh sẽ gửi không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Anh Nam, trong trường hợp anh cần thêm thời gian, tôi sẽ ghi nhận anh từ chối xử lý ngay lập tức. Trong vòng 24 giờ tới, bộ phận pháp lý của chúng tôi sẽ khởi tố vụ việc và anh sẽ nhận được giấy triệu tập chính thức. Khi đó, mức phạt sẽ là 200 triệu đồng và lô hàng sẽ bị tịch thu hoàn toàn. Anh có chắc chắn muốn để mọi việc đi đến đó không?
+      → phase: S4 | tactic: Chuyển sang giai đoạn đe dọa pháp lý và tài chính nghiêm trọng hơn để tạo áp lực cuối cùng, đồng thời nhắc lại hậu quả tồi tệ nhất nếu nạn nhân không hợp tác.
+T14 [LISTENER] Em hiểu rồi, nhưng em vẫn muốn xác nhận lại thông tin từ phía chi cục Hải quan chính thức trước khi quyết định ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Anh Nam, nếu anh muốn xác nhận, anh có thể đến trực tiếp Chi cục Hải quan Cảng Thủ Đức trong giờ hành chính. Tuy nhiên, nếu anh làm như vậy, chúng tôi sẽ không kịp xử lý hồ sơ giảm phạt cho lô hàng của anh trước thời hạn. Anh có muốn bỏ lỡ cơ hội này không?
+      → phase: S4 | tactic: Giữ vững lập trường về sự cấp bách và hậu quả, đồng thời đưa ra một lựa chọn (đến trực tiếp) nhưng gắn với một cái giá (mất cơ hội giảm phạt) để nạn nhân thấy rằng việc hợp tác ngay lập tức là có lợi hơn.
+T16 [LISTENER] Em hiểu anh đang nói, nhưng em cảm thấy cần phải xác nhận thêm thông tin từ cơ quan chính thống để đảm bảo mọi thứ rõ ràng hơn ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  16 turns | suspicion=0.00
+TOKEN: in=36612 | out=3638
+COST : $0.019445
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_24410_21325\conv_1b71ae9a7c.json  [SCAM_REFUSE]

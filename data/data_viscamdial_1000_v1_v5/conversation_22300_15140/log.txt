@@ -1,0 +1,37 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_e4795703b5]
+  Caller thật: Nhà chuyên môn về y học cổ truyền và hỗ trợ (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Giám đốc Trung tâm Y học Cổ truyền & Phòng chống Bệnh tật Cộng đồng (giả vờ nâng cấp từ nhà chuyên môn lên cấp quản lý) @ Trung tâm Y học Cổ truyền & Sức khỏe Cộng đồng TP.HCM (Bộ Y tế)
+  Listener: Ủy viên cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: LEGIT | Path: LEGIT
+  Context: Ủy viên cấp tỉnh thường được liên hệ bởi các đơn vị y tế công lập để phê duyệt chính sách sức khỏe, dự án phòng chống dịch bệnh, hoặc tham gia các cuộc họp hợp tác giữa ngành y tế và chính quyền địa phương. Điểm giao thoa tự nhiên: dự án quốc gia về y học cổ truyền hoặc chương trình khám sàng lọc sức khỏe cho cán bộ.
+  Pretext: Trung tâm Y học Cổ truyền TP.HCM (đơn vị thực tế của Bộ Y tế) gọi để mời Ủy viên cấp tỉnh tham gia hội thảo chính sách y tế hoặc xin ý kiến về dự án phòng chống bệnh mãn tính trong cộng đồng
+  Listener traits: ['lo lắng hay bận tâm', 'sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào chị Trương Diễm Như Trang, tôi là Hồ Công Xuân Hùng từ Trung tâm Y học Cổ truyền & Sức khỏe Cộng đồng TP.HCM. Chị có thể nghe tôi được không ạ?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, xác nhận đúng người nghe máy theo thông tin cơ bản.
+T02 [LISTENER] Dạ, em nghe anh ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào chị. Chúng tôi đang chuẩn bị hội thảo về tích hợp y học cổ truyền vào chính sách sức khỏe cộng đồng và rất mong được lắng nghe ý kiến từ các chuyên gia như chị. Chị có thể tham gia cuộc họp online vào ngày 15 tháng 2 lúc 14 giờ được không ạ?
+      → phase: L2 | tactic: Trao đổi nội dung công việc rõ ràng, không đề cập đến thanh toán hay thông tin cá nhân nhạy cảm.
+T04 [LISTENER] Dạ, em cũng rất quan tâm đến các vấn đề này, nhưng em cần xem lịch trước đã ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, vậy chị có thể xem lịch và phản hồi lại cho chúng tôi qua email công vụ đã đăng ký được không ạ? Chúng tôi sẽ gửi thư mời chi tiết đến địa chỉ đó.
+      → phase: L2 | tactic: Giữ nội dung chuyên nghiệp, không gây áp lực, gợi ý xác nhận qua kênh chính thức.
+T06 [LISTENER] Dạ, em đã hiểu rồi, em sẽ xem lịch và trả lời anh qua email sau ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị sắp xếp được thì rất tốt. Chúng tôi sẽ chờ email phản hồi của chị. Nếu có bất kỳ thắc mắc nào, chị có thể liên hệ tổng đài của Trung tâm qua số 028-xxxx-xxxx. Xin cảm ơn chị!
+      → phase: L3 | tactic: Kết thúc cuộc gọi chuyên nghiệp sau khi đạt được mục đích, cung cấp kênh liên hệ chính thức.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  7 turns | suspicion=0.00
+TOKEN: in=11566 | out=2538
+COST : $0.013908
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_22300_15140\conv_e4795703b5.json  [CALLER_END]

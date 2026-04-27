@@ -1,0 +1,67 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_9464f89fdd]
+  Caller thật: Bác sỹ chuyên khoa khác (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Bác sỹ chuyên khoa Tim mạch - Phó Giám đốc Khối Y tế, Công ty Phim ảnh ABC @ Bệnh viện Công ty Phim ảnh ABC / Trung tâm Y tế Doanh nghiệp Quảng Nam
+  Listener: Thợ vận hành máy sản xuất sản phẩm phim ảnh (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Bác sỹ từ bộ phận y tế công ty sản xuất phim ảnh cần liên hệ với công nhân vận hành máy để thực hiện khám sức khỏe định kỳ, kiểm tra tiếp xúc hóa chất hoặc thông báo về kết quả xét nghiệm công ty.
+  Pretext: Thông báo khám sức khỏe định kỳ bắt buộc cho công nhân vận hành máy tại công ty phim ảnh. Sử dụng tên thật nạn nhân (Hồ Hữu Hải) và số điện thoại để tạo vẻ ngoài chính thức. Yêu cầu xác nhận thông tin cá nhân và thanh toán phí khám sức khỏe online hoặc cập nhật thông tin ngân hàng.
+  Listener traits: ['hay hỏi lại để chắc chắn', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Hồ Hữu Hải phải không ạ? Tôi là bác sĩ Mai Thùy Hằng từ Trung tâm Y tế Công ty Phim ảnh ABC. Chúng tôi có hồ sơ của anh ở Huyện 3, Quảng Nam đây, cần xác nhận một số thông tin về khám sức khỏe định kỳ năm nay ạ.
+      → phase: S1 | tactic: Xưng danh và sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin ban đầu.
+T02 [LISTENER] Dạ, chị có thể cho em biết cần xác nhận thông tin gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, anh Hải này, trước hết là tình trạng sức khỏe tổng quát của anh vẫn ổn định. Nhưng trong kết quả xét nghiệm máu lần này, có một vài chỉ số hơi bất thường nhẹ so với định mức công ty. Chúng tôi cần anh tái khám ngay để có thể loại trừ sớm các nguy cơ bệnh lý tiềm ẩn, đảm bảo sức khỏe cho vị trí công nhân vận hành máy của anh.
+      → phase: S2 | tactic: Tạo tình huống khẩn cấp, đưa ra thông tin 'bất thường' để nạn nhân lo lắng, chuẩn bị cho bước yêu cầu hành động tiếp theo.
+T04 [LISTENER] Dạ, em hiểu rồi, nhưng chị có thể cho em biết thêm chi tiết về chỉ số nào bất thường không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, anh Hải hỏi rất đúng. Theo hồ sơ của chúng tôi, chỉ số đường huyết lúc đói của anh đang dao động ở mức 7.2 mmol/L, và chỉ số men gan AST/ALT cũng đang vượt ngưỡng cho phép một chút. Những chỉ số này nếu không được kiểm tra lại và can thiệp kịp thời có thể ảnh hưởng đến công việc và sức khỏe lâu dài của anh. Để tiện cho anh, công ty hỗ trợ thanh toán phí tái khám online trước, sau đó chúng tôi sẽ sắp xếp lịch hẹn cụ thể phù hợp với lịch làm việc của anh.
+      → phase: S2 | tactic: Cung cấp thông tin chi tiết giả mạo để tăng tính xác thực của lời nói, đồng thời tạo áp lực về sức khỏe và công việc, dẫn dắt sang yêu cầu thanh toán online.
+T06 [LISTENER] Dạ, chị ơi, vậy chị cần em làm gì để thực hiện việc tái khám này ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, anh cứ yên tâm. Để đẩy nhanh quá trình và đảm bảo anh được tái khám sớm nhất, anh vui lòng thanh toán trước khoản phí tái khám là 750.000 đồng qua hình thức chuyển khoản trực tuyến. Đây là quy định mới của công ty để tối ưu hóa quy trình khám chữa bệnh. Sau khi nhận được thanh toán, chúng tôi sẽ ngay lập tức liên hệ để xác nhận và sắp xếp lịch hẹn tái khám cụ thể cho anh, ưu tiên vào khung giờ anh rảnh nhất.
+      → phase: S3 | tactic: Yêu cầu nạn nhân thực hiện hành động chuyển tiền với lý do hợp lý, tạo cảm giác thuận tiện và khẩn cấp.
+T08 [LISTENER] Dạ, nhưng em chưa rõ cách thức thanh toán như thế nào và liệu có an toàn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Anh cứ yên tâm, đây là hình thức thanh toán trực tuyến rất phổ biến và an toàn, được bảo mật bởi ngân hàng. Tôi sẽ cung cấp cho anh thông tin tài khoản của Trung tâm Y tế Công ty, bao gồm số tài khoản và tên thụ hưởng. Anh chỉ cần vào ứng dụng ngân hàng trên điện thoại hoặc máy tính để chuyển khoản. Sau khi chuyển xong, anh vui lòng chụp lại màn hình giao dịch thành công và gửi lại cho tôi qua Zalo số này để chúng tôi xác nhận nhanh nhất.
+      → phase: S3 | tactic: Xoa dịu lo ngại về an toàn, hướng dẫn cách thức chuyển tiền một cách chi tiết và tạo cảm giác minh bạch, đồng thời yêu cầu bằng chứng giao dịch để thúc đẩy hành động.
+T10 [LISTENER] Dạ, chị có thể cho em biết số tài khoản và tên thụ hưởng được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, anh ghi lại giúp tôi nhé: Số tài khoản là 1024567890, tên thụ hưởng là MAI THUY HANG, ngân hàng Vietcombank chi nhánh Đà Nẵng. Anh nhớ ghi rõ nội dung chuyển khoản là 'Phi KHAM SK DKY A HAI' để chúng tôi dễ dàng đối chiếu. Anh xác nhận lại với tôi khi đã chuyển khoản xong nhé.
+      → phase: S3 | tactic: Cung cấp thông tin tài khoản ngân hàng giả mạo, hướng dẫn cụ thể cách chuyển tiền và nội dung chuyển khoản để đạt được mục tiêu money_transfer.
+T12 [LISTENER] Dạ, chị cho em xác nhận lại thông tin tài khoản nhé: Số tài khoản là 1024567890, tên thụ hưởng là MAI THUY HANG, đúng không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Đúng rồi đó anh Hải. Anh kiểm tra kỹ một lần nữa, sau đó thực hiện chuyển khoản giúp tôi. Trong quá trình chuyển khoản nếu có bất kỳ khó khăn nào, anh cứ báo lại để tôi hỗ trợ ngay nhé. Chúng tôi đang chờ thông tin xác nhận từ anh để sắp xếp lịch tái khám sớm nhất.
+      → phase: S3 | tactic: Xác nhận lại thông tin tài khoản, tạo cảm giác gấp gáp và sẵn sàng hỗ trợ để thúc đẩy nạn nhân chuyển tiền, chờ đợi giao dịch thành công.
+T14 [LISTENER] Dạ, nhưng chị ơi, nếu em chưa quen với việc chuyển khoản online thì có cách nào khác không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Anh Hải đừng lo lắng. Nếu anh chưa quen chuyển khoản online thì anh có thể nhờ người thân hoặc bạn bè hỗ trợ giúp mình ạ. Hoặc nếu muốn, tôi có thể hướng dẫn anh từng bước một qua điện thoại. Quan trọng nhất là anh hoàn tất việc thanh toán sớm để chúng tôi sắp xếp lịch tái khám kịp thời cho anh. Anh nghĩ sao?
+      → phase: S3 | tactic: Xoa dịu lo ngại, đề xuất giải pháp thay thế để nạn nhân vẫn thực hiện hành động chuyển tiền, duy trì áp lực về thời gian.
+T16 [LISTENER] Dạ, em nghĩ là em sẽ nhờ người thân giúp đỡ cho an toàn hơn, chị có thể nhắc lại thông tin tài khoản và nội dung chuyển khoản để em không quên được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Vâng, anh cứ nhắc người nhà là chuyển vào tài khoản số 1024567890, tên thụ hưởng là MAI THUY HANG, ngân hàng Vietcombank chi nhánh Đà Nẵng. Nội dung chuyển khoản là 'Phi KHAM SK DKY A HAI' nhé. Anh nhờ người nhà chuyển xong thì báo lại tôi để tôi xác nhận và tiến hành sắp xếp lịch tái khám nhanh chóng cho anh ạ.
+      → phase: S3 | tactic: Nhắc lại thông tin tài khoản và nội dung chuyển khoản một lần nữa theo yêu cầu của nạn nhân, đồng thời duy trì áp lực về thời gian và sự cần thiết của việc hoàn thành thanh toán.
+T18 [LISTENER] Dạ, chị đã nhắc lại rõ ràng rồi, em cảm ơn chị nhiều ạ! Em sẽ nhờ người thân giúp đỡ ngay.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Vâng, anh cứ nhờ người thân giúp đỡ nhé. Chúng tôi sẽ chờ thông báo từ anh để tiếp tục quy trình. Chúc anh một ngày tốt lành và hy vọng sớm được gặp anh tại buổi tái khám.
+      → phase: S3 | tactic: Tạm kết thúc cuộc gọi một cách tự nhiên sau khi đã đạt được mục tiêu là khiến nạn nhân tin tưởng và cam kết thực hiện chuyển tiền, đồng thời tạo áp lực nhẹ nhàng để nạn nhân hành động.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  19 turns | suspicion=0.00
+TOKEN: in=45921 | out=3971
+COST : $0.022138
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_22129_81320\conv_9464f89fdd.json  [CALLER_END]

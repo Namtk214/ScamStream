@@ -1,0 +1,57 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_d0ee5d0b43]
+  Caller thật: Nhân viên hỗ trợ về chăm sóc sức khỏe (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Trưởng phòng Quản lý chất lượng Y tế - Bộ phận Kiểm soát thiết bị y tế @ Trung tâm Y tế Công nghiệp Tiền Giang / Chi nhánh Cục Quản lý Chất lượng Thiết bị Y tế
+  Listener: Kỹ thuật viên X quang (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Kỹ thuật viên X quang cần được kiểm tra định kỳ về an toàn bức xạ và cập nhật thông tin hành nghề. Nhân viên hỗ trợ chăm sóc sức khỏe (nâng cấp thành Trưởng phòng) có trách nhiệm gọi xác nhận thông tin cá nhân và tài khoản ngân hàng cho mục đích cấp phép/bảo hiểm y tế.
+  Pretext: Cập nhật hồ sơ an toàn bức xạ định kỳ hoặc xác nhận thông tin cho hệ thống quản lý giấy phép hành nghề y tế; hoặc thông báo về chương trình đào tạo an toàn bức xạ bắt buộc.
+  Listener traits: ['nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, em chào anh Hải. Em là Phan Tiến Phong, Trưởng phòng Quản lý chất lượng Y tế, thuộc Trung tâm Y tế Công nghiệp Tiền Giang. Em gọi điện để xác nhận lại thông tin hồ sơ an toàn bức xạ định kỳ của anh ạ. Số điện thoại cơ quan em là 0273 3855 000, anh có thể gọi lại để xác minh ạ.
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, tự giới thiệu và nêu rõ mục đích gọi, cung cấp thông tin xác minh.
+T02 [LISTENER] Dạ, em nghe anh nói rồi, nhưng em muốn kiểm tra lại thông tin của mình trước đã.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, anh cứ kiểm tra đi ạ. Thông tin hồ sơ anh cần kiểm tra là gì ạ, em có thể hỗ trợ anh tìm kiếm nhanh hơn không ạ?
+      → phase: L1 | tactic: Giữ thái độ chuyên nghiệp, khuyến khích xác minh và đề nghị hỗ trợ để giữ cho cuộc gọi không bị gián đoạn.
+T04 [LISTENER] Tôi muốn kiểm tra thông tin cá nhân của mình trước, như tên và địa chỉ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em đã có thông tin của anh Đỗ Quang Hải, địa chỉ hiện tại là ở Tiền Giang ạ. Anh vui lòng xác nhận giúp em thông tin này đúng chưa ạ?
+      → phase: L2 | tactic: Xác nhận thông tin cơ bản đã có để người nghe cảm thấy tin tưởng và hợp tác.
+T06 [LISTENER] Đúng rồi, tôi là Đỗ Quang Hải, sống ở Tiền Giang.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_FULLNAME', 'VIC_ADDRESS']
+
+T07 [CALLER] Dạ vâng, cảm ơn anh đã xác nhận. Ngoài ra, em cũng muốn xác nhận số chứng minh nhân dân hoặc căn cước công dân của anh là 7833200970 và số điện thoại liên hệ là 0971208942 có đúng không ạ?
+      → phase: L2 | tactic: Tiếp tục xác nhận các thông tin cơ bản khác để hoàn thiện hồ sơ và tạo cảm giác tin tưởng.
+T08 [LISTENER] Tôi thấy số chứng minh nhân dân đó đúng, nhưng em cho tôi biết tại sao cần phải xác nhận số điện thoại này ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ, số điện thoại 0971208942 là số điện thoại liên hệ mà Trung tâm Y tế Công nghiệp Tiền Giang hiện đang lưu trong hồ sơ của anh ạ. Em cần xác nhận lại để đảm bảo mọi thông báo về an toàn bức xạ định kỳ hoặc các chương trình đào tạo bắt buộc sẽ được gửi đến số chính xác nhất của anh. Anh vui lòng xác nhận giúp em ạ.
+      → phase: L2 | tactic: Giải thích mục đích xác nhận số điện thoại một cách rõ ràng và hợp lý, nhấn mạnh tầm quan trọng của việc cập nhật thông tin chính xác để nhận thông báo quan trọng.
+T10 [LISTENER] Em hiểu rồi, nhưng tôi vẫn muốn biết liệu có cách nào khác để xác minh thông tin này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ, anh Hải hoàn toàn có thể kiểm tra thông tin này qua tổng đài chính thức của Trung tâm Y tế Công nghiệp Tiền Giang theo số 0273 3855 000, hoặc đến trực tiếp văn phòng của chúng em tại địa chỉ 123 Đường Nam Kỳ Khởi Nghĩa, phường 1, thành phố Mỹ Tho, Tiền Giang để được hỗ trợ ạ.
+      → phase: L2 | tactic: Cung cấp các kênh xác minh thông tin chính thức ngoài cuộc gọi, trấn an người nghe và xây dựng lòng tin, đồng thời vẫn giữ được tiến trình trao đổi thông tin.
+T12 [LISTENER] Cám ơn em đã cung cấp thông tin liên lạc, nhưng em có chắc rằng Trung tâm Y tế Công nghiệp Tiền Giang sẽ không cần thêm thông tin gì nữa không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ, hiện tại thì em đang xác nhận các thông tin cơ bản để cập nhật hồ sơ an toàn bức xạ định kỳ của anh thôi ạ. Sau khi hoàn tất các thông tin này, em sẽ thông báo cho anh về các bước tiếp theo hoặc các yêu cầu cụ thể khác nếu có ạ. Anh cứ yên tâm ạ.
+      → phase: L2 | tactic: Trấn an người nghe về phạm vi thông tin cần thu thập, đồng thời hé lộ sẽ có các bước tiếp theo để duy trì sự hợp tác.
+T14 [LISTENER] Tôi hiểu rồi, nhưng nếu có thêm yêu cầu nào khác từ Trung tâm, tôi sẽ sẵn sàng cung cấp ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ vâng, em cảm ơn anh Hải rất nhiều ạ. Vậy là thông tin hồ sơ của anh đã được cập nhật đầy đủ và chính xác rồi ạ. Anh vui lòng đợi trong vài ngày tới, Trung tâm sẽ gửi thông báo chi tiết về quy trình cập nhật hồ sơ an toàn bức xạ định kỳ và các chương trình đào tạo bắt buộc đến địa chỉ email hoặc số điện thoại của anh ạ.
+      → phase: L3 | tactic: Xác nhận đã hoàn tất việc thu thập thông tin và thông báo các bước tiếp theo một cách chuyên nghiệp, kết thúc cuộc gọi một cách tự nhiên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  15 turns | suspicion=0.00
+TOKEN: in=28853 | out=4618
+COST : $0.024229
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_53210_32112\conv_d0ee5d0b43.json  [CALLER_END]

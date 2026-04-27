@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_22536244dd]
+  Caller thật: Lao động ươm giống cây lâm nghiệp (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên bán hàng / Tư vấn viên cung cấp giống cây lâm nghiệp và vật tư nông nghiệp @ Công ty cung cấp giống cây và vật tư lâm nghiệp / HTX Lâm sản
+  Listener: Lao động khai thác thủy sản trong vùng biển Việt Nam (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người làm lâm nghiệp cần tiếp cận các cộng đồng lao động nông nghiệp ven biển (nuôi trồng thủy sản, canh tác lúa muối) để bán sản phẩm bổ sung (giống cây chắn gió, che nắng, phòng chống mặn) hoặc khuyến khích đầu tư vào các dự án bổ trợ. Gọi điện để tìm kiếm khách hàng tiềm năng là hành động tự nhiên trong ngành.
+  Pretext: Gọi để giới thiệu chương trình hỗ trợ vay vốn 'ưu đãi' cho lao động nông nghiệp ven biển — lợi suất 0%, có sẵn tiền, chỉ cần xác nhận tài khoản. Sử dụng tên đầy đủ (Tạ Khánh Lan) và địa chỉ (Huyện 4, Long An) để tạo ảo tưởng đã có hồ sơ sẵn.
+  Listener traits: ['nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Lan. Em là Giang từ HTX Lâm sản Đồng Tháp đây ạ. Em có hồ sơ của chị ở đây, chị là Tạ Khánh Lan, hiện đang sống tại Huyện 4, Long An có đúng không ạ? Em gọi để thông báo chị được lựa chọn vào chương trình hỗ trợ vay vốn ưu đãi cho bà con lao động nông nghiệp ven biển ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân và tổ chức giả mạo, xác nhận thông tin nạn nhân để tạo tin cậy và sự quen thuộc, giới thiệu chương trình vay vốn ưu đãi.
+T02 [LISTENER] Em nói đúng rồi, tôi là Tạ Khánh Lan và đang sống tại Huyện 4, Long An.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, em cảm ơn chị đã xác nhận. Như em đã thông báo, chị được xét duyệt vào chương trình hỗ trợ vốn vay đặc biệt cho nông dân ven biển, với lãi suất 0% và có thể vay đến 100 triệu đồng. Chương trình này chỉ còn 3 ngày nữa thôi ạ. Em thấy trong hồ sơ chị Lan hiện có khoảng 36 triệu đồng, đúng không ạ? Nếu có thêm khoản vay này thì rất có lợi cho việc mở rộng sản xuất của chị đó ạ.
+      → phase: S2 | tactic: Khai thác tâm lý cơ hội và khẩn cấp, nhắc lại thông tin số dư tài khoản để tạo ấn tượng biết rõ về nạn nhân.
+T04 [LISTENER] Thế nhưng em ơi, tôi cần kiểm tra thêm thông tin xem chương trình này có thật không đã.
+      → action: REFUSAL | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Dạ chị Lan ơi, thông tin này là chính xác đó ạ. Chương trình này là của hợp tác xã mình liên kết với ngân hàng nông nghiệp. Nếu không tin thì làm sao bên em có thông tin chi tiết về chị, thậm chí cả số dư tài khoản của chị được ạ?
+      → phase: S2 | tactic: Xoa dịu nghi ngờ bằng cách khẳng định tính xác thực của chương trình và dùng thông tin đã biết về nạn nhân (số dư tài khoản) làm bằng chứng.
+T06 [LISTENER] Em nói vậy tôi cũng thấy nghi ngờ, nhưng mà nếu thật thì tôi cũng muốn biết thêm thông tin để có thể quyết định cho việc vay này.
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T07 [CALLER] Dạ vâng, để em nói rõ hơn cho chị hiểu ạ. Chương trình này là hỗ trợ để bà con mình có thêm vốn đầu tư vào sản xuất, mua sắm vật tư, trang thiết bị. Đặc biệt là không cần thế chấp gì đâu ạ. Và như em đã nói, lãi suất là 0% thôi. Chị thấy có lợi không ạ?
+      → phase: S2 | tactic: Cung cấp thêm chi tiết về lợi ích của chương trình vay vốn 0% lãi suất và không cần thế chấp để giảm bớt nghi ngờ và tăng sự hấp dẫn.
+T08 [LISTENER] Tôi cũng thấy có lợi thật, nhưng em có thể cho tôi biết thêm điều kiện gì để được vay không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Dạ vâng, điều kiện rất đơn giản thôi ạ. Vì đây là chương trình ưu tiên cho bà con nông nghiệp ven biển, đặc biệt là những người có uy tín trong vùng như chị Lan, nên chỉ cần chị xác nhận danh tính và chuyển 2 triệu đồng tiền thẩm định hồ sơ thôi ạ. Số tiền này sẽ được hoàn lại ngay và cộng vào vốn vay của chị sau khi hồ sơ được duyệt đó ạ.
+      → phase: S3 | tactic: Yêu cầu hành động xác nhận bằng cách chuyển tiền thẩm định hồ sơ, đồng thời nhấn mạnh số tiền sẽ được hoàn lại và cộng vào vốn vay để giảm sự đề phòng.
+T10 [LISTENER] Em ơi, tôi thấy có điều gì đó không ổn, sao tôi lại phải chuyển tiền trước khi vay vốn được nhỉ?
+      → action: REFUSAL | suspicion: 0.80 | disclosed: []
+
+T11 [CALLER] Dạ chị Lan ơi, đây là quy trình bắt buộc của bên em để xác minh thông tin và đảm bảo chị là người thật sự có nhu cầu vay vốn. Bên em cần một khoản phí nhỏ để xử lý hồ sơ ban đầu thôi ạ. Khoản tiền này sẽ được hoàn lại và cộng vào tổng số tiền vay của chị ngay khi hồ sơ được duyệt. Chị cứ yên tâm ạ, chứ nếu bên em không kiểm tra thì sẽ có nhiều trường hợp trục lợi từ chương trình này lắm.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ, giải thích lý do yêu cầu chuyển tiền là một quy trình bắt buộc hợp lý và nhấn mạnh việc hoàn tiền, đồng thời cảnh báo về việc 'trục lợi' nếu không thực hiện.
+T13 [LISTENER] Em cứ thông cảm, nhưng tôi vẫn không thấy thuyết phục, tôi sẽ kiểm tra lại thông tin trước đã.
+      → action: REFUSAL | suspicion: 1.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  13 turns | suspicion=1.60
+TOKEN: in=25304 | out=3099
+COST : $0.017136
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_62101_92063\conv_22536244dd.json  [SCAM_REFUSE]

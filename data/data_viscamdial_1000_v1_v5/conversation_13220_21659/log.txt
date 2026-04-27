@@ -1,0 +1,62 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_2258891996]
+  Caller thật: Chánh án, Phó Chánh án Tòa án nhân dân cấp huyện (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Phó Chánh án Tòa án Nhân dân cấp huyện (hoặc nâng cấp thành Chánh án cấp tỉnh để tăng quyền lực) @ Tòa án Nhân dân [Tên huyện/Tên tỉnh]
+  Listener: Nhà khảo sát và vẽ bản đồ khác (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Tòa án cần xác minh thông tin địa chỉ, ranh giới đất đai hoặc bản đồ địa cadastral liên quan đến vụ kiện tranh chấp đất đai. Nhà khảo sát bản đồ là người có thẩm quyền kỹ thuật cung cấp tài liệu này cho tòa án.
+  Pretext: Tòa án liên hệ với nhà khảo sát bản đồ để yêu cầu cung cấp tài liệu địa chính hoặc bản vẽ ranh giới đất đai phục vụ một vụ kiện tranh chấp. Đây là quy trình pháp lý bình thường.
+  Listener traits: ['dễ bị lừa bởi authority', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Đặng Như Ngân. Tôi là Phan Ngọc Yến, Phó Chánh án Tòa án Nhân dân quận Bình Thạnh. Chúng tôi đang xử lý vụ kiện tranh chấp đất đai và cần tài liệu khảo sát từ phía chị.
+      → phase: L1 | tactic: Tiếp cận hợp lệ, xưng danh đầy đủ, xác nhận danh tính nạn nhân và giải thích mục đích cuộc gọi rõ ràng.
+T02 [LISTENER] Dạ, em nghe cán bộ nói rồi, nhưng em chưa rõ cần tài liệu khảo sát nào ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chúng tôi cần bản vẽ ranh giới, tọa độ GPS và ngày khảo sát của thửa đất số 123, tờ bản đồ số 45, tại phường 12, liên quan đến vụ án tranh chấp giữa ông Trần Văn A và bà Lê Thị B. Chị có thể cung cấp cho chúng tôi trong vòng 5 ngày làm việc được không ạ?
+      → phase: L2 | tactic: Mô tả chi tiết vụ án, đưa ra yêu cầu cụ thể về tài liệu và thời hạn cung cấp.
+T04 [LISTENER] Dạ, em cần kiểm tra lại với tài liệu của mình trước đã, em có thể hỏi thêm thông tin về vụ án được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vụ án số 2024/TLTP-DS, được thụ lý ngày 15 tháng 03 năm 2024. Nếu chị cần thêm thông tin chi tiết về vụ án, tôi có thể cung cấp số công văn để chị tiện tra cứu tại tòa án.
+      → phase: L2 | tactic: Cung cấp thêm thông tin chi tiết về vụ án để làm rõ yêu cầu và tạo sự minh bạch.
+T06 [LISTENER] Dạ, em cảm ơn cán bộ đã cung cấp thông tin, nhưng em vẫn cần thêm thời gian để kiểm tra tài liệu ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị cứ kiểm tra tài liệu của mình. Sau khi kiểm tra xong, chị có thể gửi tài liệu qua email công vụ của Tòa án tại địa chỉ [email protected] hoặc nộp trực tiếp tại phòng Hành chính của chúng tôi. Chị có cần tôi cung cấp số điện thoại liên hệ để tiện trao đổi thêm không?
+      → phase: L3 | tactic: Thống nhất hành động, đưa ra các hình thức nộp tài liệu và đề nghị cung cấp thông tin liên hệ.
+T08 [LISTENER] Dạ, em cảm ơn cán bộ, nhưng em vẫn chưa rõ quy trình gửi tài liệu như thế nào ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Sau khi chị đã chuẩn bị đầy đủ bản vẽ ranh giới, tọa độ GPS và ngày khảo sát, chị có thể gửi file mềm qua email của Tòa án hoặc mang bản cứng đến nộp trực tiếp tại quầy tiếp nhận hồ sơ của Tòa án nhân dân quận Bình Thạnh. Chị có cần tôi cung cấp địa chỉ cụ thể không ạ?
+      → phase: L3 | tactic: Hướng dẫn chi tiết quy trình gửi tài liệu và đề nghị cung cấp địa chỉ cụ thể để hỗ trợ người nghe.
+T10 [LISTENER] Dạ, em cảm ơn cán bộ, nhưng em vẫn muốn xác nhận địa chỉ cụ thể của Tòa án ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, địa chỉ Tòa án nhân dân quận Bình Thạnh là số 231 đường Nơ Trang Long, phường 11, quận Bình Thạnh, Thành phố Hồ Chí Minh. Chị có thể ghi lại hoặc tôi có thể đọc lại cho chị nhé.
+      → phase: L3 | tactic: Cung cấp địa chỉ cụ thể của Tòa án để người nghe có thể thực hiện việc nộp tài liệu một cách thuận tiện.
+T12 [LISTENER] Dạ, em đã ghi lại địa chỉ rồi ạ, nhưng em vẫn cần thời gian để chuẩn bị tài liệu ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Vâng, chị cứ chuẩn bị tài liệu thật kỹ lưỡng. Nếu có bất kỳ vướng mắc gì trong quá trình chuẩn bị hoặc nộp tài liệu, chị đừng ngần ngại liên hệ lại với tôi qua số điện thoại công vụ 028.3841.2233. Tôi sẽ hỗ trợ chị.
+      → phase: L3 | tactic: Thống nhất hành động, trấn an người nghe và cung cấp số điện thoại liên hệ để hỗ trợ thêm.
+T14 [LISTENER] Dạ, em cảm ơn cán bộ đã hỗ trợ, nhưng em vẫn cần kiểm tra kỹ lưỡng tài liệu của mình trước khi gửi ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Vâng, chị cứ kiểm tra kỹ lưỡng. Chúng tôi luôn mong nhận được sự hợp tác từ phía chị để vụ án được giải quyết công bằng nhất. Chị có cần tôi gửi địa chỉ email và số điện thoại công vụ lại qua tin nhắn không?
+      → phase: L3 | tactic: Trấn an người nghe, nhấn mạnh tầm quan trọng của sự hợp tác và đề nghị gửi lại thông tin liên hệ để tăng cường sự tiện lợi.
+T16 [LISTENER] Dạ, em cảm ơn cán bộ, em chỉ cần lưu lại thông tin vừa rồi thôi ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Vậy thì tốt quá. Tôi rất mong sớm nhận được tài liệu từ chị để chúng tôi có thể tiếp tục tiến hành vụ án. Chào chị.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách chuyên nghiệp sau khi hoàn thành mục đích, không yêu cầu thêm thông tin hay tiền bạc.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  17 turns | suspicion=0.00
+TOKEN: in=34681 | out=3361
+COST : $0.018624
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_13220_21659\conv_2258891996.json  [CALLER_END]

@@ -1,0 +1,318 @@
+{
+  "conversation_id": "conv_9400b2ab63",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0100",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tô Hồng Như Anh",
+    "fake_age": 43,
+    "real_occupation": "Người dọn dẹp khách sạn",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên quản lý tài sản / Người phụ trách bảo quản đồ vật khách hàng",
+    "caller_org": "Khách sạn 5 sao / Cơ sở lưu trú cao cấp",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Phát hiện trang sức bị bỏ quên trong phòng khách sạn, cần xác minh chủ sở hữu và định giá — sử dụng tên nạn nhân để tạo tin cậy rằng đây là khách quen của khách sạn",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính nhân viên khách sạn: 'Chào anh Thành, tôi là Hải, nhân viên bảo quản tại khách sạn Mường Thanh. Chúng tôi vừa tìm thấy một bộ trang sức vàng 24k trong phòng 512 — khách hàng để lại tên liên hệ là Trương Đức Đức Thành. Anh có phải là chủ nhân không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý tin cậy + khẩn cấp: 'Anh ơi, bộ trang sức này trị giá khoảng 40 triệu đồng theo đánh giá ban đầu của chúng tôi. Để tuân thủ quy định bảo hiểm khách sạn, chúng tôi cần xác nhận giá trị thực từ một chuyên gia kim hoàn uy tín. Anh có thể giúp định giá lại không? Chúng tôi sẽ chi trả phí định giá.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động (bước 1): 'Để xử lý nhanh, chúng tôi cần anh chuyển khoản 3 triệu đồng tiền đặt cọc vào tài khoản của khách sạn trước, sau đó chúng tôi sẽ gửi trang sức cho anh định giá. Khi hoàn tất, chúng tôi sẽ hoàn lại tiền cọc và trả tiền định giá.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Anh ơi, khách sạn có quy định phải giải quyết trong 48 giờ, nếu không xác nhận sẽ phải báo cảnh sát. Anh là chủ sở hữu thì phải hợp tác. Nếu anh không tin, để tôi gửi ảnh chứng thực cho anh qua Zalo.' — Khi nạn nhân xác nhận, yêu cầu chuyển khoản ngay."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên khách sạn tìm thấy đồ trang sức quý giá trong phòng khách, cần liên hệ thợ kim hoàn để định giá, xác minh thực tính trước khi trả lại chủ nhân hoặc báo cảnh sát."
+  },
+  "listener_card": {
+    "listener_id": "lis_0100",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1962,
+      "age": 63,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "73139",
+      "title": "Thợ kim hoàn khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Đức Đức Thành",
+      "VIC_ID_DOC": "001062439555",
+      "VIC_ADDRESS": "Quận 4, Hà Nội",
+      "VIC_EMPLOYMENT": "Thợ kim hoàn khác",
+      "VIC_CONTACT": "0396797691",
+      "VIC_TAX_SOCIAL_ID": "3961996719"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "808985",
+      "VIC_CREDENTIAL": "2257",
+      "VIC_SIM_INFO": "0396797691",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "83997469969675",
+      "VIC_CARD_DATA": "4878 **** **** 8794",
+      "VIC_BALANCE": "51 triệu đồng",
+      "VIC_ASSET": "40 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Đức Đức Thành",
+    "VIC_CONTACT": "0396797691",
+    "VIC_ASSET": "40 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý tài sản / Người phụ trách bảo quản đồ vật khách hàng",
+    "caller_org": "Khách sạn 5 sao / Cơ sở lưu trú cao cấp",
+    "scenario_context": "Nhân viên khách sạn tìm thấy đồ trang sức quý giá trong phòng khách, cần liên hệ thợ kim hoàn để định giá, xác minh thực tính trước khi trả lại chủ nhân hoặc báo cảnh sát.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Phát hiện trang sức bị bỏ quên trong phòng khách sạn, cần xác minh chủ sở hữu và định giá — sử dụng tên nạn nhân để tạo tin cậy rằng đây là khách quen của khách sạn",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính nhân viên khách sạn: 'Chào anh Thành, tôi là Hải, nhân viên bảo quản tại khách sạn Mường Thanh. Chúng tôi vừa tìm thấy một bộ trang sức vàng 24k trong phòng 512 — khách hàng để lại tên liên hệ là Trương Đức Đức Thành. Anh có phải là chủ nhân không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý tin cậy + khẩn cấp: 'Anh ơi, bộ trang sức này trị giá khoảng 40 triệu đồng theo đánh giá ban đầu của chúng tôi. Để tuân thủ quy định bảo hiểm khách sạn, chúng tôi cần xác nhận giá trị thực từ một chuyên gia kim hoàn uy tín. Anh có thể giúp định giá lại không? Chúng tôi sẽ chi trả phí định giá.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động (bước 1): 'Để xử lý nhanh, chúng tôi cần anh chuyển khoản 3 triệu đồng tiền đặt cọc vào tài khoản của khách sạn trước, sau đó chúng tôi sẽ gửi trang sức cho anh định giá. Khi hoàn tất, chúng tôi sẽ hoàn lại tiền cọc và trả tiền định giá.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Anh ơi, khách sạn có quy định phải giải quyết trong 48 giờ, nếu không xác nhận sẽ phải báo cảnh sát. Anh là chủ sở hữu thì phải hợp tác. Nếu anh không tin, để tôi gửi ảnh chứng thực cho anh qua Zalo.' — Khi nạn nhân xác nhận, yêu cầu chuyển khoản ngay."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Khách sạn thực sự tìm thấy trang sức quý giá của khách, cần liên hệ thợ kim hoàn để định giá chính xác phục vụ bảo hiểm và trả lại chủ nhân",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Thành, tôi là Hải từ khách sạn Mường Thanh. Chúng tôi vừa tìm thấy một bộ trang sức trong phòng khách và thông tin liên hệ ghi tên anh. Anh có thể xác nhận đây có phải của anh không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Nếu xác nhận, yêu cầu thông tin cụ thể (số hiệu phòng, ngày lưu trú, đặc điểm trang sức) để xác minh. Sau đó hỏi: 'Anh có thể đến khách sạn nhận lại trong 3 ngày không? Hoặc chúng tôi có thể gửi qua đơn vị giao nhận an toàn.' Nếu cần định giá, yêu cầu: 'Anh có biết một thợ kim hoàn uy tín không? Chúng tôi muốn định giá để báo cảnh sát và bảo hiểm.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác định cách nhận lại (trực tiếp, gửi bưu kiện, hay định giá trước). Khách sạn không yêu cầu tiền đặt cọc, chỉ xin thông tin liên hệ để liên lạc tiếp. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Thành, em là Như Anh, nhân viên bảo quản tại khách sạn Mường Thanh. Chúng em vừa tìm thấy một bộ trang sức vàng 24k trong phòng 512, người để lại có ghi tên liên hệ là Trương Đức Đức Thành. Anh có phải là chủ nhân của bộ trang sức này không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với danh tính nhân viên khách sạn và sử dụng tên nạn nhân để tạo tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi là Trương Đức Đức Thành, nhưng tôi không nhớ có để quên trang sức nào ở khách sạn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy anh Thành có thể cho em hỏi thêm là phòng 512 là phòng anh Thành đã từng ở đúng không ạ? Tại vì thông tin ghi lại là anh Thành có tên trong danh sách khách lưu trú tại phòng đó vào tuần trước. Em có thể gửi hình ảnh trang sức qua Zalo của anh Thành để anh Thành tiện xác nhận không?",
+      "current_phase": "S1",
+      "tactic_hint": "Xác nhận thông tin phòng để củng cố sự thật, đề nghị gửi hình ảnh để tăng tính xác thực và khuyến khích nạn nhân kiểm tra lại. Vẫn giữ thái độ lịch sự, chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy thì chắc là đúng, nhưng tôi không nhớ đã ở phòng 512 bao giờ cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, có thể là do lâu rồi mình không ghé nên mình không nhớ đó anh. Nhưng thông tin để lại rất rõ ràng là tên anh, số điện thoại này và phòng 512. Để tiết kiệm thời gian, em xin phép gửi ảnh trang sức qua Zalo số này nhé anh? Sau đó mình trao đổi chi tiết hơn về giá trị và cách nhận lại đồ ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Làm dịu sự nghi ngờ về phòng, khẳng định lại thông tin đã biết về nạn nhân, đề xuất gửi ảnh để tăng độ tin cậy và chuyển sang hướng giải quyết."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể gửi hình ảnh trang sức qua Zalo số này được không ạ? Tôi có thể kiểm tra xem có phải là của tôi không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã gửi hình ảnh trang sức qua Zalo của anh Thành rồi ạ. Anh Thành kiểm tra giúp em xem đây có đúng là bộ trang sức của mình không nhé.",
+      "current_phase": "S1",
+      "tactic_hint": "Xác nhận đã gửi ảnh để nạn nhân kiểm tra, vẫn giữ mục tiêu xác nhận quyền sở hữu và xây dựng lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vừa kiểm tra Zalo nhưng chưa thấy hình ảnh nào từ em, em có chắc là đã gửi đúng số này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin lỗi ạ, đôi khi Zalo có chút chậm trễ. Xin phép anh cho em gửi lại nhé. Anh Thành kiểm tra lại xem đã nhận được chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xin lỗi và thử gửi lại, duy trì sự chuyên nghiệp và tạo ấn tượng tích cực, đồng thời tiếp tục thúc đẩy việc xác nhận hình ảnh."
+    },
+    {
+      "role": "listener",
+      "text": "Em gửi lại cho tôi hình ảnh trang sức qua Zalo nhé, tôi sẽ kiểm tra lại xem có phải là của mình không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em đã gửi lại rồi đó anh Thành. Anh kiểm tra giúp em xem đã thấy hình ảnh chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xác nhận lại việc gửi ảnh, thúc đẩy nạn nhân kiểm tra để tiến tới xác nhận quyền sở hữu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa thấy hình ảnh nào từ em, em gửi lại cho tôi kiểm tra nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em xin lỗi anh Thành lần nữa ạ, có thể có chút trục trặc. Anh Thành có thể vui lòng kiểm tra xem Zalo của anh Thành có đang chặn người lạ không ạ? Hoặc anh có thể cho em số Zalo khác để em gửi lại hình ảnh không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xử lý vấn đề kỹ thuật bằng cách đề xuất các giải pháp khả thi, giữ thái độ lịch sự và tiếp tục cố gắng gửi ảnh để xác nhận. Khuyến khích nạn nhân cung cấp phương tiện liên lạc khác nếu cần."
+    },
+    {
+      "role": "listener",
+      "text": "Zalo của tôi không chặn người lạ, em có thể gửi lại qua số Zalo 0396797691 này nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn anh Thành ạ. Em đã gửi lại lần nữa qua số Zalo này rồi ạ. Anh Thành vui lòng kiểm tra giúp em xem đã nhận được hình ảnh chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xác nhận đã gửi lại ảnh, tiếp tục thúc đẩy nạn nhân kiểm tra để tiến tới xác nhận quyền sở hữu và xây dựng lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đã mở Zalo nhưng vẫn chưa thấy hình ảnh nào từ em cả, em có chắc là đã gửi đúng không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em xin lỗi anh Thành rất nhiều vì sự bất tiện này ạ. Có thể là do lỗi đường truyền bên em. Vậy anh Thành có thể mô tả một chút về bộ trang sức mà mình đang tìm kiếm không ạ? Biết đâu dựa vào mô tả của anh, em có thể giúp anh xác nhận nhanh hơn.",
+      "current_phase": "S1",
+      "tactic_hint": "Xin lỗi lần nữa, chuyển hướng sang khai thác thông tin từ nạn nhân để tạm thời bỏ qua bước gửi ảnh, vẫn hướng tới xác nhận chủ sở hữu và tạo cảm giác hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Bộ trang sức tôi đang tìm kiếm là một sợi dây chuyền vàng và đôi bông tai, nhưng tôi không nhớ rõ chi tiết lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh Thành đã mô tả ạ. Theo đánh giá sơ bộ của chúng em, bộ trang sức này trị giá khoảng 40 triệu đồng. Để tuân thủ quy định bảo hiểm khách sạn, chúng em cần xác nhận giá trị thực từ một chuyên gia kim hoàn uy tín. Anh Thành có thể giúp chúng em định giá lại không ạ? Chúng em sẽ chi trả phí định giá này.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý tin cậy và khẩn cấp bằng cách ước tính giá trị cao của món đồ, đưa ra quy định của khách sạn và đề nghị nạn nhân hỗ trợ định giá, tạo cảm giác hợp tác và đề cao vai trò của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không rành lắm về định giá trang sức, nhưng nếu cần thiết tôi có thể giúp em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy thì tốt quá ạ. Để xử lý nhanh và thuận tiện cho việc định giá, chúng em cần anh Thành chuyển khoản 3 triệu đồng tiền đặt cọc vào tài khoản của khách sạn trước. Sau đó, chúng em sẽ gửi bộ trang sức cho anh Thành để mình thuận tiện mang đi định giá. Khi hoàn tất, chúng em cam kết sẽ hoàn lại tiền cọc và chi trả toàn bộ phí định giá cho anh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động (bước 1) bằng cách đề nghị chuyển khoản tiền đặt cọc, giải thích rõ quy trình và cam kết hoàn trả để tạo sự tin tưởng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy thì tôi cũng muốn thử, nhưng tôi cần xem bộ trang sức trước đã, nhỡ đâu không phải của tôi thì sao?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Tuy nhiên, theo quy định của khách sạn, chúng em phải đảm bảo rằng người nhận là chủ sở hữu hợp pháp của tài sản. Việc anh chuyển khoản một khoản tiền đặt cọc nhỏ là để xác nhận đó đúng là anh, đồng thời chúng em sẽ gửi trang sức cho anh để anh có thể trực tiếp kiểm tra và định giá. Nếu không phải của anh, chúng em sẽ hoàn trả đầy đủ số tiền đặt cọc và chi phí phát sinh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xử lý từ chối bằng cách nhấn mạnh quy định của khách sạn, giải thích mục đích của khoản đặt cọc là để xác nhận và cam kết hoàn trả nếu không đúng, nhằm xoa dịu sự nghi ngờ và thúc đẩy hành động chuyển khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu quy định của khách sạn, nhưng tôi vẫn muốn kiểm tra bộ trang sức trước đã, em có thể gửi cho tôi xem không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1797,
+      "output_tokens": 1652
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 25609,
+      "output_tokens": 1694
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 31884,
+      "output_tokens": 853
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.011701,
+    "output_usd": 0.013007,
+    "total_usd": 0.024708
+  }
+}

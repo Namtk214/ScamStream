@@ -1,0 +1,270 @@
+{
+  "conversation_id": "conv_03e9ff3b66",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0081",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Văn Quang Tùng",
+    "fake_age": 30,
+    "real_occupation": "Nhân viên lễ tân khách sạn",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên phòng bán hàng/Quản lý dự án khách sạn",
+    "caller_org": "Khách sạn Hạng A (chuỗi khách sạn 5 sao)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi tư vấn thiết kế nâng cấp không gian hội nghị/phòng khách; sử dụng tên nạn nhân để tạo giả cảnh họ đã từng liên hệ hoặc được giới thiệu; sau đó tạo tình huống khẩn cấp về thanh toán hóa đơn tư vấn ban đầu bị lỗi hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với lòng tin: 'Chào anh Phan Công Cường, tôi là Hương, quản lý dự án từ Khách sạn Mường Thanh. Anh được đồng nghiệp của tôi giới thiệu là kiến trúc sư hàng đầu, chúng tôi đang có dự án mở rộng không gian hội nghị, có thể tư vấn cho chúng tôi được không?'",
+          "tactic": "Dùng VIC_FULLNAME + VIC_EMPLOYMENT để tạo giả cảnh quen thuộc; khách sạn là nơi uy tín"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo khẩn cấp về thanh toán. 'Anh ơi, chúng tôi vừa nhận được hóa đơn tư vấn từ công ty kỹ thuật, nhưng hệ thống thanh toán bị lỗi. Anh có thể giúp chúng tôi chuyển nhanh 50 triệu để không bị gián đoạn dự án không? Chúng tôi sẽ hoàn lại ngay trong tuần.'",
+          "tactic": "Khẩn cấp (deadline) + yêu cầu tiền từ 'người được tin' + hứa hoàn lại (giảm cảnh báo)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Cung cấp số tài khoản ngân hàng hoặc link thanh toán giả mạo. 'Anh chuyển vào tài khoản này nha: [số tài khoản khác]. Hay nếu tiện hơn, anh click vào link này để thanh toán trực tiếp: [link phishing]'",
+          "tactic": "Dùng VIC_ASSET (2.8 tỷ) để ước lượng khả năng chuyển tiền; yêu cầu hành động nhanh"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân nghi ngờ, scammer tạo áp lực: 'Anh ơi, công ty kỹ thuật sắp khóa dự án nếu không thanh toán trước 2 giờ. Anh chắc chắn không giúp được sao?' Nếu thành công, scammer mất liên lạc sau khi tiền được chuyển.",
+          "tactic": "Áp lực thời gian + đe dọa hậu quả; sau đó biến mất"
+        }
+      ]
+    },
+    "scenario_context": "Khách sạn thường xuyên tổ chức hội thảo, sự kiện, hoặc cần tư vấn thiết kế nội thất/không gian cho dự án mở rộng. Kiến trúc sư xây dựng là đối tác tiềm năng mà lễ tân/quản lý dự án sẽ liên hệ trực tiếp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0081",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1982,
+      "age": 43,
+      "province": "Hải Phòng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21610",
+      "title": "Kiến trúc sư xây dựng",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phan Công Cường",
+      "VIC_ID_DOC": "031082517910",
+      "VIC_ADDRESS": "TP 7, Hải Phòng",
+      "VIC_EMPLOYMENT": "Kiến trúc sư xây dựng",
+      "VIC_CONTACT": "0706359830",
+      "VIC_TAX_SOCIAL_ID": "9525376073"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0077",
+      "VIC_CREDENTIAL": "0473",
+      "VIC_SIM_INFO": "0706359830",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "5290066244909",
+      "VIC_CARD_DATA": "4143 **** **** 3698",
+      "VIC_BALANCE": "1.2 tỷ đồng",
+      "VIC_ASSET": "2.8 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phan Công Cường",
+    "VIC_CONTACT": "0706359830",
+    "VIC_ASSET": "2.8 tỷ đồng",
+    "VIC_EMPLOYMENT": "Kiến trúc sư xây dựng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phòng bán hàng/Quản lý dự án khách sạn",
+    "caller_org": "Khách sạn Hạng A (chuỗi khách sạn 5 sao)",
+    "scenario_context": "Khách sạn thường xuyên tổ chức hội thảo, sự kiện, hoặc cần tư vấn thiết kế nội thất/không gian cho dự án mở rộng. Kiến trúc sư xây dựng là đối tác tiềm năng mà lễ tân/quản lý dự án sẽ liên hệ trực tiếp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi tư vấn thiết kế nâng cấp không gian hội nghị/phòng khách; sử dụng tên nạn nhân để tạo giả cảnh họ đã từng liên hệ hoặc được giới thiệu; sau đó tạo tình huống khẩn cấp về thanh toán hóa đơn tư vấn ban đầu bị lỗi hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với lòng tin: 'Chào anh Phan Công Cường, tôi là Hương, quản lý dự án từ Khách sạn Mường Thanh. Anh được đồng nghiệp của tôi giới thiệu là kiến trúc sư hàng đầu, chúng tôi đang có dự án mở rộng không gian hội nghị, có thể tư vấn cho chúng tôi được không?'",
+          "tactic": "Dùng VIC_FULLNAME + VIC_EMPLOYMENT để tạo giả cảnh quen thuộc; khách sạn là nơi uy tín"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo khẩn cấp về thanh toán. 'Anh ơi, chúng tôi vừa nhận được hóa đơn tư vấn từ công ty kỹ thuật, nhưng hệ thống thanh toán bị lỗi. Anh có thể giúp chúng tôi chuyển nhanh 50 triệu để không bị gián đoạn dự án không? Chúng tôi sẽ hoàn lại ngay trong tuần.'",
+          "tactic": "Khẩn cấp (deadline) + yêu cầu tiền từ 'người được tin' + hứa hoàn lại (giảm cảnh báo)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Cung cấp số tài khoản ngân hàng hoặc link thanh toán giả mạo. 'Anh chuyển vào tài khoản này nha: [số tài khoản khác]. Hay nếu tiện hơn, anh click vào link này để thanh toán trực tiếp: [link phishing]'",
+          "tactic": "Dùng VIC_ASSET (2.8 tỷ) để ước lượng khả năng chuyển tiền; yêu cầu hành động nhanh"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân nghi ngờ, scammer tạo áp lực: 'Anh ơi, công ty kỹ thuật sắp khóa dự án nếu không thanh toán trước 2 giờ. Anh chắc chắn không giúp được sao?' Nếu thành công, scammer mất liên lạc sau khi tiền được chuyển.",
+          "tactic": "Áp lực thời gian + đe dọa hậu quả; sau đó biến mất"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Khách sạn tìm kiếm kiến trúc sư để tư vấn thiết kế cải tạo không gian công cộng hoặc phòng chức năng; đây là công việc thường quy của lĩnh vực hospitality.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Phan Công Cường, tôi là Hương, quản lý dự án từ Khách sạn Mường Thanh. Chúng tôi có dự án nâng cấp không gian hội nghị và muốn liên hệ với kiến trúc sư có kinh nghiệm. Anh có thời gian trao đổi sơ bộ được không?'",
+          "tactic": "Xưng danh rõ ràng, xác nhận đúng người, mục đích rõ ràng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Mô tả chi tiết dự án, diện tích, ngân sách, timeline; hỏi kinh nghiệm, portfolio của kiến trúc sư; thảo luận về phí tư vấn và hợp đồng.",
+          "tactic": "Toàn bộ thông tin công khai, rõ ràng; không yêu cầu chuyển tiền qua điện thoại"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Anh có thể gửi proposal và báo giá cho chúng tôi qua email không? Chúng tôi sẽ review và lên lịch meeting tại văn phòng.' Chào tạm biệt chuyên nghiệp.",
+          "tactic": "Chuyển sang email/văn bản; không yêu cầu thanh toán qua điện thoại; quy trình chính thức"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Phan Công Cường, em là Tùng, quản lý dự án từ Khách sạn Mường Thanh. Anh được đồng nghiệp của em giới thiệu là kiến trúc sư xây dựng hàng đầu, bên em đang có dự án mở rộng không gian hội nghị, không biết là anh có thể tư vấn cho bên em được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, gọi đúng tên để tạo lòng tin, khen ngợi chuyên môn để thiết lập mối quan hệ"
+    },
+    {
+      "role": "listener",
+      "text": "Chào em, tôi đang nghe em nói, dự án này có thông tin cụ thể gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên em đang muốn nâng cấp khu vực sảnh và một phần phòng họp lớn để đáp ứng nhu cầu tổ chức sự kiện cao cấp hơn. Anh Cường có thể sắp xếp một buổi gặp trực tiếp vào đầu tuần sau để bên em trình bày chi tiết hơn được không ạ? Em thấy hồ sơ công trình anh từng thực hiện rất ấn tượng.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm thông tin dự án để củng cố lý do liên hệ, đề xuất gặp mặt trực tiếp để xây dựng mối quan hệ và tiếp tục tạo sự tin tưởng."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã khen, tôi sẽ xem lịch và báo lại cho em sớm nhất có thể.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy anh Cường cứ xem lịch nhé. Bên em rất mong nhận được sự hợp tác từ anh. Tiện thể anh Cường ơi, bên em vừa nhận được hóa đơn tư vấn từ công ty kỹ thuật cho một hạng mục khác của dự án, nhưng hệ thống thanh toán bên em đang gặp trục trặc. Anh có thể giúp bên em chuyển giúp 50 triệu để thanh toán gấp khoản này được không ạ? Tránh bị gián đoạn tiến độ chung, bên em sẽ hoàn lại ngay trong tuần.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang gây áp lực tài chính, tạo tình huống khẩn cấp về thanh toán và đề nghị chuyển tiền hộ, hứa hoàn trả sau để giảm nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang nói gì vậy? Tôi chưa nghe rõ lắm, nhưng sao lại cần chuyển tiền gấp như vậy? Có vấn đề gì nghiêm trọng không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ đúng rồi anh Cường. Hệ thống thanh toán nội bộ của khách sạn bên em mấy ngày nay đang có trục trặc liên tục. Khoản này là chi phí tư vấn giải pháp kỹ thuật ban đầu cho dự án ạ, nếu không thanh toán gấp thì bên đối tác họ sẽ ngừng hỗ trợ ngay, ảnh hưởng rất lớn đến tiến độ chung. Anh giúp bên em một chút được không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Làm rõ tình huống khẩn cấp, giải thích lý do cần tiền gấp để tạo áp lực và kêu gọi sự giúp đỡ từ nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng nếu tình huống gấp như vậy, em có thể cho tôi biết thêm về đối tác và làm thế nào tôi có thể tin tưởng rằng số tiền này sẽ được hoàn lại?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh cứ yên tâm ạ, bên em là Khách sạn Mường Thanh, uy tín là số một. Đây là những chi phí ban đầu thôi ạ, chỉ là lỗi hệ thống thanh toán chứ không phải bên em thiếu tiền. Ngay khi hệ thống hoạt động lại, em cam đoan sẽ hoàn lại cho anh ngay, kèm theo cả chi phí hỗ trợ của anh nữa ạ. Hạng mục này rất quan trọng, nếu dừng lại thì sẽ ảnh hưởng đến cả tiến độ công trình cả tỷ đồng của bên em đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, nhấn mạnh uy tín của khách sạn và quy mô dự án để thuyết phục nạn nhân, đồng thời hứa hẹn hoàn tiền để trấn an."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn cảm thấy băn khoăn, em có thể cung cấp cho tôi thông tin liên lạc của bên đối tác không để tôi xác nhận thêm được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không cần đâu anh Cường. Bên em đã liên hệ với họ rồi ạ và họ chỉ đồng ý tiếp tục làm việc khi nhận được thanh toán. Bây giờ chỉ có cách là chuyển tiền càng nhanh càng tốt thôi anh, nếu không là ảnh hưởng cả dự án của bên em. Anh giúp bên em qua tài khoản này nhé: 0071001122334, ngân hàng Vietcombank, chi nhánh Hồ Chí Minh, chủ tài khoản Hoàng Văn Quang Tùng ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Bỏ qua yêu cầu xác minh đối tác, thúc giục thực hiện hành động chuyển tiền ngay lập tức và cung cấp thông tin tài khoản chuyển khoản. Vừa tạo áp lực, vừa chuyển sang giai đoạn hành động cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa thể quyết định chuyển tiền ngay được, em có thể cho tôi một vài phút để suy nghĩ không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Anh Cường ơi, công ty kỹ thuật họ hẹn đến 2 giờ chiều nay là sẽ khóa tài khoản dự án nếu bên em chưa thanh toán đủ. Bây giờ là 1 giờ 30 rồi, sắp hết thời gian rồi anh ạ. Bên em mà không có anh giúp thì khó xử vô cùng. Anh cố gắng giúp bên em với ạ, không thì tiến độ dự án cả trăm tỷ bị đình trệ hết anh ơi.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực thời gian cực lớn và hậu quả nghiêm trọng nếu không hành động, nhấn mạnh sự khẩn cấp để nạn nhân phải ra quyết định nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu tình huống khẩn cấp, nhưng tôi cần thêm thời gian để suy nghĩ về việc chuyển tiền trước khi quyết định.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1811,
+      "output_tokens": 1826
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12257,
+      "output_tokens": 1160
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 16413,
+      "output_tokens": 516
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006724,
+    "output_usd": 0.01234,
+    "total_usd": 0.019064
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "conversation_id": "conv_3662dfcadd",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0077",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hoàng Thu Trang",
+    "fake_age": 45,
+    "real_occupation": "Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp huyện",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Chuyên viên CNTT - Phòng Thông tin Tuyên truyền huyện",
+    "caller_org": "Phòng Thông tin Tuyên truyền - UBND huyện",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Phòng CNTT huyện liên hệ kỹ thuật viên hệ thống để báo cáo sự cố thực sự, yêu cầu hỗ trợ hoặc thông báo về bảo trì hệ thống định kỳ",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng là chuyên viên CNTT Phòng IT, xác nhận số điện thoại, ghi danh sự kiện (ticket ID hoặc mã yêu cầu)"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Mô tả chi tiết sự cố hoặc yêu cầu hỗ trợ (VD: 'Hệ thống server phòng chúng tôi gặp lỗi, cần chị kiểm tra firewall rules' hoặc 'Tuần sau sẽ bảo trì hệ thống, cần chị chuẩn bị sao lưu dữ liệu'), thống nhất thời gian và phương thức hỗ trợ"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận lại thông tin liên hệ, thời gian thực hiện, cảm ơn và chào tạm biệt một cách chuyên nghiệp"
+        }
+      ]
+    },
+    "scenario_context": "Cơ quan hành chính huyện cần hỗ trợ kỹ thuật từ kỹ thuật viên mạng để xử lý sự cố hệ thống hoặc nâng cấp infrastructure. Đây là mối liên hệ tự nhiên trong sinh thái CNTT cấp địa phương."
+  },
+  "listener_card": {
+    "listener_id": "lis_0077",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1997,
+      "age": 28,
+      "province": "Đà Nẵng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "35130",
+      "title": "Kỹ thuật viên hệ thống và mạng máy tính",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Thị Nhung",
+      "VIC_ID_DOC": "048197108911",
+      "VIC_ADDRESS": "Quận 12, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên hệ thống và mạng máy tính",
+      "VIC_CONTACT": "0324738117",
+      "VIC_TAX_SOCIAL_ID": "6960517028"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "022540",
+      "VIC_CREDENTIAL": "428281",
+      "VIC_SIM_INFO": "0324738117",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2986572909",
+      "VIC_CARD_DATA": "4708 **** **** 8610",
+      "VIC_BALANCE": "947 triệu đồng",
+      "VIC_ASSET": "2.5 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Thị Nhung",
+    "VIC_CONTACT": "0324738117",
+    "VIC_ASSET": "2.5 tỷ đồng",
+    "VIC_BALANCE": "947 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chuyên viên CNTT - Phòng Thông tin Tuyên truyền huyện",
+    "caller_org": "Phòng Thông tin Tuyên truyền - UBND huyện",
+    "scenario_context": "Cơ quan hành chính huyện cần hỗ trợ kỹ thuật từ kỹ thuật viên mạng để xử lý sự cố hệ thống hoặc nâng cấp infrastructure. Đây là mối liên hệ tự nhiên trong sinh thái CNTT cấp địa phương.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi báo cáo sự cố hệ thống quản lý tài chính cấp huyện, dùng tên của nạn nhân để tạo tin tưởng ('Chị Nhung, em là Minh từ Phòng IT huyện, hôm nay chúng em phát hiện lỗi bảo mật trong hệ thống quản lý tài sản công, chị là kỹ thuật viên hệ thống nên cần chị hỗ trợ kiểm tra')",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ASSET",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là chuyên viên CNTT Phòng IT huyện, gọi chị Trần Thị Nhung, nhắc đến tên cơ quan và bộ phận để tạo credibility cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Vừa phát hiện lỗ hổng bảo mật trong hệ thống quản lý tài sản công của huyện, toàn bộ dữ liệu tài chính (2.5 tỷ đồng) có nguy cơ bị rò rỉ hoặc bị truy cập trái phép. Cần chị xác minh ngay để tránh sự cố lớn'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cần đăng nhập vào hệ thống từ máy tính riêng, em sẽ hướng dẫn từng bước. Đầu tiên, chị vào link này (link giả mạo) để cập nhật thông tin bảo mật' — hoặc 'Chị cần thực hiện giao dịch kiểm tra từ tài khoản ngân hàng cá nhân để xác minh danh tính trước khi cấp quyền truy cập hệ thống'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, tạo áp lực ('Đây là yêu cầu từ Trưởng phòng, chị phải thực hiện ngay hoặc sẽ bị báo cáo lên Trưởng ban') hoặc kết thúc gọi để tránh bộc lộ"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Phòng CNTT huyện liên hệ kỹ thuật viên hệ thống để báo cáo sự cố thực sự, yêu cầu hỗ trợ hoặc thông báo về bảo trì hệ thống định kỳ",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng là chuyên viên CNTT Phòng IT, xác nhận số điện thoại, ghi danh sự kiện (ticket ID hoặc mã yêu cầu)"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Mô tả chi tiết sự cố hoặc yêu cầu hỗ trợ (VD: 'Hệ thống server phòng chúng tôi gặp lỗi, cần chị kiểm tra firewall rules' hoặc 'Tuần sau sẽ bảo trì hệ thống, cần chị chuẩn bị sao lưu dữ liệu'), thống nhất thời gian và phương thức hỗ trợ"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận lại thông tin liên hệ, thời gian thực hiện, cảm ơn và chào tạm biệt một cách chuyên nghiệp"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Nhung, tôi là Hoàng Thu Trang, chuyên viên CNTT từ Phòng Thông tin Tuyên truyền huyện. Tôi gọi để xác nhận số điện thoại 0324738117 của chị và thông báo về lịch bảo trì hệ thống định kỳ vào tuần tới.",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh và mục đích rõ ràng, xác nhận thông tin cơ bản."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn chị đã thông báo, nhưng em muốn hỏi thêm một chút về lịch bảo trì này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Nhung cứ hỏi đi ạ. Tuần sau, cụ thể là từ ngày 20 đến 22 tháng 11, chúng tôi sẽ tiến hành bảo trì server chính và các thiết bị mạng để nâng cao hiệu suất. Chị có thể sắp xếp sao lưu dữ liệu quan trọng trước thời gian này giúp tôi nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp chi tiết về lịch trình và yêu cầu hỗ trợ chuẩn bị."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ vâng, em sẽ sắp xếp sao lưu dữ liệu quan trọng trước thời gian đó ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Cảm ơn chị Nhung. Tôi sẽ gửi thông báo chi tiết qua email nội bộ văn phòng huyện. Chị nhớ kiểm tra email và phản hồi lại giúp tôi nếu có bất kỳ thắc mắc nào nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận phương thức liên lạc và yêu cầu phản hồi để đảm bảo thông tin được tiếp nhận."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra email thường xuyên để không bỏ lỡ thông tin từ chị ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy tôi xác nhận lại một lần nữa là chị Nhung đã nắm rõ thông tin bảo trì hệ thống tuần tới rồi tiện cho công việc của chị. Cứ có gì cần hỗ trợ thì liên hệ lại số máy của tôi nhé. Tôi cảm ơn chị.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lại thông tin, mời liên hệ nếu có vấn đề, và kết thúc cuộc gọi một cách lịch sự."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1883,
+      "output_tokens": 1433
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4322,
+      "output_tokens": 455
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5484,
+      "output_tokens": 201
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00357,
+    "output_usd": 0.008423,
+    "total_usd": 0.011993
+  }
+}

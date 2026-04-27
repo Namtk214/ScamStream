@@ -1,0 +1,227 @@
+{
+  "conversation_id": "conv_3f10b1be42",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0049",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Cao Khánh Hằng",
+    "fake_age": 41,
+    "real_occupation": "Kỹ thuật viên kết cấu",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Giám đốc Phòng Kỹ thuật & An toàn Công trình, Sở Xây dựng tỉnh Quảng Nam",
+    "caller_org": "Sở Xây dựng tỉnh Quảng Nam / Ban Thanh tra Xây dựng",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi thực tế từ Thanh tra Xây dựng tỉnh để xác minh thông tin liên quan đến một dự án công trình (có thể liên quan đến tranh chấp hoặc kiểm định an toàn) mà Tòa án nhân dân cần tham vấn ý kiến hoặc xác nhận danh tính cho hồ sơ vụ án.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Thanh tra viên xưng danh đầy đủ, cung cấp số điện thoại chính thức của Thanh tra Xây dựng (có thể tra cứu), xác nhận danh tính nạn nhân bằng cách hỏi thông tin mà nạn nhân tự xác nhận (không đọc lại toàn bộ CMND). Ví dụ: 'Chánh án Tạ Khánh Khánh Nhi phải không? Chúng tôi cần xác minh một số thông tin liên quan đến dự án công trình X, Chánh án có thể tham vấn được không?'",
+          "dialogue_snippet": "Xin chào, đây là Thanh tra viên Trần Minh Tú từ Thanh tra Xây dựng tỉnh Quảng Nam, số điện thoại chính thức 0236-3xxx-xxx. Chúng tôi đang xác minh thông tin liên quan đến một dự án công trình mà Tòa án nhân dân có liên quan. Chánh án có thể tham gia cuộc trao đổi ngắn không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thanh tra viên giải thích chi tiết vụ việc, hỏi ý kiến chuyên môn hoặc yêu cầu xác nhận danh tính của một bên liên quan. Không yêu cầu mật khẩu, OTP, hay chuyển tiền. Cuộc gọi có thể kéo dài 10-15 phút, bình thường, không tạo áp lực.",
+          "dialogue_snippet": "Vụ việc liên quan đến tranh chấp xây dựng giữa công ty A và công ty B. Tòa án cần xác nhận về an toàn công trình. Chánh án có ý kiến gì về tiêu chuẩn kỹ thuật trong trường hợp này?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Thanh tra viên cảm ơn, cung cấp email chính thức hoặc số điện thoại để nạn nhân liên hệ lại nếu cần, không yêu cầu hành động khẩn cấp.",
+          "dialogue_snippet": "Cảm ơn Chánh án đã tham vấn. Chúng tôi sẽ gửi tài liệu chi tiết qua email chính thức của Tòa án. Nếu có thắc mắc, Chánh án có thể gọi lại số này. Chúc Chánh án ngày tốt."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên kết cấu có thể được gọi vào vai trò giám sát công trình hoặc báo cáo kết quả kiểm định an toàn công trình cho cơ quan tư pháp. Tòa án nhân dân và Viện Kiểm sát thường liên quan đến các vụ tranh chấp xây dựng, vi phạm an toàn công trình hoặc thẩm định tài liệu kỹ thuật trong các vụ án dân sự/hành chính."
+  },
+  "listener_card": {
+    "listener_id": "lis_0049",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1970,
+      "age": 55,
+      "province": "Quảng Nam",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "13210",
+      "title": "Chánh án, Phó Chánh án Tòa án nhân dân; Viện trưởng, Phó Viện trưởng Viện Kiểm sát nhân dân cấp tỉnh",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Khánh Khánh Nhi",
+      "VIC_ID_DOC": "049170029790",
+      "VIC_ADDRESS": "Quận 12, Quảng Nam",
+      "VIC_EMPLOYMENT": "Chánh án, Phó Chánh án Tòa án nhân dân; Viện trưởng, Phó Viện trưởng Viện Kiểm sát nhân dân cấp tỉnh",
+      "VIC_CONTACT": "0331291245",
+      "VIC_TAX_SOCIAL_ID": "8947610921"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4431",
+      "VIC_CREDENTIAL": "5271",
+      "VIC_SIM_INFO": "0331291245",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "46531408087819",
+      "VIC_CARD_DATA": "4345 **** **** 6359",
+      "VIC_BALANCE": "734 triệu đồng",
+      "VIC_ASSET": "1.2 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Khánh Khánh Nhi",
+    "VIC_CONTACT": "0331291245",
+    "VIC_TAX_SOCIAL_ID": "8947610921",
+    "LOCATION": "Quảng Nam",
+    "VIC_EMPLOYMENT": "Chánh án, Phó Chánh án Tòa án nhân dân; Viện trưởng, Phó Viện trưởng Viện Kiểm sát nhân dân cấp tỉnh"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Phòng Kỹ thuật & An toàn Công trình, Sở Xây dựng tỉnh Quảng Nam",
+    "caller_org": "Sở Xây dựng tỉnh Quảng Nam / Ban Thanh tra Xây dựng",
+    "scenario_context": "Kỹ thuật viên kết cấu có thể được gọi vào vai trò giám sát công trình hoặc báo cáo kết quả kiểm định an toàn công trình cho cơ quan tư pháp. Tòa án nhân dân và Viện Kiểm sát thường liên quan đến các vụ tranh chấp xây dựng, vi phạm an toàn công trình hoặc thẩm định tài liệu kỹ thuật trong các vụ án dân sự/hành chính.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi điện tuyên bố: 'Đây là Thanh tra Xây dựng tỉnh Quảng Nam. Chúng tôi đang xác minh thông tin về dự án công trình liên quan đến Tòa án nhân dân tỉnh. Chánh án Tạ Khánh Khánh Nhi có trong danh sách liên quan đến một vụ vi phạm an toàn công trình. Cần xác nhận ngay để tránh ảnh hưởng đến hồ sơ công vụ.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "LOCATION",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận danh tính: Scammer gọi đến số điện thoại 0331291245, xưng danh là 'Thẩm tra viên Trần Minh Tú, Thanh tra Xây dựng Quảng Nam'. Sử dụng VIC_FULLNAME ('Chánh án Tạ Khánh Khánh Nhi') và VIC_TAX_SOCIAL_ID (8947610921) để tạo ảo tưởng đã xác minh được thông tin trước. Nói: 'Theo hồ sơ, số CMND/CCCD của Chánh án là 8947610921, đúng không?'",
+          "dialogue_snippet": "Chào Chánh án, tôi là Thẩm tra viên Trần Minh Tú từ Thanh tra Xây dựng tỉnh. Chúng tôi có ghi nhận Chánh án Tạ Khánh Khánh Nhi liên quan đến một dự án công trình. Xác nhận số CMND 8947610921 của Chánh án?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý khẩn cấp + sợ hãi: Scammer tạo sự cấp bách: 'Vụ việc này liên quan đến một công trình bị sập (hoặc vi phạm an toàn). Nếu không xác minh thông tin trong 24 giờ, hồ sơ công vụ của Chánh án sẽ bị khóa, ảnh hưởng đến quyết định nhân sự sắp tới.' Dùng LOCATION (Quảng Nam) để làm cho sự việc cụ thể hơn: 'Dự án tại khu vực Hội An, liên quan đến Tòa án nhân dân tỉnh Quảng Nam.'",
+          "dialogue_snippet": "Đây là vấn đề rất nghiêm trọng. Nếu không giải quyết trong 24 giờ, hệ thống sẽ tự động báo cáo lên Bộ Xây dựng. Chánh án có thể bị tạm khóa tài khoản công vụ. Cần Chánh án xác minh ngay qua hệ thống an toàn."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Scammer yêu cầu nạn nhân vào một 'cổng xác minh an toàn' (fake portal/phishing link): 'Để bảo vệ hồ sơ, Chánh án cần vào link sau để xác minh danh tính: [malicious_link]. Sau đó, chúng tôi sẽ yêu cầu OTP hoặc mã xác minh ngân hàng.' Hoặc: 'Để khóa vụ việc, cần chuyển khoản phí xác minh 5-10 triệu VND vào tài khoản Thanh tra Xây dựng (tài khoản giả mạo).'",
+          "dialogue_snippet": "Vui lòng vào link này để xác minh: http://xacminh-thanhtrahq.vn/verify. Nhập thông tin CMND, mã PIN ngân hàng, và OTP sẽ được gửi. Sau khi xác minh, chúng tôi sẽ giải quyết vụ việc trong 2 giờ."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối hoặc nghi ngờ, scammer sẽ: (1) Tăng tính cấp bách: 'Chánh án đang phá hoại quá trình xác minh, điều này sẽ được ghi nhận chính thức'; (2) Nếu thành công, scammer sẽ cắt máy và sử dụng thông tin để đánh cắp tiền hoặc nhận dạng giả mạo.",
+          "dialogue_snippet": "Chánh án không hợp tác, chúng tôi buộc phải báo cáo chính thức lên Bộ Xây dựng và Viện Kiểm sát. Vụ việc sẽ được mở rộng."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế từ Thanh tra Xây dựng tỉnh để xác minh thông tin liên quan đến một dự án công trình (có thể liên quan đến tranh chấp hoặc kiểm định an toàn) mà Tòa án nhân dân cần tham vấn ý kiến hoặc xác nhận danh tính cho hồ sơ vụ án.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Thanh tra viên xưng danh đầy đủ, cung cấp số điện thoại chính thức của Thanh tra Xây dựng (có thể tra cứu), xác nhận danh tính nạn nhân bằng cách hỏi thông tin mà nạn nhân tự xác nhận (không đọc lại toàn bộ CMND). Ví dụ: 'Chánh án Tạ Khánh Khánh Nhi phải không? Chúng tôi cần xác minh một số thông tin liên quan đến dự án công trình X, Chánh án có thể tham vấn được không?'",
+          "dialogue_snippet": "Xin chào, đây là Thanh tra viên Trần Minh Tú từ Thanh tra Xây dựng tỉnh Quảng Nam, số điện thoại chính thức 0236-3xxx-xxx. Chúng tôi đang xác minh thông tin liên quan đến một dự án công trình mà Tòa án nhân dân có liên quan. Chánh án có thể tham gia cuộc trao đổi ngắn không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thanh tra viên giải thích chi tiết vụ việc, hỏi ý kiến chuyên môn hoặc yêu cầu xác nhận danh tính của một bên liên quan. Không yêu cầu mật khẩu, OTP, hay chuyển tiền. Cuộc gọi có thể kéo dài 10-15 phút, bình thường, không tạo áp lực.",
+          "dialogue_snippet": "Vụ việc liên quan đến tranh chấp xây dựng giữa công ty A và công ty B. Tòa án cần xác nhận về an toàn công trình. Chánh án có ý kiến gì về tiêu chuẩn kỹ thuật trong trường hợp này?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Thanh tra viên cảm ơn, cung cấp email chính thức hoặc số điện thoại để nạn nhân liên hệ lại nếu cần, không yêu cầu hành động khẩn cấp.",
+          "dialogue_snippet": "Cảm ơn Chánh án đã tham vấn. Chúng tôi sẽ gửi tài liệu chi tiết qua email chính thức của Tòa án. Nếu có thắc mắc, Chánh án có thể gọi lại số này. Chúc Chánh án ngày tốt."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ, em chào chị. Em là Cao Khánh Hằng, Giám đốc Phòng Kỹ thuật và An toàn Công trình của Sở Xây dựng tỉnh Quảng Nam. Số điện thoại của em là 02353.693.888. Em muốn xác nhận, có phải chị là chị Tạ Khánh Khánh Nhi, Chánh án Tòa án nhân dân tỉnh không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh, cung cấp thông tin liên hệ chính thức, và xác nhận danh tính người nghe một cách lịch sự, không áp đặt."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Tạ Khánh Khánh Nhi, nhưng em gọi tôi có việc gì vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị. Chuyện là bên em nhận được công văn từ Tòa án nhân dân tỉnh, có nhắc đến việc cần tham vấn ý kiến của chị về một số vấn đề liên quan đến dự án công trình xây dựng tại khu vực Phước Hòa, cụ thể là về công tác thẩm định chất lượng và an toàn. Em xin phép được trao đổi chi tiết hơn về nội dung này được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích mục đích cuộc gọi một cách rõ ràng, đề cập đến công văn và yêu cầu tham vấn chuyên môn, không yêu cầu thông tin cá nhân nhạy cảm hay hành động khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ nói rõ hơn về nội dung cần trao đổi, tôi sẵn sàng nghe.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn chị. Cụ thể là có một dự án khu dân cư đang triển khai ở Phước Hòa, diện tích khoảng 5 hecta, thì trong quá trình thi công có xảy ra một số tranh chấp về ranh giới cũng như quy trình lấp đất, san lấp mặt bằng không đúng thiết kế ban đầu. Bên em đã cử Thanh tra xuống kiểm tra rồi, nhưng Tòa án lại yêu cầu có thêm ý kiến độc lập từ các cơ quan liên quan để làm rõ thêm các yếu tố pháp lý và kỹ thuật, đặc biệt là các quy định về an toàn công trình. Chị có thể cho em biết quan điểm về việc này, hoặc có thể giới thiệu ai đó có chuyên môn ở bên Tòa án để cùng phối hợp không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày chi tiết vụ việc, nêu rõ mục đích cần tham vấn ý kiến chuyên môn của Chánh án về các vấn đề kỹ thuật và pháp lý liên quan đến dự án, không yêu cầu thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi cần thêm thời gian để xem xét vấn đề này đã nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, không sao ạ. Em hiểu. Chị cứ dành thời gian xem xét. Nếu cần thêm tài liệu hay thông tin gì về dự án, chị cứ liên hệ lại Sở Xây dựng theo số em vừa cung cấp ban nãy nhé. Hoặc em có thể gửi công văn chi tiết qua email chính thức của Tòa án để chị tiện theo dõi. Chị có cần em gửi không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tôn trọng quyết định của người nghe, không gây áp lực, cung cấp thêm thông tin hỗ trợ và kênh liên hệ chính thức, duy trì thái độ hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em, nhưng tôi không cần thêm tài liệu nào lúc này, tôi sẽ xem xét kỹ lưỡng trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy thì chị cứ xem xét ạ. Khi nào chị cần trao đổi thêm hoặc có ý kiến phản hồi, chị cứ gọi lại cho em theo số 02353.693.888 nhé. Em cảm ơn chị đã dành thời gian trao đổi ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Thể hiện sự tôn trọng, kết thúc cuộc gọi một cách lịch sự, cung cấp lại thông tin liên hệ và không tạo áp lực cho người nghe."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1540,
+      "output_tokens": 2810
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7237,
+      "output_tokens": 852
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8466,
+      "output_tokens": 263
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004257,
+    "output_usd": 0.016338,
+    "total_usd": 0.020595
+  }
+}

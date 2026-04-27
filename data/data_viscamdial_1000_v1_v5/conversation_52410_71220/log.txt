@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_0f565c83cd]
+  Caller thật: Nhân viên làm mẫu (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Quản lý dự án / Giám sát công trình - Công ty thi công nội thất @ Công ty TNHH Thi công & Thiết kế Nội thất Đà Nẵng Pro
+  Listener: Thợ lát sàn và thợ lát đá (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Nhân viên làm mẫu có thể chuyển hướng sang quản lý dự án/công trình trong ngành xây dựng nội thất. Lý do tự nhiên: công ty cần liên hệ thợ lát sàn/đá để báo giá, xác nhận kỹ năng, hoặc thông báo về dự án sắp tới.
+  Pretext: Gọi thông báo rằng 'Chị Phương' đã được đề cử bởi một khách hàng/đối tác để tham gia dự án lát sàn đá cao cấp tại một resort/khách sạn ở Đà Nẵng. Để xác nhận và ưu tiên tuyển dụng, cần thanh toán phí đăng ký hoặc phí bảo hành công việc.
+  Listener traits: ['sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, đây có phải số của chị Trần Thị Phương không ạ? Em là Đinh Xuân Minh, giám sát dự án bên Công ty Thi công Nội thất Đà Nẵng Pro đây ạ. Bên em nhận được giới thiệu từ phía Công ty Xây dựng Minh Long ở Đà Nẵng về chị, là chị Phương có kinh nghiệm lát sàn đá rất tốt phải không ạ? Hiện tại công ty em đang cần gấp 3-4 thợ lành nghề cho một dự án resort 5 sao ở Đà Nẵng, kéo dài khoảng 6 tháng đó chị.
+      → phase: S1 | tactic: Giới thiệu bản thân, xác nhận thông tin nạn nhân và mục đích cuộc gọi để xây dựng sự tin tưởng ban đầu.
+T02 [LISTENER] Dạ, tôi là Trần Thị Phương đây, nhưng tôi không có nhiều thông tin về dự án của em.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, đúng rồi chị. Dự án này là lát sàn đá tự nhiên cho toàn bộ khu villa và sảnh chính của resort 5 sao ở khu vực Sơn Trà đó chị. Bên em có nghe nói chị là một trong những thợ lát sàn đá có tiếng ở Đà Nẵng, tay nghề rất cao nên bên em mới liên hệ để mời chị tham gia ạ.
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ ban đầu, cung cấp thêm thông tin dự án để tăng tính xác thực và tiếp tục xây dựng sự tin tưởng bằng cách khen ngợi kỹ năng của nạn nhân.
+T04 [LISTENER] Dạ, em khen quá, tôi chỉ cố gắng làm tốt nghề của mình thôi, nhưng dự án này nghe có vẻ hấp dẫn đấy.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ không có gì đâu chị, đó là sự thật mà. Đây là một cơ hội rất tốt để chị Phương phát triển thêm tay nghề và thu nhập đó chị. Mức lương cho dự án này là từ 15 đến 18 triệu đồng mỗi tháng, kéo dài 6 tháng liên tục luôn. Nhưng vì đây là công trình đặc biệt quan trọng và yêu cầu bảo mật cao, bên em có một yêu cầu nhỏ ạ.
+      → phase: S2 | tactic: Nhấn mạnh lợi ích hấp dẫn (lương cao, thời gian dài) để kích thích sự ham lợi, đồng thời giới thiệu khéo léo về 'yêu cầu nhỏ' để chuyển sang giai đoạn S2.
+T06 [LISTENER] Dạ, yêu cầu nhỏ gì em có thể giúp được không nào?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ, vì tính chất bảo mật của dự án, bên em cần các thợ tham gia ký kết hợp đồng bảo hành công việc. Thợ sẽ cần nộp một khoản phí bảo đảm là 2 triệu đồng, khoản phí này sẽ được hoàn trả đầy đủ cho chị ngay khi dự án kết thúc, coi như là một cam kết sự chuyên nghiệp và trách nhiệm của mình thôi chị ạ. Thời gian nộp phí chỉ còn hôm nay vì danh sách sẽ khóa vào ngày mai để chốt quân số kịp tiến độ đó chị.
+      → phase: S2 | tactic: Giới thiệu yêu cầu phí bảo hành như một cam kết, nhấn mạnh tính khẩn cấp để tạo áp lực và thúc đẩy nạn nhân hành động.
+T08 [LISTENER] Dạ, nhưng mà tại sao lại cần phải nộp phí bảo đảm ạ? Tôi không rõ lắm về điều này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ, như em đã nói, do dự án này yêu cầu bảo mật thông tin và tiến độ rất chặt chẽ, nên công ty cần đảm bảo rằng những người tham gia đều thực sự cam kết và có trách nhiệm cao nhất. Khoản phí 2 triệu này không phải là phí tuyển dụng mà là một dạng ký quỹ, đảm bảo chị sẽ làm việc đúng theo hợp đồng và hoàn thành dự án. Ngay sau khi dự án kết thúc, khoản tiền này sẽ được hoàn trả đầy đủ cho chị ạ. Đây cũng là quy định chung của những công trình lớn, có yếu tố nước ngoài đó chị.
+      → phase: S2 | tactic: Giải thích thêm về lý do nộp phí bảo đảm để xoa dịu sự nghi ngờ, nhấn mạnh đây là quy định chung cho dự án lớn và sẽ được hoàn trả để tăng tính hợp lý và giảm rủi ro cảm nhận.
+T10 [LISTENER] Dạ, nhưng mà nghe có vẻ không ổn lắm, em có thể đảm bảo cho tôi là sẽ hoàn trả lại tiền sau không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ chị cứ yên tâm điều đó. Công ty em là Công ty TNHH Thi công & Thiết kế Nội thất Đà Nẵng Pro, hoạt động rất uy tín trên thị trường và có đầy đủ giấy tờ pháp lý. Khoản phí này sẽ được ghi rõ trong hợp đồng bảo hành mà chị sẽ ký kết sau khi nộp phí. Em đảm bảo 100% là chị sẽ nhận lại đủ số tiền này khi dự án kết thúc thôi ạ. Cơ hội việc làm tốt, lương cao như này không phải lúc nào cũng có đâu chị.
+      → phase: S2 | tactic: Xác nhận uy tín công ty và hợp đồng để xoa dịu lo lắng, khẳng định việc hoàn trả tiền, đồng thời tạo áp lực tâm lý bằng cách nhấn mạnh cơ hội hiếm có.
+T12 [LISTENER] Dạ, công ty em uy tín thì tôi cũng tin, nhưng tôi cần thời gian để suy nghĩ kỹ một chút đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ chị Phương ơi, thời gian nộp phí chỉ còn hôm nay thôi ạ, ngày mai là bên em sẽ chốt danh sách để các thợ kịp tiến độ đi làm vào đầu tuần sau. Em nghĩ chị nên cố gắng sắp xếp để không bỏ lỡ cơ hội tốt này. Tiền thì chắc chắn sẽ được hoàn lại 100% khi kết thúc dự án mà. Chị có thể chuyển khoản trực tiếp vào tài khoản công ty giúp em cho tiện nhé.
+      → phase: S2 | tactic: Tạo áp lực thời gian (tính khẩn cấp) để hạn chế nạn nhân suy nghĩ, đồng thời nhắc lại cam kết hoàn tiền để trấn an và gợi ý hành động chuyển khoản.
+T14 [LISTENER] Dạ, nhưng tôi cần tìm hiểu thêm thông tin rõ ràng về hợp đồng trước đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  14 turns | suspicion=0.00
+TOKEN: in=31109 | out=3533
+COST : $0.018782
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_52410_71220\conv_0f565c83cd.json  [SCAM_REFUSE]

@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_bb926d8799]
+  Caller thật: Người viết lời quảng cáo (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Quản lý Dự án Tiếp thị Kỹ thuật (Technical Marketing Manager) / Chuyên viên Phát triển Kinh doanh (Business Development Specialist) @ Công ty Giải pháp Quảng cáo Kỹ thuật (Tech Ad Solutions) hoặc cá nhân tự do chuyên môn marketing cho startup công nghệ
+  Listener: Nhà chuyên môn về phát triển phần mềm ứng dụng và nhà phân tích chưa được phân vào đâu (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người viết lời quảng cáo tự nhiên cần liên hệ với nhà phát triển phần mềm để hiểu sâu về tính năng sản phẩm, hoặc để tuyển dụng nhân tài cho dự án quảng cáo sản phẩm công nghệ. Đây là giao điểm hợp lệ trong hệ sinh thái startup/tech.
+  Pretext: Gọi với danh nghĩa là Quản lý Dự án Tiếp thị Kỹ thuật từ công ty/dự án startup, có dự án lớn cần tuyển dụng hoặc hợp tác phát triển sản phẩm. Sử dụng tên đầy đủ của nạn nhân (Đinh Minh Gia Minh) để tạo ấn tượng đã 'chuẩn bị kỹ' và được giới thiệu từ nguồn đáng tin cậy.
+  Listener traits: ['thiếu hiểu biết công nghệ', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh, không biết có phải số của anh Đinh Minh Gia Minh không ạ? Em là Tạ Thế Tuấn, hiện đang là Quản lý Dự án Tiếp thị Kỹ thuật bên Tech Ad Solutions. Em được giới thiệu từ bên cộng đồng developer Quảng Nam về anh ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân, xác nhận danh tính nạn nhân bằng tên đầy đủ và nhắc đến nguồn giới thiệu địa phương để tạo sự tin cậy ban đầu.
+T02 [LISTENER] Tôi là Đinh Minh Gia Minh, mà em gọi tôi có việc gì vậy?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, đúng người rồi ạ. Em có tìm hiểu về anh qua một số dự án trước đây và được giới thiệu là anh có kinh nghiệm rất tốt trong lĩnh vực phát triển phần mềm, đặc biệt là các giải pháp tài chính. Hiện bên em đang có một dự án lớn về fintech cần tuyển vị trí chủ chốt, mà anh lại rất phù hợp.
+      → phase: S2 | tactic: Xác nhận đúng người, mở đầu bằng việc khen ngợi kinh nghiệm và đưa ra một cơ hội việc làm hấp dẫn, phù hợp với chuyên môn của nạn nhân để tạo sự quan tâm.
+T04 [LISTENER] Em nói nghe cũng hấp dẫn đấy, nhưng mình cần tìm hiểu thêm về dự án này trước đã.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, anh cứ yên tâm ạ. Dự án này là về phát triển một nền tảng ví điện tử mới, tích hợp các giải pháp thanh toán thông minh và bảo mật cao. Em nghĩ kinh nghiệm của anh trong mảng giải pháp tài chính rất phù hợp với vị trí kiến trúc sư giải pháp. Tuy nhiên, bên em đang cần người gấp để kịp tiến độ ra mắt thị trường đầu quý sau, và hiện có khoảng 2-3 ứng viên nữa cũng đang được xem xét. Anh có muốn em chia sẻ thông tin chi tiết hơn về yêu cầu và phúc lợi không ạ?
+      → phase: S2 | tactic: Cung cấp thêm chi tiết về dự án để tăng tính thuyết phục, nhấn mạnh sự khẩn cấp và cạnh tranh để thúc đẩy nạn nhân hành động nhanh chóng. Đồng thời, đề xuất chia sẻ thông tin để nạn nhân chủ động yêu cầu.
+T06 [LISTENER] Nghe có vẻ thú vị đấy, nhưng em có thể cho tôi biết thêm về các yêu cầu cụ thể và phúc lợi chi tiết không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, để em chia sẻ chi tiết hơn ạ. Về yêu cầu, vị trí Kiến trúc sư giải pháp này cần anh có kinh nghiệm ít nhất 5 năm trong việc phát triển các hệ thống tài chính, ưu tiên đã từng làm việc với các công nghệ blockchain hoặc AI trong lĩnh vực fintech. Về phúc lợi, ngoài mức lương cạnh tranh hơn thị trường khoảng 20-30%, anh còn được hưởng cổ phần ưu đãi từ công ty và cơ hội thăng tiến lên vị trí lãnh đạo nhóm trong vòng 6 tháng. Để đảm bảo tính minh bạch và bảo mật cho cả hai bên, quy trình ứng tuyển của bên em có một bước nhỏ là xác minh thông tin qua hệ thống online của công ty, anh có tiện để em hướng dẫn luôn không ạ?
+      → phase: S3 | tactic: Cung cấp thông tin chi tiết về yêu cầu và phúc lợi hấp dẫn để củng cố sự quan tâm. Sau đó, dẫn dắt sang bước yêu cầu hành động là 'xác minh thông tin qua hệ thống online' như một phần của quy trình để thu tiền.
+T08 [LISTENER] Thật ra thì tôi chưa rõ lắm về quy trình xác minh thông tin này, em có thể giải thích rõ hơn cho tôi được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, em xin giải thích rõ hơn ạ. Đây là một bước bảo mật bắt buộc của công ty để đảm bảo đúng người, đúng thông tin. Anh sẽ truy cập vào một đường link hệ thống nội bộ của Tech Ad Solutions, điền thông tin cá nhân cơ bản và thực hiện một khoản phí xác minh nhỏ khoảng 5 triệu đồng. Khoản phí này sẽ được hoàn lại ngay sau khi anh hoàn tất phỏng vấn và chính thức tham gia dự án. Mục đích là để lọc bớt những ứng viên không thực sự nghiêm túc thôi ạ. Anh thấy sao ạ?
+      → phase: S3 | tactic: Giải thích chi tiết về quy trình 'xác minh thông tin' và yêu cầu chuyển khoản phí nhỏ, nhấn mạnh đây là bước bắt buộc và sẽ được hoàn lại, tạo cảm giác an toàn và lọc ứng viên không nghiêm túc. Đặt câu hỏi mở để nạn nhân đưa ra quyết định.
+T10 [LISTENER] Đó là một khoản phí khá lớn, mà tôi không thấy rõ lý do cần thiết lắm, em có thể nghĩ cách nào khác không?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ em hiểu ạ. Em xin lỗi nếu điều này làm anh cảm thấy phiền. Thật ra khoản phí này không phải là lớn so với mức lương dự kiến và khoản thưởng mà anh sẽ nhận được sau này. Mục đích chính là để xác nhận sự cam kết của ứng viên, vì dự án này của bên em rất quan trọng và cần những người thực sự tâm huyết. Nếu anh ở Huyện 9, Quảng Nam, công ty em cũng có chi nhánh ở gần đó, mình có thể hẹn gặp trực tiếp để em giải thích rõ hơn về quy trình này sau khi anh hoàn thành xong bước xác minh online được không ạ?
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ về phí, nhấn mạnh lại lợi ích lớn hơn, nhắc đến địa chỉ nạn nhân để tạo cảm giác gần gũi và đề xuất gặp mặt trực tiếp để củng cố niềm tin, đồng thời vẫn giữ yêu cầu xác minh online trước.
+T12 [LISTENER] Em vẫn thấy khoản phí đó khá lớn, tôi cần phải suy nghĩ thêm đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=0.00
+TOKEN: in=27389 | out=3630
+COST : $0.019623
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_26413_25190\conv_bb926d8799.json  [SCAM_REFUSE]

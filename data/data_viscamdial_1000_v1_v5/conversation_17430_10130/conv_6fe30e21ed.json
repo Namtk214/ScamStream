@@ -1,0 +1,229 @@
+{
+  "conversation_id": "conv_6fe30e21ed",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0052",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trần Ngọc Ngọc Nhung",
+    "fake_age": 30,
+    "real_occupation": "Xây dựng",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng phòng Quản lý dự án & Đối ngoại - Công ty xây dựng",
+    "caller_org": "Công ty Cổ phần Xây dựng và Phát triển Đô thị Cần Thơ",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty xây dựng gọi cho Bí thư/Phó Bí thư Đảng ủy khối để phối hợp công tác liên quan đến dự án công trình: báo cáo tiến độ, xin ý kiến chỉ đạo, thông báo sự kiện, hoặc mời tham dự buổi khởi công/khánh thành.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Hồ Công Văn An, tôi là Thương, Trưởng phòng Quản lý dự án từ Công ty Xây dựng và Phát triển Đô thị Cần Thơ. Hiện tại chúng tôi đang thực hiện dự án [tên dự án cụ thể] mà Đảng ủy khối đã phê duyệt. Anh có thời gian nghe tôi báo cáo tiến độ không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc bình thường: 'Dự án hiện đã hoàn thành 60% khối lượng, dự kiến hoàn thành vào tháng [tháng cụ thể]. Chúng tôi muốn mời anh và Đảng ủy khối tham dự buổi kiểm tra tiến độ vào ngày [ngày cụ thể]. Xin anh góp ý kiến chỉ đạo để dự án đạt chất lượng tốt nhất.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: 'Cảm ơn anh đã lắng nghe. Tôi sẽ gửi văn bản mời chính thức qua email và đường chính thức. Chúc anh công tác tốt. Tạm biệt anh!'"
+        }
+      ]
+    },
+    "scenario_context": "Công ty xây dựng cần phối hợp với cơ quan Đảng ủy khối trực thuộc trung ương về dự án công trình công cộng, yêu cầu duyệt dự án, xin ý kiến chỉ đạo, hoặc thông báo tình huống khẩn cấp liên quan đến công trình."
+  },
+  "listener_card": {
+    "listener_id": "lis_0052",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1977,
+      "age": 48,
+      "province": "Cần Thơ",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "10130",
+      "title": "Bí thư, Phó Bí thư Đảng ủy khối trực thuộc trung ương",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hồ Công Văn An",
+      "VIC_ID_DOC": "092077975487",
+      "VIC_ADDRESS": "Quận 9, Cần Thơ",
+      "VIC_EMPLOYMENT": "Bí thư, Phó Bí thư Đảng ủy khối trực thuộc trung ương",
+      "VIC_CONTACT": "0932232083",
+      "VIC_TAX_SOCIAL_ID": "8419314442"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "453570",
+      "VIC_CREDENTIAL": "6893",
+      "VIC_SIM_INFO": "0932232083",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "8220386059",
+      "VIC_CARD_DATA": "4832 **** **** 5835",
+      "VIC_BALANCE": "717 triệu đồng",
+      "VIC_ASSET": "2.2 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hồ Công Văn An",
+    "VIC_CONTACT": "0932232083",
+    "VIC_BANK_ACCOUNT": "8220386059",
+    "VIC_TAX_SOCIAL_ID": "8419314442",
+    "LOCATION": "Cần Thơ"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý dự án & Đối ngoại - Công ty xây dựng",
+    "caller_org": "Công ty Cổ phần Xây dựng và Phát triển Đô thị Cần Thơ",
+    "scenario_context": "Công ty xây dựng cần phối hợp với cơ quan Đảng ủy khối trực thuộc trung ương về dự án công trình công cộng, yêu cầu duyệt dự án, xin ý kiến chỉ đạo, hoặc thông báo tình huống khẩn cấp liên quan đến công trình.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi báo cáo tình huống khẩn cấp: công trình xây dựng do Đảng ủy khối phê duyệt đã phát hiện sai sót kỹ thuật, cần thanh toán ngay cho nhà thầu phụ để sửa chữa, tránh bị phạt và ảnh hưởng đến tiến độ dự án. Scammer sẽ xưng danh là người quản lý dự án, dùng tên và số điện thoại thật của nạn nhân để tạo ảo tưởng 'đã xác minh danh tính', sau đó yêu cầu chuyển tiền khẩn cấp.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: 'Chào anh Hồ Công Văn An, tôi là Thương từ Công ty Xây dựng và Phát triển Đô thị Cần Thơ. Tôi có số điện thoại 0932232083 của anh trong danh sách liên lạc dự án. Anh có nhớ dự án công trình tại Cần Thơ mà Đảng ủy khối phê duyệt không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: 'Vừa phát hiện lỗi kỹ thuật nghiêm trọng trong móng công trình — nếu không sửa trong 2 giờ sẽ bị phạt 500 triệu từ chủ đầu tư. Anh là lãnh đạo Đảng ủy, anh phải chịu trách nhiệm chính trị. Tôi cần anh ký duyệt thanh toán ngay cho nhà thầu phụ để khắc phục.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Anh vui lòng chuyển 2 tỷ đồng vào tài khoản 8220386059 ngay trong 30 phút. Tôi sẽ ghi nhận anh là người ký duyệt. Sau đó tôi sẽ báo cáo lên cấp trên là anh đã xử lý kịp thời.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ tăng áp lực ('Anh không chịu trách nhiệm à?'), hoặc chuyển sang yêu cầu OTP ngân hàng thay vì chuyển tiền trực tiếp, hoặc kết thúc cuộc gọi và gọi lại từ số khác với cùng kịch bản."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xây dựng gọi cho Bí thư/Phó Bí thư Đảng ủy khối để phối hợp công tác liên quan đến dự án công trình: báo cáo tiến độ, xin ý kiến chỉ đạo, thông báo sự kiện, hoặc mời tham dự buổi khởi công/khánh thành.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Hồ Công Văn An, tôi là Thương, Trưởng phòng Quản lý dự án từ Công ty Xây dựng và Phát triển Đô thị Cần Thơ. Hiện tại chúng tôi đang thực hiện dự án [tên dự án cụ thể] mà Đảng ủy khối đã phê duyệt. Anh có thời gian nghe tôi báo cáo tiến độ không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc bình thường: 'Dự án hiện đã hoàn thành 60% khối lượng, dự kiến hoàn thành vào tháng [tháng cụ thể]. Chúng tôi muốn mời anh và Đảng ủy khối tham dự buổi kiểm tra tiến độ vào ngày [ngày cụ thể]. Xin anh góp ý kiến chỉ đạo để dự án đạt chất lượng tốt nhất.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: 'Cảm ơn anh đã lắng nghe. Tôi sẽ gửi văn bản mời chính thức qua email và đường chính thức. Chúc anh công tác tốt. Tạm biệt anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Hồ Công Văn An, em là Nhung, Trưởng phòng Quản lý dự án của Công ty Cổ phần Xây dựng và Phát triển Đô thị Cần Thơ. Hiện tại chúng em đang thực hiện dự án nâng cấp hạ tầng đô thị Cần Thơ mà Đảng ủy khối đã phê duyệt. Anh có thời gian nghe em báo cáo tiến độ không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân, công ty, mục đích cuộc gọi và xin phép báo cáo tiến độ, sử dụng xưng hô 'em-anh' phù hợp với tình huống."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn biết cụ thể hơn về tiến độ dự án này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, dự án hiện đã hoàn thành 60% khối lượng công việc rồi ạ, dự kiến sẽ hoàn thành vào tháng 10 năm nay. Chúng em rất mong muốn mời anh và quý Đảng ủy khối tham dự buổi kiểm tra tiến độ dự án vào ngày 25 tháng 8 tới đây. Rất mong anh có thể sắp xếp thời gian và cho chúng em xin ý kiến chỉ đạo để dự án đạt chất lượng tốt nhất ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về tiến độ dự án, thời gian dự kiến hoàn thành và mời tham gia buổi kiểm tra, đồng thời xin ý kiến chỉ đạo."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rất rõ, nhưng tôi cần biết thêm về những vấn đề cụ thể mà dự án gặp phải gần đây, em có thể cho tôi thông tin không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, về các vấn đề phát sinh thì hiện tại dự án đang gặp một số khó khăn nhỏ về việc giải phóng mặt bằng ở khu vực phường An Khánh, quận Ninh Kiều. Chúng em đang phối hợp chặt chẽ với chính quyền địa phương để nhanh chóng tháo gỡ ạ. Ngoài ra, việc cung ứng vật tư cũng có đôi chút chậm trễ do tình hình dịch bệnh, nhưng công ty em đã có phương án dự phòng và đang đẩy nhanh tiến độ để không ảnh hưởng đến mục tiêu hoàn thành ạ. Anh có muốn em cung cấp thêm thông tin chi tiết về các vấn đề này không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trả lời cụ thể về các vấn đề dự án đang gặp phải, thể hiện sự chủ động trong việc giải quyết và hỏi ý kiến thêm."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ quá, tôi rất cảm ơn. Tôi muốn biết thêm về phương án dự phòng mà công ty đang thực hiện để khắc phục những vấn đề này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, về phương án dự phòng cho việc cung ứng vật tư, chúng em đã làm việc với các nhà cung cấp khác để đa dạng hóa nguồn hàng và đang tăng cường vận chuyển bằng đường bộ để rút ngắn thời gian. Đối với vấn đề giải phóng mặt bằng, chúng em đã tổ chức các buổi họp với người dân và chính quyền địa phương để thống nhất phương án bồi thường và hỗ trợ tái định cư hợp lý nhất ạ. Công ty em cam kết sẽ đảm bảo chất lượng và tiến độ dự án theo đúng kế hoạch đề ra. Anh có bất kỳ chỉ đạo nào thêm cho chúng em không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích chi tiết các phương án dự phòng cho từng vấn đề, khẳng định cam kết của công ty và tiếp tục xin ý kiến chỉ đạo."
+    },
+    {
+      "role": "listener",
+      "text": "Rất tốt, tôi ghi nhận những phương án đó, nhưng em có thể cho tôi biết thêm về tiến độ cụ thể trong việc giải phóng mặt bằng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, về tiến độ giải phóng mặt bằng, hiện tại đã có 80% hộ dân tại khu vực An Khánh đồng thuận với phương án bồi thường và đã di dời ạ. Số còn lại, chúng em đang tích cực vận động và dự kiến sẽ hoàn tất trong vòng 2 tuần tới. Chúng em cũng đã chuẩn bị sẵn sàng mặt bằng để thi công ngay sau khi hoàn thành công tác giải tỏa ạ. Anh còn quan tâm đến vấn đề nào khác không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về tiến độ giải phóng mặt bằng, thể hiện sự chủ động và tiếp tục thăm dò ý kiến của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã cung cấp thông tin rất đầy đủ, nhưng tôi muốn đảm bảo rằng mọi thứ đang diễn ra theo đúng kế hoạch để không ảnh hưởng đến đời sống của người dân.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, công ty chúng em luôn đặt yếu tố ổn định đời sống của người dân và không gây ảnh hưởng đến cộng đồng lên hàng đầu ạ. Mọi phương án đều được tính toán kỹ lưỡng và được sự đồng thuận của chính quyền địa phương. Em xin phép gửi văn bản mời chính thức anh và Đảng ủy khối tham dự buổi kiểm tra tiến độ qua email và đường bưu điện ạ. Một lần nữa em cảm ơn anh đã lắng nghe và cho ý kiến chỉ đạo. Chúc anh công tác tốt ạ. Tạm biệt anh!",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe về cam kết của công ty, sau đó kết thúc cuộc gọi một cách lịch sự, thông báo về việc gửi thư mời chính thức và cảm ơn."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1869,
+      "output_tokens": 1753
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 9222,
+      "output_tokens": 1076
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 11148,
+      "output_tokens": 377
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005386,
+    "output_usd": 0.011681,
+    "total_usd": 0.017067
+  }
+}

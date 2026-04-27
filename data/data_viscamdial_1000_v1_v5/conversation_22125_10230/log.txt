@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_ef3a4c44db]
+  Caller thật: Bác sỹ ung bướu (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Giám đốc Trung tâm Ung bướu / Phó Giám đốc Bệnh viện @ Bệnh viện Ung bướu Trung ương / Trung tâm Ung bướu Quốc gia
+  Listener: Bí thư, Phó Bí thư Đảng ủy khối cơ quan cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Bác sỹ ung bướu cấp cao cần liên hệ lãnh đạo cấp tỉnh để phối hợp về: (1) dự án sàng lọc ung thư toàn dân cấp tỉnh, (2) xin hỗ trợ kinh phí/chính sách, (3) thông báo về chương trình y tế công cộng, hoặc (4) mời tham gia hội thảo/sự kiện y tế quốc gia.
+  Pretext: Giả danh Giám đốc Trung tâm Ung bướu gọi thông báo ông/bà Đinh Gia Đạt được chọn tham gia chương trình khám sàng lọc ung thư miễn phí cho cán bộ lãnh đạo toàn quốc (lợi dụng địa vị lãnh đạo + thông tin tên đã lộ để tạo tin cậy). Sau đó yêu cầu đóng phí 'đăng ký bảo hiểm y tế nâng cao' hoặc 'phí quản lý hồ sơ sàng lọc' để hoàn tất.
+  Listener traits: ['sĩ diện không muốn thua kém', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Anh Đinh Gia Đạt phải không ạ? Tôi là Dương Thùy Khánh Nhung, Giám đốc Trung tâm Ung bướu đây. Tôi gọi từ số 0998245611 của anh. Có đúng số anh đang dùng là số này không?
+      → phase: S1 | tactic: Giả danh Giám đốc Trung tâm Ung bướu, xác nhận tên và số điện thoại đã biết để tạo tin cậy ban đầu.
+T02 [LISTENER] Vâng, tôi nghe chị nói rồi, nhưng tôi muốn kiểm tra lại thông tin chút xíu.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, tôi hiểu. Vậy tôi xin xác nhận lại một lần nữa. Anh Đinh Gia Đạt, đúng không ạ? Anh là một trong số rất ít cán bộ lãnh đạo cấp cao được lựa chọn tham gia chương trình khám sàng lọc ung thư miễn phí toàn quốc của chúng tôi. Chương trình này là đặc biệt dành riêng cho các vị trí chủ chốt như anh. Tôi liên hệ trực tiếp đến số điện thoại 0998245611 này để thông báo cho anh về quyền lợi này.
+      → phase: S1 | tactic: Tái xác nhận thông tin đã biết để củng cố độ tin cậy, đồng thời nâng cao vị thế của nạn nhân thông qua việc nhấn mạnh 'cán bộ lãnh đạo cấp cao' và 'được lựa chọn' để tạo cảm giác đặc biệt và tự hào.
+T04 [LISTENER] Chị nói thật khiến tôi cảm thấy vinh dự, nhưng tôi cần thêm thông tin để hiểu rõ hơn về chương trình này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, tôi rất vui khi anh cảm thấy như vậy. Đây thực sự là niềm vinh dự. Cụ thể chương trình là sàng lọc ung thư chuyên sâu miễn phí, nhằm phát hiện sớm các nguy cơ, đặc biệt là ung thư ở các cấp lãnh đạo quốc gia. Anh Đinh Gia Đạt sẽ được ưu tiên thực hiện tại bệnh viện của chúng tôi. Để hoàn tất hồ sơ đăng ký tham gia đã được phê duyệt, anh cần xác nhận thông tin cá nhân và đóng một khoản phí quản lý hồ sơ rất nhỏ, chỉ khoảng 2 triệu đồng. Đây là khoản phí bắt buộc để bảo đảm việc sắp xếp lịch trình và tài liệu cho anh được chu đáo nhất. Anh có muốn tôi hướng dẫn cách hoàn tất ngay bây giờ không?
+      → phase: S3 | tactic: Tạo tình huống khẩn cấp + danh dự. Nói ông/bà được chọn vào nhóm cán bộ lãnh đạo tham gia dự án sàng lọc ung thư quốc gia (khen ngợi vị trí, thể hiện sự quan tâm đặc biệt). Tạo áp lực thời gian: 'Chương trình chỉ còn 2 ngày, phải hoàn tất hôm nay'. Đề xuất cách thức thanh toán phí.
+T06 [LISTENER] Tôi cảm thấy hơi băn khoăn về khoản phí này, chị có thể giải thích thêm về lý do và quy trình thanh toán không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, tôi hiểu sự băn khoăn của anh. Khoản phí 2 triệu đồng này không phải là chi phí khám sàng lọc, mà là phí quản lý hồ sơ và bảo hiểm y tế nâng cao đặc biệt dành cho chương trình này, đảm bảo anh được hưởng các dịch vụ tốt nhất và ưu tiên cao nhất. Đây là quy định chung của chương trình cấp quốc gia. Anh có thể thanh toán trực tuyến qua cổng bảo mật của chúng tôi. Anh có thẻ thanh toán nào tiện dụng không? Tôi có thông tin thẻ của anh là 4998 **** **** 5328, không biết có đúng không ạ?
+      → phase: S3 | tactic: Làm rõ lý do khoản phí, nhấn mạnh 'quy định chung của chương trình cấp quốc gia' để hợp lý hóa, và sử dụng thông tin thẻ đã biết (VIC_CARD_DATA) để xác nhận, tạo vẻ hợp lệ và đáng tin cậy. Sau đó yêu cầu thanh toán.
+T08 [LISTENER] Tôi chưa từng cung cấp thông tin thẻ của mình cho chị, nên tôi muốn xác nhận lại quy trình thanh toán trước đã.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Anh Đinh Gia Đạt, thông tin thẻ này là từ hồ sơ cán bộ cấp cao của anh đã được duyệt cho chương trình, chứ không phải anh cung cấp trực tiếp cho chúng tôi. Quy trình thanh toán rất đơn giản, anh chỉ cần xác nhận lại thông tin thẻ 4998 **** **** 5328 này và cung cấp mã bảo mật CVV phía sau thẻ để hoàn tất. Tôi sẽ hướng dẫn anh từng bước ngay bây giờ. Anh có thể cho tôi mã CVV để tôi hoàn tất cho anh không?
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ về nguồn gốc thông tin thẻ bằng cách liên kết với 'hồ sơ cán bộ cấp cao', sau đó chuyển thẳng sang yêu cầu CVV để hoàn tất giao dịch.
+T10 [LISTENER] Chị không thể yêu cầu thông tin thẻ tín dụng của tôi như vậy, tôi cần phải xem xét lại trước đã ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Anh Đinh Gia Đạt, đây là một chương trình đặc biệt cấp quốc gia, thời gian hoàn tất hồ sơ chỉ còn trong hôm nay. Nếu anh không tin tưởng và không thể cung cấp thông tin cần thiết để hoàn tất, chúng tôi sẽ buộc phải loại anh khỏi danh sách ưu tiên. Điều đó đồng nghĩa anh sẽ mất cơ hội vàng này. Anh có chắc là muốn bỏ lỡ không?
+      → phase: S4 | tactic: Tạo áp lực thời gian và tâm lý mất mát cơ hội bằng cách đe dọa loại nạn nhân khỏi danh sách ưu tiên, cảnh báo về việc bỏ lỡ một 'cơ hội vàng' để thúc đẩy họ hành động.
+T12 [LISTENER] Tôi rất quan tâm đến chương trình này, nhưng tôi không thể cung cấp thông tin thẻ tín dụng của mình mà không có sự xác minh rõ ràng hơn.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=0.00
+TOKEN: in=26355 | out=3399
+COST : $0.017756
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_22125_10230\conv_ef3a4c44db.json  [SCAM_REFUSE]

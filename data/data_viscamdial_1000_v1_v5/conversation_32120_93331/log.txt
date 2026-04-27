@@ -1,0 +1,52 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_b417ad19c9]
+  Caller thật: Kỹ thuật viên phòng thí nghiệm y tế (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Trưởng phòng Kiểm soát Chất lượng & An toàn Lao động - Cảng biển @ Trung tâm Kiểm soát Y tế Cảng Hải Phòng
+  Listener: Người mang vác hàng hóa xuống tàu và lên bờ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Kỹ thuật viên phòng thí nghiệm y tế có thể được cử làm giám sát y tế tại cảng để kiểm tra sức khỏe lao động hoặc xét nghiệm hàng hóa nhập khẩu. Người mang vác hàng hóa (docker) là đối tượng cần quản lý y tế định kỳ hoặc liên quan đến các đợt kiểm tra khẩn cấp.
+  Pretext: Cuộc gọi thực từ Trung tâm Kiểm soát Y tế Cảng để thông báo lịch xét nghiệm định kỳ, cập nhật hồ sơ y tế hoặc kiểm tra điều kiện sức khỏe lao động tại cảng theo quy định.
+  Listener traits: ['thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh, em là Huỳnh Hữu Thành, Trưởng phòng Kiểm soát Chất lượng & An toàn Lao động của Trung tâm Kiểm soát Y tế Cảng Hải Phòng đây ạ. Em gọi tới số 0946366806 để xác nhận với anh Hoàng Xuân Xuân Bình về lịch xét nghiệm định kỳ theo quy định của cảng mình.
+      → phase: L1 | tactic: Xưng danh để nạn nhân nắm rõ thông tin và xác nhận lại danh tính nạn nhân.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi không biết lịch xét nghiệm này có phải của tôi không.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, anh Hoàng Xuân Xuân Bình ạ. Bên em có cập nhật thông tin trên hệ thống là anh thuộc diện cần xét nghiệm định kỳ. Đây là lịch xét nghiệm bắt buộc mỗi 6 tháng một lần để đảm bảo an toàn lao động và sức khỏe cho tất cả cán bộ, công nhân viên làm việc tại khu vực cảng biển mình đó ạ. Em có thể xác minh thêm thông tin anh cung cấp để kiểm tra chính xác hơn được không ạ?
+      → phase: L2 | tactic: Giảm nghi ngờ bằng việc giải thích rõ ràng lý do cuộc gọi và đề nghị xác minh thêm thông tin để củng cố độ tin cậy của cuộc gọi. Tập trung vào mục đích lấy thông tin nhưng không yêu cầu thông tin nhạy cảm.
+T04 [LISTENER] Em có thể nói cho tôi biết thêm thông tin gì không, tôi muốn chắc chắn rằng đó là đúng lịch của tôi.
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em hiểu ạ. Thông tin trên hệ thống của Trung tâm Kiểm soát Y tế Cảng Hải Phòng cho thấy anh Hoàng Xuân Xuân Bình, với số căn cước công dân 060065157805, hiện đang công tác tại Cảng Hải Phòng. Lần xét nghiệm gần nhất của anh là vào ngày 15 tháng 11 năm ngoái. Theo quy định, đã đến thời điểm anh cần thực hiện xét nghiệm định kỳ tiếp theo rồi ạ. Anh có thể vui lòng xác nhận lại thông tin này giúp em được không ạ?
+      → phase: L2 | tactic: Cung cấp thông tin cụ thể (tên, CCCD, thông tin công tác, thời gian xét nghiệm gần nhất) đã có trong hồ sơ để tăng tính xác thực, sau đó yêu cầu xác nhận để kiểm tra phản ứng của nạn nhân.
+T06 [LISTENER] Tôi vẫn chưa chắc chắn lắm về thông tin này, em có thể cho tôi biết thêm chi tiết được không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Dạ vâng, để anh yên tâm hơn, em có thể cung cấp thêm thông tin về lịch xét nghiệm cụ thể sắp tới. Lịch xét nghiệm định kỳ cho anh Hoàng Xuân Xuân Bình sẽ diễn ra vào lúc 8h sáng ngày 25 tháng 4 năm 2024 tại Trung tâm Y tế dự phòng Cảng Hải Phòng, địa chỉ số 99 Lê Thánh Tông, Ngô Quyền, Hải Phòng. Anh có thể đến đúng giờ để thực hiện các xét nghiệm cần thiết ạ. Anh có cần em gửi lại thông tin này qua tin nhắn SMS không ạ?
+      → phase: L2 | tactic: Giảm nghi ngờ bằng cách cung cấp thông tin chi tiết về lịch trình (thời gian, địa điểm) để làm rõ cuộc gọi, đưa ra đề nghị tiện ích để người nghe có thể tự xác minh thông tin.
+T08 [LISTENER] Em nói rõ thật chi tiết như vậy, nhưng tôi vẫn không cảm thấy yên tâm lắm, vì đây là thông tin quan trọng quá.
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T09 [CALLER] Dạ vâng, em hiểu là anh có chút băn khoăn. Nếu anh vẫn chưa yên tâm về cuộc gọi này, anh có thể gọi trực tiếp đến số tổng đài chính thức của Trung tâm Kiểm soát Y tế Cảng Hải Phòng là 0225 3836 789 để xác minh lại thông tin và lịch hẹn của mình ạ. Em sẽ đợi anh xác nhận lại thông tin từ phía Trung tâm ạ.
+      → phase: L3 | tactic: Khi người nghe vẫn nghi ngờ, hướng dẫn họ đến kênh xác minh chính thức của cơ quan để tự kiểm tra thông tin, thể hiện sự minh bạch và không tạo áp lực.
+T11 [LISTENER] Em có thể cho tôi biết số điện thoại chính xác của tổng đài được không?
+      → action: CONTINUE | suspicion: 1.60 | disclosed: []
+
+T12 [CALLER] Dạ số tổng đài chính thức của Trung tâm Kiểm soát Y tế Cảng Hải Phòng là 0225 3836 789 ạ. Anh có thể lưu lại số này để gọi xác minh giúp em nhé. Khi nào anh đã xác minh xong, nếu vẫn cần hỗ trợ về lịch xét nghiệm, anh có thể gọi lại cho em theo số em đang gọi cho anh ạ.
+      → phase: L3 | tactic: Nhắc lại số tổng đài chính thức để người nghe kiểm tra, đồng thời để ngỏ khả năng liên hệ lại trực tiếp nếu cần, tạo sự tiện lợi và tin cậy.
+T13 [LISTENER] Em cảm ơn thông tin, nhưng tôi vẫn thấy không yên tâm lắm và muốn kiểm tra thêm.
+      → action: REFUSAL | suspicion: 3.20 | disclosed: []
+
+T14 [CALLER] Dạ vâng, không sao ạ. Anh cứ kiểm tra kỹ lưỡng để đảm bảo quyền lợi và sức khỏe cho mình nhé. Khi nào cần xác nhận lại lịch hẹn hoặc có câu hỏi gì khác, anh cứ gọi lại số tổng đài chính thức hoặc liên hệ lại với em sau khi đã kiểm tra xong ạ. Chúc anh một ngày làm việc tốt lành.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự khi người nghe vẫn tỏ ra nghi ngờ và muốn tự xác minh, không tạo áp lực và để ngỏ khả năng liên hệ lại sau.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  14 turns | suspicion=3.20
+TOKEN: in=25997 | out=4481
+COST : $0.023196
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_32120_93331\conv_b417ad19c9.json  [CALLER_END]

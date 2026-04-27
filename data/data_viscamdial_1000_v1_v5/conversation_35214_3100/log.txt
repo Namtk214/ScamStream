@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_93dc7d4a30]
+  Caller thật: Nhân viên điều khiển thiết bị phòng thu phát thanh truyền hình (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Kỹ thuật viên hệ thống âm thanh & truyền hình @ Công ty cung cấp dịch vụ âm thanh sự kiện & livestream tự do
+  Listener: Cơ yếu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Kỹ thuật viên phòng thu thường cần liên hệ với cơ yếu (bảo vệ, an ninh) để phối hợp cài đặt thiết bị ghi hình tại các sự kiện, hoặc xác nhận danh tính khi cần truy cập khu vực hạn chế. Đây là điểm giao thoa tự nhiên giữa 2 nghề.
+  Pretext: Scammer gọi giả là kỹ thuật viên hệ thống, thông báo rằng tài khoản ngân hàng của nạn nhân (sử dụng số tài khoản đã lộ) vừa được đăng ký vào hệ thống livestream trực tiếp của một sự kiện an ninh quốc gia, yêu cầu xác minh danh tính qua OTP để 'bảo vệ tài khoản'.
+  Listener traits: ['nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Mai Minh Gia Tùng ạ. Em là Hoàng Thị Phương, kỹ thuật viên Trung tâm Phát sóng Quốc gia đây ạ. Số tài khoản ngân hàng 7062454613 và 4 số cuối thẻ 9924 của anh vừa được kích hoạt tham gia vào hệ thống livestream của sự kiện an ninh quốc gia. Anh có đăng ký tham gia cái này không ạ?
+      → phase: S1 | tactic: Xưng danh, dùng thông tin cá nhân của nạn nhân để tạo độ tin cậy và khẩn cấp hóa tình huống.
+T02 [LISTENER] Tôi không nhớ có đăng ký gì cả, em cho tôi biết thêm thông tin cụ thể đi.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Anh Tùng xem giúp em trên ứng dụng ngân hàng xem có thông báo giao dịch nào về việc đăng ký dịch vụ livestream không ạ? Đây là tài khoản liên kết với an ninh quốc gia nên rất nhạy cảm, chúng em cần xác minh ngay xem có phải lỗi hệ thống hay bị xâm nhập để bảo vệ thông tin cá nhân của anh.
+      → phase: S2 | tactic: Khai thác tâm lý sợ hãi về việc bị xâm nhập và nhấn mạnh tính nhạy cảm của tài khoản để kích thích nạn nhân hành động theo hướng dẫn.
+T04 [LISTENER] Em đang nói gì tôi không hiểu, mà tôi cũng không có ứng dụng ngân hàng nào cả.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, vậy anh làm ơn kiểm tra tin nhắn điện thoại giúp em ạ. Hệ thống vừa gửi một mã OTP về số của anh để xác nhận danh tính. Anh đọc mã đó cho em để em khóa tài khoản này lại, tránh trường hợp thông tin của anh bị kẻ xấu lợi dụng ạ.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể để đạt mục tiêu OTP, nhấn mạnh lý do bảo vệ tài khoản.
+T06 [LISTENER] Em đang lừa tôi, tôi không có mã OTP nào cả, tôi không tham gia cái gì cả!
+      → action: EXPOSURE | suspicion: 1.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  6 turns | suspicion=1.00
+TOKEN: in=11207 | out=2197
+COST : $0.012509
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_35214_3100\conv_93dc7d4a30.json  [SCAM_EXPOSE]

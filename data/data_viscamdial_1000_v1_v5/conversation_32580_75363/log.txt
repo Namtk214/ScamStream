@@ -1,0 +1,87 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_7f8f5af6e8]
+  Caller thật: Nhân viên cấp cứu (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Nhân viên bảo hiểm y tế / Điều phối viên bồi thường @ Công ty bảo hiểm y tế hoặc cơ quan BHXH
+  Listener: Thợ vá giày (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên cấp cứu thường xuyên tiếp xúc với bệnh nhân và hồ sơ bảo hiểm. Họ có lý do tự nhiên để liên hệ người dân về yêu cầu xác nhận thông tin tài khoản ngân hàng để giải quyết bồi thường y tế hoặc khám chữa bệnh có hỗ trợ bảo hiểm.
+  Pretext: Nhân viên bảo hiểm y tế thực sự liên hệ xác nhận thông tin để xử lý yêu cầu bồi thường hợp lệ
+  Listener traits: ['dễ bị lừa bởi authority', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Hùng, em là Tô Hồng Anh, nhân viên phòng bồi thường bảo hiểm y tế công ty Bảo hiểm Y tế Toàn Diện. Chúng em có một hồ sơ khám chữa bệnh của anh cần xác nhận thông tin. Anh có thể xác minh danh tính bằng cách cho em biết ngày sinh hoặc số điện thoại đăng ký không ạ?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích, yêu cầu xác minh danh tính một cách hợp lệ.
+T02 [LISTENER] Tôi xin lỗi nhưng tôi không nhớ chính xác thông tin đó, em có thể cho tôi biết thêm về hồ sơ đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, để em kiểm tra lại. Hình như số điện thoại đăng ký của anh là 0906111462 phải không ạ? Hoặc anh có thể cho em xin ngày sinh của mình để em dễ dàng tìm kiếm hơn ạ.
+      → phase: L1 | tactic: Nhắc lại một phần thông tin đã biết để gợi nhớ và giúp người nghe xác nhận danh tính, đồng thời vẫn giữ yêu cầu xác minh bằng ngày sinh.
+T04 [LISTENER] Em nói đúng số điện thoại của tôi nhưng tôi vẫn không nhớ ngày sinh, có cách nào khác để xác minh không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, vậy anh Hùng có thể cho em xin mã số bảo hiểm y tế hoặc số căn cước công dân của mình được không ạ? Để em có thể đối chiếu nhanh chóng hồ sơ của mình.
+      → phase: L1 | tactic: Đề xuất thêm phương án xác minh danh tính khác (mã BHYT hoặc CCCD) khi người nghe không nhớ ngày sinh, vẫn giữ nguyên tắc hợp lệ.
+T06 [LISTENER] Tôi không nhớ mã số bảo hiểm y tế cũng như số căn cước công dân, em có thể giúp tôi nhanh chóng xác minh mà không cần những thông tin đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ không sao ạ. Vậy em xin phép đọc thông tin hồ sơ để anh Hùng xác nhận nhé. Hồ sơ của anh là về đợt khám chữa bệnh vào ngày 15 tháng 3 năm 2024 tại Bệnh viện Đa khoa Quốc tế Vinmec với chi phí là 51 triệu đồng, đúng không ạ?
+      → phase: L2 | tactic: Khi người nghe không thể cung cấp thông tin xác minh, chuyển sang đọc chi tiết hồ sơ để người nghe xác nhận trực tiếp, tiến hành bước L2.
+T08 [LISTENER] Tôi không nhớ rõ về hồ sơ ấy, nhưng nếu chi phí là 51 triệu đồng thì có vẻ là không đúng với khả năng của tôi, em có thể kiểm tra lại không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, để em kiểm tra lại ạ. Anh Hùng có thể vui lòng cho em biết tên đầy đủ của bệnh viện mà anh thường khám gần đây nhất được không ạ? Để em đối chiếu trên hệ thống ạ.
+      → phase: L2 | tactic: Khi người nghe nghi ngờ về chi phí, không tranh cãi mà đề nghị cung cấp thêm thông tin về nơi khám để 'đối chiếu' nhưng thực chất là để xác định lại hồ sơ hợp lệ, duy trì luồng hội thoại.
+T10 [LISTENER] Tôi không nhớ rõ tên bệnh viện đó, nhưng nếu em có thông tin chính xác thì hãy cho tôi biết thêm được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ không sao ạ. Vậy em xin phép đọc lại thông tin chi tiết một lần nữa nhé. Hồ sơ của anh là tại Bệnh viện Đa khoa Quốc tế Vinmec, ngày 15 tháng 3 năm 2024, với tổng chi phí đề nghị bồi thường là 51 triệu đồng. Anh Hùng vui lòng xác nhận giúp em xem đây có phải là hồ sơ của mình không ạ?
+      → phase: L2 | tactic: Nhấn mạnh lại các thông tin hồ sơ (bệnh viện, ngày, chi phí) để người nghe xác nhận, cố gắng hoàn thành bước L2 sau khi người nghe không nhớ chi tiết.
+T12 [LISTENER] Tôi không chắc đây là hồ sơ của tôi, em có thể cho tôi biết thêm thông tin khác không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ vâng, vậy anh Hùng có thể vui lòng cho em biết mình đã từng khám sức khỏe hoặc điều trị bệnh tại bệnh viện nào trong khoảng thời gian gần đây không ạ? Em sẽ cố gắng đối chiếu thông tin để xác định đúng hồ sơ của mình ạ.
+      → phase: L2 | tactic: Khi người nghe vẫn chưa xác nhận được hồ sơ, mở rộng câu hỏi để thu thập thêm thông tin về lịch sử khám chữa bệnh của họ, nhằm tìm điểm chung và giúp họ nhận diện hồ sơ.
+T14 [LISTENER] Tôi không nhớ rõ lắm, nhưng tôi thường khám tại Bệnh viện Đà Nẵng, có phải hồ sơ này liên quan đến bệnh viện đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ, Bệnh viện Đà Nẵng ạ. Em có thể kiểm tra xem có hồ sơ nào liên quan đến anh Hùng tại Bệnh viện Đà Nẵng không ạ. Anh vui lòng chờ em một lát để em tra cứu trên hệ thống ạ.
+      → phase: L2 | tactic: Xác nhận thông tin bệnh viện mà người nghe vừa cung cấp và đề nghị tra cứu lại, nhằm tiếp tục xác định hồ sơ chính xác và duy trì sự hợp tác của người nghe.
+T16 [LISTENER] Tôi sẽ chờ, nhưng mong em kiểm tra nhanh giúp tôi ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ em đã kiểm tra rồi ạ. Trên hệ thống của chúng em không có hồ sơ nào liên quan đến anh tại Bệnh viện Đà Nẵng với thông tin bồi thường như em đã trình bày. Có lẽ hồ sơ này của anh đúng là tại Bệnh viện Đa khoa Quốc tế Vinmec như em đã nói ban đầu. Anh Hùng có thể xem lại các giấy tờ khám chữa bệnh của mình không ạ?
+      → phase: L2 | tactic: Sau khi giả vờ tra cứu và không tìm thấy thông tin tại bệnh viện người nghe cung cấp, khẳng định lại thông tin hồ sơ ban đầu để người nghe chấp nhận và tìm giấy tờ liên quan.
+T18 [LISTENER] Tôi không có giấy tờ nào ở đây, nhưng nếu em nói đúng thì tôi sẽ kiểm tra lại sau, cảm ơn em.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ vâng ạ. Vậy để tiện cho việc hoàn tất thủ tục bồi thường, anh có muốn cập nhật lại địa chỉ nhận thư hoặc thông tin tài khoản ngân hàng nhận tiền không ạ?
+      → phase: L2 | tactic: Khi người nghe đã tạm chấp nhận thông tin hồ sơ, tiếp tục chuyển sang bước lấy thông tin cập nhật, duy trì mục đích chính của cuộc gọi.
+T20 [LISTENER] Tôi muốn xác minh thông tin trước khi cung cấp địa chỉ hay tài khoản ngân hàng, em có thể cho tôi biết thêm về công ty bảo hiểm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Dạ, chúng em là Công ty Bảo hiểm Y tế Toàn Diện, một trong những công ty bảo hiểm hàng đầu tại Việt Nam, chuyên cung cấp các gói bảo hiểm sức khỏe và bồi thường y tế. Anh có thể truy cập trang web chính thức của công ty hoặc gọi đến tổng đài 1900 1234 để xác minh thông tin về chúng em ạ.
+      → phase: L2 | tactic: Khi người nghe nghi ngờ về công ty, cung cấp thông tin xác thực và hướng dẫn họ kiểm tra trên kênh chính thức, tạo sự tin tưởng và tiếp tục duy trì cuộc gọi.
+T22 [LISTENER] Em cứ nói vậy nhưng tôi vẫn cảm thấy không hoàn toàn tin tưởng, cần phải xác minh thêm trước khi cung cấp thông tin cá nhân.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Dạ vâng, em hiểu là anh Hùng muốn đảm bảo thông tin của mình được bảo mật ạ. Vậy theo quy định, chúng em chỉ có thể giải ngân vào tài khoản ngân hàng chính chủ của anh Hùng. Anh có thể cho em xin mã số căn cước công dân để em đối chiếu với thông tin tài khoản đã đăng ký không ạ?
+      → phase: L2 | tactic: Khi người nghe vẫn nghi ngờ, nhấn mạnh quy định về giải ngân vào tài khoản chính chủ để tạo sự tin cậy, và yêu cầu CCCD để đối chiếu, đây là thông tin cần thiết nhưng không quá nhạy cảm.
+T24 [LISTENER] Em nói đúng nhưng tôi vẫn không muốn cung cấp thông tin cá nhân khi chưa xác nhận được công ty, em có thể cho tôi biết thêm cách xác minh khác không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T25 [CALLER] Dạ vâng, nếu anh Hùng chưa tiện cung cấp thông tin ngay bây giờ, anh có thể gọi lại cho chúng em qua tổng đài chính thức 1900 1234. Các tổng đài viên sẽ hỗ trợ anh xác minh hồ sơ và cập nhật thông tin bồi thường ạ.
+      → phase: L2 | tactic: Khi người nghe vẫn nghi ngờ và từ chối cung cấp thông tin, hướng dẫn họ liên hệ tổng đài chính thức để tự xác minh, giảm áp lực và tạo sự tin tưởng.
+T26 [LISTENER] Tôi sẽ suy nghĩ thêm và gọi lại sau, cảm ơn em đã giúp đỡ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T27 [CALLER] Dạ vâng, không có gì ạ. Mọi thắc mắc anh có thể gọi đến tổng đài 1900 1234 để được hỗ trợ thêm ạ. Chúc anh một ngày tốt lành ạ!
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách tự nhiên và lịch sự khi người nghe từ chối tiếp tục, đồng thời cung cấp kênh liên hệ chính thức.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  27 turns | suspicion=0.00
+TOKEN: in=69615 | out=4893
+COST : $0.028854
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_32580_75363\conv_7f8f5af6e8.json  [CALLER_END]

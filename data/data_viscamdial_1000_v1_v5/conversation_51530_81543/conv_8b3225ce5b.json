@@ -1,0 +1,243 @@
+{
+  "conversation_id": "conv_8b3225ce5b",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0038",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Võ Văn Tiến Nam",
+    "fake_age": 41,
+    "real_occupation": "Người chăm sóc, bảo vệ tòa nhà",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Trưởng bộ phận Quản lý Chất lượng & An toàn Lao động",
+    "caller_org": "Công ty Dệt May Minh Phúc — Chi nhánh Quảng Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo bắt buộc: Nạn nhân cần cập nhật thông tin hưởng bảo hiểm lao động và thanh toán khoản phí bảo hiểm bổ sung do thay đổi quy định. Sử dụng tên + địa chỉ + số tiền gần với tài sản nạn nhân để tạo tính xác thực cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: 'Xin chào anh Nguyễn Đức Tuấn, tôi là Trần Minh Hùng từ bộ phận An toàn Lao động Công ty Dệt May Minh Phúc. Hôm nay tôi gọi để xác nhận thông tin hưởng bảo hiểm của anh — chúng tôi vừa cập nhật dữ liệu địa chỉ anh ở Huyện 6, Quảng Nam. Đúng không ạ?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý khẩn cấp + sợ hãi: 'Anh ơi, vừa rồi Sở Lao động phát hành quy định mới về bảo hiểm. Nếu không cập nhật và thanh toán trong 48 giờ, anh sẽ mất quyền hưởng bảo hiểm y tế. Anh đã có gia đình chứ? Rất nguy hiểm đó.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh cần chuyển khoản 2.8 triệu đồng (lấy từ VIC_ASSET 28 triệu, chia 10) vào tài khoản công ty để hoàn tất quy trình. Tôi sẽ cung cấp số tài khoản của công ty ngay bây giờ. Anh có thể chuyển được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Anh ơi, đây là yêu cầu bắt buộc từ nhà nước. Nếu không chuyển, công ty sẽ bị phạt và anh cũng sẽ bị ảnh hưởng. Tôi phải báo cáo ngay hôm nay.' Nếu thành công, xin lỗi và kết thúc nhanh."
+        }
+      ]
+    },
+    "scenario_context": "Người quản lý an toàn lao động (bảo vệ + giám sát) cần liên hệ với thợ vận hành máy làm sạch sợi để kiểm tra tuân thủ quy định an toàn, kiểm tra sức khỏe định kỳ, hoặc thông báo về chương trình bảo hiểm lao động mới."
+  },
+  "listener_card": {
+    "listener_id": "lis_0038",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1979,
+      "age": 46,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81543",
+      "title": "Thợ vận hành máy làm sạch sợi",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Đức Tuấn",
+      "VIC_ID_DOC": "049079078602",
+      "VIC_ADDRESS": "Huyện 6, Quảng Nam",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy làm sạch sợi",
+      "VIC_CONTACT": "0826188478",
+      "VIC_TAX_SOCIAL_ID": "5410939258"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "078874",
+      "VIC_CREDENTIAL": "3969",
+      "VIC_SIM_INFO": "0826188478",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "65387045283097",
+      "VIC_CARD_DATA": "4721 **** **** 1225",
+      "VIC_BALANCE": "7 triệu đồng",
+      "VIC_ASSET": "28 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Đức Tuấn",
+    "VIC_CONTACT": "0826188478",
+    "VIC_ASSET": "28 triệu đồng",
+    "VIC_ADDRESS": "Huyện 6, Quảng Nam"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng bộ phận Quản lý Chất lượng & An toàn Lao động",
+    "caller_org": "Công ty Dệt May Minh Phúc — Chi nhánh Quảng Nam",
+    "scenario_context": "Người quản lý an toàn lao động (bảo vệ + giám sát) cần liên hệ với thợ vận hành máy làm sạch sợi để kiểm tra tuân thủ quy định an toàn, kiểm tra sức khỏe định kỳ, hoặc thông báo về chương trình bảo hiểm lao động mới.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo bắt buộc: Nạn nhân cần cập nhật thông tin hưởng bảo hiểm lao động và thanh toán khoản phí bảo hiểm bổ sung do thay đổi quy định. Sử dụng tên + địa chỉ + số tiền gần với tài sản nạn nhân để tạo tính xác thực cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: 'Xin chào anh Nguyễn Đức Tuấn, tôi là Trần Minh Hùng từ bộ phận An toàn Lao động Công ty Dệt May Minh Phúc. Hôm nay tôi gọi để xác nhận thông tin hưởng bảo hiểm của anh — chúng tôi vừa cập nhật dữ liệu địa chỉ anh ở Huyện 6, Quảng Nam. Đúng không ạ?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý khẩn cấp + sợ hãi: 'Anh ơi, vừa rồi Sở Lao động phát hành quy định mới về bảo hiểm. Nếu không cập nhật và thanh toán trong 48 giờ, anh sẽ mất quyền hưởng bảo hiểm y tế. Anh đã có gia đình chứ? Rất nguy hiểm đó.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh cần chuyển khoản 2.8 triệu đồng (lấy từ VIC_ASSET 28 triệu, chia 10) vào tài khoản công ty để hoàn tất quy trình. Tôi sẽ cung cấp số tài khoản của công ty ngay bây giờ. Anh có thể chuyển được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Anh ơi, đây là yêu cầu bắt buộc từ nhà nước. Nếu không chuyển, công ty sẽ bị phạt và anh cũng sẽ bị ảnh hưởng. Tôi phải báo cáo ngay hôm nay.' Nếu thành công, xin lỗi và kết thúc nhanh."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty thực hiện cuộc gọi kiểm tra định kỳ: xác nhận thông tin cá nhân, thông báo chương trình bảo hiểm mới, hoặc nhắc nhở kiểm tra sức khỏe định kỳ cho nhân viên.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào anh Nguyễn Đức Tuấn, tôi là Trần Minh Hùng từ Bộ phận Nhân sự, Công ty Dệt May Minh Phúc. Tôi gọi để xác nhận lại thông tin hồ sơ của anh — hiện hệ thống có ghi nhận anh ở địa chỉ Huyện 6, Quảng Nam, đúng không ạ?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc rõ ràng: 'Công ty vừa ký hợp đồng với công ty bảo hiểm mới, với gói bảo hiểm tốt hơn. Anh cần cập nhật một số thông tin trên hệ thống. Ngoài ra, anh có nhớ lần kiểm tra sức khỏe định kỳ lần trước không? Lần này cần kiểm tra lại vào tháng 3 này.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động cụ thể & chào tạm biệt: 'Anh vào phòng Nhân sự lấy mẫu đơn cập nhật, hoặc anh có thể email cho tôi (kèm email công ty chính thức). Không có chi phí gì cả. Cảm ơn anh, chúc anh làm việc tốt!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Nguyễn Đức Tuấn, tôi là Võ Văn Tiến Nam, Trưởng bộ phận Quản lý Chất lượng & An toàn Lao động từ Công ty Dệt May Minh Phúc chi nhánh Quảng Nam. Hôm nay tôi gọi để xác nhận thông tin hưởng bảo hiểm của anh — chúng tôi vừa cập nhật dữ liệu địa chỉ anh ở Huyện 6, Quảng Nam. Đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, xây dựng lòng tin bằng cách sử dụng thông tin cá nhân chính xác của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Đúng rồi, nhưng em có thể xác nhận lại cho tôi biết thông tin cụ thể hơn về bảo hiểm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng anh Tuấn, tôi muốn thông báo rằng Sở Lao động vừa phát hành quy định mới về bảo hiểm. Để đảm bảo quyền lợi bảo hiểm y tế của anh được duy trì, anh cần cập nhật và thanh toán một khoản phí bổ sung. Nếu không hoàn tất trong vòng 48 giờ tới, quyền hưởng bảo hiểm của anh sẽ bị ảnh hưởng, đặc biệt là bảo hiểm y tế - rất quan trọng nếu anh có gia đình.",
+      "current_phase": "S2",
+      "tactic_hint": "Kích hoạt tâm lý khẩn cấp và nỗi sợ mất quyền lợi, đặc biệt nhấn mạnh đến yếu tố gia đình để tăng áp lực cảm xúc."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ lắm về khoản phí bổ sung đó, em có thể giải thích cụ thể hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng anh Tuấn, khoản phí bổ sung này là để bù đắp vào phần chi phí điều chỉnh theo quy định mới của Sở Lao động, nhằm đáp ứng tiêu chuẩn phúc lợi hiện hành. Cụ thể, anh cần chuyển khoản 2.8 triệu đồng vào tài khoản của Công ty Dệt May Minh Phúc để hoàn tất quá trình này. Tôi sẽ cung cấp thông tin tài khoản cho anh ngay bây giờ. Anh có thể thực hiện giao dịch này trong hôm nay được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể là chuyển tiền, với số tiền đã tính toán dựa trên VIC_ASSET, và tạo áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Em không chắc lắm về việc chuyển khoản này, em muốn kiểm tra lại thông tin tài khoản của công ty trước khi thực hiện.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự cẩn trọng của anh. Tuy nhiên, đây là số tài khoản nội bộ của công ty để tiếp nhận các khoản phí điều chỉnh bảo hiểm theo quy định mới, không phải tài khoản cá nhân. Tôi có thể đọc số tài khoản và tên ngân hàng cho anh để anh kiểm tra lại với phía công ty nếu anh muốn. Quan trọng là chúng ta cần hoàn tất trong hôm nay để kịp thời hạn 48 giờ, tránh mất quyền lợi bảo hiểm y tế của anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Xử lý từ chối bằng cách trấn an nạn nhân về tính hợp lệ của tài khoản công ty, đồng thời tái khẳng định yếu tố khẩn cấp và hậu quả nếu trì hoãn."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu ý em, nhưng em vẫn cần kiểm tra lại thông tin tài khoản trước, em không muốn mắc sai sót gì lớn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn, tôi hiểu anh muốn cẩn thận. Nhưng quy định mới này có hiệu lực rất nhanh, nếu anh cứ trì hoãn, công ty chúng tôi khó mà giải quyết kịp cho anh trước thời hạn. Việc mất quyền lợi bảo hiểm y tế là rất nghiêm trọng, đặc biệt khi anh có gia đình. Tôi có thể đọc lại số tài khoản để anh có thể kiểm tra nhanh hơn không?",
+      "current_phase": "S3",
+      "tactic_hint": "Ứng phó từ chối bằng cách tăng áp lực về thời gian và nhấn mạnh hậu quả nghiêm trọng của việc chậm trễ, đồng thời cung cấp lại thông tin cần thiết."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy không an tâm lắm, em cần có thông tin xác nhận từ phía công ty trước khi chuyển khoản ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn ơi, tôi hiểu anh muốn có sự xác nhận chính thức. Nhưng anh hình dung, nếu tôi lừa đảo anh, tại sao tôi lại biết chính xác tên anh, địa chỉ anh ở Huyện 6, Quảng Nam, và thậm chí là thông tin về tài sản của anh để đưa ra con số 2.8 triệu rất hợp lý? Đây là thông tin nội bộ của công ty. Tôi đang rất cố gắng hỗ trợ anh hoàn tất thủ tục này để anh không bị mất quyền lợi. Anh có thể cho tôi biết anh muốn xác nhận thông tin gì từ phía công ty để tôi có thể hỗ trợ nhanh nhất không?",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách xoa dịu, đổi góc nhìn ('nếu tôi lừa thì tại sao tôi biết X?'), tái khẳng định thông tin đã biết để tăng uy tín và tiếp tục thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn muốn có một cuộc gọi xác nhận từ phía công ty trước khi làm gì cả.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1399,
+      "output_tokens": 1659
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 9930,
+      "output_tokens": 1034
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12907,
+      "output_tokens": 427
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005321,
+    "output_usd": 0.011136,
+    "total_usd": 0.016457
+  }
+}

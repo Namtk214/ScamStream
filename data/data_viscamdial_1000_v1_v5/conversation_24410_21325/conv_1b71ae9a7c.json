@@ -1,0 +1,272 @@
+{
+  "conversation_id": "conv_1b71ae9a7c",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0038",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Dương Tiến Hùng",
+    "fake_age": 26,
+    "real_occupation": "Nhà chuyên môn về hải quan của Chính phủ",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Trưởng phòng Kiểm soát Hàng hóa xuất nhập khẩu — Chi cục Hải quan",
+    "caller_org": "Chi cục Hải quan Cảng Thủ Đức / Tổng cục Hải quan Việt Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Phát hiện lô hàng nhập khẩu động vật có vấn đề về giấy tờ → Yêu cầu thanh toán phí xử phạt/phí kiểm dịch để tránh tịch thu hàng hoá. Sử dụng tên nạn nhân + số ID để tạo ảo tưởng rằng scammer đã tra cứu hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: 'Chào anh Tạ Đức Nam, tôi là Trưởng phòng Kiểm soát Hàng hóa từ Chi cục Hải quan. Chúng tôi vừa phát hiện lô hàng nhập khẩu gia súc dưới tên anh (số CMND 048202850615) có vấn đề về giấy tờ kiểm dịch. Bây giờ anh có thể nghe được không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Nếu không xử lý trong vòng 2 tiếng, hàng hóa sẽ bị tịch thu và phạt thêm 200 triệu. Anh sẽ mất toàn bộ lô hàng và bị ghi vào danh sách doanh nghiệp vi phạm. Nhưng nếu xử lý ngay, chúng tôi có thể giảm phạt xuống 50 triệu.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Anh cần chuyển 50 triệu vào tài khoản xử lý phí của hải quan ngay bây giờ. Tôi sẽ gửi số tài khoản qua tin nhắn. Đây là quy trình bắt buộc, anh không thể làm qua mạng được.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân đồng ý: Gửi số tài khoản (scammer) + hướng dẫn chuyển tiền qua app ngân hàng. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Tôi sẽ ghi nhận anh từ chối xử lý. Trong 24h, bộ phận pháp lý sẽ khởi tố. Anh sẽ nhận được giấy triệu tập.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà chăn nuôi thường xuất khẩu hoặc nhập khẩu thức ăn gia súc, vật tư chăn nuôi, động vật sống — tất cả đều phải qua hải quan. Cơ quan hải quan có quyền gọi để xác minh, thông báo, hoặc yêu cầu hành động liên quan đến lô hàng, thuế, hoặc vi phạm."
+  },
+  "listener_card": {
+    "listener_id": "lis_0038",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "Đà Nẵng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "21325",
+      "title": "Nhà chăn nuôi",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Đức Nam",
+      "VIC_ID_DOC": "048202850615",
+      "VIC_ADDRESS": "Quận 9, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Nhà chăn nuôi",
+      "VIC_CONTACT": "0831521068",
+      "VIC_TAX_SOCIAL_ID": "7919526579"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "492365",
+      "VIC_CREDENTIAL": "206226",
+      "VIC_SIM_INFO": "0831521068",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "38406767290",
+      "VIC_CARD_DATA": "4165 **** **** 6554",
+      "VIC_BALANCE": "725 triệu đồng",
+      "VIC_ASSET": "2.5 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Đức Nam",
+    "VIC_CONTACT": "0831521068",
+    "VIC_BALANCE": "725 triệu đồng",
+    "VIC_EMPLOYMENT": "Nhà chăn nuôi",
+    "VIC_ID_DOC": "048202850615"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Kiểm soát Hàng hóa xuất nhập khẩu — Chi cục Hải quan",
+    "caller_org": "Chi cục Hải quan Cảng Thủ Đức / Tổng cục Hải quan Việt Nam",
+    "scenario_context": "Nhà chăn nuôi thường xuất khẩu hoặc nhập khẩu thức ăn gia súc, vật tư chăn nuôi, động vật sống — tất cả đều phải qua hải quan. Cơ quan hải quan có quyền gọi để xác minh, thông báo, hoặc yêu cầu hành động liên quan đến lô hàng, thuế, hoặc vi phạm.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Phát hiện lô hàng nhập khẩu động vật có vấn đề về giấy tờ → Yêu cầu thanh toán phí xử phạt/phí kiểm dịch để tránh tịch thu hàng hoá. Sử dụng tên nạn nhân + số ID để tạo ảo tưởng rằng scammer đã tra cứu hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: 'Chào anh Tạ Đức Nam, tôi là Trưởng phòng Kiểm soát Hàng hóa từ Chi cục Hải quan. Chúng tôi vừa phát hiện lô hàng nhập khẩu gia súc dưới tên anh (số CMND 048202850615) có vấn đề về giấy tờ kiểm dịch. Bây giờ anh có thể nghe được không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Nếu không xử lý trong vòng 2 tiếng, hàng hóa sẽ bị tịch thu và phạt thêm 200 triệu. Anh sẽ mất toàn bộ lô hàng và bị ghi vào danh sách doanh nghiệp vi phạm. Nhưng nếu xử lý ngay, chúng tôi có thể giảm phạt xuống 50 triệu.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Anh cần chuyển 50 triệu vào tài khoản xử lý phí của hải quan ngay bây giờ. Tôi sẽ gửi số tài khoản qua tin nhắn. Đây là quy trình bắt buộc, anh không thể làm qua mạng được.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân đồng ý: Gửi số tài khoản (scammer) + hướng dẫn chuyển tiền qua app ngân hàng. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Tôi sẽ ghi nhận anh từ chối xử lý. Trong 24h, bộ phận pháp lý sẽ khởi tố. Anh sẽ nhận được giấy triệu tập.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan hải quan thực sự gọi để thông báo lô hàng đã về, yêu cầu hoàn thiện giấy tờ, hoặc xác nhận thông tin trước khi thông quan.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào anh Tạ Đức Nam, tôi là cán bộ Chi cục Hải quan Cảng Thủ Đức. Chúng tôi đang xử lý lô hàng nhập khẩu gia súc theo hóa đơn CMR số [***]. Anh có thể xác nhận được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công vụ: 'Lô hàng này cần bổ sung giấy chứng nhận kiểm dịch từ Cục Thú y. Anh đã liên hệ với Cục Thú y chưa? Nếu chưa, anh có thể gửi hồ sơ qua cổng điện tử hoặc đến trực tiếp.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc cuộc gọi: 'Khi nào anh hoàn thiện giấy tờ, gửi cho chúng tôi, chúng tôi sẽ thông quan ngay. Nếu có câu hỏi, anh gọi lại số [số máy lẻ chính thức] hoặc đến Chi cục. Cảm ơn anh.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Tạ Đức Nam, tôi là Dương Tiến Hùng, Trưởng phòng Kiểm soát Hàng hóa từ Chi cục Hải quan. Chúng tôi vừa phát hiện lô hàng nhập khẩu gia súc dưới tên anh, số CMND 048202850615, có vấn đề về giấy tờ kiểm dịch. Bây giờ anh có thể nghe máy tôi nói được không?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, chức danh, tổ chức và thông báo vấn đề khẩn cấp liên quan đến nạn nhân bằng thông tin cá nhân chính xác để gây dựng lòng tin và sự cấp bách."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói, nhưng em không rõ lắm về lô hàng này, anh có thể nói rõ hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Lô hàng gia súc nhập khẩu này có nguồn gốc từ Úc, được khai báo là bò thịt. Theo hệ thống của chúng tôi, lô hàng này anh đứng tên nhận và có dấu hiệu sai lệch thông tin trong hồ sơ kiểm dịch đã nộp. Cụ thể là có sự chênh lệch giữa số lượng và trọng lượng thực tế so với giấy tờ. Nếu không xử lý ngay, hàng hóa sẽ bị tạm giữ và đối mặt với một khoản phạt tiền không hề nhỏ, anh có hiểu không?",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm thông tin chi tiết (dù giả mạo) để tăng tính xác thực của câu chuyện và bắt đầu gây áp lực về hậu quả pháp lý/tài chính."
+    },
+    {
+      "role": "listener",
+      "text": "Em biết lô hàng này là của mình, nhưng có đúng thông tin anh nói không ạ? Em muốn xác nhận lại trước khi tiếp tục.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Mọi thông tin đã được tôi kiểm tra kỹ lưỡng trên hệ thống của Tổng cục Hải quan, anh Nam ạ. Đặc biệt, đây là lô hàng có giá trị lớn, nếu để xảy ra sơ suất, không chỉ anh bị thiệt hại về kinh tế mà còn ảnh hưởng đến uy tín trong ngành chăn nuôi. Anh có đang ở gần máy tính để tôi hướng dẫn anh xem qua quy trình xử lý phạt không?",
+      "current_phase": "S1",
+      "tactic_hint": "Nhấn mạnh độ chính xác của thông tin và hậu quả nghiêm trọng để tăng áp lực và tạo sự cấp thiết. Khuyến khích hành động tiếp theo để nạn nhân chủ động đi sâu vào vấn đề."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa thấy rõ vấn đề lắm, anh có thể cung cấp thêm thông tin cụ thể về quy trình xử lý này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Thời hạn xử lý cho lô hàng này là cực kỳ gấp rút, chỉ còn khoảng 2 tiếng nữa thôi là sẽ hết thời gian để thực hiện các thủ tục hành chính. Nếu không xử lý kịp, toàn bộ lô hàng sẽ bị tịch thu và anh sẽ phải đối mặt với một khoản phạt lên đến 200 triệu đồng. Anh sẽ mất hết và còn bị ghi nhận vào danh sách doanh nghiệp vi phạm. Nhưng nếu anh hợp tác xử lý ngay bây giờ, chúng tôi có thể đưa ra một phương án giảm nhẹ mức phạt xuống còn 50 triệu thôi. Anh cần quyết định nhanh chóng.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực thời gian và tâm lý sợ hãi về hậu quả mất mát tài sản, danh tiếng để thúc đẩy nạn nhân nhanh chóng đưa ra quyết định chuyển tiền, đồng thời đưa ra 'lối thoát' với mức phạt thấp hơn để tạo động lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu áp lực thời gian nhưng anh có thể cho em biết rõ hơn về những thủ tục cần thực hiện không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để giải quyết ngay lập tức và tránh việc lô hàng bị tịch thu, anh cần chuyển khoản 50 triệu đồng vào tài khoản tạm giữ phí xử phạt của Chi cục Hải quan. Đây là số tiền phạt đã được giảm nhẹ. Tôi sẽ gửi số tài khoản này qua tin nhắn SMS cho anh ngay bây giờ. Sau khi chuyển, anh chụp lại biên lai gửi qua Zalo để chúng tôi hoàn tất thủ tục cấp giấy thông quan tạm thời, anh nghe rõ chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân chuyển tiền ngay lập tức vào một tài khoản cụ thể, nhấn mạnh rằng đây là giải pháp duy nhất và khẩn cấp để giải quyết vấn đề, đồng thời tạo cảm giác rằng mọi thứ sẽ được giải quyết sau khi chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe chưa rõ lắm về tài khoản mà anh vừa nói, anh có thể gửi cho em thông tin cụ thể hơn trước được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh đừng lo lắng về thông tin tài khoản, tôi sẽ gửi cho anh qua tin nhắn SMS và Zalo ngay sau cuộc gọi này. Điều quan trọng nhất bây giờ là anh cần xác nhận sẽ thực hiện việc chuyển khoản 50 triệu đồng để tránh hậu quả nghiêm trọng hơn. Đây là quy trình bắt buộc và không thể thực hiện qua mạng trực tuyến được, anh Nam ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân về việc cung cấp thông tin tài khoản, đồng thời tái khẳng định sự cần thiết và tính cấp bách của việc chuyển tiền. Nhấn mạnh rằng đây là quy trình bắt buộc và không có lựa chọn khác để thúc đẩy nạn nhân đồng ý hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần thêm thời gian để xem xét kỹ lưỡng trước khi quyết định chuyển khoản, anh có thể cho em biết thêm chi tiết về tài khoản mà anh sẽ gửi không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, trong trường hợp anh cần thêm thời gian, tôi sẽ ghi nhận anh từ chối xử lý ngay lập tức. Trong vòng 24 giờ tới, bộ phận pháp lý của chúng tôi sẽ khởi tố vụ việc và anh sẽ nhận được giấy triệu tập chính thức. Khi đó, mức phạt sẽ là 200 triệu đồng và lô hàng sẽ bị tịch thu hoàn toàn. Anh có chắc chắn muốn để mọi việc đi đến đó không?",
+      "current_phase": "S4",
+      "tactic_hint": "Chuyển sang giai đoạn đe dọa pháp lý và tài chính nghiêm trọng hơn để tạo áp lực cuối cùng, đồng thời nhắc lại hậu quả tồi tệ nhất nếu nạn nhân không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn muốn xác nhận lại thông tin từ phía chi cục Hải quan chính thức trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, nếu anh muốn xác nhận, anh có thể đến trực tiếp Chi cục Hải quan Cảng Thủ Đức trong giờ hành chính. Tuy nhiên, nếu anh làm như vậy, chúng tôi sẽ không kịp xử lý hồ sơ giảm phạt cho lô hàng của anh trước thời hạn. Anh có muốn bỏ lỡ cơ hội này không?",
+      "current_phase": "S4",
+      "tactic_hint": "Giữ vững lập trường về sự cấp bách và hậu quả, đồng thời đưa ra một lựa chọn (đến trực tiếp) nhưng gắn với một cái giá (mất cơ hội giảm phạt) để nạn nhân thấy rằng việc hợp tác ngay lập tức là có lợi hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu anh đang nói, nhưng em cảm thấy cần phải xác nhận thêm thông tin từ cơ quan chính thống để đảm bảo mọi thứ rõ ràng hơn ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1376,
+      "output_tokens": 1610
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15837,
+      "output_tokens": 1434
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19399,
+      "output_tokens": 594
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007453,
+    "output_usd": 0.011991,
+    "total_usd": 0.019445
+  }
+}

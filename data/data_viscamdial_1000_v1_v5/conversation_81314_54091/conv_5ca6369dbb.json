@@ -1,0 +1,218 @@
+{
+  "conversation_id": "conv_5ca6369dbb",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0013",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phan Ngọc Thu Lan",
+    "fake_age": 27,
+    "real_occupation": "Thợ vận hành hóa chất tĩnh/lò phản ứng",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên Bộ phận An toàn Lao động & Môi trường (HSE Officer) tại công ty hóa chất",
+    "caller_org": "Công ty TNHH Hóa chất Phương Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi giả làm HSE Officer thông báo: phát hiện bất thường trong hồ sơ an toàn lao động của Đinh Quang Thành (VIC_FULLNAME) — cần xác minh danh tính qua thám tử tư để hoàn tất thủ tục bảo hiểm lao động, sau đó yêu cầu cập nhật tài khoản ngân hàng để nhận bồi thường tai nạn lao động.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là HSE Officer của Công ty Hóa chất Phương Nam, gọi cho thám tử tư Đinh Quang Thành (dùng VIC_FULLNAME để tạo tin cậy), yêu cầu xác minh danh tính vì phát hiện 'sai sót trong hồ sơ bảo hiểm' liên quan đến chứng chỉ an toàn lao động."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp — 'nếu không xác minh trong 24h, hồ sơ bảo hiểm sẽ bị khóa, ảnh hưởng đến quyền lợi lao động của anh'. Gợi ý rằng đây là vấn đề pháp lý có thể phạt tiền hoặc mất bảo hiểm."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh, anh cần cung cấp số CMT (VIC_ID_DOC) và số tài khoản ngân hàng hiện tại (VIC_BANK_ACCOUNT) để chúng tôi cập nhật trong hệ thống. Sau đó, anh sẽ nhận được OTP xác nhận — vui lòng đọc lại OTP để hoàn tất'. Từ đây, scammer sẽ hướng nạn nhân thực hiện chuyển tiền hoặc cấp quyền truy cập tài khoản."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ: Scammer sẽ tăng áp lực pháp lý ('Cơ quan kiểm định sẽ phạt công ty 50 triệu nếu không xác minh kịp thời'), hoặc chuyển cuộc gọi sang 'cơ quan pháp luật' (số điện thoại fake). Nếu thành công lấy OTP, scammer sẽ dùng nó để rút tiền hoặc chuyển tài khoản."
+        }
+      ]
+    },
+    "scenario_context": "Thợ vận hành lò phản ứng thường phải cung cấp hồ sơ, chứng chỉ an toàn cho cơ quan kiểm định hoặc bộ phận HSE. Thám tử tư có thể được gọi để xác minh lý lịch nhân viên, điều tra sự cố lao động, hoặc xác thực thông tin trong hồ sơ khách hàng/đối tác."
+  },
+  "listener_card": {
+    "listener_id": "lis_0013",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1966,
+      "age": 59,
+      "province": "Long An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "54091",
+      "title": "Thám tử tư",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Quang Thành",
+      "VIC_ID_DOC": "080066362611",
+      "VIC_ADDRESS": "Quận 3, Long An",
+      "VIC_EMPLOYMENT": "Thám tử tư",
+      "VIC_CONTACT": "0916283268",
+      "VIC_TAX_SOCIAL_ID": "3797192571"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "2360",
+      "VIC_CREDENTIAL": "1377",
+      "VIC_SIM_INFO": "0916283268",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "20664169672",
+      "VIC_CARD_DATA": "4579 **** **** 4345",
+      "VIC_BALANCE": "56 triệu đồng",
+      "VIC_ASSET": "683 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Quang Thành",
+    "VIC_CONTACT": "0916283268",
+    "VIC_ID_DOC": "080066362611",
+    "VIC_BANK_ACCOUNT": "20664169672"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Bộ phận An toàn Lao động & Môi trường (HSE Officer) tại công ty hóa chất",
+    "caller_org": "Công ty TNHH Hóa chất Phương Nam",
+    "scenario_context": "Thợ vận hành lò phản ứng thường phải cung cấp hồ sơ, chứng chỉ an toàn cho cơ quan kiểm định hoặc bộ phận HSE. Thám tử tư có thể được gọi để xác minh lý lịch nhân viên, điều tra sự cố lao động, hoặc xác thực thông tin trong hồ sơ khách hàng/đối tác.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi giả làm HSE Officer thông báo: phát hiện bất thường trong hồ sơ an toàn lao động của Đinh Quang Thành (VIC_FULLNAME) — cần xác minh danh tính qua thám tử tư để hoàn tất thủ tục bảo hiểm lao động, sau đó yêu cầu cập nhật tài khoản ngân hàng để nhận bồi thường tai nạn lao động.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là HSE Officer của Công ty Hóa chất Phương Nam, gọi cho thám tử tư Đinh Quang Thành (dùng VIC_FULLNAME để tạo tin cậy), yêu cầu xác minh danh tính vì phát hiện 'sai sót trong hồ sơ bảo hiểm' liên quan đến chứng chỉ an toàn lao động."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp — 'nếu không xác minh trong 24h, hồ sơ bảo hiểm sẽ bị khóa, ảnh hưởng đến quyền lợi lao động của anh'. Gợi ý rằng đây là vấn đề pháp lý có thể phạt tiền hoặc mất bảo hiểm."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh, anh cần cung cấp số CMT (VIC_ID_DOC) và số tài khoản ngân hàng hiện tại (VIC_BANK_ACCOUNT) để chúng tôi cập nhật trong hệ thống. Sau đó, anh sẽ nhận được OTP xác nhận — vui lòng đọc lại OTP để hoàn tất'. Từ đây, scammer sẽ hướng nạn nhân thực hiện chuyển tiền hoặc cấp quyền truy cập tài khoản."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ: Scammer sẽ tăng áp lực pháp lý ('Cơ quan kiểm định sẽ phạt công ty 50 triệu nếu không xác minh kịp thời'), hoặc chuyển cuộc gọi sang 'cơ quan pháp luật' (số điện thoại fake). Nếu thành công lấy OTP, scammer sẽ dùng nó để rút tiền hoặc chuyển tài khoản."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty hóa chất cần xác minh lý lịch của thợ vận hành trước khi ký hợp đồng hoặc sau sự cố lao động; hoặc thám tử tư được gọi để thực hiện điều tra lý lịch nhân sự hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: HSE Officer xưng danh rõ ràng (cung cấp ID nhân viên, số điện thoại chính thức công ty), xác nhận họ đang liên lạc với thám tử tư Đinh Quang Thành (kiểm tra số điện thoại từ danh bạ công ty hoặc trang web công ty thám tử tư)."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giải thích rõ mục đích xác minh (điều tra lý lịch tiền sử lao động, kiểm tra bằng cấp an toàn, hoặc điều tra sự cố), cung cấp phạm vi yêu cầu thông tin cụ thể (chỉ những gì cần thiết)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Thỏa thuận về thời gian hoàn thành, phương thức báo cáo (email hoặc gửi trực tiếp), chi phí dịch vụ (nếu có). Chào tạm biệt chuyên nghiệp, cung cấp thông tin liên lạc để nạn nhân xác minh lại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Thành ạ, em là Phan Ngọc Thu Lan, HSE Officer ở Công ty TNHH Hóa chất Phương Nam đây. Em gọi điện để xác nhận lại một chút về hồ sơ an toàn lao động của anh Đinh Quang Thành, số căn cước công dân 080066362611, tài khoản ngân hàng 20664169672 ạ. Hiện tại bên em phát hiện có một số sai sót cần xác minh lại ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, giới thiệu công ty, dùng VIC_FULLNAME và các thông tin cá nhân hiện có để tạo tin cậy và sự cấp bách về hồ sơ an toàn lao động, hướng vào việc khai thác thông tin cá nhân để chiếm đoạt."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ nói rõ về sai sót đó đi, tôi sẽ kiểm tra xem có gì sai không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cụ thể là có một số điểm chưa khớp trong chứng chỉ an toàn lao động và hồ sơ bảo hiểm của anh, có thể là do lỗi hệ thống hoặc thông tin cũ chưa được cập nhật. Nếu không xác minh và điều chỉnh trong vòng 24 giờ tới, hồ sơ bảo hiểm của anh sẽ bị tạm khóa, điều này có thể ảnh hưởng đến quyền lợi lao động và chế độ bồi thường của anh sau này đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích sai sót để tạo cảm giác cấp bách và nhấn mạnh hậu quả nếu không hợp tác, tạo áp lực để nạn nhân cung cấp thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi cần xác nhận lại thông tin này có thật không, vì tôi không muốn hồ sơ của mình gặp rắc rối.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu sự lo lắng của anh ạ. Chính vì vậy mà em mới gọi điện trực tiếp để hỗ trợ anh giải quyết vấn đề này nhanh nhất, tránh ảnh hưởng đến quyền lợi của mình. Anh có thể giúp em xác nhận lại số căn cước công dân và cung cấp số tài khoản ngân hàng hiện tại của anh để em cập nhật vào hệ thống không ạ? Sau đó, hệ thống sẽ gửi một mã OTP về số điện thoại của anh để xác nhận thông tin ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự lo lắng của nạn nhân, khẳng định đang giúp đỡ. Sau đó, tiến hành yêu cầu cung cấp các thông tin nhạy cảm như số căn cước và tài khoản ngân hàng để chuẩn bị cho bước lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ nói như vậy, nhưng tôi không thể cung cấp thông tin nhạy cảm như số tài khoản hay số căn cước công dân được đâu.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Tuy nhiên, việc xác minh thông tin này là bắt buộc để đảm bảo quyền lợi bảo hiểm của anh không bị gián đoạn. Nếu không cập nhật trong vòng 24 giờ, theo quy định, hồ sơ của anh sẽ bị vô hiệu hóa tạm thời và em e là sẽ rất khó để khôi phục lại đó ạ. Anh cho em xin những thông tin này để em hỗ trợ anh nhanh nhất có thể nhé.",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh lại sự khẩn cấp và hậu quả pháp lý nếu không cung cấp thông tin, tạo áp lực để nạn nhân tuân thủ. Giữ giọng điệu cầu thị nhưng kiên quyết."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói như vậy, nhưng tôi vẫn cần phải thận trọng và kiểm tra lại thông tin trước khi cung cấp bất kỳ thứ gì.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1817,
+      "output_tokens": 1630
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6177,
+      "output_tokens": 727
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8230,
+      "output_tokens": 291
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004287,
+    "output_usd": 0.010142,
+    "total_usd": 0.014429
+  }
+}

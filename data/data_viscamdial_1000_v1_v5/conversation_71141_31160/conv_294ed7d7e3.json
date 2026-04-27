@@ -1,0 +1,286 @@
+{
+  "conversation_id": "conv_294ed7d7e3",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0007",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trần Thùy Hồng Nhung",
+    "fake_age": 41,
+    "real_occupation": "Thợ đổ bê tông cốt thép (chung)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Giám đốc Dự án Công trình - Phòng Kỹ thuật",
+    "caller_org": "Công ty Cổ phần Xây dựng Hạ tầng Đông Nam (CONTECH)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giám đốc dự án gọi nói rằng công ty đang tuyển dụng vị trí 'Kỹ thuật viên Kiểm định Chất lượng Vật liệu' tại dự án lớn ở Đồng Nai, và đã tìm được thông tin liên hệ của Lý Như Linh từ hồ sơ CV trên trang tuyển dụng. Yêu cầu nạn nhân nộp 'phí đăng ký kiểm tra sức khỏe nghề nghiệp' và 'phí bảo hiểm dự án' vào tài khoản công ty trước khi nhập việc.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Giám đốc Dự án CONTECH, nói đã lấy được số điện thoại của Lý Như Linh từ hồ sơ ứng tuyển, và dự án đang cần kỹ thuật viên hóa học tại Đồng Nai (dùng VIC_FULLNAME, VIC_CONTACT, LOCATION để tạo credibility cao)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cấp bách bằng cách nói 'Vị trí này rất hot, nhiều ứng viên khác cũng đang chờ quyết định. Chúng tôi muốn mời bạn vào vòng phỏng vấn cuối cùng nhưng cần hoàn tất thủ tục hành chính nhanh'. Nâng cao sự mong muốn bằng cách đề cập mức lương hấp dẫn phù hợp với tài sản của nạn nhân (VIC_ASSET ~ 495 triệu đồng = khá giả, có nhu cầu tăng thu nhập)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Nạn nhân phải chuyển 5-15 triệu đồng vào tài khoản công ty (VIC_BANK_ACCOUNT được sử dụng để xác minh 'chuyển từ tài khoản cá nhân của bạn'). Giả vờ đây là 'phí kiểm tra y tế và bảo hiểm lao động' theo quy định công ty. Cung cấp số tài khoản giả mạo hoặc số tài khoản thật nhưng không phải của công ty"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: Tạm dừng liên lạc 2-3 ngày, sau đó gọi lại nói 'hệ thống xử lý hồ sơ bị lỗi, cần xác nhận lại thông tin' hoặc 'cần chuyển thêm phí phỏng vấn'. Nếu nạn nhân từ chối: Nói 'không sao, bạn sẽ mất cơ hội này' rồi cắt máy"
+        }
+      ]
+    },
+    "scenario_context": "Thợ đổ bê tông cốt thép thường phối hợp với kỹ thuật viên hóa học để kiểm tra chất lượng vật liệu xi măng, hỗn hợp bê tông, độ bền và hóa chất xử lý bề mặt công trình. Giám đốc dự án có lý do chính đáng gọi cho kỹ thuật viên hóa học về vấn đề kỹ thuật hoặc tuyển dụng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0007",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1998,
+      "age": 27,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "31160",
+      "title": "Kỹ thuật viên kỹ thuật hóa học",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lý Như Linh",
+      "VIC_ID_DOC": "075198989804",
+      "VIC_ADDRESS": "Quận 9, Đồng Nai",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên kỹ thuật hóa học",
+      "VIC_CONTACT": "0982617122",
+      "VIC_TAX_SOCIAL_ID": "6634683343"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "375858",
+      "VIC_CREDENTIAL": "151802",
+      "VIC_SIM_INFO": "0982617122",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "100656173028",
+      "VIC_CARD_DATA": "4538 **** **** 2600",
+      "VIC_BALANCE": "162 triệu đồng",
+      "VIC_ASSET": "495 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lý Như Linh",
+    "VIC_CONTACT": "0982617122",
+    "VIC_ASSET": "495 triệu đồng",
+    "VIC_BANK_ACCOUNT": "100656173028",
+    "LOCATION": "Đồng Nai"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Dự án Công trình - Phòng Kỹ thuật",
+    "caller_org": "Công ty Cổ phần Xây dựng Hạ tầng Đông Nam (CONTECH)",
+    "scenario_context": "Thợ đổ bê tông cốt thép thường phối hợp với kỹ thuật viên hóa học để kiểm tra chất lượng vật liệu xi măng, hỗn hợp bê tông, độ bền và hóa chất xử lý bề mặt công trình. Giám đốc dự án có lý do chính đáng gọi cho kỹ thuật viên hóa học về vấn đề kỹ thuật hoặc tuyển dụng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giám đốc dự án gọi nói rằng công ty đang tuyển dụng vị trí 'Kỹ thuật viên Kiểm định Chất lượng Vật liệu' tại dự án lớn ở Đồng Nai, và đã tìm được thông tin liên hệ của Lý Như Linh từ hồ sơ CV trên trang tuyển dụng. Yêu cầu nạn nhân nộp 'phí đăng ký kiểm tra sức khỏe nghề nghiệp' và 'phí bảo hiểm dự án' vào tài khoản công ty trước khi nhập việc.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Giám đốc Dự án CONTECH, nói đã lấy được số điện thoại của Lý Như Linh từ hồ sơ ứng tuyển, và dự án đang cần kỹ thuật viên hóa học tại Đồng Nai (dùng VIC_FULLNAME, VIC_CONTACT, LOCATION để tạo credibility cao)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cấp bách bằng cách nói 'Vị trí này rất hot, nhiều ứng viên khác cũng đang chờ quyết định. Chúng tôi muốn mời bạn vào vòng phỏng vấn cuối cùng nhưng cần hoàn tất thủ tục hành chính nhanh'. Nâng cao sự mong muốn bằng cách đề cập mức lương hấp dẫn phù hợp với tài sản của nạn nhân (VIC_ASSET ~ 495 triệu đồng = khá giả, có nhu cầu tăng thu nhập)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Nạn nhân phải chuyển 5-15 triệu đồng vào tài khoản công ty (VIC_BANK_ACCOUNT được sử dụng để xác minh 'chuyển từ tài khoản cá nhân của bạn'). Giả vờ đây là 'phí kiểm tra y tế và bảo hiểm lao động' theo quy định công ty. Cung cấp số tài khoản giả mạo hoặc số tài khoản thật nhưng không phải của công ty"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: Tạm dừng liên lạc 2-3 ngày, sau đó gọi lại nói 'hệ thống xử lý hồ sơ bị lỗi, cần xác nhận lại thông tin' hoặc 'cần chuyển thêm phí phỏng vấn'. Nếu nạn nhân từ chối: Nói 'không sao, bạn sẽ mất cơ hội này' rồi cắt máy"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xây dựng thực sự gọi để tuyển dụng kỹ thuật viên hóa học cho dự án tại Đồng Nai, hoặc gọi để hỏi về kinh nghiệm kỹ thuật và sẵn sàng nhập việc",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng là Phòng Nhân sự hoặc Giám đốc Dự án của công ty có tên thực, cung cấp số điện thoại công ty chính thức, xác nhận tên đầy đủ của nạn nhân và hỏi 'Bây giờ có tiện không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận về kinh nghiệm kỹ thuật, yêu cầu công việc, mức lương dự kiến, thời gian bắt đầu. Không đề cập đến phí nộp hồ sơ hay thanh toán trước. Nếu cần, chỉ yêu cầu nạn nhân gửi CV, chứng chỉ, và hộ chiếu qua email công ty"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nói 'Chúng tôi sẽ gửi email chính thức về quyết định tuyển dụng và chi tiết hợp đồng trong 3-5 ngày tới. Bạn sẽ không cần thanh toán bất kỳ khoản phí nào trước khi ký hợp đồng'. Cảm ơn và chào tạm biệt"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Lý Như Linh, tôi là Trần Thùy Hồng Nhung, Giám đốc Dự án Công trình của Công ty CONTECH. Tôi gọi từ số 0982617122 mà chúng tôi tìm thấy trên hồ sơ CV của chị. Công ty chúng tôi hiện đang có một dự án lớn ở Đồng Nai và đang cần tuyển gấp vị trí Kỹ thuật viên Kiểm định Chất lượng Vật liệu. Chị có phải là người đã ứng tuyển vị trí này không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, giới thiệu công ty, nhắc đến thông tin cá nhân của nạn nhân (tên, SĐT, vị trí ứng tuyển, địa điểm) để tạo sự tin cậy và chứng minh nguồn thông tin hợp pháp."
+    },
+    {
+      "role": "listener",
+      "text": "Em không chắc lắm, chị có thể cho em biết thêm thông tin về công ty và dự án không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Công ty Cổ phần Xây dựng Hạ tầng Đông Nam, tên viết tắt là CONTECH đó chị. Chúng tôi là một trong những công ty hàng đầu trong lĩnh vực xây dựng hạ tầng tại Việt Nam, đặc biệt có nhiều dự án lớn ở khu vực phía Nam. Dự án hiện tại ở Đồng Nai là một dự án xây dựng cầu đường trọng điểm, quy mô rất lớn nên chúng tôi đang cần bổ sung nhân sự chất lượng cao, đặc biệt là các kỹ thuật viên có kinh nghiệm kiểm định vật liệu như chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thông tin chi tiết về công ty và dự án để tăng tính xác thực, củng cố lòng tin và định vị sự phù hợp của nạn nhân với vị trí."
+    },
+    {
+      "role": "listener",
+      "text": "Dự án nghe có vẻ hấp dẫn, nhưng em vẫn cần xác nhận rõ ràng một chút về điều kiện làm việc và quyền lợi nếu tham gia ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về các điều kiện làm việc và quyền lợi thì chị hoàn toàn yên tâm. Vị trí này có mức lương khởi điểm rất cạnh tranh, khoảng 18-25 triệu đồng tùy năng lực và kinh nghiệm, kèm theo đầy đủ chế độ bảo hiểm, phúc lợi hấp dẫn, đặc biệt là cơ hội thăng tiến rõ ràng trong một dự án quy mô lớn như thế này. Tôi cũng được biết chị đang có khoảng 495 triệu đồng tài sản, chắc chắn mức lương này sẽ giúp chị đạt được những mục tiêu tài chính cao hơn.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu mức lương và phúc lợi hấp dẫn để tăng sự hứng thú, đồng thời khéo léo đề cập đến thông tin VIC_ASSET để tạo cảm giác rằng công ty đã tìm hiểu kỹ về nạn nhân, tăng thêm độ tin cậy và khơi gợi mong muốn tăng thu nhập."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em muốn hỏi rõ hơn về quy trình tuyển dụng và có cần những giấy tờ gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Về quy trình tuyển dụng, chúng tôi đã xem xét hồ sơ của chị và đánh giá đây là một hồ sơ rất tiềm năng. Vị trí này hiện đang rất hot, nhiều ứng viên khác cũng đang chờ quyết định. Chúng tôi muốn mời chị vào vòng phỏng vấn cuối cùng, nhưng để hoàn tất các thủ tục hành chính ban đầu và đảm bảo chị có thể tham gia dự án một cách thuận lợi nhất, phía công ty cần chị hoàn tất một số chi phí ban đầu ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác cấp bách và khan hiếm vị trí, đồng thời đặt nền móng cho yêu cầu chuyển tiền bằng cách nói về 'thủ tục hành chính' và 'chi phí ban đầu'."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ về những chi phí ban đầu mà chị đề cập, chị có thể cụ thể hơn cho em biết được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, các khoản phí này bao gồm chi phí đăng ký kiểm tra sức khỏe nghề nghiệp theo quy định của nhà nước và phí bảo hiểm dự án bắt buộc cho người lao động. Đây là những khoản phí mà mọi nhân sự mới đều phải đóng để đảm bảo quyền lợi và sự an toàn của họ trong quá trình làm việc tại dự án, đặc biệt là với môi trường công trường.",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ các khoản phí là 'kiểm tra sức khỏe' và 'bảo hiểm dự án' để tạo cảm giác hợp lý, cần thiết và bắt buộc, đồng thời bắt đầu chuyển sang giai đoạn yêu cầu hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết cụ thể số tiền cần đóng cho những khoản phí này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tổng cộng chi phí đăng ký kiểm tra sức khỏe và phí bảo hiểm dự án là 12 triệu đồng. Chị vui lòng chuyển khoản số tiền này vào tài khoản công ty chúng tôi. Sau khi nhận được khoản tiền này, chúng tôi sẽ tiến hành sắp xếp lịch phỏng vấn cuối cùng cho chị ngay ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Đưa ra con số cụ thể của khoản tiền cần chuyển (5-15 triệu đồng), kết nối việc chuyển tiền với bước tiếp theo trong quy trình tuyển dụng (phỏng vấn cuối cùng) để tạo động lực cho nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có chắc rằng công ty cần khoản phí này không ạ? Em muốn xác nhận lại trước khi chuyển tiền.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hoàn toàn chắc chắn. Đây là quy định bắt buộc của công ty để đảm bảo tính minh bạch và sự cam kết từ phía ứng viên, đặc biệt với những vị trí quan trọng như Kỹ thuật viên Kiểm định Chất lượng Vật liệu. Chị có thể yên tâm rằng số tiền này sẽ được hoàn lại sau khi chị chính thức nhận việc, hoặc trừ vào lương tháng đầu nếu chị mong muốn. Đây cũng là một cách để chúng tôi kiểm tra sự nghiêm túc của ứng viên đối với công việc ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ của nạn nhân bằng cách khẳng định quy định công ty, nhấn mạnh tính minh bạch, và hứa hẹn khoản phí sẽ được hoàn lại hoặc trừ vào lương để giảm bớt rào cản tài chính, đồng thời tạo thêm lý do 'kiểm tra sự nghiêm túc'."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa thấy thoải mái lắm với việc chuyển tiền trước, chị có thể cho em thông tin cụ thể về tài khoản chuyển khoản không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, tài khoản nhận tiền là tài khoản của Công ty Cổ phần Xây dựng Hạ tầng Đông Nam - CONTECH. Số tài khoản là 100656173028 tại Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank). Chị vui lòng ghi rõ nội dung chuyển khoản là 'Họ tên_Phí đăng ký vị trí Kỹ thuật viên_Số điện thoại' để chúng tôi dễ dàng đối chiếu và xác nhận ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản ngân hàng chi tiết của công ty và hướng dẫn nội dung chuyển khoản để nạn nhân thực hiện giao dịch, đồng thời củng cố niềm tin bằng cách cho rằng đây là tài khoản công ty chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em một chút thời gian để suy nghĩ và xác nhận lại được không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Nhưng chị Linh ạ, vị trí này đang có rất nhiều ứng viên sáng giá. Nếu chị không thể quyết định nhanh chóng, chúng tôi sẽ phải ưu tiên những hồ sơ khác để đảm bảo tiến độ dự án. Đây là cơ hội tốt để chị phát triển sự nghiệp tại một dự án lớn ở Đồng Nai với mức lương hấp dẫn đấy.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo áp lực thời gian và nhấn mạnh sự cạnh tranh để thúc đẩy nạn nhân ra quyết định nhanh, đồng thời nhắc lại các lợi ích để củng cố mong muốn của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em vẫn muốn suy nghĩ kỹ một chút trước khi quyết định, chị ơi.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1409,
+      "output_tokens": 1783
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 19789,
+      "output_tokens": 1654
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 23746,
+      "output_tokens": 635
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008929,
+    "output_usd": 0.013431,
+    "total_usd": 0.02236
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "conversation_id": "conv_8cca09649c",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0042",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Dương Thế Nam",
+    "fake_age": 31,
+    "real_occupation": "Nhân viên về tôn giáo",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhân viên phát triển cộng đồng / Điều phối viên dự án nông nghiệp bền vững",
+    "caller_org": "Tổ chức Công giáo Xã hội (hoặc chi nhánh địa phương)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Tổ chức Công giáo Xã hội khảo sát nông dân để đánh giá nhu cầu hỗ trợ kỹ thuật nông nghiệp bền vững hoặc mời tham gia khóa đào tạo miễn phí.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Khoa, tôi là Linh từ Tổ chức Công giáo Xã hội. Chúng tôi đang thực hiện dự án nông nghiệp bền vững tại địa phương. Anh có thời gian nghe giới thiệu không?'. Xác nhận địa chỉ, số điện thoại để đảm bảo đúng người."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi muốn khảo sát nhu cầu của anh: anh đang trồng trọt gì? Gặp khó khăn gì về kỹ thuật hay thị trường? Chúng tôi có thể hỗ trợ đào tạo, cung cấp giống cây bền vững, hoặc kết nối với thị trường'. Lắng nghe feedback, ghi chép thông tin."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Cảm ơn anh. Chúng tôi sẽ gửi thông tin chi tiết dự án qua SMS hoặc email. Nếu anh quan tâm, chúng tôi sẽ liên hệ lại tuần sau để mời anh tham dự buổi hội thảo'. Chào tạm biệt lịch sự, không yêu cầu bất kỳ thông tin nhạy cảm nào."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên về tôn giáo thường điều hành các dự án cộng đồng, trong đó nông nghiệp bền vững là một trụ cột. Họ sẽ tự nhiên liên hệ với nông dân để khảo sát, hỗ trợ hoặc mời tham gia chương trình."
+  },
+  "listener_card": {
+    "listener_id": "lis_0042",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1992,
+      "age": 33,
+      "province": "Nghệ An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21321",
+      "title": "Nhà trồng trọt",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Mai Xuân Hữu Khoa",
+      "VIC_ID_DOC": "040092406795",
+      "VIC_ADDRESS": "Huyện 4, Nghệ An",
+      "VIC_EMPLOYMENT": "Nhà trồng trọt",
+      "VIC_CONTACT": "0339725210",
+      "VIC_TAX_SOCIAL_ID": "5456603483"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "056256",
+      "VIC_CREDENTIAL": "8975",
+      "VIC_SIM_INFO": "0339725210",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1206332079",
+      "VIC_CARD_DATA": "4659 **** **** 7478",
+      "VIC_BALANCE": "734 triệu đồng",
+      "VIC_ASSET": "2.8 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Mai Xuân Hữu Khoa",
+    "VIC_CONTACT": "0339725210",
+    "VIC_TAX_SOCIAL_ID": "5456603483"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phát triển cộng đồng / Điều phối viên dự án nông nghiệp bền vững",
+    "caller_org": "Tổ chức Công giáo Xã hội (hoặc chi nhánh địa phương)",
+    "scenario_context": "Nhân viên về tôn giáo thường điều hành các dự án cộng đồng, trong đó nông nghiệp bền vững là một trụ cột. Họ sẽ tự nhiên liên hệ với nông dân để khảo sát, hỗ trợ hoặc mời tham gia chương trình.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để 'xác nhận thông tin' người nông dân tham gia chương trình hỗ trợ tài chính cho nông nghiệp hữu cơ. Dùng VIC_FULLNAME và VIC_TAX_SOCIAL_ID để tạo ảo tưởng đã có sẵn dữ liệu từ hệ thống chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác thực giả: 'Chào anh Khoa, tôi là Linh từ Tổ chức Công giáo Xã hội. Chúng tôi đang triển khai dự án hỗ trợ nông dân. Chúng tôi có hồ sơ của anh: Khoa, số CMND 5456603483, phải không?'. Dùng VIC_FULLNAME + VIC_TAX_SOCIAL_ID tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý lợi ích: 'Anh được chọn để nhận hỗ trợ 50 triệu đồng. Nhưng để xác minh anh không phải người lừa đảo, hệ thống cần anh xác nhận qua OTP. Anh chỉ cần cung cấp OTP khi nhận được tin nhắn thôi, nó sẽ tự động khoá tài khoản hỗ trợ của anh'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh hãy kiểm tra tin nhắn từ ngân hàng. Khi nhận được OTP, anh đọc cho tôi 6 con số đó để tôi hoàn tất quy trình'. Scammer đợi OTP từ ngân hàng (thường gửi khi victim vô tình truy cập link giả hoặc ứng dụng giả)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý thành công: Khi có OTP, scammer dùng nó để truy cập tài khoản ngân hàng, chuyển tiền hoặc thực hiện giao dịch. Nếu victim từ chối, scammer tạo áp lực: 'Anh từ chối hỗ trợ chính phủ? Hệ thống sẽ báo cáo là anh gian lận', rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Tổ chức Công giáo Xã hội khảo sát nông dân để đánh giá nhu cầu hỗ trợ kỹ thuật nông nghiệp bền vững hoặc mời tham gia khóa đào tạo miễn phí.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Khoa, tôi là Linh từ Tổ chức Công giáo Xã hội. Chúng tôi đang thực hiện dự án nông nghiệp bền vững tại địa phương. Anh có thời gian nghe giới thiệu không?'. Xác nhận địa chỉ, số điện thoại để đảm bảo đúng người."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi muốn khảo sát nhu cầu của anh: anh đang trồng trọt gì? Gặp khó khăn gì về kỹ thuật hay thị trường? Chúng tôi có thể hỗ trợ đào tạo, cung cấp giống cây bền vững, hoặc kết nối với thị trường'. Lắng nghe feedback, ghi chép thông tin."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Cảm ơn anh. Chúng tôi sẽ gửi thông tin chi tiết dự án qua SMS hoặc email. Nếu anh quan tâm, chúng tôi sẽ liên hệ lại tuần sau để mời anh tham dự buổi hội thảo'. Chào tạm biệt lịch sự, không yêu cầu bất kỳ thông tin nhạy cảm nào."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Khoa, tôi là Nam từ Tổ chức Công giáo Xã hội. Chúng tôi đang thực hiện dự án nông nghiệp bền vững tại địa phương. Anh có thời gian nghe giới thiệu không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chính thức, giới thiệu tổ chức và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe anh nói rồi, nhưng tôi cần biết thêm thông tin về dự án này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, dự án của chúng tôi hướng đến việc hỗ trợ kỹ thuật nông nghiệp bền vững, cung cấp các giống cây trồng thích ứng với biến đổi khí hậu và kết nối đầu ra cho nông sản của bà con. Chúng tôi muốn khảo sát xem anh đang canh tác cây trồng gì và có vướng mắc nào không, để xem dự án có thể hỗ trợ được gì cho anh.",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu chi tiết hơn về dự án và bắt đầu khảo sát nhu cầu của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiện đang trồng rau và cây ăn quả, nhưng cũng gặp một số khó khăn trong việc tiêu thụ sản phẩm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, trường hợp của anh rất phù hợp với mục tiêu của dự án chúng tôi. Chúng tôi có thể hỗ trợ anh về kỹ thuật canh tác bền vững để nâng cao chất lượng sản phẩm, đồng thời kết nối anh với các chuỗi cung ứng hoặc thị trường tiêu thụ ổn định hơn.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận sự phù hợp của người nghe với dự án và đề xuất các hình thức hỗ trợ cụ thể, củng cố lợi ích."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm thấy rất vui khi nghe điều đó, nhưng tôi muốn biết rõ hơn về cách mà tổ chức sẽ hỗ trợ cụ thể như thế nào.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, trước mắt, chúng tôi sẽ mời anh tham gia một buổi hội thảo miễn phí trực tuyến hoặc trực tiếp tại địa phương, nơi các chuyên gia nông nghiệp sẽ chia sẻ kinh nghiệm và giới thiệu các mô hình canh tác hiệu quả. Sau đó, nếu anh quan tâm, chúng tôi sẽ có các buổi tư vấn riêng, thậm chí cử cán bộ xuống tận vườn để đánh giá và đưa ra giải pháp phù hợp với tình hình thực tế của anh ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày các bước hỗ trợ cụ thể và chi tiết để người nghe hình dung rõ hơn, củng cố lòng tin và sự quan tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm thấy rất hứng thú với buổi hội thảo đó, nhưng tôi cần biết khi nào và ở đâu sẽ tổ chức ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chúng tôi sẽ sớm gửi thông tin chi tiết về thời gian và địa điểm tổ chức hội thảo qua tin nhắn SMS đến số điện thoại của anh. Anh vui lòng theo dõi tin nhắn nhé. Sau đó, nếu anh thấy phù hợp, chúng tôi có thể sắp xếp một buổi gặp riêng để trao đổi cụ thể hơn ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất hành động tiếp theo, cam kết cung cấp thông tin chi tiết và gợi mở một cuộc gặp mặt trực tiếp nếu người nghe quan tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi rất mong nhận được thông tin chi tiết từ anh qua tin nhắn, cảm ơn anh ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi cảm ơn anh Khoa đã dành thời gian trao đổi. Chúc anh một ngày làm việc hiệu quả ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Chào tạm biệt lịch sự sau khi hoàn thành mục đích cuộc gọi."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1775,
+      "output_tokens": 1628
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8114,
+      "output_tokens": 743
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10111,
+      "output_tokens": 347
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004914,
+    "output_usd": 0.010206,
+    "total_usd": 0.01512
+  }
+}

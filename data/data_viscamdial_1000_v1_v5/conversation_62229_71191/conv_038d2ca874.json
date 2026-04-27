@@ -1,0 +1,259 @@
+{
+  "conversation_id": "conv_038d2ca874",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0009",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Ngô Hồng Lan",
+    "fake_age": 39,
+    "real_occupation": "Lao động khai thác thủy sản khác trong nội địa",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Kỹ thuật & An toàn lao động - Công ty Xây dựng Cơ sở hạ tầng",
+    "caller_org": "Công ty TNHH Xây dựng Hạ tầng Miền Trung (CXHM)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty xây dựng thực tế gọi để xác nhận thông tin, tuyển dụng hoặc thông báo về dự án công việc hợp pháp",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng 'Công ty CXHM, phòng Nhân sự', gọi đúng tên, xác nhận: 'Chúng tôi có hồ sơ của anh/chị từ sàn tuyển dụng/giới thiệu của bạn'. Yêu cầu xác nhận: 'Đây là số điện thoại của Cao Thị Ngân phải không?'."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giới thiệu dự án cụ thể (tên dự án, địa điểm, thời gian, mức lương, yêu cầu kỹ năng). Hỏi về kinh nghiệm, khả năng, thời gian bắt đầu. Nếu quan tâm, hẹn phỏng vấn trực tiếp tại văn phòng hoặc công trường."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Anh/chị có quan tâm không? Nếu có, chúng tôi sẽ gửi email hợp đồng và yêu cầu tài liệu. Mọi chi phí sẽ được quy định rõ trong hợp đồng'. Kết thúc cuộc gọi lịch sự, cung cấp số điện thoại công ty chính thức để nạn nhân có thể xác minh."
+        }
+      ]
+    },
+    "scenario_context": "Thợ giàn giáo thường làm việc tại các công trường xây dựng gần khu vực cảng biển/nội địa nơi có hoạt động khai thác thủy sản. Công ty xây dựng cần tuyển dụng hoặc xác minh an toàn lao động cho các dự án. Scammer giả danh cán bộ công ty xây dựng để tiếp cận."
+  },
+  "listener_card": {
+    "listener_id": "lis_0009",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1995,
+      "age": 30,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "71191",
+      "title": "Thợ giàn giáo",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Cao Thị Ngân",
+      "VIC_ID_DOC": "056195536850",
+      "VIC_ADDRESS": "TP 12, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Thợ giàn giáo",
+      "VIC_CONTACT": "0384572299",
+      "VIC_TAX_SOCIAL_ID": "1789488982"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "468659",
+      "VIC_CREDENTIAL": "2600",
+      "VIC_SIM_INFO": "0384572299",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "537699197060",
+      "VIC_CARD_DATA": "4212 **** **** 6345",
+      "VIC_BALANCE": "13 triệu đồng",
+      "VIC_ASSET": "114 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Cao Thị Ngân",
+    "VIC_CONTACT": "0384572299",
+    "VIC_BALANCE": "13 triệu đồng",
+    "VIC_BANK_ACCOUNT": "537699197060"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Kỹ thuật & An toàn lao động - Công ty Xây dựng Cơ sở hạ tầng",
+    "caller_org": "Công ty TNHH Xây dựng Hạ tầng Miền Trung (CXHM)",
+    "scenario_context": "Thợ giàn giáo thường làm việc tại các công trường xây dựng gần khu vực cảng biển/nội địa nơi có hoạt động khai thác thủy sản. Công ty xây dựng cần tuyển dụng hoặc xác minh an toàn lao động cho các dự án. Scammer giả danh cán bộ công ty xây dựng để tiếp cận.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo: Cao Thị Ngân được chọn tham gia dự án xây dựng công trình cảng tại khu vực miền Trung, cần nộp tiền đặt cọc/bảo hiểm lao động trước khi ký hợp đồng. Sử dụng tên thật của nạn nhân để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Scammer gọi, xưng danh là 'Anh Minh - Trưởng phòng Kỹ thuật CXHM', gọi đúng tên 'Cao Thị Ngân', nhắc lại số điện thoại để xác nhận 'đúng người'. Nói rằng: 'Chúng tôi có hồ sơ của anh/chị từ danh sách thợ giàn giáo uy tín'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo cơ hội & khẩn cấp: 'Dự án này lương cao, công việc ổn định 6 tháng. Nhưng vị trí còn 2 chỗ thôi, anh/chị phải quyết định hôm nay. Cần nộp tiền bảo hiểm an toàn lao động 5 triệu đồng, tương ứng với mức lương anh/chị đề xuất'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Chuyển 5 triệu vào tài khoản công ty để xử lý hồ sơ. Anh/chị chuyển khoản ngay được không? Số tài khoản là [số giả mạo]'. Nếu nạn nhân hỏi tại sao không chuyển qua công ty, scammer nói: 'Để nhanh chóng, tránh thủ tục hành chính dài'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer tạo áp lực: 'Anh/chị không chuyển được, có vấn đề gì không? Chúng tôi phải thông báo với ứng viên khác rồi'. Nếu thành công, scammer tắt máy ngay, không để nạn nhân lại số điện thoại hoặc yêu cầu thêm."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xây dựng thực tế gọi để xác nhận thông tin, tuyển dụng hoặc thông báo về dự án công việc hợp pháp",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng 'Công ty CXHM, phòng Nhân sự', gọi đúng tên, xác nhận: 'Chúng tôi có hồ sơ của anh/chị từ sàn tuyển dụng/giới thiệu của bạn'. Yêu cầu xác nhận: 'Đây là số điện thoại của Cao Thị Ngân phải không?'."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giới thiệu dự án cụ thể (tên dự án, địa điểm, thời gian, mức lương, yêu cầu kỹ năng). Hỏi về kinh nghiệm, khả năng, thời gian bắt đầu. Nếu quan tâm, hẹn phỏng vấn trực tiếp tại văn phòng hoặc công trường."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Anh/chị có quan tâm không? Nếu có, chúng tôi sẽ gửi email hợp đồng và yêu cầu tài liệu. Mọi chi phí sẽ được quy định rõ trong hợp đồng'. Kết thúc cuộc gọi lịch sự, cung cấp số điện thoại công ty chính thức để nạn nhân có thể xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_FULLNAME": "Cao Thị Ngân",
+    "VIC_CONTACT": "0384572299"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, tôi là Ngô Hồng Lan, Trưởng phòng Kỹ thuật và An toàn lao động từ Công ty TNHH Xây dựng Hạ tầng Miền Trung. Chúng tôi có nhận được hồ sơ của chị Cao Thị Ngân từ sàn tuyển dụng. Đây có phải số điện thoại của chị Cao Thị Ngân không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, xưng danh, xác nhận danh tính người nghe và nguồn thông tin hồ sơ để tạo uy tín ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em là Cao Thị Ngân, số điện thoại này là của em ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_FULLNAME": "Cao Thị Ngân",
+        "VIC_CONTACT": "0384572299"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Ngân. Tôi gọi cho chị hôm nay là để trao đổi về vị trí Giám sát An toàn lao động cho dự án mở rộng Cảng biển Liên Chiểu của công ty chúng tôi tại Đà Nẵng. Dự án dự kiến kéo dài 24 tháng với mức lương khởi điểm từ 18 đến 25 triệu đồng, tùy theo kinh nghiệm.",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu chi tiết dự án, vị trí công việc, địa điểm, thời gian và mức lương cụ thể để người nghe hình dung rõ ràng về cơ hội việc làm."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe chị nói rồi, nhưng em có chút thắc mắc về quy trình tuyển dụng và yêu cầu công việc ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ hỏi thoải mái ạ. Về quy trình tuyển dụng, sau cuộc gọi này nếu chị quan tâm, chúng tôi sẽ mời chị đến văn phòng công ty hoặc công trường để phỏng vấn trực tiếp với Giám đốc dự án và Trưởng phòng Kỹ thuật. Về yêu cầu công việc, vị trí này cần kinh nghiệm ít nhất 3 năm trong giám sát an toàn tại các dự án xây dựng hạ tầng, ưu tiên ứng viên có chứng chỉ an toàn lao động và khả năng làm việc nhóm tốt.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải đáp thắc mắc về quy trình tuyển dụng và yêu cầu công việc cụ thể để trấn an người nghe và cho thấy sự minh bạch, chuyên nghiệp của công ty."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, vậy em có cần chuẩn bị gì trước khi đến phỏng vấn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để phỏng vấn thì chị Ngân vui lòng chuẩn bị các giấy tờ như hồ sơ xin việc, bằng cấp, chứng chỉ liên quan và chứng minh nhân dân. Ngoài ra, chị có thể mang theo bất kỳ giấy tờ nào chứng minh kinh nghiệm làm việc của mình để chúng tôi có thể đánh giá tốt hơn.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn người nghe chuẩn bị tài liệu cần thiết cho buổi phỏng vấn trực tiếp, củng cố thêm tính hợp pháp của quy trình tuyển dụng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nhớ rồi, em sẽ chuẩn bị đầy đủ giấy tờ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy chị Ngân có quan tâm đến vị trí này và muốn sắp xếp một buổi phỏng vấn trực tiếp không ạ? Nếu có, tôi sẽ hướng dẫn chị các bước tiếp theo.",
+      "current_phase": "L3",
+      "tactic_hint": "Chuyển sang bước thống nhất hành động, hỏi người nghe về sự quan tâm và sẵn sàng cho buổi phỏng vấn trực tiếp, chuẩn bị cho các bước tiếp theo của quy trình."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em rất quan tâm đến vị trí này, chị có thể hướng dẫn em các bước tiếp theo được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Ngân. Nếu vậy, tôi sẽ gửi một email xác nhận lịch phỏng vấn và danh sách các tài liệu cần chuẩn bị đến địa chỉ email mà chị đã cung cấp trong hồ sơ. Chị vui lòng kiểm tra email thường xuyên nhé. Mọi chi phí liên quan đến việc đi lại hoặc chỗ ở nếu có sẽ được công ty hỗ trợ theo quy định.",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất hành động bằng cách thông báo sẽ gửi email xác nhận lịch phỏng vấn và các thông tin liên quan, kèm theo cam kết hỗ trợ chi phí để tăng tính chuyên nghiệp và khuyến khích người nghe tiếp tục hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị gửi email cho em với địa chỉ nào ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Địa chỉ email là caothingan@gmail.com đúng không chị? Tôi sẽ gửi thông tin chi tiết đến địa chỉ này và trong email cũng sẽ có số điện thoại công ty chính thức để chị có thể xác minh lại thông tin hoặc đặt câu hỏi nếu cần.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lại địa chỉ email của người nghe để đảm bảo thông tin được gửi đúng, đồng thời cung cấp thông tin liên hệ chính thức của công ty để người nghe có thể xác minh, tăng cường sự tin cậy và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi ạ, em sẽ kiểm tra email thường xuyên ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy thì tốt quá. Tôi rất mong gặp chị Ngân tại buổi phỏng vấn sắp tới. Chúc chị một ngày làm việc hiệu quả và hẹn gặp lại chị sớm nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, thân thiện sau khi đã hoàn thành mục đích và thống nhất các bước tiếp theo, tạo ấn tượng tốt và khuyến khích sự hợp tác trong tương lai."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1381,
+      "output_tokens": 1642
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 13125,
+      "output_tokens": 1154
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 16066,
+      "output_tokens": 483
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006416,
+    "output_usd": 0.011385,
+    "total_usd": 0.017801
+  }
+}

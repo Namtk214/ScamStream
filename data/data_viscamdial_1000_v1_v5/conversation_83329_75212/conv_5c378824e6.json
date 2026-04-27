@@ -1,0 +1,198 @@
+{
+  "conversation_id": "conv_5c378824e6",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0100",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Phan Công Quang Sơn",
+    "fake_age": 42,
+    "real_occupation": "Lái xe tải hạng vừa và xe tải hạng nặng khác",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Logistics / Trưởng bộ phận Vận chuyển Hàng hoá",
+    "caller_org": "Công ty Vận tải và Logistics Miền Nam (hoặc tên công ty logistics nào đó)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi thực tế từ công ty vận tải để xác nhận đơn vận chuyển gỗ, lịch giao hàng, hoặc cập nhật chi phí vận chuyển hợp lệ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Vũ Tiến Xuân Đạt, tôi là [Tên] từ Công ty Vận tải XYZ. Tôi gọi để xác nhận lại đơn hàng gỗ mà anh gửi cho chúng tôi hôm qua. Có phải anh là người liên hệ chính không?'",
+          "verification": "Xác nhận tên, số điện thoại, và chi tiết đơn hàng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi dự kiến khởi hành ngày [cụ thể]. Chi phí vận chuyển là [số tiền cụ thể] theo bảng giá đã thỏa thuận. Anh có điều gì muốn hỏi không?' (Không yêu cầu thanh toán qua điện thoại, mà hướng đến hóa đơn chính thức hoặc thanh toán khi giao hàng)",
+          "detail": "Trao đổi rõ ràng về lịch trình, chi phí, điều kiện giao nhận"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Vậy thì chúng tôi sẽ gửi hóa đơn chính thức qua email. Anh kiểm tra và xác nhận. Chúng tôi sẽ liên hệ lại nếu có thay đổi. Cảm ơn anh!'",
+          "closure": "Chào tạm biệt lịch sự, không tạo áp lực, cung cấp thông tin theo quy trình"
+        }
+      ]
+    },
+    "scenario_context": "Lái xe tải thường xuyên vận chuyển gỗ/sản phẩm gỗ từ xưởng xử lý đến khách hàng. Quản lý logistics cần gọi thợ xử lý gỗ để xác nhận đơn hàng, lịch giao, hoặc vấn đề vận chuyển."
+  },
+  "listener_card": {
+    "listener_id": "lis_0100",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1987,
+      "age": 38,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75212",
+      "title": "Thợ xử lý gỗ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Tiến Xuân Đạt",
+      "VIC_ID_DOC": "074087450764",
+      "VIC_ADDRESS": "Quận 12, Bình Dương",
+      "VIC_EMPLOYMENT": "Thợ xử lý gỗ",
+      "VIC_CONTACT": "0886664293",
+      "VIC_TAX_SOCIAL_ID": "5519618145"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "627094",
+      "VIC_CREDENTIAL": "2531",
+      "VIC_SIM_INFO": "0886664293",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "87845318523",
+      "VIC_CARD_DATA": "4716 **** **** 1876",
+      "VIC_BALANCE": "44 triệu đồng",
+      "VIC_ASSET": "37 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Tiến Xuân Đạt",
+    "VIC_CONTACT": "0886664293",
+    "VIC_ID_DOC": "074087450764",
+    "VIC_CARD_DATA": "4716 **** **** 1876",
+    "VIC_BALANCE": "44 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Logistics / Trưởng bộ phận Vận chuyển Hàng hoá",
+    "caller_org": "Công ty Vận tải và Logistics Miền Nam (hoặc tên công ty logistics nào đó)",
+    "scenario_context": "Lái xe tải thường xuyên vận chuyển gỗ/sản phẩm gỗ từ xưởng xử lý đến khách hàng. Quản lý logistics cần gọi thợ xử lý gỗ để xác nhận đơn hàng, lịch giao, hoặc vấn đề vận chuyển.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty vận tải vừa nhận đơn hàng gỗ từ xưởng của nạn nhân (Vũ Tiến Xuân Đạt). Cần xác nhận thông tin thanh toán cọc hoặc phí vận chuyển trước khi khởi hành. Scammer sẽ giả vờ là quản lý logistics đang xử lý hóa đơn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng Credibility: 'Chào anh Vũ Tiến Xuân Đạt, tôi là Trưởng bộ phận Logistics của công ty vận tải. Chúng tôi vừa nhận đơn hàng gỗ từ xưởng của anh. Tôi cần xác nhận lại số điện thoại 0886664293 và thông tin thanh toán để lập hóa đơn vận chuyển.'",
+          "trigger": "Sử dụng đầy đủ tên + SDT của nạn nhân để tạo ảo tưởng đã kiểm chứng"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: 'Anh ơi, đơn hàng này khá cấp, khách hàng cuối cùng đợi hàng gấp. Nhưng hệ thống của chúng tôi đang bảo trì, nên anh cần cọc trước 5 triệu đồng để chúng tôi ưu tiên vận chuyển hôm nay. Nếu không, phải chờ đến tuần sau.'",
+          "trigger": "Tạo áp lực thời gian + hứa hẹn lợi ích (vận chuyển nhanh)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuyển cọc vào tài khoản công ty: 4716 **** **** 1876 (sử dụng thông tin thẻ của chính nạn nhân để tạo vòng lặp tin cậy). Hoặc anh có thể quét mã QR này để thanh toán nhanh.' (Scammer cung cấp link hoặc mã QR giả dẫn đến tài khoản của tội phạm)",
+          "trigger": "Yêu cầu chuyển tiền + sử dụng chính thông tin thẻ của nạn nhân (tạo confusion)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm ('Anh vừa lỡ cơ hội, khách hàng sẽ hủy đơn, anh chịu trách nhiệm'). Nếu thành công, scammer cắt máy và chặn số."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế từ công ty vận tải để xác nhận đơn vận chuyển gỗ, lịch giao hàng, hoặc cập nhật chi phí vận chuyển hợp lệ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Vũ Tiến Xuân Đạt, tôi là [Tên] từ Công ty Vận tải XYZ. Tôi gọi để xác nhận lại đơn hàng gỗ mà anh gửi cho chúng tôi hôm qua. Có phải anh là người liên hệ chính không?'",
+          "verification": "Xác nhận tên, số điện thoại, và chi tiết đơn hàng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi dự kiến khởi hành ngày [cụ thể]. Chi phí vận chuyển là [số tiền cụ thể] theo bảng giá đã thỏa thuận. Anh có điều gì muốn hỏi không?' (Không yêu cầu thanh toán qua điện thoại, mà hướng đến hóa đơn chính thức hoặc thanh toán khi giao hàng)",
+          "detail": "Trao đổi rõ ràng về lịch trình, chi phí, điều kiện giao nhận"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Vậy thì chúng tôi sẽ gửi hóa đơn chính thức qua email. Anh kiểm tra và xác nhận. Chúng tôi sẽ liên hệ lại nếu có thay đổi. Cảm ơn anh!'",
+          "closure": "Chào tạm biệt lịch sự, không tạo áp lực, cung cấp thông tin theo quy trình"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Vũ Tiến Xuân Đạt, tôi là Phan Công Quang Sơn từ Công ty Vận tải và Logistics Miền Nam đây. Tôi gọi để xác nhận lại đơn hàng gỗ mà anh gửi cho chúng tôi hôm qua. Có phải anh là người liên hệ chính không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, xác nhận thông tin ban đầu để bắt đầu cuộc gọi hợp lệ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em là người liên hệ chính, nhưng em chưa rõ đơn hàng cụ thể là gì ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Đạt. Đơn hàng là lô gỗ tròn mà anh đã đặt vận chuyển từ rừng tràm U Minh Thượng về kho tại Long An, số lượng khoảng 50 khối. Chúng tôi dự kiến khởi hành việc vận chuyển vào ngày 25 tháng 5 tới. Chi phí vận chuyển tổng cộng là 44 triệu đồng, đúng như bảng giá chúng ta đã thống nhất. Anh có điều gì muốn hỏi thêm về lịch trình hay chi phí không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp chi tiết đơn hàng, lịch trình và chi phí để người nghe xác nhận, không yêu cầu thanh toán ngay."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã nắm thông tin rồi, nhưng em muốn hỏi thêm là thời gian giao hàng có được đảm bảo không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Đạt cứ yên tâm. Công ty chúng tôi luôn đặt uy tín lên hàng đầu. Nếu có bất kỳ sự chậm trễ nào do các yếu tố khách quan, chúng tôi sẽ thông báo và đưa ra phương án xử lý kịp thời. Vậy thì, nếu không có thắc mắc gì thêm, chúng tôi sẽ gửi hóa đơn chính thức qua email anh đã cung cấp nhé. Anh kiểm tra và xác nhận lại giúp tôi. Chúng tôi sẽ liên hệ lại nếu có bất kỳ thay đổi nào từ phía vận hành. Cảm ơn anh!",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an khách hàng về chất lượng dịch vụ, sau đó chuyển sang bước kết thúc cuộc gọi bằng cách xác nhận gửi hóa đơn và giữ liên lạc."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1421,
+      "output_tokens": 1817
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3301,
+      "output_tokens": 462
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 3450,
+      "output_tokens": 139
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002599,
+    "output_usd": 0.010323,
+    "total_usd": 0.012922
+  }
+}

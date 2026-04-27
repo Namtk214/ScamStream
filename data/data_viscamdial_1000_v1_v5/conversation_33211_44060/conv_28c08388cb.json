@@ -1,0 +1,220 @@
+{
+  "conversation_id": "conv_28c08388cb",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0093",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đặng Bảo Hương",
+    "fake_age": 41,
+    "real_occupation": "Đại lý môi giới bảo hiểm (gồm cả nhà kế hoạch tài chính độc lập)",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhà tư vấn phúc lợi nhân sự & lập kế hoạch tài chính doanh nghiệp",
+    "caller_org": "Công ty tư vấn độc lập (hoặc liên kết với công ty bảo hiểm)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi điện với danh nghĩa 'tư vấn phúc lợi từ công ty bảo hiểm ABC' — sử dụng tên nạn nhân để tạo tin cậy, sau đó dẫn dắt vào việc xác minh 'hồ sơ bảo hiểm nhân sự' hoặc 'cập nhật thông tin tài khoản ngân hàng công ty'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh/Chị Minh từ công ty bảo hiểm XYZ — phòng tư vấn phúc lợi'. Sử dụng VIC_FULLNAME ('Anh Thế An phải không?') để tạo ảo tưởng đã có dữ liệu sẵn, tăng độ tin cậy."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Công ty anh vừa được thăng cấp gói bảo hiểm nhân sự cao cấp, cần cập nhật thông tin tài khoản nhân sự để xác nhận quyền lợi. Hôm nay là hạn chót, nếu không xác nhận sẽ mất hiệu lực từ ngày mai' — tạo sự vội vàng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh/Chị cần cung cấp lại số tài khoản ngân hàng và 3 chữ số CVV trên thẻ để hệ thống xác minh. Hoặc yêu cầu chuyển khoản nhỏ (100k-200k) để 'kích hoạt' gói bảo hiểm, sẽ hoàn lại ngay sau đó'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp thông tin hoặc chuyển tiền: Xin lỗi vì 'lỗi hệ thống', tuyên bố sẽ xử lý lại, yêu cầu chờ 24-48h. Nếu nạn nhân từ chối: Dọa 'sẽ mất quyền lợi, công ty sẽ bị phạt', hoặc chuyển sang 'đồng nghiệp' gọi lại để tái tiếp cận."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên HR của doanh nghiệp thường là người quyết định hoặc có ảnh hưởng lớn trong việc lựa chọn gói bảo hiểm nhân sự tập thể, kế hoạch lương thưởng và phúc lợi cho nhân viên. Đại lý môi giới bảo hiểm/nhà kế hoạch tài chính tự nhiên sẽ liên hệ HR để giới thiệu các sản phẩm này."
+  },
+  "listener_card": {
+    "listener_id": "lis_0093",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1977,
+      "age": 48,
+      "province": "Khánh Hòa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "44060",
+      "title": "Nhân viên tổ chức nhân sự",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Thế An",
+      "VIC_ID_DOC": "056077995890",
+      "VIC_ADDRESS": "TP 5, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Nhân viên tổ chức nhân sự",
+      "VIC_CONTACT": "0828152077",
+      "VIC_TAX_SOCIAL_ID": "8957135460"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7849",
+      "VIC_CREDENTIAL": "8132",
+      "VIC_SIM_INFO": "0828152077",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "563920995995",
+      "VIC_CARD_DATA": "4154 **** **** 1194",
+      "VIC_BALANCE": "390 triệu đồng",
+      "VIC_ASSET": "301 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Thế An",
+    "VIC_CONTACT": "0828152077",
+    "VIC_CARD_DATA": "4154 **** **** 1194",
+    "VIC_BANK_ACCOUNT": "563920995995",
+    "VIC_ADDRESS": "TP 5, Khánh Hòa"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhà tư vấn phúc lợi nhân sự & lập kế hoạch tài chính doanh nghiệp",
+    "caller_org": "Công ty tư vấn độc lập (hoặc liên kết với công ty bảo hiểm)",
+    "scenario_context": "Nhân viên HR của doanh nghiệp thường là người quyết định hoặc có ảnh hưởng lớn trong việc lựa chọn gói bảo hiểm nhân sự tập thể, kế hoạch lương thưởng và phúc lợi cho nhân viên. Đại lý môi giới bảo hiểm/nhà kế hoạch tài chính tự nhiên sẽ liên hệ HR để giới thiệu các sản phẩm này.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi điện với danh nghĩa 'tư vấn phúc lợi từ công ty bảo hiểm ABC' — sử dụng tên nạn nhân để tạo tin cậy, sau đó dẫn dắt vào việc xác minh 'hồ sơ bảo hiểm nhân sự' hoặc 'cập nhật thông tin tài khoản ngân hàng công ty'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh/Chị Minh từ công ty bảo hiểm XYZ — phòng tư vấn phúc lợi'. Sử dụng VIC_FULLNAME ('Anh Thế An phải không?') để tạo ảo tưởng đã có dữ liệu sẵn, tăng độ tin cậy."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Công ty anh vừa được thăng cấp gói bảo hiểm nhân sự cao cấp, cần cập nhật thông tin tài khoản nhân sự để xác nhận quyền lợi. Hôm nay là hạn chót, nếu không xác nhận sẽ mất hiệu lực từ ngày mai' — tạo sự vội vàng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh/Chị cần cung cấp lại số tài khoản ngân hàng và 3 chữ số CVV trên thẻ để hệ thống xác minh. Hoặc yêu cầu chuyển khoản nhỏ (100k-200k) để 'kích hoạt' gói bảo hiểm, sẽ hoàn lại ngay sau đó'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp thông tin hoặc chuyển tiền: Xin lỗi vì 'lỗi hệ thống', tuyên bố sẽ xử lý lại, yêu cầu chờ 24-48h. Nếu nạn nhân từ chối: Dọa 'sẽ mất quyền lợi, công ty sẽ bị phạt', hoặc chuyển sang 'đồng nghiệp' gọi lại để tái tiếp cận."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Tư vấn về gói bảo hiểm nhân sự tập thể, kế hoạch phúc lợi, hoặc cơ hội tối ưu hóa chi phí bảo hiểm cho công ty.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Tôi là [Họ tên] từ công ty bảo hiểm/tư vấn ABC, số điện thoại [số chính thức], tôi muốn trao đổi về các giải pháp bảo hiểm cho nhân viên công ty anh/chị'. Xác nhận người nghe là HR chính thức."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giới thiệu sơ bộ các sản phẩm, lợi ích, chi phí. Hỏi nhu cầu hiện tại của công ty. Đề xuất cuộc họp chi tiết hoặc gửi tài liệu qua email chính thức."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Tôi sẽ gửi proposal chi tiết qua email công ty, anh/chị xem rồi cho ý kiến. Nếu quan tâm, chúng ta sắp xếp cuộc họp với ban lãnh đạo'. Không bao giờ yêu cầu thông tin tài khoản ngân hàng hoặc CVV qua điện thoại. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh Lê Thế An phải không ạ? Tôi là Đặng Bảo Hương, tư vấn từ phòng phúc lợi của công ty bảo hiểm ABC đây. Tôi gọi để thông báo về gói bảo hiểm nhân sự mới nhất của công ty mình ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, dùng tên nạn nhân để tạo tin cậy và giới thiệu mục đích cuộc gọi ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Lê Thế An, nhưng tôi không quan tâm đến bảo hiểm lúc này đâu.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An ơi, đây không phải là gói bảo hiểm mới để bán đâu ạ. Đây là phúc lợi công ty anh đã trích đóng cho mình, và hệ thống báo là gói bảo hiểm nhân sự cao cấp của anh vừa được nâng cấp. Hôm nay là hạn chót để mình xác nhận lại thông tin tài khoản nhân sự để cập nhật quyền lợi, nếu không sẽ mất hiệu lực từ ngày mai đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự từ chối, giải thích đây là phúc lợi có sẵn chứ không phải bán hàng, sau đó tạo tình huống khẩn cấp về 'hạn chót' và 'mất quyền lợi' để kích thích hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe nói vậy nhưng tôi vẫn thấy lo lắng, không biết phải làm gì để xác nhận thông tin ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để tôi hướng dẫn anh ạ. Anh chỉ cần cung cấp lại cho tôi số tài khoản ngân hàng hiện tại của anh và ba chữ số CVV ở mặt sau thẻ để hệ thống công ty bảo hiểm ABC xác minh trùng khớp và kích hoạt gói phúc lợi cho mình. Việc này chỉ mất vài phút thôi anh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu cung cấp thông tin tài khoản ngân hàng và CVV để 'kích hoạt phúc lợi', đồng thời trấn an rằng quy trình nhanh chóng và đơn giản."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thể cung cấp thông tin ngân hàng và CVV cho em được, vì em rất lo lắng về tính bảo mật.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An đừng lo lắng. Đây là quy trình xác minh bảo mật của công ty bảo hiểm ABC để đảm bảo quyền lợi được chuyển đúng tài khoản của anh thôi ạ. Chúng tôi sẽ không yêu cầu bất kỳ mã OTP hay mật khẩu nào đâu, chỉ là xác minh thông tin tài khoản ngân hàng và ba số CVV để hệ thống đối chiếu với hồ sơ hiện có. Nếu không xác nhận, anh sẽ bỏ lỡ gói phúc lợi cao cấp này đấy ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu lo ngại về bảo mật, trấn an không yêu cầu OTP/mật khẩu, nhấn mạnh đây là quy trình cần thiết để hưởng phúc lợi và tạo áp lực về việc bỏ lỡ quyền lợi."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em vẫn cảm thấy không thoải mái khi cung cấp thông tin nhạy cảm như vậy, em muốn được xác nhận rõ hơn.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1887,
+      "output_tokens": 1595
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5797,
+      "output_tokens": 607
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7692,
+      "output_tokens": 284
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.0042,
+    "output_usd": 0.009663,
+    "total_usd": 0.013863
+  }
+}

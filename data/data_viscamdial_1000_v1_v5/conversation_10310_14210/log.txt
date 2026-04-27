@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_8d9feee001]
+  Caller thật: Bí thư Huyện ủy, Phó Bí thư Huyện ủy, Ủy viên Ban Chấp hành Đảng bộ cấp huyện (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Trưởng phòng Tổ chức - Nhân sự, Huyện ủy @ Huyện ủy [Tên huyện]
+  Listener: Chủ tịch, Phó Chủ tịch và Ủy viên thường trực Ủy ban nhân dân cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Trưởng phòng Tổ chức - Nhân sự huyện ủy cần liên hệ với lãnh đạo cấp tỉnh để điều phối công tác chuẩn bị nhân sự, xác minh thông tin cán bộ, hoặc thông báo công vụ liên quan đến Ủy ban nhân dân cấp tỉnh. Đây là mối quan hệ công việc tự nhiên trong hệ thống hành chính từ cấp huyện lên cấp tỉnh.
+  Pretext: Thông báo cần xác minh thông tin cá nhân để cập nhật hồ sơ cán bộ trong hệ thống quản lý nhân sự cấp tỉnh; yêu cầu cung cấp mã OTP để 'bảo mật thông tin' khi kích hoạt tài khoản trên portal quản lý cán bộ mới.
+  Listener traits: ['dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Tùng, tôi là Huỳnh Thu Lan, Trưởng phòng Tổ chức - Nhân sự Huyện ủy. Chúng tôi đang cập nhật hồ sơ cán bộ cấp tỉnh trên hệ thống quản lý nhân sự mới, cần xác minh lại thông tin của anh Bùi Hữu Hữu Tùng để hoàn tất quy trình này.
+      → phase: S1 | tactic: Xưng danh, chức vụ, mục đích cuộc gọi và nhắc tên, chức danh nạn nhân để tạo uy tín và trust.
+T02 [LISTENER] Vâng, tôi nghe chị nói rồi, chị cần thông tin gì để xác minh ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Anh Tùng ơi, hôm nay là hạn chót để hoàn thành việc cập nhật hồ sơ cán bộ cấp tỉnh đó ạ. Nếu như không xác minh ngay thì hệ thống sẽ tự động khóa tài khoản của anh trên cổng thông tin quản lý cán bộ, việc này sẽ ảnh hưởng trực tiếp đến các quyết định nhân sự và phân công công tác hàng tháng của anh đó ạ. Đây là yêu cầu trực tiếp từ Sở Nội vụ cấp tỉnh, nên anh cố gắng hỗ trợ giúp tôi nhé.
+      → phase: S2 | tactic: Tạo tình huống khẩn cấp, sử dụng uy quyền từ cấp trên (Sở Nội vụ) để thúc giục hành động, đồng thời cảnh báo hậu quả hành chính nếu không hợp tác.
+T04 [LISTENER] Tôi hiểu tình hình rồi, chị có cần tôi cung cấp thông tin gì cụ thể không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, để tiện cho việc xác minh, tôi sẽ gửi cho anh một đường link kích hoạt tài khoản qua tin nhắn SMS. Anh vui lòng mở link đó lên, nhập số CMND là 031080592809 và mật khẩu mà anh đã tạo trước đó. Sau đó, hệ thống sẽ gửi một mã OTP về máy, anh đọc mã OTP đó cho tôi để tôi hoàn tất quy trình xác minh cho anh ạ.
+      → phase: S3 | tactic: Yêu cầu nạn nhân truy cập đường link giả mạo và cung cấp mã OTP, sử dụng thông tin cá nhân đã biết để tăng độ tin cậy.
+T06 [LISTENER] Tôi cần xác minh thông tin, nhưng mà link đó có đáng tin không chị? Tôi muốn đảm bảo an toàn trước khi làm theo ạ.
+      → action: REFUSAL | suspicion: 0.10 | disclosed: []
+
+T07 [CALLER] Anh cứ yên tâm, đường link này là đường link chính thức của hệ thống quản lý cán bộ cấp tỉnh. Tôi sẽ không yêu cầu anh cung cấp mật khẩu hay bất kỳ thông tin nhạy cảm nào khác, chỉ cần mã OTP để xác nhận đây là tài khoản chính chủ của anh thôi ạ. Đây là quy trình bắt buộc để đảm bảo an toàn cho dữ liệu cán bộ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ của nạn nhân bằng cách khẳng định tính chính thống của đường link, nhấn mạnh chỉ yêu cầu OTP để xác nhận danh tính, không khai thác thông tin nhạy cảm khác, và viện dẫn 'quy trình bắt buộc' để tăng tính hợp lý.
+T08 [LISTENER] Chị nói vậy thì tôi cũng thấy yên tâm hơn, nhưng vẫn muốn kiểm tra kỹ trước khi thực hiện ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T09 [CALLER] Vâng, nếu anh Tùng vẫn còn băn khoăn, anh có thể kiểm tra trực tiếp với phòng Tổ chức Huyện ủy chúng tôi vào giờ hành chính, chúng tôi sẽ hỗ trợ anh. Nhưng anh lưu ý là hôm nay là hạn chót, nếu để sang ngày mai thì hệ thống sẽ tự động khóa tài khoản của anh đó ạ.
+      → phase: S4 | tactic: Giữ bình tĩnh khi nạn nhân vẫn nghi ngờ, đề nghị nạn nhân tự xác minh thông tin nhưng vẫn nhấn mạnh yếu tố khẩn cấp để tạo áp lực, đồng thời chuẩn bị kết thúc cuộc gọi nếu không thể thuyết phục.
+T10 [LISTENER] Cảm ơn chị đã cung cấp thông tin, tôi sẽ liên hệ lại nếu cần thêm, nhưng mà thật sự hôm nay tôi cũng rất bận, nên không thể dành nhiều thời gian để kiểm tra nữa.
+      → action: REFUSAL | suspicion: 0.20 | disclosed: []
+
+T11 [CALLER] Vậy thì anh cứ kiểm tra rồi báo lại cho tôi sau nhé. Chào anh.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách lịch sự, không thô lỗ khi nạn nhân vẫn từ chối thực hiện yêu cầu, tránh để lộ danh tính và giữ vẻ chuyên nghiệp.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.20
+TOKEN: in=23447 | out=3381
+COST : $0.018854
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_10310_14210\conv_8d9feee001.json  [CALLER_END]

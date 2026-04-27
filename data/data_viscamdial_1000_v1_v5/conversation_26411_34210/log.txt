@@ -1,0 +1,74 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_20df1ad465]
+  Caller thật: Nhà văn (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Biên tập viên Cấp cao - Bộ phận Hợp tác Nội dung & Thương hiệu @ Nhà xuất bản Thể thao Việt Nam / Tạp chí Thể thao Đất Nước
+  Listener: Vận động viên và người chơi thể thao (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Nhà văn/biên tập viên liên hệ vận động viên để phỏng vấn, ký hợp đồng quyền lợi hình ảnh hoặc xuất bản tiểu sử. Đây là giao điểm tự nhiên giữa ngành xuất bản (nhóm 6) và vận động viên cần quảng bá hình ảnh.
+  Pretext: Liên hệ từ nhà xuất bản lớn để ký hợp đồng xuất bản tiểu sử vận động viên, yêu cầu thanh toán phí xử lý hồ sơ/ký quỹ để 'khóa quyền xuất bản độc quyền' trước khi có nhà phát hành khác tranh giành.
+  Listener traits: ['nhân ái muốn giúp', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Đỗ Diễm Nhàn, tôi là Đinh Thị Linh, Biên tập viên Cấp cao từ Nhà xuất bản Thể thao Việt Nam đây. Chúng tôi tìm được số của chị qua cơ sở dữ liệu vận động viên đăng ký tại Bình Thuận. Hiện tại, chúng tôi đang lên kế hoạch phát hành bộ tiểu sử các vận động viên nổi bật năm nay và chị là một trong những ứng cử viên hàng đầu mà chúng tôi đã lựa chọn.
+      → phase: S1 | tactic: Giới thiệu bản thân, tổ chức và sử dụng thông tin cá nhân của nạn nhân (tên, địa phương) để xây dựng tin cậy và sự chính danh từ đầu.
+T02 [LISTENER] Cảm ơn em đã liên hệ, nhưng tôi muốn xác nhận thông tin này trước khi tiếp tục.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, tôi hiểu sự cẩn trọng của chị. Để chị yên tâm, tôi có thể cung cấp thêm thông tin về dự án. Chị có muốn tìm hiểu về quy trình tuyển chọn hay lợi ích khi tham gia không ạ? Hoặc chị có thể gọi trực tiếp đến tổng đài của Nhà xuất bản Thể thao Việt Nam, số 1900 6789, gặp phòng Hợp tác Nội dung để xác minh thông tin của tôi và dự án này.
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ bằng cách đề nghị cung cấp thêm thông tin hoặc hướng dẫn nạn nhân xác minh độc lập để củng cố lòng tin. Giữ vững thái độ chuyên nghiệp và hỗ trợ.
+T04 [LISTENER] Tôi cảm ơn em đã chia sẻ thông tin, nhưng tôi vẫn cảm thấy hơi nghi ngờ, có thể cho tôi biết thêm chi tiết về quy trình tuyển chọn không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ vâng, tôi rất sẵn lòng. Quy trình tuyển chọn của chúng tôi bao gồm ba vòng: đầu tiên là đánh giá hồ sơ dựa trên thành tích và đóng góp của vận động viên; vòng thứ hai là phỏng vấn trực tiếp hoặc qua điện thoại để hiểu rõ hơn về câu chuyện cá nhân; và vòng cuối cùng là thẩm định bởi hội đồng chuyên môn. Chị Đỗ Diễm Nhàn đã vượt qua vòng hồ sơ và hiện đang ở giai đoạn cuối của vòng phỏng vấn. Chúng tôi muốn đảm bảo câu chuyện của chị được khắc họa chân thực và truyền cảm hứng nhất.
+      → phase: S1 | tactic: Cung cấp thông tin chi tiết về quy trình tuyển chọn để làm tăng tính hợp lý và chuyên nghiệp của dự án, đồng thời khẳng định nạn nhân đã vượt qua các vòng đầu để tạo cảm giác đặc biệt và cơ hội.
+T06 [LISTENER] Cảm ơn em đã giải thích chi tiết, nhưng tôi vẫn muốn kiểm tra lại thông tin từ nhà xuất bản trước khi quyết định tham gia.
+      → action: REFUSAL | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Tôi hoàn toàn hiểu. Để không làm mất thời gian của chị và đảm bảo chị có thể xác minh thông tin một cách thuận tiện nhất, chị có thể gọi trực tiếp đến số tổng đài của Nhà xuất bản Thể thao Việt Nam 1900 6789, số này có trên website chính thức của chúng tôi. Chị hãy yêu cầu gặp phòng Hợp tác Nội dung và hỏi về dự án 'Tiểu sử Vận động viên Nổi bật' cũng như tên của tôi, Đinh Thị Linh. Tôi sẽ đợi cuộc gọi xác nhận của chị ạ.
+      → phase: S1 | tactic: Tiếp tục xoa dịu nghi ngờ bằng cách cung cấp kênh xác minh chính thức và dễ dàng, đồng thời cho phép nạn nhân chủ động trong việc xác minh để củng cố lòng tin. Giữ vững thái độ chuyên nghiệp và hỗ trợ.
+T08 [LISTENER] Em cảm ơn chị đã cung cấp thông tin, nhưng tôi vẫn muốn tìm hiểu thêm về tổ chức của em để chắc chắn trước khi gọi đến tổng đài.
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T09 [CALLER] Vâng, chị cứ tự nhiên tìm hiểu. Tôi biết chị là một người rất kỹ tính và cẩn trọng. Tôi tin rằng sau khi tìm hiểu thêm về Nhà xuất bản Thể thao Việt Nam, chị sẽ thấy chúng tôi là một đơn vị uy tín và chuyên nghiệp. Tôi sẽ chờ phản hồi từ chị. Nếu chị có bất kỳ câu hỏi nào khác trong quá trình tìm hiểu, đừng ngần ngại liên hệ lại với tôi qua số này.
+      → phase: S1 | tactic: Tiếp tục duy trì sự kiên nhẫn và sẵn lòng hỗ trợ, đồng thời củng cố uy tín của tổ chức và bản thân. Đặt gánh nặng xác minh lên nạn nhân nhưng vẫn giữ thái độ tích cực.
+T10 [LISTENER] Cảm ơn em đã đề nghị, nhưng tôi cần thêm thông tin cụ thể về nhà xuất bản và các dự án trước đây của em để có thể yên tâm hơn.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T11 [CALLER] Vâng, chị có thể truy cập trang web chính thức của chúng tôi tại thethaovietnam.vn để xem các dự án đã xuất bản và lịch sử hoạt động. Nhà xuất bản Thể thao Việt Nam đã có hơn 30 năm kinh nghiệm trong lĩnh vực xuất bản sách thể thao và tiểu sử các vận động viên. Chị sẽ tìm thấy thông tin chi tiết về các tác phẩm chúng tôi đã thực hiện, cũng như các đối tác và giải thưởng mà chúng tôi đã đạt được. Chị cứ xem qua và nếu có câu hỏi gì, tôi sẵn lòng giải đáp.
+      → phase: S1 | tactic: Cung cấp thông tin cụ thể về tổ chức, bao gồm địa chỉ website, lịch sử hoạt động, và các thành tựu để xây dựng thêm uy tín và chuyên nghiệp. Khuyến khích nạn nhân tự xác minh để củng cố lòng tin.
+T12 [LISTENER] Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn muốn biết thêm về các dự án cụ thể mà nhà xuất bản đã thực hiện để yên tâm hơn.
+      → action: CONTINUE | suspicion: 0.70 | disclosed: []
+
+T13 [CALLER] Vâng, chị có thể tìm thấy danh sách các cuốn tiểu sử vận động viên nổi bật mà chúng tôi đã xuất bản trên trang bìa của website, mục 'Sách tiêu biểu'. Gần đây nhất là cuốn tiểu sử về xạ thủ Hoàng Xuân Vinh hay kiện tướng cờ vua Lê Quang Liêm. Mỗi cuốn sách đều có phần giới thiệu chi tiết về nội dung và đóng góp của vận động viên. Chị cứ tìm hiểu kỹ nhé.
+      → phase: S1 | tactic: Tiếp tục cung cấp ví dụ cụ thể về các dự án đã thực hiện để tăng tính xác thực và uy tín của nhà xuất bản. Giữ thái độ sẵn lòng hỗ trợ và kiên nhẫn.
+T14 [LISTENER] Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn cảm thấy hoài nghi và cần thêm thời gian để tìm hiểu kỹ hơn.
+      → action: REFUSAL | suspicion: 0.90 | disclosed: []
+
+T15 [CALLER] Tôi hiểu. Việc này rất quan trọng nên chị cứ dành thời gian tìm hiểu. Tuy nhiên, dự án này rất đặc biệt và chúng tôi chỉ có thể chọn 15 vận động viên trên toàn quốc. Hiện chúng tôi đang trong vòng tuyển chọn cuối cùng và cần phải khóa quyền xuất bản độc quyền của chị trước 5 giờ chiều mai để đảm bảo cơ hội này không bị người khác giành mất. Chị hình dung là có rất nhiều vận động viên tài năng khác cũng đang mong muốn được xuất bản tiểu sử.
+      → phase: S2 | tactic: Chuyển sang giai đoạn S2 để tạo áp lực về thời gian, khơi gợi tâm lý FOMO (sợ bỏ lỡ cơ hội) và cảm giác khan hiếm, đồng thời nhắc nhở về tính cạnh tranh để nạn nhân cảm thấy đặc biệt vì được lựa chọn.
+T16 [LISTENER] Em hiểu, nhưng tôi cảm thấy áp lực từ thông tin này, có thể cho tôi biết rõ hơn về lý do cần phải khóa quyền xuất bản sớm không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T17 [CALLER] Vâng, chị có thể hình dung đây là một dự án lớn, đòi hỏi sự cam kết cao từ cả hai phía. Việc khóa quyền xuất bản độc quyền là để đảm bảo rằng câu chuyện của chị sẽ được chúng tôi khai thác một cách toàn diện và chuyên nghiệp nhất, mà không bị trùng lặp hay phân tán bởi các đơn vị khác. Điều này cũng giúp chúng tôi có thể đầu tư tối đa nguồn lực vào việc biên tập, thiết kế và quảng bá cho cuốn sách của chị, mang lại hiệu quả tốt nhất sau khi xuất bản. Nếu không có sự cam kết này, rất khó để chúng tôi có thể đảm bảo vị trí và chất lượng tốt nhất cho cuốn sách của chị trong một thị trường cạnh tranh như hiện nay. Thêm vào đó, việc này cũng giúp chúng tôi có căn cứ để từ chối các đề xuất tương tự từ các nhà xuất bản cạnh tranh khác.
+      → phase: S2 | tactic: Giải thích lý do cần 'khóa quyền xuất bản' để làm rõ tính hợp lý của yêu cầu, đồng thời nhấn mạnh lợi ích cho nạn nhân và sự chuyên nghiệp của nhà xuất bản, tạo cảm giác an tâm và tin tưởng vào tính độc quyền của dự án.
+T18 [LISTENER] Tôi vẫn đang cảm thấy hoài nghi, em có thể cung cấp cho tôi một thông tin gì cụ thể hơn nữa để tôi cảm thấy yên tâm hơn không?
+      → action: CONTINUE | suspicion: 1.10 | disclosed: []
+
+T19 [CALLER] Vâng, tôi hoàn toàn hiểu và tôn trọng sự cẩn trọng của chị. Để chị yên tâm tuyệt đối, tôi có thể gửi trước cho chị bản dự thảo hợp đồng hợp tác, trong đó có nêu rõ các điều khoản về quyền lợi và nghĩa vụ của chị, cũng như cam kết của Nhà xuất bản chúng tôi. Chị có thể xem xét kỹ lưỡng và nếu có bất kỳ điểm nào chưa rõ, tôi sẽ giải đáp ngay. Điều này sẽ giúp chị hình dung rõ hơn về cam kết của dự án và tại sao việc khóa quyền xuất bản là bước cần thiết để bảo vệ tác quyền và lợi ích của chị.
+      → phase: S2 | tactic: Giảm bớt sự nghi ngờ bằng cách đề nghị cung cấp bản dự thảo hợp đồng, một tài liệu cụ thể và có tính pháp lý, để tăng tính minh bạch và độ tin cậy. Nhấn mạnh việc này là để bảo vệ lợi ích của nạn nhân.
+T20 [LISTENER] Tôi cảm ơn em đã đề nghị, nhưng tôi cần thời gian để xem xét kỹ bản dự thảo hợp đồng trước khi đưa ra quyết định.
+      → action: REFUSAL | suspicion: 1.30 | disclosed: []
+
+T21 [CALLER] Vâng, chị cứ xem xét thật kỹ, không sao cả. Tuy nhiên, như tôi đã nói, dự án này rất hạn chế và chúng tôi cần phải chốt danh sách cuối cùng để kịp tiến độ xuất bản. Việc này cũng đồng nghĩa với việc chúng tôi cần phải có sự cam kết sớm để giữ chỗ cho chị. Sau khi chị xem xét bản dự thảo hợp đồng, nếu không có vấn đề gì và chị quyết định tham gia, chúng tôi sẽ yêu cầu thanh toán một khoản phí xử lý hồ sơ ưu tiên là 2.5 triệu đồng. Khoản phí này nhằm đảm bảo chị cam kết và cũng là một phần chi phí phát sinh ban đầu để khởi động dự án. Sau khi hợp đồng được ký chính thức, chị sẽ nhận được royalty từ 5-10% doanh thu bán sách, chắc chắn sẽ cao hơn rất nhiều so với khoản phí này. Tôi có thể gửi bản dự thảo hợp đồng cho chị ngay bây giờ qua email hoặc Zalo để chị tiện tham khảo.
+      → phase: S2 | tactic: Tiếp tục tạo áp lực thời gian và khan hiếm, đồng thời giới thiệu khoản phí xử lý hồ sơ như một bước cam kết nhỏ để đạt được lợi ích lớn hơn (royalty). Đề xuất gửi bản dự thảo hợp đồng để làm dịu sự nghi ngờ và chuyển hướng sang mục tiêu tài chính.
+T23 [LISTENER] Em hiểu, nhưng tôi cần chắc chắn rằng đây là một quyết định đúng đắn trước khi tiến hành bất kỳ bước nào, nên mong em thông cảm.
+      → action: REFUSAL | suspicion: 1.50 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  23 turns | suspicion=1.50
+TOKEN: in=63060 | out=5277
+COST : $0.028865
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_26411_34210\conv_20df1ad465.json  [SCAM_REFUSE]

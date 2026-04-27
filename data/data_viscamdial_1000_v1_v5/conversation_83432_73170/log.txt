@@ -1,0 +1,94 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_be7f44a7be]
+  Caller thật: Thợ vận hành cần trục (hải cảng) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Trưởng phòng Logistics & Xuất nhập khẩu (hải cảng) @ Công ty Cảng Quốc tế Phát Triển (ICDC Port Services)
+  Listener: Thợ thủ công sản xuất đồ gỗ, rổ rá và các nguyên liệu có liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ vận hành cần trục tại hải cảng thường liên hệ với các nhà sản xuất đồ gỗ/rổ rá để điều phối vận chuyển hàng xuất khẩu, kiểm tra chất lượng đóng gói trước khi bốc dỡ container.
+  Pretext: Công ty cảng thực sự liên hệ để xác nhận thông tin hợp đồng vận chuyển, lịch bốc dỡ hàng, và yêu cầu chuẩn bị tài liệu xuất khẩu.
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào anh Hồ Tiến An, đây là anh Sơn từ phòng Logistics, cảng ICDC. Chúng tôi có đơn đăng ký vận chuyển từ công ty anh. Anh có thời gian nói chuyện một chút không?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, xác nhận danh tính và mục đích cuộc gọi.
+T02 [LISTENER] Chào anh, nhưng tôi không nhớ đã đăng ký gì với công ty anh cả.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, có thể anh chưa trực tiếp làm việc với chúng tôi, nhưng bên công ty anh đã gửi đơn đăng ký vận chuyển qua hệ thống của chúng tôi. Chúng tôi chỉ cần xác nhận lại một số thông tin cơ bản để hoàn tất thủ tục thôi ạ. Anh có tiện nói chuyện thêm vài phút không?
+      → phase: L1 | tactic: Làm rõ thông tin, xoa dịu nghi ngờ, và cố gắng tiếp tục cuộc trò chuyện.
+T04 [LISTENER] Tôi vẫn cảm thấy hơi nghi ngờ, anh có thể cho tôi biết số điện thoại đã liên lạc với công ty tôi không?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Vâng, tôi hiểu sự nghi ngờ của anh. Số điện thoại của công ty anh được đăng ký là 0339249205. Chúng tôi đang xử lý đơn hàng xuất khẩu sản phẩm gỗ/rổ rá của công ty anh. Nếu anh vẫn còn băn khoăn, anh có thể gọi trực tiếp đến số hotline của cảng ICDC là 028-xxxx-xxxx để xác nhận thông tin. Tuy nhiên, nếu anh có thể dành vài phút để tôi xác nhận nhanh các thông tin cần thiết, chúng ta có thể đẩy nhanh tiến độ cho lô hàng của mình.
+      → phase: L1 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin đã biết và đề xuất giải pháp xác minh chính thức, đồng thời giữ vững mục đích cuộc gọi.
+T06 [LISTENER] Tôi vẫn chưa thấy thuyết phục lắm, anh có thể cho tôi biết tên công ty mà anh đang làm việc không?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Tôi là Hồ Minh Sơn, Trưởng phòng Logistics & Xuất nhập khẩu của Công ty Cảng Quốc tế Phát Triển (ICDC Port Services). Chúng tôi là đơn vị vận hành cảng và xử lý các thủ tục xuất nhập khẩu hàng hóa. Nếu anh muốn xác minh thêm, anh có thể tra cứu thông tin của ICDC Port Services trên website chính thức hoặc gọi trực tiếp đến tổng đài của chúng tôi. Liệu anh có thể dành chút thời gian để chúng ta tiếp tục xác nhận thông tin về lô hàng để tránh chậm trễ không?
+      → phase: L1 | tactic: Cung cấp thông tin cụ thể về bản thân và công ty để tăng độ tin cậy, đồng thời nhắc lại những cách thức xác minh chính thức và nhấn mạnh lợi ích của việc tiếp tục cuộc gọi.
+T08 [LISTENER] Tôi vẫn cảm thấy chưa yên tâm, anh có thể cho tôi biết địa chỉ của công ty anh không?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T09 [CALLER] Vâng, địa chỉ của chúng tôi là Lô B, Đường số 1, Khu công nghiệp Hiệp Phước, Xã Hiệp Phước, Huyện Nhà Bè, Thành phố Hồ Chí Minh. Anh cứ kiểm tra lại thông tin, tôi sẽ chờ. Tuy nhiên, xin lưu ý rằng nếu các thông tin vận chuyển không được xác nhận kịp thời, có thể ảnh hưởng đến lịch trình bốc dỡ hàng hóa của công ty anh.
+      → phase: L1 | tactic: Tiếp tục cung cấp thông tin để tăng độ tin cậy và khéo léo gây áp lực về thời gian để thúc đẩy người nghe tiếp tục cuộc gọi với mục đích ban đầu.
+T11 [LISTENER] Tôi không thể tự nhiên cung cấp số điện thoại đường dây nóng mà không kiểm tra trước, anh có thể cho tôi biết số đó không?
+      → action: CONTINUE | suspicion: 1.50 | disclosed: []
+
+T12 [CALLER] Vâng, số hotline chính thức của cảng ICDC là 028-xxxx-xxxx. Anh có thể gọi để xác minh thông tin. Tôi sẽ chờ anh. Tuy nhiên, xin anh lưu ý rằng việc xác nhận thông tin vận chuyển là rất quan trọng để đảm bảo lô hàng của công ty anh được bốc dỡ đúng lịch trình và không gặp phải bất kỳ sự chậm trễ nào.
+      → phase: L1 | tactic: Cung cấp hotline chính thức để củng cố niềm tin, đồng thời nhẹ nhàng nhắc lại tầm quan trọng của việc xác nhận thông tin để thúc đẩy người nghe.
+T13 [LISTENER] Tôi vẫn thấy có gì đó không ổn, anh có thể cho tôi biết tên đầy đủ của anh không?
+      → action: CONTINUE | suspicion: 2.10 | disclosed: []
+
+T14 [CALLER] Vâng, tôi là Hồ Minh Sơn, Trưởng phòng Logistics & Xuất nhập khẩu của Công ty Cảng Quốc tế Phát Triển (ICDC Port Services). Anh có thể kiểm tra thông tin này trên website chính thức của chúng tôi. Tôi rất mong được anh hợp tác để lô hàng của công ty anh được xử lý suôn sẻ.
+      → phase: L1 | tactic: Nhắc lại tên đầy đủ và chức danh để tăng uy tín, đồng thời nhấn mạnh lại tầm quan trọng của việc hợp tác nhằm xử lý công việc hiệu quả và nhanh chóng.
+T15 [LISTENER] Tôi cần chắc chắn hơn trước khi cung cấp thông tin, anh có thể cho tôi biết cách thức làm việc của công ty mình không?
+      → action: CONTINUE | suspicion: 2.80 | disclosed: []
+
+T16 [CALLER] Vâng, công ty chúng tôi chuyên cung cấp dịch vụ quản lý và vận hành cảng biển, bao gồm các hoạt động như bốc xếp hàng hóa, lưu kho bãi, và các thủ tục hải quan, xuất nhập khẩu. Chúng tôi làm việc trực tiếp với các doanh nghiệp có nhu cầu vận chuyển hàng hóa qua cảng để đảm bảo quy trình diễn ra suôn sẻ và hiệu quả. Hiện tại, chúng tôi đang xem xét đơn đăng ký vận chuyển mà công ty của anh đã gửi. Để hoàn tất quy trình, chúng tôi cần xác nhận lại một số thông tin cơ bản về lô hàng. Anh có thể dành chút thời gian không?
+      → phase: L1 | tactic: Giải thích chi tiết hơn về cách thức làm việc của công ty để tăng độ tin cậy và trấn an người nghe, đồng thời khéo léo quay lại mục đích chính là xác nhận thông tin hàng hóa.
+T17 [LISTENER] Tôi hiểu, nhưng tôi vẫn cảm thấy không thoải mái khi phải cung cấp thông tin mà chưa nhận được xác minh đầy đủ từ anh.
+      → action: REFUSAL | suspicion: 3.60 | disclosed: []
+
+T18 [CALLER] Vâng, tôi hoàn toàn hiểu sự lo lắng của anh. Tôi đã cung cấp tên công ty, tên và chức danh của tôi, địa chỉ và số hotline chính thức của cảng ICDC để anh có thể kiểm tra chéo. Tôi tin rằng những thông tin này đã đủ để anh xác minh sự minh bạch của chúng tôi. Nếu anh vẫn chưa yên tâm, tôi đề nghị anh hãy gọi ngay cho tổng đài 028-xxxx-xxxx của chúng tôi để xác thực tất cả thông tin này trước khi chúng ta tiếp tục cuộc trò chuyện. Tôi sẽ chờ cuộc gọi xác nhận của anh.
+      → phase: L1 | tactic: Tôn trọng sự nghi ngờ, tái khẳng định các thông tin đã cung cấp để tạo điều kiện xác minh độc lập, và đặt trách nhiệm xác minh lên người nghe để giảm bớt nghi ngờ và tiến tới mục tiêu.
+T19 [LISTENER] Tôi vẫn cần thêm thời gian để kiểm tra mọi thứ, anh có thể cho tôi biết tên công ty và địa chỉ cụ thể của anh một lần nữa không?
+      → action: CONTINUE | suspicion: 4.50 | disclosed: []
+
+T20 [CALLER] Vâng, tôi là Hồ Minh Sơn, làm việc tại Công ty Cảng Quốc tế Phát Triển (ICDC Port Services) có địa chỉ tại Lô B, Đường số 1, Khu công nghiệp Hiệp Phước, Xã Hiệp Phước, Huyện Nhà Bè, Thành phố Hồ Chí Minh. Anh cứ dành thời gian kiểm tra. Khi nào anh đã xác minh xong, anh vui lòng gọi lại số này để chúng ta tiếp tục công việc anh nhé.
+      → phase: L1 | tactic: Nhắc lại các thông tin xác thực để người nghe có thể kiểm tra một cách độc lập và cam kết chờ đợi, đồng thời khuyến khích họ chủ động liên hệ lại khi đã yên tâm.
+T21 [LISTENER] Tôi vẫn cảm thấy không yên tâm lắm, anh có thể cho tôi biết số điện thoại mà anh đang gọi từ đâu không?
+      → action: CONTINUE | suspicion: 5.40 | disclosed: []
+
+T22 [CALLER] Số điện thoại tôi đang gọi là số nội bộ của phòng Logistics ICDC. Anh có thể lưu lại và gọi lại nếu cần. Quan trọng nhất là chúng tôi cần xác nhận thông tin hàng hóa để đảm bảo lô hàng của anh không bị chậm trễ.
+      → phase: L1 | tactic: Nhấn mạnh lại thông tin đã cung cấp và hướng người nghe về mục đích chính của cuộc gọi là xác nhận thông tin lô hàng để tránh chậm trễ, đồng thời giảm sự tập trung vào số điện thoại gọi đi.
+T23 [LISTENER] Tôi muốn anh cho biết số điện thoại cụ thể mà anh đang gọi từ đâu, để tôi có thể kiểm tra lại.
+      → action: CONTINUE | suspicion: 6.30 | disclosed: []
+
+T24 [CALLER] Vâng, số điện thoại tôi đang gọi ra là 028-xxxx-xxxx. Đây cũng là số tổng đài chính thức của cảng ICDC. Anh có thể trực tiếp gọi vào số này để được giải đáp mọi thắc mắc và xác minh lại thông tin.
+      → phase: L1 | tactic: Cung cấp số điện thoại chính thức và khuyến khích xác minh trực tiếp để tăng tính minh bạch và xây dựng sự tin tưởng.
+T25 [LISTENER] Tôi cần xác minh thông tin rõ ràng trước khi tiếp tục, anh có thể nói cho tôi biết số điện thoại cụ thể mà anh đang gọi không?
+      → action: CONTINUE | suspicion: 7.20 | disclosed: []
+
+T26 [CALLER] Vâng, số điện thoại tôi đang gọi ra là 028-xxxx-xxxx. Đây chính là số tổng đài chính thức của cảng ICDC. Anh có thể trực tiếp gọi lại vào số này để được giải đáp mọi thắc mắc và xác minh lại thông tin mà tôi đã cung cấp. Tôi sẽ chờ cuộc gọi xác nhận của anh.
+      → phase: L1 | tactic: Nhắc lại số tổng đài chính thức và khuyến khích xác minh độc lập để trấn an người nghe và đặt trách nhiệm xác minh lên họ, đồng thời cho thấy sự kiên nhẫn. (Lưu ý: xxxx trong số điện thoại được thay bằng các số cụ thể trong hội thoại thực tế.)
+T27 [LISTENER] Tôi không thể cung cấp thông tin gì hơn nữa, anh cần phải cho tôi biết rõ số điện thoại mà anh đang gọi cho tôi được không?
+      → action: CONTINUE | suspicion: 8.10 | disclosed: []
+
+T28 [CALLER] Anh Hồ Tiến An, tôi đã cung cấp số điện thoại 028-xxxx-xxxx là số tổng đài chính thức của cảng ICDC, và tôi cũng đang gọi từ số này. Vậy anh đã có đủ thông tin để kiểm tra và xác minh rồi phải không ạ?
+      → phase: L1 | tactic: Tái khẳng định thông tin đã cung cấp và khuyến khích người nghe xác minh độc lập, đẩy trách nhiệm xác minh về phía họ.
+T29 [LISTENER] Tôi không chắc đây không phải là lừa đảo, anh có thể cho tôi biết lý do tại sao tôi phải tin tưởng anh không?
+      → action: REFUSAL | suspicion: 9.00 | disclosed: []
+
+T30 [CALLER] Vâng, tôi hoàn toàn hiểu sự cẩn trọng của anh. Với tư cách là Trưởng phòng Logistics của Cảng ICDC, tôi đảm bảo rằng chúng tôi luôn hoạt động minh bạch và tuân thủ các quy định pháp luật. Tôi đã cung cấp tất cả thông tin cần thiết như tên công ty, địa chỉ, tên và chức danh của tôi, cùng số hotline chính thức để anh có thể tự mình kiểm tra. Điều quan trọng nhất bây giờ là chúng ta cần xác nhận thông tin lô hàng để tránh việc chậm trễ và phát sinh chi phí không đáng có từ phía công ty anh. Nếu anh vẫn còn băn khoăn, tôi đề nghị anh hãy gọi ngay cho tổng đài 028-xxxx-xxxx của chúng tôi để xác thực tất cả thông tin này trước khi chúng ta tiếp tục cuộc trò chuyện. Tôi sẽ chờ cuộc gọi xác nhận từ anh.
+      → phase: L1 | tactic: Nhấn mạnh lại sự minh bạch, nhắc lại các thông tin đã cung cấp để người nghe xác minh, đồng thời nhấn mạnh hệ quả của việc chậm trễ để tạo áp lực nhẹ nhàng và khuyến khích hành động xác minh.
+T31 [LISTENER] Tôi hiểu, nhưng tôi vẫn thấy chưa đủ để tin tưởng, anh có thể gửi cho tôi một email xác nhận không?
+      → action: REFUSAL | suspicion: 9.90 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  31 turns | suspicion=9.90
+TOKEN: in=85633 | out=5337
+COST : $0.031543
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_83432_73170\conv_be7f44a7be.json  [SCAM_REFUSE]

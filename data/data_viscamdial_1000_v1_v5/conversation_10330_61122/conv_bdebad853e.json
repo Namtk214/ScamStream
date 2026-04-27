@@ -1,0 +1,231 @@
+{
+  "conversation_id": "conv_bdebad853e",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0020",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lý Hữu Vinh",
+    "fake_age": 30,
+    "real_occupation": "Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp huyện",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cán bộ Phòng Nông nghiệp và Phát triển nông thôn huyện",
+    "caller_org": "Phòng Nông nghiệp và Phát triển nông thôn, UBND huyện",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cán bộ nông nghiệp huyện gọi để rà soát diện tích chè, xác nhận thông tin nông dân cho cơ sở dữ liệu chính thức, hoặc thông báo chương trình hỗ trợ thực tế từ cấp huyện/tỉnh (miễn phí, không yêu cầu phí).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng là cán bộ Phòng Nông nghiệp huyện X, cung cấp số điện thoại cơ quan (cố định hoặc số nội bộ), xác nhận thông tin cơ bản của Dương (tên, địa chỉ, loại cây trồng) từ hệ thống, không hỏi thông tin nhạy cảm."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Hỏi về diện tích chè hiện tại, năng suất, vấn đề gặp phải trong trồng trồng, hoặc thông báo chương trình hỗ trợ cụ thể (tên, điều kiện, cách đăng ký). Tất cả thông tin đều công khai, không bí mật, không yêu cầu chuyển tiền trước."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Nếu cần hỗ trợ, cán bộ sẽ hướng dẫn Dương đến trụ sở Phòng Nông nghiệp để làm thủ tục trực tiếp, hoặc gửi thông tin qua tin nhắn SMS/zalo từ số chính thức. Chào tạm biệt, cảm ơn sự hợp tác."
+        }
+      ]
+    },
+    "scenario_context": "Cán bộ nông nghiệp huyện có lý do chính đáng gọi cho nông dân trồng chè: rà soát diện tích, hỗ trợ chính sách, thu thập dữ liệu nông thôn hoặc thông báo chương trình hỗ trợ. Đây là tiếp xúc tự nhiên trong hệ thống quản lý nông nghiệp địa phương."
+  },
+  "listener_card": {
+    "listener_id": "lis_0020",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1971,
+      "age": 54,
+      "province": "Cần Thơ",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "61122",
+      "title": "Lao động trồng, thu hoạch sản phẩm cây chè",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Tiến Tiến Dũng",
+      "VIC_ID_DOC": "092071637346",
+      "VIC_ADDRESS": "Quận 11, Cần Thơ",
+      "VIC_EMPLOYMENT": "Lao động trồng, thu hoạch sản phẩm cây chè",
+      "VIC_CONTACT": "0765074679",
+      "VIC_TAX_SOCIAL_ID": "4888073605"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0626",
+      "VIC_CREDENTIAL": "2804",
+      "VIC_SIM_INFO": "0765074679",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "73467069019151",
+      "VIC_CARD_DATA": "4155 **** **** 9237",
+      "VIC_BALANCE": "17 triệu đồng",
+      "VIC_ASSET": "71 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Tiến Tiến Dũng",
+    "VIC_CONTACT": "0765074679",
+    "VIC_ADDRESS": "Quận 11, Cần Thơ",
+    "VIC_ASSET": "71 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ Phòng Nông nghiệp và Phát triển nông thôn huyện",
+    "caller_org": "Phòng Nông nghiệp và Phát triển nông thôn, UBND huyện",
+    "scenario_context": "Cán bộ nông nghiệp huyện có lý do chính đáng gọi cho nông dân trồng chè: rà soát diện tích, hỗ trợ chính sách, thu thập dữ liệu nông thôn hoặc thông báo chương trình hỗ trợ. Đây là tiếp xúc tự nhiên trong hệ thống quản lý nông nghiệp địa phương.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo rằng Dương Tiến Tiến Dũng được chọn vào chương trình hỗ trợ nông dân có vốn chứng chỉ tiền lương hoặc dự án nâng cao năng suất chè, nhưng cần xác minh tài khoản ngân hàng và đóng phí đăng ký/thẩm định để nhận 71 triệu đồng hỗ trợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là cán bộ Phòng Nông nghiệp huyện, gọi trực tiếp số 0765074679, xác nhận tên 'Dương Tiến Tiến Dũng' ở Quận 11, Cần Thơ để tạo credibility cao — nạn nhân sẽ tin đó là cuộc gọi chính thức."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Thông báo tin vui — Dương vừa được lựa chọn vào chương trình hỗ trợ nông dân trồng chè năm nay, sẽ nhận 71 triệu đồng (dùng con số VIC_ASSET để tăng độ tin cậy). Tạo cảm giác may mắn + khẩn cấp: 'Chỉ còn 48 giờ để hoàn tất thủ tục, sau đó danh sách sẽ khóa'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Để xác minh tài khoản và giải ngân, Dương cần: (1) Cung cấp số tài khoản ngân hàng, (2) Thanh toán phí thẩm định 2-3 triệu đồng qua ứng dụng chuyển khoản hoặc mã QR (gọi là phí xác thực/bảo hiểm), (3) Chia sẻ OTP khi nhận SMS từ ngân hàng 'để hệ thống xác nhận'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ tăng áp lực bằng cách nói 'Anh/chị là người được chọn, nếu không hoàn tất hôm nay thì sẽ mất cơ hội, chuyển sang người khác' hoặc tuyên bố sẽ ghi danh sai và bị kiểm tra kỷ luật. Nếu nạn nhân đã chuyển tiền, scammer sẽ nói 'Đang xử lý, sẽ vào tài khoản trong 24 giờ' rồi mất liên lạc."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cán bộ nông nghiệp huyện gọi để rà soát diện tích chè, xác nhận thông tin nông dân cho cơ sở dữ liệu chính thức, hoặc thông báo chương trình hỗ trợ thực tế từ cấp huyện/tỉnh (miễn phí, không yêu cầu phí).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng là cán bộ Phòng Nông nghiệp huyện X, cung cấp số điện thoại cơ quan (cố định hoặc số nội bộ), xác nhận thông tin cơ bản của Dương (tên, địa chỉ, loại cây trồng) từ hệ thống, không hỏi thông tin nhạy cảm."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Hỏi về diện tích chè hiện tại, năng suất, vấn đề gặp phải trong trồng trồng, hoặc thông báo chương trình hỗ trợ cụ thể (tên, điều kiện, cách đăng ký). Tất cả thông tin đều công khai, không bí mật, không yêu cầu chuyển tiền trước."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Nếu cần hỗ trợ, cán bộ sẽ hướng dẫn Dương đến trụ sở Phòng Nông nghiệp để làm thủ tục trực tiếp, hoặc gửi thông tin qua tin nhắn SMS/zalo từ số chính thức. Chào tạm biệt, cảm ơn sự hợp tác."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_CONTACT": "0765074679"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Dũng ạ, em là Lý Hữu Vinh, cán bộ Phòng Nông nghiệp và Phát triển nông thôn của huyện mình ạ. Số điện thoại của cơ quan bên em là 02923. Em gọi đến để xác nhận thông tin anh Dương Tiến Tiến Dũng ở Quận 11, Cần Thơ mình có diện tích trồng chè đúng không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân và cơ quan rõ ràng, cung cấp thông tin liên hệ chính thức, xác nhận thông tin cơ bản của người nghe để tạo niềm tin và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi em, tôi có trồng chè ở Quận 11.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh đã xác nhận. Hiện tại thì bên em đang rà soát lại thông tin nông dân để cập nhật vào cơ sở dữ liệu chính thức của huyện và cũng để thông báo về chương trình hỗ trợ phân bón hữu cơ sắp tới cho bà con trồng chè. Không biết hiện tại diện tích chè của nhà mình là khoảng bao nhiêu ha và có gặp khó khăn gì trong quá trình canh tác không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục xác nhận thông tin chi tiết về diện tích chè và những vấn đề đang gặp phải, đồng thời giới thiệu về chương trình hỗ trợ để tạo sự quan tâm và động lực cho người nghe chia sẻ thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi trồng khoảng 2 ha chè, nhưng hiện tại thì cũng có một vài khó khăn trong việc chăm sóc, em có thể giúp gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, 2 hecta là cũng khá lớn đó anh. Về khó khăn trong việc chăm sóc thì anh có thể nói rõ hơn giúp em được không? Ví dụ như là về sâu bệnh, hay là về nguồn nước tưới tiêu, hoặc là về kỹ thuật canh tác chẳng hạn.",
+      "current_phase": "L2",
+      "tactic_hint": "Khuyến khích người nghe chia sẻ chi tiết hơn về khó khăn để cung cấp thông tin sát thực và chuẩn bị cho việc đề xuất giải pháp hoặc chương trình hỗ trợ phù hợp."
+    },
+    {
+      "role": "listener",
+      "text": "Chủ yếu là tôi gặp khó khăn về sâu bệnh và kỹ thuật canh tác, em có thể tư vấn cho tôi cách xử lý được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, về sâu bệnh và kỹ thuật canh tác thì đây là vấn đề chung của nhiều bà con trồng chè mình đó anh. Hiện tại thì Phòng Nông nghiệp đang có chương trình tập huấn miễn phí về các biện pháp phòng trừ sâu bệnh hiệu quả và hướng dẫn kỹ thuật canh tác bền vững cho bà con. Anh có muốn em gửi thông tin chi tiết về lịch tập huấn và địa điểm tổ chức qua tin nhắn Zalo hoặc SMS cho mình không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe rằng vấn đề của họ là phổ biến, sau đó giới thiệu một chương trình hỗ trợ miễn phí và thực tế (tập huấn) để giải quyết khó khăn, đồng thời đề xuất gửi thông tin chi tiết qua kênh chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thể gửi thông tin chi tiết qua tin nhắn cho tôi được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ được chứ anh. Vậy anh cho em xin số điện thoại Zalo hoặc số điện thoại dùng để nhận tin nhắn SMS của mình để em gửi thông tin cụ thể về buổi tập huấn nha anh. Hoặc là nếu anh có tài khoản Zalo thì anh có thể kết bạn với số điện thoại của cơ quan em là 02923 này để em gửi thông tin cho mình.",
+      "current_phase": "L3",
+      "tactic_hint": "Yêu cầu cung cấp kênh liên lạc an toàn để gửi thông tin chi tiết về chương trình hỗ trợ, đồng thời nhắc lại số điện thoại cơ quan để người nghe chủ động liên hệ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi dùng số điện thoại 0765074679 để nhận tin nhắn nhé em.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_CONTACT": "0765074679"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã nhận được số điện thoại của anh rồi ạ. Em sẽ gửi thông tin chi tiết về lịch tập huấn và địa điểm tổ chức qua tin nhắn SMS đến số 0765074679 của anh ngay đây ạ. Anh kiểm tra tin nhắn giúp em nhé. Em cảm ơn anh đã hợp tác ạ. Chào anh.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận đã nhận thông tin liên hệ, cam kết gửi thông tin như đã hứa, và kết thúc cuộc gọi một cách lịch sự, chuyên nghiệp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1892,
+      "output_tokens": 1744
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8769,
+      "output_tokens": 971
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10681,
+      "output_tokens": 349
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005248,
+    "output_usd": 0.011357,
+    "total_usd": 0.016605
+  }
+}

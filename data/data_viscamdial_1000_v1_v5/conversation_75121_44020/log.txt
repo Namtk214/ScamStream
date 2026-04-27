@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c89886b778]
+  Caller thật: Thợ làm bánh (chung) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên giao hàng / Người đại diện từ dịch vụ gửi thư bưu điện @ cá nhân / Công ty giao hàng tự do
+  Listener: Nhân viên phân loại và vận chuyển thư (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Thợ làm bánh thường gửi bánh/sản phẩm qua dịch vụ bưu điện hoặc giao hàng. Nhân viên phân loại vận chuyển thư là người xử lý những gói hàng này. Cuộc gọi giữa họ là tự nhiên khi có vấn đề về gói hàng, xác nhận địa chỉ, hoặc thanh toán cước phí.
+  Pretext: Gọi thông báo gói hàng bị kẹt ở bưu cục, cần xác nhận thông tin và thanh toán cước phí phát sinh hoặc lệ phí kho bãi. Sử dụng tên đầy đủ và số điện thoại nạn nhân để tạo tin cậy ban đầu.
+  Listener traits: ['cẩn thận và cảnh giác', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Alo, tôi là Mai Xuân Cường, nhân viên bưu điện đây ạ. Tôi gọi để xác nhận với chị Tạ Thu Nhi, số điện thoại 0845172039 phải không ạ? Bên tôi có một bưu kiện là gói bánh từ một cửa hàng bánh gửi đến địa chỉ của chị.
+      → phase: S1 | tactic: Xưng danh và xác nhận thông tin cơ bản để tạo tin cậy ban đầu.
+T02 [LISTENER] Em thấy có điều gì đó không đúng, anh gọi từ số mấy ạ?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T03 [CALLER] Vâng, tôi gọi từ số 024730XXXXX, đây là số tổng đài của bên bưu điện ạ. Chị có đang là nhân viên phân loại và vận chuyển thư không ạ? Tôi cần xác nhận thông tin này để xử lý gói hàng cho chị ạ.
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin số tổng đài (mặc dù giả mạo) và tiếp tục sử dụng thông tin cá nhân đã biết để củng cố độ tin cậy.
+T04 [LISTENER] Em là nhân viên bưu điện, nhưng em vẫn thấy có điều gì đó chưa rõ, anh có thể cho em biết tên của gói hàng không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T05 [CALLER] Vâng, chị Nhi làm nhân viên ở bưu điện thì chắc cũng hiểu rõ quy trình bên tôi. Hiện tại, gói bánh này không có tên người gửi cụ thể, chỉ ghi là 'Gói bánh đặc biệt' và địa chỉ của chị. Vấn đề là gói hàng này đã bị kẹt ở kho hôm nay là ngày cuối cùng rồi. Nếu không xử lý gấp, phí lưu kho sẽ rất cao đó ạ.
+      → phase: S2 | tactic: Tạo cảm giác khẩn cấp và đe dọa phí phát sinh để thúc đẩy nạn nhân hành động.
+T06 [LISTENER] Vậy anh có thể xác nhận lại cho em địa chỉ gửi hàng chính xác được không ạ?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T07 [CALLER] Vâng, địa chỉ nhận hàng là XXX Trần Hưng Đạo, phường XXX, quận Ba Đình, Hà Nội. Vì đây là gói hàng thực phẩm nên thời gian lưu kho rất hạn chế. Tôi cần chị sớm xác nhận để giải quyết, nếu không gói hàng sẽ bị hủy và chị sẽ phải chịu chi phí phát sinh đó.
+      → phase: S2 | tactic: Xác nhận địa chỉ cụ thể để tăng độ tin cậy và tiếp tục nhấn mạnh tính cấp bách của gói hàng thực phẩm, đe dọa hậu quả nếu không xử lý nhanh.
+T08 [LISTENER] Em vẫn chưa thấy rõ ràng lắm, nếu không có thông tin người gửi cụ thể thì làm sao em biết gói hàng này là của ai ạ?
+      → action: CONTINUE | suspicion: 0.90 | disclosed: []
+
+T09 [CALLER] Tôi hiểu sự băn khoăn của chị. Tuy nhiên, đây là gói hàng ghi tên và số điện thoại của chị. Theo quy định của bưu điện, chúng tôi không thể tự ý mở gói hàng để kiểm tra người gửi nếu không có sự đồng ý của người nhận. Bây giờ chị cần thanh toán phí kho bãi tạm thời 350.000 đồng để giải phóng gói hàng, sau đó chúng tôi sẽ phát ngay cho chị và chị có thể kiểm tra trực tiếp với người giao hàng.
+      → phase: S3 | tactic: Xoa dịu nghi ngờ bằng cách viện dẫn quy định, sau đó chuyển sang yêu cầu hành động cụ thể là thanh toán phí kho bãi để giải quyết vấn đề.
+T11 [LISTENER] Em rất tiếc, nhưng nếu không có thông tin người gửi cụ thể thì em không thể thanh toán phí kho bãi được ạ.
+      → action: REFUSAL | suspicion: 1.00 | disclosed: []
+
+T12 [CALLER] Vậy thì trường hợp này rất khó cho bên tôi, chị ạ. Nếu hôm nay chị không thanh toán phí lưu kho để nhận lại gói hàng thì theo quy định, gói hàng sẽ bị hủy bỏ và chị vẫn phải chịu toàn bộ chi phí lưu kho phát sinh. Chị có chắc chắn là chị muốn từ chối gói hàng này không ạ?
+      → phase: S4 | tactic: Thử lại bằng cách nhấn mạnh hậu quả tài chính và quyền hạn của bưu điện, tạo áp lực để nạn nhân cân nhắc lại quyết định từ chối.
+T13 [LISTENER] Em cảm thấy anh đang cố gắng gây áp lực cho em, nhưng em vẫn không thể thanh toán mà không rõ thông tin người gửi ạ.
+      → action: REFUSAL | suspicion: 2.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  13 turns | suspicion=2.00
+TOKEN: in=24541 | out=2816
+COST : $0.015698
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_75121_44020\conv_c89886b778.json  [SCAM_REFUSE]

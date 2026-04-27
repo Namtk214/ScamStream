@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_67520080c5]
+  Caller thật: Người vận hành nhà máy lọc dầu và khí tự nhiên (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Chuyên viên Quan hệ Công chúng & Tuân thủ Quy định - Nhà máy Lọc dầu và Khí tự nhiên @ Tập đoàn Dầu khí Quốc gia / Chi nhánh Nhà máy Lọc dầu khu vực
+  Listener: Vụ trưởng, Phó Vụ trưởng và tương đương cấp trung ương (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhà máy lọc dầu cần báo cáo định kỳ cho các cơ quan quản lý cấp trung ương về môi trường, an toàn lao động, và tuân thủ quy định. Vụ trưởng/Phó Vụ trưởng là người chủ trì xử lý các vấn đề này từ phía chính phủ, do đó cuộc gọi từ nhà máy để báo cáo hoặc xử lý sự cố là hợp lý.
+  Pretext: Scammer xưng là chuyên viên từ nhà máy, gọi vì phát hiện 'bất thường trong hệ thống quản lý cấp trung ương' liên quan đến danh tính của Vụ trưởng Đinh Hồng Chi (dùng VIC_FULLNAME). Yêu cầu xác minh thông tin cá nhân để 'bảo vệ tài khoản' hoặc 'cập nhật hệ thống báo cáo điện tử'.
+  Listener traits: ['nghi ngờ nhưng lịch sự', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào Vụ trưởng Đinh Hồng Chi, em là chuyên viên Bùi Gia Bình từ Nhà máy Lọc dầu, phòng Tuân thủ Quy định. Bên em vừa phát hiện bất thường trong hệ thống báo cáo môi trường của cơ quan quản lý. Số điện thoại 0995014880 này đã được đăng ký trong hệ thống của chúng em ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân, tổ chức, lý do cuộc gọi và dùng thông tin VIC_FULLNAME + VIC_CONTACT để tạo tin cậy ban đầu.
+T02 [LISTENER] Em nói vậy thì tôi có hơi băn khoăn, em có thể cho biết thêm về sự bất thường đó không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, dạ thưa chị, chúng em phát hiện có người không xác định đang cố truy cập hồ sơ cá nhân của Vụ trưởng trong hệ thống quản lý dữ liệu môi trường cấp trung ương. Để bảo vệ dữ liệu nhạy cảm và tuân thủ quy định bảo mật, chúng em cần chị xác minh ngay bây giờ. Nếu không xác minh trong 15 phút, tài khoản của chị có thể bị khóa tạm thời ạ.
+      → phase: S2 | tactic: Khai thác tâm lý khẩn cấp và lo lắng bằng cách thông báo về hành vi truy cập trái phép và hậu quả nếu không hợp tác.
+T04 [LISTENER] Tôi hiểu vấn đề, nhưng em có thể cho tôi biết cách thức xác minh và số điện thoại mà em gọi đến không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để xác minh nhanh nhất và an toàn nhất, em cần chị cung cấp mã OTP vừa được gửi đến số điện thoại này của chị. Hoặc, nếu chị muốn nhanh hơn nữa, chị có thể cung cấp số CMND/CCCD 074161898091 để chúng em đối chiếu trực tiếp trong hệ thống trung ương ạ.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể (OTP hoặc CMND/CCCD) để đạt mục tiêu otp_extraction, cung cấp VIC_ID_DOC để tạo thêm tin cậy.
+T06 [LISTENER] Tôi không thực sự thoải mái khi cung cấp thông tin nhạy cảm như vậy, em có thể cho tôi biết thêm về cách thức xác minh khác không?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T07 [CALLER] Dạ vâng, em hiểu sự e ngại của chị ạ. Tuy nhiên, tình hình khá khẩn cấp. Nếu chị không xác minh trong vòng 15 phút nữa, hệ thống sẽ tự động khóa tài khoản để đảm bảo an toàn thông tin theo quy định bảo mật cấp trung ương. Điều này có thể ảnh hưởng đến các báo cáo môi trường quan trọng mà chị đang phụ trách ạ.
+      → phase: S4 | tactic: Xoa dịu sự nghi ngờ, tái khẳng định tính khẩn cấp và hậu quả tiêu cực nếu không hợp tác, đồng thời nhắc lại vai trò quan trọng của nạn nhân để tạo áp lực.
+T08 [LISTENER] Tôi rất lo lắng cho tài khoản của mình, nhưng tôi vẫn cần thêm thông tin xác thực trước khi cung cấp bất kỳ dữ liệu nào, em có thể cho tôi biết chính xác em gọi từ số mấy không?
+      → action: CONTINUE | suspicion: 1.70 | disclosed: []
+
+T09 [CALLER] Dạ, em đang gọi cho chị từ số tổng đài nội bộ của Nhà máy Lọc dầu, số này không hiển thị ra bên ngoài ạ. Chị cứ yên tâm, đây là cuộc gọi bảo mật. Để chị không bị gián đoạn công việc, em xin phép nhắc lại, nếu chị không xác minh trong vòng 10 phút nữa, tài khoản sẽ bị khóa và việc này sẽ được báo cáo là không tuân thủ quy định bảo mật dữ liệu cấp trung ương. Em nghĩ điều này sẽ không tốt cho hồ sơ của chị đâu ạ.
+      → phase: S4 | tactic: Xoa dịu nghi ngờ về số điện thoại, sau đó tăng cường áp lực bằng cách nhắc lại hậu quả pháp lý/hành chính và ảnh hưởng đến danh tiếng/hồ sơ cá nhân của nạn nhân.
+T11 [LISTENER] Tôi vẫn cần số điện thoại cụ thể của đường dây nóng để kiểm tra lại, em có thể cung cấp cho tôi được không?
+      → action: CONTINUE | suspicion: 2.70 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  11 turns | suspicion=2.70
+TOKEN: in=21076 | out=3033
+COST : $0.016579
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_31340_15130\conv_67520080c5.json  [SCAM_EXPOSE]

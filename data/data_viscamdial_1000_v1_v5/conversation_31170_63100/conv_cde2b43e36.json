@@ -1,0 +1,241 @@
+{
+  "conversation_id": "conv_cde2b43e36",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0057",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trần Minh Cường",
+    "fake_age": 30,
+    "real_occupation": "Kỹ thuật viên khai thác mỏ và luyện kim",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên kinh doanh vật liệu xây dựng và phân bón",
+    "caller_org": "Công ty cung cấp vật liệu nông nghiệp (hoặc thương lái tự do)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên kinh doanh thực sự từ công ty cung cấp vật liệu nông nghiệp gọi để giới thiệu sản phẩm phân bón mới, lấy thông tin nhu cầu, và thảo luận về giá cả, điều khoản thanh toán hợp lệ (hóa đơn, giao hàng sau thanh toán).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào chị Cao Thu Thúy, tôi là Tuấn, nhân viên phòng kinh doanh của công ty Minh Phát. Chúng tôi cung cấp phân bón cho các nông dân khu vực này. Chị có thời gian nghe giới thiệu một chút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi có dòng sản phẩm phân bón NPK và phân hữu cơ chất lượng cao, giá cạnh tranh. Chị hiện đang trồng cây gì? Nhu cầu phân bón hàng tháng của chị bao nhiêu? Chúng tôi có thể tính giá cho chị và gửi báo giá chi tiết qua tin nhắn.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Được ạ, tôi sẽ gửi bảng giá và danh sách sản phẩm cho chị qua SMS. Chị xem rồi liên hệ lại cho tôi để xác nhận đơn hàng. Chúng tôi sẽ gửi hóa đơn và giao hàng theo địa chỉ của chị. Cảm ơn chị đã nghe giới thiệu. Chúc chị làm ăn tốt.'"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên khai thác mỏ có kiến thức về khoáng chất, phân bón từ tro xỉ công nghiệp. Người nông dân cần phân bón, vôi, khoáng chất để cải t良đất. Điểm giao thoa: đó là dây chuyền cung cấp hợp tác tự nhiên giữa ngành khai thác và nông nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0057",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1992,
+      "age": 33,
+      "province": "Quảng Nam",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "63100",
+      "title": "Lao động trồng trọt tự cung tự cấp",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Cao Thu Thúy",
+      "VIC_ID_DOC": "049192661194",
+      "VIC_ADDRESS": "Huyện 12, Quảng Nam",
+      "VIC_EMPLOYMENT": "Lao động trồng trọt tự cung tự cấp",
+      "VIC_CONTACT": "0334087463",
+      "VIC_TAX_SOCIAL_ID": "3642860829"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9056",
+      "VIC_CREDENTIAL": "949707",
+      "VIC_SIM_INFO": "0334087463",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0565374918376",
+      "VIC_CARD_DATA": "4238 **** **** 1760",
+      "VIC_BALANCE": "81 triệu đồng",
+      "VIC_ASSET": "207 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Cao Thu Thúy",
+    "VIC_CONTACT": "0334087463",
+    "VIC_ASSET": "207 triệu đồng",
+    "VIC_CARD_DATA": "4238 **** **** 1760",
+    "VIC_BALANCE": "81 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh vật liệu xây dựng và phân bón",
+    "caller_org": "Công ty cung cấp vật liệu nông nghiệp (hoặc thương lái tự do)",
+    "scenario_context": "Kỹ thuật viên khai thác mỏ có kiến thức về khoáng chất, phân bón từ tro xỉ công nghiệp. Người nông dân cần phân bón, vôi, khoáng chất để cải t良đất. Điểm giao thoa: đó là dây chuyền cung cấp hợp tác tự nhiên giữa ngành khai thác và nông nghiệp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo có chương trình khuyến mãi phân bón cao cấp với giá ưu đãi, cần thanh toán trước để giữ chỗ. Sử dụng tên gọi của nạn nhân để tạo tin cậy rằng họ đã được gợi ý bởi người quen.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chị Cao Thu Thúy phải không? Tôi là Tuấn từ công ty cung cấp phân bón Minh Phát. Anh Sơn (hàng xóm chị) đã giới thiệu chị cho tôi, nói chị đang trồng trọt cần phân bón chất lượng cao.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + khẩn cấp: 'Hiện tại công ty có chương trình ưu đãi đặc biệt: phân bón nhập khẩu Nhật giá chỉ 2.5 triệu/bao (thường 4.5 triệu). Nhưng chỉ còn 10 bao, hôm nay là ngày cuối cùng. Chị cần mấy bao? Chị có thể chuyển khoản trước để tôi giữ chỗ, ngày mai giao hàng tại nhà.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị chuyển 15 triệu cho tôi trước nhé. Tôi cho chị số tài khoản: [số tài khoản scammer]. Chị chuyển xong gửi tin nhắn cho tôi, tôi sắp xếp xe giao hàng chiều nay.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân đồng ý chuyển tiền: 'Cảm ơn chị. Tôi vừa nhận tiền. Tôi sẽ liên hệ lại ngày mai về giờ giao hàng.' [Rồi mất liên lạc]. Nếu nạn nhân nghi ngờ: 'Chị cứ yên tâm, tôi là nhân viên chính thức, có thẻ công ty. Chị cần tôi gửi ảnh thẻ không? Hoặc chị gọi lại số công ty để xác nhận.' [Cung cấp số hotline giả]"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên kinh doanh thực sự từ công ty cung cấp vật liệu nông nghiệp gọi để giới thiệu sản phẩm phân bón mới, lấy thông tin nhu cầu, và thảo luận về giá cả, điều khoản thanh toán hợp lệ (hóa đơn, giao hàng sau thanh toán).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào chị Cao Thu Thúy, tôi là Tuấn, nhân viên phòng kinh doanh của công ty Minh Phát. Chúng tôi cung cấp phân bón cho các nông dân khu vực này. Chị có thời gian nghe giới thiệu một chút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi có dòng sản phẩm phân bón NPK và phân hữu cơ chất lượng cao, giá cạnh tranh. Chị hiện đang trồng cây gì? Nhu cầu phân bón hàng tháng của chị bao nhiêu? Chúng tôi có thể tính giá cho chị và gửi báo giá chi tiết qua tin nhắn.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Được ạ, tôi sẽ gửi bảng giá và danh sách sản phẩm cho chị qua SMS. Chị xem rồi liên hệ lại cho tôi để xác nhận đơn hàng. Chúng tôi sẽ gửi hóa đơn và giao hàng theo địa chỉ của chị. Cảm ơn chị đã nghe giới thiệu. Chúc chị làm ăn tốt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào chị Cao Thu Thúy, tôi là Cường, nhân viên phòng kinh doanh của công ty Minh Phát. Chúng tôi chuyên cung cấp vật liệu nông nghiệp cho các bà con nông dân trong khu vực. Chị có thời gian nghe tôi giới thiệu một chút không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận khách hàng chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi có chút bận, em có thể nói nhanh được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi xin giới thiệu rất nhanh ạ. Chúng tôi hiện có dòng sản phẩm phân bón NPK và phân hữu cơ chất lượng cao, giá thành cạnh tranh, phù hợp với nhiều loại cây trồng. Chị Thúy hiện đang trồng cây gì và nhu cầu phân bón hàng tháng của chị khoảng bao nhiêu ạ? Tôi có thể tính toán sơ bộ và báo giá cho chị ngay. Sau đó tôi sẽ gửi báo giá chi tiết qua tin nhắn ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu sản phẩm, tìm hiểu nhu cầu khách hàng để đưa ra giải pháp phù hợp."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói về phân bón, nhưng tôi vẫn chưa rõ giá cả cụ thể và chất lượng sản phẩm lắm, anh có thể nói thêm được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, về giá cả và chất lượng, chúng tôi cam kết mang đến sản phẩm tốt nhất với mức giá cạnh tranh nhất thị trường. Hiện tại, chúng tôi đang có chương trình ưu đãi đặc biệt cho bà con nông dân trong khu vực. Để tôi có thể tư vấn chính xác về loại phân bón phù hợp nhất với cây trồng của chị và cung cấp bảng giá chi tiết, chị cho tôi biết chị đang trồng loại cây gì và diện tích canh tác của mình khoảng bao nhiêu ạ? Tôi sẽ gửi thông tin chi tiết qua điện thoại để chị tiện tham khảo.",
+      "current_phase": "L2",
+      "tactic_hint": "Làm rõ thông tin về sản phẩm, giá cả và tiếp tục khai thác nhu cầu của khách hàng để tư vấn cụ thể hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiện đang trồng rau cải và diện tích cũng không lớn lắm, chỉ khoảng 500 mét vuông thôi, nhưng tôi cần tìm hiểu thêm về giá cả và chất lượng trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, với diện tích 500 mét vuông rau cải, nhu cầu phân bón của chị sẽ không quá nhiều đâu ạ. Để tiện cho chị tham khảo, tôi sẽ soạn ngay một bảng báo giá chi tiết các loại phân bón NPK và phân hữu cơ phù hợp với rau cải, cùng với thông tin về chất lượng sản phẩm và chương trình ưu đãi hiện có. Tôi sẽ gửi qua tin nhắn SMS cho chị Thúy ngay sau cuộc gọi này. Chị xem qua rồi có gì cứ liên hệ lại cho tôi nhé. Cảm ơn chị đã dành thời gian.",
+      "current_phase": "L3",
+      "tactic_hint": "Tóm tắt thông tin đã trao đổi, đề xuất gửi báo giá chi tiết và khuyến khích khách hàng liên hệ lại sau."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã giải thích rõ ràng, nhưng em vẫn hơi băn khoăn về chất lượng sản phẩm, không biết có thể tin tưởng được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị cứ yên tâm về chất lượng sản phẩm bên em. Công ty Minh Phát đã có nhiều năm kinh nghiệm cung cấp phân bón cho bà con nông dân trong khu vực, sản phẩm của chúng tôi đều có nguồn gốc rõ ràng và được kiểm định chất lượng nghiêm ngặt. Chị có thể tham khảo thêm thông tin trên website hoặc fanpage của công ty. Tôi sẽ gửi kèm các link này trong tin nhắn báo giá. Chị xem rồi có gì cứ gọi lại cho tôi nhé. Tôi rất sẵn lòng giải đáp mọi thắc mắc của chị ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an khách hàng về chất lượng sản phẩm, cung cấp thông tin xác thực để tăng niềm tin và duy trì kênh liên lạc."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã giải thích, nhưng em vẫn còn lo lắng về con cái nên không biết có nên đầu tư vào sản phẩm này hay không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, tôi hiểu những băn khoăn của chị ạ. Việc đầu tư cho nông nghiệp là một quyết định quan trọng ảnh hưởng đến thu nhập gia đình. Tuy nhiên, việc sử dụng phân bón chất lượng sẽ giúp cây trồng phát triển tốt hơn, năng suất cao hơn, từ đó mang lại hiệu quả kinh tế tốt hơn cho gia đình mình. Chị cứ tham khảo kỹ thông tin tôi gửi, nếu có bất kỳ câu hỏi nào về sản phẩm hay mong muốn được tư vấn cụ thể hơn về hiệu quả kinh tế khi sử dụng sản phẩm, chị cứ liên hệ lại cho tôi nhé. Tôi luôn sẵn lòng hỗ trợ chị ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Thấu hiểu mối lo của khách hàng, nhấn mạnh lợi ích dài hạn của sản phẩm để xây dựng niềm tin, đồng thời tái khẳng định sẵn sàng hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn cần cân nhắc kỹ lưỡng trước khi quyết định đầu tư vào sản phẩm nào đó, nhất là khi con cái là ưu tiên hàng đầu của em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi hiểu ạ. Đây là một quyết định quan trọng nên chị cứ từ từ cân nhắc. Tôi sẽ gửi bảng giá và danh sách sản phẩm cùng các thông tin chứng nhận chất lượng cho chị qua tin nhắn SMS để chị có thể xem xét kỹ lưỡng hơn. Khi nào chị cảm thấy phù hợp, chị cứ liên hệ lại cho tôi qua số điện thoại này nhé. Tôi luôn sẵn sàng hỗ trợ chị ạ. Cảm ơn chị đã dành thời gian trao đổi.",
+      "current_phase": "L3",
+      "tactic_hint": "Khẳng định sự thấu hiểu, cung cấp đầy đủ thông tin để khách hàng tự quyết định, đồng thời giữ kênh liên lạc mở và kết thúc cuộc gọi một cách tự nhiên, chuyên nghiệp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1873,
+      "output_tokens": 1671
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 11261,
+      "output_tokens": 1214
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13329,
+      "output_tokens": 465
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006125,
+    "output_usd": 0.011669,
+    "total_usd": 0.017794
+  }
+}

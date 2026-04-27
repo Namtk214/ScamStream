@@ -1,0 +1,215 @@
+{
+  "conversation_id": "conv_eb51bc4549",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0069",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đỗ Ngọc Yến",
+    "fake_age": 32,
+    "real_occupation": "Dịch vụ lưu trú và ăn uống",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng phòng Mua sắm & Cung ứng nguyên liệu — Tập đoàn F&B",
+    "caller_org": "Công ty Cổ phần Dịch vụ Ăn uống Á Đông (ADFS) — Chi nhánh Quảng Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi xác nhận đơn hàng ngũ cốc nướng lớn (gọi là 'Dự án Bếp Trung tâm Q12') — sử dụng tên Lê Tiến Cường + địa chỉ Quận 12, Quảng Nam để tạo giả vờ là khách hàng quen. Sau đó yêu cầu thanh toán trước qua chuyển khoản vào tài khoản 'tạm thời' do 'hệ thống kế toán đang bảo trì'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Xin chào anh Cường, em là Hồng từ phòng Mua sắm ADFS. Em đang xác nhận đơn hàng bột nướng 500kg cho dự án Bếp Trung tâm ở Quận 12. Anh có nhận được yêu cầu từ bộ phận quản lý không?'",
+          "tactic": "Sử dụng tên đầy đủ + địa chỉ cụ thể để tạo ảo tưởng 'em biết rõ về anh'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: 'Anh ơi, hôm nay là ngày cuối để khóa giá ưu đãi 12% — nhưng hệ thống kế toán chính bị lỗi, nên em phải xin anh chuyển trước vào tài khoản tạm của em. Sau đó em sẽ hoàn lại hóa đơn và chứng thư gốc qua bộ phận kiểm toán.'",
+          "tactic": "Tạo deadline giả + đề xuất giải pháp 'tạm thời' hợp lý nghe"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh vui lòng chuyển 45 triệu VND vào tài khoản: 4549914525 (Ngân hàng Vietcombank, tên Hồng Thị Linh) — em sẽ ghi nhận ngay và gửi biên lai. Sau 2-3 ngày khi hệ thống lành lặn, em sẽ chuyển lại toàn bộ + hóa đơn đỏ cho anh.'",
+          "tactic": "Dùng chính số tài khoản của nạn nhân để tạo ảo tưởng 'này là tài khoản anh mà', hoặc sử dụng tài khoản khác nhưng gọi là 'tài khoản tạm' của người khác (đồng phạm)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc biến mất: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Thôi thì để em xin phép quản lý lại, anh đợi em gọi lại' — rồi tắt máy và thay đổi số điện thoại. Nếu thành công, scammer sẽ nhận tiền rồi block liên lạc.",
+          "tactic": "Tạo lý do vô hại để kết thúc cuộc gọi nếu cảm nhận nguy hiểm"
+        }
+      ]
+    },
+    "scenario_context": "Nhà hàng/bếp ăn tập thể cần cung cấp ngũ cốc, bột mì, sản phẩm nướng cho menu. Thợ vận hành máy nướng là người kiểm soát chất lượng đầu vào hoặc nhà cung cấp nguyên liệu chính — rất tự nhiên để phòng mua sắm gọi xác nhận đơn hàng, giá cả, hoặc hỏi về sản phẩm mới."
+  },
+  "listener_card": {
+    "listener_id": "lis_0069",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1991,
+      "age": 34,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81604",
+      "title": "Thợ vận hành máy nướng và các sản phẩm từ ngũ cốc",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Tiến Cường",
+      "VIC_ID_DOC": "049091568505",
+      "VIC_ADDRESS": "Quận 12, Quảng Nam",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy nướng và các sản phẩm từ ngũ cốc",
+      "VIC_CONTACT": "0940921875",
+      "VIC_TAX_SOCIAL_ID": "6174328050"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "6489",
+      "VIC_CREDENTIAL": "354545",
+      "VIC_SIM_INFO": "0940921875",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "4549914525",
+      "VIC_CARD_DATA": "4652 **** **** 3035",
+      "VIC_BALANCE": "16 triệu đồng",
+      "VIC_ASSET": "38 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Tiến Cường",
+    "VIC_CONTACT": "0940921875",
+    "VIC_BANK_ACCOUNT": "4549914525",
+    "VIC_ADDRESS": "Quận 12, Quảng Nam"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Mua sắm & Cung ứng nguyên liệu — Tập đoàn F&B",
+    "caller_org": "Công ty Cổ phần Dịch vụ Ăn uống Á Đông (ADFS) — Chi nhánh Quảng Nam",
+    "scenario_context": "Nhà hàng/bếp ăn tập thể cần cung cấp ngũ cốc, bột mì, sản phẩm nướng cho menu. Thợ vận hành máy nướng là người kiểm soát chất lượng đầu vào hoặc nhà cung cấp nguyên liệu chính — rất tự nhiên để phòng mua sắm gọi xác nhận đơn hàng, giá cả, hoặc hỏi về sản phẩm mới.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi xác nhận đơn hàng ngũ cốc nướng lớn (gọi là 'Dự án Bếp Trung tâm Q12') — sử dụng tên Lê Tiến Cường + địa chỉ Quận 12, Quảng Nam để tạo giả vờ là khách hàng quen. Sau đó yêu cầu thanh toán trước qua chuyển khoản vào tài khoản 'tạm thời' do 'hệ thống kế toán đang bảo trì'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Xin chào anh Cường, em là Hồng từ phòng Mua sắm ADFS. Em đang xác nhận đơn hàng bột nướng 500kg cho dự án Bếp Trung tâm ở Quận 12. Anh có nhận được yêu cầu từ bộ phận quản lý không?'",
+          "tactic": "Sử dụng tên đầy đủ + địa chỉ cụ thể để tạo ảo tưởng 'em biết rõ về anh'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: 'Anh ơi, hôm nay là ngày cuối để khóa giá ưu đãi 12% — nhưng hệ thống kế toán chính bị lỗi, nên em phải xin anh chuyển trước vào tài khoản tạm của em. Sau đó em sẽ hoàn lại hóa đơn và chứng thư gốc qua bộ phận kiểm toán.'",
+          "tactic": "Tạo deadline giả + đề xuất giải pháp 'tạm thời' hợp lý nghe"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh vui lòng chuyển 45 triệu VND vào tài khoản: 4549914525 (Ngân hàng Vietcombank, tên Hồng Thị Linh) — em sẽ ghi nhận ngay và gửi biên lai. Sau 2-3 ngày khi hệ thống lành lặn, em sẽ chuyển lại toàn bộ + hóa đơn đỏ cho anh.'",
+          "tactic": "Dùng chính số tài khoản của nạn nhân để tạo ảo tưởng 'này là tài khoản anh mà', hoặc sử dụng tài khoản khác nhưng gọi là 'tài khoản tạm' của người khác (đồng phạm)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc biến mất: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Thôi thì để em xin phép quản lý lại, anh đợi em gọi lại' — rồi tắt máy và thay đổi số điện thoại. Nếu thành công, scammer sẽ nhận tiền rồi block liên lạc.",
+          "tactic": "Tạo lý do vô hại để kết thúc cuộc gọi nếu cảm nhận nguy hiểm"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên phòng Mua sắm của công ty F&B liên hệ xác nhận đơn hàng nguyên liệu nướng, thảo luận chất lượng, giá cả, thời gian giao hàng, và điều khoản thanh toán chuẩn (hóa đơn trước, thanh toán sau khi nhận hàng).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào anh Cường, em là Hồng từ phòng Mua sắm công ty ADFS. Em muốn xác nhận lại đơn hàng bột nướng 500kg mà anh báo giá tuần trước. Anh có thời gian trao đổi không?'",
+          "tactic": "Xưng danh rõ ràng, giới thiệu công ty, xin phép trước khi bàn chuyện"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Em muốn xác nhận lại: số lượng 500kg, giá 85.000/kg, chất lượng theo tiêu chuẩn ISO, giao hàng trong 5 ngày. Anh có thể cung cấp hóa đơn VAT và chứng chỉ kiểm định không? Thanh toán sẽ là 30% trước, 70% sau khi nhận hàng đầy đủ.'",
+          "tactic": "Thảo luận chi tiết, lịch sự, yêu cầu tài liệu hợp lệ"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy em sẽ gửi anh hợp đồng qua email trong 2 tiếng. Anh ký xong gửi lại, rồi em sẽ chuyển 12,75 triệu (30% giá trị) vào tài khoản anh theo hóa đơn. Anh kiểm tra lại thông tin tài khoản và ngân hàng cho em được không? Cảm ơn anh!'",
+          "tactic": "Kết thúc rõ ràng, ghi nhận thông tin chính thức, xác nhận quy trình thanh toán minh bạch"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Cường, tôi là Đỗ Ngọc Yến từ phòng Mua sắm ADFS. Tôi đang xác nhận đơn hàng 500kg bột nướng cho dự án Bếp Trung tâm ở Quận 12. Anh có nhận được yêu cầu từ bộ phận quản lý không?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với danh tính và thông tin đã biết của nạn nhân để tạo trust."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không biết chị đang nói gì, tôi chưa nhận được yêu cầu nào cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Cường này, tôi cũng hơi ngạc nhiên một chút vì đây là đơn hàng gấp để kịp tiến độ cho Quý 1. Anh Cường có thể vui lòng kiểm tra lại email hoặc thông báo nội bộ xem có sót ở đâu không giúp tôi nhé.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tạo cảm giác khẩn cấp và đưa ra gợi ý hành động để nạn nhân tự tìm kiếm thông tin, củng cố sự thật giả."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không có thời gian kiểm tra gì cả, chị có chắc đây không phải là lừa đảo không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Anh Cường này, nếu đây là lừa đảo, tại sao tôi lại có đầy đủ thông tin về anh, về dự án, và cả số lượng hàng hóa cụ thể như vậy? Chắc chắn có sự nhầm lẫn ở đây. Để tôi kết nối anh với quản lý của tôi để cùng làm rõ nhé.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách sử dụng thông tin đã biết về nạn nhân, đồng thời đề xuất liên hệ với cấp trên để tạo thêm uy tín."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thông tin gì mà tôi không biết sao? Tôi vẫn cảm thấy nghi ngờ và không muốn cung cấp gì thêm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1413,
+      "output_tokens": 2090
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4055,
+      "output_tokens": 385
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5329,
+      "output_tokens": 202
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003023,
+    "output_usd": 0.011534,
+    "total_usd": 0.014557
+  }
+}

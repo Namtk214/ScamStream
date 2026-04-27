@@ -1,0 +1,32 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_955aaa21b8]
+  Caller thật: Bồi bàn rượu (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên phục vụ/quản lý sự kiện tại công ty cho thuê thiết bị và dịch vụ catering @ Công ty cho thuê thiết bị sự kiện và dịch vụ tiệc (cá nhân hoặc công ty nhỏ địa phương)
+  Listener: Thợ khoan, đào giếng và các thợ có liên quan khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Các công ty cho thuê thiết bị sự kiện thường cần liên hệ với thợ khoan/đào giếng để xin phép lắp đặt hệ thống nước, điện, móng cơi tại các địa điểm tổ chức tiệc. Đây là mối liên hệ tự nhiên trong ngành xây dựng và dịch vụ sự kiện.
+  Pretext: Công ty cho thuê thiết bị sự kiện liên hệ với thợ khoan để báo giá lắp đặt hệ thống nước/điện tại địa điểm tiệc, hoặc xác nhận lịch công việc sắp tới.
+  Listener traits: ['lo lắng cho con cái', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Tùng, em là Thảo từ công ty Sự kiện Hoàng Gia đây ạ. Tuần trước anh có giúp bên em đào giếng tại địa điểm tiệc trên đường Nguyễn Huệ phải không ạ? Em gọi để xác nhận lại công việc và hóa đơn với anh ạ.
+      → phase: L1 | tactic: Tiếp cận, xác nhận danh tính và công việc cụ thể.
+T02 [LISTENER] Vâng, tôi có làm việc đó, nhưng tôi không nhớ rõ hóa đơn lắm.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, vậy anh có nhận được hóa đơn mà bên em gửi qua Zalo không ạ? Em cũng muốn hỏi anh là tháng sau bên em có một vài sự kiện cần khoan lắp hệ thống nước/điện nữa, không biết anh có tiện sắp xếp được thời gian để hỗ trợ bên em không ạ?
+      → phase: L2 | tactic: Trao đổi nội dung công việc và hỏi về cơ hội hợp tác mới.
+T04 [LISTENER] Tôi chưa nhận được hóa đơn nào qua Zalo cả, em có thể gửi lại cho tôi được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ được chứ anh. Em sẽ gửi lại hóa đơn ngay cho anh qua Zalo ạ. Còn về công việc tháng sau thì em sẽ gửi chi tiết công việc cụ thể qua tin nhắn Zalo luôn. Anh xem rồi gọi lại cho em để mình bàn về giá cả và thời gian làm việc nhé. Cảm ơn anh!
+      → phase: L3 | tactic: Thống nhất hành động tiếp theo, hướng dẫn người nghe kiểm tra thông tin và liên hệ lại sau.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  5 turns | suspicion=0.00
+TOKEN: in=8643 | out=2063
+COST : $0.011876
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_51313_81139\conv_955aaa21b8.json  [CALLER_END]

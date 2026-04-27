@@ -1,0 +1,263 @@
+{
+  "conversation_id": "conv_ba015be5eb",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0080",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tô Như Giang",
+    "fake_age": 43,
+    "real_occupation": "Giáo viên mầm non",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên chương trình dinh dưỡng & phát triển cộng đồng",
+    "caller_org": "Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi tư vấn về dự án 'Cải thiện dinh dưỡng trẻ em mầm non Vĩnh Long' — đã xác nhận được danh sách chuyên gia địa phương, trong đó có tên Nguyễn Đức Cường (VIC_FULLNAME) từ địa chỉ Quận 8, Vĩnh Long (VIC_ADDRESS). Cần tư vấn nhanh về tính khả thi và yêu cầu chuyển khoản đặt cọc hợp tác.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Anh Cường ơi, tôi là chị Linh từ Trung tâm Phát triển Nông nghiệp Vĩnh Long. Tôi có danh sách các chuyên gia tư vấn nuôi trồng ở Quận 8 — thấy tên anh Nguyễn Đức Cường trong đó. Anh có 5 phút không?'",
+          "tactic": "Sử dụng VIC_FULLNAME + VIC_ADDRESS để tạo ấn tượng 'chúng tôi đã xác minh thông tin của anh'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý cấp bách & danh vọng: 'Chúng tôi đang chạy dự án khẩn cấp — Sở GD&ĐT yêu cầu cải thiện dinh dưỡng trẻ mầm non. Anh là chuyên gia được gợi ý hàng đầu. Chúng tôi cần anh ký hợp đồng tư vấn 6 tháng, đặt cọc 50 triệu để khóa chỗ, rồi bắt đầu tuần sau. Anh có thể chuyển khoản trước được không?'",
+          "tactic": "Tạo cảm giác danh dự (gợi ý 'hàng đầu') + tính cấp bách (Sở GD&ĐT) + sợ mất cơ hội (khóa chỗ)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuẩn bị tài khoản ngân hàng sẵn nhé. Tôi sẽ gửi số tài khoản đặt cọc của Trung tâm — VIC_BANK_ACCOUNT (1851559058983) — anh chuyển 50 triệu vào, rồi tôi gửi hợp đồng qua email.'",
+          "tactic": "Sử dụng VIC_BANK_ACCOUNT — gợi ý đây là số tài khoản 'chính thức' của chương trình, nhưng thực tế là số của scammer"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối hoặc hỏi lại, scammer sẽ: (a) Tăng áp lực: 'Anh vậy là không quan tâm đến trẻ em sao? Dự án này rất quan trọng'; (b) Nếu nạn nhân yêu cầu xác minh, scammer sẽ cắt máy hoặc nói 'Tôi sẽ gọi lại sau' để tìm nạn nhân mới.",
+          "tactic": "Tấn công tâm lý nạn nhân hoặc rút lui tạm thời để tránh bị xác minh"
+        }
+      ]
+    },
+    "scenario_context": "Giáo viên mầm non làm việc với trẻ em nhỏ — cần hiểu về dinh dưỡng, chế độ ăn khoa học. Nhà tư vấn nuôi trồng thủy sản có kiến thức về protein, thức ăn công nghệ sinh học — tự nhiên được nhận diện là người có chuyên môn có thể tư vấn cho chương trình dinh dưỡng trẻ em."
+  },
+  "listener_card": {
+    "listener_id": "lis_0080",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1991,
+      "age": 34,
+      "province": "Vĩnh Long",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21328",
+      "title": "Nhà tư vấn nuôi trồng thủy sản",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Đức Cường",
+      "VIC_ID_DOC": "086091837230",
+      "VIC_ADDRESS": "Quận 8, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Nhà tư vấn nuôi trồng thủy sản",
+      "VIC_CONTACT": "0390252232",
+      "VIC_TAX_SOCIAL_ID": "8445935499"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "366377",
+      "VIC_CREDENTIAL": "810047",
+      "VIC_SIM_INFO": "0390252232",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1851559058983",
+      "VIC_CARD_DATA": "4107 **** **** 7018",
+      "VIC_BALANCE": "1.2 tỷ đồng",
+      "VIC_ASSET": "204 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Đức Cường",
+    "VIC_CONTACT": "0390252232",
+    "VIC_ADDRESS": "Quận 8, Vĩnh Long",
+    "VIC_BANK_ACCOUNT": "1851559058983",
+    "VIC_BALANCE": "1.2 tỷ đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên chương trình dinh dưỡng & phát triển cộng đồng",
+    "caller_org": "Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long",
+    "scenario_context": "Giáo viên mầm non làm việc với trẻ em nhỏ — cần hiểu về dinh dưỡng, chế độ ăn khoa học. Nhà tư vấn nuôi trồng thủy sản có kiến thức về protein, thức ăn công nghệ sinh học — tự nhiên được nhận diện là người có chuyên môn có thể tư vấn cho chương trình dinh dưỡng trẻ em.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi tư vấn về dự án 'Cải thiện dinh dưỡng trẻ em mầm non Vĩnh Long' — đã xác nhận được danh sách chuyên gia địa phương, trong đó có tên Nguyễn Đức Cường (VIC_FULLNAME) từ địa chỉ Quận 8, Vĩnh Long (VIC_ADDRESS). Cần tư vấn nhanh về tính khả thi và yêu cầu chuyển khoản đặt cọc hợp tác.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Anh Cường ơi, tôi là chị Linh từ Trung tâm Phát triển Nông nghiệp Vĩnh Long. Tôi có danh sách các chuyên gia tư vấn nuôi trồng ở Quận 8 — thấy tên anh Nguyễn Đức Cường trong đó. Anh có 5 phút không?'",
+          "tactic": "Sử dụng VIC_FULLNAME + VIC_ADDRESS để tạo ấn tượng 'chúng tôi đã xác minh thông tin của anh'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý cấp bách & danh vọng: 'Chúng tôi đang chạy dự án khẩn cấp — Sở GD&ĐT yêu cầu cải thiện dinh dưỡng trẻ mầm non. Anh là chuyên gia được gợi ý hàng đầu. Chúng tôi cần anh ký hợp đồng tư vấn 6 tháng, đặt cọc 50 triệu để khóa chỗ, rồi bắt đầu tuần sau. Anh có thể chuyển khoản trước được không?'",
+          "tactic": "Tạo cảm giác danh dự (gợi ý 'hàng đầu') + tính cấp bách (Sở GD&ĐT) + sợ mất cơ hội (khóa chỗ)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuẩn bị tài khoản ngân hàng sẵn nhé. Tôi sẽ gửi số tài khoản đặt cọc của Trung tâm — VIC_BANK_ACCOUNT (1851559058983) — anh chuyển 50 triệu vào, rồi tôi gửi hợp đồng qua email.'",
+          "tactic": "Sử dụng VIC_BANK_ACCOUNT — gợi ý đây là số tài khoản 'chính thức' của chương trình, nhưng thực tế là số của scammer"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối hoặc hỏi lại, scammer sẽ: (a) Tăng áp lực: 'Anh vậy là không quan tâm đến trẻ em sao? Dự án này rất quan trọng'; (b) Nếu nạn nhân yêu cầu xác minh, scammer sẽ cắt máy hoặc nói 'Tôi sẽ gọi lại sau' để tìm nạn nhân mới.",
+          "tactic": "Tấn công tâm lý nạn nhân hoặc rút lui tạm thời để tránh bị xác minh"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long thực sự liên hệ với nhà tư vấn nuôi trồng thủy sản để tham gia chương trình tư vấn dinh dưỡng cho trẻ em mầm non — không có yêu cầu chuyển tiền, chỉ thảo luận hợp tác.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Anh Cường, tôi là chị Linh, nhân viên Chương trình Dinh dưỡng Cộng đồng tại Trung tâm Phát triển Nông nghiệp Vĩnh Long. Tôi được giới thiệu tên anh từ Sở Nông nghiệp. Anh có thời gian nghe tôi giới thiệu một dự án hợp tác không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi đang xây dựng chương trình cải thiện dinh dưỡng cho trẻ em mầm non — tập trung vào các nguồn protein bền vững từ nuôi trồng thủy sản địa phương. Chúng tôi muốn mời anh tham gia như cố vấn chuyên môn, giúp thiết kế thực đơn và hướng dẫn cho các cô giáo. Anh có quan tâm không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu anh đồng ý, chúng tôi sẽ gửi chi tiết hợp đồng qua email hoặc gặp mặt trực tiếp để thảo luận. Không có yêu cầu chuyển tiền ngay — chúng tôi sẽ thanh toán thù lao theo hợp đồng. Anh gọi lại cho tôi sau khi xem xét được không?'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh Cường ạ. Tôi là Tô Như Giang, từ Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long. Tôi có danh sách các chuyên gia tư vấn nuôi trồng tại khu vực Quận 8, Vĩnh Long, có thấy tên anh Nguyễn Đức Cường trong đó. Anh Cường có tiện dành khoảng 5 phút để tôi trao đổi nhanh một việc được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và tổ chức, xác nhận danh tính nạn nhân bằng thông tin đã biết để tạo tin tưởng ban đầu, hỏi xin thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe chị nói rồi, nhưng em muốn kiểm tra lại thông tin của chị trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra thông tin của tôi ạ. Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long, địa chỉ số 10, đường Hùng Vương, phường 1, thành phố Vĩnh Long. Tôi là Tô Như Giang, số điện thoại tôi đang gọi cho anh đây là số máy của tôi, anh có thể lưu lại. Anh kiểm tra đi ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thông tin xác thực để giảm nghi ngờ, tạo dựng lòng tin. Dùng thông tin có thể kiểm chứng được."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn còn băn khoăn, không biết chị có thể cho em biết số điện thoại của chị là số mấy không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số điện thoại tôi đang gọi cho anh đây là 0390252232, anh có thể lưu lại. Anh cứ kiểm tra kỹ thông tin bên tôi, nhưng mong anh dành chút thời gian vì dự án này đang rất gấp ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp lại số điện thoại (thông tin người nghe đã biết) để tăng tính xác thực, đồng thời nhắc lại sự khẩn cấp của dự án để thúc đẩy nạn nhân hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn còn thấy không yên tâm lắm, chị ơi, chị có chắc chắn là từ Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Cường cứ tìm hiểu kỹ thông tin về Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long bên tôi đi ạ. Nhưng hiện tại bên Sở Giáo dục và Đào tạo đang yêu cầu chúng tôi phải triển khai ngay dự án 'Cải thiện dinh dưỡng trẻ em mầm non Vĩnh Long'. Anh là một trong những chuyên gia hàng đầu được chúng tôi tin tưởng giới thiệu. Chúng tôi cần anh ký hợp đồng tư vấn 6 tháng, và cần đặt cọc 50 triệu để chính thức khóa chỗ của anh trong dự án này, rồi bắt đầu ngay từ tuần sau. Anh có thể chuyển khoản trước giúp tôi để giữ chỗ được không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận lại thông tin tổ chức, đồng thời ngay lập tức chuyển sang Phase S2 để tạo cảm giác cấp bách, nhấn mạnh vai trò quan trọng của nạn nhân và đưa ra yêu cầu chuyển khoản đặt cọc. Tăng áp lực về thời gian và tầm quan trọng của dự án."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa yên tâm lắm, chị cho em biết chị gọi từ số máy nào ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Cường ơi, số điện thoại tôi đang gọi cho anh đây là số máy của tôi, 0390252232. Anh cứ kiểm tra thoải mái đi ạ, nhưng tôi xin nhắc lại là dự án này rất khẩn cấp, liên quan đến sức khỏe của trẻ em mầm non. Nếu chậm trễ thì sẽ ảnh hưởng rất lớn đến tiến độ chung. Anh có thể sắp xếp chuyển khoản sớm để chúng tôi còn kịp triển khai không?",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh lại số điện thoại đã cho, đồng thời tăng áp lực bằng cách nhắc đến sự khẩn cấp của dự án và hậu quả nếu chậm trễ, thúc giục nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi, nhưng em cảm thấy rất nghi ngờ về việc này, chị có thể cho em biết thêm thông tin khác để em yên tâm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Cường đang nghi ngờ tôi là lừa đảo ư? Tôi là Tô Như Giang, từ Trung tâm Phát triển Nông nghiệp Bền vững Vĩnh Long. Tôi biết anh Nguyễn Đức Cường ở Quận 8, Vĩnh Long. Tôi biết số điện thoại của anh. Nếu tôi là lừa đảo, tại sao tôi lại cung cấp tất cả thông tin minh bạch như vậy? Dự án 'Cải thiện dinh dưỡng trẻ em mầm non Vĩnh Long' là một dự án trọng điểm của tỉnh, được Sở Giáo dục và Đào tạo chỉ đạo trực tiếp. Anh có thực sự không muốn tham gia một dự án mang lại lợi ích lớn cho cộng đồng, và có mức thù lao rất tốt như vậy sao? Hay anh không quan tâm đến sức khỏe của trẻ em Vĩnh Long?",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách tăng áp lực tâm lý, đặt nạn nhân vào thế khó xử, lợi dụng tâm lý trách nhiệm xã hội và danh tiếng. Đặt câu hỏi tu từ để nạn nhân tự vấn. Không lùi bước khỏi yêu cầu chuyển khoản, mà chuyển trọng tâm sang mục đích cao cả của dự án."
+    },
+    {
+      "role": "listener",
+      "text": "Chị nói như vậy khiến em càng cảm thấy nghi ngờ hơn, mong chị thông cảm cho em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu anh đã cảm thấy không yên tâm, tôi cũng không thể ép buộc anh được. Có lẽ chúng tôi sẽ tìm một chuyên gia khác có thể hợp tác nhanh chóng hơn. Chào anh.",
+      "current_phase": "S4",
+      "tactic_hint": "Khi nạn nhân kiên quyết từ chối và bày tỏ nghi ngờ cao độ, chuyển sang kết thúc cuộc gọi một cách khéo léo, không thô lỗ, để giữ hình ảnh. Không tiếp tục tranh cãi."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1831,
+      "output_tokens": 2020
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 13044,
+      "output_tokens": 1265
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 14007,
+      "output_tokens": 428
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006541,
+    "output_usd": 0.013519,
+    "total_usd": 0.02006
+  }
+}

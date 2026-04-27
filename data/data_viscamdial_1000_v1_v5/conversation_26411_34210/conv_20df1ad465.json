@@ -1,0 +1,316 @@
+{
+  "conversation_id": "conv_20df1ad465",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0050",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đinh Thị Linh",
+    "fake_age": 28,
+    "real_occupation": "Nhà văn",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Biên tập viên Cấp cao - Bộ phận Hợp tác Nội dung & Thương hiệu",
+    "caller_org": "Nhà xuất bản Thể thao Việt Nam / Tạp chí Thể thao Đất Nước",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer + otp_extraction",
+      "pretext": "Liên hệ từ nhà xuất bản lớn để ký hợp đồng xuất bản tiểu sử vận động viên, yêu cầu thanh toán phí xử lý hồ sơ/ký quỹ để 'khóa quyền xuất bản độc quyền' trước khi có nhà phát hành khác tranh giành.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Scammer xưng danh là 'Thạc sĩ Trần Minh Huy, Biên tập viên Cấp cao, Nhà xuất bản Thể thao Việt Nam'. Gọi trực tiếp: 'Chào chị Đỗ Diễm Nhàn, em tìm được số của chị qua cơ sở dữ liệu vận động viên đăng ký tại Bình Thuận. Chúng em đang lên kế hoạch phát hành bộ sưu tập tiểu sử các vận động viên nổi bật năm nay và chị là một trong những ứng cử viên hàng đầu.' — Dùng tên đầy đủ + địa chỉ để tạo ảo tưởng đã xác minh thông tin."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Dự án này rất hạn chế, chỉ chọn 15 vận động viên trên toàn quốc. Hiện tại chúng em đang trong vòng tuyển chọn cuối cùng, nhưng cần phải khóa quyền xuất bản độc quyền của chị trước ngày mai (tạo deadline). Để đảm bảo chị cam kết, chúng em yêu cầu thanh toán phí xử lý hồ sơ ưu tiên là 2.5 triệu đồng. Sau khi ký hợp đồng, chị sẽ nhận được royalty từ 5-10% doanh thu bán sách.' — Tạo FOMO (sợ mất cơ hội) + lợi nhuận kỳ vọng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chị có thể chuyển khoản vào tài khoản công ty của chúng em không? Số tài khoản là 950263610318 (sử dụng trực tiếp thông tin đã lộ của nạn nhân, tạo ảo tưởng xác thực). Sau khi em nhận được, em sẽ gửi cho chị bản hợp đồng điện tử để ký.' — Scammer sử dụng chính số tài khoản của nạn nhân để tạo tin cậy tối đa, sau đó sẽ có lý do để yêu cầu OTP hoặc thông tin thêm."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chuyển tiền: Khi nạn nhân chuyển tiền, scammer tạo lý do trì hoãn ('Hệ thống đang kiểm tra, cần xác minh qua OTP lần nữa' hoặc 'Cần chuyển thêm 1 triệu cho phí luật sư'). Nếu nạn nhân phát hiện ra hoặc từ chối, scammer sẽ nói 'Chị chắc chắn không muốn cơ hội này sao? Anh em chỉ có thể giữ chỗ đến 5pm hôm nay' để tiếp tục áp lực."
+        }
+      ]
+    },
+    "scenario_context": "Nhà văn/biên tập viên liên hệ vận động viên để phỏng vấn, ký hợp đồng quyền lợi hình ảnh hoặc xuất bản tiểu sử. Đây là giao điểm tự nhiên giữa ngành xuất bản (nhóm 6) và vận động viên cần quảng bá hình ảnh."
+  },
+  "listener_card": {
+    "listener_id": "lis_0050",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1993,
+      "age": 32,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "34210",
+      "title": "Vận động viên và người chơi thể thao",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Diễm Nhàn",
+      "VIC_ID_DOC": "060193281680",
+      "VIC_ADDRESS": "TP 10, Bình Thuận",
+      "VIC_EMPLOYMENT": "Vận động viên và người chơi thể thao",
+      "VIC_CONTACT": "0815148341",
+      "VIC_TAX_SOCIAL_ID": "8680690256"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "960506",
+      "VIC_CREDENTIAL": "980282",
+      "VIC_SIM_INFO": "0815148341",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "950263610318",
+      "VIC_CARD_DATA": "4967 **** **** 2674",
+      "VIC_BALANCE": "114 triệu đồng",
+      "VIC_ASSET": "190 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Diễm Nhàn",
+    "VIC_CONTACT": "0815148341",
+    "LOCATION": "Bình Thuận",
+    "VIC_CARD_DATA": "4967 **** **** 2674",
+    "VIC_BANK_ACCOUNT": "950263610318"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Biên tập viên Cấp cao - Bộ phận Hợp tác Nội dung & Thương hiệu",
+    "caller_org": "Nhà xuất bản Thể thao Việt Nam / Tạp chí Thể thao Đất Nước",
+    "scenario_context": "Nhà văn/biên tập viên liên hệ vận động viên để phỏng vấn, ký hợp đồng quyền lợi hình ảnh hoặc xuất bản tiểu sử. Đây là giao điểm tự nhiên giữa ngành xuất bản (nhóm 6) và vận động viên cần quảng bá hình ảnh.",
+    "scam_path": {
+      "fraud_goal": "money_transfer + otp_extraction",
+      "pretext": "Liên hệ từ nhà xuất bản lớn để ký hợp đồng xuất bản tiểu sử vận động viên, yêu cầu thanh toán phí xử lý hồ sơ/ký quỹ để 'khóa quyền xuất bản độc quyền' trước khi có nhà phát hành khác tranh giành.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Scammer xưng danh là 'Thạc sĩ Trần Minh Huy, Biên tập viên Cấp cao, Nhà xuất bản Thể thao Việt Nam'. Gọi trực tiếp: 'Chào chị Đỗ Diễm Nhàn, em tìm được số của chị qua cơ sở dữ liệu vận động viên đăng ký tại Bình Thuận. Chúng em đang lên kế hoạch phát hành bộ sưu tập tiểu sử các vận động viên nổi bật năm nay và chị là một trong những ứng cử viên hàng đầu.' — Dùng tên đầy đủ + địa chỉ để tạo ảo tưởng đã xác minh thông tin."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Dự án này rất hạn chế, chỉ chọn 15 vận động viên trên toàn quốc. Hiện tại chúng em đang trong vòng tuyển chọn cuối cùng, nhưng cần phải khóa quyền xuất bản độc quyền của chị trước ngày mai (tạo deadline). Để đảm bảo chị cam kết, chúng em yêu cầu thanh toán phí xử lý hồ sơ ưu tiên là 2.5 triệu đồng. Sau khi ký hợp đồng, chị sẽ nhận được royalty từ 5-10% doanh thu bán sách.' — Tạo FOMO (sợ mất cơ hội) + lợi nhuận kỳ vọng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chị có thể chuyển khoản vào tài khoản công ty của chúng em không? Số tài khoản là 950263610318 (sử dụng trực tiếp thông tin đã lộ của nạn nhân, tạo ảo tưởng xác thực). Sau khi em nhận được, em sẽ gửi cho chị bản hợp đồng điện tử để ký.' — Scammer sử dụng chính số tài khoản của nạn nhân để tạo tin cậy tối đa, sau đó sẽ có lý do để yêu cầu OTP hoặc thông tin thêm."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chuyển tiền: Khi nạn nhân chuyển tiền, scammer tạo lý do trì hoãn ('Hệ thống đang kiểm tra, cần xác minh qua OTP lần nữa' hoặc 'Cần chuyển thêm 1 triệu cho phí luật sư'). Nếu nạn nhân phát hiện ra hoặc từ chối, scammer sẽ nói 'Chị chắc chắn không muốn cơ hội này sao? Anh em chỉ có thể giữ chỗ đến 5pm hôm nay' để tiếp tục áp lực."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhà xuất bản thực sự liên hệ vận động viên để mời tham gia dự án viết sách hoặc phỏng vấn, với quy trình pháp lý bình thường (hợp đồng trước, thanh toán sau).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào chị Đỗ Diễm Nhàn, tôi là Trần Minh Huy từ Nhà xuất bản Thể thao Việt Nam. Tôi gọi để thảo luận về một dự án xuất bản tiểu sử mà chúng tôi đang chuẩn bị. Chị có thời gian nghe về điều này không?' — Xác nhận danh tính thực, không gây áp lực."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Chúng tôi muốn mời chị tham gia phỏng vấn sâu (3-5 buổi) về hành trình thể thao của chị. Ngoài ra, chúng tôi sẽ gửi bản dự thảo hợp đồng chi tiết về royalty, quyền xuất bản, và lịch trình. Chị có thể xem xét kỹ càng trước khi ký.' — Không yêu cầu tiền ngay, cung cấp hợp đồng bằng văn bản."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất lịch trình: 'Tôi sẽ gửi email cho chị với tất cả tài liệu. Chị có thể tham khảo ý kiến pháp lý nếu cần. Chúng ta có thể gặp mặt hoặc gọi lại vào tuần sau để thảo luận chi tiết. Cảm ơn chị đã dành thời gian!' — Quy trình chuyên nghiệp, rõ ràng, không gây áp lực tài chính."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Đỗ Diễm Nhàn, tôi là Đinh Thị Linh, Biên tập viên Cấp cao từ Nhà xuất bản Thể thao Việt Nam đây. Chúng tôi tìm được số của chị qua cơ sở dữ liệu vận động viên đăng ký tại Bình Thuận. Hiện tại, chúng tôi đang lên kế hoạch phát hành bộ tiểu sử các vận động viên nổi bật năm nay và chị là một trong những ứng cử viên hàng đầu mà chúng tôi đã lựa chọn.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức và sử dụng thông tin cá nhân của nạn nhân (tên, địa phương) để xây dựng tin cậy và sự chính danh từ đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã liên hệ, nhưng tôi muốn xác nhận thông tin này trước khi tiếp tục.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự cẩn trọng của chị. Để chị yên tâm, tôi có thể cung cấp thêm thông tin về dự án. Chị có muốn tìm hiểu về quy trình tuyển chọn hay lợi ích khi tham gia không ạ? Hoặc chị có thể gọi trực tiếp đến tổng đài của Nhà xuất bản Thể thao Việt Nam, số 1900 6789, gặp phòng Hợp tác Nội dung để xác minh thông tin của tôi và dự án này.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề nghị cung cấp thêm thông tin hoặc hướng dẫn nạn nhân xác minh độc lập để củng cố lòng tin. Giữ vững thái độ chuyên nghiệp và hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm ơn em đã chia sẻ thông tin, nhưng tôi vẫn cảm thấy hơi nghi ngờ, có thể cho tôi biết thêm chi tiết về quy trình tuyển chọn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi rất sẵn lòng. Quy trình tuyển chọn của chúng tôi bao gồm ba vòng: đầu tiên là đánh giá hồ sơ dựa trên thành tích và đóng góp của vận động viên; vòng thứ hai là phỏng vấn trực tiếp hoặc qua điện thoại để hiểu rõ hơn về câu chuyện cá nhân; và vòng cuối cùng là thẩm định bởi hội đồng chuyên môn. Chị Đỗ Diễm Nhàn đã vượt qua vòng hồ sơ và hiện đang ở giai đoạn cuối của vòng phỏng vấn. Chúng tôi muốn đảm bảo câu chuyện của chị được khắc họa chân thực và truyền cảm hứng nhất.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thông tin chi tiết về quy trình tuyển chọn để làm tăng tính hợp lý và chuyên nghiệp của dự án, đồng thời khẳng định nạn nhân đã vượt qua các vòng đầu để tạo cảm giác đặc biệt và cơ hội."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã giải thích chi tiết, nhưng tôi vẫn muốn kiểm tra lại thông tin từ nhà xuất bản trước khi quyết định tham gia.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hoàn toàn hiểu. Để không làm mất thời gian của chị và đảm bảo chị có thể xác minh thông tin một cách thuận tiện nhất, chị có thể gọi trực tiếp đến số tổng đài của Nhà xuất bản Thể thao Việt Nam 1900 6789, số này có trên website chính thức của chúng tôi. Chị hãy yêu cầu gặp phòng Hợp tác Nội dung và hỏi về dự án 'Tiểu sử Vận động viên Nổi bật' cũng như tên của tôi, Đinh Thị Linh. Tôi sẽ đợi cuộc gọi xác nhận của chị ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp tục xoa dịu nghi ngờ bằng cách cung cấp kênh xác minh chính thức và dễ dàng, đồng thời cho phép nạn nhân chủ động trong việc xác minh để củng cố lòng tin. Giữ vững thái độ chuyên nghiệp và hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn chị đã cung cấp thông tin, nhưng tôi vẫn muốn tìm hiểu thêm về tổ chức của em để chắc chắn trước khi gọi đến tổng đài.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ tự nhiên tìm hiểu. Tôi biết chị là một người rất kỹ tính và cẩn trọng. Tôi tin rằng sau khi tìm hiểu thêm về Nhà xuất bản Thể thao Việt Nam, chị sẽ thấy chúng tôi là một đơn vị uy tín và chuyên nghiệp. Tôi sẽ chờ phản hồi từ chị. Nếu chị có bất kỳ câu hỏi nào khác trong quá trình tìm hiểu, đừng ngần ngại liên hệ lại với tôi qua số này.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp tục duy trì sự kiên nhẫn và sẵn lòng hỗ trợ, đồng thời củng cố uy tín của tổ chức và bản thân. Đặt gánh nặng xác minh lên nạn nhân nhưng vẫn giữ thái độ tích cực."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã đề nghị, nhưng tôi cần thêm thông tin cụ thể về nhà xuất bản và các dự án trước đây của em để có thể yên tâm hơn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị có thể truy cập trang web chính thức của chúng tôi tại thethaovietnam.vn để xem các dự án đã xuất bản và lịch sử hoạt động. Nhà xuất bản Thể thao Việt Nam đã có hơn 30 năm kinh nghiệm trong lĩnh vực xuất bản sách thể thao và tiểu sử các vận động viên. Chị sẽ tìm thấy thông tin chi tiết về các tác phẩm chúng tôi đã thực hiện, cũng như các đối tác và giải thưởng mà chúng tôi đã đạt được. Chị cứ xem qua và nếu có câu hỏi gì, tôi sẵn lòng giải đáp.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thông tin cụ thể về tổ chức, bao gồm địa chỉ website, lịch sử hoạt động, và các thành tựu để xây dựng thêm uy tín và chuyên nghiệp. Khuyến khích nạn nhân tự xác minh để củng cố lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn muốn biết thêm về các dự án cụ thể mà nhà xuất bản đã thực hiện để yên tâm hơn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị có thể tìm thấy danh sách các cuốn tiểu sử vận động viên nổi bật mà chúng tôi đã xuất bản trên trang bìa của website, mục 'Sách tiêu biểu'. Gần đây nhất là cuốn tiểu sử về xạ thủ Hoàng Xuân Vinh hay kiện tướng cờ vua Lê Quang Liêm. Mỗi cuốn sách đều có phần giới thiệu chi tiết về nội dung và đóng góp của vận động viên. Chị cứ tìm hiểu kỹ nhé.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp tục cung cấp ví dụ cụ thể về các dự án đã thực hiện để tăng tính xác thực và uy tín của nhà xuất bản. Giữ thái độ sẵn lòng hỗ trợ và kiên nhẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn cảm thấy hoài nghi và cần thêm thời gian để tìm hiểu kỹ hơn.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu. Việc này rất quan trọng nên chị cứ dành thời gian tìm hiểu. Tuy nhiên, dự án này rất đặc biệt và chúng tôi chỉ có thể chọn 15 vận động viên trên toàn quốc. Hiện chúng tôi đang trong vòng tuyển chọn cuối cùng và cần phải khóa quyền xuất bản độc quyền của chị trước 5 giờ chiều mai để đảm bảo cơ hội này không bị người khác giành mất. Chị hình dung là có rất nhiều vận động viên tài năng khác cũng đang mong muốn được xuất bản tiểu sử.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang giai đoạn S2 để tạo áp lực về thời gian, khơi gợi tâm lý FOMO (sợ bỏ lỡ cơ hội) và cảm giác khan hiếm, đồng thời nhắc nhở về tính cạnh tranh để nạn nhân cảm thấy đặc biệt vì được lựa chọn."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng tôi cảm thấy áp lực từ thông tin này, có thể cho tôi biết rõ hơn về lý do cần phải khóa quyền xuất bản sớm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị có thể hình dung đây là một dự án lớn, đòi hỏi sự cam kết cao từ cả hai phía. Việc khóa quyền xuất bản độc quyền là để đảm bảo rằng câu chuyện của chị sẽ được chúng tôi khai thác một cách toàn diện và chuyên nghiệp nhất, mà không bị trùng lặp hay phân tán bởi các đơn vị khác. Điều này cũng giúp chúng tôi có thể đầu tư tối đa nguồn lực vào việc biên tập, thiết kế và quảng bá cho cuốn sách của chị, mang lại hiệu quả tốt nhất sau khi xuất bản. Nếu không có sự cam kết này, rất khó để chúng tôi có thể đảm bảo vị trí và chất lượng tốt nhất cho cuốn sách của chị trong một thị trường cạnh tranh như hiện nay. Thêm vào đó, việc này cũng giúp chúng tôi có căn cứ để từ chối các đề xuất tương tự từ các nhà xuất bản cạnh tranh khác.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích lý do cần 'khóa quyền xuất bản' để làm rõ tính hợp lý của yêu cầu, đồng thời nhấn mạnh lợi ích cho nạn nhân và sự chuyên nghiệp của nhà xuất bản, tạo cảm giác an tâm và tin tưởng vào tính độc quyền của dự án."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn đang cảm thấy hoài nghi, em có thể cung cấp cho tôi một thông tin gì cụ thể hơn nữa để tôi cảm thấy yên tâm hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hoàn toàn hiểu và tôn trọng sự cẩn trọng của chị. Để chị yên tâm tuyệt đối, tôi có thể gửi trước cho chị bản dự thảo hợp đồng hợp tác, trong đó có nêu rõ các điều khoản về quyền lợi và nghĩa vụ của chị, cũng như cam kết của Nhà xuất bản chúng tôi. Chị có thể xem xét kỹ lưỡng và nếu có bất kỳ điểm nào chưa rõ, tôi sẽ giải đáp ngay. Điều này sẽ giúp chị hình dung rõ hơn về cam kết của dự án và tại sao việc khóa quyền xuất bản là bước cần thiết để bảo vệ tác quyền và lợi ích của chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Giảm bớt sự nghi ngờ bằng cách đề nghị cung cấp bản dự thảo hợp đồng, một tài liệu cụ thể và có tính pháp lý, để tăng tính minh bạch và độ tin cậy. Nhấn mạnh việc này là để bảo vệ lợi ích của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm ơn em đã đề nghị, nhưng tôi cần thời gian để xem xét kỹ bản dự thảo hợp đồng trước khi đưa ra quyết định.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ xem xét thật kỹ, không sao cả. Tuy nhiên, như tôi đã nói, dự án này rất hạn chế và chúng tôi cần phải chốt danh sách cuối cùng để kịp tiến độ xuất bản. Việc này cũng đồng nghĩa với việc chúng tôi cần phải có sự cam kết sớm để giữ chỗ cho chị. Sau khi chị xem xét bản dự thảo hợp đồng, nếu không có vấn đề gì và chị quyết định tham gia, chúng tôi sẽ yêu cầu thanh toán một khoản phí xử lý hồ sơ ưu tiên là 2.5 triệu đồng. Khoản phí này nhằm đảm bảo chị cam kết và cũng là một phần chi phí phát sinh ban đầu để khởi động dự án. Sau khi hợp đồng được ký chính thức, chị sẽ nhận được royalty từ 5-10% doanh thu bán sách, chắc chắn sẽ cao hơn rất nhiều so với khoản phí này. Tôi có thể gửi bản dự thảo hợp đồng cho chị ngay bây giờ qua email hoặc Zalo để chị tiện tham khảo.",
+      "current_phase": "S2",
+      "tactic_hint": "Tiếp tục tạo áp lực thời gian và khan hiếm, đồng thời giới thiệu khoản phí xử lý hồ sơ như một bước cam kết nhỏ để đạt được lợi ích lớn hơn (royalty). Đề xuất gửi bản dự thảo hợp đồng để làm dịu sự nghi ngờ và chuyển hướng sang mục tiêu tài chính."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng tôi cần chắc chắn rằng đây là một quyết định đúng đắn trước khi tiến hành bất kỳ bước nào, nên mong em thông cảm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1382,
+      "output_tokens": 2078
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 28841,
+      "output_tokens": 2358
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 32837,
+      "output_tokens": 841
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.012076,
+    "output_usd": 0.01679,
+    "total_usd": 0.028865
+  }
+}

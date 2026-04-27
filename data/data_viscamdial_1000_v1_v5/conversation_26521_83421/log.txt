@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_b403946960]
+  Caller thật: Nhạc công (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên quản lý dự án / Điều phối công trường @ Công ty thi công xây dựng hạ tầng / Công ty khai thác khoáng sản
+  Listener: Thợ vận hành máy đào (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Nhạc công có thể được thuê biểu diễn tại các sự kiện kỷ niệm, lễ khánh thành công trình của các công ty xây dựng/khai thác. Ngược lại, điều phối công trường cần liên hệ với nhân viên kỹ thuật (thợ vận hành máy đào) để xác nhận thông tin, thanh toán lương, hoặc thông báo công việc. Scammer giả danh vai trò này để tận dụng sự quen thuộc với lĩnh vực xây dựng/khai thác.
+  Pretext: Gọi để xác nhận thông tin cá nhân phục vụ thanh toán lương tháng này hoặc xác nhận bảo hiểm xã hội. Sử dụng tên thật nạn nhân (Mai Ngọc Trang) và số điện thoại để tạo lòng tin ban đầu.
+  Listener traits: ['nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Trang, tôi là Hồng Yến từ phòng Nhân sự công ty XYZ. Hôm nay tôi gọi để xác nhận thông tin thanh toán lương tháng này cho chị. Số điện thoại của chị là 0785255799 phải không ạ?
+      → phase: S1 | tactic: Tiếp cận với danh tính giả và sử dụng thông tin cá nhân nạn nhân để tạo lòng tin.
+T02 [LISTENER] Chào chị Hồng Yến, đúng là số điện thoại của tôi, nhưng tôi chưa nghe nói về công ty XYZ này.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Ồ, vậy là có lẽ chị chưa cập nhật thông tin về việc sáp nhập công ty và đổi tên gần đây ạ. Nhưng không sao, tôi gọi để đảm bảo lương tháng này của chị được chuyển đúng thời hạn. Chị có thể xác nhận 4 số cuối thẻ ATM mà chị đăng ký nhận lương với công ty là 4699 được không ạ?
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ, giải thích pretext mơ hồ và chuyển sang khai thác thông tin nhạy cảm để tạo cảm giác cấp bách và tin cậy.
+T04 [LISTENER] Chị Hồng Yến, nhưng tôi vẫn cảm thấy hơi nghi ngờ về việc này, có cách nào để xác nhận công ty của chị không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ chị Trang đừng lo lắng quá. Nếu chị cần xác nhận lại thông tin, chị có thể liên hệ số tổng đài của công ty em là 1900 1234. Nhưng trước mắt, để đảm bảo lương tháng này của chị được chuyển khoản đúng hạn, chị vui lòng xác nhận giúp em 4 số cuối thẻ ATM là 4699. Hoặc chị có thể cho em xin 4 số cuối đúng để em đối chiếu với hệ thống bên em ạ.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin liên hệ giả, đồng thời tạo áp lực về thời gian và yêu cầu nạn nhân xác nhận thông tin thẻ ngân hàng hoặc cung cấp số thẻ.
+T06 [LISTENER] Chị Hồng Yến, nhưng tôi vẫn chưa thấy yên tâm lắm, chị có thể cho tôi biết thêm thông tin về công ty XYZ không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T07 [CALLER] Dạ vâng, hiểu được nỗi lo của chị. Công ty chúng tôi là một tập đoàn lớn chuyên về xây dựng và khai thác khoáng sản. Nhưng chị Trang ơi, nếu bây giờ mình không xác nhận nhanh thông tin thẻ ATM thì lương tháng này của chị sẽ bị tạm giữ lại đó ạ. Chị cứ đọc 4 số cuối đúng thì tôi mới chuyển tiếp sang bộ phận tài chính được.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách đưa ra thông tin chung về công ty, sau đó tạo áp lực về việc mất lương để thúc ép nạn nhân cung cấp thông tin thẻ ngân hàng.
+T08 [LISTENER] Chị Hồng Yến, nhưng tôi vẫn cảm thấy chưa yên tâm lắm, có cách nào khác để xác minh công ty không ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Chị Trang ơi, tôi hiểu chị có chút băn khoăn. Tuy nhiên, việc xác minh thông tin này là thủ tục bắt buộc để đảm bảo quyền lợi của chị. Nếu chị không cung cấp ngay, lương tháng này của chị sẽ bị treo. Chị vui lòng xác nhận giúp tôi 4 số cuối thẻ ATM là 4699.
+      → phase: S2 | tactic: Tạo áp lực bằng cách khẳng định thủ tục bắt buộc để hưởng quyền lợi, đồng thời đe dọa hậu quả tài chính (treo lương) nếu nạn nhân không hợp tác.
+T10 [LISTENER] Chị Hồng Yến, tôi hiểu nhưng tôi thật sự cần thêm thời gian để kiểm tra thông tin công ty của chị trước đã.
+      → action: REFUSAL | suspicion: 0.40 | disclosed: []
+
+T11 [CALLER] Vậy thì chị Trang ơi, nếu chị không hợp tác và cung cấp thông tin ngay bây giờ, tôi rất tiếc phải thông báo rằng phòng Nhân sự sẽ không thể xử lý lương cho chị trong tháng này và chúng tôi buộc phải chuyển hồ sơ của chị sang trạng thái treo. Điều này có nghĩa là chị sẽ không nhận được bất kỳ khoản thanh toán nào cho đến khi quy trình xác minh được hoàn tất, và quá trình này có thể kéo dài đấy ạ.
+      → phase: S4 | tactic: Sử dụng đe dọa tài chính rõ ràng (lương bị treo, quá trình kéo dài) để tạo áp lực mạnh mẽ buộc nạn nhân phải tuân thủ và cung cấp thông tin thẻ ngân hàng.
+T12 [LISTENER] Chị Hồng Yến, nhưng tôi vẫn không cảm thấy yên tâm lắm, tôi thật sự cần xác minh thêm thông tin về công ty của chị trước đã.
+      → action: REFUSAL | suspicion: 0.40 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=0.40
+TOKEN: in=24550 | out=3005
+COST : $0.016341
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_26521_83421\conv_b403946960.json  [SCAM_REFUSE]

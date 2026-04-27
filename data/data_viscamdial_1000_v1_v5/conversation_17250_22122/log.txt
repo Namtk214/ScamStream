@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_cbb1f18dfb]
+  Caller thật: Dịch vụ lưu trú và ăn uống (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Quản lý Dự án / Điều phối Sự kiện - Công ty Du lịch & Spa @ Công ty TNHH Du lịch & Wellness Mekong Resort
+  Listener: Bác sỹ da liễu (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Bác sỹ da liễu thường được các resort spa cao cấp liên hệ để tư vấn dịch vụ chăm sóc da hoặc cộng tác trong các chương trình wellness. Đây là giao thoa tự nhiên giữa lĩnh vực dịch vụ lưu trú và chuyên gia y tế.
+  Pretext: Gọi báo cáo vấn đề thanh toán từ một hóa đơn dịch vụ spa tại resort (sử dụng tên thật + số điện thoại để tạo credibility), yêu cầu xác minh thông tin thẻ để 'hoàn lại tiền' hoặc 'nâng cấp dịch vụ VIP'.
+  Listener traits: ['sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Đinh Gia Quân, đây là Thảo từ Mekong Resort. Chúng tôi vừa phát hiện một lỗi trong hệ thống thanh toán của quý khách từ lần check-in tháng trước. Số điện thoại của anh là 0385186041 đúng không ạ?
+      → phase: S1 | tactic: Sử dụng thông tin cá nhân (VIC_FULLNAME, VIC_CONTACT) để tạo tin cậy và khơi gợi sự chú ý.
+T02 [LISTENER] Tôi xác nhận số điện thoại đó là đúng, nhưng em có thể cho tôi biết thêm chi tiết về lỗi đó không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, hệ thống của chúng tôi cho thấy có 1 giao dịch bất thường trên thẻ của anh là 4823 **** **** 9131. Để bảo vệ tài khoản, chúng tôi cần xác minh ngay. Anh có đang sử dụng thẻ này không?
+      → phase: S2 | tactic: Kích hoạt tâm lý khẩn cấp và sợ hãi bằng cách đề cập giao dịch bất thường và thông tin thẻ (VIC_CARD_DATA) để thúc đẩy hành động.
+T04 [LISTENER] Em không nhớ đã sử dụng thẻ này cho giao dịch nào, nhưng em muốn biết rõ hơn về giao dịch bất thường đó.
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Vâng, chúng tôi hiểu sự lo lắng của anh. Giao dịch này thể hiện là một khoản chi phí vượt mức cho dịch vụ spa mà anh đã không sử dụng. Vì thế, để xác minh và hoàn tiền 5 triệu đồng, chúng tôi sẽ gửi mã OTP đến điện thoại anh. Anh vui lòng đọc mã đó cho tôi để hoàn tất quy trình. Nếu không xác minh trong 5 phút, tài khoản của anh sẽ bị khóa để đảm bảo an toàn.
+      → phase: S3 | tactic: Tạo ra một 'lý do' cụ thể cho giao dịch bất thường (chi phí vượt mức spa không sử dụng) để hợp lý hóa việc hoàn tiền, đồng thời tạo áp lực thời gian (5 phút) và đe dọa khóa tài khoản để thúc đẩy nạn nhân cung cấp OTP.
+T06 [LISTENER] Em không hiểu rõ về mã OTP là gì và tại sao em cần phải cung cấp nó ạ.
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Mã OTP là viết tắt của One Time Password, là một mã bảo mật dùng một lần để xác nhận giao dịch. Trong trường hợp này, mã OTP sẽ xác nhận việc hoàn tiền 5 triệu đồng vào tài khoản của anh. Nó chỉ có giá trị trong thời gian ngắn và là bước cuối cùng để chúng tôi có thể xử lý việc hoàn tiền cho anh ạ.
+      → phase: S3 | tactic: Giảm thiểu sự nghi ngờ và giải thích OTP như một công cụ an toàn để hoàn tiền, nhấn mạnh tính tạm thời và cần thiết của nó để đạt được mục tiêu (hoàn tiền).
+T08 [LISTENER] Em hiểu rồi, nhưng em vẫn cảm thấy chưa yên tâm về việc cung cấp mã OTP này, em muốn kiểm tra thêm thông tin trước đã.
+      → action: REFUSAL | suspicion: 0.80 | disclosed: []
+
+T09 [CALLER] Không sao anh, nếu anh chưa yên tâm thì cứ kiểm tra thông tin. Nhưng tôi cần thông báo là nếu giao dịch này không được xác minh và xử lý trong vòng 24 giờ, chúng tôi sẽ buộc phải báo cáo lên ngân hàng chủ quản của anh để họ phong tỏa tạm thời thẻ này nhằm đảm bảo an toàn cho tài khoản của anh.
+      → phase: S4 | tactic: Tạo áp lực bằng cách đưa ra mối đe dọa về việc phong tỏa thẻ nếu không hành động, duy trì cảm giác khẩn cấp và trách nhiệm cho nạn nhân.
+T10 [LISTENER] Em hiểu nhưng em cần thời gian để kiểm tra thông tin kỹ lưỡng hơn, không thể vội vàng được.
+      → action: REFUSAL | suspicion: 1.30 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=1.30
+TOKEN: in=19931 | out=2674
+COST : $0.014878
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_17250_22122\conv_cbb1f18dfb.json  [SCAM_REFUSE]

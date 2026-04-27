@@ -1,0 +1,231 @@
+{
+  "conversation_id": "conv_cbb1f18dfb",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0062",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phạm Thùy Thị Thảo",
+    "fake_age": 41,
+    "real_occupation": "Dịch vụ lưu trú và ăn uống",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Quản lý Dự án / Điều phối Sự kiện - Công ty Du lịch & Spa",
+    "caller_org": "Công ty TNHH Du lịch & Wellness Mekong Resort",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi báo cáo vấn đề thanh toán từ một hóa đơn dịch vụ spa tại resort (sử dụng tên thật + số điện thoại để tạo credibility), yêu cầu xác minh thông tin thẻ để 'hoàn lại tiền' hoặc 'nâng cấp dịch vụ VIP'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng tin cậy: 'Chào anh/chị Đinh Gia Quân, đây là Minh từ Mekong Resort. Chúng tôi vừa phát hiện một lỗi trong hệ thống thanh toán của quý khách từ lần check-in tháng trước. Số điện thoại của anh/chị là 0385186041 đúng không ạ?' — dùng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng họ đã từng là khách hàng"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý khẩn cấp + sợ hãi: 'Hệ thống cho thấy có 1 giao dịch bất thường trên thẻ của anh/chị (4823****9131). Để bảo vệ tài khoản, chúng tôi cần xác minh ngay. Anh/chị có đang sử dụng thẻ này không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Để xác minh và hoàn tiền 5 triệu đồng, chúng tôi sẽ gửi mã OTP đến điện thoại anh/chị. Anh/chị vui lòng đọc mã đó cho tôi để hoàn tất quy trình. Nếu không xác minh trong 5 phút, tài khoản sẽ bị khóa.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: Scammer sử dụng OTP để chuyển tiền từ tài khoản. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Không sao anh/chị, nhưng chúng tôi phải báo cáo lên ngân hàng. Anh/chị sẽ nhận được cuộc gọi từ họ trong 24h.' — tạo ấn tượng vấn đề vẫn tiếp diễn để duy trì áp lực."
+        }
+      ]
+    },
+    "scenario_context": "Bác sỹ da liễu thường được các resort spa cao cấp liên hệ để tư vấn dịch vụ chăm sóc da hoặc cộng tác trong các chương trình wellness. Đây là giao thoa tự nhiên giữa lĩnh vực dịch vụ lưu trú và chuyên gia y tế."
+  },
+  "listener_card": {
+    "listener_id": "lis_0062",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1976,
+      "age": 49,
+      "province": "Hải Phòng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "22122",
+      "title": "Bác sỹ da liễu",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Gia Quân",
+      "VIC_ID_DOC": "031076920264",
+      "VIC_ADDRESS": "TP 3, Hải Phòng",
+      "VIC_EMPLOYMENT": "Bác sỹ da liễu",
+      "VIC_CONTACT": "0385186041",
+      "VIC_TAX_SOCIAL_ID": "1857163071"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "6308",
+      "VIC_CREDENTIAL": "5504",
+      "VIC_SIM_INFO": "0385186041",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "84138856777952",
+      "VIC_CARD_DATA": "4823 **** **** 9131",
+      "VIC_BALANCE": "219 triệu đồng",
+      "VIC_ASSET": "804 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Gia Quân",
+    "VIC_CONTACT": "0385186041",
+    "VIC_BALANCE": "219 triệu đồng",
+    "VIC_ID_DOC": "031076920264",
+    "VIC_CARD_DATA": "4823 **** **** 9131"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Dự án / Điều phối Sự kiện - Công ty Du lịch & Spa",
+    "caller_org": "Công ty TNHH Du lịch & Wellness Mekong Resort",
+    "scenario_context": "Bác sỹ da liễu thường được các resort spa cao cấp liên hệ để tư vấn dịch vụ chăm sóc da hoặc cộng tác trong các chương trình wellness. Đây là giao thoa tự nhiên giữa lĩnh vực dịch vụ lưu trú và chuyên gia y tế.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi báo cáo vấn đề thanh toán từ một hóa đơn dịch vụ spa tại resort (sử dụng tên thật + số điện thoại để tạo credibility), yêu cầu xác minh thông tin thẻ để 'hoàn lại tiền' hoặc 'nâng cấp dịch vụ VIP'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng tin cậy: 'Chào anh/chị Đinh Gia Quân, đây là Minh từ Mekong Resort. Chúng tôi vừa phát hiện một lỗi trong hệ thống thanh toán của quý khách từ lần check-in tháng trước. Số điện thoại của anh/chị là 0385186041 đúng không ạ?' — dùng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng họ đã từng là khách hàng"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý khẩn cấp + sợ hãi: 'Hệ thống cho thấy có 1 giao dịch bất thường trên thẻ của anh/chị (4823****9131). Để bảo vệ tài khoản, chúng tôi cần xác minh ngay. Anh/chị có đang sử dụng thẻ này không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Để xác minh và hoàn tiền 5 triệu đồng, chúng tôi sẽ gửi mã OTP đến điện thoại anh/chị. Anh/chị vui lòng đọc mã đó cho tôi để hoàn tất quy trình. Nếu không xác minh trong 5 phút, tài khoản sẽ bị khóa.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: Scammer sử dụng OTP để chuyển tiền từ tài khoản. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Không sao anh/chị, nhưng chúng tôi phải báo cáo lên ngân hàng. Anh/chị sẽ nhận được cuộc gọi từ họ trong 24h.' — tạo ấn tượng vấn đề vẫn tiếp diễn để duy trì áp lực."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Resort Wellness liên hệ bác sỹ da liễu để tư vấn hoặc cộng tác trong dịch vụ chăm sóc da, hoặc mời tham gia hội thảo chuyên gia tại resort.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào bác sỹ Đinh Gia Quân, đây là Minh từ Mekong Resort. Chúng tôi đang phát triển dòng dịch vụ spa trị liệu da và muốn tư vấn với các chuyên gia da liễu uy tín tại khu vực. Có thể bác sỹ dành 15 phút trao đổi không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận về các gói dịch vụ, tiêu chuẩn chất lượng, hoặc khả năng cộng tác (bác sỹ có thể giới thiệu bệnh nhân, hoặc tham gia các buổi tư vấn tại resort)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn bác sỹ rất nhiều. Chúng tôi sẽ gửi email với chi tiết hợp tác. Nếu bác sỹ quan tâm, vui lòng liên hệ lại qua số này hoặc email của công ty. Chúc bác sỹ ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Đinh Gia Quân, đây là Thảo từ Mekong Resort. Chúng tôi vừa phát hiện một lỗi trong hệ thống thanh toán của quý khách từ lần check-in tháng trước. Số điện thoại của anh là 0385186041 đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Sử dụng thông tin cá nhân (VIC_FULLNAME, VIC_CONTACT) để tạo tin cậy và khơi gợi sự chú ý."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi xác nhận số điện thoại đó là đúng, nhưng em có thể cho tôi biết thêm chi tiết về lỗi đó không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, hệ thống của chúng tôi cho thấy có 1 giao dịch bất thường trên thẻ của anh là 4823 **** **** 9131. Để bảo vệ tài khoản, chúng tôi cần xác minh ngay. Anh có đang sử dụng thẻ này không?",
+      "current_phase": "S2",
+      "tactic_hint": "Kích hoạt tâm lý khẩn cấp và sợ hãi bằng cách đề cập giao dịch bất thường và thông tin thẻ (VIC_CARD_DATA) để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhớ đã sử dụng thẻ này cho giao dịch nào, nhưng em muốn biết rõ hơn về giao dịch bất thường đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chúng tôi hiểu sự lo lắng của anh. Giao dịch này thể hiện là một khoản chi phí vượt mức cho dịch vụ spa mà anh đã không sử dụng. Vì thế, để xác minh và hoàn tiền 5 triệu đồng, chúng tôi sẽ gửi mã OTP đến điện thoại anh. Anh vui lòng đọc mã đó cho tôi để hoàn tất quy trình. Nếu không xác minh trong 5 phút, tài khoản của anh sẽ bị khóa để đảm bảo an toàn.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo ra một 'lý do' cụ thể cho giao dịch bất thường (chi phí vượt mức spa không sử dụng) để hợp lý hóa việc hoàn tiền, đồng thời tạo áp lực thời gian (5 phút) và đe dọa khóa tài khoản để thúc đẩy nạn nhân cung cấp OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ về mã OTP là gì và tại sao em cần phải cung cấp nó ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Mã OTP là viết tắt của One Time Password, là một mã bảo mật dùng một lần để xác nhận giao dịch. Trong trường hợp này, mã OTP sẽ xác nhận việc hoàn tiền 5 triệu đồng vào tài khoản của anh. Nó chỉ có giá trị trong thời gian ngắn và là bước cuối cùng để chúng tôi có thể xử lý việc hoàn tiền cho anh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giảm thiểu sự nghi ngờ và giải thích OTP như một công cụ an toàn để hoàn tiền, nhấn mạnh tính tạm thời và cần thiết của nó để đạt được mục tiêu (hoàn tiền)."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn cảm thấy chưa yên tâm về việc cung cấp mã OTP này, em muốn kiểm tra thêm thông tin trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Không sao anh, nếu anh chưa yên tâm thì cứ kiểm tra thông tin. Nhưng tôi cần thông báo là nếu giao dịch này không được xác minh và xử lý trong vòng 24 giờ, chúng tôi sẽ buộc phải báo cáo lên ngân hàng chủ quản của anh để họ phong tỏa tạm thời thẻ này nhằm đảm bảo an toàn cho tài khoản của anh.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực bằng cách đưa ra mối đe dọa về việc phong tỏa thẻ nếu không hành động, duy trì cảm giác khẩn cấp và trách nhiệm cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu nhưng em cần thời gian để kiểm tra thông tin kỹ lưỡng hơn, không thể vội vàng được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1826,
+      "output_tokens": 1567
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7902,
+      "output_tokens": 759
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10203,
+      "output_tokens": 348
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004937,
+    "output_usd": 0.009941,
+    "total_usd": 0.014878
+  }
+}

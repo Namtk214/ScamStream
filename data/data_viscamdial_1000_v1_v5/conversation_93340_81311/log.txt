@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_4dcf1d0ae3]
+  Caller thật: Người bày hàng lên giá (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên bán hàng / Người đại diện cung cấp nguyên liệu @ Công ty cung cấp hóa chất công nghiệp / thương lái tự do
+  Listener: Thợ vận hành thiết bị nghiền/trộn hóa chất (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người bày hàng lên giá (scammer) tự nhiên tiếp xúc với thợ vận hành thiết bị nghiền/trộn hóa chất vì cần bán nguyên liệu, thiết bị, hoặc dịch vụ liên quan đến quá trình sản xuất. Đây là mối quan hệ B2B thường xuyên trong chuỗi cung ứng công nghiệp.
+  Pretext: Gọi để thông báo về đơn hàng nguyên liệu hóa chất của Đỗ Xuân Bình, cần xác nhận thông tin cá nhân để cập nhật hệ thống hoặc xử lý thanh toán khẩn cấp.
+  Listener traits: ['lo lắng cho con cái', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Bình, tôi là Bảo Nhàn, nhân viên từ công ty cung cấp hóa chất XYZ. Tôi gọi để xác nhận lại đơn hàng nguyên liệu trị giá cao mà anh đặt hôm qua. Số điện thoại tôi có là 0811009686 đúng không ạ?
+      → phase: S1 | tactic: Dùng VIC_FULLNAME và VIC_CONTACT để tạo credibility cao, bắt đầu xây dựng lòng tin.
+T02 [LISTENER] Vâng, đó là số điện thoại của em, nhưng em không nhớ đã đặt hàng gì cả ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Anh Bình kiểm tra lại tin nhắn Zalo hoặc email anh xem có thông tin về đơn hàng này chưa ạ? Đơn hàng này có mã là 1637, nguyên liệu hóa chất công nghiệp, tổng giá trị là 150 triệu đồng đấy ạ. Rất quan trọng nên tôi phải gọi xác nhận trực tiếp.
+      → phase: S1 | tactic: Bổ sung thông tin chi tiết về đơn hàng (mã, loại hàng, giá trị) để tăng tính thuyết phục, đồng thời nhắc đến số VIC_ID_DOC (1637) để củng cố thêm niềm tin. Nhấn mạnh tầm quan trọng của việc xác nhận để tạo sự cấp bách.
+T04 [LISTENER] Em không thấy có tin nhắn nào về đơn hàng này cả, chị có thể nói rõ hơn về sản phẩm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Sản phẩm là hợp chất Ethyl Acetate, dung môi công nghiệp. Đơn hàng này do bên kho báo là anh đã đặt qua kênh online của công ty tôi. Tôi thấy mình cần xác nhận lại ngay vì số lượng lớn, anh Bình không nhớ đúng không?
+      → phase: S1 | tactic: Cung cấp thêm chi tiết cụ thể về sản phẩm để tăng tính xác thực của câu chuyện, đồng thời đặt câu hỏi mở để nạn nhân tự xác nhận lại, tạo cơ hội cho scammer can thiệp sâu hơn.
+T06 [LISTENER] Chị ơi, em không nhớ đã đặt hàng gì cả và cũng không rõ thông tin về sản phẩm này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Anh Bình, phía thanh toán vừa báo hệ thống của bên tôi phát hiện một giao dịch bất thường trên thẻ thanh toán của anh (4764 **** **** 3067) liên quan đến đơn hàng này. Để bảo vệ tài khoản của anh và đảm bảo đơn hàng không bị hủy, anh có thể cung cấp OTP vừa nhận được không?
+      → phase: S2 | tactic: Chuyển sang S2 để khai thác tâm lý khẩn cấp bằng cách báo lỗi giao dịch liên quan đến thẻ của nạn nhân (VIC_CARD_DATA), tạo áp lực để nạn nhân cung cấp OTP, đề phòng đơn hàng bị hủy hoặc mất đặt cọc.
+T08 [LISTENER] Chị ơi, em không hiểu OTP là gì, chị có thể giải thích cho em được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Anh Bình, OTP là mã xác thực dùng một lần, ngân hàng gửi đến điện thoại của anh để xác nhận giao dịch. Mã này rất quan trọng để đảm bảo anh là chủ tài khoản và đồng ý thanh toán cho đơn hàng này. Anh cứ yên tâm đọc mã OTP cho tôi.
+      → phase: S2 | tactic: Giải thích OTP là gì một cách đơn giản, nhấn mạnh tầm quan trọng của nó trong việc xác nhận giao dịch và đảm bảo quyền lợi của nạn nhân, đồng thời trấn an để nạn nhân cung cấp thông tin.
+T10 [LISTENER] Em hiểu rồi, nhưng em vẫn cảm thấy không thoải mái khi cung cấp mã OTP ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Anh Bình, tôi hiểu sự lo lắng của anh. Nhưng nếu anh không cung cấp mã OTP để xác nhận giao dịch này, hệ thống sẽ tự động hủy đơn hàng và số tiền đặt cọc 15 triệu đồng của anh sẽ bị giữ lại. Anh có chắc muốn như vậy không?
+      → phase: S2 | tactic: Tăng áp lực tâm lý bằng cách đe dọa hủy đơn hàng và giữ tiền đặt cọc (mặc dù không có thật) nếu nạn nhân không cung cấp OTP, đẩy nhanh quyết định của nạn nhân.
+T12 [LISTENER] Chị ơi, em không muốn bị mất tiền đặt cọc, nhưng em vẫn cảm thấy bất an nếu cung cấp mã OTP ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=0.00
+TOKEN: in=24646 | out=2736
+COST : $0.015433
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_93340_81311\conv_4dcf1d0ae3.json  [SCAM_REFUSE]

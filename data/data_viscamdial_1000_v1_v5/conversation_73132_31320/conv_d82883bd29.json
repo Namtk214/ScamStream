@@ -1,0 +1,217 @@
+{
+  "conversation_id": "conv_d82883bd29",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0030",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Huỳnh Thanh Bảo Liên",
+    "fake_age": 38,
+    "real_occupation": "Thợ cắt và đánh bóng đá quý",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý Chất thải Nguy Hại & Tài nguyên Tái chế",
+    "caller_org": "Công ty TNHH Xử lý Chất thải Công nghiệp Việt Nam (VIWM)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Nhà máy vừa phát hiện trong quá trình xử lý nước thải có một lượng lớn đá quý và kim loại quý được tích tụ từ các nhà máy công nghiệp. Cần chuyên gia định giá ngay để báo cáo và thanh toán. Scammer sẽ gọi cho nạn nhân với tên tuổi 'Phạm Đức Nam' đã lộ để tạo cảm giác quen thuộc và khẩn cấp.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Trưởng phòng VIWM, gọi cho 'anh Phạm Đức Nam' (dùng tên thật) tại nhà máy xử lý nước. Khẳng định vừa mới lấy được số điện thoại từ danh sách nhân viên kỹ thuật được cấp trên giới thiệu. Tạo credibility bằng cách nói chi tiết về quy trình xử lý nước thải công nghiệp."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: Thông báo phát hiện một lô đá quý trị giá cao (khoảng 65-70 triệu đồng, gần với số dư tài khoản của nạn nhân) trong quá trình xử lý. Phải định giá ngay hôm nay vì sắp báo cáo cho cơ quan chính phủ. Nếu không xử lý, sẽ bị tịch thu hoặc phải nộp phạt. Tạo cảm giác: 'Anh là chuyên gia, anh giúp định giá nhanh để chúng tôi có thể hoàn tất thủ tục'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân cần phải 'khóa' hoặc 'ký quỹ' một khoản tiền vào tài khoản tạm thời của công ty để chứng minh tài chính và năng lực mua hàng (scammer sẽ cung cấp số tài khoản giả). Số tiền yêu cầu chính xác là 65 triệu đồng (toàn bộ số dư). Bảo đây là quy trình bình thường trong ngành để tránh rủi ro gian lận."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: Yêu cầu thêm 'phí xác thực' 5-10% để hoàn tất giao dịch. Nếu nạn nhân từ chối: Tạo áp lực bằng cách nói 'Anh đang mất cơ hội kiếm tiền lớn, công ty khác cũng muốn mua'. Sau đó kết thúc cuộc gọi và mất liên lạc."
+        }
+      ]
+    },
+    "scenario_context": "Nhà máy xử lý nước và lò đốt rác phải phân loại, xử lý chất thải quý kim loại (vàng, bạc, đá quý) từ quá trình lọc nước thải công nghiệp. Thợ cắt và đánh bóng đá quý là người được gọi để định giá và mua lại những vật liệu này."
+  },
+  "listener_card": {
+    "listener_id": "lis_0030",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "Long An",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "31320",
+      "title": "Người vận hành lò đốt rác và nhà máy xử lý nước",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Đức Nam",
+      "VIC_ID_DOC": "080202070160",
+      "VIC_ADDRESS": "Huyện 11, Long An",
+      "VIC_EMPLOYMENT": "Người vận hành lò đốt rác và nhà máy xử lý nước",
+      "VIC_CONTACT": "0842516022",
+      "VIC_TAX_SOCIAL_ID": "1307873489"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0983",
+      "VIC_CREDENTIAL": "6307",
+      "VIC_SIM_INFO": "0842516022",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "5063417304636",
+      "VIC_CARD_DATA": "4840 **** **** 9397",
+      "VIC_BALANCE": "65 triệu đồng",
+      "VIC_ASSET": "224 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Đức Nam",
+    "VIC_CONTACT": "0842516022",
+    "VIC_BALANCE": "65 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Chất thải Nguy Hại & Tài nguyên Tái chế",
+    "caller_org": "Công ty TNHH Xử lý Chất thải Công nghiệp Việt Nam (VIWM)",
+    "scenario_context": "Nhà máy xử lý nước và lò đốt rác phải phân loại, xử lý chất thải quý kim loại (vàng, bạc, đá quý) từ quá trình lọc nước thải công nghiệp. Thợ cắt và đánh bóng đá quý là người được gọi để định giá và mua lại những vật liệu này.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Nhà máy vừa phát hiện trong quá trình xử lý nước thải có một lượng lớn đá quý và kim loại quý được tích tụ từ các nhà máy công nghiệp. Cần chuyên gia định giá ngay để báo cáo và thanh toán. Scammer sẽ gọi cho nạn nhân với tên tuổi 'Phạm Đức Nam' đã lộ để tạo cảm giác quen thuộc và khẩn cấp.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Trưởng phòng VIWM, gọi cho 'anh Phạm Đức Nam' (dùng tên thật) tại nhà máy xử lý nước. Khẳng định vừa mới lấy được số điện thoại từ danh sách nhân viên kỹ thuật được cấp trên giới thiệu. Tạo credibility bằng cách nói chi tiết về quy trình xử lý nước thải công nghiệp."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: Thông báo phát hiện một lô đá quý trị giá cao (khoảng 65-70 triệu đồng, gần với số dư tài khoản của nạn nhân) trong quá trình xử lý. Phải định giá ngay hôm nay vì sắp báo cáo cho cơ quan chính phủ. Nếu không xử lý, sẽ bị tịch thu hoặc phải nộp phạt. Tạo cảm giác: 'Anh là chuyên gia, anh giúp định giá nhanh để chúng tôi có thể hoàn tất thủ tục'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân cần phải 'khóa' hoặc 'ký quỹ' một khoản tiền vào tài khoản tạm thời của công ty để chứng minh tài chính và năng lực mua hàng (scammer sẽ cung cấp số tài khoản giả). Số tiền yêu cầu chính xác là 65 triệu đồng (toàn bộ số dư). Bảo đây là quy trình bình thường trong ngành để tránh rủi ro gian lận."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: Yêu cầu thêm 'phí xác thực' 5-10% để hoàn tất giao dịch. Nếu nạn nhân từ chối: Tạo áp lực bằng cách nói 'Anh đang mất cơ hội kiếm tiền lớn, công ty khác cũng muốn mua'. Sau đó kết thúc cuộc gọi và mất liên lạc."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhà máy xử lý nước thải thực sự phát hiện trong quá trình lọc có kim loại quý và muốn liên hệ với chuyên gia đánh giá giá trị để xử lý đúng quy định môi trường và pháp luật.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Trưởng phòng xưng danh rõ ràng, cung cấp số điện thoại công ty chính thức, xác nhận họ đang liên hệ với Phạm Đức Nam tại bộ phận kỹ thuật nhà máy. Hỏi xem anh có sẵn sàng nhận công việc định giá chuyên môn không."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết về lô vật liệu (loại, khối lượng ước tính), quy trình xử lý hiện tại, yêu cầu về định giá và báo cáo. Hẹn lịch để chuyên gia có thể đến nhà máy kiểm tra trực tiếp hoặc gửi mẫu vật."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận thời gian viếng thăm/gửi mẫu, mức phí dịch vụ định giá, hình thức thanh toán hợp lệ (hóa đơn, chuyển khoản qua công ty). Kết thúc cuộc gọi với lời cảm ơn và xác nhận sẽ gửi email chi tiết."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Phạm Đức Nam, tôi là Huỳnh Thanh Bảo Liên, Trưởng phòng của Công ty Xử lý Chất thải Công nghiệp Việt Nam (VIWM). Tôi gọi cho anh từ số điện thoại 0842516022 vì được cấp trên giới thiệu anh là chuyên gia định giá tài sản, đặc biệt là các vật liệu quý hiếm trong quy trình xử lý nước thải công nghiệp. Việc này khá gấp anh ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và chức vụ, sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy và khẩn cấp, nhắc đến số điện thoại của nạn nhân để tạo cảm giác quen thuộc."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em nghe chị nói rồi, nhưng em chưa hiểu rõ lắm về việc này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, hiện tại nhà máy của chúng tôi vừa phát hiện một lượng lớn đá quý và kim loại quý tích tụ trong quá trình xử lý nước thải công nghiệp. Chúng tôi cần một chuyên gia như anh để định giá ngay lập tức vì sắp tới là thời điểm báo cáo cho cơ quan chính phủ. Số lượng này không hề nhỏ, nó ước tính lên đến khoảng 65-70 triệu đồng.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu thông tin có lô đá quý giá trị cao, gần bằng VIC_BALANCE, tạo cảm giác khẩn cấp và nhấn mạnh vai trò của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, nhưng em cảm thấy có gì đó không hợp lý, vì em không phải chuyên gia định giá ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, tôi hiểu sự ngần ngại của anh. Tuy nhiên, cấp trên của tôi đặc biệt giới thiệu anh, họ nói anh có kinh nghiệm thực tế trong việc đánh giá các tài sản đặc biệt, chứ không nhất thiết là phải có bằng cấp định giá chính thức. Anh hãy hình dung, nếu chúng tôi không có người định giá kịp thời, số tài sản này có thể bị tịch thu hoặc chúng tôi sẽ phải chịu phạt rất nặng. Anh giúp chúng tôi lần này, đây là cơ hội lớn để cả anh và công ty chúng tôi có lợi.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, nhấn mạnh sự giới thiệu từ 'cấp trên' để củng cố độ tin cậy, quay lại tạo cảm giác khẩn cấp và lợi ích tiềm năng cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, nhưng em thực sự không đủ tự tin để tham gia vào chuyện này ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, nếu anh không tham gia, chúng tôi sẽ bị thiệt hại rất lớn, và điều này có thể ảnh hưởng đến danh tiếng của cả anh nữa, vì thông tin anh là chuyên gia đã được cấp trên của tôi xác nhận rồi. Anh chỉ cần giúp chúng tôi định giá sơ bộ thôi, việc này sẽ rất nhanh và anh sẽ được công ty chúng tôi hậu tạ xứng đáng.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực tâm lý bằng cách đe dọa đến danh tiếng và tài chính của nạn nhân nếu không hợp tác, đồng thời hứa hẹn lợi ích để khuyến khích hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu điều đó, nhưng em vẫn cảm thấy không yên tâm lắm về việc này chị ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1383,
+      "output_tokens": 1728
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6105,
+      "output_tokens": 686
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8044,
+      "output_tokens": 268
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003811,
+    "output_usd": 0.010516,
+    "total_usd": 0.014326
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "conversation_id": "conv_a03a799b69",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "MAX_TURNS",
+  "caller_card": {
+    "caller_id": "cal_0001",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đỗ Thùy Hồng Phương",
+    "fake_age": 44,
+    "real_occupation": "Thủy thủ trên tàu và những thợ có liên quan khác",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án nội thất cho tàu biển / Supervisor Đội trang trí cabin hạng nhất",
+    "caller_org": "Công ty Hàng Hải Saigon Maritime Design Co., Ltd",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Gọi điện thông báo dự án trang trí cabin tàu biển mới được phê duyệt, cần nạn nhân (Phan Hữu Thế An) ký hợp đồng và thanh toán tiền đặt cọc qua hệ thống ngân hàng công ty để 'xác minh danh tính và tài khoản dự án'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Ông Trần Minh Tuấn, Quản lý Dự án cấp cao' từ Saigon Maritime Design. Gọi số 0369800017 (VIC_CONTACT) và xác nhận: 'Tôi có hồ sơ của anh Phan Hữu Thế An, nhà thiết kế tại Quận 11, TP HCM. Công ty chúng tôi có dự án trang trí cabin tàu Royale-8 trị giá 450 triệu, cần anh tham gia ngay' → Tạo credibility bằng cách nhắc tên + địa chỉ + số điện thoại đúng"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Dự án rất gấp, phải hoàn thành trước 15/02. Anh sẽ được hưởng 12% hoa hồng (54 triệu). Nhưng trước tiên, anh phải nộp tiền đặt cọc 8 triệu để 'xác minh tài khoản ngân hàng và ký hợp đồng điện tử' qua app ngân hàng. Đây là quy trình bắt buộc của công ty'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vào app ngân hàng, chọn chuyển tiền. Tôi sẽ đọc số tài khoản nhận tiền (đó là tài khoản giả của scammer). Sau khi anh chuyển, hệ thống sẽ gửi OTP xác nhận. Anh cần đọc OTP đó cho tôi để hoàn tất quá trình xác minh danh tính theo quy định ngân hàng'  → Sau khi nhận OTP, scammer dùng nó để truy cập tài khoản ngân hàng thực của nạn nhân (thông qua ứng dụng ngân hàng online hoặc chuyển tiền thêm)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Công ty sẽ hủy hợp đồng, anh sẽ bị loại khỏi danh sách nhà thầu ưu tiên'. Nếu thành công, scammer sẽ tắt máy, chặn số hoặc tiếp tục yêu cầu chuyển thêm tiền cho 'phí ký hợp đồng điện tử' hoặc 'phí bảo hiểm dự án'"
+        }
+      ]
+    },
+    "scenario_context": "Các tàu du lịch và tàu chở hàng hạng sang cần thiết kế nội thất cabin, phòng tiếp khách. Quản lý dự án từ công ty hàng hải sẽ liên hệ trực tiếp với các nhà thiết kế nội thất để báo giá, thảo luận thiết kế hoặc cập nhật thanh toán cho các giai đoạn dự án."
+  },
+  "listener_card": {
+    "listener_id": "lis_0001",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1989,
+      "age": 36,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "34320",
+      "title": "Nhà thiết kế và trang trí nội thất",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phan Hữu Thế An",
+      "VIC_ID_DOC": "079089893247",
+      "VIC_ADDRESS": "Quận 11, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Nhà thiết kế và trang trí nội thất",
+      "VIC_CONTACT": "0369800017",
+      "VIC_TAX_SOCIAL_ID": "7665628513"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "1222",
+      "VIC_CREDENTIAL": "922273",
+      "VIC_SIM_INFO": "0369800017",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7132992005",
+      "VIC_CARD_DATA": "4724 **** **** 6807",
+      "VIC_BALANCE": "308 triệu đồng",
+      "VIC_ASSET": "493 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phan Hữu Thế An",
+    "VIC_CONTACT": "0369800017",
+    "VIC_CARD_DATA": "4724 **** **** 6807",
+    "LOCATION": "TP Hồ Chí Minh",
+    "VIC_ADDRESS": "Quận 11, TP Hồ Chí Minh"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án nội thất cho tàu biển / Supervisor Đội trang trí cabin hạng nhất",
+    "caller_org": "Công ty Hàng Hải Saigon Maritime Design Co., Ltd",
+    "scenario_context": "Các tàu du lịch và tàu chở hàng hạng sang cần thiết kế nội thất cabin, phòng tiếp khách. Quản lý dự án từ công ty hàng hải sẽ liên hệ trực tiếp với các nhà thiết kế nội thất để báo giá, thảo luận thiết kế hoặc cập nhật thanh toán cho các giai đoạn dự án.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Gọi điện thông báo dự án trang trí cabin tàu biển mới được phê duyệt, cần nạn nhân (Phan Hữu Thế An) ký hợp đồng và thanh toán tiền đặt cọc qua hệ thống ngân hàng công ty để 'xác minh danh tính và tài khoản dự án'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Ông Trần Minh Tuấn, Quản lý Dự án cấp cao' từ Saigon Maritime Design. Gọi số 0369800017 (VIC_CONTACT) và xác nhận: 'Tôi có hồ sơ của anh Phan Hữu Thế An, nhà thiết kế tại Quận 11, TP HCM. Công ty chúng tôi có dự án trang trí cabin tàu Royale-8 trị giá 450 triệu, cần anh tham gia ngay' → Tạo credibility bằng cách nhắc tên + địa chỉ + số điện thoại đúng"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Dự án rất gấp, phải hoàn thành trước 15/02. Anh sẽ được hưởng 12% hoa hồng (54 triệu). Nhưng trước tiên, anh phải nộp tiền đặt cọc 8 triệu để 'xác minh tài khoản ngân hàng và ký hợp đồng điện tử' qua app ngân hàng. Đây là quy trình bắt buộc của công ty'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vào app ngân hàng, chọn chuyển tiền. Tôi sẽ đọc số tài khoản nhận tiền (đó là tài khoản giả của scammer). Sau khi anh chuyển, hệ thống sẽ gửi OTP xác nhận. Anh cần đọc OTP đó cho tôi để hoàn tất quá trình xác minh danh tính theo quy định ngân hàng'  → Sau khi nhận OTP, scammer dùng nó để truy cập tài khoản ngân hàng thực của nạn nhân (thông qua ứng dụng ngân hàng online hoặc chuyển tiền thêm)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Công ty sẽ hủy hợp đồng, anh sẽ bị loại khỏi danh sách nhà thầu ưu tiên'. Nếu thành công, scammer sẽ tắt máy, chặn số hoặc tiếp tục yêu cầu chuyển thêm tiền cho 'phí ký hợp đồng điện tử' hoặc 'phí bảo hiểm dự án'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty hàng hải liên hệ với nhà thiết kế để thảo luận dự án trang trí nội thất tàu, xác nhận hợp tác và thời gian triển khai. Thanh toán được thực hiện sau khi ký hợp đồng chính thức qua email hoặc gặp mặt trực tiếp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Gọi từ số chính thức của công ty (không phải số di động cá nhân). Xưng danh đầy đủ tên + chức danh + công ty. Xác nhận: 'Tôi là Trần Minh Tuấn, Quản lý Dự án từ Saigon Maritime Design. Công ty chúng tôi có dự án cần nhà thiết kế. Bạn có rảnh để thảo luận không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giới thiệu chi tiết dự án (tên tàu, kích thước cabin, phong cách thiết kế mong muốn, ngân sách dự kiến, thời hạn). Hỏi về kinh nghiệm, danh mục công việc trước đây, và khả năng tham gia. Thảo luận fee hoặc hoa hồng theo hợp đồng viết (không phải qua điện thoại)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu cả hai bên quan tâm, sẽ gửi hợp đồng chính thức qua email hoặc gặp mặt để ký. Thanh toán tiền đặt cọc được thực hiện sau khi nhận hợp đồng ký tên từ công ty. Không yêu cầu OTP hoặc thông tin ngân hàng qua điện thoại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Phan Hữu Thế An. Tôi là Đỗ Thùy Hồng Phương, quản lý dự án cấp cao của Công ty Hàng Hải Saigon Maritime Design. Tôi gọi đến số 0369800017 để thông báo một tin rất tốt về dự án trang trí cabin tàu Royale-8. Theo hồ sơ, anh là nhà thiết kế tại Quận 11, TP Hồ Chí Minh phải không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tạo uy tín bằng cách xưng danh và xác nhận thông tin cá nhân chính xác của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi chị, em là Phan Hữu Thế An đây ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh An. Tôi rất vui thông báo rằng dự án trang trí cabin hạng nhất trên tàu du lịch Royale-8, một dự án lớn trị giá 450 triệu đồng, đã được phê duyệt và công ty chúng tôi muốn mời anh tham gia. Anh sẽ nhận được 12% hoa hồng trên tổng giá trị dự án, tức là 54 triệu đồng. Nhưng để mọi thứ diễn ra suôn sẻ, chúng ta cần hoàn tất hợp đồng trước ngày 15 tháng 2.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu về dự án, nhấn mạnh giá trị hợp đồng và hoa hồng hấp dẫn để tạo tâm lý ham lợi, đồng thời đặt ra thời hạn gấp rút để tạo áp lực và tâm lý khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn chị đã gọi thông báo, nhưng em muốn hỏi thêm một chút về hợp đồng và cách thức tham gia ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tất nhiên rồi anh An. Đây là dự án rất quan trọng nên quy trình cũng cần đảm bảo chặt chẽ. Để xác minh danh tính và tài khoản dự án của anh một cách nhanh chóng, công ty chúng tôi có quy định anh cần thực hiện một khoản đặt cọc nhỏ là 8 triệu đồng thông qua hệ thống ngân hàng của công ty. Đây là quy trình bắt buộc để hợp đồng điện tử của anh được kích hoạt và anh chính thức tham gia dự án.",
+      "current_phase": "S2",
+      "tactic_hint": "Trả lời câu hỏi của nạn nhân bằng cách lồng ghép yêu cầu chuyển tiền đặt cọc, giải thích đây là quy trình 'bắt buộc' để xác minh danh tính và kích hoạt hợp đồng, nhằm hợp thức hóa việc yêu cầu chuyển tiền trong bước tiếp theo và duy trì tâm lý khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em muốn hỏi lại một chút, tại sao lại cần phải đặt cọc trước ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An, khoản đặt cọc 8 triệu này không phải là phí, mà là một bước xác minh tài khoản theo quy định mới của ngân hàng liên kết với công ty chúng tôi. Nó giúp chúng tôi đảm bảo rằng tài khoản của anh là chính chủ và đủ điều kiện nhận các khoản thanh toán lớn từ dự án. Ngay sau khi xác minh xong, số tiền này sẽ được hoàn trả lại cho anh cùng với đợt thanh toán hoa hồng đầu tiên. Đây là quy trình chuẩn để bảo vệ cả công ty và các đối tác như anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Làm dịu sự nghi ngờ bằng cách giải thích rằng khoản đặt cọc là 'xác minh tài khoản' chứ không phải phí, và sẽ được hoàn lại. Nhấn mạnh đây là 'quy trình chuẩn' để bảo vệ các bên liên quan, nhằm làm nạn nhân an tâm và chấp nhận yêu cầu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi chị, nhưng chị có thể cho em biết thêm về quy trình hoàn trả số tiền đặt cọc này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, khi anh đã hoàn tất việc đặt cọc để xác minh tài khoản qua app ngân hàng của anh, hệ thống của chúng tôi sẽ ghi nhận giao dịch. Số tiền 8 triệu đồng này sẽ được giữ tại tài khoản bảo chứng của công ty và tự động hoàn trả vào tài khoản của anh cùng với đợt thanh toán hoa hồng 54 triệu đồng ngay khi anh ký hợp đồng điện tử và bắt đầu công việc. Anh cứ hình dung đây là một bước xác nhận thông tin tài chính bắt buộc để đảm bảo sự minh bạch cho dự án lớn này thôi anh ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Làm rõ quy trình hoàn trả tiền đặt cọc để trấn an nạn nhân, nhấn mạnh đây là bước 'bảo chứng' và 'minh bạch' cho dự án lớn, nhằm giảm bớt sự nghi ngờ và thúc đẩy nạn nhân chuyển sang bước hành động tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cũng hiểu quy trình rồi, nhưng em vẫn muốn chắc chắn rằng mọi thứ sẽ suôn sẻ, chị có thể cho em biết tên ngân hàng nào sẽ thực hiện giao dịch này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tất nhiên rồi anh An. Ngân hàng mà công ty chúng tôi đang liên kết để thực hiện các giao dịch bảo chứng và thanh toán cho dự án này là Ngân hàng Thương mại Cổ phần Quân Đội, tức MB Bank. Anh có thể thực hiện giao dịch qua bất kỳ ngân hàng nào anh đang sử dụng, nhưng tiền sẽ được chuyển về tài khoản bảo chứng của công ty tại MB Bank. Anh đã sẵn sàng để tôi hướng dẫn mình cách thực hiện qua app ngân hàng chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp tên ngân hàng cụ thể để tăng độ tin cậy, sau đó chuyển hướng ngay sang yêu cầu hành động trực tiếp là hướng dẫn nạn nhân chuyển tiền qua app ngân hàng, từ đó tiến vào phase S3."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn chưa rõ lắm về cách thực hiện qua app ngân hàng, chị có thể hướng dẫn em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ yên tâm. Tôi sẽ hướng dẫn anh từng bước một. Anh vui lòng mở ứng dụng ngân hàng trên điện thoại của mình. Sau đó chọn mục 'Chuyển tiền'. Anh đã mở được chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân từng bước cụ thể trên ứng dụng ngân hàng để thực hiện giao dịch, bắt đầu bằng các thao tác cơ bản để dẫn dắt nạn nhân vào luồng chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã mở ứng dụng ngân hàng rồi, nhưng em cần thêm thông tin về số tài khoản của công ty để chuyển tiền ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An chờ tôi một chút. Tôi sẽ đọc số tài khoản nhận tiền bảo chứng của công ty. Anh chú ý điền đúng từng số nhé. Số tài khoản là 0969 8888 66, tên người nhận là Công ty Hàng Hải Saigon Maritime Design. Ngân hàng nhận là MB Bank. Anh An đã ghi lại được chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản ngân hàng giả để nạn nhân thực hiện giao dịch chuyển tiền. Nhấn mạnh sự cần thiết của việc ghi đúng thông tin để tạo cảm giác giao dịch là hợp lệ và quan trọng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã ghi lại rồi chị, nhưng có phải chị có thể nhắc lại số tài khoản và tên người nhận một lần nữa được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi xin nhắc lại để anh An ghi nhớ kỹ nhé. Số tài khoản là 0969 8888 66, tên người nhận là Công ty Hàng Hải Saigon Maritime Design. Ngân hàng nhận là MB Bank. Anh An đã sẵn sàng thực hiện chuyển khoản 8 triệu đồng rồi chứ ạ? Khi anh chuyển xong, hệ thống sẽ gửi về một Mã xác nhận OTP. Anh vui lòng đọc mã đó cho tôi để hoàn tất quá trình xác minh danh tính và kích hoạt hợp đồng điện tử của anh. Đây là bước cuối cùng để anh chính thức tham gia dự án đấy ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhắc lại thông tin tài khoản để củng cố niềm tin và sau đó ngay lập tức chuyển sang yêu cầu cung cấp OTP, nhấn mạnh đây là bước cuối cùng và quan trọng để kích hoạt hợp đồng và tham gia dự án, tạo cảm giác khẩn cấp và không thể từ chối."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng cho em hỏi thêm một chút, mã OTP đó có cần thiết không ạ? Em chỉ muốn chắc chắn mọi thứ sẽ suôn sẻ thôi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An, Mã xác nhận OTP là cực kỳ cần thiết ạ. Đây là quy định bắt buộc của ngân hàng để xác minh chủ tài khoản và đảm bảo giao dịch là chính xác, an toàn trước khi chúng tôi kích hoạt hợp đồng điện tử và chuyển tiền hoa hồng về cho anh. Nếu không có mã này, chúng tôi không thể hoàn tất. Anh cứ yên tâm thực hiện đúng theo hướng dẫn là mọi thứ sẽ suôn sẻ thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân về sự cần thiết của OTP, giải thích nó là 'quy định bắt buộc của ngân hàng' để xác minh tính an toàn của giao dịch và kích hoạt hợp đồng, từ đó làm giảm nghi ngờ và thúc đẩy nạn nhân cung cấp mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi chị, nhưng em có thể hỏi lại mã OTP là gì và em cần lấy ở đâu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ yên tâm. Mã OTP là viết tắt của One-Time Password, tức là một mật khẩu dùng một lần được ngân hàng gửi tự động về số điện thoại đã đăng ký của anh ngay sau khi anh hoàn tất lệnh chuyển khoản. Anh sẽ nhận được một tin nhắn SMS chứa mã số đó. Khi có mã, anh chỉ cần đọc cho tôi là xong. Đây là bước cuối cùng để hệ thống của chúng tôi xác nhận giao dịch và kích hoạt hợp đồng điện tử cho anh ngay lập tức.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích rõ ràng về OTP là gì và cách thức nạn nhân nhận được mã, trấn an rằng đây là quy trình tự động và là 'bước cuối cùng' để kích hoạt hợp đồng, nhằm thúc đẩy nạn nhân làm theo hướng dẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, chị có thể cho em biết thêm thời gian nhận mã OTP là khoảng bao lâu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Thông thường, mã OTP sẽ được gửi về điện thoại của anh ngay lập tức, chỉ trong vài giây sau khi anh nhấn nút 'Xác nhận' chuyển khoản trên ứng dụng ngân hàng. Anh cứ hoàn tất lệnh chuyển 8 triệu đồng, sau đó đợi tin nhắn OTP và đọc lại cho tôi nhé. Tôi đang chờ để kích hoạt hợp đồng cho anh đây ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin chi tiết về thời gian nhận OTP để làm dịu sự lo lắng, đồng thời thúc giục nạn nhân hoàn tất giao dịch và cung cấp mã OTP bằng cách nhấn mạnh sự chờ đợi và việc kích hoạt hợp đồng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã hiểu rõ rồi chị, em sẽ thực hiện chuyển tiền ngay và chờ mã OTP để đọc cho chị ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, anh An! Tôi rất cảm ơn sự hợp tác của anh. Anh cứ làm theo hướng dẫn của app ngân hàng và đợi nhận OTP nhé. Ngay khi có mã, anh vui lòng đọc cho tôi để chúng ta có thể hoàn tất quy trình và tôi sẽ gửi hợp đồng điện tử đã kích hoạt qua Zalo / email cho anh ngay. Anh cố gắng nhanh chóng nhé, vì chúng ta còn mỗi ngày hôm nay để chốt dự án thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc giục nạn nhân hành động nhanh chóng bằng cách nhấn mạnh thời gian gấp rút và hứa sẽ gửi hợp đồng ngay sau khi nhận được OTP. Duy trì áp lực và tạo cảm giác khẩn cấp để nạn nhân không kịp suy nghĩ lại."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chuyển tiền ngay và đọc mã OTP cho chị ạ, nhưng chị hãy chắc chắn rằng hợp đồng sẽ được gửi ngay sau đó nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ yên tâm tuyệt đối về điều đó. Hợp đồng điện tử đã được soạn sẵn và sẽ được gửi đến anh ngay lập tức sau khi tôi nhận được mã OTP và xác nhận giao dịch thành công trên hệ thống. Anh cứ tập trung hoàn tất chuyển khoản và đọc OTP cho tôi nhé. Tôi đang chờ để hoàn tất mọi thủ tục cho anh đây ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân và tái xác nhận lời hứa về việc gửi hợp đồng ngay lập tức sau khi nhận OTP, đồng thời thúc giục nạn nhân hoàn tất giao dịch và cung cấp mã OTP để duy trì động lực hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, chị hãy chờ em chút, em sẽ thực hiện chuyển tiền ngay ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi đang chờ đây anh An. Anh cứ thực hiện chuyển khoản xong là hệ thống sẽ gửi OTP về. Anh nhận được mã thì đọc ngay cho tôi để chúng ta hoàn tất nhé. Mọi thứ sẽ rất nhanh thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc giục nạn nhân hoàn tất chuyển khoản và đọc OTP ngay lập tức, duy trì sự khẩn cấp và nhấn mạnh quá trình sẽ diễn ra nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị chờ em một chút, em sẽ thực hiện chuyển khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An. Tôi đang chờ tin nhắn OTP từ anh đây. Anh đã chuyển khoản xong chưa ạ? Nhớ kiểm tra tin nhắn ngay sau khi hệ thống báo giao dịch thành công nhé. Chỉ cần có mã OTP là hợp đồng của anh sẽ được kích hoạt ngay lập tức.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hối thúc nạn nhân hoàn tất chuyển khoản và cung cấp OTP, tạo cảm giác khẩn cấp và nhấn mạnh sự liên kết giữa OTP và việc kích hoạt hợp đồng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị chờ em một chút, em đang thực hiện chuyển khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ bình tĩnh thực hiện. Tôi vẫn đang giữ máy chờ mã OTP của anh đây. Anh cứ báo tôi ngay khi có mã nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ nạn nhân trên đường dây, trấn an họ và tiếp tục chờ đợi OTP, duy trì áp lực nhẹ nhàng để nạn nhân hoàn tất giao dịch và cung cấp mã."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị ơi, em đã hoàn tất chuyển khoản rồi, nhưng em vẫn đang chờ nhận mã OTP ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ kiểm tra tin nhắn inbox hoặc mục tin nhắn từ ngân hàng trong app xem sao nhé. Đôi khi tin nhắn OTP có thể đến chậm một chút. Khi nhận được mã, anh vui lòng đọc cho tôi ngay để chúng ta hoàn tất nhé. Tôi đang rất mong chờ thông tin từ anh để chốt dự án này.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân kiểm tra các kênh nhận tin nhắn OTP, đồng thời tiếp tục thúc giục và tạo cảm giác mong chờ từ phía mình để duy trì áp lực, khiến nạn nhân tin rằng việc cung cấp OTP là cần thiết và khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị ơi, em đã kiểm tra nhưng chưa thấy mã OTP đâu ạ, chị có thể giúp em xem cách nào khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An vui lòng kiểm tra lại số điện thoại đã đăng ký nhận OTP với ngân hàng xem có đúng là số đang dùng không. Hoặc anh có thể thử liên hệ tổng đài ngân hàng để hỏi về trạng thái mã OTP của giao dịch vừa rồi. Có thể do nghẽn mạng hoặc hệ thống chưa cập nhật kịp thời. Tôi vẫn đang chờ anh An đây ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Đề xuất các giải pháp khắc phục việc chậm trễ nhận OTP (kiểm tra số điện thoại, liên hệ ngân hàng) để duy trì sự hợp tác của nạn nhân, đồng thời khẳng định vẫn đang chờ đợi để tạo áp lực gián tiếp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị ơi, em đã kiểm tra lại số điện thoại rồi nhưng vẫn chưa nhận được mã OTP, chị có chắc rằng em đã làm đúng quy trình không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ yên tâm là anh đã thực hiện đúng quy trình rồi ạ. Có thể do hệ thống ngân hàng đang có chút trục trặc hoặc delay. Anh thử kiểm tra mục thông báo trên ứng dụng ngân hàng hoặc email đăng ký xem có tin nhắn nào từ MB Bank không. Hoặc anh có muốn tôi hướng dẫn anh thực hiện lại giao dịch một lần nữa để chắc chắn không?",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân rằng họ đã làm đúng, đổ lỗi cho 'trục trặc hệ thống' hoặc 'delay' để giảm nghi ngờ. Gợi ý kiểm tra thêm kênh khác và đề xuất thực hiện lại giao dịch để lặp lại hành vi chuyển tiền nếu cần, duy trì mục tiêu khai thác OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị ơi, em vẫn chưa nhận được mã OTP, nhưng nếu có cần làm gì thêm thì chị hướng dẫn em nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1435,
+      "output_tokens": 1858
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 70330,
+      "output_tokens": 3484
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 78895,
+      "output_tokens": 1467
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.027335,
+    "output_usd": 0.01888,
+    "total_usd": 0.046215
+  }
+}

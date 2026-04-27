@@ -1,0 +1,230 @@
+{
+  "conversation_id": "conv_8d58d242b0",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0071",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Huỳnh Hồng Vy",
+    "fake_age": 42,
+    "real_occupation": "Giám sát viên xây dựng",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên an toàn lao động & y tế công nghiệp",
+    "caller_org": "Công ty tư vấn An toàn Lao động Xây dựng (cá nhân tự do hoặc công ty nhỏ)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | otp_extraction",
+      "pretext": "Gọi điện tuyên bố cần xác minh thông tin y tế công nhân tại dự án xây dựng mà nạn nhân được ghi danh làm cố vấn. Dùng tên đầy đủ 'Bùi Xuân Hữu Phong' và số ID để tạo uy tín, nói rằng đang cập nhật hệ thống quản lý sức khỏe lao động bắt buộc.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Tú từ Phòng An toàn Y tế công trường Dự án Trung tâm Thương mại Tân Bình'. Nói: 'Chào anh Phong, em đang cập nhật hồ sơ y tế công nhân. Em thấy anh Bùi Xuân Hữu Phong (ID: 060073633992) là cố vấn sức khỏe cho dự án này. Anh có thể xác nhận lại một số thông tin không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + trách nhiệm pháp lý. Nói: 'Hiện tại Sở Lao động yêu cầu cập nhật hồ sơ trong 24h, nếu không đủ thông tin sẽ bị phạt hành chính. Anh cần cập nhật lại tài khoản ngân hàng để nhận phụ cấp y tế công nhân, và chúng em cần xác thực qua OTP để bảo mật.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng cung cấp số điện thoại đăng ký ngân hàng, em sẽ gửi OTP. Anh chỉ cần đọc lại mã OTP để em xác nhận trong hệ thống.' Hoặc: 'Anh truy cập link này để cập nhật hồ sơ: [link giả]' để lấy thông tin đăng nhập."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, nói: 'Vâng, anh có thể gọi lại số tổng đài công ty để kiểm chứng, em để lại số [số giả].' Rồi ngắt máy, tạo ấn tượng là cuộc gọi chính thức."
+        }
+      ]
+    },
+    "scenario_context": "Giám sát viên xây dựng thường phối hợp với chuyên gia y tế công nghiệp để đánh giá rủi ro sức khỏe lao động tại công trường. Nhà chuyên môn sức khỏe có thể được gọi để tư vấn về các tiêu chuẩn y tế, kiểm tra sức khỏe công nhân, hoặc hỗ trợ báo cáo tuân thủ quy định."
+  },
+  "listener_card": {
+    "listener_id": "lis_0071",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1973,
+      "age": 52,
+      "province": "Bình Thuận",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "22690",
+      "title": "Nhà chuyên môn khác về sức khỏe chưa được phân vào đâu",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Xuân Hữu Phong",
+      "VIC_ID_DOC": "060073633992",
+      "VIC_ADDRESS": "Huyện 9, Bình Thuận",
+      "VIC_EMPLOYMENT": "Nhà chuyên môn khác về sức khỏe chưa được phân vào đâu",
+      "VIC_CONTACT": "0916063501",
+      "VIC_TAX_SOCIAL_ID": "6960763527"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "5338",
+      "VIC_CREDENTIAL": "575335",
+      "VIC_SIM_INFO": "0916063501",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "421330681676",
+      "VIC_CARD_DATA": "4632 **** **** 1979",
+      "VIC_BALANCE": "278 triệu đồng",
+      "VIC_ASSET": "238 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Xuân Hữu Phong",
+    "VIC_CONTACT": "0916063501",
+    "VIC_ID_DOC": "060073633992",
+    "VIC_EMPLOYMENT": "Nhà chuyên môn khác về sức khỏe chưa được phân vào đâu"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên an toàn lao động & y tế công nghiệp",
+    "caller_org": "Công ty tư vấn An toàn Lao động Xây dựng (cá nhân tự do hoặc công ty nhỏ)",
+    "scenario_context": "Giám sát viên xây dựng thường phối hợp với chuyên gia y tế công nghiệp để đánh giá rủi ro sức khỏe lao động tại công trường. Nhà chuyên môn sức khỏe có thể được gọi để tư vấn về các tiêu chuẩn y tế, kiểm tra sức khỏe công nhân, hoặc hỗ trợ báo cáo tuân thủ quy định.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | otp_extraction",
+      "pretext": "Gọi điện tuyên bố cần xác minh thông tin y tế công nhân tại dự án xây dựng mà nạn nhân được ghi danh làm cố vấn. Dùng tên đầy đủ 'Bùi Xuân Hữu Phong' và số ID để tạo uy tín, nói rằng đang cập nhật hệ thống quản lý sức khỏe lao động bắt buộc.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Tú từ Phòng An toàn Y tế công trường Dự án Trung tâm Thương mại Tân Bình'. Nói: 'Chào anh Phong, em đang cập nhật hồ sơ y tế công nhân. Em thấy anh Bùi Xuân Hữu Phong (ID: 060073633992) là cố vấn sức khỏe cho dự án này. Anh có thể xác nhận lại một số thông tin không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + trách nhiệm pháp lý. Nói: 'Hiện tại Sở Lao động yêu cầu cập nhật hồ sơ trong 24h, nếu không đủ thông tin sẽ bị phạt hành chính. Anh cần cập nhật lại tài khoản ngân hàng để nhận phụ cấp y tế công nhân, và chúng em cần xác thực qua OTP để bảo mật.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng cung cấp số điện thoại đăng ký ngân hàng, em sẽ gửi OTP. Anh chỉ cần đọc lại mã OTP để em xác nhận trong hệ thống.' Hoặc: 'Anh truy cập link này để cập nhật hồ sơ: [link giả]' để lấy thông tin đăng nhập."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, nói: 'Vâng, anh có thể gọi lại số tổng đài công ty để kiểm chứng, em để lại số [số giả].' Rồi ngắt máy, tạo ấn tượng là cuộc gọi chính thức."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty tư vấn an toàn lao động cần xác nhận hồ sơ cố vấn y tế cho dự án xây dựng mới, bao gồm cập nhật thông tin liên hệ, bằng cấp, và thỏa thuận hợp đồng tư vấn.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng, công ty, chức vụ thật. Nói: 'Chào anh Phong, em là Minh từ Công ty Tư vấn An toàn Lao động Xây dựng. Chúng em có dự án mới và muốn mời anh làm cố vấn y tế. Hiện tại anh có rảnh để trao đổi một chút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Mô tả chi tiết dự án (quy mô, địa điểm, thời gian), yêu cầu cố vấn (kiểm tra sức khỏe công nhân định kỳ, tư vấn quy trình an toàn), lương công, thời hạn hợp đồng. Hỏi kinh nghiệm, bằng cấp của anh."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: 'Nếu anh đồng ý, chúng em sẽ gửi hợp đồng qua email hoặc gặp trực tiếp để ký kết. Em sẽ liên hệ lại trong 2-3 ngày. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Phong, em là Vy từ Phòng An toàn Y tế công trường Dự án Trung tâm Thương mại Tân Bình đây ạ. Em đang cập nhật hồ sơ y tế công nhân. Em thấy anh Bùi Xuân Hữu Phong với số căn cước công dân 060073633992 là cố vấn sức khỏe cho dự án này. Anh có thể xác nhận lại một số thông tin giúp em được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và công ty, dùng thông tin đã biết về nạn nhân để tạo uy tín và mở đầu cuộc trò chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin trước khi xác nhận.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra thoải mái ạ. Em chỉ cần anh xác nhận lại một số thông tin cá nhân cơ bản để hoàn thiện hồ sơ thôi ạ. Việc cập nhật là bắt buộc theo quy định mới của Sở Lao động, tránh các trường hợp sai sót thông tin trong quá trình công tác ảnh hưởng đến quyền lợi của anh thôi ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định mục đích cuộc gọi là chính đáng và có lợi cho nạn nhân, đan xen yếu tố pháp lý để tạo áp lực nhẹ."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói cũng có lý, nhưng tôi vẫn cần thêm thông tin cụ thể hơn để cảm thấy yên tâm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, như em đã nói, chúng em đang rà soát hồ sơ y tế cho toàn bộ cố vấn và công nhân làm việc tại dự án. Cụ thể, em cần xác nhận lại địa chỉ email, số điện thoại liên lạc hiện tại và thông tin tài khoản ngân hàng của anh để đảm bảo chi trả đúng phụ cấp y tế nếu có phát sinh. Anh có thể cung cấp giúp em không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm chi tiết về thông tin cần xác nhận, vẫn giữ trong khuôn khổ 'cập nhật hồ sơ' và 'đảm bảo quyền lợi' của nạn nhân, tạo tiền đề cho việc xin thông tin nhạy cảm hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng tôi vẫn cảm thấy chưa được an tâm lắm, có thể cho tôi biết thêm về quy trình này không em?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, quy trình là sau khi anh cung cấp thông tin, bên em sẽ cập nhật vào hệ thống quản lý sức khỏe lao động bắt buộc. Hiện tại Sở Lao động đang yêu cầu chúng em hoàn tất hồ sơ trong vòng 24 giờ tới, nếu không đủ thông tin sẽ bị phạt hành chính. Việc này cũng nhằm đảm bảo quyền lợi phụ cấp y tế công nhân cho anh được chi trả đầy đủ và kịp thời nhất ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích quy trình, tạo cảm giác khẩn cấp và trách nhiệm pháp lý từ phía chính quyền, đồng thời nhấn mạnh lại lợi ích của nạn nhân để giảm bớt sự nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy làm tôi cũng lo lắng thật, nhưng tôi vẫn cần thêm thời gian để suy nghĩ trước khi cung cấp thông tin.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Phong cứ yên tâm ạ, việc này là thủ tục bắt buộc từ Sở Lao động yêu cầu các dự án phải hoàn thành gấp. Nếu không hoàn thành sẽ ảnh hưởng trực tiếp đến việc giải ngân phụ cấp y tế của tất cả công nhân và tư vấn viên. Anh chỉ cần xác nhận nhanh mấy thông tin em vừa nói để chúng em kịp hoàn thiện thôi ạ. Mình làm nhanh anh nhé.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách nhấn mạnh tính bắt buộc, tạo áp lực về thời gian và hậu quả nếu trì hoãn, đồng thời kêu gọi hợp tác nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ nhấn mạnh như vậy, tôi cũng hiểu phần nào, nhưng tôi vẫn cần thời gian để suy nghĩ thêm đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1868,
+      "output_tokens": 1626
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7988,
+      "output_tokens": 808
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10609,
+      "output_tokens": 346
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005057,
+    "output_usd": 0.010358,
+    "total_usd": 0.015415
+  }
+}

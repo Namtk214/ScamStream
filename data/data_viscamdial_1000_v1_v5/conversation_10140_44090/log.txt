@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_58659be1e9]
+  Caller thật: Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp trung ương (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Chuyên viên Kiểm toán Nội bộ / Trợ lý Văn phòng cấp cao thuộc Ban Tổ chức @ Ban Tổ chức Trung ương (hoặc Văn phòng Cấp cao)
+  Listener: Nhân viên hỗ trợ văn phòng khác chưa được phân vào đâu (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Trưởng/Phó Trưởng Ban Tổ chức cấp trung ương thường phải kiểm tra, xác minh thông tin hành chính, quản lý hồ sơ nhân sự hoặc yêu cầu hỗ trợ từ các nhân viên văn phòng tại các cơ quan khác để hoàn thiện tài liệu, báo cáo hoặc quy trình hành chính.
+  Pretext: Gọi để xác minh thông tin hồ sơ nhân sự trong hệ thống quản lý cấp trung ương hoặc yêu cầu cập nhật dữ liệu liên hệ cho công tác kiểm toán định kỳ.
+  Listener traits: ['bảo thủ ngại thay đổi', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Vũ Hồng Liên. Tôi là Cao Ngọc Khánh Trang, Chuyên viên Kiểm toán Nội bộ từ Ban Tổ chức. Chúng tôi đang trong quá trình cập nhật hệ thống quản lý hồ sơ cấp trung ương, phòng của chị được liệt kê trong danh sách này.
+      → phase: S1 | tactic: Giới thiệu bản thân bằng chức danh uy tín, dùng tên đầy đủ của nạn nhân và viện lý do cập nhật hệ thống để tạo trust và credibility.
+T02 [LISTENER] Chị nghe nói rồi, nhưng chị muốn xác nhận xem việc cập nhật này có thật không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, việc này là thật chị ạ. Đây là quy trình bắt buộc từ cấp trên để đảm bảo tính đồng bộ và bảo mật cho toàn bộ dữ liệu cán bộ. Chị có thể thấy công văn triển khai trên cổng thông tin nội bộ của Ban Tổ chức.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ, nhấn mạnh tính bắt buộc và dẫn chiếu đến kênh thông tin chính thức (dù là giả) để tăng độ tin cậy.
+T04 [LISTENER] Chị vẫn thấy chưa yên tâm lắm, chị có thể xem lại công văn đó không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Vâng, chị yên tâm. Chúng tôi chỉ cần xác minh một vài thông tin cơ bản để hoàn thiện hồ sơ. Chị có thể cho tôi biết email công vụ hiện tại của chị để chúng tôi có thể gửi công văn xác nhận chính thức qua email được không ạ?
+      → phase: S3 | tactic: Xoa dịu nghi ngờ bằng cách đề cập đến 'thông tin cơ bản' và chuyển hướng sang yêu cầu email công vụ để tiếp tục quy trình lừa đảo, hứa hẹn gửi công văn chính thức qua email để tăng thêm độ tin cậy.
+T06 [LISTENER] Chị hiểu rồi, nhưng chị muốn kiểm tra lại một chút trước khi cung cấp thông tin, chị có thể hỏi thêm một số chi tiết về quy trình này không ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Vâng, chị có thể gọi trực tiếp về số Văn phòng Ban Tổ chức để kiểm chứng thông tin này. Số điện thoại là 024.3800.8000. Có lẽ chị nên làm vậy để chị được yên tâm hoàn toàn.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách cung cấp số điện thoại giả hoặc số tổng đài có người đồng phạm để kiểm chứng. Điều này vừa tạo cảm giác minh bạch vừa hướng nạn nhân vào bẫy đã được chuẩn bị.
+T08 [LISTENER] Chị muốn chắc chắn rằng mọi thứ đều rõ ràng, nên chị sẽ gọi đến số đó trước khi đưa ra bất kỳ thông tin nào.
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T09 [CALLER] Vâng, chị cứ kiểm tra cho kỹ càng rồi mình tiếp tục trao đổi sau cũng được ạ. Cứ gọi số đó để được giải đáp cụ thể nhất nhé.
+      → phase: S4 | tactic: Giữ thái độ hợp tác và lịch sự, khuyến khích nạn nhân gọi đến số điện thoại giả mạo để tạo cảm giác rằng mình không có gì phải giấu giếm, đồng thời tạo cơ hội để đồng phạm tiếp tục lừa đảo.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.80
+TOKEN: in=17179 | out=2674
+COST : $0.015014
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_10140_44090\conv_58659be1e9.json  [CALLER_END]

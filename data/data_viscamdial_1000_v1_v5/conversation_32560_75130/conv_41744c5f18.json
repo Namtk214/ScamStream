@@ -1,0 +1,280 @@
+{
+  "conversation_id": "conv_41744c5f18",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0018",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Bùi Đức Minh Long",
+    "fake_age": 26,
+    "real_occupation": "Nhân viên trợ giúp y tế",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên kiểm soát chất lượng & an toàn thực phẩm",
+    "caller_org": "Trung tâm Kiểm soát Bệnh tật & An toàn Thực phẩm (CCDC) / Chi cục Quản lý Thú y địa phương",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi điện khẩn cấp: sản phẩm của nạn nhân bị phát hiện vi phạm quy chuẩn an toàn thực phẩm (hoặc một lô hàng có dấu hiệu nghi vấn), cần xác minh thông tin chủ cơ sở để tránh phạt hoặc dừng lưu hành.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận: Gọi đến, xưng danh là 'Cán bộ kiểm soát an toàn thực phẩm'. Đọc tên đầy đủ 'Nguyễn Hữu Công Quân' + số ID '079068260324' để tạo credibility cao. Nạn nhân tưởng cơ quan thực sự đã có hồ sơ của mình.",
+          "tactic": "Authority + Personalization (dùng tên + CMND để giả mạo)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Thông báo rằng một mẫu sản phẩm từ cơ sở của nạn nhân bị phát hiện chứa vi khuẩn/hóa chất vượt ngưỡng, cần phải xử lý ngay để tránh bị phạt hành chính nặng (tiền phạt, tạm dừng kinh doanh, hoặc thậm chí truy cứu hình sự). Tạo cảm giác rằng chỉ có cách 'hỗ trợ' hoặc 'làm thủ tục ngoài' để tránh phạt.",
+          "tactic": "Fear + Urgency + Authority pressure"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động lừa đảo: Đề nghị nạn nhân cần 'ký hợp đồng xử lý' hoặc 'thanh toán lệ phí kiểm định khẩn cấp' để duyệt lại mẫu và xóa vi phạm khỏi hồ sơ. Yêu cầu chuyển tiền vào tài khoản 'cơ quan' (thực chất là tài khoản của scammer) hoặc cung cấp thông tin ngân hàng để 'khóa tạm thời' (lấy OTP, mã xác thực).",
+          "tactic": "Money transfer | OTP extraction | Credential harvesting"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân nghi ngờ, scammer tuyên bố sẽ gửi 'giấy phạt chính thức' qua bưu điện. Nếu thành công, tắt máy & xóa vết. Nếu nạn nhân yêu cầu xác minh qua số điện thoại chính thức của cơ quan, scammer nói 'đã gửi SMS xác nhận' (fake SMS) hoặc 'hệ thống đang bảo trì, vui lòng gọi lại sau 2 giờ'.",
+          "tactic": "Fake verification | Delay tactic | Exit strategy"
+        }
+      ]
+    },
+    "scenario_context": "Sản phẩm từ sữa là thực phẩm động vật, nằm trong danh sách kiểm soát chất lượng hàng định kỳ. Cơ quan y tế có lý do hợp pháp để liên hệ các cơ sở sản xuất sữa/sản phẩm sữa để kiểm tra hồ sơ, lấy mẫu, hoặc xác nhận tuân thủ quy chuẩn."
+  },
+  "listener_card": {
+    "listener_id": "lis_0018",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1968,
+      "age": 57,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75130",
+      "title": "Thợ làm sản phẩm từ sữa",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Hữu Công Quân",
+      "VIC_ID_DOC": "079068260324",
+      "VIC_ADDRESS": "TP 3, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Thợ làm sản phẩm từ sữa",
+      "VIC_CONTACT": "0389271339",
+      "VIC_TAX_SOCIAL_ID": "8962736788"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "901170",
+      "VIC_CREDENTIAL": "6518",
+      "VIC_SIM_INFO": "0389271339",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0327167980414",
+      "VIC_CARD_DATA": "4807 **** **** 3713",
+      "VIC_BALANCE": "55 triệu đồng",
+      "VIC_ASSET": "144 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Hữu Công Quân",
+    "VIC_CONTACT": "0389271339",
+    "VIC_ID_DOC": "079068260324"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kiểm soát chất lượng & an toàn thực phẩm",
+    "caller_org": "Trung tâm Kiểm soát Bệnh tật & An toàn Thực phẩm (CCDC) / Chi cục Quản lý Thú y địa phương",
+    "scenario_context": "Sản phẩm từ sữa là thực phẩm động vật, nằm trong danh sách kiểm soát chất lượng hàng định kỳ. Cơ quan y tế có lý do hợp pháp để liên hệ các cơ sở sản xuất sữa/sản phẩm sữa để kiểm tra hồ sơ, lấy mẫu, hoặc xác nhận tuân thủ quy chuẩn.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi điện khẩn cấp: sản phẩm của nạn nhân bị phát hiện vi phạm quy chuẩn an toàn thực phẩm (hoặc một lô hàng có dấu hiệu nghi vấn), cần xác minh thông tin chủ cơ sở để tránh phạt hoặc dừng lưu hành.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận: Gọi đến, xưng danh là 'Cán bộ kiểm soát an toàn thực phẩm'. Đọc tên đầy đủ 'Nguyễn Hữu Công Quân' + số ID '079068260324' để tạo credibility cao. Nạn nhân tưởng cơ quan thực sự đã có hồ sơ của mình.",
+          "tactic": "Authority + Personalization (dùng tên + CMND để giả mạo)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Thông báo rằng một mẫu sản phẩm từ cơ sở của nạn nhân bị phát hiện chứa vi khuẩn/hóa chất vượt ngưỡng, cần phải xử lý ngay để tránh bị phạt hành chính nặng (tiền phạt, tạm dừng kinh doanh, hoặc thậm chí truy cứu hình sự). Tạo cảm giác rằng chỉ có cách 'hỗ trợ' hoặc 'làm thủ tục ngoài' để tránh phạt.",
+          "tactic": "Fear + Urgency + Authority pressure"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động lừa đảo: Đề nghị nạn nhân cần 'ký hợp đồng xử lý' hoặc 'thanh toán lệ phí kiểm định khẩn cấp' để duyệt lại mẫu và xóa vi phạm khỏi hồ sơ. Yêu cầu chuyển tiền vào tài khoản 'cơ quan' (thực chất là tài khoản của scammer) hoặc cung cấp thông tin ngân hàng để 'khóa tạm thời' (lấy OTP, mã xác thực).",
+          "tactic": "Money transfer | OTP extraction | Credential harvesting"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân nghi ngờ, scammer tuyên bố sẽ gửi 'giấy phạt chính thức' qua bưu điện. Nếu thành công, tắt máy & xóa vết. Nếu nạn nhân yêu cầu xác minh qua số điện thoại chính thức của cơ quan, scammer nói 'đã gửi SMS xác nhận' (fake SMS) hoặc 'hệ thống đang bảo trì, vui lòng gọi lại sau 2 giờ'.",
+          "tactic": "Fake verification | Delay tactic | Exit strategy"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực từ cơ quan kiểm soát an toàn thực phẩm để thông báo kiểm tra định kỳ hoặc yêu cầu cung cấp giấy tờ, mẫu sản phẩm theo quy định pháp luật.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên, phòng/chi cục, số điện thoại cơ quan chính thức). Xác nhận nạn nhân là chủ cơ sở/đại diện pháp nhân. Hỏi có thể nói chuyện trong thời gian hiện tại không.",
+          "tactic": "Transparency + Professionalism"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo kế hoạch kiểm tra định kỳ (ngày, giờ, nội dung), hoặc yêu cầu cung cấp hồ sơ (giấy phép sản xuất, kết quả kiểm nghiệm, hóa đơn nguyên liệu) theo quy định. Lắng nghe ý kiến, giải đáp thắc mắc.",
+          "tactic": "Clarity + Legal compliance + Documentation"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác định lịch gửi hồ sơ (qua email cơ quan hoặc trực tiếp), hoặc lịch kiểm tra (cán bộ sẽ đến địa điểm). Cung cấp số điện thoại liên hệ chính thức để nạn nhân có thể xác minh. Kết thúc cuộc gọi lịch sự.",
+          "tactic": "Verifiable contact info + Official channels + Clear next steps"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, em chào anh Quân ạ. Em là Bùi Đức Minh Long, nhân viên kiểm soát chất lượng của Trung tâm Kiểm soát Bệnh tật và An toàn Thực phẩm. Em gọi từ số 079068260324 của em. Em muốn xác nhận có phải anh là chủ cơ sở sản xuất bánh kẹo Hữu Quân không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, xưng danh, xác nhận thông tin cơ bản của nạn nhân bằng thông tin đã biết để tạo tin tưởng ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không phải là chủ cơ sở sản xuất bánh kẹo nào cả, em gọi nhầm rồi.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin lỗi ạ. Vậy anh Nguyễn Hữu Công Quân có phải là chủ hộ kinh doanh cá thể số 079068260324 chuyên về các sản phẩm nông sản không ạ? Bên em có nhận được một công văn về lô hàng của mình.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự từ chối, điều chỉnh thông tin đã biết để tiếp tục xác nhận, đồng thời nhấn mạnh có công văn liên quan để duy trì sự chú ý và lo ngại ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi là Nguyễn Hữu Công Quân, nhưng tôi không có hộ kinh doanh nào cả, em đang nói về lô hàng gì vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Quân ơi, có lẽ anh đang nhầm lẫn gì đó ạ. Trên hệ thống của chúng em ghi nhận số ID 079068260324 của anh Nguyễn Hữu Công Quân là chủ thể đứng tên giấy phép kinh doanh các mặt hàng nông sản. Và hiện tại, một lô hàng mang tên anh đang bị tạm giữ ở kho kiểm định vì phát hiện vi phạm nghiêm trọng về an toàn vệ sinh thực phẩm. Em gọi đến để hỗ trợ anh xử lý khẩn cấp trước khi bị lập biên bản, chứ không là bên em buộc phải đình chỉ hoạt động kinh doanh của mình đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khẳng định thông tin hệ thống để tạo áp lực, đồng thời bắt đầu khai thác tâm lý khẩn cấp và sợ hãi bằng cách thông báo về vi phạm và nguy cơ bị đình chỉ hoạt động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về lô hàng đó được không? Tôi có con cái, tôi không muốn gặp rắc rối gì đâu.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, lô hàng này là lô hàng cà phê sấy khô, số hiệu KQP-010-2024, được vận chuyển từ Tây Nguyên về ạ. Đáng lẽ là phải có giấy phép kiểm dịch thực vật và kiểm định an toàn rõ ràng, nhưng mẫu sản phẩm thì lại cho kết quả dương tính với dư lượng thuốc trừ sâu vượt ngưỡng cho phép rất nhiều lần. Em biết anh không muốn gặp rắc rối, và chúng em cũng không muốn phải đình chỉ công việc kinh doanh lương thiện của mọi người. Vì vậy em mới phải đích thân liên hệ để xem mình có thể giải quyết nhanh chóng được không ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thông tin chi tiết hơn về 'lô hàng' và 'vi phạm' để làm tăng tính xác thực của câu chuyện, đồng thời tiếp tục khai thác tâm lý lo lắng, sợ hãi của nạn nhân bằng cách nhấn mạnh nguy cơ và thể hiện mong muốn 'hỗ trợ' giải quyết."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi không có lô hàng nào như vậy, chắc chắn là có nhầm lẫn ở đây, nhưng mà nếu có chuyện gì liên quan đến con cái tôi thì tôi rất lo lắng.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu sự lo lắng của anh. Nhưng bên em đã kiểm tra rất kỹ rồi ạ, tất cả thông tin đều khớp với số căn cước công dân của anh Nguyễn Hữu Công Quân. Với trường hợp này, nếu anh không có phản hồi và xử lý nhanh chóng, bên em buộc phải chuyển hồ sơ sang cơ quan điều tra và sẽ có thông báo đình chỉ kinh doanh chính thức gửi về địa chỉ thường trú của anh trong vòng 24 giờ tới. Em nghĩ mình không nên để mọi việc đi xa hơn như vậy đâu ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Bác bỏ sự từ chối về nhầm lẫn bằng cách khẳng định lại thông tin khớp với CCCD, đồng thời tăng cường áp lực và yếu tố sợ hãi bằng cách đe dọa chuyển hồ sơ sang cơ quan điều tra và đình chỉ kinh doanh, thúc ép nạn nhân phải hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi thực sự không có lô hàng nào như thế, nhưng nếu có vấn đề gì liên quan đến con cái tôi thì tôi rất lo lắng và muốn giải quyết nhanh chóng.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu ạ. Vậy bây giờ anh có muốn bên em hỗ trợ để xác minh lại thông tin và giải quyết nhanh gọn nhất không ạ? Bằng không nếu em chuyển hồ sơ sang cơ quan điều tra thì sẽ mất rất nhiều thời gian, công sức của anh đó ạ. Hơn nữa, những thông tin liên quan đến kết luận vi phạm của anh sẽ bị công khai trên các phương tiện truyền thông đại chúng, ảnh hưởng trực tiếp đến uy tín cá nhân và công việc của anh sau này nữa ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Chuyển sang giai đoạn yêu cầu hành động, đưa ra lựa chọn 'hỗ trợ' để giải quyết nhanh gọn hơn so với việc 'chuyển cơ quan điều tra', đồng thời nhấn mạnh hậu quả về thời gian, công sức và uy tín nếu không đồng ý."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi chỉ muốn tránh rắc rối cho con cái mình thôi, nếu có cách nào giải quyết nhanh chóng thì tôi sẵn lòng nghe theo em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy thì tốt quá anh ạ. Để thuận tiện cho việc xử lý và đảm bảo tính bảo mật, anh vui lòng cung cấp thông tin tài khoản ngân hàng của mình để bên em tiến hành xác minh và làm thủ tục thanh toán phí kiểm định khẩn cấp. Phí này chỉ là tạm thời thôi ạ, sau khi lô hàng được xác minh sạch thì khoản tiền này sẽ được hoàn trả đầy đủ cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu cung cấp thông tin ngân hàng và chuyển tiền với lời hứa hoàn trả, tạo cảm giác đây là một khoản phí 'tạm thời' và 'chính thức' để giải quyết vấn đề."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi không rõ ràng chuyện này, nhưng tôi không quen với việc phải cung cấp thông tin tài khoản ngân hàng cho ai cả, dù là để giải quyết vấn đề gì.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Quân cứ yên tâm ạ. Đây là quy trình bắt buộc để bên em có thể tạo một hồ sơ tạm thời, dùng chính tài khoản ngân hàng của anh để đóng tạm ứng phí kiểm định khẩn cấp. Việc này là cần thiết để lô hàng được ưu tiên xử lý sớm nhất, tránh tình trạng bị niêm phong và tiêu hủy tốn kém hơn rất nhiều đó ạ. Anh cho em xin thông tin tài khoản để em hỗ trợ anh kịp thời ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự từ chối bằng cách khẳng định đây là 'quy trình bắt buộc', nhấn mạnh lợi ích về 'xử lý sớm' và tránh 'tốn kém hơn' để thúc đẩy nạn nhân cung cấp thông tin ngân hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi rất lo cho con cái tôi, nhưng việc cung cấp thông tin tài khoản ngân hàng cho em thì tôi không thể làm được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1804,
+      "output_tokens": 1903
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 16345,
+      "output_tokens": 1522
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 21104,
+      "output_tokens": 620
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008239,
+    "output_usd": 0.013692,
+    "total_usd": 0.021931
+  }
+}

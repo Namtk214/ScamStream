@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_cff3afdcbf]
+  Caller thật: Nhà ngôn ngữ khác (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Chuyên viên dịch thuật & biên soạn tài liệu môi trường @ Công ty Tư vấn Bảo vệ Tài nguyên Rừng (RTVC)
+  Listener: Nhân viên bảo vệ rừng (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhà ngôn ngữ làm việc cho tổ chức tư vấn môi trường có nhu cầu liên hệ trực tiếp với nhân viên bảo vệ rừng để xác thực dữ liệu báo cáo, thống kê, hoặc yêu cầu phỏng vấn cho dự án. Điểm giao thoa tự nhiên: cùng lĩnh vực rừng lâm nghiệp, scammer có lý do chính đáng để biết tên + số điện thoại.
+  Pretext: Công ty tư vấn môi trường thực sự cần xác thực thông tin nhân viên bảo vệ rừng cho báo cáo định kỳ hoặc khảo sát chuyên môn hợp tác với Sở Nông nghiệp.
+  Listener traits: ['nóng tính dễ cáu', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Bình, em là Hoàng Gia Tuấn, chuyên viên dịch thuật từ Công ty Tư vấn Bảo vệ Tài nguyên Rừng RTVC. Công ty em đang thực hiện dự án báo cáo về quản lý nhân lực bảo vệ rừng cho Sở Nông nghiệp. Em có một số câu hỏi về công việc của anh, có thể trò chuyện được không?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi rõ ràng để tạo sự tin tưởng ban đầu.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi muốn biết rõ hơn về dự án này trước khi trả lời câu hỏi.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, anh Bình ạ. Dự án này là một phần trong chương trình đánh giá hiệu quả công tác bảo vệ rừng hàng năm của Sở Nông nghiệp, nhằm thu thập thông tin trực tiếp từ các cán bộ như anh để có cái nhìn tổng quan và đề xuất các giải pháp nâng cao hiệu quả hoạt động. Thông tin của anh sẽ được tổng hợp dưới dạng ẩn danh trong báo cáo cuối cùng. Anh có thể cho em xin ít phút được không ạ?
+      → phase: L1 | tactic: Trấn an người nghe bằng cách giải thích rõ hơn về dự án, nhấn mạnh tính bảo mật của thông tin và mục đích hợp tác với Sở Nông nghiệp để tạo niềm tin.
+T04 [LISTENER] Em nói hợp lý đấy, nhưng chắc tôi cần thêm thời gian để suy nghĩ.
+      → action: REFUSAL | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ vâng, anh cứ suy nghĩ ạ. Tuy nhiên, thời hạn báo cáo của công ty em cho Sở Nông nghiệp không còn nhiều, nên nếu được, anh Bình có thể dành cho em 5 phút để trao đổi luôn thì tốt quá. Nếu anh bận quá, em xin phép gọi lại vào thời điểm khác thuận tiện hơn cho anh ạ.
+      → phase: L1 | tactic: Nhẹ nhàng tạo áp lực về thời gian để khuyến khích người nghe hợp tác, đồng thời vẫn giữ thái độ lịch sự và sẵn sàng lùi lại nếu cần.
+T06 [LISTENER] Em có thể gọi lại cho tôi sau được không? Tôi cần thêm thời gian để suy nghĩ nhé.
+      → action: REFUSAL | suspicion: 0.40 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.40
+TOKEN: in=11021 | out=2212
+COST : $0.012454
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_26439_54092\conv_cff3afdcbf.json  [SCAM_REFUSE]

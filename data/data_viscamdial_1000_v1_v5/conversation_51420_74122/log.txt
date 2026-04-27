@@ -1,0 +1,60 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_1d7e326c12]
+  Caller thật: Nhân viên làm đẹp và nhân viên có liên quan (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên quản lý hợp đồng dịch vụ bảo trì thiết bị — công ty cung cấp dịch vụ spa/salon @ Công ty Dịch vụ Toàn Cầu (GCS) — bộ phận Hợp đồng & Bảo trì
+  Listener: Thợ lắp ráp điện thang máy, thang cuốn và các thiết bị liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Các công ty spa/salon lớn thường ký hợp đồng bảo trì định kỳ với thợ lắp ráp điện thang máy để kiểm tra hệ thống thang cuốn, thang máy tại cơ sở của họ. Nhân viên quản lý hợp đồng sẽ gọi cho thợ lắp ráp để xác nhận lịch bảo trì hoặc thông báo vấn đề khẩn cấp.
+  Pretext: Xưng danh là nhân viên quản lý hợp đồng từ công ty dịch vụ. Gọi để thông báo rằng hệ thống thanh toán hợp đồng bảo trì tháng này có vấn đề, cần xác minh lại thông tin tài khoản ngân hàng của thợ để 'xử lý lại khoản thanh toán'. Sử dụng tên đầy đủ và số điện thoại nạn nhân để tạo uy tín.
+  Listener traits: ['dễ bị lừa bởi authority', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Phan Thu Nhung, tôi là Đức từ bộ phận Hợp đồng Công ty GCS đây ạ. Chúng tôi có hóa đơn bảo trì thang máy tháng này cho bên mình, nhưng hệ thống thanh toán đang gặp lỗi. Chị đã nhận được cuộc gọi từ ngân hàng về vấn đề này chưa ạ?
+      → phase: S1 | tactic: Xưng danh, dùng tên nạn nhân và thông báo lỗi hệ thống thanh toán để tạo sự tin cậy ban đầu.
+T02 [LISTENER] Dạ, em chưa nhận được cuộc gọi nào từ ngân hàng cả, anh có thể cho em biết thêm chi tiết được không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, do lỗi hệ thống nên khoản thanh toán 3.500.000đ của hợp đồng bảo trì cho tháng này chưa thể thực hiện được. Đơn vị chúng tôi phải xử lý gấp trước 5 giờ chiều nay, nếu không sẽ bị phạt hợp đồng rất nặng. Hiện tại, số tài khoản 7699045857 mà GCS đang lưu là của chị, không biết có đúng không để tôi xác minh lại ạ?
+      → phase: S2 | tactic: Tạo tâm lý khẩn cấp và sử dụng thông tin tài khoản ngân hàng của nạn nhân để làm tăng độ tin cậy, thúc đẩy nạn nhân xác nhận thông tin.
+T04 [LISTENER] Dạ, số tài khoản đó đúng, nhưng em không hiểu sao lại có vấn đề này ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Vâng, chị yên tâm, đây chỉ là lỗi kỹ thuật nhỏ thôi ạ. Tôi sẽ gửi một tin nhắn xác nhận OTP tới số điện thoại 0348465909 của chị. Chị làm ơn đọc mã OTP đó cho tôi để tôi hoàn tất việc cập nhật và xử lý thanh toán gấp trong hệ thống nhé.
+      → phase: S3 | tactic: Yêu cầu nạn nhân cung cấp OTP để hoàn tất việc khắc phục lỗi thanh toán, nhấn mạnh sự khẩn cấp.
+T06 [LISTENER] Em không hiểu anh đang nói gì ạ, OTP là gì vậy anh?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T07 [CALLER] OTP là mã xác nhận giao dịch một lần mà ngân hàng gửi về điện thoại của chị để đảm bảo chỉ chính chủ mới có thể thao tác. Chị cứ đọc mã đó cho tôi để tôi nhập vào hệ thống và hoàn thành thanh toán cho chị, nếu không sẽ bị phạt hợp đồng đấy ạ.
+      → phase: S3 | tactic: Giải thích về OTP một cách đơn giản, đồng thời nhấn mạnh lại sự khẩn cấp và hậu quả nếu không thực hiện để thuyết phục nạn nhân.
+T08 [LISTENER] Dạ, nhưng em vẫn chưa rõ lắm, anh có thể giải thích thêm không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T09 [CALLER] Chị cứ hình dung thế này, để thực hiện một giao dịch quan trọng, ngân hàng sẽ gửi cho chị một mã số bảo mật để xác nhận chị đồng ý giao dịch đó. Mã này chỉ có giá trị sử dụng một lần và trong một thời gian nhất định thôi ạ. Vì vậy, tôi cần chị đọc ngay mã đó cho tôi để tôi có thể xử lý việc thanh toán này giúp chị.", "current_phase": "S3", "tactic_hint": "Giải thích rõ hơn về OTP, nhấn mạnh tính cấp bách và mục đích 'giúp đỡ' nạn nhân để lấy mã OTP.", "end_call": false
+}
+      → phase: S3 | tactic: Phân tích và giải thích OTP dễ hiểu hơn, đồng thời nhấn mạnh tính cấp bách và mục đích 'giúp đỡ' nạn nhân để lấy mã OTP.
+T10 [LISTENER] Dạ, nhưng em vẫn còn băn khoăn, sao anh không thể tự kiểm tra và xử lý bên phía anh được ạ?
+      → action: CONTINUE | suspicion: 2.00 | disclosed: []
+
+T11 [CALLER] Chị ơi, hệ thống của chúng tôi và hệ thống ngân hàng là hai hệ thống độc lập. Mã OTP này được gửi trực tiếp đến số điện thoại của chính chị để xác minh chính chủ. Tôi không thể tự truy cập hay nhận mã này được. Đây là quy định bắt buộc của ngân hàng để đảm bảo an toàn cho tài khoản của chị đấy ạ. Bây giờ chị nhận được tin nhắn chưa?
+      → phase: S3 | tactic: Giải thích rõ ràng về cơ chế OTP và tính độc lập của các hệ thống để trấn an nạn nhân, đồng thời nhấn mạnh quy định bảo mật của ngân hàng và thúc giục nạn nhân kiểm tra tin nhắn.
+T13 [LISTENER] Dạ, em chỉ muốn kiểm tra thông tin trước khi cung cấp, anh có thể cho em biết số điện thoại đường dây nóng chính thức của ngân hàng không ạ?
+      → action: CONTINUE | suspicion: 4.00 | disclosed: []
+
+T14 [CALLER] Chị ơi, đây là vấn đề liên quan trực tiếp đến hợp đồng bảo trì của công ty chúng tôi với bên chị, không phải vấn đề từ phía ngân hàng cần đường dây nóng của họ. Nếu chị không muốn cung cấp OTP để xử lý, tôi sẽ ghi nhận là chị từ chối thanh toán và công ty sẽ phải áp dụng điều khoản phạt hợp đồng do quá hạn. Chị có chắc chắn với quyết định của mình không ạ?
+      → phase: S4 | tactic: Xử lý từ chối bằng cách nhấn mạnh lại mối liên hệ trực tiếp với hợp đồng và nguy cơ bị phạt nếu không hợp tác, tạo áp lực để nạn nhân thay đổi quyết định.
+T15 [LISTENER] Dạ, nhưng em không muốn gặp rủi ro nào cả, anh có thể xác nhận lại cho em số điện thoại của ngân hàng được không ạ?
+      → action: CONTINUE | suspicion: 7.50 | disclosed: []
+
+T16 [CALLER] Tôi đã giải thích rồi, đây là vấn đề của công ty GCS chúng tôi cần xử lý khoản thanh toán cho hợp đồng bảo trì của bên chị, không phải vấn đề của ngân hàng. Chị đang làm khó tôi trong việc xử lý công việc và có nguy cơ cao sẽ phải chịu phạt hợp đồng nặng đó. Chị có muốn tôi ghi nhận việc từ chối này không?
+      → phase: S4 | tactic: Tái khẳng định vấn đề thuộc về công ty, thể hiện sự khó chịu, và tăng áp lực bằng cách nhắc lại hậu quả phạt hợp đồng nếu nạn nhân tiếp tục từ chối.
+T17 [LISTENER] Dạ, em cảm ơn anh đã giải thích, nhưng em vẫn chưa yên tâm lắm, anh có thể cho em biết thông tin thêm về công ty GCS và hợp đồng này không ạ?
+      → action: CONTINUE | suspicion: 15.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  17 turns | suspicion=15.00
+TOKEN: in=36610 | out=3299
+COST : $0.018594
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_51420_74122\conv_1d7e326c12.json  [SCAM_EXPOSE]

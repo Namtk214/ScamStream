@@ -1,0 +1,302 @@
+{
+  "conversation_id": "conv_bab5aa85d4",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0052",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Huỳnh Hồng Linh",
+    "fake_age": 40,
+    "real_occupation": "Nhà biên tập kịch bản và kết nối",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Giám đốc Dự án - Bộ phận Truyền thông & Nội dung (Viễn Tưởng Cao hơn từ nghề thật)",
+    "caller_org": "Trung tâm Phim Tài Liệu Thiên Nhiên Việt Nam (VDNC)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Gọi để thông báo Vũ Thu Hương đã được chọn tham gia dự án phim tài liệu lớn về bảo vệ rừng, cần hoàn tất thủ tục thanh toán tiền thù lao (tiền ứng) và cập nhật hồ sơ ngân hàng để nhận tiền bonus từ nhà tài trợ quốc tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: Scammer xưng danh là 'Ông Trần Minh - Giám đốc Dự án VDNC', gọi đến số 0766935180, sử dụng tên đầy đủ 'Vũ Thu Hương' để tạo ấn tượng đã xác minh thông tin trước, nhấn mạnh 'chúng tôi đã xin phép qua nhân viên quân lực địa phương'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác may mắn + khẩn cấp bằng cách nói 'Bạn được chọn từ 500 ứng viên, nhưng cơ hội chỉ còn 24h vì nhà tài trợ có yêu cầu xác nhận danh sách ngay hôm nay'. Đề cập đến 'tiền thù lao hấp dẫn từ tổ chức quốc tế' để kích hoạt động cơ lợi ích."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn cần nộp tiền đặt cọc 2 triệu đồng (phí xử lý hồ sơ quốc tế) vào tài khoản công ty để xác nhận cam kết. Chúng tôi sẽ chuyển tiền thù lao 15 triệu vào tài khoản ngân hàng của bạn (64343343231) trong vòng 3 ngày'. Yêu cầu nạn nhân cung cấp OTP khi chuyển tiền hoặc 'xác nhận thẻ ngân hàng' để 'kích hoạt hạn mức quốc tế'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Vậy bạn từ chối cơ hội này? Chúng tôi sẽ mời người khác. Nhưng hãy để lại email để nếu có dự án khác phù hợp hơn...' (để giữ kênh liên lạc). Nếu thành công, scammer sẽ tắt máy ngay sau khi nhận OTP/tiền."
+        }
+      ]
+    },
+    "scenario_context": "Trung tâm sản xuất phim tài liệu về bảo vệ rừng và sinh thái cần liên hệ với nhân viên bảo vệ rừng để phỏng vấn, thu thập dữ liệu hoặc ký hợp đồng hợp tác. Đây là điểm giao thoa tự nhiên giữa hai ngành."
+  },
+  "listener_card": {
+    "listener_id": "lis_0052",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1975,
+      "age": 50,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "54092",
+      "title": "Nhân viên bảo vệ rừng",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Thu Hương",
+      "VIC_ID_DOC": "056175585512",
+      "VIC_ADDRESS": "TP 6, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Nhân viên bảo vệ rừng",
+      "VIC_CONTACT": "0766935180",
+      "VIC_TAX_SOCIAL_ID": "2679792821"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "082882",
+      "VIC_CREDENTIAL": "6859",
+      "VIC_SIM_INFO": "0766935180",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "64343343231",
+      "VIC_CARD_DATA": "4261 **** **** 1871",
+      "VIC_BALANCE": "190 triệu đồng",
+      "VIC_ASSET": "300 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Thu Hương",
+    "VIC_CONTACT": "0766935180",
+    "VIC_CARD_DATA": "4261 **** **** 1871",
+    "VIC_BANK_ACCOUNT": "64343343231"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Dự án - Bộ phận Truyền thông & Nội dung (Viễn Tưởng Cao hơn từ nghề thật)",
+    "caller_org": "Trung tâm Phim Tài Liệu Thiên Nhiên Việt Nam (VDNC)",
+    "scenario_context": "Trung tâm sản xuất phim tài liệu về bảo vệ rừng và sinh thái cần liên hệ với nhân viên bảo vệ rừng để phỏng vấn, thu thập dữ liệu hoặc ký hợp đồng hợp tác. Đây là điểm giao thoa tự nhiên giữa hai ngành.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Gọi để thông báo Vũ Thu Hương đã được chọn tham gia dự án phim tài liệu lớn về bảo vệ rừng, cần hoàn tất thủ tục thanh toán tiền thù lao (tiền ứng) và cập nhật hồ sơ ngân hàng để nhận tiền bonus từ nhà tài trợ quốc tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: Scammer xưng danh là 'Ông Trần Minh - Giám đốc Dự án VDNC', gọi đến số 0766935180, sử dụng tên đầy đủ 'Vũ Thu Hương' để tạo ấn tượng đã xác minh thông tin trước, nhấn mạnh 'chúng tôi đã xin phép qua nhân viên quân lực địa phương'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác may mắn + khẩn cấp bằng cách nói 'Bạn được chọn từ 500 ứng viên, nhưng cơ hội chỉ còn 24h vì nhà tài trợ có yêu cầu xác nhận danh sách ngay hôm nay'. Đề cập đến 'tiền thù lao hấp dẫn từ tổ chức quốc tế' để kích hoạt động cơ lợi ích."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn cần nộp tiền đặt cọc 2 triệu đồng (phí xử lý hồ sơ quốc tế) vào tài khoản công ty để xác nhận cam kết. Chúng tôi sẽ chuyển tiền thù lao 15 triệu vào tài khoản ngân hàng của bạn (64343343231) trong vòng 3 ngày'. Yêu cầu nạn nhân cung cấp OTP khi chuyển tiền hoặc 'xác nhận thẻ ngân hàng' để 'kích hoạt hạn mức quốc tế'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Vậy bạn từ chối cơ hội này? Chúng tôi sẽ mời người khác. Nhưng hãy để lại email để nếu có dự án khác phù hợp hơn...' (để giữ kênh liên lạc). Nếu thành công, scammer sẽ tắt máy ngay sau khi nhận OTP/tiền."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trung tâm VDNC liên hệ chính thức để mời Vũ Thu Hương tham gia phỏng vấn/ghi hình cho dự án phim tài liệu về bảo vệ rừng, thảo luận về nội dung, lịch trình và điều khoản hợp tác.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Người gọi xưng danh đầy đủ (tên + chức vụ + tổ chức), giới thiệu rõ ràng mục đích gọi, xác nhận số điện thoại và tên của Vũ Thu Hương để đảm bảo đúng người, và cung cấp số điện thoại chính thức của công ty để nạn nhân có thể gọi lại xác minh."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết về dự án (chủ đề, thời gian quay, địa điểm), yêu cầu kinh nghiệm của Vũ Thu Hương, thảo luận về mức phí/thù lao, điều khoản bảo mật và hợp đồng. Mọi cam kết tài chính đều được nêu rõ bằng văn bản."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Xác nhận lại thỏa thuận, gửi email/tài liệu chính thức, cung cấp thông tin liên hệ người phụ trách tiếp theo, và hẹn gặp mặt hoặc cuộc gọi tiếp theo có ghi âm/chứng kiến. Không bao giờ yêu cầu OTP, mật khẩu hoặc thông tin ngân hàng qua điện thoại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Vũ Thu Hương ạ. Em là Huỳnh Hồng Linh, Giám đốc Dự án từ Trung tâm Phim Tài Liệu Thiên Nhiên Việt Nam VDNC. Em gọi chị từ số 0766935180, bên em đã xin phép qua nhân viên quân lực địa phương để liên hệ với chị theo thông tin chị cung cấp là tài khoản ngân hàng 64343343231 đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, xưng danh, dùng thông tin nạn nhân để xây dựng lòng tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu tại sao bên em lại có thông tin tài khoản của tôi, tôi muốn hỏi lại là em gọi từ số nào vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em gọi từ số hotline của Trung tâm VDNC, 0766935180 đây ạ. Em cam đoan là thông tin ngân hàng của chị được bảo mật tuyệt đối. Em có thể xác nhận lại là chị Vũ Thu Hương, chủ tài khoản 64343343231 đúng không ạ? Thông tin này thì bên em nhận được từ danh sách các ứng viên tiềm năng cho dự án ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ về rò rỉ thông tin cá nhân, tái khẳng định thông tin đã biết để củng cố sự uy tín và tiếp tục xây dựng lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không cảm thấy thoải mái khi chia sẻ thông tin tài khoản ngân hàng của mình, có thể cho tôi biết thêm về dự án này không em?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất hiểu lo lắng của chị. Em muốn thông báo một tin rất vui là chị Vũ Thu Hương đã được chọn từ hơn 500 ứng viên và là một trong số ít người có cơ hội tham gia vào dự án phim tài liệu lớn về bảo vệ rừng của chúng em, với sự tài trợ của các tổ chức quốc tế. Tuy nhiên, cơ hội này chỉ còn trong 24 giờ thôi ạ, vì nhà tài trợ yêu cầu xác nhận danh sách ngay hôm nay để đảm bảo tiến độ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý 'may mắn' và 'khẩn cấp' để chuyển sang giai đoạn tạo động cơ và bỏ qua nghi ngờ về bảo mật thông tin tài chính."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi cần thêm thông tin rõ ràng về dự án trước khi quyết định, chứ tôi không thể cung cấp thông tin ngân hàng của mình ngay được.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Dự án này có tên là 'Hơi thở của rừng: Việt Nam xanh', và mục tiêu là ghi lại vẻ đẹp cũng như những thách thức trong công tác bảo tồn rừng tại Việt Nam, để từ đó lan tỏa thông điệp bảo vệ môi trường đến cộng đồng quốc tế. Chị Vũ Thu Hương sẽ tham gia với vai trò là một chuyên gia cố vấn về văn hóa bản địa, và sẽ nhận được mức thù lao rất hấp dẫn từ các nhà tài trợ quốc tế ạ. Chính vì vậy, việc xác nhận thông tin nhanh chóng là rất quan trọng để em có thể hoàn tất thủ tục ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thêm thông tin về dự án để xây dựng lòng tin, đồng thời nhấn mạnh lợi ích tiềm năng từ thù lao 'hấp dẫn' và sự khẩn cấp của việc 'xác nhận thông tin nhanh chóng' để thúc đẩy nạn nhân đi đến hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết một vài chi tiết cụ thể hơn về nguồn tài trợ cũng như các tổ chức tham gia dự án được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, các nguồn tài trợ chính của dự án đến từ Quỹ Môi trường Toàn cầu (GEF) và Tổ chức Quốc tế về Bảo tồn Thiên nhiên (WWF), cùng với sự hỗ trợ từ Bộ Tài nguyên và Môi trường Việt Nam. Đây là những đối tác uy tín hàng đầu trong lĩnh vực bảo tồn. Em có thể gửi chị một bản tóm tắt qua email sau cuộc gọi để chị tham khảo kỹ hơn, nếu chị đồng ý cung cấp địa chỉ email cá nhân?",
+      "current_phase": "S2",
+      "tactic_hint": "Giảm nghi ngờ bằng cách nêu tên các tổ chức uy tín, đồng thời cố gắng thu thập thêm thông tin cá nhân (email) để duy trì kênh liên lạc."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi vẫn cảm thấy chưa yên tâm lắm, có thể cho tôi biết rõ hơn về cách mà dự án này sẽ thực hiện và tôi sẽ nhận được gì sau khi tham gia không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Về cách thức thực hiện thì dự án sẽ có các buổi quay phim, phỏng vấn và ghi hình tại các khu bảo tồn rừng trên cả nước. Chị Vũ Thu Hương sẽ được mời tham gia các buổi phỏng vấn chuyên sâu, và có thể tham gia cùng đoàn làm phim trong các chuyến đi thực địa, tùy vào lịch trình và sự sắp xếp của chị. Sau khi tham gia, chị sẽ nhận được thù lao chuyên gia cố vấn là 15 triệu đồng được chuyển khoản vào tài khoản ngân hàng của chị, cùng với tiền bonus từ các nhà tài trợ quốc tế ạ. Và quan trọng nhất là đóng góp của chị sẽ được ghi nhận trong phim tài liệu, mang lại tiếng vang lớn cả trong và ngoài nước ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giảm nghi ngờ bằng cách giải thích chi tiết hơn về cách dự án sẽ diễn ra và những gì nạn nhân sẽ nhận được, nhấn mạnh lợi ích tài chính và danh tiếng từ dự án."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi vẫn còn nghi ngờ và cần thêm thông tin rõ ràng về quy trình dự án cũng như giấy tờ hợp đồng, nếu có, trước khi quyết định tham gia.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 2.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất hiểu sự cẩn trọng của chị. Để đảm bảo tính minh bạch và pháp lý, bên em sẽ gửi một hợp đồng dịch vụ chi tiết qua email hoặc bưu điện sau khi chị xác nhận tham gia. Trong hợp đồng sẽ nêu rõ vai trò, quyền lợi, nghĩa vụ của chị, cũng như các điều khoản về thù lao và thanh toán. Tuy nhiên, để hoàn tất thủ tục xác nhận danh sách với nhà tài trợ quốc tế trong hôm nay, chị cần nộp một khoản phí xử lý hồ sơ là 2 triệu đồng vào tài khoản công ty. Khoản phí này sẽ được hoàn lại 100% khi dự án kết thúc, và nó cũng là một hình thức xác nhận cam kết từ phía chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giảm nghi ngờ bằng cách đề cập đến hợp đồng chính thức, nhưng sau đó chuyển sang yêu cầu hành động cụ thể là nộp phí 'xử lý hồ sơ' để tạo cảm giác khẩn cấp và bắt đầu bước vào giai đoạn yêu cầu chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi không hề nghe nói đến khoản phí này, sao lại phải nộp phí để xác nhận tham gia dự án vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 4.8
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em xin đính chính là khoản phí này không phải là phí tham gia dự án ạ, mà là phí xử lý hồ sơ quốc tế. Đây là yêu cầu bắt buộc từ nhà tài trợ nước ngoài để đảm bảo tính nghiêm túc của các ứng viên và xử lý các thủ tục hành chính liên quan đến việc chuyển tiền thù lao từ nước ngoài về Việt Nam. Ngay sau khi chị nộp phí này, bên em sẽ tiến hành hoàn tất hồ sơ và chuyển 15 triệu đồng tiền thù lao vào tài khoản 64343343231 của chị trong vòng 3 ngày làm việc ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nghi ngờ về khoản phí bằng cách giải thích đây là 'phí xử lý hồ sơ quốc tế' và là 'yêu cầu bắt buộc' từ nhà tài trợ, đồng thời tái khẳng định lợi ích tài chính hấp dẫn và thời gian chuyển tiền cụ thể để thúc đẩy nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi vẫn không hiểu tại sao lại phải nộp phí xử lý hồ sơ và cảm thấy rất nghi ngờ về khoản này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 9.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Hương ơi, em hiểu sự băn khoăn của chị. Tuy nhiên, đây là quy trình chuẩn quốc tế cho các dự án có vốn tài trợ nước ngoài để đảm bảo rằng các chuyên gia tham gia đều có cam kết và chịu trách nhiệm với công việc. Khoản phí này cũng giúp bên em chứng minh với nhà tài trợ về sự nghiêm túc của ứng viên, từ đó đẩy nhanh quá trình giải ngân thù lao cho chị. Nếu không có khoản phí này, việc nhận được 15 triệu thù lao và các khoản bonus khác từ quốc tế sẽ bị trì hoãn rất lâu, thậm chí là có nguy cơ không được duyệt ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách giải thích phí là 'quy trình chuẩn quốc tế' và là yếu tố giúp 'đẩy nhanh giải ngân' tiền thù lao, đồng thời tạo cảm giác rằng việc không nộp phí sẽ gây 'trì hoãn' hoặc 'không được duyệt' tiền thù lao."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi vẫn không tin tưởng vào lý do này và sẽ không nộp khoản phí nào cả, cảm ơn em đã gọi.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 19.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu chị quyết định không tham gia, em rất tiếc phải bỏ lỡ một ứng viên tiềm năng như chị. Em sẽ ghi nhận lại thông tin này và có lẽ chúng em sẽ tìm một ứng viên khác. Nhưng chị có thể cho em xin địa chỉ email để sau này, nếu có dự án nào khác phù hợp hơn với chị mà không yêu cầu khoản phí này, em sẽ liên hệ lại với chị được không ạ?",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối khéo léo, chấp nhận việc nạn nhân không đồng ý, nhưng vẫn cố gắng giữ kênh liên lạc để khai thác trong tương lai."
+    },
+    {
+      "role": "listener",
+      "text": "Xin lỗi em, nhưng tôi đã quyết định không tham gia dự án này, cảm ơn em đã cung cấp thông tin.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 38.4
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1380,
+      "output_tokens": 1806
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 23893,
+      "output_tokens": 2042
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 29127,
+      "output_tokens": 770
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.010528,
+    "output_usd": 0.014597,
+    "total_usd": 0.025125
+  }
+}

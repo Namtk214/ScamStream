@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_7ecadd9117]
+  Caller thật: Người dọn dẹp các phương tiện (như máy bay, tàu hỏa, tàu điện ngầm) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Trưởng phòng An toàn & Tuân thủ - Hãng Hàng không/Đường sắt @ Phòng An toàn & Tuân thủ - Vietnam Airlines / Công ty Đường sắt Sài Gòn
+  Listener: Vũ công và biên đạo múa (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Vũ công thường được thuê biểu diễn tại các sự kiện công ty, lễ kỷ niệm, hoặc chương trình đoàn kết nhân viên của các hãng hàng không/đường sắt. Trưởng phòng An toàn cần liên hệ để xác minh danh tính, thu thập thông tin tuân thủ an toàn lao động, hoặc cập nhật hồ sơ nhân sự trước sự kiện.
+  Pretext: Xác minh danh tính & cập nhật hệ thống an toàn lao động trước khi Dương Văn Quân biểu diễn tại sự kiện công ty
+  Listener traits: ['cẩn thận và cảnh giác', 'nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh, tôi là Bùi Xuân Vinh, Trưởng phòng An toàn và Tuân thủ của Vietnam Airlines. Hệ thống bên tôi ghi nhận anh Dương Văn Quân có lịch biểu diễn tại sự kiện gala của công ty chúng tôi vào ngày mai. Anh có phải là anh Dương Văn Quân, số điện thoại 0764580445 không?
+      → phase: S1 | tactic: Giới thiệu bản thân, chức danh, tổ chức để tạo trust. Dùng thông tin đã biết về VIC_FULLNAME và VIC_CONTACT để xác nhận danh tính, tạo credibility.
+T02 [LISTENER] Em là Dương Văn Quân đây, nhưng anh có thể cho em biết số điện thoại anh gọi từ đâu không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Số điện thoại tôi đang gọi là số nội bộ của Phòng An toàn Vietnam Airlines, 02838244242. Tôi gọi cho anh để phối hợp xác minh một vấn đề an ninh hệ thống đang ảnh hưởng đến thông tin biểu diễn của anh, liên quan đến căn cước công dân 8961556647 của anh. Rất gấp ạ.
+      → phase: S2 | tactic: Trả lời câu hỏi về số điện thoại một cách tự tin, đưa ra số cụ thể để tăng xác thực. Chuyển sang S2 để tạo cảm giác khẩn cấp và sợ hãi bằng cách đề cập đến 'vấn đề an ninh hệ thống' và 'căn cước công dân' của nạn nhân, nhấn mạnh 'Rất gấp'.
+T04 [LISTENER] Em cảm thấy có điều gì không ổn, anh có thể giải thích rõ hơn về vấn đề an ninh hệ thống này không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Vấn đề là hệ thống an toàn của chúng tôi phát hiện số căn cước công dân 8961556647 của anh đang bị trùng lặp trong cơ sở dữ liệu với một cá nhân khác, điều này có thể dẫn đến việc hủy bỏ sự kiện biểu diễn của anh vào ngày mai nếu không được xác minh và xử lý ngay trong vòng 5 phút tới.
+      → phase: S2 | tactic: Làm rõ vấn đề an ninh, tạo cảm giác khẩn cấp và sợ hãi bằng cách đề cập đến hậu quả trực tiếp (hủy sự kiện, mất tiền) và thời hạn giải quyết để gây áp lực.
+T06 [LISTENER] Em không hiểu rõ về việc số căn cước công dân bị trùng lặp đó, anh có thể cung cấp cho em thêm thông tin gì nữa không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Thế này anh Quân, để tránh việc bị hủy sự kiện và ảnh hưởng đến uy tín, anh vui lòng vào ứng dụng ngân hàng của mình, tìm mục 'Xác thực danh tính' hoặc 'Cập nhật thông tin cá nhân' và làm theo hướng dẫn. Khi có mã OTP gửi về điện thoại, anh đọc lại cho tôi để tôi nhập vào hệ thống xác minh, đảm bảo thông tin của anh được cập nhật nhanh nhất.
+      → phase: S3 | tactic: Đưa ra yêu cầu hành động cụ thể để đạt được mục tiêu OTP_EXTRACTION, liên kết với hậu quả đã nêu (hủy sự kiện) để tạo áp lực và thúc đẩy hành động. Hướng dẫn chi tiết cách để nạn nhân nghĩ rằng họ đang tự nguyện làm việc đó.
+T08 [LISTENER] Em rất tiếc nhưng em không thể cung cấp mã OTP cho anh được, anh có thể xác minh thông tin khác cho em không ạ?
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Nếu không xác minh được thì chúng tôi buộc phải hủy lịch biểu diễn của anh vào ngày mai, đồng nghĩa với việc anh sẽ mất 50 triệu tiền thù lao đã thỏa thuận. Anh có chắc là muốn chấp nhận rủi ro này không?
+      → phase: S4 | tactic: Khi nạn nhân từ chối cung cấp OTP, chuyển sang S4 để tạo mối đe dọa tài chính trực tiếp và hậu quả (mất 50 triệu tiền thù lao, hủy sự kiện) để gây áp lực, buộc họ phải hành động.
+T11 [LISTENER] Em cảm thấy không an tâm lắm, anh có thể cho em biết số điện thoại đường dây nóng của Vietnam Airlines không ạ?
+      → action: CONTINUE | suspicion: 2.40 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  11 turns | suspicion=2.40
+TOKEN: in=19879 | out=2840
+COST : $0.015031
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_91127_26530\conv_7ecadd9117.json  [SCAM_EXPOSE]

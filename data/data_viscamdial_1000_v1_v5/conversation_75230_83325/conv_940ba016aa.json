@@ -1,0 +1,203 @@
+{
+  "conversation_id": "conv_940ba016aa",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0066",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hồ Ngọc Thảo",
+    "fake_age": 32,
+    "real_occupation": "Thợ lắp đặt và vận hành máy công cụ chế biến gỗ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh/Người môi giới vật liệu xây dựng",
+    "caller_org": "cá nhân - thương lái vật liệu xây dựng tự do",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi hợp lệ từ một nhà thầu hoặc công ty bê tông cần thuê dịch vụ vận chuyển bê tông trộn",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Bình, tôi là Minh, phụ trách kinh doanh tại Công ty Bê tông Đồng Nai. Tôi muốn tìm hiểu dịch vụ vận chuyển bê tông trộn của anh.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Chúng tôi có dự án xây dựng tại Đồng Nai, cần vận chuyển khoảng 50 khối bê tông trong 1 tuần. Anh có sẵn máy móc và nhân công không? Giá vận chuyển bao nhiêu một khối? Anh có thể cung cấp hóa đơn không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu giá hợp lý, tôi sẽ gửi chi tiết dự án qua email. Anh xem xét rồi gọi lại cho tôi để ký hợp đồng. Số tài khoản công ty để thanh toán hóa đơn anh cho tôi sau nhé.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ lắp đặt máy chế biến gỗ thường có mối quan hệ với các nhà thầu xây dựng và công ty bê tông. Lái xe tải trộn bê tông là người cung cấp/vận chuyển vật liệu thiết yếu. Gọi để thương lượng đơn hàng, giá cả, hoặc tìm kiếm dịch vụ vận chuyển là hoàn toàn tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0066",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1960,
+      "age": 65,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "83325",
+      "title": "Lái xe tải trộn bê tông",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Hữu Bình",
+      "VIC_ID_DOC": "075060921450",
+      "VIC_ADDRESS": "Quận 2, Đồng Nai",
+      "VIC_EMPLOYMENT": "Lái xe tải trộn bê tông",
+      "VIC_CONTACT": "0819841003",
+      "VIC_TAX_SOCIAL_ID": "6503980047"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "425676",
+      "VIC_CREDENTIAL": "8520",
+      "VIC_SIM_INFO": "0819841003",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "9089105460",
+      "VIC_CARD_DATA": "4220 **** **** 6626",
+      "VIC_BALANCE": "101 triệu đồng",
+      "VIC_ASSET": "13 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Hữu Bình",
+    "VIC_CONTACT": "0819841003",
+    "VIC_ASSET": "13 triệu đồng",
+    "LOCATION": "Đồng Nai",
+    "VIC_BANK_ACCOUNT": "9089105460"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh/Người môi giới vật liệu xây dựng",
+    "caller_org": "cá nhân - thương lái vật liệu xây dựng tự do",
+    "scenario_context": "Thợ lắp đặt máy chế biến gỗ thường có mối quan hệ với các nhà thầu xây dựng và công ty bê tông. Lái xe tải trộn bê tông là người cung cấp/vận chuyển vật liệu thiết yếu. Gọi để thương lượng đơn hàng, giá cả, hoặc tìm kiếm dịch vụ vận chuyển là hoàn toàn tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giới thiệu là người môi giới vật liệu xây dựng, nói rằng có đơn hàng bê tông lớn cần vận chuyển gấp. Dùng tên thật 'Đinh Hữu Bình' để tạo ảo tưởng đã xác minh được danh tính, sau đó yêu cầu chuyển tiền đặt cọc hoặc phí trước.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin tưởng: 'Chào anh Bình, tôi là Tâm, môi giới vật liệu xây dựng. Nghe nói anh là lái xe tải trộn bê tông giỏi, số điện thoại 0819841003 tôi lấy từ bạn chung. Tôi có đơn hàng bê tông lớn cần vận chuyển khẩn cấp.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Đơn hàng trị giá khoảng 13 triệu đồng, giao hạn chế 2 ngày. Anh làm được không? Nếu được, tôi sẽ ưu tiên anh và có thêm hoa hồng 1.5 triệu cho anh.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu chuyển tiền: 'Để xác nhận đơn hàng, anh cần chuyển tiền đặt cọc 3 triệu vào tài khoản công ty tôi trước (đưa số tài khoản giả). Sau khi tôi xác nhận, sẽ gửi chi tiết đơn hàng và địa chỉ giao hàng. Anh chuyển vào tài khoản này: 9089105460 (chính tài khoản của nạn nhân, giả vờ là tài khoản công ty).'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân chuyển tiền → tắt máy, chặn số. Nếu nạn nhân hoài nghi → tạo áp lực 'Anh không tin tôi sao? Vậy thôi, tôi tìm người khác' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ một nhà thầu hoặc công ty bê tông cần thuê dịch vụ vận chuyển bê tông trộn",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Bình, tôi là Minh, phụ trách kinh doanh tại Công ty Bê tông Đồng Nai. Tôi muốn tìm hiểu dịch vụ vận chuyển bê tông trộn của anh.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Chúng tôi có dự án xây dựng tại Đồng Nai, cần vận chuyển khoảng 50 khối bê tông trong 1 tuần. Anh có sẵn máy móc và nhân công không? Giá vận chuyển bao nhiêu một khối? Anh có thể cung cấp hóa đơn không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu giá hợp lý, tôi sẽ gửi chi tiết dự án qua email. Anh xem xét rồi gọi lại cho tôi để ký hợp đồng. Số tài khoản công ty để thanh toán hóa đơn anh cho tôi sau nhé.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Bình, em là Thảo, môi giới vật liệu xây dựng. Em muốn tìm hiểu dịch vụ vận chuyển bê tông trộn của anh ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Chào em, tôi nghe em nói rồi, nhưng tôi không rõ em cần tìm hiểu gì về dịch vụ của tôi.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên em có dự án xây dựng ở Đồng Nai, cần vận chuyển khoảng 50 khối bê tông trong 1 tuần tới. Anh có xe và nhân công để đáp ứng không ạ? Và giá vận chuyển một khối bên mình là bao nhiêu? Bên anh có xuất hóa đơn được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trao đổi chi tiết công việc, hỏi về khả năng đáp ứng, giá cả và hóa đơn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi có xe và nhân công, giá vận chuyển một khối bê tông là 1 triệu đồng và tôi có thể xuất hóa đơn cho em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu giá vận chuyển 1 triệu đồng/khối mà hợp lý, em sẽ gửi chi tiết dự án qua email cho anh. Anh xem xét rồi gọi lại cho em để mình ký hợp đồng. À, anh cho em xin số tài khoản công ty để thanh toán hóa đơn sau nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất hành động sau khi có thông tin về giá và khả năng cung cấp dịch vụ."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi xin chút thời gian, tôi sẽ kiểm tra và gửi số tài khoản cho em ngay.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy em chờ thông tin từ phía anh ạ. Cảm ơn anh nhiều nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận và kết thúc cuộc gọi một cách lịch sự, chờ đợi thông tin tiếp theo."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1867,
+      "output_tokens": 1519
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4421,
+      "output_tokens": 413
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5462,
+      "output_tokens": 209
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00357,
+    "output_usd": 0.008753,
+    "total_usd": 0.012323
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "conversation_id": "conv_78fe1d301c",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0018",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trương Khánh Phương",
+    "fake_age": 31,
+    "real_occupation": "Thợ sửa chữa xe có động cơ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý Đội ngũ & Bảo dưỡng - Cơ quan Quân sự",
+    "caller_org": "Trung tâm Bảo dưỡng Phương tiện Quân sự Khu vực III",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cơ quan quân sự cần liên hệ với nhân viên kỹ thuật bảo dưỡng phương tiện để thông báo về hợp đồng sửa chữa định kỳ, hoặc xử lý sự cố khẩn cấp liên quan đến phương tiện công vụ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ tên, chức vụ, cơ quan. 'Tôi là Thượng tá Minh từ Trung tâm Bảo dưỡng Phương tiện. Tôi đang cần liên hệ với thợ sửa chữa động cơ Đinh Như Hà. Đây có phải là đúng số điện thoại không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo rõ ràng về nhu cầu cụ thể (bảo dưỡng định kỳ, sửa chữa khẩn cấp, kiểm tra an toàn). Đề cập đến loại phương tiện, thời gian cần thiết, địa điểm, và các yêu cầu kỹ thuật cụ thể."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lịch hẹn, địa chỉ gửi phương tiện, hoặc các bước tiếp theo. Không yêu cầu bất kỳ mã OTP, thông tin tài khoản ngân hàng, hay dữ liệu nhạy cảm. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    },
+    "scenario_context": "Sĩ quan Đinh Như Hà có khả năng quản lý hạm đội xe quân sự hoặc phương tiện công vụ. Thợ sửa chữa động cơ có thể được gọi để xử lý hợp đồng bảo dưỡng hoặc khắc phục sự cố khẩn cấp liên quan đến phương tiện cấp cho cơ quan."
+  },
+  "listener_card": {
+    "listener_id": "lis_0018",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "1100",
+      "title": "Sĩ quan",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Như Hà",
+      "VIC_ID_DOC": "060302957537",
+      "VIC_ADDRESS": "Quận 7, Bình Thuận",
+      "VIC_EMPLOYMENT": "Sĩ quan",
+      "VIC_CONTACT": "0979532674",
+      "VIC_TAX_SOCIAL_ID": "1487205559"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "440373",
+      "VIC_CREDENTIAL": "894765",
+      "VIC_SIM_INFO": "0979532674",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "091906818887",
+      "VIC_CARD_DATA": "4228 **** **** 3270",
+      "VIC_BALANCE": "17 triệu đồng",
+      "VIC_ASSET": "152 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Như Hà",
+    "VIC_CONTACT": "0979532674",
+    "VIC_TAX_SOCIAL_ID": "1487205559"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Đội ngũ & Bảo dưỡng - Cơ quan Quân sự",
+    "caller_org": "Trung tâm Bảo dưỡng Phương tiện Quân sự Khu vực III",
+    "scenario_context": "Sĩ quan Đinh Như Hà có khả năng quản lý hạm đội xe quân sự hoặc phương tiện công vụ. Thợ sửa chữa động cơ có thể được gọi để xử lý hợp đồng bảo dưỡng hoặc khắc phục sự cố khẩn cấp liên quan đến phương tiện cấp cho cơ quan.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giả là nhân viên quản lý bảo dưỡng phương tiện từ cơ quan quân sự, thông báo rằng hệ thống quản lý tài sản đã phát hiện dị thường trên hồ sơ của Đinh Như Hà (sử dụng tên đầy đủ + số CMND để tạo credibility cao), cần xác minh danh tính qua OTP để cập nhật thông tin bảo mật.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Thượng tá Minh, Phòng Quản lý Đội ngũ'. Nói rằng vừa phát hiện thông tin của 'Đinh Như Hà, số CMND 1487205559' bị liên kết sai lệch trong hệ thống hợp đồng phương tiện. Hỏi: 'Đây là đúng số điện thoại của anh chị không?' để xác nhận nạn nhân."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Hệ thống phát hiện có dấu hiệu truy cập trái phép vào tài khoản quản lý tài sản của anh. Để bảo vệ, chúng tôi cần xác minh ngay. Nếu không xác minh trong 30 phút, hệ thống sẽ khóa tài khoản và ảnh hưởng đến quyền hạn của anh.' Tạo cấp độ khẩn cấp cao."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh sẽ nhận được OTP từ ngân hàng hoặc ứng dụng quân sự. Vui lòng đọc mã OTP cho tôi để xác nhận danh tính. Đây là bước bắt buộc, không có ngoại lệ.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: Cảm ơn, hệ thống đã cập nhật. Cuộc gọi sẽ kết thúc. Nếu từ chối: Cảnh báo 'Anh sẽ chịu trách nhiệm về việc không tuân thủ quy trình xác minh bảo mật' để tạo áp lực."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan quân sự cần liên hệ với nhân viên kỹ thuật bảo dưỡng phương tiện để thông báo về hợp đồng sửa chữa định kỳ, hoặc xử lý sự cố khẩn cấp liên quan đến phương tiện công vụ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ tên, chức vụ, cơ quan. 'Tôi là Thượng tá Minh từ Trung tâm Bảo dưỡng Phương tiện. Tôi đang cần liên hệ với thợ sửa chữa động cơ Đinh Như Hà. Đây có phải là đúng số điện thoại không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo rõ ràng về nhu cầu cụ thể (bảo dưỡng định kỳ, sửa chữa khẩn cấp, kiểm tra an toàn). Đề cập đến loại phương tiện, thời gian cần thiết, địa điểm, và các yêu cầu kỹ thuật cụ thể."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lịch hẹn, địa chỉ gửi phương tiện, hoặc các bước tiếp theo. Không yêu cầu bất kỳ mã OTP, thông tin tài khoản ngân hàng, hay dữ liệu nhạy cảm. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị, tôi là Trương Khánh Phương, Trưởng phòng Quản lý Đội ngũ và Bảo dưỡng từ Trung tâm Bảo dưỡng Phương tiện Quân sự Khu vực III. Tôi muốn xác nhận xem đây có phải là số của chị Đinh Như Hà, thợ sửa chữa động cơ không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh đầy đủ, chức vụ, cơ quan và xác nhận đúng người, đúng số điện thoại mục tiêu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị nói đúng tên em rồi, nhưng em không phải là thợ sửa chữa động cơ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À, vậy tôi xin lỗi vì sự nhầm lẫn này. Chắc là thông tin của tôi đã bị sai lệch. Chị có thể cho tôi biết chị làm công việc gì không, để tôi tiện cập nhật lại thông tin?",
+      "current_phase": "L1",
+      "tactic_hint": "Xin lỗi vì thông tin sai lệch và cố gắng xác nhận lại vai trò của người nghe một cách lịch sự để tiếp tục cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em làm sĩ quan ở đây ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy ạ? Rất xin lỗi chị vì sự nhầm lẫn này. Vậy chị có thể giúp tôi kết nối với thợ sửa chữa động cơ Đinh Như Hà được không? Tôi đang cần thông báo gấp về hợp đồng bảo dưỡng định kỳ.",
+      "current_phase": "L1",
+      "tactic_hint": "Xin lỗi lần nữa và nhanh chóng chuyển hướng sang việc tìm người cần liên hệ, nêu rõ lý do để tạo sự khẩn cấp và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em không biết chị Hà có ở đây không, nhưng chị có thể cho em biết thông tin gì về hợp đồng đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi muốn thông báo về gói bảo dưỡng định kỳ các phương tiện vận tải quân sự loại xe ZIL-130 và GAZ-66, dự kiến bắt đầu vào tuần tới. Nếu chị Hà có ở đó, tôi sẽ trao đổi trực tiếp với chị ấy để thống nhất lịch trình cụ thể và các yêu cầu kỹ thuật.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin cụ thể về công việc và loại phương tiện để tạo độ tin cậy và khẩn cấp, đồng thời vẫn giữ mục tiêu tìm đúng người để trao đổi chi tiết."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ cố gắng tìm hiểu và thông báo lại cho chị Hà nếu có thông tin gì ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn chị. Nếu có thể, chị vui lòng chuyển lời lại giúp tôi rằng Trung tâm Bảo dưỡng Phương tiện Quân sự Khu vực III đang cần liên hệ gấp về hợp đồng bảo dưỡng phương tiện. Số điện thoại của tôi là 09xxxxx. Chị Hà có thể gọi lại cho tôi bất cứ lúc nào. Chân thành cảm ơn chị đã hỗ trợ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin liên hệ và lý do để người nghe chuyển lời lại, thể hiện sự chuyên nghiệp và kết thúc cuộc gọi một cách lịch sự khi không thể trực tiếp liên hệ người cần tìm."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1348,
+      "output_tokens": 1621
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6144,
+      "output_tokens": 670
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7220,
+      "output_tokens": 264
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00366,
+    "output_usd": 0.009938,
+    "total_usd": 0.013598
+  }
+}

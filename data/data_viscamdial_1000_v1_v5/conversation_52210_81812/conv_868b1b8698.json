@@ -1,0 +1,355 @@
+{
+  "conversation_id": "conv_868b1b8698",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0008",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trần Thu Vy",
+    "fake_age": 33,
+    "real_occupation": "Chủ cửa hiệu",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên kinh doanh / Đại lý cung cấp nguyên liệu",
+    "caller_org": "cá nhân / thương lái tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa đại lý cung cấp sợi thủy tinh, thể hiện biết rõ thông tin cá nhân nạn nhân (tên, số điện thoại, CMND) để tạo vẻ như là người quen hoặc có liên hệ công việc trước đó, sau đó tạo cấp bách về thanh toán đơn hàng hoặc bồi thường sự cố.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh - đại lý sợi thủy tinh', dùng VIC_FULLNAME ('Anh Bình'), VIC_CONTACT và VIC_ID_DOC để gây ấn tượng 'biết rõ thông tin', nói là có liên hệ công việc trước hoặc được giới thiệu từ khách chung."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Nói rằng có vấn đề với hóa đơn/đơn hàng trước đó (số tiền ~17 triệu hoặc gần đó), hoặc có khách phàn nàn về chất lượng, cần thanh toán bồi thường ngay hôm nay để tránh bị kiện hoặc mất danh tiếng. Tạo áp lực thời gian: 'Chỉ còn vài giờ để xử lý'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân chuyển tiền qua tài khoản 'tạm thời' (tài khoản của scammer) hoặc mua thẻ cào để 'xử lý nhanh', tránh qua hóa đơn chính thức vì 'mất thời gian'. Nhấn mạnh tính bảo mật và tránh để người khác biết."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, tăng cường áp lực bằng cách dọa hậu quả pháp lý hoặc mất khách hàng. Nếu thành công, tắt máy ngay, khóa tài khoản và biến mất."
+        }
+      ]
+    },
+    "scenario_context": "Chủ cửa hiệu bán vật liệu xây dựng, trang trí nội thất thường cần cung cấp sợi thủy tinh cho khách hàng hoặc tìm nhà cung cấp uy tín. Thợ sản xuất sợi thủy tinh là người có kinh nghiệm, có thể là nhà cung cấp hoặc người được giới thiệu để tư vấn, báo giá hoặc xử lý đơn hàng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0008",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1970,
+      "age": 55,
+      "province": "Đà Nẵng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81812",
+      "title": "Thợ sản xuất sợi thủy tinh",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Công Bình",
+      "VIC_ID_DOC": "048070198512",
+      "VIC_ADDRESS": "TP 10, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Thợ sản xuất sợi thủy tinh",
+      "VIC_CONTACT": "0798594723",
+      "VIC_TAX_SOCIAL_ID": "4090963289"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "118445",
+      "VIC_CREDENTIAL": "524030",
+      "VIC_SIM_INFO": "0798594723",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "98716939228203",
+      "VIC_CARD_DATA": "4342 **** **** 6908",
+      "VIC_BALANCE": "17 triệu đồng",
+      "VIC_ASSET": "6 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Công Bình",
+    "VIC_CONTACT": "0798594723",
+    "VIC_ID_DOC": "048070198512",
+    "VIC_BALANCE": "17 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh / Đại lý cung cấp nguyên liệu",
+    "caller_org": "cá nhân / thương lái tự do",
+    "scenario_context": "Chủ cửa hiệu bán vật liệu xây dựng, trang trí nội thất thường cần cung cấp sợi thủy tinh cho khách hàng hoặc tìm nhà cung cấp uy tín. Thợ sản xuất sợi thủy tinh là người có kinh nghiệm, có thể là nhà cung cấp hoặc người được giới thiệu để tư vấn, báo giá hoặc xử lý đơn hàng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa đại lý cung cấp sợi thủy tinh, thể hiện biết rõ thông tin cá nhân nạn nhân (tên, số điện thoại, CMND) để tạo vẻ như là người quen hoặc có liên hệ công việc trước đó, sau đó tạo cấp bách về thanh toán đơn hàng hoặc bồi thường sự cố.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh - đại lý sợi thủy tinh', dùng VIC_FULLNAME ('Anh Bình'), VIC_CONTACT và VIC_ID_DOC để gây ấn tượng 'biết rõ thông tin', nói là có liên hệ công việc trước hoặc được giới thiệu từ khách chung."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Nói rằng có vấn đề với hóa đơn/đơn hàng trước đó (số tiền ~17 triệu hoặc gần đó), hoặc có khách phàn nàn về chất lượng, cần thanh toán bồi thường ngay hôm nay để tránh bị kiện hoặc mất danh tiếng. Tạo áp lực thời gian: 'Chỉ còn vài giờ để xử lý'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân chuyển tiền qua tài khoản 'tạm thời' (tài khoản của scammer) hoặc mua thẻ cào để 'xử lý nhanh', tránh qua hóa đơn chính thức vì 'mất thời gian'. Nhấn mạnh tính bảo mật và tránh để người khác biết."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, tăng cường áp lực bằng cách dọa hậu quả pháp lý hoặc mất khách hàng. Nếu thành công, tắt máy ngay, khóa tài khoản và biến mất."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Chủ cửa hiệu gọi cho thợ sản xuất sợi thủy tinh để tìm hiểu giá, chất lượng, thời gian giao hàng cho một đơn hàng mới hoặc kiểm tra tình trạng đơn hàng đã đặt trước đó.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng (VD: 'Chào, tôi là Minh, chủ cửa hiệu Nội thất Sài Gòn ở đường X'), xác nhận đúng người cần nói chuyện, hỏi 'Anh Bình có rảnh không?', kiểm tra xem có phải đúng thời điểm."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Nói rõ mục đích (cần báo giá sợi thủy tinh loại A, số lượng X mét, giao trong Y ngày, hoặc hỏi về chất lượng lô hàng trước), lắng nghe tư vấn, thống nhất giá cả, điều khoản thanh toán theo hình thức bình thường (hóa đơn, chuyển khoản có trích yếu rõ ràng)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận lại đơn hàng hoặc thông tin đã thống nhất, hẹn gọi lại nếu cần, cảm ơn và chào tạm biệt một cách bình thường."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Bình ạ, em là Vy bên đại lý sợi thủy tinh đây. Em gọi từ số 0798594723 của anh, với số CMND 048070198512 có phải không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và dùng thông tin cá nhân nạn nhân để tạo trust ở phase S1."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi không nhớ rõ em là ai và có chuyện gì cần trao đổi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chắc anh bận quá nên quên ạ. Em có gọi cho anh vài lần trước để trao đổi về đơn hàng vật liệu sợi thủy tinh mình đặt ấy anh. Em cũng có liên hệ qua số điện thoại này mà anh.",
+      "current_phase": "S1",
+      "tactic_hint": "Nhắc lại các lần liên hệ trước và thông tin liên lạc để củng cố trust, tạo cảm giác quen thuộc."
+    },
+    {
+      "role": "listener",
+      "text": "Thì ra là vậy, nhưng tôi vẫn chưa rõ đơn hàng này cụ thể là gì ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, là cái đơn hàng sợi thủy tinh loại cao cấp anh đặt hồi tháng trước đó ạ. Bên em vừa nhận được thông báo là có một khách hàng khác khiếu nại về chất lượng lô hàng đó, và hóa đơn thanh toán của mình vẫn còn thiếu khoảng 17 triệu đồng nữa đó anh. Em gọi để anh xác nhận lại.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo ra vấn đề về hóa đơn/chất lượng sản phẩm và nhắc đến số tiền còn thiếu để tạo tâm lý khẩn cấp và lo lắng, chuyển sang phase S2."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy nghe lo quá, nhưng tôi cần phải kiểm tra lại xem rốt cuộc chuyện này có đúng hay không đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Bình đừng lo lắng quá. Em cũng hiểu là anh cần thời gian kiểm tra. Nhưng tình hình là khách hàng đang yêu cầu bồi thường gấp, nếu mình không xử lý ngay trong hôm nay thì có thể họ sẽ khởi kiện đó ạ. Chắc chắn là sẽ ảnh hưởng đến uy tín và công việc của mình rất nhiều.",
+      "current_phase": "S2",
+      "tactic_hint": "Gắn kết nỗi lo kiểm tra của nạn nhân với hậu quả khẩn cấp là bị khởi kiện và ảnh hưởng uy tín, tăng áp lực thời gian để nạn nhân phải hành động ngay."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy làm tôi lo quá, nhưng tôi vẫn cần thêm thời gian để xác minh thông tin này đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu ạ. Nhưng nếu anh để lâu, việc này sẽ phức tạp hơn rất nhiều. Hiện tại bên em đang có phương án xử lý nhanh gọn để tránh rắc rối pháp lý, anh có muốn em nói rõ hơn không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự lo lắng nhưng vẫn nhấn mạnh sự khẩn cấp và hậu quả khi trì hoãn, đồng thời gợi mở giải pháp 'nhanh gọn' để chuyển hướng sang bước yêu cầu hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói gì thì tôi nghe cũng được, nhưng tôi nhất định phải kiểm tra thông tin này trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu anh cần kiểm tra. Vậy bây giờ em cứ nói trước phương án để anh nắm được, lỡ có gì mình còn kịp xử lý, tránh ảnh hưởng đến công việc của mình nhé anh. Cách này nhanh lắm ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thuyết phục nạn nhân lắng nghe phương án giải quyết nhanh chóng để tránh hậu quả, chuyển sang phase S3 để yêu cầu hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy nói tôi nghe phương án đó đi, nhưng tôi vẫn cần phải xác minh thông tin trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Để kiểm tra nhanh, anh có thể chuyển khoản tạm vào tài khoản cá nhân của em số 0987654321, tên Trần Thu Vy. Số tiền khoảng 17 triệu đồng là phần còn thiếu cho đơn hàng sợi thủy tinh cao cấp, như vậy em sẽ có căn cứ để xác nhận với bên công ty là anh đã hoàn tất thanh toán. Sau khi công ty xác nhận xong, em sẽ làm thủ tục hoàn tiền lại cho anh qua tài khoản công ty ạ. Cách này là nhanh nhất để mình tránh rắc rối pháp lý ngay lập tức đấy ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Đưa ra yêu cầu cụ thể 'chuyển tiền vào tài khoản cá nhân' với lời hứa hẹn 'hoàn tiền sau', tạo áp lực giải quyết nhanh 'tránh rắc rối pháp lý ngay lập tức'."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói như vậy mà tôi thấy lo lắng quá, nhưng tôi vẫn cần phải kiểm tra lại trước đã chứ không thể chuyển khoản ngay được.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ kiểm tra thoải mái ạ. Nhưng em xin nhấn mạnh lại là thời gian mình không còn nhiều đâu anh. Khách hàng đang rất nóng ruột, họ nói nếu trong chiều nay không có phản hồi thì họ sẽ làm đơn kiện thẳng lên tòa án. Đến lúc đó thì mình có muốn xử lý nhanh cũng không được nữa đâu ạ, sẽ tốn kém và mất thời gian hơn rất nhiều.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường áp lực thời gian và dọa hậu quả pháp lý nghiêm trọng hơn để nạn nhân cảm thấy phải hành động gấp, bắt đầu chuyển sang xử lý từ chối và cảnh báo về hậu quả."
+    },
+    {
+      "role": "listener",
+      "text": "Em làm tôi lo quá, nhưng tôi vẫn không thể chuyển khoản mà chưa xác minh thông tin rõ ràng đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu. Nhưng anh nghĩ xem, nếu đây là lừa đảo thì làm sao em lại biết rõ số điện thoại, số CMND, cả tên tuổi, và cả số tiền anh đang nợ một cách chính xác như vậy được ạ?",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đặt câu hỏi tu từ, nhấn mạnh việc nắm rõ thông tin cá nhân của nạn nhân để củng cố sự thật và tính hợp pháp của mình, đồng thời giảm trừ sự nghi ngờ đối với hành vi lừa đảo."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói gì cũng được, nhưng tôi vẫn cần phải kiểm tra tất cả thông tin này thật rõ ràng đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ kiểm tra đi ạ. Nhưng em lại nói rõ hơn về cái thông tin anh cần kiểm tra nhé. Đây là số tài khoản công ty của em là 0987654321, anh có thể gọi điện trực tiếp lên tổng đài công ty để xác nhận thông tin này. Hoặc là anh có thể gọi đến bên khách hàng đã khiếu nại để xác nhận thông tin anh cần phải trả 17 triệu đồng. Nhưng em xin nhắc lại, chỉ còn vài tiếng đồng hồ nữa thôi, nếu không thì mình sẽ bị kiện ra tòa và mất uy tín đó ạ. Anh Bình thấy sao?",
+      "current_phase": "S4",
+      "tactic_hint": "Giả vờ cung cấp thêm thông tin để 'xác minh' (số tài khoản giả, gợi ý gọi tổng đài ảo hoặc gọi thẳng cho 'khách hàng khiếu nại'), nhưng vẫn giữ vững áp lực thời gian và hậu quả pháp lý để đẩy nạn nhân vào thế phải hành động gấp, không có thời gian xác minh kỹ càng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy tôi cũng thấy lo lắng, nhưng tôi vẫn không thể hành động mà chưa xác minh được thông tin rõ ràng ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu. Nhưng anh Bình ơi, mình nghĩ xem, lỡ đâu mình đợi kiểm tra xong xuôi hết thì đã bị kiện và thiệt hại lớn rồi thì sao? Lúc đó mình có kiểm tra đúng hay sai cũng đã muộn rồi anh ạ. Em chỉ muốn giúp anh xử lý nhanh để mọi chuyện không đi xa hơn thôi.",
+      "current_phase": "S4",
+      "tactic_hint": "Nhấn mạnh hậu quả của việc trì hoãn xác minh và tăng áp lực tâm lý sợ hãi bị kiện, mất uy tín để nạn nhân hành động ngay lập tức, đồng thời thể hiện mình đang 'giúp đỡ' để tạo cảm giác thiện chí."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói cũng có lý, nhưng tôi vẫn cần phải kiểm tra lại thông tin một cách cẩn thận trước khi quyết định gì cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, em hiểu là anh muốn cẩn thận. Nhưng anh cứ hình dung thế này, nếu anh không thanh toán số tiền bồi thường này trong hôm nay, bên khách hàng họ sẽ chuyển hồ sơ lên tòa án. Đến lúc đó, số tiền không chỉ dừng lại ở 17 triệu đâu, mà còn bao gồm cả án phí, phí luật sư, rồi thiệt hại danh tiếng nữa. Em chỉ muốn anh cân nhắc kỹ, mình nên giải quyết gọn gàng ngay bây giờ thì tốt hơn, đúng không ạ?",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường áp lực bằng cách phóng đại hậu quả tài chính và danh tiếng nếu không giải quyết ngay, nhấn mạnh sự khôn ngoan của việc giải quyết sớm để tránh thiệt hại lớn hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói cũng có lý, nhưng tôi thật sự không thể hành động mà không xác minh rõ mọi thứ trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Bình nói vậy thì em cũng khó cho em quá. Em đã cố gắng hết sức để hỗ trợ anh xử lý nhanh gọn nhất, tránh những rắc rối không đáng có. Anh xem xét giúp em một lần nữa đi anh. Mình đừng để mọi chuyện đi quá xa chỉ vì một chút nghi ngờ ban đầu ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Thể hiện sự 'khó khăn' của bản thân và 'cố gắng hỗ trợ' để tạo sự đồng cảm, đồng thời khuyên nạn nhân từ bỏ sự 'nghi ngờ' ban đầu để đẩy nhanh hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói gì thì tôi cũng hiểu, nhưng trước khi quyết định tôi vẫn cần phải kiểm tra lại thông tin cho rõ ràng đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Bình nói vậy thì em cũng chịu thôi ạ. Nếu anh vẫn muốn chờ đợi và tự kiểm tra, mà lỡ như bên kia họ quyết định khởi kiện ngay trong chiều nay, thì lúc đó em cũng không giúp được gì nữa rồi. Em chỉ lo anh sẽ mất nhiều hơn chứ không phải là mất 17 triệu tiền hàng đâu.",
+      "current_phase": "S4",
+      "tactic_hint": "Thể hiện sự bất lực và rút lui một cách ám chỉ, đồng thời nhắc lại hậu quả tài chính lớn hơn nếu nạn nhân tiếp tục chần chừ và không hành động ngay."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói nghe cũng có lý, nhưng tôi vẫn không thể hành động mà chưa xác minh rõ mọi thông tin đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy thì thôi em cũng đành chịu thôi ạ. Nếu anh Bình vẫn quyết định như vậy, thì lỡ có chuyện gì xảy ra thì anh chịu trách nhiệm hoàn toàn nhé. Em đã cố gắng hết sức rồi ạ. Em chào anh.",
+      "current_phase": "S4",
+      "tactic_hint": "Thể hiện sự bất lực và rút lui, chuyển trách nhiệm và hậu quả sang cho nạn nhân, đồng thời dọa nạt về trách nhiệm pháp lý nếu không hành động."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1814,
+      "output_tokens": 1536
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 37521,
+      "output_tokens": 2333
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 41302,
+      "output_tokens": 968
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.015513,
+    "output_usd": 0.014093,
+    "total_usd": 0.029607
+  }
+}

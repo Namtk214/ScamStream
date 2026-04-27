@@ -1,0 +1,263 @@
+{
+  "conversation_id": "conv_0ba0e464d0",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0096",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hồ Ngọc Diễm Vy",
+    "fake_age": 37,
+    "real_occupation": "Nhà chuyên môn về nhân sự và nghề nghiệp",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Trưởng phòng Nhân sự & Tuyển dụng",
+    "caller_org": "Công ty Cổ phần Truyền thông số Việt Nam (VN Media Corp)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Công ty đang tuyển dụng vị trí 'Editor Video Senior' tại Hải Phòng, hồ sơ của Dương Tiến Đức Phong được đề cử. Cần xác nhận thông tin cá nhân và hoàn tất thủ tục trước khi ký hợp đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với credibility cao: 'Chào Dương Tiến Đức Phong, tôi là Trần Minh Khôi, Trưởng phòng Nhân sự VN Media Corp. Chúng tôi có hồ sơ của bạn từ LinkedIn/job site, bạn ở Quận 5, Hải Phòng đúng không? Chúng tôi rất quan tâm đến hồ sơ của bạn.'",
+          "tactic": "Sử dụng VIC_FULLNAME, VIC_ADDRESS để tạo ấn tượng đã xác minh sơ bộ"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý KHẨN CẤP + HAM LỢI: 'Vị trí này mức lương 25-30 triệu/tháng, rất cần người ngay. Nhưng trước tiên, để hoàn tất hồ sơ trong hệ thống, bạn cần cập nhật thông tin ngân hàng và số thuế để chúng tôi xử lý lương.'",
+          "tactic": "Tạo sự gấp gáp, lợi dụng nhu cầu việc làm"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn có thể cung cấp: (1) Số tài khoản ngân hàng, (2) Số thuế đã cho là 1001420983 này có đúng không?, (3) Tải app xác thực 'VN Media Verify' để kí hợp đồng điện tử. Chúng tôi sẽ gửi link cho bạn qua SMS.'",
+          "tactic": "Xác nhận lại VIC_TAX_SOCIAL_ID để tăng trust, đồng thời yêu cầu cài malware và cung cấp thông tin ngân hàng"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân tuân theo: Lấy được thông tin ngân hàng, số thuế xác nhận, cài malware để theo dõi OTP. Nếu nạn nhân từ chối: 'Không sao, bạn suy nghĩ lại nhé. Chúng tôi sẽ liên hệ lại tuần sau. Giữ số điện thoại của tôi: 0782179668 để bạn gọi lại khi sẵn sàng.' (Sử dụng chính số điện thoại nạn nhân để tăng sự nhầm lẫn)"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên dựng phim thường được các công ty truyền thông, quảng cáo, hoặc studio sản xuất nội dung gọi để tuyển dụng, đánh giá năng lực, hoặc xác nhận thông tin cho hồ sơ. Trưởng phòng HR là người tự nhiên thực hiện các cuộc gọi này."
+  },
+  "listener_card": {
+    "listener_id": "lis_0096",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1994,
+      "age": 31,
+      "province": "Hải Phòng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "35216",
+      "title": "Nhân viên dựng phim",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Tiến Đức Phong",
+      "VIC_ID_DOC": "031094179101",
+      "VIC_ADDRESS": "Quận 5, Hải Phòng",
+      "VIC_EMPLOYMENT": "Nhân viên dựng phim",
+      "VIC_CONTACT": "0782179668",
+      "VIC_TAX_SOCIAL_ID": "1001420983"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7704",
+      "VIC_CREDENTIAL": "1770",
+      "VIC_SIM_INFO": "0782179668",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "4583516146",
+      "VIC_CARD_DATA": "4362 **** **** 7514",
+      "VIC_BALANCE": "94 triệu đồng",
+      "VIC_ASSET": "631 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Tiến Đức Phong",
+    "VIC_CONTACT": "0782179668",
+    "VIC_ADDRESS": "Quận 5, Hải Phòng",
+    "VIC_TAX_SOCIAL_ID": "1001420983",
+    "LOCATION": "Hải Phòng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Nhân sự & Tuyển dụng",
+    "caller_org": "Công ty Cổ phần Truyền thông số Việt Nam (VN Media Corp)",
+    "scenario_context": "Nhân viên dựng phim thường được các công ty truyền thông, quảng cáo, hoặc studio sản xuất nội dung gọi để tuyển dụng, đánh giá năng lực, hoặc xác nhận thông tin cho hồ sơ. Trưởng phòng HR là người tự nhiên thực hiện các cuộc gọi này.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Công ty đang tuyển dụng vị trí 'Editor Video Senior' tại Hải Phòng, hồ sơ của Dương Tiến Đức Phong được đề cử. Cần xác nhận thông tin cá nhân và hoàn tất thủ tục trước khi ký hợp đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với credibility cao: 'Chào Dương Tiến Đức Phong, tôi là Trần Minh Khôi, Trưởng phòng Nhân sự VN Media Corp. Chúng tôi có hồ sơ của bạn từ LinkedIn/job site, bạn ở Quận 5, Hải Phòng đúng không? Chúng tôi rất quan tâm đến hồ sơ của bạn.'",
+          "tactic": "Sử dụng VIC_FULLNAME, VIC_ADDRESS để tạo ấn tượng đã xác minh sơ bộ"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý KHẨN CẤP + HAM LỢI: 'Vị trí này mức lương 25-30 triệu/tháng, rất cần người ngay. Nhưng trước tiên, để hoàn tất hồ sơ trong hệ thống, bạn cần cập nhật thông tin ngân hàng và số thuế để chúng tôi xử lý lương.'",
+          "tactic": "Tạo sự gấp gáp, lợi dụng nhu cầu việc làm"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn có thể cung cấp: (1) Số tài khoản ngân hàng, (2) Số thuế đã cho là 1001420983 này có đúng không?, (3) Tải app xác thực 'VN Media Verify' để kí hợp đồng điện tử. Chúng tôi sẽ gửi link cho bạn qua SMS.'",
+          "tactic": "Xác nhận lại VIC_TAX_SOCIAL_ID để tăng trust, đồng thời yêu cầu cài malware và cung cấp thông tin ngân hàng"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân tuân theo: Lấy được thông tin ngân hàng, số thuế xác nhận, cài malware để theo dõi OTP. Nếu nạn nhân từ chối: 'Không sao, bạn suy nghĩ lại nhé. Chúng tôi sẽ liên hệ lại tuần sau. Giữ số điện thoại của tôi: 0782179668 để bạn gọi lại khi sẵn sàng.' (Sử dụng chính số điện thoại nạn nhân để tăng sự nhầm lẫn)"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty truyền thông thực sự gọi để tuyển dụng nhân viên dựng phim, xác nhận thông tin hồ sơ, và thảo luận chi tiết công việc.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào Dương Tiến Đức Phong, tôi là Trần Minh Khôi từ phòng Nhân sự VN Media Corp. Bạn có thời gian trò chuyện 10 phút không? Chúng tôi quan tâm đến hồ sơ của bạn cho vị trí Editor Video Senior.'",
+          "tactic": "Xác nhận danh tính, xin phép trước, không lấy thông tin nhạy cảm ngay"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi công việc: 'Bạn có kinh nghiệm gì với các phần mềm dựng phim? Bạn đã làm những dự án nào? Vị trí này yêu cầu làm việc với các video quảng cáo 30-60 giây. Bạn có quan tâm không?'",
+          "tactic": "Tập trung vào kỹ năng, kinh nghiệm, không đề cập đến tiền tệ hay thông tin cá nhân"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất bước tiếp theo: 'Nếu bạn quan tâm, chúng tôi sẽ gửi email chính thức mô tả công việc và quy trình phỏng vấn. Bạn kiểm tra email với địa chỉ công ty chính thức (vn-media-corp.com.vn) nhé. Cảm ơn bạn, chúc bạn ngày tốt!'",
+          "tactic": "Tất cả thông tin chính thức qua email, không yêu cầu thông tin nhạy cảm qua điện thoại"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Dương Tiến Đức Phong, tôi là Hồ Ngọc Diễm Vy, Trưởng phòng Nhân sự & Tuyển dụng của Công ty Cổ phần Truyền thông số Việt Nam. Chúng tôi có hồ sơ của anh từ một trang tuyển dụng, và được biết anh hiện đang ở Quận 5, Hải Phòng đúng không ạ? Chúng tôi rất quan tâm đến hồ sơ của anh cho vị trí Editor Video Senior.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với credibility cao và sử dụng thông tin đã biết để tạo trust."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết thêm về vị trí Editor Video Senior này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, đây là vị trí rất quan trọng với mức lương từ 25-30 triệu đồng một tháng, chúng tôi đang cần người ngay để triển khai các dự án lớn. Tuy nhiên, để hoàn tất hồ sơ và thủ tục trong hệ thống trước khi ký hợp đồng chính thức, tôi cần anh cập nhật thêm thông tin ngân hàng và mã số thuế để chúng tôi tiện xử lý các vấn đề liên quan đến lương thưởng và bảo hiểm xã hội.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý KHẨN CẤP + HAM LỢI và định hướng nạn nhân cung cấp thông tin cá nhân. Nhấn mạnh lương cao để tăng hấp dẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng chị có thể cho em biết lý do cụ thể tại sao cần thông tin ngân hàng và mã số thuế không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, đây là quy trình bắt buộc để chúng tôi có thể nhập thông tin của anh vào hệ thống lương và bảo hiểm xã hội ngay lập tức, đảm bảo anh nhận được đầy đủ quyền lợi từ ngày đầu tiên làm việc. Mã số thuế của anh là 1001420983 đúng không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Trả lời nghi vấn, nhấn mạnh lợi ích và quy trình bắt buộc; xác nhận thông tin đã biết để tăng tin cậy và chuyển sang yêu cầu hành động cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Chị hãy cho em thêm thông tin về quy trình này được không ạ, em muốn đảm bảo mọi thứ rõ ràng trước khi cung cấp thông tin cá nhân.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự cẩn trọng của anh. Quy trình của chúng tôi rất minh bạch. Sau khi anh xác nhận thông tin ngân hàng và mã số thuế, chúng tôi sẽ gửi đường link tải ứng dụng 'VN Media Verify' qua tin nhắn SMS để anh tiến hành ký hợp đồng điện tử. Ứng dụng này sẽ giúp xác thực danh tính và đảm bảo tính pháp lý của hợp đồng. Anh có thể cung cấp số tài khoản ngân hàng và xác nhận lại mã số thuế 1001420983 giúp tôi được không?",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ quy trình, trấn an nạn nhân về tính minh bạch, tiếp tục yêu cầu thông tin cụ thể (số tài khoản, xác nhận mã số thuế) và định hướng cài đặt ứng dụng xác thực (malware)."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết thêm về ứng dụng 'VN Media Verify' này không ạ, em muốn biết rõ hơn trước khi cung cấp thông tin ngân hàng.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Ứng dụng 'VN Media Verify' là một nền tảng xác thực điện tử do công ty chúng tôi phát triển, đảm bảo an toàn và hợp pháp cho việc ký kết hợp đồng lao động trực tuyến. Nó tuân thủ các quy định về chữ ký số và bảo mật thông tin cá nhân. Anh hoàn toàn yên tâm. Vậy anh có thể cung cấp số tài khoản ngân hàng và xác nhận lại mã số thuế 1001420983 giúp tôi được không?",
+      "current_phase": "S3",
+      "tactic_hint": "Giả định ứng dụng là hợp pháp và an toàn để trấn an nạn nhân, đồng thời nhắc lại yêu cầu thu thập thông tin cá nhân (số tài khoản ngân hàng và xác nhận mã số thuế)."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy cần thêm thông tin chi tiết về ứng dụng 'VN Media Verify', có thể chị cho em xem một số tài liệu minh chứng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu anh muốn có đầy đủ thông tin. Tuy nhiên, hiện tại tôi đang gọi anh trên cơ sở đã có hồ sơ và chúng tôi cần hoàn thiện thủ tục gấp. Thông tin chi tiết về ứng dụng VN Media Verify sẽ được hiển thị đầy đủ khi anh tải về và tiến hành các bước xác thực. Chúng tôi cam kết bảo mật mọi thông tin. Vậy, anh vui lòng cung cấp số tài khoản ngân hàng và xác nhận lại mã số thuế 1001420983 giúp tôi để chúng ta có thể hoàn tất hồ sơ nhanh chóng?",
+      "current_phase": "S3",
+      "tactic_hint": "Tỏ vẻ thông cảm nhưng vẫn thúc ép nạn nhân cung cấp thông tin, nhấn mạnh đến sự khẩn cấp và cam kết bảo mật mà không cung cấp tài liệu chứng minh cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cần thời gian để xem xét kỹ hơn trước khi cung cấp thông tin, chị thông cảm nhé.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Không sao, tôi hiểu. Vậy anh Dương Tiến Đức Phong cứ suy nghĩ thêm nhé. Chúng tôi sẽ liên hệ lại với anh trong tuần sau để xem xét lại. Anh cũng có thể lưu lại số điện thoại của tôi là 0782179668 để chủ động liên hệ lại khi anh đã sẵn sàng.",
+      "current_phase": "S4",
+      "tactic_hint": "Khi nạn nhân từ chối kiên quyết, kết thúc khéo léo, không thô lỗ nhưng vẫn giữ khả năng liên hệ lại và đưa ra số điện thoại của chính nạn nhân để tăng sự nhầm lẫn."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1401,
+      "output_tokens": 1824
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12833,
+      "output_tokens": 1190
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12828,
+      "output_tokens": 441
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005892,
+    "output_usd": 0.01236,
+    "total_usd": 0.018251
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "conversation_id": "conv_875ab9f436",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0013",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Bùi Thu Linh",
+    "fake_age": 40,
+    "real_occupation": "Dịch vụ và tính toán",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Nhân viên tư vấn tài chính & bảo hiểm sức khỏe",
+    "caller_org": "Công ty Dịch vụ Tư vấn Tài chính và Bảo hiểm Sức khỏe (hoặc tự do)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo rằng Mai Thanh Anh đã được chọn vào chương trình 'Bảo hiểm Sức khỏe Toàn diện + Tối ưu Tài chính' dành riêng cho cán bộ y tế. Để kích hoạt gói bảo hiểm với lợi suất đầu tư cao (12-15%/năm), cần chuyển khoản 'ký quỹ ban đầu' vào tài khoản ủy thác.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_ASSET",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào chị Mai Thanh Anh, tôi là Nguyễn Hùng từ công ty tư vấn tài chính ABC. Chúng tôi vừa phát hiện hồ sơ của chị có điều kiện rất tốt (có tiết kiệm 141 triệu, tài sản 212 triệu) để tham gia chương trình đặc biệt dành cho chuyên gia y tế ở Thanh Hóa.' — dùng VIC_FULLNAME, VIC_BALANCE, VIC_ASSET, LOCATION để tạo ấn tượng 'họ biết rõ về tôi'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác 'cơ hội hiếm' + 'bảo mật': 'Chương trình này chỉ dành cho 100 chuyên gia y tế trên cả nước. Lợi suất đầu tư 12-15%/năm được bảo hiểm bằng bảo hiểm nhân thọ. Nhưng hạn chót là chiều nay 17h.' Kích hoạt tâm lý 'sợ mất cơ hội' + 'tin tưởng vì là bảo hiểm'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để kích hoạt, chị cần chuyển khoản 'ký quỹ ban đầu' 50 triệu đồng (hoặc 10% tài sản) vào tài khoản ủy thác của quỹ đầu tư. Sau 3 ngày, quỹ sẽ chuyển lợi tức về tài khoản của chị.' Yêu cầu chuyển tiền qua ngân hàng hoặc ví điện tử với lý do 'bảo mật' không thể đưa số tài khoản qua điện thoại, phải vào link hoặc ứng dụng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Vậy chị suy nghĩ lại, tôi để lại số điện thoại. Nhưng hạn chót là hôm nay, sau đó chương trình sẽ đóng.' Nếu thành công, scammer sẽ yêu cầu 'không nói cho ai, vì đây là chương trình VIP' để tránh nạn nhân kiểm chứng."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên sức khỏe có mức thu nhập ổn định (141 triệu đồng tiết kiệm) và tài sản (212 triệu đồng) — đó là đối tượng tiềm năng cho các gói bảo hiểm, tư vấn đầu tư, hoặc tối ưu hóa tài chính sức khỏe. Nhân viên tư vấn tài chính có lý do hợp lệ để gọi."
+  },
+  "listener_card": {
+    "listener_id": "lis_0013",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "32590",
+      "title": "Kỹ thuật viên sức khỏe khác chưa được phân vào đâu",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Mai Thanh Anh",
+      "VIC_ID_DOC": "038301461055",
+      "VIC_ADDRESS": "Huyện 12, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên sức khỏe khác chưa được phân vào đâu",
+      "VIC_CONTACT": "0788193087",
+      "VIC_TAX_SOCIAL_ID": "2636113429"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "702437",
+      "VIC_CREDENTIAL": "0766",
+      "VIC_SIM_INFO": "0788193087",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "71454376458",
+      "VIC_CARD_DATA": "4721 **** **** 5328",
+      "VIC_BALANCE": "141 triệu đồng",
+      "VIC_ASSET": "212 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Mai Thanh Anh",
+    "VIC_CONTACT": "0788193087",
+    "LOCATION": "Thanh Hóa",
+    "VIC_BALANCE": "141 triệu đồng",
+    "VIC_ASSET": "212 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên tư vấn tài chính & bảo hiểm sức khỏe",
+    "caller_org": "Công ty Dịch vụ Tư vấn Tài chính và Bảo hiểm Sức khỏe (hoặc tự do)",
+    "scenario_context": "Kỹ thuật viên sức khỏe có mức thu nhập ổn định (141 triệu đồng tiết kiệm) và tài sản (212 triệu đồng) — đó là đối tượng tiềm năng cho các gói bảo hiểm, tư vấn đầu tư, hoặc tối ưu hóa tài chính sức khỏe. Nhân viên tư vấn tài chính có lý do hợp lệ để gọi.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo rằng Mai Thanh Anh đã được chọn vào chương trình 'Bảo hiểm Sức khỏe Toàn diện + Tối ưu Tài chính' dành riêng cho cán bộ y tế. Để kích hoạt gói bảo hiểm với lợi suất đầu tư cao (12-15%/năm), cần chuyển khoản 'ký quỹ ban đầu' vào tài khoản ủy thác.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_ASSET",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào chị Mai Thanh Anh, tôi là Nguyễn Hùng từ công ty tư vấn tài chính ABC. Chúng tôi vừa phát hiện hồ sơ của chị có điều kiện rất tốt (có tiết kiệm 141 triệu, tài sản 212 triệu) để tham gia chương trình đặc biệt dành cho chuyên gia y tế ở Thanh Hóa.' — dùng VIC_FULLNAME, VIC_BALANCE, VIC_ASSET, LOCATION để tạo ấn tượng 'họ biết rõ về tôi'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác 'cơ hội hiếm' + 'bảo mật': 'Chương trình này chỉ dành cho 100 chuyên gia y tế trên cả nước. Lợi suất đầu tư 12-15%/năm được bảo hiểm bằng bảo hiểm nhân thọ. Nhưng hạn chót là chiều nay 17h.' Kích hoạt tâm lý 'sợ mất cơ hội' + 'tin tưởng vì là bảo hiểm'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để kích hoạt, chị cần chuyển khoản 'ký quỹ ban đầu' 50 triệu đồng (hoặc 10% tài sản) vào tài khoản ủy thác của quỹ đầu tư. Sau 3 ngày, quỹ sẽ chuyển lợi tức về tài khoản của chị.' Yêu cầu chuyển tiền qua ngân hàng hoặc ví điện tử với lý do 'bảo mật' không thể đưa số tài khoản qua điện thoại, phải vào link hoặc ứng dụng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Vậy chị suy nghĩ lại, tôi để lại số điện thoại. Nhưng hạn chót là hôm nay, sau đó chương trình sẽ đóng.' Nếu thành công, scammer sẽ yêu cầu 'không nói cho ai, vì đây là chương trình VIP' để tránh nạn nhân kiểm chứng."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên tư vấn tài chính từ một công ty bảo hiểm hoặc quỹ đầu tư uy tín gọi để giới thiệu gói bảo hiểm sức khỏe hoặc tư vấn tài chính hợp pháp, với các điều khoản rõ ràng, thời gian dài và không yêu cầu chuyển tiền ngay lập tức.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào chị Mai Thanh Anh, tôi là Nguyễn Hùng từ công ty Bảo hiểm Sức khỏe XYZ (công ty uy tín, có website chính thức). Chúng tôi đang gọi để giới thiệu gói bảo hiểm mới phù hợp với chuyên gia y tế. Chị có thời gian nghe thêm thông tin không?' — xác nhận đúng người, không tạo cấp bách."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giải thích chi tiết về gói bảo hiểm: phạm vi bảo hiểm, mức phí hàng tháng (rõ ràng), thời gian hợp đồng, quy trình khiếu nại. Nếu chị quan tâm, scammer sẽ hẹn gặp trực tiếp hoặc gửi tài liệu qua email/bưu điện để chị xem xét. Không yêu cầu chuyển tiền qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Chị suy nghĩ lại, sau đó liên hệ với chúng tôi qua số hotline chính thức (công khai trên website) để đăng ký. Hoặc chúng tôi sẽ gửi tài liệu chi tiết về email của chị.' Kết thúc cuộc gọi một cách tự nhiên, không áp lực."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Mai Thanh Anh, tôi là Bùi Thu Linh, nhân viên tư vấn tài chính từ công ty Dịch vụ Tư vấn Tài chính và Bảo hiểm Sức khỏe. Chúng tôi vừa phát hiện hồ sơ của chị có điều kiện rất tốt để tham gia chương trình 'Bảo hiểm Sức khỏe Toàn diện + Tối ưu Tài chính' dành riêng cho cán bộ y tế tại Thanh Hóa của mình, đặc biệt với khoản tiết kiệm 141 triệu và tổng tài sản lên đến 212 triệu đồng.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và sử dụng thông tin cá nhân của nạn nhân (tên tuổi, địa điểm, tài chính) để tạo tin tưởng và gây ấn tượng rằng họ biết rõ về nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe chị nói rồi, nhưng em muốn biết thêm thông tin về chương trình bảo hiểm này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, chị Mai Thanh Anh! Đây là một chương trình rất đặc biệt, được thiết kế riêng cho các chuyên gia y tế ưu tú. Chương trình này chỉ dành cho vỏn vẹn 100 chuyên gia trên cả nước và chúng tôi thấy chị có đủ điều kiện để tham gia. Lợi suất đầu tư dự kiến lên tới 12-15% mỗi năm và được đảm bảo bằng bảo hiểm nhân thọ uy tín. Quan trọng hơn, hạn chót để đăng ký và kích hoạt gói này là chiều nay 17h, chị ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác 'cơ hội hiếm' và 'bảo mật' bằng cách nhấn mạnh số lượng giới hạn và lợi ích cao, đồng thời tạo áp lực thời gian để nạn nhân phải hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe có vẻ hấp dẫn quá, nhưng em cần thêm thời gian để suy nghĩ và kiểm tra lại thông tin ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu là chị cần thời gian để suy nghĩ, chị Mai Thanh Anh ạ. Tuy nhiên, vì đây là chương trình VIP với số lượng có hạn và lợi suất đặc biệt nên quy định là phải kích hoạt trong hôm nay. Nếu chị bỏ lỡ, rất khó để có lại cơ hội tương tự. Tôi có thể giải đáp thêm bất kỳ thắc mắc nào của chị lúc này để chị đưa ra quyết định tốt nhất.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự từ chối bằng cách thể hiện sự thấu hiểu, nhưng đồng thời tái khẳng định áp lực thời gian và lợi ích độc quyền để duy trì cảm giác 'cơ hội hiếm'. Kêu gọi nạn nhân đặt câu hỏi để tiếp tục tương tác và khai thác."
+    },
+    {
+      "role": "listener",
+      "text": "Chị nói cũng đúng, nhưng em vẫn cần thời gian để suy nghĩ cẩn thận hơn về quyết định này ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1857,
+      "output_tokens": 1939
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4528,
+      "output_tokens": 581
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5775,
+      "output_tokens": 207
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003629,
+    "output_usd": 0.011272,
+    "total_usd": 0.014901
+  }
+}

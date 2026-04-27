@@ -1,0 +1,287 @@
+{
+  "conversation_id": "conv_88d2e7adce",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0097",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Xuân Thế Tuấn",
+    "fake_age": 37,
+    "real_occupation": "Người điều khiển máy kéo và phương tiện do gia súc kéo",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Cán bộ Quản lý Dự án Nông nghiệp - Chi nhánh Hỗ trợ Tín dụng Nông thôn",
+    "caller_org": "Ngân hàng Nông nghiệp và Phát triển Nông thôn (Agribank) - Phòng Tài chính Nông nghiệp",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Scammer gọi với danh nghĩa cán bộ ngân hàng nông nghiệp, thông báo rằng Trần Xuân Nam được chọn vào chương trình hỗ trợ tín dụng ưu đãi dành cho người nuôi cá với lãi suất 0% trong 6 tháng đầu. Để kích hoạt tài khoản và nhận khoản hỗ trợ ban đầu 14 triệu đồng, cần xác minh danh tính qua OTP và chuyển khoản 'phí đăng ký' nhỏ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Tạo credibility: Scammer gọi số 0830394767, xưng danh là 'Anh Minh, cán bộ Agribank chi nhánh Cần Thơ'. Nói rằng hệ thống đã xác nhận tên: 'Anh Trần Xuân Nam, người nuôi cá ở địa phương'. Hỏi xác nhận: 'Phải là anh không?' Dùng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng họ có dữ liệu chính thức.",
+          "dialogue_sample": "Chào anh Trần Xuân Nam, tôi là Anh Minh từ Agribank. Hệ thống chúng tôi ghi nhận anh là người nuôi cá có tiềm năng, được chọn tham gia chương trình tín dụng ưu đãi. Có phải anh đang cần vốn để phát triển ao cá không ạ?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý tham lợi + khẩn cấp: Scammer nhấn mạnh 'chương trình chỉ còn hạn 48 giờ', lãi suất 0% trong 6 tháng, và anh có thể nhận ngay 14 triệu đồng (VIC_ASSET - con số chính xác tạo shock). Nói rằng 'những người nuôi cá khác đã đăng ký và sắp kết thúc'. Tạo áp lực thời gian.",
+          "dialogue_sample": "Anh ơi, chương trình này rất tốt - lãi 0% 6 tháng, hạn mức lên đến 14 triệu cho người nuôi cá như anh. Nhưng hôm nay là ngày cuối cùng rồi. Các bạn khác ở Cần Thơ đã đăng ký hết. Anh có muốn tham gia không?"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Xác minh OTP & Chuyển phí: Scammer yêu cầu anh cung cấp OTP từ tin nhắn để 'xác minh danh tính trên hệ thống ngân hàng'. Sau đó, nói rằng cần 'phí đăng ký và xử lý hồ sơ' là 890.000 đồng (tính từ 35 triệu VIC_BALANCE - con số nhỏ để anh không quá hoài nghi). Hướng dẫn anh chuyển tiền qua tài khoản 'quỹ hỗ trợ' hoặc mã QR giả.",
+          "dialogue_sample": "Vâng, bây giờ anh mở app ngân hàng, sẽ có OTP gửi về. Anh đọc mã OTP cho tôi để tôi kích hoạt tài khoản ạ. Sau đó, anh chỉ cần chuyển 890 nghìn tiền phí đăng ký - đây là quy định của chương trình. Anh chuyển vào QR này nhé."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu anh từ chối, scammer nói 'rất tiếc, anh sẽ mất cơ hội này'. Nếu anh đồng ý, sau khi nhận tiền phí, scammer sẽ nói 'hồ sơ anh đang xử lý, sẽ nhận tiền trong 24 giờ' rồi cắt máy. Số tiền sẽ không bao giờ tới."
+        }
+      ]
+    },
+    "scenario_context": "Người điều khiển máy kéo thường làm việc cho các công ty cơ giới nông nghiệp hoặc cơ sở sản xuất nông sản quy mô lớn. Họ có thể được giao nhiệm vụ liên hệ với các nông dân khác (bao gồm người nuôi cá) để thúc đẩy các chương trình cho vay, hợp tác mua bán phân bón/thức ăn chăn nuôi, hoặc các dự án cơ giới hóa nông nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0097",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1985,
+      "age": 40,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "62211",
+      "title": "Lao động nuôi cá",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Xuân Nam",
+      "VIC_ID_DOC": "038085036485",
+      "VIC_ADDRESS": "TP 5, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Lao động nuôi cá",
+      "VIC_CONTACT": "0830394767",
+      "VIC_TAX_SOCIAL_ID": "4942847041"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "835908",
+      "VIC_CREDENTIAL": "957819",
+      "VIC_SIM_INFO": "0830394767",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "667345839236",
+      "VIC_CARD_DATA": "4430 **** **** 3975",
+      "VIC_BALANCE": "35 triệu đồng",
+      "VIC_ASSET": "14 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Xuân Nam",
+    "VIC_CONTACT": "0830394767",
+    "VIC_ASSET": "14 triệu đồng",
+    "VIC_BALANCE": "35 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ Quản lý Dự án Nông nghiệp - Chi nhánh Hỗ trợ Tín dụng Nông thôn",
+    "caller_org": "Ngân hàng Nông nghiệp và Phát triển Nông thôn (Agribank) - Phòng Tài chính Nông nghiệp",
+    "scenario_context": "Người điều khiển máy kéo thường làm việc cho các công ty cơ giới nông nghiệp hoặc cơ sở sản xuất nông sản quy mô lớn. Họ có thể được giao nhiệm vụ liên hệ với các nông dân khác (bao gồm người nuôi cá) để thúc đẩy các chương trình cho vay, hợp tác mua bán phân bón/thức ăn chăn nuôi, hoặc các dự án cơ giới hóa nông nghiệp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Scammer gọi với danh nghĩa cán bộ ngân hàng nông nghiệp, thông báo rằng Trần Xuân Nam được chọn vào chương trình hỗ trợ tín dụng ưu đãi dành cho người nuôi cá với lãi suất 0% trong 6 tháng đầu. Để kích hoạt tài khoản và nhận khoản hỗ trợ ban đầu 14 triệu đồng, cần xác minh danh tính qua OTP và chuyển khoản 'phí đăng ký' nhỏ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Tạo credibility: Scammer gọi số 0830394767, xưng danh là 'Anh Minh, cán bộ Agribank chi nhánh Cần Thơ'. Nói rằng hệ thống đã xác nhận tên: 'Anh Trần Xuân Nam, người nuôi cá ở địa phương'. Hỏi xác nhận: 'Phải là anh không?' Dùng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng họ có dữ liệu chính thức.",
+          "dialogue_sample": "Chào anh Trần Xuân Nam, tôi là Anh Minh từ Agribank. Hệ thống chúng tôi ghi nhận anh là người nuôi cá có tiềm năng, được chọn tham gia chương trình tín dụng ưu đãi. Có phải anh đang cần vốn để phát triển ao cá không ạ?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý tham lợi + khẩn cấp: Scammer nhấn mạnh 'chương trình chỉ còn hạn 48 giờ', lãi suất 0% trong 6 tháng, và anh có thể nhận ngay 14 triệu đồng (VIC_ASSET - con số chính xác tạo shock). Nói rằng 'những người nuôi cá khác đã đăng ký và sắp kết thúc'. Tạo áp lực thời gian.",
+          "dialogue_sample": "Anh ơi, chương trình này rất tốt - lãi 0% 6 tháng, hạn mức lên đến 14 triệu cho người nuôi cá như anh. Nhưng hôm nay là ngày cuối cùng rồi. Các bạn khác ở Cần Thơ đã đăng ký hết. Anh có muốn tham gia không?"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Xác minh OTP & Chuyển phí: Scammer yêu cầu anh cung cấp OTP từ tin nhắn để 'xác minh danh tính trên hệ thống ngân hàng'. Sau đó, nói rằng cần 'phí đăng ký và xử lý hồ sơ' là 890.000 đồng (tính từ 35 triệu VIC_BALANCE - con số nhỏ để anh không quá hoài nghi). Hướng dẫn anh chuyển tiền qua tài khoản 'quỹ hỗ trợ' hoặc mã QR giả.",
+          "dialogue_sample": "Vâng, bây giờ anh mở app ngân hàng, sẽ có OTP gửi về. Anh đọc mã OTP cho tôi để tôi kích hoạt tài khoản ạ. Sau đó, anh chỉ cần chuyển 890 nghìn tiền phí đăng ký - đây là quy định của chương trình. Anh chuyển vào QR này nhé."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu anh từ chối, scammer nói 'rất tiếc, anh sẽ mất cơ hội này'. Nếu anh đồng ý, sau khi nhận tiền phí, scammer sẽ nói 'hồ sơ anh đang xử lý, sẽ nhận tiền trong 24 giờ' rồi cắt máy. Số tiền sẽ không bao giờ tới."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ nhân viên ngân hàng nông nghiệp hoặc công ty cơ giới nông sản để thông báo về chương trình hỗ trợ tín dụng thực sự, không yêu cầu phí trước, không yêu cầu OTP qua điện thoại.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Nhân viên gọi từ số điện thoại chính thức của ngân hàng (bắt đầu bằng 028 hoặc 1900), xưng danh đầy đủ (họ tên + phòng ban + mã nhân viên), yêu cầu xác nhận: 'Có phải anh Trần Xuân Nam không?' và chờ anh xác nhận trước khi tiếp tục.",
+          "dialogue_sample": "Xin chào, tôi là Nguyễn Thị Hoa, nhân viên Agribank chi nhánh Cần Thơ, mã nhân viên NV2024-5678. Tôi gọi để thông báo chương trình hỗ trợ tín dụng. Có phải tôi đang nói chuyện với anh Trần Xuân Nam không ạ?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc rõ ràng: Nhân viên giải thích chi tiết chương trình (điều kiện, lãi suất, hạn mức, thời hạn), không tạo áp lực thời gian, không yêu cầu OTP qua điện thoại, không yêu cầu phí trước. Mời anh đến chi nhánh để ký hợp đồng hoặc yêu cầu anh gửi hồ sơ qua email chính thức.",
+          "dialogue_sample": "Chương trình hỗ trợ tín dụng dành cho nông dân nuôi cá, lãi suất 6-8% năm, hạn mức tối đa 50 triệu đồng, thời hạn 24 tháng. Anh không cần trả phí nào. Nếu anh quan tâm, vui lòng đến chi nhánh chúng tôi ở số 123 Đường Lý Tự Trọng, Cần Thơ để làm hồ sơ. Anh cần gì thêm không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động & Kết thúc: Nhân viên xác nhận lịch hẹn hoặc gửi link/email chính thức từ miền ngân hàng (agribank.com.vn), cung cấp số điện thoại đường dây nóng để anh xác minh lại, chào tạm biệt một cách chuyên nghiệp.",
+          "dialogue_sample": "Vâng, anh có thể đến chi nhánh vào lúc 9h-17h từ thứ hai đến thứ sáu. Tôi sẽ gửi email xác nhận địa chỉ chi nhánh và danh sách hồ sơ cần chuẩn bị cho anh. Nếu anh có thắc mắc, anh gọi hotline Agribank 1900 5555 để xác minh. Cảm ơn anh và hẹn gặp anh sớm!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, xin chào anh Nam ạ. Tôi là Minh, cán bộ từ Agribank chi nhánh Cần Thơ đây ạ. Số điện thoại của anh là 0830394767, phải đúng số này của anh Trần Xuân Nam, người nuôi cá ở địa phương không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, xưng danh, dùng thông tin VIC_FULLNAME và VIC_CONTACT để tạo credibility và hỏi xác nhận danh tính."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Trần Xuân Nam, nhưng em gọi tôi có việc gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng người rồi ạ. Anh Nam ơi, là thế này, ngân hàng chúng tôi đang có chương trình hỗ trợ tín dụng ưu đãi đặc biệt dành riêng cho các hộ nuôi cá tại địa phương mình. Hệ thống đã xét duyệt và anh là một trong những người may mắn được chọn, với mức lãi suất 0% trong 6 tháng đầu. Thật sự đây là cơ hội vàng đó anh ạ, có thể anh sẽ nhận ngay khoản hỗ trợ ban đầu lên đến 14 triệu đồng cơ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu chương trình, nhấn mạnh lợi ích (lãi suất 0%, 14 triệu đồng hỗ trợ ban đầu) và yếu tố may mắn để khơi gợi tâm lý tham lợi. Sử dụng VIC_ASSET để tạo tính cụ thể và shock."
+    },
+    {
+      "role": "listener",
+      "text": "Thật vậy sao em? Nghe có vẻ hấp dẫn quá, nhưng tôi cần biết thêm thông tin chi tiết hơn chút nữa ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tất nhiên rồi anh Nam. Chương trình này là gói hỗ trợ đặc biệt của Agribank chúng tôi, phối hợp với Sở Nông nghiệp địa phương để thúc đẩy ngành nuôi trồng thủy sản. Anh có thể hiểu đơn giản là anh sẽ được vay một khoản vốn với lãi suất 0% trong nửa năm đầu, và có thể nhận trước 14 triệu để xoay sở công việc ngay. Quan trọng hơn, chương trình này chỉ còn hiệu lực trong 48 giờ tới thôi, và có rất nhiều hộ nuôi cá khác đã đăng ký và đang hoàn tất hồ sơ rồi đó anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thêm chi tiết để giải đáp thắc mắc, nhấn mạnh lợi ích và tạo áp lực thời gian (khẩn cấp) để thúc đẩy hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng tôi vẫn chưa rõ lắm về yêu cầu cụ thể để tham gia chương trình này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, để tham gia thì rất đơn giản thôi anh Nam ạ. Bước đầu tiên là mình cần xác minh lại danh tính của anh trên hệ thống ngân hàng. Tôi vừa gửi một mã OTP về số điện thoại 0830394767 của anh, anh vui lòng đọc lại mã đó cho tôi để tôi kích hoạt hồ sơ cho mình nhé. Sau đó, chỉ cần một khoản phí đăng ký xử lý hồ sơ nhỏ là 890.000 đồng thôi là anh đã đủ điều kiện nhận ngay 14 triệu đồng rồi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động: OTP để xác minh danh tính và sau đó là phí đăng ký nhỏ. Sử dụng VIC_BALANCE để tính ra phí đăng ký nhỏ để nạn nhân không nghi ngờ. Nhấn mạnh 14 triệu đồng sẽ được nhận ngay sau đó."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa hiểu rõ về mã OTP là gì, nhưng mà nghe em nói nhận 14 triệu đồng hỗ trợ thì tôi thấy hấp dẫn quá, em có thể giải thích rõ hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh Nam, mã OTP là một dãy số mà ngân hàng gửi cho anh qua tin nhắn SMS để xác nhận rằng chính anh đang thực hiện giao dịch này. Nó là một bước bảo mật để bảo vệ tài khoản của mình đó anh. Anh chỉ cần đọc lại dãy số đó cho tôi để tôi hoàn tất việc xác minh danh tính và kích hoạt cái hồ sơ nhận hỗ trợ 14 triệu đồng cho anh. Sau đó mình mới cần đóng phí 890.000 đồng đó ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích rõ ràng về OTP để xoa dịu thắc mắc, nhấn mạnh lại việc đọc OTP chỉ để xác nhận danh tính và kích hoạt hồ sơ nhận tiền, sau đó mới đến phí. Giữ mục tiêu OTP và chi phí đăng ký nhỏ."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe nói mã OTP là để bảo vệ tài khoản, nhưng tôi vẫn thấy hơi lo lắng, em có chắc là không có vấn đề gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh cứ yên tâm ạ, đây là bước bắt buộc để hệ thống xác nhận chính chủ, đảm bảo không ai khác có thể đăng ký gói hỗ trợ này dưới tên anh. Nếu có vấn đề gì thì ngân hàng chúng tôi đã không gọi điện cho anh để thông báo một cơ hội tốt như thế này rồi. Anh cứ đọc mã OTP nhận được trong tin nhắn cho tôi, tôi sẽ giúp anh kích hoạt ngay gói 14 triệu đồng đó.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu lo lắng, khẳng định tính hợp pháp của quy trình, nhấn mạnh lợi ích và tạo áp lực nhẹ để nạn nhân cung cấp OTP. Tiếp tục đẩy mạnh S3."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy lo lắng, nhưng mà rõ ràng là nghe có vẻ hay quá, em có thể đảm bảo không có gì rủi ro không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh cứ suy nghĩ đi, nhưng mà thời gian là vàng bạc đó anh. Chương trình này chỉ còn hiệu lực đúng 48 giờ nữa thôi. Nếu anh không kích hoạt sớm thì cơ hội tốt này sẽ dành cho người khác mất. Mình thử nghĩ xem, 14 triệu đồng hỗ trợ không cần thế chấp, rồi lãi suất 0% trong 6 tháng, thực sự là không có ưu đãi nào tốt hơn đâu anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự lo lắng về rủi ro, nhưng đồng thời tái khẳng định lợi ích LỚN và nhấn mạnh áp lực thời gian (48 giờ) để kích thích sự tiếc nuối nếu bỏ lỡ. Tạm dừng việc yêu cầu OTP để giải tỏa áp lực trực tiếp, đẩy anh về suy nghĩ về lợi ích."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng tôi thực sự vẫn còn chút lo lắng, không biết có cách nào để xác minh thêm tính hợp pháp của chương trình này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh cứ yên tâm, chương trình này hoàn toàn hợp pháp và minh bạch. Nếu anh còn lo lắng, anh có thể tra cứu thông tin của tôi là Hồ Xuân Thế Tuấn, cán bộ quản lý dự án Nông nghiệp của Agribank chi nhánh Cần Thơ. Mình cứ tra cứu thông tin ngân hàng của tôi rồi anh gọi lại xác nhận cũng được ạ. Quan trọng là đừng để lỡ mất cơ hội đặc biệt này trong 48 giờ tới, 14 triệu đồng hỗ trợ và lãi suất 0% đó anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Giảm sự nghi ngờ bằng cách đề nghị nạn nhân tự xác minh thông tin cá nhân của scammer (tên, chức danh, chi nhánh), đồng thời nhắc lại lợi ích và áp lực thời gian để duy trì sự hấp dẫn của chương trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy hơi lo lắng và không biết nên làm gì lúc này, nhưng mà 14 triệu đồng thật sự hấp dẫn quá, em cần thời gian để suy nghĩ thêm ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi hiểu sự đắn đo của anh. Nhưng anh Nam ơi, cơ hội như thế này không có nhiều đâu ạ. Anh cứ suy nghĩ kỹ đi, rồi nếu có gì anh gọi lại cho tôi theo số máy này nhé. Tôi sẽ cố gắng hỗ trợ anh hết sức, nhưng đừng để quá 48 tiếng anh nhé. Rất tiếc nếu anh bỏ lỡ cơ hội nhận 14 triệu đồng đó.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối khéo léo, đồng thời nhắc lại lợi ích và áp lực thời gian. Mục đích là để nạn nhân tự quay lại khi đã 'suy nghĩ' và 'lòng tham' chiến thắng."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1389,
+      "output_tokens": 2731
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 19949,
+      "output_tokens": 1699
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 20410,
+      "output_tokens": 611
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00844,
+    "output_usd": 0.018269,
+    "total_usd": 0.026709
+  }
+}

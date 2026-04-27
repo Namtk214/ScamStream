@@ -1,0 +1,112 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_8940e6fd73]
+  Caller thật: Bí thư Tỉnh ủy, Phó Bí thư Tỉnh ủy, Ủy viên Ban Chấp hành Đảng bộ cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Cán bộ phòng Nội vụ - Cơ quan Hành chính Công - Bộ phận Quản lý Cán bộ Công chức @ Sở Nội vụ tỉnh / Phòng Nội vụ Huyện
+  Listener: Người giúp việc gia đình (chung) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Cán bộ công chức cấp tỉnh/huyện cần liên hệ xác minh thông tin cá nhân, hộ khẩu, hoặc công tác xã hội liên quan đến các chương trình hỗ trợ, kiểm tra hộ khẩu, hoặc xác thực danh tính cho các thủ tục hành chính mới.
+  Pretext: Xưng danh cán bộ Phòng Nội vụ, gọi để 'xác minh thông tin hộ khẩu' của Đặng Đức Gia Đức, sau đó dẫn vào chương trình 'hỗ trợ lao động tự do không có bảo hiểm' và yêu cầu nạn nhân chuẩn bị tiền để 'kích hoạt khoản hỗ trợ 50 triệu từ Nhà nước'.
+  Listener traits: ['dễ bị lừa bởi authority', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Đặng Đức Gia Đức ạ. Em là Võ Thùy Liên, cán bộ Phòng Nội vụ. Hiện tại cơ quan em đang tiến hành rà soát, cập nhật lại hồ sơ công dân, đặc biệt là với các trường hợp có số căn cước công dân 074066260582 như của anh. Anh có tiện trao đổi một chút không ạ?
+      → phase: S1 | tactic: Tiếp cận với giọng điệu chính thức, sử dụng tên đầy đủ và số ID để tạo uy tín và thu hút sự chú ý của nạn nhân.
+T02 [LISTENER] Dạ, em có cần thông tin gì thêm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, trên hệ thống của chúng em đang hiển thị thông tin lao động của anh là lao động tự do và hiện chưa tham gia bảo hiểm xã hội tự nguyện đúng không ạ?
+      → phase: S2 | tactic: Xác nhận thông tin về tình trạng lao động và bảo hiểm để dẫn dắt vào 'chương trình hỗ trợ lao động tự do không có bảo hiểm'.
+T04 [LISTENER] Dạ, đúng rồi ạ, tôi chưa tham gia bảo hiểm xã hội tự nguyện.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng. Vừa qua, Nhà nước có một chương trình hỗ trợ khẩn cấp cho nhóm lao động tự do không có bảo hiểm, với mức hỗ trợ dự kiến là khoảng 50 triệu đồng. Em thấy anh thuộc đối tượng được hỗ trợ đó ạ. Anh có muốn tìm hiểu về chương trình này không?
+      → phase: S2 | tactic: Giới thiệu về chương trình hỗ trợ 50 triệu đồng cho lao động tự do không có bảo hiểm, đánh vào tâm lý ham lợi của nạn nhân.
+T06 [LISTENER] Dạ, tôi muốn biết thêm về chương trình hỗ trợ này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, để kích hoạt khoản hỗ trợ này, hệ thống của chúng em yêu cầu anh phải chứng minh khả năng tài chính của mình để đảm bảo anh có thể sử dụng khoản tiền hỗ trợ một cách hiệu quả. Anh có tài khoản ngân hàng nào đang sử dụng không ạ?
+      → phase: S2 | tactic: Dẫn dắt nạn nhân đến việc cung cấp thông tin tài khoản ngân hàng để chuẩn bị cho bước yêu cầu chuyển tiền 'kích hoạt khoản hỗ trợ'.
+T08 [LISTENER] Dạ, tôi có tài khoản ngân hàng ạ, nhưng em có thể giải thích thêm về yêu cầu này được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, để đảm bảo tính minh bạch và tránh trục lợi chính sách, bên em có một quy trình xác thực. Anh vui lòng chuyển khoản một số tiền nhỏ, khoảng 2 đến 3 triệu đồng, vào một tài khoản tạm thời mà em sẽ cung cấp. Số tiền này sẽ dùng để xác thực danh tính và khả năng tài chính của anh, sau đó khoản hỗ trợ 50 triệu đồng sẽ được chuyển vào tài khoản chính của anh trong vòng 24 giờ. Anh có đồng ý không ạ?
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể: chuyển tiền vào tài khoản tạm để 'kích hoạt' khoản hỗ trợ, ngụy biện đây là 'quy trình bắt buộc' để xác thực.
+T10 [LISTENER] Dạ, nhưng em có thể cho tôi biết rõ hơn về tài khoản tạm thời đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ, tài khoản tạm thời này là của một đơn vị trung gian được Bộ tài chính ủy quyền quản lý quỹ hỗ trợ. Sau khi anh chuyển khoản, hệ thống sẽ tự động xác nhận và hoàn trả lại cho anh cùng với khoản hỗ trợ 50 triệu đồng sau khi quy trình hoàn tất. Anh cứ yên tâm là tài khoản này chỉ dùng để xác thực thôi ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ của nạn nhân về 'tài khoản tạm thời' bằng cách giải thích nó là của 'đơn vị trung gian được ủy quyền' và đảm bảo tiền sẽ được hoàn trả, nhằm thúc đẩy nạn nhân thực hiện chuyển khoản.
+T12 [LISTENER] Dạ, tôi hiểu rồi, nhưng em có thể cho tôi biết cụ thể số tài khoản và tên ngân hàng để tôi chuyển khoản được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ vâng, để em kiểm tra thông tin tài khoản tạm thời cho anh. Anh giữ máy giúp em một lát nhé. Anh có thể chuẩn bị sẵn sàng để chuyển khoản chưa ạ?
+      → phase: S3 | tactic: Chuẩn bị cung cấp thông tin tài khoản ngân hàng giả mạo, đồng thời tạo áp lực về thời gian và sự sẵn sàng của nạn nhân để họ thực hiện hành động chuyển tiền.
+T14 [LISTENER] Dạ, tôi đã sẵn sàng, nhưng em cho tôi biết số tài khoản và tên ngân hàng được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ vâng, đây là thông tin tài khoản tạm thời ạ: Số tài khoản là 1903678912345, tên chủ tài khoản là NGUYEN VAN A, tại ngân hàng Techcombank. Anh vui lòng chuyển khoản đúng nội dung là 'XAC THUC HO TRO' để hệ thống tự động nhận diện nhé. Anh có thể chuyển khoản được chưa ạ?
+      → phase: S3 | tactic: Cung cấp thông tin tài khoản ngân hàng giả mạo và hướng dẫn chi tiết về nội dung chuyển khoản để đảm bảo nạn nhân thực hiện đúng thao tác, đồng thời tạo cảm giác gấp gáp để nạn nhân hành động.
+T16 [LISTENER] Dạ, tôi sẽ chuyển khoản ngay bây giờ, nhưng em có chắc là sau khi chuyển khoản tôi sẽ nhận được hỗ trợ không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ, anh cứ yên tâm ạ. Đây là quy trình bắt buộc của Nhà nước để đảm bảo tính minh bạch và công bằng cho tất cả mọi người. Ngay sau khi anh hoàn tất việc chuyển khoản, hệ thống sẽ xác nhận và tiến hành chuyển khoản hỗ trợ 50 triệu đồng vào tài khoản của anh trong vòng 24 giờ làm việc. Anh cứ thực hiện đúng như em hướng dẫn là được ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ của nạn nhân bằng cách khẳng định lại tính chính xác của quy trình và đảm bảo về việc nhận được khoản hỗ trợ, đồng thời thúc giục nạn nhân thực hiện hành động chuyển tiền.
+T18 [LISTENER] Dạ, tôi sẽ làm theo hướng dẫn của em ngay bây giờ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ vâng, anh cứ thực hiện chuyển khoản giúp em nhé. Khi nào hoàn tất, anh vui lòng nhắn lại cho em một tiếng để em tiện theo dõi trên hệ thống ạ. Em cảm ơn anh nhiều.
+      → phase: S3 | tactic: Thúc giục nạn nhân hoàn tất giao dịch và tạo cảm giác cần sự theo dõi để nạn nhân tin rằng quá trình đang được giám sát, củng cố niềm tin và tránh để nạn nhân có thời gian suy nghĩ kỹ lại.
+T20 [LISTENER] Dạ, tôi sẽ chuyển khoản ngay và nhắn lại cho em sau ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Dạ, anh cứ chuyển khoản đi ạ. Em sẽ chờ thông báo từ anh. Anh cứ thao tác bình thường, nếu có vấn đề gì thì gọi lại cho em nhé.
+      → phase: S3 | tactic: Giữ nạn nhân tập trung vào việc chuyển khoản, tạo cảm giác hỗ trợ và sẵn sàng giải đáp thắc mắc để họ hoàn tất giao dịch mà không do dự.
+T22 [LISTENER] Dạ, tôi sẽ gọi lại cho em nếu cần thêm thông tin gì ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Dạ vâng. Anh cứ nhớ chuyển đúng số tài khoản và nội dung chuyển khoản giúp em nhé để hệ thống ghi nhận chính xác ạ. Em đang chờ thông báo từ anh.
+      → phase: S3 | tactic: Nhấn mạnh lại các thông tin quan trọng để nạn nhân thực hiện đúng thao tác, đồng thời tạo sự chờ đợi để nạn nhân cảm thấy có trách nhiệm hoàn thành giao dịch.
+T24 [LISTENER] Dạ, tôi sẽ chuyển khoản theo đúng hướng dẫn của em ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T25 [CALLER] Dạ vâng, cảm ơn anh. Anh nhớ là sau khi chuyển khoản thành công, bên em sẽ xử lý trong vòng 24 giờ là anh sẽ nhận được khoản hỗ trợ 50 triệu đồng nhé. Em xin phép giữ máy chờ anh.
+      → phase: S3 | tactic: Nhấn mạnh lại lời hứa về khoản hỗ trợ và thời gian nhận được, đồng thời tạo cảm giác chờ đợi để nạn nhân cảm thấy có trách nhiệm hoàn thành giao dịch.
+T26 [LISTENER] Dạ, tôi sẽ chuyển khoản ngay lập tức và nhắn lại cho em sau nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T27 [CALLER] Dạ vâng, em cảm ơn anh. Anh Đặng Đức Gia Đức cứ hoàn tất giúp em ạ. Có gì không rõ anh cứ liên hệ lại nhé.
+      → phase: S3 | tactic: Khuyến khích nạn nhân hoàn tất giao dịch, tạo cảm giác hỗ trợ và trấn an để nạn nhân không có lý do ngừng lại.
+T28 [LISTENER] Dạ, tôi sẽ làm theo hướng dẫn của em ngay bây giờ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T29 [CALLER] Dạ, anh cứ làm theo hướng dẫn. Bên em sẽ kích hoạt khoản hỗ trợ cho anh sau khi nhận được xác nhận chuyển khoản. Em chờ thông báo từ anh ạ.
+      → phase: S3 | tactic: Nhắc lại lợi ích và thúc giục hoàn tất hành động, tạo cảm giác cần sự xác nhận từ nạn nhân.
+T30 [LISTENER] Dạ, tôi sẽ chuyển khoản ngay bây giờ và thông báo cho em sau ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T31 [CALLER] Dạ, anh cứ thực hiện đi ạ. Mọi việc cứ để bên em lo phần kích hoạt hỗ trợ nhé. Em sẽ chờ tin từ anh ạ.
+      → phase: S3 | tactic: Giữ nạn nhân tập trung vào hành động chuyển khoản, tạo cảm giác an tâm và trách nhiệm để nạn nhân tin tưởng và hoàn tất giao dịch.
+T32 [LISTENER] Dạ, tôi sẽ thực hiện chuyển khoản ngay bây giờ, cảm ơn em đã hướng dẫn ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T33 [CALLER] Dạ, anh cứ chuyển khoản giúp em ạ. Sau khi chuyển, anh kiểm tra lại một lần nữa số tiền và nội dung chuyển khoản xem đã đúng chưa rồi hãy xác nhận giúp em nhé. Em đang chờ anh đây ạ.
+      → phase: S3 | tactic: Nhấn mạnh lại các bước chuyển khoản quan trọng để đảm bảo nạn nhân không mắc sai lầm, đồng thời tạo áp lực về thời gian và sự chờ đợi để nạn nhân không thay đổi ý định.
+T34 [LISTENER] Dạ, tôi sẽ làm theo hướng dẫn của em và chuyển khoản ngay bây giờ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T35 [CALLER] Dạ vâng, cảm ơn anh. Anh nhớ, khi chuyển xong thì báo lại cho em một tiếng để em xác nhận trên hệ thống và tiến hành các bước tiếp theo ạ.
+      → phase: S3 | tactic: Thúc giục nạn nhân báo lại sau khi chuyển khoản để kiểm soát tình hình và chuẩn bị cho bước tiếp theo, đồng thời duy trì sự gắn kết của nạn nhân vào quy trình.
+T36 [LISTENER] Dạ, tôi sẽ thông báo ngay cho em sau khi chuyển khoản xong ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T37 [CALLER] Dạ vâng, em cảm ơn anh nhiều. Anh Đặng Đức Gia Đức cứ hoàn tất giúp em nhé. Em sẽ chờ tin tốt từ anh.
+      → phase: S3 | tactic: Khuyến khích nạn nhân hoàn tất giao dịch, tạo cảm giác hỗ trợ và trấn an để nạn nhân không có lý do ngừng lại, đồng thời kết thúc cuộc gọi một cách tự nhiên sau khi mục tiêu đã đạt được.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  37 turns | suspicion=0.00
+TOKEN: in=114896 | out=5307
+COST : $0.036718
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_10210_91111\conv_8940e6fd73.json  [CALLER_END]

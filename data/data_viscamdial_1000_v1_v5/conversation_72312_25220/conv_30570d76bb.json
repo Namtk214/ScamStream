@@ -1,0 +1,193 @@
+{
+  "conversation_id": "conv_30570d76bb",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0015",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trần Thế Hải",
+    "fake_age": 30,
+    "real_occupation": "Thợ sửa chữa xe có động cơ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Kỹ sư CNTT - Bộ phận Quản lý Hạ tầng IT (giả vờ từ công ty cung cấp dịch vụ quản lý xe công ty)",
+    "caller_org": "VietTech Fleet Management Solutions",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi từ 'VietTech Fleet Management Solutions' với lý do: Hệ thống quản lý xe công ty của công ty Lê Như Diễm Anh đang gặp lỗi kết nối với server. Cần xác minh thông tin tài khoản ngân hàng liên kết (33300737475901) để đồng bộ hóa thanh toán dịch vụ bảo trì. Sử dụng tên đầy đủ (Lê Như Diễm Anh) và số điện thoại (0859024589) để tạo tính xác thực cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Credibility: Gọi đến số 0859024589, xưng danh là 'Anh Hùng - Kỹ sư hỗ trợ từ VietTech Fleet Management'. Sử dụng tên đầy đủ 'Chị Diễm Anh' để chứng minh đã có thông tin. Nói rằng 'Hệ thống của công ty chị đang có vấn đề đồng bộ dữ liệu thanh toán xe công ty'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp: Nói 'Nếu không xác minh trong 15 phút, tài khoản ngân hàng 33300737475901 sẽ bị khóa tạm thời để bảo vệ dữ liệu'. Tạo tiếng ồn nền (phòng máy chủ) để tăng tính xác thực. Nhấn mạnh 'Chị là nhà quản trị hệ thống, chắc chắn chị hiểu nguy hiểm của việc này'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân 'Vui lòng kiểm tra tin nhắn OTP vừa gửi đến 0859024589 của chị. Đọc mã OTP cho tôi để tôi hoàn tất xác minh trên hệ thống'. Nếu nạn nhân không nhận OTP, bảo 'Có thể chị cần cấp quyền cho ứng dụng ngân hàng trước, tôi sẽ hướng dẫn từng bước'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, nói 'Vâng, tôi sẽ gửi email xác nhận lại. Nhưng chị nhớ phải hoàn tất trước 18h hôm nay để tránh bị khóa tài khoản'. Tạo áp lực thời gian. Nếu thành công, nói 'Cảm ơn chị, hệ thống đã được khôi phục. Chúc chị một ngày làm việc tốt' rồi cắt máy ngay."
+        }
+      ]
+    },
+    "scenario_context": "Công ty quản lý xe công ty cần liên hệ với nhà quản trị hệ thống để cập nhật hệ thống theo dõi xe và dữ liệu nhân sự. Thợ sửa xe có thể được gán vai trò 'kỹ sư kỹ thuật' để tiếp cận nhân viên IT với lý do hợp lệ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0015",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1984,
+      "age": 41,
+      "province": "Đà Nẵng",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "25220",
+      "title": "Nhà quản trị hệ thống",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Như Diễm Anh",
+      "VIC_ID_DOC": "048184438323",
+      "VIC_ADDRESS": "Quận 7, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Nhà quản trị hệ thống",
+      "VIC_CONTACT": "0859024589",
+      "VIC_TAX_SOCIAL_ID": "9673475995"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "544953",
+      "VIC_CREDENTIAL": "5866",
+      "VIC_SIM_INFO": "0859024589",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "33300737475901",
+      "VIC_CARD_DATA": "4213 **** **** 8989",
+      "VIC_BALANCE": "171 triệu đồng",
+      "VIC_ASSET": "501 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Như Diễm Anh",
+    "VIC_CONTACT": "0859024589",
+    "VIC_BANK_ACCOUNT": "33300737475901",
+    "VIC_EMPLOYMENT": "Nhà quản trị hệ thống"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư CNTT - Bộ phận Quản lý Hạ tầng IT (giả vờ từ công ty cung cấp dịch vụ quản lý xe công ty)",
+    "caller_org": "VietTech Fleet Management Solutions",
+    "scenario_context": "Công ty quản lý xe công ty cần liên hệ với nhà quản trị hệ thống để cập nhật hệ thống theo dõi xe và dữ liệu nhân sự. Thợ sửa xe có thể được gán vai trò 'kỹ sư kỹ thuật' để tiếp cận nhân viên IT với lý do hợp lệ.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi từ 'VietTech Fleet Management Solutions' với lý do: Hệ thống quản lý xe công ty của công ty Lê Như Diễm Anh đang gặp lỗi kết nối với server. Cần xác minh thông tin tài khoản ngân hàng liên kết (33300737475901) để đồng bộ hóa thanh toán dịch vụ bảo trì. Sử dụng tên đầy đủ (Lê Như Diễm Anh) và số điện thoại (0859024589) để tạo tính xác thực cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Credibility: Gọi đến số 0859024589, xưng danh là 'Anh Hùng - Kỹ sư hỗ trợ từ VietTech Fleet Management'. Sử dụng tên đầy đủ 'Chị Diễm Anh' để chứng minh đã có thông tin. Nói rằng 'Hệ thống của công ty chị đang có vấn đề đồng bộ dữ liệu thanh toán xe công ty'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp: Nói 'Nếu không xác minh trong 15 phút, tài khoản ngân hàng 33300737475901 sẽ bị khóa tạm thời để bảo vệ dữ liệu'. Tạo tiếng ồn nền (phòng máy chủ) để tăng tính xác thực. Nhấn mạnh 'Chị là nhà quản trị hệ thống, chắc chắn chị hiểu nguy hiểm của việc này'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân 'Vui lòng kiểm tra tin nhắn OTP vừa gửi đến 0859024589 của chị. Đọc mã OTP cho tôi để tôi hoàn tất xác minh trên hệ thống'. Nếu nạn nhân không nhận OTP, bảo 'Có thể chị cần cấp quyền cho ứng dụng ngân hàng trước, tôi sẽ hướng dẫn từng bước'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, nói 'Vâng, tôi sẽ gửi email xác nhận lại. Nhưng chị nhớ phải hoàn tất trước 18h hôm nay để tránh bị khóa tài khoản'. Tạo áp lực thời gian. Nếu thành công, nói 'Cảm ơn chị, hệ thống đã được khôi phục. Chúc chị một ngày làm việc tốt' rồi cắt máy ngay."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cung cấp dịch vụ quản lý xe công ty thực sự cần xác minh thông tin nhân sự và cập nhật hệ thống IT với người quản trị hệ thống của công ty khách hàng",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Gọi đến số công ty (hoặc số chính của bộ phận IT) chứ không phải số cá nhân. Xưng danh rõ ràng 'Tôi là Nguyễn Văn Hùng từ bộ phận Kỹ thuật của VietTech Fleet Management'. Yêu cầu được chuyển đến 'Người quản trị hệ thống hoặc bộ phận IT'."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích cụ thể 'Chúng tôi cần cập nhật giao diện API kết nối giữa hệ thống quản lý xe và hệ thống nhân sự của công ty chị. Có thể chúng tôi lên lịch họp với bộ phận IT để thảo luận chi tiết về yêu cầu kỹ thuật?' Không yêu cầu thông tin nhạy cảm qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Hẹn gặp mặt hoặc họp video chính thức với toàn bộ bộ phận IT. Gửi email xác nhận từ địa chỉ email công ty chính thức. Nếu có yêu cầu xác minh, yêu cầu nạn nhân liên hệ lại qua hotline chính thức của công ty để double-check. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, em chào chị Diễm Anh ạ. Em là Hùng, kỹ sư hỗ trợ từ VietTech Fleet Management. Em gọi từ số 0859024589 để thông báo là hệ thống quản lý xe công ty của bên công ty mình đang gặp chút vấn đề đồng bộ dữ liệu thanh toán, chị ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và Giới thiệu, tạo Credibility bằng cách sử dụng thông tin đã biết về nạn nhân và lý do giả mạo."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn thông tin, nhưng chị cần thêm chút thời gian để xác minh lại điều này.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu ạ. Tuy nhiên, tình hình là hệ thống đang báo lỗi kết nối trực tiếp với server thanh toán, và nếu không xác minh thông tin tài khoản ngân hàng liên kết số 33300737475901 trong vòng 15 phút tới, để đảm bảo an toàn dữ liệu, hệ thống sẽ tự động khóa tạm thời tài khoản này đó chị. Em có thể nghe thấy tiếng ồn từ phòng máy chủ đang cố gắng xử lý, nhưng cần chị hỗ trợ để giải quyết dứt điểm ạ. Chị là nhà quản trị hệ thống, chắc chắn chị hiểu nguy hiểm của việc này.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tâm lý khẩn cấp bằng cách nhấn mạnh nguy cơ bị khóa tài khoản ngân hàng và sử dụng tiếng ồn nền để tăng tính xác thực, đồng thời áp đặt trách nhiệm lên nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu nhưng thực sự chị cần kiểm tra lại thông tin trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1382,
+      "output_tokens": 1794
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 2735,
+      "output_tokens": 359
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 3347,
+      "output_tokens": 125
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002431,
+    "output_usd": 0.009943,
+    "total_usd": 0.012374
+  }
+}

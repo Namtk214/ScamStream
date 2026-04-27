@@ -1,0 +1,220 @@
+{
+  "conversation_id": "conv_eba664cf33",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0044",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đinh Thanh Vy",
+    "fake_age": 25,
+    "real_occupation": "Thợ phá dỡ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý công trường phá dỡ / Người phụ trách xử lý chất thải xây dựng",
+    "caller_org": "Công ty phá dỡ tư nhân / Đội xây dựng cơ sở hạ tầng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi tên nạn nhân (Ngô Gia Long) + nhắc đến địa chỉ Hà Nội để giả vờ xác nhận đơn hàng dịch vụ vệ sinh công trường, yêu cầu xác thực lại thông tin cá nhân và số thẻ để 'cập nhật hệ thống thanh toán' hoặc 'xác nhận hợp đồng'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_CARD_DATA",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Hùng từ Công ty phá dỡ XYZ, Hà Nội' → gọi tên 'Anh Long' để tạo quen thuộc → nói 'Chúng tôi có hợp đồng vệ sinh công trường với anh ở địa chỉ [LOCATION], cần xác nhận lại thông tin để thanh toán'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh Long ơi, hệ thống thanh toán của chúng tôi bị lỗi, nếu không xác nhận trong 15 phút thì đơn hàng sẽ bị hủy và anh sẽ bị trừ tiền phạt. Để tránh phiền phức, anh cần cho mình số thẻ và OTP để xác minh danh tính'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cung cấp lại số thẻ cuối cùng (4 chữ số) là 6652 để tôi kiểm tra, sau đó anh sẽ nhận được OTP trên điện thoại — anh đọc OTP đó cho tôi để hoàn tất xác thực'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Khi nạn nhân cung cấp OTP: Kẻ gian sử dụng OTP để rút tiền hoặc chuyển tiền từ tài khoản. Nếu nạn nhân từ chối, kẻ gian tạo áp lực: 'Vậy anh sẽ bị khóa tài khoản và phải chịu phạt 5 triệu đồng — quyết định của anh' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Thợ phá dỡ cần liên hệ với người thu dọn rác để phối hợp xử lý chất thải từ công trường phá dỡ hoặc để xác nhận thông tin nhân viên thu dọn đã đăng ký dịch vụ vệ sinh công trường."
+  },
+  "listener_card": {
+    "listener_id": "lis_0044",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1967,
+      "age": 58,
+      "province": "Hà Nội",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "96120",
+      "title": "Người thu dọn, sắp xếp, phân loại rác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Gia Long",
+      "VIC_ID_DOC": "001067913382",
+      "VIC_ADDRESS": "Huyện 12, Hà Nội",
+      "VIC_EMPLOYMENT": "Người thu dọn, sắp xếp, phân loại rác",
+      "VIC_CONTACT": "0330705153",
+      "VIC_TAX_SOCIAL_ID": "6989764397"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "838686",
+      "VIC_CREDENTIAL": "8107",
+      "VIC_SIM_INFO": "0330705153",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "64469813573",
+      "VIC_CARD_DATA": "4696 **** **** 6652",
+      "VIC_BALANCE": "4 triệu đồng",
+      "VIC_ASSET": "48 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Gia Long",
+    "VIC_CONTACT": "0330705153",
+    "VIC_CARD_DATA": "4696 **** **** 6652",
+    "LOCATION": "Hà Nội"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý công trường phá dỡ / Người phụ trách xử lý chất thải xây dựng",
+    "caller_org": "Công ty phá dỡ tư nhân / Đội xây dựng cơ sở hạ tầng",
+    "scenario_context": "Thợ phá dỡ cần liên hệ với người thu dọn rác để phối hợp xử lý chất thải từ công trường phá dỡ hoặc để xác nhận thông tin nhân viên thu dọn đã đăng ký dịch vụ vệ sinh công trường.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi tên nạn nhân (Ngô Gia Long) + nhắc đến địa chỉ Hà Nội để giả vờ xác nhận đơn hàng dịch vụ vệ sinh công trường, yêu cầu xác thực lại thông tin cá nhân và số thẻ để 'cập nhật hệ thống thanh toán' hoặc 'xác nhận hợp đồng'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_CARD_DATA",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Hùng từ Công ty phá dỡ XYZ, Hà Nội' → gọi tên 'Anh Long' để tạo quen thuộc → nói 'Chúng tôi có hợp đồng vệ sinh công trường với anh ở địa chỉ [LOCATION], cần xác nhận lại thông tin để thanh toán'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh Long ơi, hệ thống thanh toán của chúng tôi bị lỗi, nếu không xác nhận trong 15 phút thì đơn hàng sẽ bị hủy và anh sẽ bị trừ tiền phạt. Để tránh phiền phức, anh cần cho mình số thẻ và OTP để xác minh danh tính'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cung cấp lại số thẻ cuối cùng (4 chữ số) là 6652 để tôi kiểm tra, sau đó anh sẽ nhận được OTP trên điện thoại — anh đọc OTP đó cho tôi để hoàn tất xác thực'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Khi nạn nhân cung cấp OTP: Kẻ gian sử dụng OTP để rút tiền hoặc chuyển tiền từ tài khoản. Nếu nạn nhân từ chối, kẻ gian tạo áp lực: 'Vậy anh sẽ bị khóa tài khoản và phải chịu phạt 5 triệu đồng — quyết định của anh' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Quản lý công trường phá dỡ cần xác nhận danh sách nhân viên thu dọn rác sẽ được cấp phép vào công trường, hoặc thông báo lịch vệ sinh sau khi phá dỡ xong.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh 'Anh Hùng, quản lý công trường phá dỡ số 45 Nguyễn Chí Thanh, Hà Nội' → 'Chúng tôi có hợp đồng với anh để vệ sinh công trường sau khi phá dỡ xong. Anh có sẵn sàng không?' → xác nhận tên, số điện thoại."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận về khối lượng rác, loại chất thải, thời gian vệ sinh, giá cả, yêu cầu đặc biệt (an toàn, trang thiết bị). Không hỏi thông tin nhạy cảm như số thẻ, OTP."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Xác nhận ngày giờ vệ sinh, phương thức thanh toán (chuyển khoản sau hoặc tiền mặt), liên hệ người quản lý công trường. Chào tạm biệt lịch sự: 'Cảm ơn anh, chúng tôi sẽ liên hệ trước 24 giờ để xác nhận lại. Chúc anh ngày tốt lành'."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Ngô Gia Long ạ. Em là Vy, gọi từ Công ty phá dỡ công trình XYZ ở Hà Nội. Bên em có hợp đồng dịch vụ vệ sinh công trường với mình ở địa chỉ Hà Nội, nhưng hiện tại hệ thống thanh toán bên em đang có chút trục trặc, em cần anh xác nhận lại thông tin để thanh toán ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giả mạo tổ chức, gọi tên nạn nhân, nhắc đến địa chỉ và hợp đồng để tạo trust, sau đó nêu lý do gọi điện liên quan đến thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy thì tôi cũng thấy nghi nghi, nhưng em có thể cho tôi biết cần xác nhận thông tin gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để tránh trường hợp bị hủy đơn hàng và phát sinh chi phí phạt không đáng có, anh Ngô Gia Long vui lòng xác nhận lại số thẻ cuối của mình là 6652 giúp em ạ. Sau đó em sẽ gửi một mã OTP về để mình xác minh danh tính trên hệ thống ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực khẩn cấp về việc hủy đơn hàng và phạt tiền, đồng thời yêu cầu xác nhận số thẻ và OTP để 'xác minh danh tính', dẫn dụ nạn nhân vào bẫy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ số thẻ đó, nhưng em có thể cho tôi biết thêm về lý do cần xác nhận không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Anh thông cảm giúp em nhé, do hệ thống bên em đang trong quá trình nâng cấp nên tất cả các giao dịch đều cần xác minh lại ạ. Nếu không xác minh kịp thời thì đơn hàng của mình sẽ bị hủy và anh sẽ phải chịu phí phạt đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách giải thích lý do kỹ thuật (nâng cấp hệ thống) và tái khẳng định hậu quả (hủy đơn hàng, phí phạt) để duy trì áp lực, thúc đẩy nạn nhân hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy thì tôi thấy có vẻ không hợp lý, nhưng mình cần xác minh thì cũng được, nhưng tôi sẽ không xác nhận số thẻ đâu.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Nhưng mà anh cứ xác nhận lại 4 số cuối của thẻ là 6652 cho em, rồi sau đó anh sẽ nhận được OTP gửi về điện thoại, anh đọc OTP đó cho em để hoàn tất xác thực là xong thôi ạ. Chỉ mất một phút thôi mà anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Thử lại yêu cầu xác nhận số thẻ kèm theo gợi ý OTP, đồng thời giảm nhẹ mức độ phức tạp của hành động và tạo cảm giác khẩn trương, đơn giản."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ ép tôi như vậy thì tôi càng không muốn xác nhận gì cả, tôi không thấy rõ lý do ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.5
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1832,
+      "output_tokens": 1537
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5661,
+      "output_tokens": 589
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8297,
+      "output_tokens": 282
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004209,
+    "output_usd": 0.009327,
+    "total_usd": 0.013535
+  }
+}

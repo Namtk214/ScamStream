@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_11998031eb]
+  Caller thật: Bác sỹ phụ tá (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Trưởng phòng Y tế & An toàn Lao động - Công ty Xây dựng Cơ sở hạ tầng @ Trung tâm Y tế Dự án BT Infrastructure - Chi nhánh Miền Nam
+  Listener: Thợ vận hành bơm bê tông (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Bác sỹ phụ tá/Y tế công ty gọi cho thợ vận hành bơm bê tông để kiểm tra sức khỏe định kỳ, xử lý tai nạn lao động, hoặc thông báo về chương trình bảo hiểm y tế của công ty xây dựng nơi thợ làm việc.
+  Pretext: Cuộc gọi thực từ Phòng Y tế công ty để kiểm tra sức khỏe định kỳ, thông báo kết quả xét nghiệm, hoặc mời tham gia chương trình tiêm chủng/khám sức khỏe miễn phí cho công nhân
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, em chào chị Ngân ạ. Em là Khoa, Trưởng phòng Y tế từ Trung tâm Y tế Dự án BT Infrastructure chi nhánh Miền Nam đây ạ. Không biết có phải số của chị Nguyễn Diễm Thu Ngân không ạ?
+      → phase: L1 | tactic: Xưng danh và xác nhận danh tính để bắt đầu cuộc gọi.
+T02 [LISTENER] Tôi là Nguyễn Diễm Thu Ngân, nhưng em gọi từ số mấy vậy?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T03 [CALLER] Dạ, em gọi từ số máy bàn của Phòng Y tế công ty bên em, số 028.3811.2233 ạ. Em gọi để thông báo về kết quả kiểm tra sức khỏe định kỳ của chị từ đợt khám hồi tháng trước ạ. Không biết là chị Ngân đã nhận được email về kết quả này chưa ạ?
+      → phase: L2 | tactic: Giảm sự nghi ngờ bằng cách cung cấp thông tin liên lạc chính thức và chuyển sang nội dung chính của cuộc gọi.
+T04 [LISTENER] Em chưa thấy email nào cả, em có thể kiểm tra lại giúp tôi không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để em kiểm tra lại hệ thống xem có vấn đề gì không ạ. Tiện đây, em xin xác nhận lại một chút thông tin cá nhân của chị Ngân để đảm bảo em gửi đúng kết quả ạ: chị Ngân sinh ngày 23 tháng 7 năm 1967, đúng không ạ?
+      → phase: L2 | tactic: Thực hiện xác minh thông tin cá nhân bổ sung (ngày sinh) để tạo độ tin cậy và đảm bảo gửi thông tin đúng người, đồng thời giải quyết thắc mắc về email.
+T06 [LISTENER] Tôi sinh năm 1968 chứ không phải 1967, em kiểm tra lại giúp tôi nhé.
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T07 [CALLER] Dạ vâng, em xin lỗi chị Ngân. Em đã cập nhật lại đúng thông tin ngày sinh của chị là 1968 rồi ạ. Em sẽ kiểm tra lại ngay về việc gửi kết quả xét nghiệm qua email. Trong lúc chờ đợi, chị có muốn em đọc sơ qua các chỉ số chính ngay bây giờ không ạ?
+      → phase: L2 | tactic: Xin lỗi về sai sót thông tin, khẳng định đã cập nhật và đề nghị cung cấp thông tin trực tiếp để giữ chân người nghe và chuyển sang nội dung chính.
+T08 [LISTENER] Em đừng vội, tôi cần xác nhận xem thông tin này có chính xác không đã.
+      → action: REFUSAL | suspicion: 1.60 | disclosed: []
+
+T09 [CALLER] Dạ vâng, em hiểu rồi ạ. Để xác minh thông tin này, chị Ngân có thể gọi trực tiếp đến số tổng đài chính thức của Phòng Y tế công ty em là 028.3811.2233 để gặp em Khoa được không ạ? Như vậy chị sẽ yên tâm hơn ạ.
+      → phase: L3 | tactic: Hướng dẫn người nghe xác minh thông tin qua kênh chính thức để giảm nghi ngờ và củng cố độ tin cậy.
+T11 [LISTENER] Tôi không cần phải gọi lại, nhưng tôi sẽ kiểm tra thông tin này kỹ càng hơn.
+      → action: REFUSAL | suspicion: 2.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  11 turns | suspicion=2.60
+TOKEN: in=17399 | out=2627
+COST : $0.014134
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_22400_81145\conv_11998031eb.json  [SCAM_REFUSE]

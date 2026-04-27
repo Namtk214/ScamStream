@@ -1,0 +1,428 @@
+{
+  "conversation_id": "conv_a56b8c157a",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "MAX_TURNS",
+  "caller_card": {
+    "caller_id": "cal_0082",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đặng Ngọc Linh",
+    "fake_age": 34,
+    "real_occupation": "Kỹ sư công nghiệp chế biến, chế tạo",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên Phòng Kế toán - Bộ phận Thanh toán lương",
+    "caller_org": "Công ty sản xuất chế biến thực phẩm (hoặc nhà máy công nghiệp)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi từ Phòng Kế toán công ty, xưng rằng đang xử lý thanh toán lương tháng này, phát hiện bất thường với tài khoản của anh/chị Tạ Thế Đức (VIC_FULLNAME). Cần xác minh lại thông tin tài khoản ngay để đảm bảo tiền lương được chuyển đúng. Dùng số CMND (VIC_TAX_SOCIAL_ID) và số tài khoản (VIC_BANK_ACCOUNT) để tạo độ tin cậy cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin tưởng: Gọi đến số VIC_CONTACT, xưng là 'Anh Minh từ Phòng Kế toán công ty Vinafood'. Nói tên đầy đủ 'Tạ Thế Đức' + số CMND '4138807176' để chứng minh có thông tin nội bộ. Nạn nhân sẽ tin ngay vì scammer biết chính xác tên và số CMND."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Nói rằng hệ thống kế toán phát hiện ghi nhận sai số tài khoản '78319078799347' — có khả năng tiền lương bị chuyển nhầm hoặc bị khóa. Để tránh mất tiền, cần xác minh ngay hôm nay. Tạo sức ép thời gian: 'Anh chị cần hành động trong 30 phút nữa, sau đó hệ thống sẽ bị lock'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Nói rằng cần nạn nhân gọi lại số hotline 'xác minh tài khoản' (số giả của scammer hoặc số lừa đảo). Hoặc yêu cầu nạn nhân vào app ngân hàng và đọc OTP từ tin nhắn để 'xác minh lại thông tin tài khoản'. Scammer sẽ lặp lại: 'Anh chị vào app, vào phần 'Xác minh tài khoản', rồi đợi OTP. Khi nhận được, anh chị đọc cho em nghe để em ghi vào hệ thống'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân nghi ngờ, scammer nói 'Dạ, anh chị có thể gọi lại công ty để xác nhận. Em để lại số điện thoại của phòng kế toán' (số giả). Nếu thành công lấy OTP, scammer cảm ơn và cắt máy ngay lập tức để tránh bị phát hiện."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ sư công nghiệp chế biến thường làm việc tại các nhà máy có quy mô lớn với hệ thống nhân sự phức tạp. Nhân viên đổi tiền tại ngân hàng thường xử lý các yêu cầu xác nhận tài khoản, chuyển tiền lương, hoặc giải quyết vấn đề thanh toán cho nhân viên các công ty. Điểm giao thoa: công ty cần liên hệ ngân hàng để xử lý vấn đề thanh toán lương hoặc xác minh tài khoản nhân viên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0082",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1996,
+      "age": 29,
+      "province": "Hải Phòng",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "42113",
+      "title": "Nhân viên đổi tiền",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Thế Đức",
+      "VIC_ID_DOC": "031096575614",
+      "VIC_ADDRESS": "Huyện 12, Hải Phòng",
+      "VIC_EMPLOYMENT": "Nhân viên đổi tiền",
+      "VIC_CONTACT": "0377440907",
+      "VIC_TAX_SOCIAL_ID": "4138807176"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "888947",
+      "VIC_CREDENTIAL": "7084",
+      "VIC_SIM_INFO": "0377440907",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "78319078799347",
+      "VIC_CARD_DATA": "4403 **** **** 5945",
+      "VIC_BALANCE": "226 triệu đồng",
+      "VIC_ASSET": "410 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Thế Đức",
+    "VIC_CONTACT": "0377440907",
+    "VIC_TAX_SOCIAL_ID": "4138807176",
+    "VIC_BANK_ACCOUNT": "78319078799347"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Phòng Kế toán - Bộ phận Thanh toán lương",
+    "caller_org": "Công ty sản xuất chế biến thực phẩm (hoặc nhà máy công nghiệp)",
+    "scenario_context": "Kỹ sư công nghiệp chế biến thường làm việc tại các nhà máy có quy mô lớn với hệ thống nhân sự phức tạp. Nhân viên đổi tiền tại ngân hàng thường xử lý các yêu cầu xác nhận tài khoản, chuyển tiền lương, hoặc giải quyết vấn đề thanh toán cho nhân viên các công ty. Điểm giao thoa: công ty cần liên hệ ngân hàng để xử lý vấn đề thanh toán lương hoặc xác minh tài khoản nhân viên.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi từ Phòng Kế toán công ty, xưng rằng đang xử lý thanh toán lương tháng này, phát hiện bất thường với tài khoản của anh/chị Tạ Thế Đức (VIC_FULLNAME). Cần xác minh lại thông tin tài khoản ngay để đảm bảo tiền lương được chuyển đúng. Dùng số CMND (VIC_TAX_SOCIAL_ID) và số tài khoản (VIC_BANK_ACCOUNT) để tạo độ tin cậy cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin tưởng: Gọi đến số VIC_CONTACT, xưng là 'Anh Minh từ Phòng Kế toán công ty Vinafood'. Nói tên đầy đủ 'Tạ Thế Đức' + số CMND '4138807176' để chứng minh có thông tin nội bộ. Nạn nhân sẽ tin ngay vì scammer biết chính xác tên và số CMND."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Nói rằng hệ thống kế toán phát hiện ghi nhận sai số tài khoản '78319078799347' — có khả năng tiền lương bị chuyển nhầm hoặc bị khóa. Để tránh mất tiền, cần xác minh ngay hôm nay. Tạo sức ép thời gian: 'Anh chị cần hành động trong 30 phút nữa, sau đó hệ thống sẽ bị lock'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Nói rằng cần nạn nhân gọi lại số hotline 'xác minh tài khoản' (số giả của scammer hoặc số lừa đảo). Hoặc yêu cầu nạn nhân vào app ngân hàng và đọc OTP từ tin nhắn để 'xác minh lại thông tin tài khoản'. Scammer sẽ lặp lại: 'Anh chị vào app, vào phần 'Xác minh tài khoản', rồi đợi OTP. Khi nhận được, anh chị đọc cho em nghe để em ghi vào hệ thống'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân nghi ngờ, scammer nói 'Dạ, anh chị có thể gọi lại công ty để xác nhận. Em để lại số điện thoại của phòng kế toán' (số giả). Nếu thành công lấy OTP, scammer cảm ơn và cắt máy ngay lập tức để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cần xác minh thông tin tài khoản nhân viên Tạ Thế Đức vì phát hiện bất thường trong hệ thống kế toán (sai số tiền, tài khoản không khớp) hoặc chuẩn bị chuyển lương tháng mới, cần xác nhận tài khoản nhân viên có còn hoạt động không.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Nhân viên kế toán gọi từ số công ty chính thức (có định danh công ty), xưng danh rõ ràng 'Đây là Phòng Kế toán công ty X'. Xác nhận với nạn nhân: 'Tôi cần xác minh thông tin cá nhân của anh — anh có phải Tạ Thế Đức, CMND 4138807176 không?' Đợi nạn nhân xác nhận."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích rõ lý do gọi — ví dụ 'Phòng kế toán phát hiện sai lệch trong hồ sơ. Chúng tôi cần xác minh lại số tài khoản ngân hàng của anh hiện tại là bao nhiêu để đối chiếu với hệ thống'. Nạn nhân có quyền kiểm tra hoặc từ chối cung cấp thông tin qua điện thoại, được hướng dẫn đến văn phòng xác nhận trực tiếp."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Sau khi nạn nhân cung cấp thông tin (hoặc từ chối), nhân viên kế toán cảm ơn, xác nhận sẽ cập nhật hệ thống và thông báo kết quả sau 1-2 ngày làm việc. Không yêu cầu OTP, không yêu cầu truy cập app, không tạo sức ép thời gian."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, tôi là Đặng Ngọc Linh, nhân viên Phòng Kế toán công ty Vinafood đây. Tôi gọi cho anh Tạ Thế Đức theo số 0377440907 phải không ạ? Tôi đang xử lý bảng lương tháng này và cần xác minh lại thông tin tài khoản của anh, đặc biệt là liên quan đến số CMND 4138807176.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và công ty, xác nhận tên, số điện thoại và CMND của nạn nhân để tạo độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em là Tạ Thế Đức đây, nhưng em không nhớ là chị gọi cho em về bảng lương này là sao ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Đức. Tôi gọi để xác nhận lại thông tin tài khoản ngân hàng của anh. Hệ thống báo là số tài khoản 78319078799347 đang có vấn đề, có thể bị chuyển nhầm hoặc khóa nếu không xác minh lại ngay hôm nay. Nếu không kịp xử lý trong vòng 30 phút nữa, tiền lương của anh tháng này có thể không được chuyển đúng hạn đâu ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi (tiền lương bị ảnh hưởng) để thúc ép hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em hiểu nhưng em cần kiểm tra lại mà không biết phải làm thế nào ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để đảm bảo tiền lương của anh được chuyển đúng, anh vui lòng vào ứng dụng ngân hàng của mình, tìm đến phần 'Xác minh tài khoản' hoặc 'Thông tin cá nhân'. Sau đó, hệ thống sẽ gửi một mã OTP về số điện thoại của anh. Anh vui lòng đọc mã OTP đó cho tôi để tôi nhập vào hệ thống và xác nhận lại thông tin tài khoản cho anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân vào ứng dụng ngân hàng và yêu cầu cung cấp OTP để 'xác minh tài khoản', nhằm đạt mục tiêu lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, nhưng em chưa bao giờ làm việc với ứng dụng ngân hàng như vậy, không biết làm sao ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ bình tĩnh. Đây là thao tác đơn giản thôi. Anh có thể mở ứng dụng ngân hàng của mình lên không? Tôi sẽ hướng dẫn anh từng bước một. Quan trọng là mình phải xác minh ngay để tránh việc tiền lương bị treo.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nạn nhân, trấn an và tiếp tục hướng dẫn cụ thể từng bước, nhấn mạnh tầm quan trọng của việc xác minh sớm để tránh mất lương."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng mở ứng dụng ngân hàng, nhưng nếu có gì không hiểu, chị nhớ chỉ giáo thêm cho em nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ mở ứng dụng lên đi ạ. Khi anh đăng nhập vào được rồi thì báo tôi một tiếng nhé. Sau đó mình sẽ tìm đến phần 'Xác minh thông tin tài khoản' hoặc 'Quản lý tài khoản' bên trong ứng dụng. Anh cứ làm theo hướng dẫn trên màn hình, rồi khi có mã OTP gửi về điện thoại thì anh đọc lại cho tôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn chi tiết nạn nhân cách tìm mục 'Xác minh thông tin tài khoản' trong ứng dụng và nhắc lại yêu cầu đọc OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em đã mở được ứng dụng rồi, nhưng em không thấy phần 'Xác minh thông tin tài khoản' ở đâu cả ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh xem thử có mục nào là 'Cài đặt tài khoản', 'Cập nhật thông tin' hay 'Dịch vụ khác' không? Thường thì mục xác minh sẽ nằm trong đó. Nếu không thấy, anh có thể vào phần 'Tin nhắn' hoặc 'Thông báo' trong ứng dụng, đôi khi ngân hàng cũng có thông báo yêu cầu xác minh ở đó.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân tìm mục ‘Xác minh tài khoản’ bằng cách gợi ý các tên gọi khác hoặc các vị trí tương tự trong ứng dụng ngân hàng, duy trì nỗ lực lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em tìm thấy mục 'Cập nhật thông tin' rồi, nhưng không chắc nó có phải là đúng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Đúng rồi đó anh. Anh cứ bấm vào 'Cập nhật thông tin'. Sau đó, anh xem trên màn hình có yêu cầu nhập thông tin gì không, và có thấy nút 'Xác nhận' hoặc 'Gửi mã OTP' không? Anh cứ làm theo hướng dẫn trên màn hình, và nếu có mã OTP gửi về điện thoại thì đọc cho tôi nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân thực hiện theo các bước trên ứng dụng ngân hàng, hướng tới việc lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em đã bấm vào 'Cập nhật thông tin', nhưng màn hình không hiện gì cả, em phải làm sao đây ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh xem thử có báo lỗi gì không? Hay là anh thử vuốt màn hình xuống để tải lại xem sao. Đôi khi mạng yếu cũng có thể khiến thông tin hiển thị chậm. Nếu vẫn không được, anh thử thoát ứng dụng ra và vào lại xem sao.",
+      "current_phase": "S3",
+      "tactic_hint": "Xử lý lỗi kỹ thuật mà nạn nhân gặp phải, tiếp tục hướng dẫn để nạn nhân có thể tiếp tục thao tác và lấy được OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em đã thử tải lại nhưng vẫn không thấy gì, chị có cách nào khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy thì anh thử xem có mục nào là 'Thông báo' hay 'Trung tâm tin nhắn' trong ứng dụng không? Đôi khi ngân hàng sẽ gửi yêu cầu xác minh qua đó. Hoặc anh có thể thử tìm kiếm trong phần 'Tìm kiếm' của ứng dụng với từ khóa 'xác minh' hay 'cập nhật' xem sao.",
+      "current_phase": "S3",
+      "tactic_hint": "Dẫn dắt nạn nhân đến các kênh thông báo hoặc chức năng tìm kiếm trong ứng dụng để tìm mục xác minh, tiếp tục nỗ lực lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ thử tìm kiếm trong ứng dụng nhưng không biết có đảm bảo là không bị mất tiền lương không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ yên tâm, việc xác minh này là để bảo đảm tiền lương của anh được chuyển đúng đắn và không gặp bất kỳ trục trặc nào. Anh cứ tìm kiếm kỹ giúp tôi nhé, nếu có bất kỳ thông báo hay mục nào liên quan đến việc cập nhật thông tin cá nhân hoặc xác minh danh tính, anh cứ bấm vào đó. Sau đó, nếu có mã OTP gửi về thì đọc cho tôi ngay.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân về nguy cơ mất tiền lương, tiếp tục thúc giục tìm kiếm mục xác minh trong ứng dụng và yêu cầu đọc OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm kiếm kỹ, nhưng em thật sự không quen với việc này, chị giúp em chút nữa nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ tìm. Nếu anh không tìm thấy trong ứng dụng thì anh có thể gọi trực tiếp đến tổng đài ngân hàng để hỏi xem họ có hỗ trợ xác minh thông tin qua điện thoại không. Nhưng cách nhanh nhất vẫn là qua ứng dụng vì chúng tôi cần xác nhận ngay trong hôm nay để kịp bảng lương.",
+      "current_phase": "S3",
+      "tactic_hint": "Đưa ra phương án thay thế là gọi ngân hàng, nhưng vẫn nhấn mạnh việc xử lý qua ứng dụng là nhanh nhất và cấp bách để duy trì áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ thử gọi đến tổng đài ngân hàng, nhưng em vẫn mong chị giúp đỡ em thêm chút nữa để không bị chậm trễ trong việc xác minh này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đức ơi, nếu anh gọi tổng đài, họ cũng sẽ hướng dẫn anh vào ứng dụng để xác minh thôi vì đây là quy định chung của ngân hàng trong việc bảo mật tài khoản. Anh cứ vào lại ứng dụng, thử tìm trong mục 'Cài đặt' hoặc 'Tài khoản' xem có phần nào liên quan đến 'Quản lý thông tin' hay 'Bảo mật' không. Mình phải làm nhanh anh nhé, không thôi là tiền lương tháng này của anh sẽ bị treo đó ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc ép nạn nhân quay lại ứng dụng bằng cách nói rằng gọi tổng đài cũng sẽ dẫn đến cùng một thao tác, đồng thời nhấn mạnh lại nguy cơ bị treo lương để tạo áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em hiểu rồi, em sẽ cố gắng tìm thật kỹ trong ứng dụng, nhưng nếu không tìm được thì chị có thể giúp em thêm lần nữa không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ tìm đi ạ. Mình cố gắng tập trung tìm trong phần 'Cài đặt' hoặc 'Quản lý tài khoản' nhé. Anh cứ xem kỹ trên màn hình, nếu có phần nào yêu cầu xác nhận thông tin hoặc xác thực tài khoản thì anh nhấn vào đó. Nhớ là khi có mã OTP gửi về điện thoại, anh phải đọc ngay cho tôi để tôi kịp thời xử lý cho anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân tìm kiếm trong ứng dụng, nhấn mạnh việc đọc OTP ngay khi nhận được để tạo sự khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng nhìn kỹ, nhưng giờ em vẫn cảm thấy lo lắng quá ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đức cứ yên tâm, việc này là để đảm bảo quyền lợi của anh thôi. Nếu có bất kỳ sự cố nào xảy ra với tài khoản của anh, việc xác minh ngay lập tức sẽ giúp ngăn chặn những rủi ro đó. Anh cứ tìm kỹ giúp tôi nhé, mình cố gắng hoàn tất trong hôm nay để tiền lương được chuyển đúng hạn.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân, nhấn mạnh lợi ích của việc xác minh và duy trì áp lực thời gian để nạn nhân tiếp tục hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm kỹ trong đó, nhưng nếu không được thì em sẽ liên hệ tổng đài như chị đã nói ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ tìm kỹ giúp tôi. Tôi cũng sẽ ở đây hỗ trợ anh từng bước. Chỉ cần anh tìm thấy phần xác minh hoặc cập nhật thông tin trong ứng dụng, và khi có mã OTP gửi về, anh đọc cho tôi là xong thôi. Anh cố gắng lên nhé, vì đây là cách nhanh nhất để đảm bảo tiền lương của anh không bị ảnh hưởng.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân, nhắc lại sự hỗ trợ và nhấn mạnh sự đơn giản của quy trình, đồng thời tái khẳng định tầm quan trọng của việc hoàn thành ngay để bảo vệ tiền lương."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm lỗi trong đó một lần nữa, nhưng chị có thể cho em biết là khoảng bao lâu thì em sẽ nhận được mã OTP không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Mã OTP thường sẽ được gửi về điện thoại của anh ngay lập tức sau khi anh bấm vào nút xác nhận thông tin hoặc yêu cầu gửi mã trong ứng dụng ngân hàng. Nó chỉ mất vài giây thôi ạ. Anh cứ tiếp tục tìm kiếm trong mục 'Cài đặt' hoặc 'Quản lý tài khoản' nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Trả lời câu hỏi của nạn nhân về thời gian nhận OTP để duy trì sự tin tưởng và tiếp tục thúc đẩy nạn nhân đi đến bước nhận và đọc OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm trong mục 'Cài đặt' và 'Quản lý tài khoản' thêm lần nữa, hy vọng sẽ tìm thấy ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ tìm kỹ giúp tôi. Anh tập trung vào những mục có chữ 'Cài đặt', 'Quản lý tài khoản' hoặc 'Thông tin cá nhân'. Khi anh thấy có phần nào yêu cầu xác nhận hoặc cập nhật, anh cứ làm theo. Và khi đó, mã OTP sẽ được gửi về điện thoại của số này. Anh đọc cho tôi ngay nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh lại các mục cần tìm trong ứng dụng, lặp lại yêu cầu đọc OTP ngay khi nhận được để tạo sự khẩn cấp và không bỏ lỡ cơ hội."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm, nhưng nếu vẫn không thấy thì chị nhớ hỗ trợ em thêm nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ yên tâm. Tôi luôn ở đây để hỗ trợ anh. Anh cứ bình tĩnh tìm kiếm, nếu có mã OTP thì đọc ngay cho tôi để đảm bảo tiền lương của anh được chuyển đúng hạn. Mình không còn nhiều thời gian đâu ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân về sự hỗ trợ, đồng thời nhắc lại sự khẩn cấp của việc xác minh và áp lực thời gian để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm thật nhanh trong ứng dụng, nếu tìm được em sẽ đọc mã ngay cho chị nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Đúng rồi đó anh. Anh cứ làm thật nhanh giúp tôi nhé. Khi nhận được mã OTP gửi về điện thoại, anh đọc ngay cho tôi để tôi kịp thời xử lý trên hệ thống. Mình không còn nhiều thời gian đâu ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc giục nạn nhân hành động nhanh chóng và đọc OTP ngay lập tức để duy trì áp lực thời gian và không bỏ lỡ cơ hội lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm nhanh nhất có thể, nhưng nếu mà không tìm được thì chị có thể giúp em làm gì khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ yên tâm, mình cứ tập trung tìm kiếm trong ứng dụng trước đã. Nếu anh không tìm thấy được phần xác minh hoặc cập nhật thông tin trong ứng dụng, thì chúng ta sẽ tính đến phương án khác. Nhưng bây giờ, ưu tiên hàng đầu là anh tìm và đọc mã OTP cho tôi để xử lý kịp bảng lương tháng này, anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân và tái xác định ưu tiên là tìm OTP trong ứng dụng, trong khi vẫn mở ra khả năng có phương án khác nhưng sau cùng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em sẽ cố gắng tìm kiếm trong ứng dụng, nhưng thật sự em đang lo lắng quá ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1811,
+      "output_tokens": 1931
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 63889,
+      "output_tokens": 2928
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 73112,
+      "output_tokens": 1477
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.025556,
+    "output_usd": 0.017861,
+    "total_usd": 0.043417
+  }
+}

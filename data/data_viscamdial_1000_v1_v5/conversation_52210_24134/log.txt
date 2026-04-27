@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_4908c511e1]
+  Caller thật: Chủ cửa hiệu (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhà cung cấp dịch vụ quản lý tài chính cá nhân / Tư vấn đầu tư tài sản @ cá nhân / công ty tư vấn tài chính độc lập
+  Listener: Nhà quản lý quỹ ủy thác (Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Chủ cửa hiệu thường có lợi nhuận tiền mặt lớn và cần tư vấn quản lý tài sản. Nhà quản lý quỹ ủy thác là người có chuyên môn để tư vấn đầu tư an toàn và lợi nhuận cao cho các chủ doanh nghiệp nhỏ lẻ.
+  Pretext: Gọi để giới thiệu cơ hội đầu tư 'quỹ ủy thác tư nhân' với lợi suất cao (15-20%/năm), dành riêng cho các chủ kinh doanh có tài sản từ 200+ triệu. Scammer sẽ nói rằng họ đã tìm được thông tin Lê Thế Long qua mạng lưới các chủ doanh nghiệp thành đạt.
+  Listener traits: ['lo lắng hay bận tâm', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Lê Thế Long. Tôi là Phan Quang Long, tư vấn độc lập về quản lý tài chính. Tôi vừa tìm được hồ sơ của anh qua mạng lưới các chủ cửa hàng thành công. Anh đang có 249 triệu phải không? Tôi có một cơ hội đầu tư quỹ ủy thác tư nhân rất đặc biệt dành riêng cho những người như anh.
+      → phase: S1 | tactic: Tiếp cận & tạo uy tín bằng cách xưng danh, sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin.
+T02 [LISTENER] Em không rõ lắm về cơ hội đầu tư này, em cần thêm thông tin để hiểu rõ hơn.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, quỹ này là một quỹ ủy thác tư nhân với lợi suất dự kiến là 18% một năm, được bảo lãnh bởi một tập đoàn lớn. Nó chỉ dành cho 50 nhà đầu tư có tài sản nhất định. Nếu anh đầu tư 200 triệu bây giờ, sau một năm, anh có thể nhận thêm 36 triệu lợi nhuận. Nhưng cơ hội này sắp hết, chỉ còn 3 ngày nữa thôi.
+      → phase: S2 | tactic: Tạo cảm giác KHẨN CẤP + HAM LỢI bằng cách đưa ra lợi suất cao, giới hạn số lượng và thời gian.
+T04 [LISTENER] Nghe có vẻ hấp dẫn thật, nhưng em vẫn cảm thấy hơi lo lắng về độ an toàn của khoản đầu tư này.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Anh Long có thể yên tâm. Quỹ này được quản lý bởi những chuyên gia hàng đầu và có sự bảo lãnh của tập đoàn tài chính uy tín. Hơn nữa, chúng tôi sẽ cấp giấy chứng nhận ủy thác đầu tư rõ ràng cho anh. Mọi thông tin đều minh bạch. Quan trọng là cơ hội này chỉ còn 3 ngày thôi, nếu anh bỏ lỡ thì rất tiếc.
+      → phase: S2 | tactic: Xoa dịu lo lắng, củng cố niềm tin bằng cách nhấn mạnh sự an toàn, minh bạch và tiếp tục tạo áp lực thời gian.
+T06 [LISTENER] Em vẫn lo lắng về việc này và muốn tìm hiểu thêm, có thể cho em biết rõ hơn về những rủi ro không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T07 [CALLER] Thời gian không cho phép chúng ta tìm hiểu quá sâu vào rủi ro ở thời điểm này, anh Long ạ. Mọi khoản đầu tư đều có rủi ro, nhưng điểm đặc biệt của quỹ này là lợi nhuận cao được bảo lãnh và anh được cấp giấy tờ pháp lý đầy đủ. Để anh có thể vào danh sách 50 nhà đầu tư đó, tôi cần anh chuyển 200 triệu vào tài khoản tín thác của quỹ trước. Sau khi kiểm tra hồ sơ mất 2-3 ngày, số tiền sẽ được chuyển vào quỹ chính thức. Anh có thể chuyển ngay trong hôm nay không? Tôi sẽ gửi số tài khoản cho anh.
+      → phase: S3 | tactic: Tạo áp lực chuyển tiền ngay lập tức, chuyển sang yêu cầu hành động, bỏ qua rủi ro, nhấn mạnh lợi ích và tính hợp pháp tưởng tượng.
+T08 [LISTENER] Em cảm thấy không thoải mái khi phải chuyển tiền ngay lập tức như vậy, em muốn có thêm thời gian để suy nghĩ kỹ hơn.
+      → action: REFUSAL | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Tôi hiểu anh cần thời gian suy nghĩ, nhưng cơ hội này không chờ đợi anh ạ. Nếu anh không quyết định ngay, tôi sẽ phải nhường cơ hội này cho nhà đầu tư khác. Quỹ đầu tư này rất hạn chế và có rất nhiều người muốn tham gia. Nếu anh thay đổi ý định, hãy gọi lại cho tôi trong 48 giờ tới.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách tạo cảm giác mất mát cơ hội, nhấn mạnh tính khan hiếm và giới hạn thời gian để nạn nhân tự đưa ra quyết định, giữ lại liên hệ để gọi lại sau.
+T10 [LISTENER] Em hiểu, nhưng em vẫn muốn suy nghĩ kỹ hơn trước khi đưa ra quyết định đầu tư lớn như vậy.
+      → action: REFUSAL | suspicion: 0.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=0.80
+TOKEN: in=20585 | out=3266
+COST : $0.017766
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_52210_24134\conv_4908c511e1.json  [SCAM_REFUSE]

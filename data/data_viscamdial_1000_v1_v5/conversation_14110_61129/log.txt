@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_66dd8ca781]
+  Caller thật: Chủ tịch, Phó Chủ tịch và Thường trực Hội đồng nhân dân cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Cán bộ quản lý chương trình phát triển nông nghiệp bền vững / Chuyên viên hỗ trợ nông dân cấp tỉnh @ Sở Nông nghiệp và Phát triển Nông thôn tỉnh / Ban Quản lý Quỹ Hỗ trợ Nông dân
+  Listener: Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Cán bộ cấp tỉnh chủ trì các chương trình hỗ trợ nông dân, cấp vốn, bảo hiểm nông nghiệp, hoặc kiểm tra khoảng đất trồng cây bụi/cây thân gỗ. Nông dân là đối tượng tiếp xúc trực tiếp và tự nhiên của họ.
+  Pretext: Gọi thông báo Mai Thanh Bảo Giang được chọn tham gia chương trình hỗ trợ vốn kinh doanh cây bụi/cây thân gỗ từ Chính phủ, hoặc được cấp bảo hiểm nông nghiệp, nhưng cần xác minh danh tính và hoàn tất thủ tục thanh toán lệ phí/ký quỹ trước để nhận tiền hỗ trợ.
+  Listener traits: ['dễ bị lừa bởi authority', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Mai Thanh Bảo Giang, tôi là Đỗ Ngọc Thu Vy, cán bộ Sở Nông nghiệp và Phát triển Nông thôn tỉnh. Số CMND của chị là 2693179519 đúng không ạ? Chúng tôi gọi để thông báo chị đã được lựa chọn tham gia chương trình hỗ trợ vốn trồng cây bụi năm nay.
+      → phase: S1 | tactic: Xưng danh, xác nhận thông tin nạn nhân để xây dựng niềm tin và tạo sự quen thuộc.
+T02 [LISTENER] Vâng, em nghe chị nói rồi, nhưng em chưa rõ lắm về chương trình hỗ trợ này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chương trình này nhằm hỗ trợ các hộ nông dân phát triển kinh tế, đặc biệt là trong việc trồng và chăm sóc cây bụi. Chị đã được chọn từ danh sách nông dân ưu tiên của tỉnh. Tuy nhiên, thời hạn nộp hồ sơ để xác nhận nhận hỗ trợ chỉ còn duy nhất hôm nay thôi, chị ạ.
+      → phase: S2 | tactic: Giải thích vắn tắt chương trình, nhấn mạnh sự may mắn (được chọn) và tạo cảm giác khẩn cấp về thời hạn.
+T04 [LISTENER] Dạ, em hiểu rồi, nhưng có cần phải làm gì thêm không chị?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Để hoàn tất thủ tục nhận gói hỗ trợ 50 triệu đồng này, chị cần chuyển khoản một khoản lệ phí xác minh danh tính 2 triệu đồng vào tài khoản của Ban Quản lý. Khoản tiền này sẽ được hoàn lại ngay khi chị nhận được hỗ trợ chính thức.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể (chuyển tiền) để 'hoàn tất thủ tục', hứa hoàn lại để giảm sự nghi ngờ và làm nhỏ số tiền so với lợi ích hứa hẹn.
+T06 [LISTENER] Chị ơi, em không chắc lắm về việc chuyển khoản như vậy, liệu có an toàn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Chị cứ yên tâm, đây là thủ tục bắt buộc để đảm bảo đúng đối tượng nhận hỗ trợ và tránh trường hợp trục lợi chính sách. Số tài khoản Ban Quản lý chúng tôi đều là chính thống và đã được Sở Nông nghiệp và Phát triển nông thôn phê duyệt.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ, nhấn mạnh tính hợp pháp của quy trình và tài khoản để củng cố niềm tin và thuyết phục nạn nhân.
+T08 [LISTENER] Em cũng nghe nói về việc xác minh danh tính, nhưng em vẫn hơi lo lắng một chút, chị có thể cho em biết thêm thông tin về tài khoản chuyển khoản không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, chị có thể yên tâm. Thông tin về số tài khoản sẽ được chúng tôi cung cấp trực tiếp qua tin nhắn sau cuộc gọi này để đảm bảo tính bảo mật. Chị kiểm tra tin nhắn và thực hiện theo hướng dẫn nhé, nhớ là chỉ còn hôm nay thôi.
+      → phase: S3 | tactic: Giả vờ tăng cường bảo mật bằng cách gửi số tài khoản qua tin nhắn, đồng thời tái khẳng định sự khẩn cấp để thúc đẩy nạn nhân hành động.
+T10 [LISTENER] Vâng chị, em sẽ chờ tin nhắn của chị và thực hiện ngay ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Rất tốt ạ. Chị cứ làm theo hướng dẫn trong tin nhắn nhé. Nếu có vấn đề gì, chị có thể gọi lại cho tôi theo số máy này. Chúc chị sớm nhận được khoản hỗ trợ.
+      → phase: S3 | tactic: Kết thúc cuộc gọi sau khi nạn nhân đồng ý chuyển tiền, tạo cảm giác hỗ trợ và chuyên nghiệp, nhưng vẫn ngụ ý sự cấp bách để nạn nhân hành động nhanh chóng.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=22666 | out=3015
+COST : $0.017125
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_14110_61129\conv_66dd8ca781.json  [CALLER_END]

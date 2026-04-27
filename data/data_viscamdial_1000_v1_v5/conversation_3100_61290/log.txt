@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_ada39dcbb0]
+  Caller thật: Cơ yếu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Cán bộ Kiểm tra Chất lượng Thú y - Chi cục Thú y Hà Nội @ Chi cục Thú y Hà Nội (Sở Nông Nghiệp & Phát Triển Nông Thôn)
+  Listener: Lao động chăn nuôi chưa được phân vào đâu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Cơ yếu (locksmith/công nhân kỹ thuật) thường có quyền truy cập tài liệu hành chính, có thể giả danh cán bộ thú y để gọi cho chủ trại chăn nuôi. Lý do: kiểm tra giấy phép, thanh tra vệ sinh, hoặc xác nhận thông tin đăng ký chăn nuôi theo quy định pháp luật.
+  Pretext: Gọi với danh nghĩa cán bộ Kiểm tra Chất lượng Thú y để xác minh thông tin đăng ký chăn nuôi và yêu cầu cập nhật hồ sơ trực tuyến do phát hiện 'bất thường' trong hệ thống. Sử dụng tên và số CMND thật của nạn nhân để tạo lòng tin ngay từ đầu.
+  Listener traits: ['thiếu hiểu biết công nghệ', 'bảo thủ ngại thay đổi']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Nguyễn Văn Hải ạ. Em là Lưu Bảo Bảo Giang, cán bộ Kiểm tra Chất lượng Thú y thuộc Chi cục Thú y Hà Nội. Em gọi để xác minh thông tin chăn nuôi của anh trong hệ thống quốc gia mình ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân, chức danh, tổ chức và lý do gọi, sử dụng VIC_FULLNAME và LOCATION để tạo uy tín ban đầu.
+T02 [LISTENER] Em chào cán bộ, tôi nghe em nói rồi, nhưng không biết thông tin chăn nuôi của tôi có vấn đề gì không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng anh, hiện tại hệ thống của Chi cục phát hiện số CMND 7788495003 của anh Nguyễn Văn Hải đang có bất thường. Có thể giấy phép chăn nuôi của mình đã bị lạm dụng để đăng ký trái phép, nên em gọi để anh cập nhật thông tin gấp để tránh bị phạt hành chính hoặc bị khóa giấy phép chăn nuôi ạ.
+      → phase: S2 | tactic: Tạo cảm giác khẩn cấp và sợ hãi bằng cách thông báo về 'bất thường' liên quan đến CMND và giấy phép chăn nuôi, đe dọa phạt hoặc khóa giấy phép.
+T04 [LISTENER] Nghe em nói thì tôi thấy lo quá, vậy phải làm gì để khắc phục vấn đề này ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ anh Hải đừng lo lắng quá. Để khắc phục tình trạng này, anh vui lòng truy cập ngay vào đường link này ạ: [https://chicuctuynhanoi.gov.vn/xac-minh-ho-so] và làm theo hướng dẫn để cập nhật hồ sơ trực tuyến. Hoặc, nếu anh cần gấp để tránh bị khóa giấy phép, anh có thể chuyển 500 nghìn đồng phí cập nhật khẩn cấp vào tài khoản 19039988888 của Ngân hàng Techcombank, chủ tài khoản LƯU BẢO BẢO GIANG ạ.
+      → phase: S3 | tactic: Đưa ra hai lựa chọn hành động: một là đường link giả mạo để lừa đảo thông tin, hai là yêu cầu chuyển tiền trực tiếp để khắc phục tình hình khẩn cấp.
+T06 [LISTENER] Em ơi, tôi không rành công nghệ lắm, làm ơn nói rõ hơn về cách nào để tôi làm được nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, nếu anh không rành công nghệ thì anh cứ yên tâm ạ. Anh chỉ cần chuyển khoản 500 nghìn đồng vào số tài khoản em vừa cung cấp là 19039988888, tên thụ hưởng LƯU BẢO BẢO GIANG, Ngân hàng Techcombank, với nội dung 'Cập nhật hồ sơ chăn nuôi_7788495003'. Em sẽ trực tiếp hỗ trợ anh cập nhật hồ sơ trên hệ thống để tránh bị gián đoạn và phạt hành chính ạ.
+      → phase: S3 | tactic: Tập trung đẩy mạnh phương án chuyển khoản trực tiếp, khẳng định sẽ 'trực tiếp hỗ trợ' để nạn nhân tin tưởng và thực hiện yêu cầu chuyển tiền, đơn giản hóa quy trình cho người không rành công nghệ.
+T08 [LISTENER] Em ơi, tôi không có nhiều tiền trong tài khoản lắm, có cách nào khác không để tôi khắc phục tình hình này ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T09 [CALLER] Dạ anh Hải, nếu hiện tại anh không có đủ 500 nghìn, thì anh có thể chuyển trước 200 nghìn để em tiến hành tạm khóa hồ sơ của anh trên hệ thống, tránh trường hợp bị lạm dụng tiếp theo và bị tính thêm phí phạt. Sau đó, anh có thể bổ sung phần còn lại trong vòng 24 giờ tới ạ. Anh thấy vậy có được không ạ?
+      → phase: S3 | tactic: Giảm số tiền yêu cầu xuống để nạn nhân dễ chấp nhận hơn, tạo điều kiện thuận lợi cho việc chuyển tiền, nhưng vẫn giữ nguyên mục tiêu ban đầu và tạo cảm giác khẩn cấp.
+T10 [LISTENER] Em ơi, tôi thấy vẫn chưa ổn lắm, tôi muốn gặp trực tiếp cán bộ để giải quyết vấn đề này được không?
+      → action: REFUSAL | suspicion: 0.30 | disclosed: []
+
+T11 [CALLER] Dạ anh Hải, trường hợp này liên quan trực tiếp đến hệ thống quốc gia và cần xử lý nhanh chóng trên môi trường trực tuyến để đảm bảo tính pháp lý anh ạ. Việc gặp trực tiếp sẽ không kịp thời và gây ra chậm trễ, dẫn đến nhiều rủi ro hơn cho giấy phép chăn nuôi của anh ạ.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách nhấn mạnh tính khẩn cấp và tầm quan trọng của việc giải quyết trực tuyến, tạo áp lực để nạn nhân không yêu cầu gặp mặt trực tiếp nữa.
+T12 [LISTENER] Em ơi, tôi không thích cách làm trực tuyến như vậy, tôi thấy chưa yên tâm lắm, mong em thông cảm cho tôi.
+      → action: REFUSAL | suspicion: 0.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=0.60
+TOKEN: in=25067 | out=3191
+COST : $0.016893
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_3100_61290\conv_ada39dcbb0.json  [SCAM_REFUSE]

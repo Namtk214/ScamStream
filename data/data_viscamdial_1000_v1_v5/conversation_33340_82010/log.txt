@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_4975d75a4c]
+  Caller thật: Nhân viên môi giới bất động sản và quản lý tài sản/bất động sản (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên quản lý tài sản / Người quản lý khu công nghiệp @ Công ty quản lý khu công nghiệp / Ban quản lý tòa nhà công nghiệp
+  Listener: Thợ lắp ráp máy cơ khí (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Thợ lắp ráp máy cơ khí thường làm việc tại các xưởng, nhà máy hoặc khu công nghiệp. Nhân viên quản lý tài sản/khu công nghiệp có lý do tự nhiên để liên hệ về các vấn đề liên quan đến cơ sở vật chất, hợp đồng, bảo trì, hoặc thông báo hành chính.
+  Pretext: Gọi điện thông báo về khoản phí quản lý tài sản, bảo trì thiết bị, hoặc xử lý sự cố tài chính liên quan đến tài khoản ngân hàng của nạn nhân được 'ghi nhận' trong hệ thống.
+  Listener traits: ['nóng tính dễ cáu', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Dương Khánh Thị Ngân, tôi là Lưu Công Long từ Ban quản lý tòa nhà công nghiệp. Hệ thống của chúng tôi vừa ghi nhận tài khoản 6721099925 của chị có vấn đề về hợp đồng quản lý tài sản không được cập nhật. Chị có đang làm việc tại xưởng nào không, và căn cước công dân 074194169589 của chị là chính xác chứ?
+      → phase: S1 | tactic: Tiếp cận với sự tự tin, tạo credibility cao bằng thông tin cá nhân của nạn nhân.
+T02 [LISTENER] Em không hiểu anh đang nói gì ạ, nhưng em không có vấn đề gì với hợp đồng cả.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Tôi hiểu. Tuy nhiên, hệ thống hiển thị rõ ràng thông tin về tài khoản của chị, và nó đang có dấu hiệu bất thường. Nếu không cập nhật trong vòng 24 giờ tới, tài khoản 6721099925 của chị có thể sẽ bị khóa tạm thời đấy ạ. Điều này có thể ảnh hưởng đến các giao dịch của chị.
+      → phase: S2 | tactic: Khai thác tâm lý khẩn cấp và sợ hãi, nhấn mạnh hậu quả nếu không hợp tác.
+T04 [LISTENER] Em không muốn tài khoản bị khóa, nhưng em thật sự không hiểu điều anh nói là gì cả, có cách nào để em kiểm tra không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, chị có thể kiểm tra trực tiếp trên ứng dụng ngân hàng của mình mục 'lịch sử giao dịch' hoặc 'thông báo hệ thống'. Tuy nhiên, tôi đã thấy rõ thông báo về việc hợp đồng quản lý tài sản của chị cần được cập nhật. Nếu không, tài khoản 6721099925 của chị chắc chắn sẽ bị khóa tạm thời trong vòng 24 giờ tới. Chúng tôi cũng phát hiện có một số giao dịch bất thường gần đây, có dấu hiệu gian lận mà chúng tôi cần xác minh ngay lập tức để bảo vệ số dư 59 triệu đồng của chị.
+      → phase: S2 | tactic: Tăng cường tâm lý khẩn cấp và sợ hãi, đưa ra bằng chứng mơ hồ, nhấn mạnh hậu quả và số tiền bị đe dọa.
+T06 [LISTENER] Em không biết sử dụng ứng dụng ngân hàng, anh có thể hướng dẫn em cách kiểm tra không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị yên tâm, tôi sẽ hướng dẫn chị từng bước một. Bây giờ, để bảo vệ tài khoản của chị khỏi những giao dịch gian lận và tránh việc bị khóa, chị vui lòng mở ứng dụng ngân hàng và chuyển 2 đến 3 triệu đồng vào tài khoản xác thực của tôi. Đây là số tài khoản tạm thời để hệ thống của chúng tôi ghi nhận việc chị đã cập nhật thông tin. Sau đó, số tiền này sẽ được hoàn lại cho chị trong vòng 2 giờ thôi.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể: chuyển tiền để 'xác thực' và 'bảo vệ' tài khoản, hứa hẹn hoàn trả.
+T08 [LISTENER] Em không có tiền để chuyển đi đâu, anh không thể yêu cầu em như vậy được ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Chị Ngân, tôi hoàn toàn hiểu sự lo lắng của chị. Tuy nhiên, nếu chị không thực hiện thao tác này ngay lập tức, hệ thống sẽ tự động khóa tài khoản của chị trong vòng 30 phút nữa. Khi đó, toàn bộ số dư 59 triệu đồng trong tài khoản của chị sẽ bị treo. Chị chắc chắn không muốn điều đó xảy ra đúng không?
+      → phase: S4 | tactic: Xử lý từ chối bằng cách tăng cường áp lực, nhấn mạnh hậu quả mất tiền nếu không hợp tác.
+T10 [LISTENER] Em không tin anh nữa, không thể bảo em chuyển tiền như vậy được đâu!
+      → action: INTERRUPTED_VICTIM_HANGUP | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=0.00
+TOKEN: in=20719 | out=2889
+COST : $0.016016
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_33340_82010\conv_4975d75a4c.json  [SCAM_REFUSE]

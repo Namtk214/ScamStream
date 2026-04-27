@@ -1,0 +1,230 @@
+{
+  "conversation_id": "conv_057b4dec12",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0088",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Tô Công Gia Thành",
+    "fake_age": 44,
+    "real_occupation": "Thợ lắp đặt phát sóng rada, phát thanh truyền hình/thiết bị truyền dẫn",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Kỹ sư âm thanh / Kỹ thuật viên hệ thống âm thanh truyền dẫn",
+    "caller_org": "Công ty Cổ phần Truyền thanh Truyền hình / Nhà thầu phát sóng độc lập",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction | credential_theft | money_transfer",
+      "pretext": "Gọi giả danh kỹ sư âm thanh từ công ty cung cấp dịch vụ phát sóng trực tiếp, thông báo cần xác minh thông tin tài khoản thanh toán dịch vụ truyền dẫn âm thanh cho dàn nhạc hoặc xử lý lỗi phát sóng khẩn cấp trong buổi biểu diễn sắp tới. Sử dụng tên nạn nhân (Ngô Ngọc Ngọc Hằng) để tạo ấn tượng đã có thông tin sẵn trong hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Credibility: 'Chị Hằng à, tôi là Minh từ bộ phận Kỹ thuật Truyền thanh Truyền hình. Chúng tôi vừa kiểm tra hệ thống phát sóng cho Dàn nhạc của chị. Tôi có số điện thoại 0709696254 trong hồ sơ của chị, đúng không? Chúng tôi cần xác minh thông tin tài khoản ngân hàng để cập nhật hợp đồng dịch vụ.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (Khẩn cấp + Thương hại): 'Hệ thống của chị sẽ bị gián đoạn trong buổi biểu diễn ngày mai nếu không xác minh kịp. Đây là vấn đề bảo mật — tài khoản 5329836221 của chị bị phát hiện có hoạt động bất thường. Chúng tôi phải cập nhật ngay để bảo vệ.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng cung cấp mã OTP vừa nhận để xác nhận, hoặc cho tôi mã thẻ tín dụng 4 chữ số cuối (6402) và ngày hết hạn để xử lý thanh toán dịch vụ phát sóng tháng này.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Vâng, chị có thể gọi lại cho công ty, nhưng hệ thống sẽ khóa trong 2 giờ nữa. Chị sẽ phải liên hệ ban giám đốc để xin phép ngoại lệ' (tạo áp lực và phức tạp hóa việc xác minh)."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên phát sóng/truyền dẫn thường phải liên hệ với các cơ sở phát tín hiệu âm thanh (studio, dàn nhạc, trung tâm biểu diễn) để kiểm tra chất lượng tín hiệu, cập nhật hệ thống truyền dẫn, hoặc thông báo bảo trì. Nhạc trưởng/Giám đốc dàn nhạc là người quyết định về thiết bị âm thanh và phát sóng của đơn vị."
+  },
+  "listener_card": {
+    "listener_id": "lis_0088",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1970,
+      "age": 55,
+      "province": "Bình Thuận",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "26523",
+      "title": "Nhạc trưởng/giám đốc dàn nhạc/ban nhạc/dàn hợp xướng",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Ngọc Ngọc Hằng",
+      "VIC_ID_DOC": "060170072951",
+      "VIC_ADDRESS": "TP 5, Bình Thuận",
+      "VIC_EMPLOYMENT": "Nhạc trưởng/giám đốc dàn nhạc/ban nhạc/dàn hợp xướng",
+      "VIC_CONTACT": "0709696254",
+      "VIC_TAX_SOCIAL_ID": "4103495440"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "328005",
+      "VIC_CREDENTIAL": "966401",
+      "VIC_SIM_INFO": "0709696254",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "5329836221",
+      "VIC_CARD_DATA": "4372 **** **** 6402",
+      "VIC_BALANCE": "83 triệu đồng",
+      "VIC_ASSET": "647 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Ngọc Ngọc Hằng",
+    "VIC_CONTACT": "0709696254",
+    "VIC_BANK_ACCOUNT": "5329836221",
+    "VIC_CARD_DATA": "4372 **** **** 6402"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư âm thanh / Kỹ thuật viên hệ thống âm thanh truyền dẫn",
+    "caller_org": "Công ty Cổ phần Truyền thanh Truyền hình / Nhà thầu phát sóng độc lập",
+    "scenario_context": "Kỹ thuật viên phát sóng/truyền dẫn thường phải liên hệ với các cơ sở phát tín hiệu âm thanh (studio, dàn nhạc, trung tâm biểu diễn) để kiểm tra chất lượng tín hiệu, cập nhật hệ thống truyền dẫn, hoặc thông báo bảo trì. Nhạc trưởng/Giám đốc dàn nhạc là người quyết định về thiết bị âm thanh và phát sóng của đơn vị.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | credential_theft | money_transfer",
+      "pretext": "Gọi giả danh kỹ sư âm thanh từ công ty cung cấp dịch vụ phát sóng trực tiếp, thông báo cần xác minh thông tin tài khoản thanh toán dịch vụ truyền dẫn âm thanh cho dàn nhạc hoặc xử lý lỗi phát sóng khẩn cấp trong buổi biểu diễn sắp tới. Sử dụng tên nạn nhân (Ngô Ngọc Ngọc Hằng) để tạo ấn tượng đã có thông tin sẵn trong hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Credibility: 'Chị Hằng à, tôi là Minh từ bộ phận Kỹ thuật Truyền thanh Truyền hình. Chúng tôi vừa kiểm tra hệ thống phát sóng cho Dàn nhạc của chị. Tôi có số điện thoại 0709696254 trong hồ sơ của chị, đúng không? Chúng tôi cần xác minh thông tin tài khoản ngân hàng để cập nhật hợp đồng dịch vụ.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (Khẩn cấp + Thương hại): 'Hệ thống của chị sẽ bị gián đoạn trong buổi biểu diễn ngày mai nếu không xác minh kịp. Đây là vấn đề bảo mật — tài khoản 5329836221 của chị bị phát hiện có hoạt động bất thường. Chúng tôi phải cập nhật ngay để bảo vệ.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng cung cấp mã OTP vừa nhận để xác nhận, hoặc cho tôi mã thẻ tín dụng 4 chữ số cuối (6402) và ngày hết hạn để xử lý thanh toán dịch vụ phát sóng tháng này.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Vâng, chị có thể gọi lại cho công ty, nhưng hệ thống sẽ khóa trong 2 giờ nữa. Chị sẽ phải liên hệ ban giám đốc để xin phép ngoại lệ' (tạo áp lực và phức tạp hóa việc xác minh)."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kỹ thuật viên phát sóng thực sự gọi để thông báo kiểm tra bảo trì định kỳ hệ thống truyền dẫn âm thanh, cập nhật thiết bị, hoặc xác nhận thông tin kỹ thuật cho hợp đồng dịch vụ mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào, tôi là Minh từ bộ phận Kỹ thuật Công ty Truyền thanh Truyền hình. Tôi muốn xác nhận lại thông tin liên hệ với chị Hằng — Giám đốc Dàn nhạc Thành phố. Chúng tôi cần lên lịch kiểm tra hệ thống truyền dẫn âm thanh của đơn vị chị.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Bảo trì định kỳ 3 tháng một lần. Lần này chúng tôi sẽ kiểm tra chất lượng tín hiệu, cập nhật firmware thiết bị, và đảm bảo kết nối ổn định cho các buổi phát sóng trực tiếp của chị. Tuần tới có thời gian không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy chúng tôi sẽ đến vào thứ Tư lúc 10 giờ sáng. Nếu có thay đổi, chị gọi lại cho tôi qua số này. Cảm ơn chị, chào!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Hằng ạ, em là Minh từ bộ phận Kỹ thuật Truyền thanh Truyền hình đây. Em gọi để xác nhận về hệ thống phát sóng cho Dàn nhạc của chị. Em có số điện thoại 0709696254 trong hồ sơ của chị có đúng không ạ? Chúng em cần xác minh lại thông tin tài khoản ngân hàng để cập nhật hợp đồng dịch vụ cho tháng này ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và gây dựng uy tín bằng cách sử dụng thông tin đã biết của nạn nhân để chứng minh tính xác thực của cuộc gọi và đưa ra lý do hợp lý để yêu cầu thông tin ngân hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em, nhưng tôi chưa rõ lắm về việc xác minh thông tin ngân hàng này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, dạ em xin lỗi nếu đã làm chị thấy chưa rõ. Là thế này ạ, bên mình có tài khoản ngân hàng số 5329836221 để nhận thanh toán phí dịch vụ truyền dẫn âm thanh hàng tháng đúng không ạ? Hiện tại, hệ thống của chị đang có một số lỗi kỹ thuật, và nếu không cập nhật lại thông tin tài khoản xác minh, nó có thể bị gián đoạn trong buổi biểu diễn sắp tới của Dàn nhạc mình đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo khan hiếm và cấp bách bằng cách cảnh báo về sự cố hoặc gián đoạn dịch vụ, đồng thời củng cố niềm tin bằng cách nhắc lại thông tin tài khoản ngân hàng đã biết, chuẩn bị cho yêu cầu hành động tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói có vẻ đúng, nhưng tôi vẫn muốn xác nhận lại thông tin này trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu ạ. Nhưng mà chị Hằng ơi, nếu không xác minh kịp thời thì hệ thống sẽ tự động khóa lại để bảo vệ thông tin. Lúc đó Dàn nhạc của mình sẽ bị gián đoạn phát sóng ngay trong buổi diễn ngày mai đó ạ. Em nghĩ đây là vấn đề quan trọng mình cần giải quyết ngay để không ảnh hưởng đến chương trình ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực về thời gian và hậu quả (gián đoạn buổi biểu diễn) để thúc đẩy nạn nhân hành động nhanh chóng mà không kịp suy nghĩ kỹ, đồng thời nhấn mạnh tính cấp bách của vấn đề để nạn nhân bỏ qua việc xác minh lại."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rằng vấn đề này quan trọng, nhưng em có thể cho tôi biết thêm thông tin nào để tôi yên tâm hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất hiểu sự cẩn trọng của chị ạ. Em là Tô Công Gia Thành, kỹ sư phụ trách kỹ thuật bên em. Chị có thể ghi lại số ID công việc của em là 14032014 để xác minh với bộ phận chăm sóc khách hàng của công ty bất cứ lúc nào ạ. Tuy nhiên, tình hình hiện tại là rất cấp bách cho buổi diễn ngày mai. Để em hỗ trợ chị nhanh nhất, chị vui lòng cung cấp mã OTP vừa nhận về điện thoại để xác nhận việc cập nhật hệ thống, hoặc nếu không tiện, chị đọc giúp em 4 số cuối của mã thẻ tín dụng 6402 cùng ngày hết hạn để em xử lý thanh toán phần mềm dịch vụ phát sóng đã đến hạn trong tháng này ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xây dựng sự tin tưởng bằng cách cung cấp thông tin cá nhân giả (ID công việc) để xác minh, đồng thời chuyển hướng sang yêu cầu hành động trực tiếp (cung cấp OTP/thông tin thẻ tín dụng) để giải quyết tình huống cấp bách."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã cung cấp thông tin để tôi xác minh rồi, nhưng tôi vẫn không thoải mái khi phải cung cấp mã OTP hay thông tin thẻ tín dụng ngay bây giờ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu sự lo lắng của chị ạ. Chị Hằng ơi, tình hình hiện tại là nếu không có xác nhận ngay, hệ thống truyền dẫn âm thanh cho dàn nhạc của chị sẽ bị khóa trong vòng 2 giờ nữa. Chị sẽ phải liên hệ trực tiếp với ban giám đốc công ty em để xin phép ngoại lệ và quá trình này có thể mất nhiều ngày, làm ảnh hưởng nghiêm trọng đến buổi biểu diễn của mình đó ạ. Em chỉ muốn giúp chị tránh những rắc rối không đáng có thôi ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách tạo áp lực lớn hơn về thời gian và hậu quả (hệ thống bị khóa, cần liên hệ ban giám đốc), đồng thời phức tạp hóa quy trình xác minh để nạn nhân cảm thấy việc hợp tác ngay lập tức là lựa chọn dễ dàng và nhanh chóng nhất."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói có vẻ cấp bách, nhưng tôi vẫn cần thêm thời gian để suy nghĩ kỹ trước khi quyết định cung cấp thông tin.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1944,
+      "output_tokens": 1753
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8348,
+      "output_tokens": 1015
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10968,
+      "output_tokens": 357
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005259,
+    "output_usd": 0.011517,
+    "total_usd": 0.016775
+  }
+}

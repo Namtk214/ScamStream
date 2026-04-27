@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_4989eb4e8c]
+  Caller thật: Kỹ thuật viên thiết bị y tế và hình ảnh khác (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Nhân viên kiểm định chất lượng nước nuôi trồng thủy sản @ Trung tâm Kỹ thuật Nông nghiệp Thủy sản tỉnh
+  Listener: Lao động nuôi tôm (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Kỹ thuật viên thiết bị y tế có chuyên môn về hình ảnh y tế (siêu âm, X-quang) thường được tuyên truyền hoặc hợp tác với các chương trình kiểm định nước nuôi tôm — sử dụng công nghệ hình ảnh để phân tích chất lượng. Đây là lý do tự nhiên để gọi cho người nuôi tôm nhằm xác nhận thông tin hoặc lên lịch kiểm định.
+  Pretext: Gọi điện thông báo rằng tài khoản ngân hàng của nạn nhân đã được liên kết với chương trình hỗ trợ tín dụng ưu đãi cho nông dân nuôi tôm từ Trung tâm Kỹ thuật — nhưng cần xác minh lại dữ liệu cá nhân và số tài khoản để hoàn tất hồ sơ. Sử dụng VIC_FULLNAME để tạo tin cậy ban đầu.
+  Listener traits: ['lo lắng hay bận tâm', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, xin chào chị Đinh Ngọc Trang ạ. Tôi là Anh Minh, nhân viên từ Trung tâm Kỹ thuật Nông nghiệp Thủy sản tỉnh. Chúng tôi có thấy hồ sơ nuôi tôm của chị trong hệ thống và muốn xác nhận lại một vài thông tin ạ.
+      → phase: S1 | tactic: Xưng danh, gọi tên đầy đủ nạn nhân để tạo credibility và tiếp cận.
+T02 [LISTENER] Dạ, chị đã nghe rõ rồi, nhưng chị có thể cho tôi biết thêm về việc xác nhận thông tin này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chị Trang. Trung tâm chúng tôi đang có chương trình hỗ trợ tín dụng ưu đãi dành riêng cho nông dân nuôi tôm với lãi suất 0% do nhà nước tài trợ. Hồ sơ của chị đã được chọn để tham gia, đây là cơ hội vàng để chị mở rộng quy mô sản xuất mà không lo về vốn. Chúng tôi thấy chị đang có 3 triệu đồng trong tài khoản, với gói hỗ trợ này, chị có thể nhận được 50 triệu đồng đấy ạ, gấp 15 lần số dư hiện tại của chị.
+      → phase: S2 | tactic: Tạo tình huống khẩn cấp, khai thác tâm lý ham lợi bằng cách so sánh số tiền hỗ trợ với số dư hiện tại của nạn nhân.
+T04 [LISTENER] Dạ, nghe chị nói vậy thì có vẻ hấp dẫn quá, nhưng chị vẫn muốn hiểu rõ hơn về điều kiện tham gia và quy trình hỗ trợ này ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Vâng, chị Trang. Điều kiện thì đơn giản thôi ạ, chị chỉ cần xác nhận lại thông tin cá nhân và tài khoản ngân hàng để hệ thống chúng tôi đối chiếu. Nhưng chị lưu ý giúp tôi, hôm nay là hạn cuối để chúng tôi tổng hợp danh sách. Nếu chị không xác nhận thì cơ hội này sẽ bị chuyển cho người khác, rất đáng tiếc đấy ạ. Số tiền dự kiến là 50 triệu đồng đấy chị.
+      → phase: S2 | tactic: Tạo thêm áp lực thời gian, nhấn mạnh lợi ích và sự mất mát nếu không hành động nhanh, chuẩn bị cho bước yêu cầu hành động.
+T06 [LISTENER] Dạ, nhưng chị cần thời gian để kiểm tra lại và suy nghĩ thêm, vì số tiền lớn như vậy khiến tôi hơi lo lắng ạ.
+      → action: REFUSAL | suspicion: 0.30 | disclosed: []
+
+T07 [CALLER] Tôi hiểu nỗi lo của chị, nhưng đây là chương trình được nhà nước phê duyệt, vô cùng minh bạch và an toàn. Để đảm bảo chị không bỏ lỡ cơ hội này, chị vui lòng chuyển một khoản phí xử lý hồ sơ nhỏ là 500.000 đồng vào tài khoản của Trung tâm. Sau khi nhận được phí này, tôi sẽ đảm bảo số tiền 50 triệu đồng sẽ được chuyển vào tài khoản 7669523673 của chị trong vòng 24 giờ. Chị thấy thế nào ạ?
+      → phase: S3 | tactic: Xoa dịu nỗi lo lắng, đồng thời yêu cầu hành động chuyển khoản với một khoản tiền nhỏ, nhấn mạnh lợi ích sẽ nhận được sau đó và tạo áp lực thời gian.
+T08 [LISTENER] Dạ, nhưng chị vẫn chưa hoàn toàn yên tâm về việc phải chuyển tiền trước như vậy, chị muốn biết rõ hơn về các bước tiếp theo ạ.
+      → action: REFUSAL | suspicion: 0.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=0.60
+TOKEN: in=16000 | out=2587
+COST : $0.014214
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_32119_62212\conv_4989eb4e8c.json  [SCAM_REFUSE]

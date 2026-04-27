@@ -1,0 +1,236 @@
+{
+  "conversation_id": "conv_98b1e7aa47",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0020",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lý Khánh Liên",
+    "fake_age": 34,
+    "real_occupation": "Người dọn dẹp ở các cơ sở khác (như trung tâm mua sắm, trường học, bệnh viện, những nơi thờ tự)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên bảo trì & an toàn lao động tại các cơ sở công cộng",
+    "caller_org": "Công ty quản lý bảo trì cơ sở hạ tầng công cộng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi xưng danh là nhân viên kiểm tra an toàn lao động, nói rằng hệ thống bảo hiểm xã hội của Vũ Thị Ngân có bất thường cần xác minh gấp, hoặc có một khoản tiền bảo hiểm thất thường cần khôi phục tài khoản ngay lập tức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chị Vũ Thị Ngân phải không? Tôi là Hùng từ bộ phận Kiểm tra An toàn Lao động Công ty Bảo trì Hạ tầng. Chúng tôi vừa phát hiện tài khoản bảo hiểm của chị có dấu hiệu bất thường, cần xác minh ngay để bảo vệ tài khoản chị.' — Sử dụng VIC_FULLNAME + VIC_EMPLOYMENT để tạo tin cậy."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Hệ thống phát hiện có người cố gắng rút 37 triệu đồng từ tài khoản của chị. Nếu chị không xác minh trong 5 phút, tài khoản sẽ bị khóa vĩnh viễn và chị sẽ mất quyền nhận bảo hiểm lao động.' — Sử dụng VIC_BALANCE để tăng độ tin cậy."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cần cung cấp OTP vừa được gửi đến điện thoại để xác minh danh tính. OTP là gì ạ?' — Hoặc nếu chưa nhận OTP, bảo chị vào app ngân hàng/bảo hiểm xã hội và cung cấp OTP được gửi."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, scammer sẽ nói 'Chị có thể gọi lại số 1900-1234 để xác minh, nhưng chúng tôi chỉ chờ 5 phút nữa thôi' (số giả hoặc số của scammer khác). Nếu thành công, scammer sẽ cảm ơn và cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Người bảo trì cơ sở công cộng cần liên hệ với thợ sửa chữa máy bay để xác minh thông tin an toàn lao động hoặc kiểm tra thiết bị tại khu vực làm việc của nạn nhân (nhà xưởng sửa chữa máy bay có nhiều thiết bị điện, khí nén, cần tuân thủ quy định an toàn)."
+  },
+  "listener_card": {
+    "listener_id": "lis_0020",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1972,
+      "age": 53,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "72322",
+      "title": "Thợ sửa chữa động cơ máy bay",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Thị Ngân",
+      "VIC_ID_DOC": "075172149056",
+      "VIC_ADDRESS": "Huyện 9, Đồng Nai",
+      "VIC_EMPLOYMENT": "Thợ sửa chữa động cơ máy bay",
+      "VIC_CONTACT": "0780307656",
+      "VIC_TAX_SOCIAL_ID": "7565038114"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "275629",
+      "VIC_CREDENTIAL": "902916",
+      "VIC_SIM_INFO": "0780307656",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7872192918",
+      "VIC_CARD_DATA": "4620 **** **** 6496",
+      "VIC_BALANCE": "37 triệu đồng",
+      "VIC_ASSET": "169 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Thị Ngân",
+    "VIC_CONTACT": "0780307656",
+    "VIC_BALANCE": "37 triệu đồng",
+    "VIC_EMPLOYMENT": "Thợ sửa chữa động cơ máy bay"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bảo trì & an toàn lao động tại các cơ sở công cộng",
+    "caller_org": "Công ty quản lý bảo trì cơ sở hạ tầng công cộng",
+    "scenario_context": "Người bảo trì cơ sở công cộng cần liên hệ với thợ sửa chữa máy bay để xác minh thông tin an toàn lao động hoặc kiểm tra thiết bị tại khu vực làm việc của nạn nhân (nhà xưởng sửa chữa máy bay có nhiều thiết bị điện, khí nén, cần tuân thủ quy định an toàn).",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi xưng danh là nhân viên kiểm tra an toàn lao động, nói rằng hệ thống bảo hiểm xã hội của Vũ Thị Ngân có bất thường cần xác minh gấp, hoặc có một khoản tiền bảo hiểm thất thường cần khôi phục tài khoản ngay lập tức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chị Vũ Thị Ngân phải không? Tôi là Hùng từ bộ phận Kiểm tra An toàn Lao động Công ty Bảo trì Hạ tầng. Chúng tôi vừa phát hiện tài khoản bảo hiểm của chị có dấu hiệu bất thường, cần xác minh ngay để bảo vệ tài khoản chị.' — Sử dụng VIC_FULLNAME + VIC_EMPLOYMENT để tạo tin cậy."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Hệ thống phát hiện có người cố gắng rút 37 triệu đồng từ tài khoản của chị. Nếu chị không xác minh trong 5 phút, tài khoản sẽ bị khóa vĩnh viễn và chị sẽ mất quyền nhận bảo hiểm lao động.' — Sử dụng VIC_BALANCE để tăng độ tin cậy."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cần cung cấp OTP vừa được gửi đến điện thoại để xác minh danh tính. OTP là gì ạ?' — Hoặc nếu chưa nhận OTP, bảo chị vào app ngân hàng/bảo hiểm xã hội và cung cấp OTP được gửi."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, scammer sẽ nói 'Chị có thể gọi lại số 1900-1234 để xác minh, nhưng chúng tôi chỉ chờ 5 phút nữa thôi' (số giả hoặc số của scammer khác). Nếu thành công, scammer sẽ cảm ơn và cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên bảo trì cơ sở công cộng thực sự liên hệ với thợ sửa chữa máy bay để trao đổi về các yêu cầu an toàn lao động, kiểm tra thiết bị, hoặc thông báo về lịch bảo trì định kỳ tại nhà xưởng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chị Vũ Thị Ngân phải không ạ? Tôi là Hùng từ bộ phận Bảo trì Cơ sở Hạ tầng. Chúng tôi cần xác nhận lịch kiểm tra an toàn thiết bị khí nén tại nhà xưởng sửa chữa máy bay của chị tuần tới.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận về ngày giờ kiểm tra, danh sách thiết bị cần kiểm tra, yêu cầu chuẩn bị, hoặc hỏi về tình trạng bảo trì hiện tại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lịch kiểm tra, ghi chú yêu cầu, hoặc thông báo sẽ gửi email xác nhận. Kết thúc cuộc gọi với lời chào tạm biệt bình thường."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Vũ Thị Ngân phải không ạ? Em là Lý Khánh Liên đây, từ bộ phận Kiểm tra An toàn Lao động của Công ty quản lý bảo trì cơ sở hạ tầng công cộng. Bên em vừa phát hiện tài khoản bảo hiểm xã hội của chị đang có dấu hiệu bất thường, cần xác minh ngay để bảo vệ tài khoản cho chị ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và đưa ra lý do cuộc gọi, sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em gọi từ số mấy vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em gọi từ số hotline của bên em, số 1900 1234 chị nhé. Chị Ngân ơi, vấn đề này khá là gấp đó ạ, hệ thống bên em vừa ghi nhận có người đang cố gắng rút 37 triệu đồng từ tài khoản bảo hiểm xã hội của chị. Nếu chúng ta không xác minh ngay trong 5 phút tới, có thể tài khoản của chị sẽ bị khóa vĩnh viễn và chị sẽ không thể nhận được bất kỳ khoản bảo hiểm lao động nào nữa đâu ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và sợ hãi bằng cách nhấn mạnh hậu quả mất tiền và khóa tài khoản, đồng thời sử dụng thông tin về số tiền cụ thể để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy tôi cũng thấy lo, nhưng tôi muốn kiểm tra lại thông tin này có đúng không đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu là chị lo lắng ạ. Nhưng bên em hoàn toàn gọi đúng số của chị và biết rõ thông tin của chị là Vũ Thị Ngân, làm Thợ sửa chữa động cơ máy bay. Nếu không phải là thật thì làm sao em biết rõ về chị như vậy được ạ? Hiện tại, hệ thống đang hiển thị một mã OTP đã được gửi đến số điện thoại của chị để xác minh giao dịch kia. Chị vui lòng đọc lại mã OTP đó cho em được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách nhắc lại thông tin cá nhân chính xác của nạn nhân, sau đó chuyển sang yêu cầu hành động trực tiếp là cung cấp OTP để giải quyết tình huống khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ mã OTP mà em đang nói đến, em có thể giải thích thêm cho tôi được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, mã OTP là một dãy số hoặc ký tự được gửi tự động từ ngân hàng hoặc tổ chức tài chính để xác nhận rằng đúng chủ tài khoản đang thực hiện giao dịch đó. Nó giống như chìa khóa để mở giao dịch vậy. Chị vui lòng kiểm tra tin nhắn điện thoại để tìm dãy số đó và đọc lại giúp em nhé. Chỉ khi có mã này em mới giúp chị chặn đứng giao dịch rút tiền bất thường kia và bảo vệ tài khoản cho chị được ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích rõ hơn về mã OTP và nhấn mạnh sự cần thiết của nó để giải quyết vấn đề khẩn cấp, tạo áp lực cho nạn nhân đọc OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa hiểu rõ lắm, nên tôi không thể cung cấp thông tin đó được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu chị vẫn cảm thấy chưa yên tâm, thì chị có thể gọi trực tiếp lên tổng đài bảo hiểm xã hội 1900-1234 để xác minh lại nhé. Nhưng mà chị Ngân ơi, tài khoản của chị đang có nguy cơ bị khóa vĩnh viễn đó ạ. Bên em chỉ có thể giữ tài khoản chị ở trạng thái chờ xác minh trong khoảng 5 phút nữa thôi. Sau đó, hệ thống sẽ tự động khóa tài khoản ạ. Mong chị cân nhắc để không ảnh hưởng đến quyền lợi bảo hiểm của mình.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách đưa ra một số tổng đài giả để nạn nhân gọi lại xác minh, đồng thời nhắc lại mối đe dọa về việc khóa tài khoản và giới hạn thời gian để tăng áp lực."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần kiểm tra thêm thông tin này trước khi quyết định, không thể vội vàng được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.4
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1919,
+      "output_tokens": 1539
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7814,
+      "output_tokens": 901
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10636,
+      "output_tokens": 318
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005077,
+    "output_usd": 0.010138,
+    "total_usd": 0.015216
+  }
+}

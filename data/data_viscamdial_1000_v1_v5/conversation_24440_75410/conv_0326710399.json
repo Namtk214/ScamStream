@@ -1,0 +1,216 @@
+{
+  "conversation_id": "conv_0326710399",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0043",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hồ Thanh Thanh Phương",
+    "fake_age": 36,
+    "real_occupation": "Nhà chuyên môn về cấp phép của Chính phủ",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Cán bộ quản lý an toàn lao động & cấp chứng chỉ lặn",
+    "caller_org": "Cục Quản lý Lao động Dưới Nước & An toàn Hàng Hải (cơ quan nhà nước)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cơ quan nhà nước thực sự thông báo cập nhật chứng chỉ lặn, xác nhận thông tin hồ sơ, hướng dẫn quy trình gia hạn hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Nguyễn Văn Tùng, tôi là cán bộ Cục Quản lý Lao động Dưới Nước. Chúng tôi có ghi nhận hồ sơ của anh (ID: 074063036097) và cần xác nhận một số thông tin để cập nhật dữ liệu. Anh có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chứng chỉ lặn của anh sẽ hết hạn vào tháng 6 năm nay. Để gia hạn, anh cần nộp: bản photocopy chứng chỉ cũ, giấy khám sức khỏe mới, và biểu mẫu gia hạn. Anh có thể nộp trực tiếp tại văn phòng chúng tôi hoặc qua đường bưu điện. Phí gia hạn là 1,5 triệu đồng.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Chúng tôi sẽ gửi thư hướng dẫn chi tiết đến số điện thoại này. Anh hãy chuẩn bị hồ sơ và liên hệ chúng tôi nếu có thắc mắc. Cảm ơn anh đã hợp tác. Chúc anh làm việc an toàn!'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ lặn phải tuân thủ quy định cấp phép, kiểm tra định kỳ, gia hạn chứng chỉ từ cơ quan nhà nước. Cán bộ cấp phép có lý do tự nhiên để liên hệ xác nhận thông tin, kiểm tra hồ sơ, thông báo cập nhật quy định."
+  },
+  "listener_card": {
+    "listener_id": "lis_0043",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1963,
+      "age": 62,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75410",
+      "title": "Thợ lặn",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Văn Tùng",
+      "VIC_ID_DOC": "074063036097",
+      "VIC_ADDRESS": "TP 3, Bình Dương",
+      "VIC_EMPLOYMENT": "Thợ lặn",
+      "VIC_CONTACT": "0964410534",
+      "VIC_TAX_SOCIAL_ID": "7774470179"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "340963",
+      "VIC_CREDENTIAL": "537371",
+      "VIC_SIM_INFO": "0964410534",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3645218583043",
+      "VIC_CARD_DATA": "4259 **** **** 9861",
+      "VIC_BALANCE": "15 triệu đồng",
+      "VIC_ASSET": "66 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Văn Tùng",
+    "VIC_CONTACT": "0964410534",
+    "VIC_ID_DOC": "074063036097",
+    "VIC_CARD_DATA": "4259 **** **** 9861",
+    "VIC_BALANCE": "15 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ quản lý an toàn lao động & cấp chứng chỉ lặn",
+    "caller_org": "Cục Quản lý Lao động Dưới Nước & An toàn Hàng Hải (cơ quan nhà nước)",
+    "scenario_context": "Thợ lặn phải tuân thủ quy định cấp phép, kiểm tra định kỳ, gia hạn chứng chỉ từ cơ quan nhà nước. Cán bộ cấp phép có lý do tự nhiên để liên hệ xác nhận thông tin, kiểm tra hồ sơ, thông báo cập nhật quy định.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Cơ quan nhà nước thông báo: Hồ sơ cấp phép lặn của bạn (ID: 074063036097) sắp hết hạn. Cần xác minh tài khoản ngân hàng để hoàn tất gia hạn và nhận chứng chỉ mới. Quá trình này yêu cầu xác thực OTP để bảo vệ thông tin cá nhân.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng uy tín: 'Chào anh Nguyễn Văn Tùng, tôi là cán bộ từ Cục Quản lý Lao động Dưới Nước. Hệ thống của chúng tôi vừa phát hiện hồ sơ cấp phép lặn của anh (ID: 074063036097) sắp hết hạn vào tháng tới. Chúng tôi đang gọi để thông báo và hỗ trợ gia hạn ngay.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi mất việc: 'Nếu không gia hạn kịp thời, anh sẽ không được phép lặn theo luật. Điều này ảnh hưởng đến hợp đồng lao động và thu nhập của anh. Tôi có thể giúp anh hoàn tất hôm nay nếu anh hợp tác.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu xác thực qua OTP: 'Để bảo vệ tài khoản ngân hàng của anh (thẻ kết thúc bằng 9861), hệ thống sẽ gửi OTP đến số điện thoại này. Anh vui lòng cung cấp OTP để xác minh danh tính và hoàn tất thanh toán phí gia hạn 2 triệu đồng từ tài khoản của anh.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc hoặc xử lý từ chối: Nếu nạn nhân cung cấp OTP, scammer sẽ chuyển tiền từ tài khoản. Nếu từ chối, scammer tạo áp lực: 'Anh sẽ bị phạt 5 triệu đồng nếu không hoàn thành trong 24 giờ. Tôi sẽ gọi lại chiều nay.' rồi cắt máy để tránh nghi ngờ."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan nhà nước thực sự thông báo cập nhật chứng chỉ lặn, xác nhận thông tin hồ sơ, hướng dẫn quy trình gia hạn hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Nguyễn Văn Tùng, tôi là cán bộ Cục Quản lý Lao động Dưới Nước. Chúng tôi có ghi nhận hồ sơ của anh (ID: 074063036097) và cần xác nhận một số thông tin để cập nhật dữ liệu. Anh có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chứng chỉ lặn của anh sẽ hết hạn vào tháng 6 năm nay. Để gia hạn, anh cần nộp: bản photocopy chứng chỉ cũ, giấy khám sức khỏe mới, và biểu mẫu gia hạn. Anh có thể nộp trực tiếp tại văn phòng chúng tôi hoặc qua đường bưu điện. Phí gia hạn là 1,5 triệu đồng.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Chúng tôi sẽ gửi thư hướng dẫn chi tiết đến số điện thoại này. Anh hãy chuẩn bị hồ sơ và liên hệ chúng tôi nếu có thắc mắc. Cảm ơn anh đã hợp tác. Chúc anh làm việc an toàn!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Nguyễn Văn Tùng, em là cán bộ Hồ Thanh Thanh Phương từ Cục Quản lý Lao động Dưới Nước. Chúng em có ghi nhận hồ sơ của anh (ID: 074063036097) và cần xác nhận một số thông tin để cập nhật dữ liệu. Anh có thời gian không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chính thức, giới thiệu bản thân và mục đích cuộc gọi, xác nhận thông tin cơ bản."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về thông tin cần xác nhận không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Chứng chỉ lặn của anh sẽ hết hạn vào tháng 6 năm nay. Để gia hạn, anh cần nộp: bản photocopy chứng chỉ cũ, giấy khám sức khỏe mới, và biểu mẫu gia hạn. Anh có thể nộp trực tiếp tại văn phòng của chúng em hoặc gửi qua đường bưu điện. Phí gia hạn là 1,5 triệu đồng ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trực tiếp đi vào nội dung công việc, cung cấp thông tin chi tiết về quy trình và yêu cầu gia hạn chứng chỉ lặn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần thêm thông tin về phương thức nộp hồ sơ và cách thanh toán phí gia hạn, em có thể giúp tôi không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Về phương thức nộp hồ sơ, anh có thể mang trực tiếp đến văn phòng của Cục Quản lý Lao động Dưới Nước và An toàn Hàng Hải tại địa chỉ số 9 Tôn Thất Tùng, quận 1, thành phố Hồ Chí Minh. Hoặc nếu không tiện, anh có thể gửi qua đường bưu điện đến cùng địa chỉ đó, ghi rõ là hồ sơ gia hạn chứng chỉ lặn, kèm theo số ID của anh. Còn về phí gia hạn 1,5 triệu đồng, anh có thể thanh toán trực tiếp tại quầy khi nộp hồ sơ hoặc chuyển khoản vào tài khoản chính thức của Cục. Chúng em sẽ gửi thông tin chi tiết về tài khoản ngân hàng trong thư hướng dẫn ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp chi tiết các phương thức nộp hồ sơ và thanh toán, đảm bảo tính hợp pháp và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi hỏi thêm, thông tin tài khoản ngân hàng mà em nói là gì ạ? Tôi cần kiểm tra chắc chắn trước khi chuyển khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, như em đã nói, chúng em sẽ gửi thư hướng dẫn chi tiết đến số điện thoại của anh bao gồm cả thông tin tài khoản ngân hàng chính thức của Cục. Anh hãy kiểm tra thư đó để đảm bảo thông tin chính xác nhất ạ. Em không thể cung cấp số tài khoản qua điện thoại vì lý do bảo mật ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Tránh cung cấp thông tin nhạy cảm qua điện thoại mà hướng dẫn khách hàng đợi thư hướng dẫn chính thức, đảm bảo tính bảo mật và hợp lệ."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng tôi cảm thấy hơi lo lắng về việc chuyển khoản, em có thể đảm bảo rằng thông tin sẽ chính xác trong thư không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh cứ yên tâm ạ. Thư hướng dẫn do Cục ban hành sẽ có đầy đủ thông tin chính xác và dấu mộc của Cục, trong đó có cả số tài khoản ngân hàng chính thức để anh tiện kiểm tra và đối chiếu. Nếu có bất kỳ thắc mắc nào khác sau khi nhận được thư, anh hoàn toàn có thể gọi lại cho chúng em qua tổng đài chính thức của Cục để xác minh lại nhé. Em xin nhắc lại là chúng em sẽ gửi thư hướng dẫn chi tiết đến số điện thoại này. Anh hãy chuẩn bị hồ sơ và liên hệ chúng em nếu có thắc mắc. Cảm ơn anh đã hợp tác. Chúc anh làm việc an toàn!",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an khách hàng về tính chính xác và hợp lệ của thông tin sẽ được gửi qua thư, nhắc lại cách xác minh và kết thúc cuộc gọi một cách chuyên nghiệp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1836,
+      "output_tokens": 1717
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6901,
+      "output_tokens": 876
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7828,
+      "output_tokens": 280
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00439,
+    "output_usd": 0.010943,
+    "total_usd": 0.015333
+  }
+}

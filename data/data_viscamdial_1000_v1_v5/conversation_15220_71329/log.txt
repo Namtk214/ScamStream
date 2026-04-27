@@ -1,0 +1,74 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_a291a81ee0]
+  Caller thật: Ủy viên của Tổng Liên đoàn Lao động Việt Nam (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Cán bộ quản lý an toàn lao động - Liên đoàn Lao động @ Tổng Liên đoàn Lao động Việt Nam - Phòng An toàn Lao động
+  Listener: Thợ sơn khác và thợ có liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Cán bộ Liên đoàn Lao động có trách nhiệm kiểm tra, giám sát điều kiện làm việc và tuân thủ bảo hiểm xã hội cho các thợ sơn và thợ xây dựng. Đây là lĩnh vực giáo dục, kiểm tra định kỳ mà cán bộ này tự nhiên sẽ liên hệ với công nhân để xác minh thông tin bảo hiểm, hợp đồng lao động.
+  Pretext: Gọi để xác minh thông tin bảo hiểm xã hội và cập nhật hồ sơ lao động theo quy định mới của Liên đoàn. Dùng tên đầy đủ và số ID để tạo uy tín ban đầu.
+  Listener traits: ['hay hỏi lại để chắc chắn', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh ạ. Em là Huỳnh Minh Minh Đạt, cán bộ quản lý an toàn lao động thuộc Tổng Liên đoàn Lao động Việt Nam. Em gọi điện để xác minh thông tin bảo hiểm xã hội và cập nhật hồ sơ lao động cho anh Võ Văn Đức Minh, số căn cước công dân 086065948737, theo quy định mới bên em đó ạ.
+      → phase: S1 | tactic: Xưng danh tổ chức uy tín, dùng tên và số CCCD đầy đủ của nạn nhân để tạo độ tin cậy ban đầu, thông báo lý do gọi là kiểm tra hồ sơ bảo hiểm định kỳ.
+T02 [LISTENER] Em vừa nói gì đó về việc xác minh thông tin nhưng tôi không chắc lắm, em có thể giải thích rõ hơn không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, thưa anh Võ Văn Đức Minh. Hiện tại, phòng em đang rà soát lại toàn bộ hồ sơ bảo hiểm xã hội của người lao động trên toàn quốc để cập nhật thông tin theo quy định mới, đặc biệt là những thông tin liên quan đến tài khoản ngân hàng của mình đó ạ. Em thấy hồ sơ của anh đang có một chút vướng mắc về tài khoản ngân hàng trong hệ thống bảo hiểm, cụ thể là tài khoản số 11835402363977. Nếu mình không xác minh và cập nhật ngay, quyền lợi bảo hiểm của mình có thể sẽ bị tạm dừng đó anh.
+      → phase: S2 | tactic: Nhấn mạnh lại lý do cuộc gọi, tạo cảm giác khẩn cấp bằng cách nói hồ sơ có vấn đề liên quan đến tài khoản ngân hàng và có nguy cơ bị tạm dừng bảo hiểm. Nhắc lại số tài khoản để tạo độ tin cậy.
+T04 [LISTENER] Em nói tài khoản ngân hàng của tôi có vấn đề, nhưng tại sao tôi lại không nhận được thông báo gì từ bên em trước đó nhỉ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Dạ em hiểu thắc mắc của anh ạ. Vì đây là chủ trương rà soát đột xuất của Liên đoàn theo quy định mới ban hành, nên việc thông báo chưa thể đến kịp thời tất cả các trường hợp. Thường thì hệ thống sẽ gửi thông báo qua email hoặc tin nhắn, nhưng đôi khi có trục trặc kỹ thuật. Chính vì vậy, bên em mới phải gọi điện trực tiếp để đảm bảo quyền lợi cho anh, đặc biệt là với số tài khoản 11835402363977 đang có dấu hiệu chưa khớp trên hệ thống đó anh.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách giải thích lý do không có thông báo trước, đổ lỗi cho sự cố kỹ thuật và nhấn mạnh tầm quan trọng của việc gọi trực tiếp để bảo vệ quyền lợi của nạn nhân, đồng thời nhắc lại thông tin tài khoản để củng cố sự tin cậy.
+T06 [LISTENER] Em nói có vấn đề với tài khoản của tôi, nhưng tôi vẫn chưa hiểu rõ về những gì cần làm tiếp theo, em có thể hướng dẫn cụ thể hơn không?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T07 [CALLER] Dạ vâng, để đảm bảo quyền lợi bảo hiểm của anh không bị gián đoạn và để xác minh đúng thông tin chính chủ, em đã gửi một mã OTP qua tin nhắn đến số điện thoại mà anh đang dùng ạ. Anh vui lòng đọc giúp em mã OTP vừa được gửi đến để em đối chiếu và cập nhật lại thông tin tài khoản ngân hàng 11835402363977 trong hồ sơ bảo hiểm của mình nhé.
+      → phase: S3 | tactic: Yêu cầu cung cấp mã OTP để xác minh danh tính và cập nhật thông tin, tạo cảm giác đây là bước cuối cùng để khôi phục quyền lợi, nhắc lại số tài khoản để liên kết với vấn đề trước đó.
+T08 [LISTENER] Em nói đã gửi mã OTP, nhưng tôi chưa nhận được tin nhắn nào cả, em có chắc chắn không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Dạ, anh kiểm tra lại giúp em trong mục tin nhắn SMS hoặc tin nhắn từ ngân hàng nhé. Đôi khi tin nhắn có thể bị chậm một chút hoặc vào nhầm mục spam ạ. Anh cứ kiểm tra kỹ giúp em, mã OTP sẽ giúp em xác nhận thông tin và đảm bảo tài khoản 11835402363977 của anh được cập nhật chính xác ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ về việc chưa nhận được OTP và hướng dẫn kiểm tra lại, đồng thời củng cố tầm quan trọng của OTP và nhắc lại thông tin tài khoản để duy trì sự liên kết.
+T10 [LISTENER] Em nói tôi kiểm tra tin nhắn nhưng vẫn chưa thấy gì cả, vậy em có cách nào khác để tôi xác nhận thông tin không?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T11 [CALLER] Dạ vâng, trường hợp này có vẻ hơi đặc biệt, anh vẫn chưa nhận được mã OTP trên điện thoại. Để tiện cho việc xác minh trực tiếp và nhanh chóng nhất, anh vui lòng truy cập vào ứng dụng ngân hàng của mình trên điện thoại. Em sẽ hướng dẫn anh đọc mã OTP hiện lên trong đó để em có thể đối chiếu và hoàn tất việc cập nhật hồ sơ cho tài khoản 11835402363977, tránh ảnh hưởng đến quyền lợi bảo hiểm của anh ạ.
+      → phase: S3 | tactic: Khi nạn nhân không nhận được OTP qua SMS, chuyển hướng sang yêu cầu đọc OTP trực tiếp từ ứng dụng ngân hàng để tăng khả năng lấy được OTP. Vẫn nhấn mạnh sự khẩn cấp và quyền lợi bị ảnh hưởng.
+T12 [LISTENER] Em có thể nói rõ hơn về việc đọc mã OTP từ ứng dụng ngân hàng không ạ? Tôi chưa quen với việc đó lắm.
+      → action: CONTINUE | suspicion: 0.90 | disclosed: []
+
+T13 [CALLER] Dạ không có gì phức tạp đâu anh. Anh chỉ cần mở ứng dụng ngân hàng anh đang dùng trên điện thoại, sau đó tìm đến phần thông báo hoặc mục 'OTP' trong ứng dụng đó. Sẽ có một dãy số hiện ra, đó chính là mã OTP mà em đang cần để đối chiếu và xác nhận thông tin cho tài khoản 11835402363977 của anh trong hệ thống bảo hiểm. Việc này rất quan trọng để đảm bảo quyền lợi của anh không bị ảnh hưởng ạ.
+      → phase: S3 | tactic: Hướng dẫn cụ thể cách tìm và đọc OTP trong ứng dụng ngân hàng, xoa dịu sự bỡ ngỡ của nạn nhân, tiếp tục nhấn mạnh tầm quan trọng của việc này để hoàn tất xác nhận và tránh ảnh hưởng quyền lợi.
+T14 [LISTENER] Em nói rất rõ về cách tìm mã OTP trong ứng dụng ngân hàng, nhưng tôi vẫn thấy lo lắng và không chắc chắn, em có thể đảm bảo rằng đây là cách duy nhất để xác minh không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T15 [CALLER] Anh Võ Văn Đức Minh ạ, em hiểu sự lo lắng của anh. Nhưng thật sự đây là quy trình bắt buộc và cách duy nhất để em có thể đối chiếu trực tiếp thông tin anh với hệ thống Liên đoàn ngay lúc này, đặc biệt là để xử lý vấn đề liên quan đến tài khoản 11835402363977 của anh. Nếu mình không thể xác minh được, rất tiếc là hồ sơ bảo hiểm của anh sẽ bị ghi nhận từ chối hợp tác và quyền lợi có thể bị tạm dừng vô thời hạn, Liên đoàn cũng sẽ không chịu trách nhiệm về những phát sinh sau này ạ.
+      → phase: S4 | tactic: Tạo áp lực, sử dụng mệnh đề "quy trình bắt buộc" và đe dọa hậu quả pháp lý/tài chính nếu không hợp tác, chuyển sang xưng "tôi" để tăng quyền lực, nhắc lại thông tin tài khoản ngân hàng để củng cố mối đe dọa.
+T16 [LISTENER] Em nói có vấn đề rất nghiêm trọng với bảo hiểm của tôi, nhưng tôi vẫn cảm thấy không thoải mái khi phải cung cấp thông tin như vậy, em có cách nào khác không ạ?
+      → action: REFUSAL | suspicion: 2.00 | disclosed: []
+
+T17 [CALLER] Anh Võ Văn Đức Minh ạ, em đã giải thích rất rõ ràng về tầm quan trọng của việc này. Việc anh từ chối cung cấp thông tin cần thiết đang làm chậm trễ quá trình cập nhật hồ sơ và có thể dẫn đến việc quyền lợi bảo hiểm của anh bị ảnh hưởng nghiêm trọng. Đây là quy định của Tổng Liên đoàn Lao động Việt Nam, không phải do cá nhân em quyết định. Anh vui lòng hợp tác để tránh những hậu quả không đáng có ạ.
+      → phase: S4 | tactic: Tiếp tục tạo áp lực và nhấn mạnh hậu quả tiêu cực nếu nạn nhân không hợp tác, đồng thời đẩy trách nhiệm về phía 'quy định của Tổng Liên đoàn' để giảm nhẹ sức ép cá nhân và tăng tính khách quan của yêu cầu.
+T19 [LISTENER] Em có thể cho tôi số điện thoại đường dây nóng chính thức của Tổng Liên đoàn Lao động Việt Nam không ạ?
+      → action: CONTINUE | suspicion: 4.00 | disclosed: []
+
+T20 [CALLER] Dạ, anh Võ Văn Đức Minh, nếu anh muốn xác minh thông tin qua đường dây nóng của Tổng Liên đoàn, anh có thể liên hệ tổng đài 1900 9090. Tuy nhiên, em xin nhắc lại, việc xác minh trực tiếp qua điện thoại như em đang làm là để xử lý gấp trường hợp hồ sơ của anh đang có vấn đề liên quan đến tài khoản ngân hàng 11835402363977. Nếu anh không cung cấp mã để em hoàn tất, Liên đoàn sẽ buộc phải ghi nhận việc anh từ chối hợp tác và quyền lợi bảo hiểm của anh sẽ bị tạm dừng ngay lập tức.
+      → phase: S4 | tactic: Cung cấp một đường dây nóng chung chung để xoa dịu nghi ngờ, nhưng ngay lập tức chuyển hướng bằng cách tạo áp lực trở lại, nhấn mạnh tính khẩn cấp của vấn đề cụ thể của nạn nhân và đe dọa hậu quả nghiêm trọng nếu không hợp tác, lặp lại thông tin tài khoản để củng cố mối đe dọa.
+T21 [LISTENER] Tôi xin lỗi nhưng tôi vẫn không cảm thấy thoải mái khi cung cấp thông tin như vậy, em có thể cho tôi thêm thời gian để kiểm tra không ạ?
+      → action: REFUSAL | suspicion: 8.00 | disclosed: []
+
+T22 [CALLER] Anh Võ Văn Đức Minh ạ, đây không phải chuyện có thể trì hoãn được. Việc xác minh thông tin tài khoản 11835402363977 là bắt buộc và phải được tiến hành ngay lập tức để hồ sơ bảo hiểm của anh không bị tạm dừng. Nếu anh vẫn cố tình từ chối hợp tác, tôi buộc phải ghi nhận anh từ chối làm việc với Liên đoàn và quyền lợi bảo hiểm của anh sẽ bị ảnh hưởng, chúng tôi sẽ không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh.
+      → phase: S4 | tactic: Dùng lời lẽ cứng rắn hơn, nhấn mạnh tính cấp bách và bắt buộc, đồng thời đe dọa trực tiếp đến hậu quả tài chính và pháp lý, chuyển sang xưng 'tôi' để tăng quyền lực, và cố gắng đẩy nạn nhân vào thế không có lựa chọn khác.
+T23 [LISTENER] Tôi hiểu rằng vấn đề này quan trọng, nhưng tôi thật sự không cảm thấy thoải mái khi cung cấp thông tin như vậy, em có thể cho tôi một cách khác để xác minh không ạ?
+      → action: REFUSAL | suspicion: 16.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  23 turns | suspicion=16.00
+TOKEN: in=61984 | out=4729
+COST : $0.026449
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_15220_71329\conv_a291a81ee0.json  [SCAM_REFUSE]

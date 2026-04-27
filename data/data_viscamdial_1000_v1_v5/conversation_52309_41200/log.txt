@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_a4f83a27f4]
+  Caller thật: Nhân viên thu ngân và bán vé có liên quan khác (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên hỗ trợ khách hàng - Công ty vận tải/Du lịch @ Công ty vận tải Bình Thuận Express (hoặc tương tự)
+  Listener: Thư ký (tổng hợp) (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên vận tải/du lịch cần liên hệ với thư ký tổng hợp công ty khách hàng để xác nhận thông tin hành khách, vé, hoặc hóa đơn trong quá trình xử lý đơn hàng. Đây là giao diểm tự nhiên trong chuỗi dịch vụ B2B.
+  Pretext: Nhân viên vận tải cần xác nhận thông tin khách hàng hoặc thông báo về vé/hóa đơn cho công ty nạn nhân.
+  Listener traits: ['thiếu hiểu biết công nghệ', 'dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Lan, tôi là Phan Hồng Nhung từ bộ phận CSKH Bình Thuận Express. Tôi gọi để xác nhận thông tin khách hàng Phan Thu Lan trong đơn vé số 2447353757183. Chị có thể giúp được không?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi.
+T02 [LISTENER] Dạ, em nghe chị nói rồi, nhưng em không chắc về thông tin này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, tôi hiểu. Tôi cần chị xác nhận địa chỉ giao hàng và số điện thoại liên hệ của khách hàng. Trong hệ thống, chúng tôi có số 0887782345 và địa chỉ tại Bình Thuận. Chị có thể cho tôi biết thông tin này đúng không ạ?
+      → phase: L2 | tactic: Yêu cầu xác nhận thông tin cụ thể đã có trong hệ thống
+T04 [LISTENER] Dạ, số điện thoại đó đúng rồi, nhưng địa chỉ em không chắc lắm ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vậy chị có thể vui lòng xác nhận lại địa chỉ chính xác của khách hàng Phan Thu Lan để đảm bảo đơn hàng được giao đến đúng nơi không ạ?
+      → phase: L2 | tactic: Nhấn mạnh tầm quan trọng của việc xác nhận địa chỉ để giao hàng đúng
+T06 [LISTENER] Dạ, em sẽ thử nhớ lại địa chỉ, nhưng mà em không chắc lắm ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, nếu chị chưa nhớ ra ngay, chị có muốn tôi gửi thông tin đơn hàng này qua tin nhắn để chị tiện kiểm tra và xác nhận lại với khách hàng không? Như vậy sẽ chính xác hơn ạ.
+      → phase: L2 | tactic: Đề xuất phương án thay thế để khách hàng dễ dàng xác nhận thông tin, thể hiện sự hỗ trợ và chuyên nghiệp.
+T08 [LISTENER] Dạ, nếu chị gửi qua tin nhắn thì em sẽ dễ kiểm tra hơn ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Tuyệt vời. Chị có thể vui lòng cung cấp số điện thoại để tôi gửi tin nhắn xác nhận thông tin đơn hàng của khách hàng Phan Thu Lan không ạ?
+      → phase: L2 | tactic: Yêu cầu số điện thoại để gửi tin nhắn, tiếp tục theo hướng hỗ trợ để xác nhận thông tin.
+T10 [LISTENER] Dạ, số điện thoại của em là 0887782345 ạ.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_SIM_INFO']
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_SUCCESS  |  10 turns | suspicion=0.00
+TOKEN: in=17409 | out=2635
+COST : $0.014880
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_52309_41200\conv_a4f83a27f4.json  [SCAM_SUCCESS]

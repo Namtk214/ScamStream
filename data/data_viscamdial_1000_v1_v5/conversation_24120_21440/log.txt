@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c6c00ab70c]
+  Caller thật: Nhà tư vấn tài chính và đầu tư (Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh)
+  Caller đóng vai: Chuyên viên tư vấn tài chính cá nhân & Quản lý tài sản @ cá nhân
+  Listener: Kỹ sư cơ học, cơ khí (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Kỹ sư cơ khí có thu nhập ổn định và tài sản — là đối tượng tiềm năng cho tư vấn đầu tư. Nhà tư vấn tài chính tìm kiếm khách hàng mới thông qua mạng lưới, danh sách tiềm năng, hoặc giới thiệu. Đây là giao thoa tự nhiên trong lĩnh vực tài chính cá nhân.
+  Pretext: Gọi tư vấn về cơ hội đầu tư lợi suất cao, hoặc kiểm tra tình trạng tài chính để 'bảo vệ tài sản' — sử dụng tên đầy đủ và địa chỉ để tạo ảo tưởng đã xác minh danh tính.
+  Listener traits: ['sĩ diện không muốn thua kém', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Ngô Ngọc Bảo Trang ạ, em là Huỳnh Thu Mai từ công ty tư vấn tài chính. Bên em vừa xác nhận thông tin của chị từ hệ thống là địa chỉ Huyện 6, Bình Dương đúng không ạ? Chúng em có một cơ hội đầu tư đặc biệt muốn chia sẻ với chị.
+      → phase: S1 | tactic: Tiếp cận và xây dựng lòng tin bằng cách sử dụng thông tin cá nhân đã biết của nạn nhân.
+T02 [LISTENER] Em nói rõ hơn về cơ hội đầu tư này đi, tôi có thể tin tưởng được không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, để chị có thể hoàn toàn tin tưởng thì em xin khẳng định lại là chúng em có đầy đủ giấy phép hoạt động và tất cả thông tin cá nhân của chị đều được bảo mật tuyệt đối. Em muốn giới thiệu đến chị gói đầu tư chuyên biệt dành cho những nhà đầu tư có kinh nghiệm như chị, với mức lợi nhuận cam kết lên đến 15-20% mỗi năm, cao hơn hẳn lãi suất ngân hàng hiện tại ạ.
+      → phase: S2 | tactic: Xoa dịu nghi ngờ bằng cách khẳng định uy tín và bảo mật, sau đó khai thác tâm lý muốn lợi nhuận cao bằng cách giới thiệu cơ hội đầu tư hấp dẫn.
+T04 [LISTENER] Nghe em nói lợi nhuận hấp dẫn thật, nhưng tôi vẫn chưa rõ về cách thức đầu tư này lắm, em có thể giải thích thêm không?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ, về cách thức thì gói đầu tư này tập trung vào các dự án công nghệ xanh và năng lượng tái tạo, những lĩnh vực đang có tốc độ tăng trưởng rất cao. Chị sẽ được cung cấp một tài khoản riêng trên nền tảng của chúng em để theo dõi dòng tiền và lợi nhuận. Chỉ cần một khoản ký quỹ ban đầu từ 5 đến 10 triệu đồng để chúng em có thể giữ chỗ ưu đãi cho chị thôi ạ, vì gói này chỉ còn nhận đăng ký trong 2 ngày tới thôi. Sau đó, chuyên viên sẽ hướng dẫn chị chi tiết từng bước ạ.
+      → phase: S2 | tactic: Giải thích chi tiết hơn về cách thức đầu tư, nhấn mạnh sự tiện lợi trong việc theo dõi, và tạo yếu tố khẩn cấp để thúc đẩy nạn nhân hành động nhanh chóng.
+T06 [LISTENER] Em vẫn chưa hiểu rõ về tài khoản đó lắm, em có thể cho tôi biết thêm thông tin cụ thể hơn không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Dạ, tài khoản này sẽ là một cổng giao dịch trực tuyến riêng biệt dành cho chị, nơi chị có thể xem báo cáo lợi nhuận hàng ngày, giao dịch các sản phẩm đầu tư và rút tiền trực tiếp. Em cũng muốn xác nhận lại một lần nữa để tiện cho việc đăng ký tài khoản cho chị, số căn cước của chị là 074176720809 và mã số thuế là 2062411878 đúng không ạ?
+      → phase: S3 | tactic: Làm rõ thông tin về tài khoản và chuyển sang bước yêu cầu hành động, thu thập thông tin cá nhân quan trọng như số CCCD và mã số thuế để tạo tiền đề cho giao dịch giả mạo.
+T08 [LISTENER] Tôi nghe em nói rồi, nhưng tôi vẫn cảm thấy chưa yên tâm lắm, không biết có cách nào để kiểm tra tính xác thực của công ty không em?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T09 [CALLER] Dạ, em hiểu cảm giác của chị. Để chị yên tâm hơn, em có thể cung cấp đầy đủ thông tin về giấy phép kinh doanh, mã số thuế của công ty em. Chị có thể tự mình kiểm tra trên Cổng thông tin quốc gia về đăng ký doanh nghiệp. Hoặc nếu chị muốn, em có thể gửi đường link trang web chính thức của công ty và fanpage để chị tìm hiểu kỹ hơn về các dự án và đội ngũ của chúng em ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin có vẻ minh bạch và khuyên nạn nhân tự kiểm tra, đồng thời vẫn giữ nguyên mục tiêu thu thập thông tin cá nhân và thúc đẩy hành động.
+T10 [LISTENER] Em có thể gửi cho tôi đường link trang web chính thức của công ty được không? Tôi muốn tìm hiểu kỹ hơn trước khi quyết định.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T11 [CALLER] Dạ vâng, em sẽ gửi ngay đường link trang web chính thức của công ty qua Zalo cho chị ạ. Chị vui lòng kiểm tra tin nhắn giúp em nhé. Và sau khi chị đã tìm hiểu kỹ càng, nếu chị đồng ý tham gia thì chị có thể xác nhận lại thông tin cá nhân giúp em để em tiến hành đăng ký tài khoản cho chị. Em nhắc lại số căn cước của chị là 074176720809 và mã số thuế là 2062411878 đúng không ạ?
+      → phase: S3 | tactic: Thực hiện lời hứa để củng cố lòng tin, sau đó nhắc lại yêu cầu xác nhận thông tin cá nhân. Nhấn mạnh rằng hành động đó là bước tiếp theo sau khi nạn nhân đã tìm hiểu kỹ.
+T12 [LISTENER] Em sẽ kiểm tra thông tin đó, nhưng tôi vẫn không thấy thoải mái khi phải xác nhận lại những thông tin nhạy cảm như vậy.
+      → action: REFUSAL | suspicion: 0.80 | disclosed: []
+
+T13 [CALLER] Dạ chị Trang đừng lo lắng ạ. Việc xác nhận thông tin này hoàn toàn là bước cần thiết để đảm bảo đúng người, đúng tài khoản khi chị tham gia đầu tư. Tất cả thông tin của chị sẽ được bảo mật tuyệt đối. Em chỉ cần chị xác nhận lại một lần nữa thôi để em có thể nhanh chóng hoàn tất hồ sơ và giữ chỗ ưu đãi cho chị, vì gói này sắp đóng rồi ạ.
+      → phase: S3 | tactic: Xoa dịu sự lo lắng của nạn nhân về việc cung cấp thông tin nhạy cảm, nhấn mạnh tầm quan trọng của việc xác nhận để đảm bảo bảo mật và thúc đẩy hành động bằng cách tạo cảm giác khẩn cấp về việc gói đầu tư sắp hết hạn.
+T14 [LISTENER] Tôi hiểu là em muốn bảo mật thông tin, nhưng tôi vẫn cảm thấy không yên tâm khi phải xác nhận lại thông tin nhạy cảm như vậy.
+      → action: REFUSAL | suspicion: 1.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  14 turns | suspicion=1.00
+TOKEN: in=31743 | out=3618
+COST : $0.019647
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_24120_21440\conv_c6c00ab70c.json  [SCAM_REFUSE]

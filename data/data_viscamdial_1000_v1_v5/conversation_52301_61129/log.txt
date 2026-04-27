@@ -1,0 +1,52 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_5d3e75c2f7]
+  Caller thật: Nhân viên thu ngân và bán vé (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên bán vé và thu ngân tại trạm dừng xe khách / điểm bán hàng nông sản @ Công ty vận tải Bình Minh hoặc HTX Mua bán nông sản địa phương
+  Listener: Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên bán vé/thu ngân thường tiếp xúc với nông dân khi họ đi chợ, giao hàng, hoặc mua vé xe. Lý do gọi điện tự nhiên: xác nhận đơn hàng, thông báo về lô hàng nông sản đã đặt, hoặc vấn đề thanh toán liên quan đến thẻ tín dụng mà nạn nhân từng dùng tại điểm bán vé.
+  Pretext: Xác nhận đơn hàng nông sản đã đặt, thông báo ngày giao hàng, hoặc kiểm tra thông tin thanh toán để cập nhật hóa đơn
+  Listener traits: ['lo lắng cho con cái', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Alo, tôi là Ngô Tiến Thế Hải, nhân viên HTX Bình Minh đây. Cho tôi hỏi đây có phải số điện thoại của chị Nguyễn Hồng Linh không ạ, số 0395682672 phải không chị?
+      → phase: L1 | tactic: Xưng danh, xác nhận tên và số điện thoại người nghe để đảm bảo đúng đối tượng
+T02 [LISTENER] Vâng, tôi là Nguyễn Hồng Linh, có việc gì em cần hỏi không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào chị Linh. Tôi gọi để thông báo lô cà chua mà chị đặt tuần trước sẽ được giao vào thứ Năm tuần này. Chị có nhận được tin nhắn SMS xác nhận về lịch giao hàng rồi chứ ạ?
+      → phase: L2 | tactic: Thông báo về đơn hàng và ngày giao hàng cụ thể, đồng thời xác nhận lại qua SMS để đảm bảo người nghe đã nhận thông tin.
+T04 [LISTENER] Tôi chưa nhận được tin nhắn nào về đơn hàng cả, em có thể nói rõ hơn không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] À, vậy ạ. Chị kiểm tra lại giúp tôi xem có tin nhắn từ HTX Bình Minh không nhé. Đơn hàng cà chua của chị là 20kg loại cà chua beef, giá 25.000đ/kg, tổng cộng 500.000đ, đúng không ạ?
+      → phase: L2 | tactic: Xác nhận lại chi tiết đơn hàng (sản phẩm, số lượng, giá tiền) để nhắc lại thông tin cho người nghe và tìm ra nguyên nhân không nhận được SMS.
+T06 [LISTENER] Em xác nhận lại thông tin đơn hàng nhưng không rõ lý do sao tôi không nhận được tin nhắn, có gì không ổn không em?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị yên tâm ạ. Có thể do hệ thống của mạng hơi chậm hoặc tin nhắn bị vào mục spam. Chúng tôi sẽ cố gắng gửi lại tin nhắn xác nhận cho chị. Còn về việc thanh toán, chị đã thanh toán chuyển khoản hay sẽ thanh toán khi nhận hàng ạ?
+      → phase: L2 | tactic: Trấn an người nghe về việc không nhận được tin nhắn, giải thích nguyên nhân có thể xảy ra và chuyển sang xác nhận phương thức thanh toán mà không yêu cầu thông tin nhạy cảm.
+T08 [LISTENER] Tôi sẽ thanh toán khi nhận hàng, nhưng em có thể cho tôi biết rõ hơn về quy trình giao hàng không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, chị cứ yên tâm ạ. Khi shipper của chúng tôi giao hàng đến nơi, chị kiểm tra đủ số lượng và chất lượng rồi mình thanh toán tiền mặt cho shipper là được ạ. Chị có cần tôi nhắc lại địa chỉ giao hàng không?
+      → phase: L3 | tactic: Thông báo rõ ràng về quy trình giao hàng và thanh toán COD, sau đó đề nghị xác nhận địa chỉ giao hàng để kết thúc cuộc gọi.
+T10 [LISTENER] Em không cần nhắc lại địa chỉ đâu, tôi nhớ rõ rồi. Chỉ là không biết lô hàng này có gì đặc biệt không em?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ không có gì đặc biệt đâu chị ạ, lô hàng cà chua beef này là loại mới về của HTX mình thôi. Vâng, vậy là chị đã nắm rõ thông tin rồi đúng không ạ? Chị nhớ chuẩn bị nhận hàng vào thứ Năm tới nhé.
+      → phase: L3 | tactic: Trấn an người nghe rằng lô hàng không có gì bất thường, sau đó xác nhận lại việc người nghe đã nắm rõ thông tin và nhắc lại lịch hẹn để kết thúc cuộc gọi một cách tự nhiên.
+T12 [LISTENER] Vâng, tôi đã nắm rõ thông tin, cảm ơn em nhiều nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ không có gì đâu ạ. Cảm ơn chị đã ủng hộ HTX Bình Minh ạ. Chúc chị một ngày tốt lành!
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự sau khi mục đích đã hoàn thành và người nghe đã xác nhận nắm rõ thông tin.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  13 turns | suspicion=0.00
+TOKEN: in=24317 | out=2579
+COST : $0.014682
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_52301_61129\conv_5d3e75c2f7.json  [CALLER_END]

@@ -1,0 +1,265 @@
+{
+  "conversation_id": "conv_6529b7c4b9",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0056",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Phan Đức Thế Cường",
+    "fake_age": 35,
+    "real_occupation": "Kỹ thuật viên khảo sát đất đai",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên kinh doanh / Tư vấn dự án bất động sản",
+    "caller_org": "Công ty Tư vấn và Phát triển Bất động sản (hoặc cá nhân đại lý bất động sản tự do)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa là nhân viên kinh doanh của công ty bất động sản, thông báo về dự án khảo sát đất tại Huyện 9, TP.HCM (địa chỉ của nạn nhân). Yêu cầu thanh toán phí khảo sát, định giá, hoặc cọc dự án để 'giữ chỗ' hoặc 'xử lý nhanh hồ sơ'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BALANCE",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên kinh doanh công ty bất động sản, gọi trực tiếp tên 'Anh Xuân Nam' (dùng VIC_FULLNAME), nhắc đến dự án khảo sát đất tại 'Huyện 9' (VIC_ADDRESS). Tạo ấn tượng là cuộc gọi chính thức từ công ty uy tín."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp — 'Dự án rất hot, chỉ còn 2-3 lô đất, hôm nay là hạn chót để giữ chỗ'. Hoặc: 'Hệ thống đã ghi nhận tài khoản của anh (VIC_BANK_ACCOUNT) trong danh sách ưu tiên, nhưng cần xác nhận ngay hôm nay'. Tạo sự tín tưởng bằng cách nêu con số cụ thể (số tài khoản, địa chỉ)."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chuyển tiền cọc/phí khảo sát vào tài khoản công ty (thực chất là tài khoản của scammer). Số tiền: 5-20 triệu đồng (một phần của VIC_BALANCE 67 triệu). Hướng dẫn chuyển qua ngân hàng hoặc ứng dụng mobile banking để tránh để lại bằng chứng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer sẽ nói 'Anh hãy kiểm tra lại email công ty gửi' hoặc 'Tôi sẽ gửi hợp đồng qua tin nhắn' (gửi giả mạo). Nếu nạn nhân đã chuyển tiền, scammer sẽ mất tích hoặc nói 'Đang xử lý hồ sơ, vui lòng đợi thông báo'."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên khảo sát đất đai thường làm việc trực tiếp với các chủ đầu tư, công ty dịch vụ kinh doanh bất động sản để cung cấp báo cáo địa chất, định giá đất. Người quản lý dịch vụ kinh doanh là người quyết định đầu tư, mua bán, hoặc ký kết hợp đồng dự án."
+  },
+  "listener_card": {
+    "listener_id": "lis_0056",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1999,
+      "age": 26,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "17270",
+      "title": "Dịch vụ kinh doanh",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Công Xuân Nam",
+      "VIC_ID_DOC": "079099860245",
+      "VIC_ADDRESS": "Huyện 9, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Dịch vụ kinh doanh",
+      "VIC_CONTACT": "0816392698",
+      "VIC_TAX_SOCIAL_ID": "8241306880"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "3604",
+      "VIC_CREDENTIAL": "255384",
+      "VIC_SIM_INFO": "0816392698",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "54117955856",
+      "VIC_CARD_DATA": "4369 **** **** 3479",
+      "VIC_BALANCE": "67 triệu đồng",
+      "VIC_ASSET": "303 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Công Xuân Nam",
+    "VIC_CONTACT": "0816392698",
+    "VIC_BALANCE": "67 triệu đồng",
+    "VIC_ADDRESS": "Huyện 9, TP Hồ Chí Minh",
+    "VIC_BANK_ACCOUNT": "54117955856"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh / Tư vấn dự án bất động sản",
+    "caller_org": "Công ty Tư vấn và Phát triển Bất động sản (hoặc cá nhân đại lý bất động sản tự do)",
+    "scenario_context": "Kỹ thuật viên khảo sát đất đai thường làm việc trực tiếp với các chủ đầu tư, công ty dịch vụ kinh doanh bất động sản để cung cấp báo cáo địa chất, định giá đất. Người quản lý dịch vụ kinh doanh là người quyết định đầu tư, mua bán, hoặc ký kết hợp đồng dự án.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa là nhân viên kinh doanh của công ty bất động sản, thông báo về dự án khảo sát đất tại Huyện 9, TP.HCM (địa chỉ của nạn nhân). Yêu cầu thanh toán phí khảo sát, định giá, hoặc cọc dự án để 'giữ chỗ' hoặc 'xử lý nhanh hồ sơ'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BALANCE",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên kinh doanh công ty bất động sản, gọi trực tiếp tên 'Anh Xuân Nam' (dùng VIC_FULLNAME), nhắc đến dự án khảo sát đất tại 'Huyện 9' (VIC_ADDRESS). Tạo ấn tượng là cuộc gọi chính thức từ công ty uy tín."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp — 'Dự án rất hot, chỉ còn 2-3 lô đất, hôm nay là hạn chót để giữ chỗ'. Hoặc: 'Hệ thống đã ghi nhận tài khoản của anh (VIC_BANK_ACCOUNT) trong danh sách ưu tiên, nhưng cần xác nhận ngay hôm nay'. Tạo sự tín tưởng bằng cách nêu con số cụ thể (số tài khoản, địa chỉ)."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chuyển tiền cọc/phí khảo sát vào tài khoản công ty (thực chất là tài khoản của scammer). Số tiền: 5-20 triệu đồng (một phần của VIC_BALANCE 67 triệu). Hướng dẫn chuyển qua ngân hàng hoặc ứng dụng mobile banking để tránh để lại bằng chứng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer sẽ nói 'Anh hãy kiểm tra lại email công ty gửi' hoặc 'Tôi sẽ gửi hợp đồng qua tin nhắn' (gửi giả mạo). Nếu nạn nhân đã chuyển tiền, scammer sẽ mất tích hoặc nói 'Đang xử lý hồ sơ, vui lòng đợi thông báo'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty bất động sản thực sự cần liên hệ với chủ đầu tư / quản lý dịch vụ kinh doanh để thảo luận về dự án khảo sát đất, định giá, hoặc yêu cầu cung cấp thông tin địa chính.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng với tên công ty, bộ phận (VD: 'Công ty ABC, phòng Kinh doanh, em là Thảo'). Giới thiệu mục đích gọi một cách chuyên nghiệp. Xác nhận: 'Anh có phải là ông Đinh Công Xuân Nam, quản lý tại công ty XYZ không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về dự án — vị trí, diện tích, mục đích khảo sát, thời gian dự kiến, chi phí dịch vụ, hình thức thanh toán (hợp đồng + hóa đơn). Nếu cần, sẽ gửi tài liệu chính thức qua email hoặc bộ phận pháp lý công ty."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác định rõ các bước tiếp theo (ký hợp đồng, thanh toán qua chuyển khoản chính thức, cung cấp tài liệu pháp lý). Để lại thông tin liên hệ chính thức, số hotline công ty. Chào tạm biệt một cách chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Đinh Công Xuân Nam, tôi là Phan Đức Thế Cường, nhân viên kinh doanh của Công ty Tư vấn và Phát triển Bất động sản. Tôi gọi để thông báo về dự án khảo sát và định giá đất tại Huyện 9, TP. Hồ Chí Minh mà công ty chúng tôi đang triển khai.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và sử dụng thông tin VIC_FULLNAME, VIC_ADDRESS để tạo sự tin cậy ngay từ đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã gọi, nhưng em chưa rõ thông tin chi tiết về dự án này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Nam yên tâm. Dự án này là một chương trình ưu đãi đặc biệt dành cho các chủ sở hữu đất tại Huyện 9, nhằm hỗ trợ định giá lại tài sản dựa trên biến động thị trường, đặc biệt là với tài khoản ngân hàng 54117955856 của anh đã được hệ thống của chúng tôi ghi nhận trong danh sách ưu tiên. Đây là cơ hội tốt để anh cập nhật giá trị thực của đất mà không mất nhiều thời gian tìm hiểu.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý, tạo cảm giác gấp gáp và tin tưởng bằng cách nhắc đến VIC_BANK_ACCOUNT và lợi ích trực tiếp, đồng thời nhấn mạnh tính ưu tiên."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thấy thông tin tài khoản ngân hàng của em ở đâu cả, anh có thể giải thích rõ hơn về chương trình này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, về việc tài khoản thì có thể lúc đăng ký thông tin khảo sát, anh đã không để ý kỹ. Nhưng điều quan trọng là đây là chương trình giới hạn, công ty chúng tôi chỉ còn 2-3 suất cuối cùng cho việc khảo sát và định giá miễn phí này thôi. Hôm nay cũng là ngày cuối cùng để anh có thể xác nhận tham gia và giữ chỗ, nếu không là lỡ mất cơ hội đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về thông tin tài khoản, đồng thời tăng cường yếu tố khẩn cấp, tạo áp lực thời gian để nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng anh có thể cho em biết thêm về những lợi ích cụ thể khi tham gia khảo sát này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, khi tham gia khảo sát, anh sẽ nhận được một báo cáo định giá chi tiết, chuyên nghiệp từ công ty chúng tôi với giá trị thị trường cập nhật nhất. Điều này không chỉ giúp anh nắm rõ tài sản của mình mà còn là cơ sở vững chắc nếu sau này anh có ý định mua bán hoặc thế chấp. Đặc biệt, nếu anh xác nhận ngay hôm nay, anh sẽ được ưu tiên xử lý hồ sơ nhanh chóng, tránh trường hợp phải chờ đợi lâu.",
+      "current_phase": "S2",
+      "tactic_hint": "Tập trung giải thích lợi ích cụ thể, trấn an nạn nhân và khuyến khích hành động nhanh chóng để duy trì sự khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe có vẻ hấp dẫn quá anh ạ, nhưng em vẫn hơi băn khoăn về độ tin cậy của công ty mình, anh có thể cho em biết thêm thông tin được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam hoàn toàn có thể yên tâm về uy tín của công ty chúng tôi. Chúng tôi là đơn vị hàng đầu trong lĩnh vực tư vấn và phát triển bất động sản, với nhiều năm kinh nghiệm và đã thực hiện hàng trăm dự án thành công. Nếu anh cần, tôi có thể gửi cho anh một đường dẫn đến trang web chính thức của công ty hoặc mã số pháp lý để anh tiện tra cứu và kiểm tra. Tuy nhiên, như tôi đã nói, để kịp tiến độ ưu đãi thì anh cần xác nhận sớm ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, khẳng định uy tín công ty và đưa ra gợi ý cung cấp thông tin kiểm chứng (mà thực tế sẽ là giả mạo). Đồng thời tái khẳng định sự khẩn cấp để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất muốn kiểm tra thông tin công ty anh trước khi quyết định, anh có thể gửi cho em đường dẫn hoặc mã số pháp lý được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự cẩn trọng của anh. Tuy nhiên, nếu anh cần kiểm tra chi tiết thì sẽ mất thời gian và anh sẽ bỏ lỡ cơ hội cuối cùng để hưởng ưu đãi. Để anh không bỏ lỡ chương trình đặc biệt này, công ty chúng tôi có một chính sách linh hoạt là anh chỉ cần đặt trước một khoản cọc nhỏ, khoảng 5 triệu đồng để giữ chỗ và xem như phí xử lý hồ sơ ban đầu. Khoản này sẽ được khấu trừ trực tiếp vào các dịch vụ sau này nếu anh tiếp tục sử dụng.",
+      "current_phase": "S3",
+      "tactic_hint": "Bỏ qua yêu cầu kiểm tra của nạn nhân, chuyển hướng sang yêu cầu đặt cọc ngay để 'giữ chỗ' và nhấn mạnh số tiền nhỏ (5 triệu đồng) để giảm gánh nặng tâm lý và tạo cảm giác không rủi ro."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy khoản cọc này vẫn có vẻ rủi ro đấy ạ, anh có thể bảo em biết liệu có cách nào xác nhận được thông tin công ty trước khi đặt cọc không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, việc kiểm tra thông tin công ty là điều chính đáng. Nhưng như tôi đã nói, nếu anh muốn kiểm tra kỹ lưỡng thì sẽ tốn rất nhiều thời gian, mà cơ hội của anh cũng sẽ mất đi. Anh có thể xem đây là một khoản phí cam kết nhỏ để chứng tỏ thiện chí tham gia của mình. Khoản này sẽ được công ty chúng tôi đảm bảo hoàn lại 100% nếu sau khi kiểm tra xong, anh cảm thấy không hài lòng với dịch vụ. Đây là một quy định chặt chẽ để bảo vệ quyền lợi của khách hàng như anh.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách xoa dịu lo ngại, nhấn mạnh 'phí cam kết' hoặc 'phí thiện chí' và đưa ra lời hứa hoàn tiền để giảm thiểu cảm giác rủi ro, đồng thời vẫn giữ được yếu tố khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy băn khoăn về khoản cọc này, liệu có cách nào khác để em có thể tham gia mà không cần phải đặt cọc ngay không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam, nếu anh không muốn đặt cọc, tôi hiểu. Nhưng để đảm bảo anh không mất quyền lợi vì hết suất ưu đãi, tôi sẽ cố gắng trao đổi với bộ phận kinh doanh để gia hạn thêm cho anh đến sáng mai thôi. Anh hãy suy nghĩ kỹ, vì cơ hội này chỉ đến một lần. Sáng mai tôi sẽ gọi lại để hỏi ý kiến cuối cùng của anh nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Giả vờ nhượng bộ, cho thêm thời gian ngắn ngủi để suy nghĩ, nhưng vẫn giữ yếu tố khẩn cấp và áp lực tâm lý để nạn nhân cảm thấy họ đang bỏ lỡ một cơ hội."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1846,
+      "output_tokens": 1705
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 16045,
+      "output_tokens": 1440
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 16412,
+      "output_tokens": 542
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007517,
+    "output_usd": 0.01245,
+    "total_usd": 0.019967
+  }
+}

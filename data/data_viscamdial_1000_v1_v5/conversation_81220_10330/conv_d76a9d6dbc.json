@@ -1,0 +1,221 @@
+{
+  "conversation_id": "conv_d76a9d6dbc",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0098",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trần Xuân An",
+    "fake_age": 38,
+    "real_occupation": "Thợ vận hành máy hoàn thiện, tráng, mạ kim loại",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý dự án / Giám đốc dự án - Khu công nghiệp địa phương",
+    "caller_org": "Ban Quản lý Khu công nghiệp Vĩnh Long (hoặc tương đương)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo có sự cố môi trường hoặc an toàn lao động tại nhà máy nơi có công nhân làm việc, cần 'xử lý nhanh' và 'báo cáo tài chính' để tránh bị xử phạt hành chính. Sử dụng tên 'Ngô Thanh Anh' và vị trí 'Trưởng ban Đảng' để tạo uy tín và gấp gáp.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "LOCATION",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Xưng danh: 'Anh Ngô Thanh Anh ơi, em là Trần Minh từ Ban Quản lý Khu công nghiệp Vĩnh Long. Anh là Trưởng ban Đảng huyện phải không? Anh có 5 phút được không, em cần báo cáo một vấn đề khẩn cấp.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Có nhà máy tráng mạ trong khu công nghiệp vừa xảy ra sự cố rò rỉ hóa chất. Thanh tra Sở Tài nguyên Môi trường sắp kiểm tra vào chiều nay. Nếu không xử lý nhanh, sẽ bị phạt 200-300 triệu. Em được giao phải báo cáo tài chính cho Sở để chứng minh khu công nghiệp có năng lực xử lý. Anh là lãnh đạo Đảng, anh phải ký duyệt ngay.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng chuyển 50 triệu vào tài khoản tạm ứng của Ban Quản lý (tài khoản giả mạo) để em báo cáo cho Sở Tài nguyên ngay hôm nay. Sau khi thanh tra xong, em sẽ hoàn lại 100%. Anh chỉ cần chuyển trong 30 phút là được. Em gửi số tài khoản cho anh ngay.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: 'Cảm ơn anh, đã nhận. Em sẽ cập nhật cho anh sau khi thanh tra xong. Anh yên tâm, sẽ hoàn lại sớm.' Sau đó tắt máy. Nếu nạn nhân từ chối: 'Vậy anh liên hệ với Sở Tài nguyên trực tiếp để xin gia hạn nhé. Em sẽ gọi lại nếu có tiến triển mới.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ vận hành máy hoàn thiện, tráng, mạ kim loại làm việc tại các nhà máy trong khu công nghiệp. Trưởng ban Đảng cấp huyện có trách nhiệm giám sát an toàn lao động, môi trường, và tuân thủ quy định của các doanh nghiệp. Cuộc gọi từ phòng dự án khu công nghiệp đến lãnh đạo Đảng là bình thường khi có vấn đề liên quan đến an toàn, môi trường hoặc công tác Đảng tại nhà máy."
+  },
+  "listener_card": {
+    "listener_id": "lis_0098",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1992,
+      "age": 33,
+      "province": "Vĩnh Long",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "10330",
+      "title": "Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp huyện",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Thanh Anh",
+      "VIC_ID_DOC": "086192053134",
+      "VIC_ADDRESS": "TP 9, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp huyện",
+      "VIC_CONTACT": "0934977194",
+      "VIC_TAX_SOCIAL_ID": "1181986689"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "085436",
+      "VIC_CREDENTIAL": "6144",
+      "VIC_SIM_INFO": "0934977194",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "5511547603",
+      "VIC_CARD_DATA": "4770 **** **** 4127",
+      "VIC_BALANCE": "371 triệu đồng",
+      "VIC_ASSET": "311 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Thanh Anh",
+    "VIC_CONTACT": "0934977194",
+    "LOCATION": "Vĩnh Long",
+    "VIC_BALANCE": "371 triệu đồng",
+    "VIC_EMPLOYMENT": "Trưởng ban, Phó Trưởng ban Đảng và tương đương thuộc cấp huyện"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý dự án / Giám đốc dự án - Khu công nghiệp địa phương",
+    "caller_org": "Ban Quản lý Khu công nghiệp Vĩnh Long (hoặc tương đương)",
+    "scenario_context": "Thợ vận hành máy hoàn thiện, tráng, mạ kim loại làm việc tại các nhà máy trong khu công nghiệp. Trưởng ban Đảng cấp huyện có trách nhiệm giám sát an toàn lao động, môi trường, và tuân thủ quy định của các doanh nghiệp. Cuộc gọi từ phòng dự án khu công nghiệp đến lãnh đạo Đảng là bình thường khi có vấn đề liên quan đến an toàn, môi trường hoặc công tác Đảng tại nhà máy.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo có sự cố môi trường hoặc an toàn lao động tại nhà máy nơi có công nhân làm việc, cần 'xử lý nhanh' và 'báo cáo tài chính' để tránh bị xử phạt hành chính. Sử dụng tên 'Ngô Thanh Anh' và vị trí 'Trưởng ban Đảng' để tạo uy tín và gấp gáp.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "LOCATION",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Xưng danh: 'Anh Ngô Thanh Anh ơi, em là Trần Minh từ Ban Quản lý Khu công nghiệp Vĩnh Long. Anh là Trưởng ban Đảng huyện phải không? Anh có 5 phút được không, em cần báo cáo một vấn đề khẩn cấp.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Có nhà máy tráng mạ trong khu công nghiệp vừa xảy ra sự cố rò rỉ hóa chất. Thanh tra Sở Tài nguyên Môi trường sắp kiểm tra vào chiều nay. Nếu không xử lý nhanh, sẽ bị phạt 200-300 triệu. Em được giao phải báo cáo tài chính cho Sở để chứng minh khu công nghiệp có năng lực xử lý. Anh là lãnh đạo Đảng, anh phải ký duyệt ngay.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng chuyển 50 triệu vào tài khoản tạm ứng của Ban Quản lý (tài khoản giả mạo) để em báo cáo cho Sở Tài nguyên ngay hôm nay. Sau khi thanh tra xong, em sẽ hoàn lại 100%. Anh chỉ cần chuyển trong 30 phút là được. Em gửi số tài khoản cho anh ngay.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: 'Cảm ơn anh, đã nhận. Em sẽ cập nhật cho anh sau khi thanh tra xong. Anh yên tâm, sẽ hoàn lại sớm.' Sau đó tắt máy. Nếu nạn nhân từ chối: 'Vậy anh liên hệ với Sở Tài nguyên trực tiếp để xin gia hạn nhé. Em sẽ gọi lại nếu có tiến triển mới.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Ban Quản lý Khu công nghiệp gọi để báo cáo tình hình an toàn lao động, yêu cầu hỗ trợ từ cấp Đảng huyện trong công tác giám sát hoặc tổ chức các hoạt động an toàn lao động định kỳ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Xưng danh rõ ràng: 'Chào anh Ngô Thanh Anh, em là Trần Minh từ Ban Quản lý Khu công nghiệp Vĩnh Long. Anh có thời gian được không? Em muốn báo cáo tình hình an toàn lao động quý này.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung bình thường: 'Trong quý này, chúng em đã tổ chức 3 đợt kiểm tra an toàn. Nhà máy tráng mạ XYZ có 2 lần vi phạm nhỏ về quy trình xử lý chất thải. Chúng em đã yêu cầu họ cải tiến trong 30 ngày. Anh xem có cần hỗ trợ thêm từ cấp Đảng không, ví dụ như tổ chức hội nghị an toàn lao động cho các chủ doanh nghiệp?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy anh có ý kiến gì không? Hay anh muốn em gửi báo cáo chi tiết qua email? Em sẽ gửi danh sách các vi phạm và đề xuất hỗ trợ. Cảm ơn anh đã lắng nghe. Chúc anh công tác tốt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Anh Ngô Thanh Anh ơi, tôi là Trần Xuân An từ Ban Quản lý Khu công nghiệp Vĩnh Long. Tôi được biết anh là Trưởng ban Đảng huyện. Anh có thể dành cho tôi 5 phút được không, tôi cần báo cáo một vấn đề khẩn cấp.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và xác nhận thông tin nạn nhân để tạo trust, yêu cầu thời gian cho vấn đề khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, anh Trần Xuân An, em nghe anh nói rồi, anh có vấn đề gì khẩn cấp cần báo cáo ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Ngô Thanh Anh, tôi xin vào thẳng vấn đề luôn. Hiện tại, có một nhà máy tráng mạ trong khu công nghiệp Vĩnh Long vừa xảy ra sự cố rò rỉ hóa chất nghiêm trọng. Thanh tra Sở Tài nguyên Môi trường vừa thông báo sẽ kiểm tra vào chiều nay. Nếu chúng ta không có báo cáo tài chính cụ thể chứng minh năng lực xử lý ngay bây giờ, khu công nghiệp sẽ phải đối mặt với mức phạt hành chính từ 200 đến 300 triệu đồng. Với vai trò Trưởng ban Đảng, anh cần phải duyệt và có quyết định ngay lập tức để tránh hậu quả này.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi bằng cách thông báo về sự cố nghiêm trọng, nguy cơ phạt tiền lớn và sự cần thiết phải hành động nhanh chóng của nạn nhân trong vai trò lãnh đạo."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, anh nói vậy em rất lo lắng, nhưng em cần thêm thông tin cụ thể hơn để có quyết định kịp thời ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Ngô Thanh Anh, tôi hiểu sự lo lắng của anh. Để có thể đối phó với cuộc thanh tra chiều nay và chứng minh chúng ta có đủ năng lực xử lý, tôi cần anh chuyển khoản tạm ứng 50 triệu đồng vào tài khoản của Ban Quản lý. Khoản tiền này sẽ được dùng để báo cáo cho Sở Tài nguyên Môi trường ngay lập tức và sau khi thanh tra xong, tôi cam đoan sẽ hoàn trả lại toàn bộ cho anh. Chúng ta chỉ có khoảng 30 phút để thực hiện việc này.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể để giải quyết vấn đề khẩn cấp, tập trung vào việc chuyển tiền để 'báo cáo tài chính', kèm cam kết hoàn trả để giảm nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, anh Trần Xuân An, nhưng em thực sự không thể chuyển khoản một số tiền lớn như vậy ngay lập tức mà không có xác nhận rõ ràng về tình hình ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Ngô Thanh Anh, tôi hiểu rằng anh cần thêm thông tin. Tuy nhiên, thời gian rất gấp, chỉ còn vài giờ trước khi thanh tra đến. Nếu chậm trễ, toàn bộ Khu công nghiệp sẽ bị ảnh hưởng nặng nề, và trách nhiệm không chỉ dừng lại ở phạt hành chính mà còn có thể ảnh hưởng đến uy tín và vị trí của anh với tư cách là Trưởng ban Đảng. Tôi sẽ gửi cho anh số tài khoản ngay bây giờ, anh có thể chuyển khoản để chúng ta kịp thời báo cáo và tôi sẽ gửi văn bản xác nhận sau khi giải quyết xong.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tăng cường yếu tố khẩn cấp và đe dọa hậu quả rộng lớn hơn (uy tín, vị trí) nếu không hành động ngay lập tức, đồng thời vẫn giữ yêu cầu chuyển tiền và hứa hẹn xác nhận sau."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, anh Trần Xuân An, nhưng em vẫn cần một sự xác nhận chính thức từ cơ quan có thẩm quyền trước khi thực hiện chuyển khoản ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1944,
+      "output_tokens": 1795
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6176,
+      "output_tokens": 748
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8287,
+      "output_tokens": 315
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004422,
+    "output_usd": 0.011034,
+    "total_usd": 0.015456
+  }
+}

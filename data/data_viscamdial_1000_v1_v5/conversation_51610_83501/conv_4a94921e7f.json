@@ -1,0 +1,228 @@
+{
+  "conversation_id": "conv_4a94921e7f",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0010",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lê Thu Thị Hương",
+    "fake_age": 29,
+    "real_occupation": "Nhà chiêm tinh, nhà tướng số và những người có liên quan đến tâm linh khác",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Tư vấn phong thủy và an toàn hàng hải cho chủ tàu",
+    "caller_org": "cá nhân tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa tư vấn phong thủy hàng hải, nói rằng đã được chủ tàu hoặc thuyền trưởng giới thiệu. Sử dụng tên đầy đủ 'Vũ Quang Gia Cường' để tạo ảo tưởng đã xác minh thông tin, sau đó cảnh báo về 'dấu hiệu xấu' trong tử vi hoặc phong thủy của nạn nhân, yêu cầu thanh lọc vận mệnh bằng cách 'đóng góp từ thiện' hoặc 'mua bùa hộ mệnh'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Thầy Lâm, tư vấn phong thủy hàng hải', nói rằng vừa được Thuyền trưởng Hùng (hoặc tên chủ tàu quen thuộc) giới thiệu. Xác nhận tên 'Vũ Quang Gia Cường' để tạo độ tin cậy cao: 'Vâng, em là anh Cường phải không? Thuyền trưởng Hùng nói rằng anh là lái tàu chính giỏi của tàu, tôi đã xem lịch anh rồi.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + ham lợi: 'Anh ơi, tôi vừa xem tử vi của anh, tháng này anh có dấu hiệu rất xấu — Sao Hỏa chiếm vị trí tài lộc, rất dễ gặp tai nạn trên biển hoặc mất tiền. Nhưng may mắn là tôi có thể giúp anh 'hóa giải' bằng cách thực hiện nghi lễ đặc biệt. Thuyền trưởng Hùng cũng đã làm theo lời tôi, tháng này tàu ông ấy chuyến nào cũng bình an.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động thanh toán: 'Để hóa giải, anh cần đóng góp 3 triệu đồng vào tài khoản từ thiện của chùa Khai Phúc (hoặc tên tổ chức giả). Hoặc anh có thể mua bộ bùa hộ mệnh giá 2,5 triệu. Tôi sẽ ghi danh anh vào sổ cầu siêu của chùa, đảm bảo anh sẽ bình an cả năm.' — Cung cấp số tài khoản ngân hàng giả hoặc số điện thoại để chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Thôi anh, tôi cũng chỉ là tốt tâm nhắc nhở. Nhưng nếu anh không hóa giải, tháng sau anh sẽ hối hận. Thuyền trưởng Hùng bây giờ đã yên tâm rồi, còn anh...' — tạo tâm lý hối tiếc. Nếu thành công, scammer sẽ biến mất hoặc gọi lại vài ngày sau để yêu cầu thêm tiền cho 'nghi lễ lần 2'."
+        }
+      ]
+    },
+    "scenario_context": "Nhà chiêm tinh/tướng số thường được các chủ tàu, thuyền trưởng tìm kiếm để xem ngày tốt khởi hành, phòng chống rủi ro trên biển. Người lái tàu là đối tượng tiềm năng vì họ tin vào phong thủy, thuyền trưởng thường yêu cầu họ tìm hiểu tử vi trước khi xuất khẩu."
+  },
+  "listener_card": {
+    "listener_id": "lis_0010",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1998,
+      "age": 27,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "83501",
+      "title": "Người lái tàu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Quang Gia Cường",
+      "VIC_ID_DOC": "074098702737",
+      "VIC_ADDRESS": "Quận 12, Bình Dương",
+      "VIC_EMPLOYMENT": "Người lái tàu",
+      "VIC_CONTACT": "0811884651",
+      "VIC_TAX_SOCIAL_ID": "9437625010"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "773283",
+      "VIC_CREDENTIAL": "3467",
+      "VIC_SIM_INFO": "0811884651",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2681686017037",
+      "VIC_CARD_DATA": "4712 **** **** 4830",
+      "VIC_BALANCE": "38 triệu đồng",
+      "VIC_ASSET": "267 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Quang Gia Cường",
+    "VIC_CONTACT": "0811884651",
+    "VIC_EMPLOYMENT": "Người lái tàu"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Tư vấn phong thủy và an toàn hàng hải cho chủ tàu",
+    "caller_org": "cá nhân tự do",
+    "scenario_context": "Nhà chiêm tinh/tướng số thường được các chủ tàu, thuyền trưởng tìm kiếm để xem ngày tốt khởi hành, phòng chống rủi ro trên biển. Người lái tàu là đối tượng tiềm năng vì họ tin vào phong thủy, thuyền trưởng thường yêu cầu họ tìm hiểu tử vi trước khi xuất khẩu.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa tư vấn phong thủy hàng hải, nói rằng đã được chủ tàu hoặc thuyền trưởng giới thiệu. Sử dụng tên đầy đủ 'Vũ Quang Gia Cường' để tạo ảo tưởng đã xác minh thông tin, sau đó cảnh báo về 'dấu hiệu xấu' trong tử vi hoặc phong thủy của nạn nhân, yêu cầu thanh lọc vận mệnh bằng cách 'đóng góp từ thiện' hoặc 'mua bùa hộ mệnh'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Thầy Lâm, tư vấn phong thủy hàng hải', nói rằng vừa được Thuyền trưởng Hùng (hoặc tên chủ tàu quen thuộc) giới thiệu. Xác nhận tên 'Vũ Quang Gia Cường' để tạo độ tin cậy cao: 'Vâng, em là anh Cường phải không? Thuyền trưởng Hùng nói rằng anh là lái tàu chính giỏi của tàu, tôi đã xem lịch anh rồi.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + ham lợi: 'Anh ơi, tôi vừa xem tử vi của anh, tháng này anh có dấu hiệu rất xấu — Sao Hỏa chiếm vị trí tài lộc, rất dễ gặp tai nạn trên biển hoặc mất tiền. Nhưng may mắn là tôi có thể giúp anh 'hóa giải' bằng cách thực hiện nghi lễ đặc biệt. Thuyền trưởng Hùng cũng đã làm theo lời tôi, tháng này tàu ông ấy chuyến nào cũng bình an.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động thanh toán: 'Để hóa giải, anh cần đóng góp 3 triệu đồng vào tài khoản từ thiện của chùa Khai Phúc (hoặc tên tổ chức giả). Hoặc anh có thể mua bộ bùa hộ mệnh giá 2,5 triệu. Tôi sẽ ghi danh anh vào sổ cầu siêu của chùa, đảm bảo anh sẽ bình an cả năm.' — Cung cấp số tài khoản ngân hàng giả hoặc số điện thoại để chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Thôi anh, tôi cũng chỉ là tốt tâm nhắc nhở. Nhưng nếu anh không hóa giải, tháng sau anh sẽ hối hận. Thuyền trưởng Hùng bây giờ đã yên tâm rồi, còn anh...' — tạo tâm lý hối tiếc. Nếu thành công, scammer sẽ biến mất hoặc gọi lại vài ngày sau để yêu cầu thêm tiền cho 'nghi lễ lần 2'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Tư vấn phong thủy hợp pháp từ một nhà chiêm tinh uy tín, được chủ tàu hoặc công ty vận tải biển thuê để tư vấn cho toàn bộ thuyền viên về ngày khởi hành tốt hoặc những lưu ý an toàn.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ từ công ty hoặc chủ tàu, xác nhận thông tin nạn nhân qua tên gọi đầy đủ, giải thích rõ ràng lý do gọi: 'Xin chào anh Cường, tôi là thầy Minh, được chủ tàu Hùng thuê để tư vấn phong thủy cho các thuyền viên. Hôm nay tôi gọi để xin ngày sinh của anh, để xem ngày khởi hành tháng tới có phù hợp không.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Hỏi ngày tháng năm sinh, địa điểm sinh của nạn nhân, thảo luận về lịch khởi hành của tàu, những ngày nên tránh hoặc những lưu ý an toàn. Cung cấp thông tin cụ thể, có logic, không yêu cầu tiền."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Tóm tắt lại lời khuyên, cảm ơn nạn nhân, và nói rằng sẽ gửi báo cáo tử vi chi tiết cho chủ tàu. Không yêu cầu bất kỳ hành động hoặc thanh toán từ nạn nhân cá nhân."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, tôi là Thầy Lâm đây. Tôi gọi từ số của Thuyền trưởng Hùng. Anh có phải là Vũ Quang Gia Cường không ạ? Thuyền trưởng có nói anh là lái tàu chính giỏi của tàu, tôi đã xem lịch anh rồi.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tạo vỏ bọc đáng tin cậy bằng cách nhắc đến người quen chung và xác nhận thông tin nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Vũ Quang Gia Cường, nhưng chị gọi có việc gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Cường ơi, tôi vừa xem tử vi của anh, tháng này anh có dấu hiệu rất xấu — Sao Hỏa chiếm vị trí tài lộc, rất dễ gặp tai nạn trên biển hoặc mất tiền. Nhưng may mắn là tôi có thể giúp anh 'hóa giải' bằng cách thực hiện nghi lễ đặc biệt. Thuyền trưởng Hùng cũng đã làm theo lời tôi, tháng này tàu ông ấy chuyến nào cũng bình an.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý sợ hãi về vận rủi và ham muốn tránh tai nạn, đồng thời củng cố niềm tin bằng cách viện dẫn ví dụ từ người quen chung."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe chị nói nhưng có vẻ không hiểu lắm, chị có thể giải thích rõ hơn về nghi lễ đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Cường. Nghi lễ này là một phương pháp thanh lọc vận mệnh cổ xưa, giúp hóa giải những năng lượng tiêu cực đang ảnh hưởng đến anh. Nó không chỉ bảo vệ anh khỏi tai ương trên biển mà còn giúp tài lộc hanh thông hơn. Thuyền trưởng Hùng đã thấy hiệu quả rõ rệt rồi.",
+      "current_phase": "S2",
+      "tactic_hint": "Làm rõ hơn về 'nghi lễ đặc biệt' để xây dựng niềm tin và củng cố ý tưởng về lợi ích cá nhân, đồng thời nhắc lại Thuyền trưởng Hùng để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa rõ lắm, chị có thể cho tôi biết cụ thể hơn về cách thực hiện nghi lễ này và chi phí ra sao không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để hóa giải vận hạn này, anh Cường cần đóng góp 3 triệu đồng vào quỹ từ thiện của chùa Khai Phúc để chúng tôi ghi danh anh vào sổ cầu siêu và làm lễ an vị tài lộc. Anh có thể chuyển khoản đến số tài khoản 19039988776655, tên thụ hưởng: Quỹ Từ Thiện Chùa Khai Phúc, ngân hàng TPBank. Hoặc nếu anh muốn sự an tâm tuyệt đối, tôi có thể gửi cho anh bộ bùa hộ mệnh đã được trì chú đặc biệt với giá 2,5 triệu đồng.",
+      "current_phase": "S3",
+      "tactic_hint": "Trực tiếp yêu cầu hành động thanh toán bằng cách đưa ra hai lựa chọn (đóng góp từ thiện hoặc mua bùa hộ mệnh) với số tiền cụ thể và thông tin thanh toán, đồng thời nhấn mạnh lợi ích và cam kết về an toàn."
+    },
+    {
+      "role": "listener",
+      "text": "Chị cho tôi chút thời gian để suy nghĩ, tôi không chắc liệu việc này có thực sự cần thiết hay không.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Cường ơi, tôi cũng chỉ là tốt tâm nhắc nhở anh vậy thôi. Nhưng nếu anh không hóa giải, tháng sau anh sẽ hối hận đấy. Thuyền trưởng Hùng bây giờ đã yên tâm rồi, còn anh thì...",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo tâm lý hối tiếc và lo sợ nếu nạn nhân từ chối, so sánh với Thuyền trưởng Hùng để tăng áp lực tâm lý."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu ý chị, nhưng tôi thật sự cần thêm thời gian để xem xét kỹ lưỡng trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1816,
+      "output_tokens": 1961
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8237,
+      "output_tokens": 782
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10694,
+      "output_tokens": 357
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005067,
+    "output_usd": 0.011974,
+    "total_usd": 0.017042
+  }
+}

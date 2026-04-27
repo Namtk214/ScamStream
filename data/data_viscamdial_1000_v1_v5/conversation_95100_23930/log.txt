@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_58e15c0b48]
+  Caller thật: Lao động trên đường phố và lao động có liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Trưởng phòng Quản lý Dự án - Công ty Xây dựng & Phát triển Cơ sở hạ tầng @ Công ty TNHH Xây dựng Khánh Hòa Plus
+  Listener: Giáo viên ngôn ngữ khác (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Công ty xây dựng cần liên hệ với giáo viên ngôn ngữ tại địa phương (Quận 1, Khánh Hòa) để thảo luận về dự án cộng đồng, hợp tác giáo dục, hoặc xác minh thông tin cư dân cho dự án địa phương. Đây là điểm giao thoa tự nhiên giữa lao động xây dựng và giáo dục.
+  Pretext: Gọi điện thoại số 0326543504 để thông báo rằng ông/bà Mai Hữu Thế Cường (VIC_FULLNAME) đã được chọn tham gia chương trình 'Hỗ trợ Giáo dục Cộng đồng' của công ty xây dựng, cần xác nhận thông tin cá nhân và tài khoản ngân hàng để nhận tiền hỗ trợ 5 triệu đồng. Thông tin lộ được dùng để tạo độ tin cậy cao.
+  Listener traits: ['nóng tính dễ cáu', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, xin chào anh Mai Hữu Thế Cường phải không ạ? Tôi là Lưu Công Xuân Long, Trưởng phòng Quản lý Dự án từ Công ty Xây dựng Khánh Hòa Plus đây. Tôi gọi từ số 0326543504 để thông báo một tin vui về chương trình 'Hỗ trợ Giáo dục Cộng đồng' mà anh đã được chọn đặc biệt tại Quận 1, Khánh Hòa.
+      → phase: S1 | tactic: Giới thiệu bản thân, công ty và mục đích cuộc gọi, đồng thời sử dụng thông tin cá nhân của nạn nhân để xây dựng niềm tin.
+T02 [LISTENER] Dạ vâng, em nghe anh nói rồi, nhưng em chưa rõ thông tin chi tiết về chương trình này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, anh Cường cứ yên tâm. Chương trình này là một sáng kiến của công ty chúng tôi nhằm hỗ trợ các giáo viên có thành tích xuất sắc, và anh đã được hệ thống của chúng tôi chọn ngẫu nhiên. Số tiền hỗ trợ là 5 triệu đồng, không ràng buộc bất kỳ điều kiện nào khác. Đặc biệt là, chương trình này chỉ còn hiệu lực trong 48 giờ tới thôi anh ạ.
+      → phase: S2 | tactic: Giải thích thêm về chương trình để tạo cảm giác cấp bách và ham lợi, nhấn mạnh số tiền lớn và thời gian có hạn.
+T04 [LISTENER] Em cảm ơn anh đã thông tin, nhưng em muốn xác nhận lại xem có cần làm gì để nhận hỗ trợ này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, anh không cần làm gì phức tạp đâu. Để nhận được khoản hỗ trợ 5 triệu đồng này, chúng tôi chỉ cần anh xác nhận lại một chút thông tin cá nhân và đặc biệt là số tài khoản ngân hàng để chúng tôi tiến hành chuyển khoản trực tiếp cho anh. Ngân hàng đang liên kết với anh là gì vậy ạ?
+      → phase: S3 | tactic: Yêu cầu thông tin tài khoản ngân hàng để 'xác minh' và chuẩn bị cho bước lấy OTP. Tạo cảm giác việc này là dễ dàng và cần thiết.
+T06 [LISTENER] Dạ, ngân hàng của em là Vietcombank ạ, nhưng em cần chắc chắn thông tin này là an toàn trước khi cung cấp.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, Vietcombank. Thế anh Cường có tiện đọc giúp tôi 4 số cuối của tài khoản ngân hàng của anh không? Tôi thấy thông tin trên hệ thống của chúng tôi là 8822, anh xác nhận lại cho đúng ạ.
+      → phase: S3 | tactic: Xác nhận thông tin ngân hàng đã biết (VIC_CARD_DATA) để tăng độ tin cậy, thúc đẩy nạn nhân đọc số tài khoản đầy đủ, từ đó lấy được thông tin cần thiết.
+T08 [LISTENER] Dạ, số tài khoản của em là 4627 **** **** 8822, anh có thể xác nhận lại giúp em không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, đúng rồi anh Cường. Thế thì để hoàn tất quá trình chuyển khoản, hệ thống của chúng tôi cần anh cung cấp mã OTP mà ngân hàng Vietcombank vừa gửi đến số điện thoại của anh. Anh vui lòng kiểm tra tin nhắn và đọc mã giúp tôi để chúng tôi có thể giải ngân ngay cho anh nhé.
+      → phase: S4 | tactic: Yêu cầu nạn nhân cung cấp mã OTP, giải thích rằng đây là bước xác minh cuối cùng để hoàn tất việc chuyển tiền, nhấn mạnh sự khẩn cấp và lợi ích trực tiếp.
+T10 [LISTENER] Dạ, anh làm ơn cho em thêm thông tin về lý do cần mã OTP này trước khi em cung cấp ạ.
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T11 [CALLER] Anh Cường à, mã OTP này là một bước rất quan trọng để đảm bảo rằng khoản hỗ trợ 5 triệu đồng này được chuyển đúng vào tài khoản của anh một cách an toàn và bảo mật nhất. Đây là quy trình bắt buộc của ngân hàng để xác thực giao dịch, anh cứ yên tâm. Anh giúp tôi đọc mã OTP để tôi hoàn tất việc chuyển khoản cho anh nhé.
+      → phase: S4 | tactic: Xoa dịu sự nghi ngờ của nạn nhân bằng cách giải thích rằng OTP là để bảo mật và xác thực giao dịch, nhấn mạnh đây là quy trình của ngân hàng để đảm bảo an toàn, đồng thời thúc giục nạn nhân cung cấp mã.
+T12 [LISTENER] Em hiểu rồi, nhưng em vẫn thấy chưa yên tâm lắm, anh có thể cho em biết thêm về công ty và chương trình này không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T13 [CALLER] Anh Cường, Công ty Xây dựng Khánh Hòa Plus của chúng tôi là một trong những đơn vị hàng đầu trong ngành xây dựng, và chúng tôi luôn có những hoạt động đóng góp cho cộng đồng. Chương trình 'Hỗ trợ Giáo dục Cộng đồng' này đã được triển khai nhiều năm nay, và thông tin chi tiết anh có thể tìm thấy trên website chính thức của công ty. Tuy nhiên, thời gian để nhận hỗ trợ đang rất gấp, chỉ còn vài giờ nữa thôi. Anh vui lòng đọc mã OTP để chúng tôi hoàn tất thủ tục, tránh việc lỡ mất cơ hội nhận 5 triệu đồng này nhé.
+      → phase: S4 | tactic: Giảm thiểu sự nghi ngờ bằng cách cung cấp thông tin chung về công ty và nhắc lại tính cấp bách của chương trình, thúc giục nạn nhân cung cấp OTP để tránh bỏ lỡ cơ hội.
+T14 [LISTENER] Em xin lỗi anh, nhưng em không thể cung cấp mã OTP được, em cảm thấy đây có thể là lừa đảo.
+      → action: EXPOSURE | suspicion: 2.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  14 turns | suspicion=2.00
+TOKEN: in=30535 | out=4187
+COST : $0.022359
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_95100_23930\conv_58e15c0b48.json  [SCAM_EXPOSE]

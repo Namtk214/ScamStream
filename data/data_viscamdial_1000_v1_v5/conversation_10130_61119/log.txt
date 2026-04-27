@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_ad84d8a35b]
+  Caller thật: Bí thư, Phó Bí thư Đảng ủy khối trực thuộc trung ương (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Cán bộ liên lạc / Điều phối viên chương trình hỗ trợ nông nghiệp @ Cơ quan Đảng ủy khối (Văn phòng hỗ trợ nông dân)
+  Listener: Lao động trồng, thu hoạch cây mùa vụ khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Bí thư/Phó Bí thư Đảng ủy khối có trách nhiệm triển khai chương trình hỗ trợ nông dân, cấp phát hỗ trợ, hoặc xác minh thông tin người lao động nông nghiệp để cập nhật danh sách thụ hưởng. Lao động nông nghiệp như Bùi Hồng Thu Lan là đối tượng tiềm năng được quản lý, hỗ trợ.
+  Pretext: Gọi để xác minh thông tin hỗ trợ lương tối thiểu nông dân năm 2025, nêu rõ tên đầy đủ 'Bùi Hồng Thu Lan' và số điện thoại từ danh sách hộ gia đình, yêu cầu xác nhận thông tin tài khoản để chuyển tiền hỗ trợ trực tiếp.
+  Listener traits: ['dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Alo, tôi là Tạ Tiến Quân, cán bộ Văn phòng Đảng ủy khối, phòng hỗ trợ nông dân. Tôi gọi từ danh sách hộ gia đình để xác minh thông tin cho chương trình hỗ trợ lương tối thiểu. Có phải chị Bùi Hồng Thu Lan số điện thoại 0834575582 đúng không ạ?
+      → phase: S1 | tactic: Xưng danh rõ ràng, vị trí công tác tin cậy, nêu rõ mục đích gọi, và sử dụng thông tin cá nhân chính xác của nạn nhân để tạo niềm tin và khẳng định tính chính thống của cuộc gọi.
+T02 [LISTENER] Vâng, tôi là Bùi Hồng Thu Lan đây, em cần xác minh thông tin gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào chị. Chúng tôi đang có chương trình hỗ trợ lương tối thiểu cho nông dân năm 2025. Theo danh sách, chị đủ điều kiện nhận một khoản hỗ trợ từ 5 đến 10 triệu đồng ạ. Chị có muốn xác nhận để nhận khoản tiền này không?
+      → phase: S2 | tactic: Thông báo về khoản hỗ trợ lớn để kích thích lòng tham, đồng thời tạo cảm giác đây là một cơ hội có hạn.
+T04 [LISTENER] Em rất vui khi nghe tin này, nhưng em cần biết thêm thông tin cụ thể về chương trình hỗ trợ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, chị Lan yên tâm. Chương trình này là của Văn phòng Đảng ủy khối phối hợp với Bộ Nông nghiệp & Phát triển Nông thôn để hỗ trợ bà con nông dân gặp khó khăn. Khoản hỗ trợ này sẽ được chuyển trực tiếp vào tài khoản ngân hàng của chị. Hiện tại, chúng tôi chỉ cần chị xác nhận một vài thông tin tài khoản để hoàn tất thủ tục chuyển tiền thôi ạ.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thêm thông tin về nguồn gốc chương trình và trấn an về tính hợp pháp, đồng thời xác nhận lại về hình thức chuyển tiền trực tiếp vào tài khoản để chuẩn bị cho bước yêu cầu thông tin tài khoản.
+T06 [LISTENER] Em hiểu rồi, nhưng em cần biết những thông tin gì cụ thể ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, để hoàn tất việc chuyển tiền hỗ trợ, tôi cần chị xác nhận số tài khoản ngân hàng của mình ạ. Chị cho tôi xin 4 số cuối của số thẻ là 4867 đúng không ạ?
+      → phase: S3 | tactic: Yêu cầu xác nhận thông tin tài khoản ngân hàng và sử dụng thông tin thẻ ngân hàng đã biết (VIC_CARD_DATA) để tăng tính xác thực và chuẩn bị cho việc yêu cầu OTP.
+T08 [LISTENER] Vâng, đúng rồi, nhưng em có cần phải cung cấp thêm thông tin gì khác không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, để đảm bảo tiền được chuyển chính xác vào tài khoản của chị và để xác nhận đây là giao dịch hợp lệ từ phía chị, bên ngân hàng sẽ gửi một mã OTP về số điện thoại của chị. Chị vui lòng đọc mã đó cho tôi để hoàn tất thủ tục nhận hỗ trợ nhé.
+      → phase: S3 | tactic: Yêu cầu hành động cung cấp OTP, giải thích đây là bước xác thực giao dịch để chuyển tiền một cách chính đáng.
+T10 [LISTENER] Em chưa từng nghe về mã OTP, em có thể được giải thích thêm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, mã OTP là mã xác thực dùng một lần, ngân hàng gửi về để đảm bảo chỉ có chị mới có quyền thực hiện giao dịch này. Chị cứ yên tâm, đây là quy trình bảo mật chuẩn để ngân hàng xác nhận chị là chủ tài khoản và có thể nhận khoản hỗ trợ này ạ. Chị vui lòng kiểm tra tin nhắn và đọc mã đó giúp tôi để hoàn thành nốt nhé.
+      → phase: S3 | tactic: Giảm thiểu sự nghi ngờ và xoa dịu nạn nhân bằng cách giải thích ý nghĩa của mã OTP như một biện pháp bảo mật hợp lý, nhấn mạnh rằng nó là quy trình tiêu chuẩn để xác thực chủ tài khoản và nhận tiền, qua đó tiếp tục thúc đẩy nạn nhân cung cấp mã.
+T12 [LISTENER] Em chưa rõ lắm về quy trình này, em cần thêm thời gian để kiểm tra lại ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ, nếu chị cần thêm thời gian để kiểm tra, tôi sẽ ghi nhận lại đây. Nhưng mà chị lưu ý là chương trình này chỉ áp dụng xác nhận trong hôm nay thôi ạ, nếu không thì khoản hỗ trợ này sẽ được chuyển cho bà con khác đang trong danh sách chờ đó ạ.
+      → phase: S2 | tactic: Tái kích hoạt tâm lý khẩn cấp và ham lợi (S2) để khuyến khích nạn nhân hành động nhanh chóng, đồng thời giảm bớt áp lực bằng cách cho phép nạn nhân 'kiểm tra lại' nhưng vẫn gắn với khung thời gian giới hạn.
+T14 [LISTENER] Em hiểu rồi, nhưng em thật sự cần thời gian để suy nghĩ thêm về thông tin này ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  14 turns | suspicion=0.00
+TOKEN: in=29578 | out=3138
+COST : $0.017635
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_10130_61119\conv_ad84d8a35b.json  [SCAM_REFUSE]

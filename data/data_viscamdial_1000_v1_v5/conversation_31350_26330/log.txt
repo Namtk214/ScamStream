@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_2f192003ae]
+  Caller thật: Kiểm soát viên quy trình sản xuất kim loại (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Trưởng phòng Tuân thủ & Quản lý Rủi ro - Công ty Cổ phần Sản xuất Kim loại Việt Nam @ Tập đoàn Công nghiệp Kim loại Quốc gia (VINMETAL) - Phòng Audit Nội bộ
+  Listener: Nhà triết học, sử học và khoa học chính trị (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Các nhà triết học, sử học và khoa học chính trị thường được mời tham gia hội đồng tư vấn độc lập hoặc ủy ban đạo đức trong các tập đoàn nhà nước lớn để đánh giá tác động xã hội, chính sách phát triển bền vững, và tuân thủ pháp luật. Scammer giả vờ là cán bộ audit cần xác minh thông tin cá nhân của nạn nhân trước khi ký hợp đồng tư vấn có giá trị lớn.
+  Pretext: Xác minh thông tin định danh và tài khoản ngân hàng của ông Võ Xuân Đức An trước khi ký kết hợp đồng tư vấn chính sách độc lập trị giá 250 triệu đồng từ VINMETAL
+  Listener traits: ['nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh, em là Trần Minh Khôi, Trưởng phòng Tuân thủ của VINMETAL. Em gọi từ số 02871098679 để xác nhận lại thông tin của anh Võ Xuân Đức An với số định danh là 4724539482 về hợp đồng tư vấn độc lập ạ. Anh có phải là anh An không ạ?
+      → phase: S1 | tactic: Xưng danh, nêu lý do gọi, xác nhận danh tính với thông tin đã có để tạo trust ban đầu.
+T02 [LISTENER] Vâng, tôi là Võ Xuân Đức An đây, em cần xác nhận thông tin gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, chào anh An. Em xin phép xác minh lại thông tin cá nhân và một số điều khoản trong hợp đồng tư vấn độc lập trị giá 250 triệu đồng cho dự án Cải cách Chính sách Công nghiệp Xanh của VINMETAL. Hội đồng quản trị bên em sẽ họp vào thứ Năm tuần này để phê duyệt, nên em cần hoàn tất việc xác minh này ngay trong hôm nay để kịp trình duyệt. Anh có thể dành chút thời gian trao đổi với em được không ạ?
+      → phase: S2 | tactic: Khai thác tâm lý quyền lực & danh vọng, tạo cấp bách và nhấn mạnh giá trị hợp đồng để thu hút sự chú ý và thúc đẩy hợp tác.
+T04 [LISTENER] Vâng, tôi sẵn sàng giúp em, em cần xác minh thông tin gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, cảm ơn anh. Để thuận tiện cho việc hoàn tất thủ tục và đảm bảo tính bảo mật của hợp đồng, em cần anh cung cấp mã OTP từ ứng dụng ngân hàng của mình để kích hoạt hợp đồng điện tử. Đây là bước bắt buộc để VINMETAL có thể chuyển khoản tiền đặt cọc 50 triệu đồng trước khi ký kết chính thức, anh nhé.
+      → phase: S3 | tactic: Yêu cầu mã OTP và số tài khoản ngân hàng dưới chiêu bài 'kích hoạt hợp đồng' và 'chuyển tiền đặt cọc' để thực hiện credential_theft và money_transfer.
+T06 [LISTENER] Em có chắc đây là cách làm việc đúng đắn không? Tôi cần thời gian để kiểm tra trước đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ anh An, em hiểu sự cẩn trọng của anh. Tuy nhiên, quy trình này là tiêu chuẩn của VINMETAL để đảm bảo an toàn pháp lý cho cả hai bên trong việc chuyển tiền đặt cọc và kích hoạt hợp đồng điện tử. Nếu không hoàn thành trong hôm nay, e rằng hợp đồng sẽ bị hoãn lại và cơ hội này sẽ được chuyển cho ứng viên khác. Anh có thể xem xét lại giúp em không ạ?
+      → phase: S4 | tactic: Xoa dịu sự nghi ngờ, tái khẳng định tính hợp pháp của quy trình (dù là giả), và tạo áp lực thời gian/đe dọa mất cơ hội để thúc ép nạn nhân hành động.
+T08 [LISTENER] Em đã nói quá rõ, tôi sẽ cung cấp mã OTP cho em, nhưng em phải cam kết bảo mật thông tin này nhé.
+      → action: FULL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_OTP']
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_SUCCESS  |  8 turns | suspicion=0.00
+TOKEN: in=15066 | out=2577
+COST : $0.013774
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_31350_26330\conv_2f192003ae.json  [SCAM_SUCCESS]

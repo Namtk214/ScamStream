@@ -1,0 +1,277 @@
+{
+  "conversation_id": "conv_8cef52a47c",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0097",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phạm Ngọc Hồng Giang",
+    "fake_age": 26,
+    "real_occupation": "Thợ tạo mẫu",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Giám đốc/Trưởng phòng Kỹ thuật - Công ty Sản xuất/Xây dựng",
+    "caller_org": "Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Giám đốc Kỹ thuật từ công ty sản xuất cần báo cáo tiến độ dự án, thảo luận về yêu cầu kỹ thuật hoặc xin phê duyệt thiết kế mới từ cấp quản lý chính phủ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Tôi là Thầu Phúc Hùng, Giám đốc Kỹ thuật công ty Sản xuất Công nghiệp Quảng Nam'. Hỏi 'Chị Vũ Bảo Thùy Linh có rảnh để thảo luận về dự án không?' Chờ xác nhận người nghe máy."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Báo cáo cụ thể về tiến độ dự án, các vấn đề kỹ thuật cần giải quyết, hoặc yêu cầu phê duyệt thiết kế. Thảo luận các chi tiết công việc, thời gian, nguồn lực, hoặc chính sách liên quan."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Đồng ý về bước tiếp theo (gửi tài liệu chính thức, lên lịch họp, hoặc báo cáo tiếp theo). Cảm ơn và chào tạm biệt một cách chuyên nghiệp. Nếu cần, hẹn cuộc gọi tiếp theo với những người liên quan khác."
+        }
+      ]
+    },
+    "scenario_context": "Thợ tạo mẫu thường làm việc cho các công ty sản xuất, xây dựng, hoặc nhà thầu. Họ cần liên hệ với cấp quản lý cao để báo cáo tiến độ dự án, xin phê duyệt thiết kế, hoặc thông báo vấn đề kỹ thuật liên quan đến các dự án chính phủ/công cộng mà Tổng cục trưởng giám sát."
+  },
+  "listener_card": {
+    "listener_id": "lis_0097",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1973,
+      "age": 52,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "12310",
+      "title": "Tổng cục trưởng, Phó Tổng cục trưởng và tương đương",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn",
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Bảo Thùy Linh",
+      "VIC_ID_DOC": "049173955316",
+      "VIC_ADDRESS": "Quận 10, Quảng Nam",
+      "VIC_EMPLOYMENT": "Tổng cục trưởng, Phó Tổng cục trưởng và tương đương",
+      "VIC_CONTACT": "0340199607",
+      "VIC_TAX_SOCIAL_ID": "1721566834"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "2245",
+      "VIC_CREDENTIAL": "513396",
+      "VIC_SIM_INFO": "0340199607",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7202685578",
+      "VIC_CARD_DATA": "4254 **** **** 7040",
+      "VIC_BALANCE": "525 triệu đồng",
+      "VIC_ASSET": "829 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Bảo Thùy Linh",
+    "VIC_CONTACT": "0340199607",
+    "VIC_EMPLOYMENT": "Tổng cục trưởng, Phó Tổng cục trưởng và tương đương",
+    "LOCATION": "Quảng Nam"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc/Trưởng phòng Kỹ thuật - Công ty Sản xuất/Xây dựng",
+    "caller_org": "Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam",
+    "scenario_context": "Thợ tạo mẫu thường làm việc cho các công ty sản xuất, xây dựng, hoặc nhà thầu. Họ cần liên hệ với cấp quản lý cao để báo cáo tiến độ dự án, xin phê duyệt thiết kế, hoặc thông báo vấn đề kỹ thuật liên quan đến các dự án chính phủ/công cộng mà Tổng cục trưởng giám sát.",
+    "scam_path": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi từ công ty sản xuất lớn ở Quảng Nam, giả vờ báo cáo vấn đề kỹ thuật về một dự án liên quan đến lĩnh vực do Tổng cục trưởng quản lý, yêu cầu xác minh danh tính và cập nhật thông tin hệ thống quản lý.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Thầu Phúc Hùng - Giám đốc Kỹ thuật, Công ty Sản xuất Công nghiệp Quảng Nam'. Nói rằng 'Tôi cần xác nhận với Chị Vũ Bảo Thùy Linh - Tổng cục trưởng về vấn đề kỹ thuật trong dự án cơ sở hạ tầng đang triển khai'. Dùng VIC_FULLNAME để tạo ấn tượng biết rõ người, dùng VIC_EMPLOYMENT để cho thấy biết chức vụ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + trách nhiệm: 'Chị ơi, hiện hệ thống quản lý dự án của chúng tôi cần cập nhật dữ liệu liên hệ và xác minh danh tính của các cấp quản lý để đảm bảo bảo mật. Đây là yêu cầu từ bộ phận IT trung ương. Chị có thể giúp tôi xác minh nhanh được không?' — tạo áp lực thời gian + trách nhiệm công vụ."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Tôi sẽ gửi một link xác minh hoặc yêu cầu chị cung cấp: tên người dùng hệ thống, mật khẩu tạm thời, hoặc mã OTP để hoàn tất quy trình. Sau đó tôi sẽ gọi lại để xác nhận.' — Nếu nạn nhân cấp, scammer sẽ lấy được thông tin đăng nhập."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, scammer sẽ nói 'Không sao, chị có thể liên hệ trực tiếp với bộ phận IT của công ty tôi qua số [giả]' rồi cúp máy. Nếu thành công, scammer cúp máy ngay và tiến hành truy cập tài khoản."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Giám đốc Kỹ thuật từ công ty sản xuất cần báo cáo tiến độ dự án, thảo luận về yêu cầu kỹ thuật hoặc xin phê duyệt thiết kế mới từ cấp quản lý chính phủ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Tôi là Thầu Phúc Hùng, Giám đốc Kỹ thuật công ty Sản xuất Công nghiệp Quảng Nam'. Hỏi 'Chị Vũ Bảo Thùy Linh có rảnh để thảo luận về dự án không?' Chờ xác nhận người nghe máy."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Báo cáo cụ thể về tiến độ dự án, các vấn đề kỹ thuật cần giải quyết, hoặc yêu cầu phê duyệt thiết kế. Thảo luận các chi tiết công việc, thời gian, nguồn lực, hoặc chính sách liên quan."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Đồng ý về bước tiếp theo (gửi tài liệu chính thức, lên lịch họp, hoặc báo cáo tiếp theo). Cảm ơn và chào tạm biệt một cách chuyên nghiệp. Nếu cần, hẹn cuộc gọi tiếp theo với những người liên quan khác."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, em chào chị Linh ạ. Em là Phạm Ngọc Hồng Giang, Giám đốc Kỹ thuật của Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam. Em gọi từ số máy của Thầu Phúc Hùng ạ. Không biết chị Vũ Bảo Thùy Linh có tiện để em xin vài phút trao đổi nhanh về tiến độ dự án nhà máy xử lý nước thải mình hôm trước không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh rõ ràng và hỏi về sự sẵn lòng của người nghe để thảo luận dự án."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ dự án mà em nói là dự án nào, em có thể nói thêm thông tin chi tiết hơn được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, là dự án nhà máy xử lý nước thải tại khu công nghiệp Điện Nam - Điện Ngọc đó chị. Hôm trước bên em có gửi báo cáo tiến độ và một số yêu cầu kỹ thuật cần chị phê duyệt để tiếp tục triển khai ạ. Chị có tiện xem qua và cho em xin ít ý kiến không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về dự án để người nghe nhận diện, đồng thời nhắc lại nội dung cần trao đổi (báo cáo tiến độ, phê duyệt kỹ thuật)."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa nhận được báo cáo nào từ bên em, em có thể gửi lại cho tôi xem được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy chắc có thể do đường truyền hoặc trục trặc kỹ thuật nên báo cáo chưa tới được tay chị. Em xin phép gửi lại ngay bây giờ qua email đã đăng ký và nhờ chị Linh kiểm tra giúp em trong ít phút nữa ạ. Không biết là ngoài email, em có thể gửi thêm qua Zalo hoặc kênh nào khác để đảm bảo chị nhận được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xử lý việc báo cáo chưa tới được, đề xuất gửi lại ngay và hỏi thêm kênh liên lạc để đảm bảo việc gửi tài liệu thành công."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết địa chỉ email của em được không, để tôi kiểm tra lại ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, địa chỉ email của em là giang.pham@quangnamcorp.vn ạ. Chị kiểm tra giúp em hộp thư đến và cả mục spam nữa nhé. Em cảm ơn chị nhiều.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp địa chỉ email và hướng dẫn kiểm tra thư rác để đảm bảo người nghe nhận được tài liệu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa rõ tình hình, em có thể xác nhận lại số điện thoại mà em đang gọi cho tôi được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em đang gọi cho chị từ số 0905123456 ạ. Đây là số điện thoại công ty của em. Chị có thể kiểm tra lại thông tin này giúp em được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận số điện thoại đang gọi, cam đoan đó là số của công ty và yêu cầu người nghe kiểm tra để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ số điện thoại mà em nói có phải đúng là số của em không, em có thể cho tôi biết số điện thoại của em là gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, số em đang gọi cho chị là 0905123456 ạ. Đây là số liên lạc chính thức của Phòng Kỹ thuật bên em. Nếu chị cần xác nhận lại, chị có thể gọi vào số tổng đài của Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam là 1900 1234 và yêu cầu nối máy đến Phòng Kỹ thuật để đối chiếu thông tin ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận lại số điện thoại và hướng dẫn người nghe liên hệ tổng đài công ty để xác minh thông tin, nhằm tăng cường độ tin cậy và giảm nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói số điện thoại là 0905123456, nhưng tôi thấy có điều gì đó chưa đúng trong cuộc gọi này, em có thể nói lại tên công ty của em được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 2.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam ạ. Em là Phạm Ngọc Hồng Giang, Giám đốc Kỹ thuật của công ty. Chị có thể gọi tổng đài của công ty em để kiểm tra lại thông tin nếu cần ạ. Em cũng muốn hỏi thêm, chị đã nhận được email báo cáo tiến độ em vừa gửi chưa ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Nhắc lại tên công ty rõ ràng, củng cố thông tin và chuyển hướng lại về nội dung chính của cuộc gọi là báo cáo tiến độ dự án."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết số điện thoại mà em đang gọi cho tôi là số nào không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 4.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em đang gọi cho chị từ số điện thoại 0905123456 ạ. Chị có thể kiểm tra trực tiếp số này trên website chính thức của Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam để xác minh thông tin ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Nhắc lại số điện thoại và hướng dẫn người nghe xác minh thông tin qua website chính thức của công ty để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy không an tâm lắm với cuộc gọi này, em có thể cung cấp thông tin nào khác để tôi có thể xác minh được không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 8.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu là chị có thể còn e ngại. Nếu vậy, em xin phép mời chị truy cập trực tiếp vào trang web của Bộ Kế hoạch và Đầu tư để tìm thông tin về dự án nhà máy xử lý nước thải tại khu công nghiệp Điện Nam - Điện Ngọc, chị sẽ thấy Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam là đơn vị thi công chính. Đồng thời, chị có thể gọi trực tiếp đến tổng đài 19001234 của công ty em để xác nhận chính xác thông tin về em, Phạm Ngọc Hồng Giang là Giám đốc Kỹ thuật đang phụ trách dự án này. Chị cứ xác minh kỹ càng giúp em nhé. Khi nào tiện, chị có thể gọi lại cho em theo số 0905123456 này ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Khi người nghe vẫn còn nghi ngờ cao, hướng dẫn họ xác minh thông tin qua các kênh chính thức của nhà nước (Bộ Kế hoạch và Đầu tư) và của công ty (tổng đài, website) để chứng minh tính hợp pháp của cuộc gọi và dự án, đồng thời đề nghị gọi lại nếu thấy an tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm thấy có điều gì đó không ổn và không muốn tiếp tục cuộc trò chuyện này nữa.",
+      "listener_action": "INTERRUPTED_VICTIM_HANGUP",
+      "disclosed_info": {},
+      "suspicion_delta": 16.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1880,
+      "output_tokens": 1673
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15029,
+      "output_tokens": 1383
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 22515,
+      "output_tokens": 645
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008263,
+    "output_usd": 0.012209,
+    "total_usd": 0.020473
+  }
+}

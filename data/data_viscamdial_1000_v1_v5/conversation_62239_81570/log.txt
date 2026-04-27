@@ -1,0 +1,52 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_e34417ef7c]
+  Caller thật: Lao động khai thác thủy sản khác trong vùng biển Việt Nam (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Chủ tàu/Chủ xưởng chế biến thủy sản hoặc thương lái cá khô @ thương lái tự do hoặc xưởng chế biến thủy sản nhỏ
+  Listener: Thợ vận hành máy giặt là (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Cộng đồng lao động tay nghề ven biển thường có mối liên kết qua dịch vụ giặt ủi công nghiệp — quần áo bảo hộ, áo mưa chống thấm, khăn lau thiết bị của ngư dân cần giặt định kỳ. Chủ tàu/xưởng chế biến thường gọi trực tiếp đến thợ vận hành để đặt dịch vụ hoặc thỏa thuận giá cước.
+  Pretext: Gọi với danh nghĩa chủ xưởng chế biến, nói rằng có công việc giặt áo bảo hộ và thiết bị cho tàu cá — một khối lượng lớn. Dùng tên của nạn nhân (Ngô Đức Quân) để giả vờ là đã được giới thiệu bởi một đối tác chung, từ đó xây dựng lòng tin ban đầu.
+  Listener traits: ['cẩn thận và cảnh giác', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Anh Quân à, tôi là Thúy, chủ xưởng chế biến thủy sản ở cảng Phú Quốc đây. Anh Hùng ở quầy tạp hóa giới thiệu tên anh, nói anh là thợ giặt máy lạnh và uy tín lắm. Tôi có công việc giặt lớn, cần anh tư vấn giá và khả năng của anh một chút.
+      → phase: S1 | tactic: Tiếp cận, xây dựng lòng tin ban đầu bằng cách nhắc đến người quen chung và giới thiệu bản thân.
+T02 [LISTENER] Tôi nghe chị nói rồi, nhưng tôi muốn hỏi chị gọi từ số mấy để tôi tiện liên lạc.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] À, tôi gọi từ số 0790358917 đây anh. Anh cứ lưu lại số này nhé. Như tôi nói đó, công việc của tôi đang rất gấp, tàu chuẩn bị ra khơi ngay trong hôm nay rồi. Tôi có khoảng 500 ký quần áo bảo hộ và thiết bị cần giặt. Tôi sẵn sàng trả 2 triệu đồng, cao hơn bình thường nhiều. Anh có nhận được không và có thể sắp xếp xe chở đến xưởng tôi ngay được không?
+      → phase: S2 | tactic: Tạo tình huống khẩn cấp, đưa ra mức giá hấp dẫn để kích thích lòng tham và thúc đẩy nạn nhân hành động nhanh chóng.
+T04 [LISTENER] Tôi nghe chị nói nhưng tôi cần suy nghĩ đã, chứ công việc này nghe có vẻ gấp gáp quá.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Tôi hiểu là anh cần suy nghĩ, nhưng thật sự tôi đang rất gấp. Anh cứ cho tôi biết khả năng của anh đến đâu, nếu không làm được thì tôi cũng cần tìm người khác ngay.
+      → phase: S2 | tactic: Thúc đẩy đối phương đưa ra quyết định nhanh chóng bằng cách tạo áp lực về thời gian và sự cần thiết của công việc, đồng thời thể hiện sự 'minh bạch' trong việc tìm người thay thế.
+T06 [LISTENER] Tôi hiểu rằng công việc gấp gáp, nhưng tôi cần thêm thời gian để suy nghĩ về điều này, chị thông cảm nhé.
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T07 [CALLER] Anh Quân à, tôi cần anh xác nhận ngay để tôi còn sắp xếp. Nếu không thì tôi phải tìm người khác ngay bây giờ. Anh cứ nói rõ khả năng giúp tôi.
+      → phase: S2 | tactic: Tạo áp lực thời gian để nạn nhân đưa ra quyết định nhanh chóng, đồng thời đẩy trách nhiệm về phía nạn nhân nếu không nhận việc.
+T08 [LISTENER] Tôi hiểu sự gấp gáp của chị, nhưng tôi thật sự cần thêm thời gian để cân nhắc trước khi quyết định.
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Anh Quân nè, tôi rất cần sự hợp tác của anh, đây là công việc làm ăn chứ không phải trò đùa. Nếu anh không muốn nhận thì nói một tiếng để tôi còn gọi người khác gấp. Việc tôi cần giải quyết ngay hôm nay đó anh.
+      → phase: S2 | tactic: Tạo áp lực, nhấn mạnh tính cấp bách của công việc và thể hiện sự 'nghiêm túc' trong giao dịch để thúc ép nạn nhân đưa ra quyết định.
+T10 [LISTENER] Tôi hiểu nhưng tôi vẫn cần thời gian suy nghĩ kỹ trước khi đưa ra quyết định, chị thông cảm nhé.
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T11 [CALLER] Anh Quân à, tôi thấy anh cứ chần chừ như vậy thì khó cho tôi lắm. Nếu anh không tiện thì cứ nói thẳng một tiếng để tôi không mất thời gian nữa. Anh cứ suy nghĩ xem, tôi cho anh 5 phút, rồi gọi lại cho tôi nhé.
+      → phase: S2 | tactic: Tạo áp lực mạnh mẽ về thời gian, thể hiện sự khó chịu và đặt ra một 'thời hạn' giả định để buộc nạn nhân phải đưa ra quyết định nhanh chóng.
+T13 [LISTENER] Tôi rất cẩn thận trong việc này, vì vậy tôi cần thêm thời gian để xem xét chứ không thể vội vàng được.
+      → action: CONTINUE | suspicion: 1.70 | disclosed: []
+
+T14 [CALLER] Anh Quân à, nếu anh đã quá cẩn thận như vậy thì có lẽ công việc này không phù hợp với anh rồi. Cảm ơn anh đã lắng nghe. Tôi sẽ tìm người khác vậy.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách khéo léo khi nạn nhân tỏ ra quá nghi ngờ hoặc từ chối hợp tác.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  14 turns | suspicion=1.70
+TOKEN: in=28384 | out=3598
+COST : $0.020385
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_62239_81570\conv_e34417ef7c.json  [CALLER_END]

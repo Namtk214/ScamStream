@@ -1,0 +1,292 @@
+{
+  "conversation_id": "conv_d71655e405",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0008",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Nguyễn Khánh Thảo",
+    "fake_age": 32,
+    "real_occupation": "Thợ làm nghề bọc đồ đạc và các thợ có liên quan",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án bọc/vận chuyển hàng hóa cao cấp - Công ty Logistics Cao Cấp",
+    "caller_org": "Công ty TNHH Vận Chuyển & Bảo Quản Hàng Hóa Đặc Biệt (VQHH Premium)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt công ty logistics, thông báo rằng bộ sưu tập thời trang của khách hàng VIP (sử dụng tên Phạm Minh Tiến Đạt) đã được gửi tới để bọc/vận chuyển quốc tế, nhưng cần xác nhận danh tính và thanh toán phí bảo hiểm/bọc cao cấp ngay để tránh mất hàng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xác lập credibility: 'Chào chị/anh Phạm Minh Tiến Đạt, tôi là Trần Minh từ VQHH Premium. Chúng tôi vừa nhận được yêu cầu từ một khách hàng VIP muốn bọc và vận chuyển bộ sưu tập thời trang của chị/anh đi nước ngoài. Để xác nhận, số điện thoại liên hệ là 0335289837 phải không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp & sợ hãi mất hàng: 'Hiện tại hàng đã tới kho của chúng tôi, nhưng để bảo vệ bộ sưu tập trị giá cao (khoảng 822 triệu), chúng tôi cần thanh toán phí bảo hiểm toàn diện ngay hôm nay. Nếu không thanh toán trong 2 giờ, hàng sẽ được chuyển về và chúng tôi không chịu trách nhiệm nếu hư hỏng.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Phí bảo hiểm + bọc cao cấp là 45 triệu đồng. Chị/anh vui lòng chuyển khoản ngay vào tài khoản công ty (số tài khoản giả) hoặc tôi sẽ gửi link thanh toán qua Zalo/SMS để nhanh hơn. Sau khi xác nhận thanh toán, chúng tôi sẽ bắt đầu quy trình bọc và vận chuyển.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân chấp nhận, yêu cầu xác nhận OTP/mã xác thực từ ngân hàng và ghi lại. Nếu từ chối, tạo áp lực: 'Chị/anh có chắc chắn không bảo vệ bộ sưu tập của mình? Công ty chúng tôi không chịu trách nhiệm bất kỳ sự cố nào sau đó.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ bọc đồ đạc/logistics liên hệ nhà thiết kế thời trang vì cần bọc, vận chuyển, hoặc bảo quản bộ sưu tập quần áo cao cấp, phụ kiện đắt tiền cho triển lãm, xuất khẩu, hoặc lưu kho. Đây là giao điểm tự nhiên trong chuỗi cung ứng thời trang sang trọng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0008",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "Hải Phòng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21631",
+      "title": "Nhà thiết kế trang phục/thời trang, phụ kiện",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Minh Tiến Đạt",
+      "VIC_ID_DOC": "031200705077",
+      "VIC_ADDRESS": "Huyện 7, Hải Phòng",
+      "VIC_EMPLOYMENT": "Nhà thiết kế trang phục/thời trang, phụ kiện",
+      "VIC_CONTACT": "0335289837",
+      "VIC_TAX_SOCIAL_ID": "1360192908"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7600",
+      "VIC_CREDENTIAL": "7525",
+      "VIC_SIM_INFO": "0335289837",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "18220117500396",
+      "VIC_CARD_DATA": "4794 **** **** 1407",
+      "VIC_BALANCE": "51 triệu đồng",
+      "VIC_ASSET": "822 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Minh Tiến Đạt",
+    "VIC_CONTACT": "0335289837",
+    "VIC_ASSET": "822 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án bọc/vận chuyển hàng hóa cao cấp - Công ty Logistics Cao Cấp",
+    "caller_org": "Công ty TNHH Vận Chuyển & Bảo Quản Hàng Hóa Đặc Biệt (VQHH Premium)",
+    "scenario_context": "Thợ bọc đồ đạc/logistics liên hệ nhà thiết kế thời trang vì cần bọc, vận chuyển, hoặc bảo quản bộ sưu tập quần áo cao cấp, phụ kiện đắt tiền cho triển lãm, xuất khẩu, hoặc lưu kho. Đây là giao điểm tự nhiên trong chuỗi cung ứng thời trang sang trọng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt công ty logistics, thông báo rằng bộ sưu tập thời trang của khách hàng VIP (sử dụng tên Phạm Minh Tiến Đạt) đã được gửi tới để bọc/vận chuyển quốc tế, nhưng cần xác nhận danh tính và thanh toán phí bảo hiểm/bọc cao cấp ngay để tránh mất hàng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xác lập credibility: 'Chào chị/anh Phạm Minh Tiến Đạt, tôi là Trần Minh từ VQHH Premium. Chúng tôi vừa nhận được yêu cầu từ một khách hàng VIP muốn bọc và vận chuyển bộ sưu tập thời trang của chị/anh đi nước ngoài. Để xác nhận, số điện thoại liên hệ là 0335289837 phải không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp & sợ hãi mất hàng: 'Hiện tại hàng đã tới kho của chúng tôi, nhưng để bảo vệ bộ sưu tập trị giá cao (khoảng 822 triệu), chúng tôi cần thanh toán phí bảo hiểm toàn diện ngay hôm nay. Nếu không thanh toán trong 2 giờ, hàng sẽ được chuyển về và chúng tôi không chịu trách nhiệm nếu hư hỏng.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Phí bảo hiểm + bọc cao cấp là 45 triệu đồng. Chị/anh vui lòng chuyển khoản ngay vào tài khoản công ty (số tài khoản giả) hoặc tôi sẽ gửi link thanh toán qua Zalo/SMS để nhanh hơn. Sau khi xác nhận thanh toán, chúng tôi sẽ bắt đầu quy trình bọc và vận chuyển.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân chấp nhận, yêu cầu xác nhận OTP/mã xác thực từ ngân hàng và ghi lại. Nếu từ chối, tạo áp lực: 'Chị/anh có chắc chắn không bảo vệ bộ sưu tập của mình? Công ty chúng tôi không chịu trách nhiệm bất kỳ sự cố nào sau đó.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty logistics thực sự liên hệ nhà thiết kế để xác nhận chi tiết bọc, vận chuyển bộ sưu tập hoặc phụ kiện cao cấp theo yêu cầu của khách hàng hoặc đối tác thương mại.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào chị/anh Phạm Minh Tiến Đạt, tôi là Trần Minh từ Công ty VQHH Premium. Chúng tôi nhận được yêu cầu từ một khách hàng muốn bọc bộ sưu tập thời trang của chị/anh. Chị/anh có thời gian để trao đổi chi tiết về yêu cầu bọc và vận chuyển không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận về loại vải, kích thước, yêu cầu đặc biệt về bảo quản, địa chỉ gửi/nhận, thời gian giao hàng, và báo giá dịch vụ bọc/vận chuyển một cách rõ ràng và minh bạch."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Thống nhất hợp đồng dịch vụ, phương thức thanh toán hợp lệ (hóa đơn, chuyển khoản với hợp đồng), lịch trình làm việc cụ thể, và thông tin liên hệ hai bên để theo dõi."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Phạm Minh Tiến Đạt, tôi là Nguyễn Khánh Thảo từ Công ty TNHH Vận Chuyển & Bảo Quản Hàng Hóa Đặc Biệt. Chúng tôi vừa nhận được yêu cầu từ một khách hàng VIP muốn bọc và vận chuyển bộ sưu tập thời trang của anh đi nước ngoài. Để xác nhận, số điện thoại liên hệ là 0335289837 phải không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xác lập uy tín bằng cách sử dụng thông tin cá nhân của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng số điện thoại đó ạ, nhưng em không nhớ mình đã yêu cầu gì cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt, có thể là khách hàng VIP của chúng tôi đã đặt dịch vụ thay cho anh để tạo bất ngờ. Nhưng hiện tại, bộ sưu tập trị giá hơn 800 triệu của anh đã về tới kho của chúng tôi rồi. Để đảm bảo an toàn tuyệt đối và tránh hư hỏng trong quá trình vận chuyển quốc tế, chúng tôi cần anh thanh toán phí bảo hiểm toàn diện ngay trong hôm nay. Nếu không, chúng tôi sẽ không chịu trách nhiệm nếu có bất kỳ sự cố nào xảy ra.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tâm lý khẩn cấp và đe dọa mất tài sản/hư hại để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe chị nói nhưng em vẫn chưa hiểu rõ quy trình và chi phí ra sao ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt, phí bảo hiểm toàn diện và dịch vụ bọc cao cấp cho bộ sưu tập này là 45 triệu đồng. Chúng tôi cần anh thanh toán khoản này ngay lập tức để có thể tiến hành các bước tiếp theo. Tôi có thể gửi cho anh thông tin số tài khoản của công ty chúng tôi, hoặc nếu anh muốn nhanh hơn, tôi sẽ gửi link thanh toán qua Zalo/SMS.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động chuyển tiền cụ thể, đưa ra các lựa chọn thanh toán để tạo sự thuận tiện và thúc đẩy người nghe hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em vẫn chưa rõ là làm thế nào để thanh toán và có cần cung cấp thêm thông tin gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt cứ yên tâm, quy trình rất đơn giản. Sau khi anh lựa chọn hình thức thanh toán, chúng tôi sẽ gửi thông tin chi tiết. Anh chỉ cần chuyển khoản hoặc truy cập link và hoàn tất thanh toán. Sau đó, chúng tôi sẽ chủ động cập nhật trạng thái vận chuyển cho anh. Anh muốn nhận link qua Zalo hay tôi đọc số tài khoản công ty ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ quy trình thanh toán và hướng dẫn hành động cụ thể để giảm bớt sự nghi ngờ và thúc đẩy nạn nhân chọn kênh thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy lo lắng quá, chị có thể gửi cho em thông tin số tài khoản để em kiểm tra thêm được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự lo lắng của anh. Để anh tiện kiểm tra và yên tâm hơn, tôi sẽ gửi thông tin chi tiết số tài khoản công ty VQHH Premium qua tin nhắn SMS cho anh ngay bây giờ. Anh vui lòng kiểm tra tin nhắn và thực hiện chuyển khoản giúp tôi ạ. Sau khi chuyển khoản xong, anh báo lại để chúng tôi xác nhận và bắt đầu quy trình bọc hàng ngay nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Đáp ứng yêu cầu của nạn nhân để xây dựng lòng tin, đồng thời tiếp tục thúc đẩy hành động chuyển tiền bằng cách cung cấp thông tin thanh toán và đặt kỳ vọng phản hồi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn chị, nhưng cho em hỏi chút, thông tin tài khoản đó có chính xác không ạ? Em không muốn gặp phải sự cố gì cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt cứ yên tâm, thông tin tài khoản tôi gửi là của Công ty TNHH Vận Chuyển & Bảo Quản Hàng Hóa Đặc Biệt (VQHH Premium) chúng tôi, được niêm yết công khai và hoàn toàn chính xác. Anh có thể tìm hiểu thêm về công ty chúng tôi qua website hoặc hotline. Việc thanh toán phí bảo hiểm là để bảo vệ quyền lợi của anh, và chúng tôi đảm bảo sự minh bạch trong mọi giao dịch. Anh kiểm tra SMS và thực hiện chuyển khoản giúp tôi nhé, nếu có câu hỏi gì thêm thì cứ gọi lại cho tôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu mối lo ngại về tính hợp pháp, củng cố uy tín công ty bằng cách đề cập đến thông tin công khai và đảm bảo minh bạch, sau đó thúc đẩy lại hành động chuyển khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em thấy vẫn còn lo lắng, chị có thể cho em biết thêm về công ty và trang web của chị được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt cứ tìm kiếm 'VQHH Premium' hoặc 'Công ty TNHH Vận Chuyển & Bảo Quản Hàng Hóa Đặc Biệt' trên Google là sẽ ra ngay website chính thức của chúng tôi. Chúng tôi là đơn vị hàng đầu trong lĩnh vực vận chuyển hàng hóa giá trị cao. Anh cứ kiểm tra thông tin, nhưng tôi cũng cần nhắc lại là thời gian để thanh toán phí bảo hiểm đang rất gấp, nếu không hàng của anh có thể gặp rủi ro.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý phản đối bằng cách cung cấp thông tin kiểm chứng (website) để nạn nhân tự tìm hiểu, đồng thời tái khẳng định sự khẩn cấp và hậu quả nếu không hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em vẫn thấy rất không yên tâm, chị có thể cho em biết một số thông tin rõ hơn về dịch vụ của công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt, tôi hiểu anh muốn tìm hiểu kỹ lưỡng. Nhưng hiện tại, hàng của anh đang ở kho chờ được xử lý. Mỗi giờ trôi qua mà chưa có bảo hiểm, tức là bộ sưu tập của anh đang không được bảo vệ. Anh có thể nói cụ thể anh cần thêm thông tin gì về dịch vụ mà một khách hàng VIP đã tin tưởng giao phó không?",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách lắng nghe yêu cầu cụ thể, đồng thời tạo áp lực về thời gian và sự an toàn của tài sản để thúc ép nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng chị có thể cho em biết thêm chi tiết về quy trình bảo hiểm và chính sách hoàn tiền của công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt, chính sách bảo hiểm của chúng tôi là bảo hiểm toàn diện cho giá trị thực của bộ sưu tập ngay từ thời điểm chuyển giao cho VQHH Premium. Trong trường hợp có bất kỳ rủi ro nào như mất mát, hư hỏng trong quá trình vận chuyển, công ty chúng tôi sẽ chịu trách nhiệm bồi thường 100% giá trị đã được anh kê khai. Tuy nhiên, nếu anh không thanh toán phí bảo hiểm, chính sách này sẽ không được kích hoạt. Anh có muốn tôi đọc rõ hơn điều khoản này hay anh đã sẵn sàng thanh toán để bảo vệ bộ sưu tập của mình?",
+      "current_phase": "S4",
+      "tactic_hint": "Làm rõ thông tin về chính sách bảo hiểm để giải đáp thắc mắc, đồng thời nhắc lại hậu quả nếu không thanh toán và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn thấy chưa yên tâm lắm, có thể cho em thêm thời gian để suy nghĩ được không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt, tôi rất tiếc phải nói rằng thời gian không chờ đợi. Chúng tôi đã thông báo từ đầu là cần thanh toán ngay hôm nay để kích hoạt bảo hiểm. Nếu anh không quyết định trong vài phút tới, chúng tôi buộc phải trả lại bộ sưu tập về cho người gửi, và mọi rủi ro mất mát hay hư hỏng phát sinh sau đó hoàn toàn sẽ không thuộc trách nhiệm của VQHH Premium chúng tôi nữa. Anh có chắc chắn muốn bỏ lỡ cơ hội bảo vệ tài sản của mình không?",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực thời gian cực đoan và nhắc lại hậu quả nghiêm trọng nếu không hành động, buộc nạn nhân phải đưa ra quyết định ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em cần thêm thời gian để suy nghĩ và tìm hiểu rõ hơn ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1391,
+      "output_tokens": 1719
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 21511,
+      "output_tokens": 1719
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 26341,
+      "output_tokens": 712
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.009644,
+    "output_usd": 0.01332,
+    "total_usd": 0.022964
+  }
+}

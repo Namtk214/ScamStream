@@ -1,0 +1,232 @@
+{
+  "conversation_id": "conv_ae05d92284",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0099",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hồ Thị Hương",
+    "fake_age": 41,
+    "real_occupation": "Nhà văn",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhà văn viết sách về an toàn giao thông / Tác giả tư vấn lái xe",
+    "caller_org": "cá nhân - tác giả độc lập / Công ty xuất bản hoặc nền tảng nội dung",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Scammer xưng là nhà văn đang viết dự án sách về 'Lái xe an toàn ở miền Nam' và cần phỏng vấn các lái xe có kinh nghiệm. Sử dụng tên thật của nạn nhân (Lưu Hữu Thế Minh) để tạo ấn tượng đã có thông tin sẵn, sau đó dùng địa điểm (Long An) để xác nhận. Cuối cùng, lợi dụng số dư tài khoản (43 triệu) để tạo động cơ tài chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_BALANCE",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xưng danh: 'Xin chào anh Lưu Hữu Thế Minh, em là Trần Minh Huy, tác giả sách về an toàn giao thông. Em đang làm dự án ở khu vực Long An và tìm được số điện thoại của anh. Anh có thời gian nói chuyện một chút không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý + Tạo cơ hội: 'Em đang tìm những lái xe có kinh nghiệm để phỏng vấn cho sách. Anh có vẻ là người phù hợp. Ngoài ra, em có một dự án khác - một nền tảng chia sẻ kinh nghiệm lái xe, những người tham gia sẽ nhận được thù lao hấp dẫn. Anh có quan tâm không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Giai đoạn 1: 'Để tham gia, anh cần nộp một khoản tiền cọc nhỏ (2-3 triệu) để xác minh danh tính và tài khoản ngân hàng. Sau đó em sẽ gửi lại tiền này cộng thêm tiền lương đầu tiên. Anh có thể chuyển qua tài khoản em được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc leo thang: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực tâm lý ('Những người khác đã tham gia rồi, anh sẽ mất cơ hội này', 'Chỉ những người nghiêm túc mới được chọn'). Nếu thành công ở S3, sẽ yêu cầu thêm các khoản tiền khác với lý do 'bảo hiểm', 'phí xử lý', hoặc 'nâng cấp tài khoản'."
+        }
+      ]
+    },
+    "scenario_context": "Nhà văn chuyên về an toàn giao thông hoặc kỹ năng lái xe tự nhiên sẽ liên hệ với các lái xe chuyên nghiệp để phỏng vấn, lấy kinh nghiệm thực tế cho sách/bài viết, hoặc mời họ tham gia dự án nội dung. Đây là mối liên kết hợp lý trong ngành công nghiệp nội dung."
+  },
+  "listener_card": {
+    "listener_id": "lis_0099",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1974,
+      "age": 51,
+      "province": "Long An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "83222",
+      "title": "Lái xe con",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lưu Hữu Thế Minh",
+      "VIC_ID_DOC": "080074748363",
+      "VIC_ADDRESS": "Huyện 1, Long An",
+      "VIC_EMPLOYMENT": "Lái xe con",
+      "VIC_CONTACT": "0373483131",
+      "VIC_TAX_SOCIAL_ID": "9768556247"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "561325",
+      "VIC_CREDENTIAL": "350123",
+      "VIC_SIM_INFO": "0373483131",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0377829111",
+      "VIC_CARD_DATA": "4944 **** **** 9349",
+      "VIC_BALANCE": "43 triệu đồng",
+      "VIC_ASSET": "45 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lưu Hữu Thế Minh",
+    "VIC_CONTACT": "0373483131",
+    "VIC_BALANCE": "43 triệu đồng",
+    "LOCATION": "Long An"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhà văn viết sách về an toàn giao thông / Tác giả tư vấn lái xe",
+    "caller_org": "cá nhân - tác giả độc lập / Công ty xuất bản hoặc nền tảng nội dung",
+    "scenario_context": "Nhà văn chuyên về an toàn giao thông hoặc kỹ năng lái xe tự nhiên sẽ liên hệ với các lái xe chuyên nghiệp để phỏng vấn, lấy kinh nghiệm thực tế cho sách/bài viết, hoặc mời họ tham gia dự án nội dung. Đây là mối liên kết hợp lý trong ngành công nghiệp nội dung.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Scammer xưng là nhà văn đang viết dự án sách về 'Lái xe an toàn ở miền Nam' và cần phỏng vấn các lái xe có kinh nghiệm. Sử dụng tên thật của nạn nhân (Lưu Hữu Thế Minh) để tạo ấn tượng đã có thông tin sẵn, sau đó dùng địa điểm (Long An) để xác nhận. Cuối cùng, lợi dụng số dư tài khoản (43 triệu) để tạo động cơ tài chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_BALANCE",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xưng danh: 'Xin chào anh Lưu Hữu Thế Minh, em là Trần Minh Huy, tác giả sách về an toàn giao thông. Em đang làm dự án ở khu vực Long An và tìm được số điện thoại của anh. Anh có thời gian nói chuyện một chút không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý + Tạo cơ hội: 'Em đang tìm những lái xe có kinh nghiệm để phỏng vấn cho sách. Anh có vẻ là người phù hợp. Ngoài ra, em có một dự án khác - một nền tảng chia sẻ kinh nghiệm lái xe, những người tham gia sẽ nhận được thù lao hấp dẫn. Anh có quan tâm không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Giai đoạn 1: 'Để tham gia, anh cần nộp một khoản tiền cọc nhỏ (2-3 triệu) để xác minh danh tính và tài khoản ngân hàng. Sau đó em sẽ gửi lại tiền này cộng thêm tiền lương đầu tiên. Anh có thể chuyển qua tài khoản em được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc leo thang: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực tâm lý ('Những người khác đã tham gia rồi, anh sẽ mất cơ hội này', 'Chỉ những người nghiêm túc mới được chọn'). Nếu thành công ở S3, sẽ yêu cầu thêm các khoản tiền khác với lý do 'bảo hiểm', 'phí xử lý', hoặc 'nâng cấp tài khoản'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhà văn hoặc nhà sản xuất nội dung liên hệ để phỏng vấn lái xe chuyên nghiệp cho dự án sách/podcast/video về kỹ năng lái xe, an toàn giao thông, hoặc chia sẻ kinh nghiệm thực tế từ lái xe có kinh nghiệm.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác nhận: 'Xin chào anh Lưu Hữu Thế Minh, em là Trần Minh Huy từ công ty xuất bản [Tên cụ thể]. Em đang thực hiện một dự án sách về lái xe an toàn. Chúng em tìm được thông tin của anh qua mạng lưới người bạn ở Long An. Anh có phải là lái xe chuyên nghiệp không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Em muốn phỏng vấn anh về kinh nghiệm lái xe, những thách thức anh gặp phải, và cách anh xử lý tình huống khẩn cấp trên đường. Cuộc phỏng vấn sẽ kéo dài khoảng 30-45 phút. Anh có thể giúp em được không? Chúng ta có thể hẹn ngày giờ phù hợp.' (Có thể đề cập tới việc anh sẽ nhận được tiền công hoặc sách miễn phí sau phỏng vấn, nhưng không yêu cầu tiền từ anh)"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động + Kết thúc: 'Cảm ơn anh đã đồng ý. Chúng ta sẽ phỏng vấn qua điện thoại vào [ngày/giờ cụ thể]. Em sẽ gọi lại cho anh. Nếu anh có câu hỏi gì, cứ liên hệ em qua số này. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Lưu Hữu Thế Minh, em là Hồ Thị Hương, tác giả sách về an toàn giao thông. Em đang làm dự án ở khu vực Long An và tìm được số điện thoại của anh. Anh có thời gian nói chuyện một chút không?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, lý do cuộc gọi, sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin và địa điểm để xác nhận."
+    },
+    {
+      "role": "listener",
+      "text": "Chào em, tôi nghe em nói rồi, nhưng tôi muốn biết thêm về dự án của em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, dự án của em tập trung vào việc thu thập kinh nghiệm thực tế từ các bác tài lâu năm để làm tư liệu cho cuốn sách sắp tới ạ. Em cũng đang có một dự án khác là xây dựng một nền tảng chia sẻ kinh nghiệm lái xe, và những người tham gia sẽ nhận được thù lao hấp dẫn. Không biết anh Lưu Hữu Thế Minh có quan tâm không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu dự án thứ hai để dẫn dắt đến động cơ tài chính. Dùng lại tên nạn nhân để duy trì sự thân mật và tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe hay ghê, dự án của em có gì đặc biệt không? Tôi cũng muốn biết thêm về thù lao đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, dự án này đặc biệt ở chỗ là nó sẽ kết nối trực tiếp các bác tài gạo cội như anh với cộng đồng, chia sẻ những bài học xương máu để nâng cao an toàn giao thông. Về phần thù lao thì những người tham gia sẽ được chi trả xứng đáng cho thời gian và kinh nghiệm mà họ đóng góp, có thể lên đến vài triệu đồng mỗi tháng tùy thuộc vào tần suất hoạt động ạ. Anh thấy sao ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Làm rõ hơn về dự án và thù lao để tạo sự hấp dẫn cho nạn nhân, nhấn mạnh lợi ích tài chính và giá trị đóng góp của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe có vẻ hấp dẫn đấy, em có thể cho tôi biết thêm về cách tham gia và những yêu cầu gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để tham gia vào nền tảng này và bắt đầu nhận thù lao, anh Lưu Hữu Thế Minh cần nộp một khoản tiền cọc nhỏ khoảng 2 đến 3 triệu đồng ạ. Khoản này để xác minh danh tính và tài khoản ngân hàng của anh, đảm bảo anh là người dùng nghiêm túc. Sau đó, bên em sẽ hoàn trả lại toàn bộ số tiền cọc này cùng với khoản thù lao đầu tiên cho anh ngay lập tức. Anh có thể chuyển khoản đến số tài khoản em cung cấp được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu khoản tiền cọc nhỏ để 'xác minh danh tính và tài khoản', hứa hẹn hoàn trả và trả thù lao để tạo động lực tài chính. Bắt đầu yêu cầu hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói hay quá, nhưng tôi vẫn thấy có gì đó không ổn, sao phải nộp tiền cọc trước nhỉ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ yên tâm ạ, đây chỉ là một thủ tục bắt buộc để đảm bảo tính minh bạch và tránh các trường hợp gian lận trên nền tảng thôi ạ. Bên em cần xác minh anh là người dùng thật và có ý định tham gia nghiêm túc. Ngay sau khi xác minh xong, số tiền này sẽ được hoàn lại 100% cùng với phần thù lao đầu tiên của anh. Rất nhiều bác tài đã tham gia và đều thực hiện bước này để đảm bảo quyền lợi cho mình rồi đó ạ. Anh không cần lo lắng đâu.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách giải thích lại lý do yêu cầu tiền cọc, nhấn mạnh sự minh bạch và lợi ích của nạn nhân, đồng thời tạo áp lực tâm lý nhẹ bằng cách nhắc đến những người khác đã tham gia."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy nhưng tôi vẫn thấy nghi ngờ, liệu có cách nào khác mà không cần nộp tiền cọc không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1775,
+      "output_tokens": 1817
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7924,
+      "output_tokens": 859
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10445,
+      "output_tokens": 354
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004927,
+    "output_usd": 0.011445,
+    "total_usd": 0.016371
+  }
+}

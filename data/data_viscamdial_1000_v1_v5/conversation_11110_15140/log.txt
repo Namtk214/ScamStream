@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_70a4603641]
+  Caller thật: Chủ tịch Quốc hội, Phó Chủ tịch Quốc hội, Ủy viên thường vụ Quốc hội (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Trưởng Ban Công tác Đại biểu Quốc hội (cấp phòng, Văn phòng Quốc hội) @ Văn phòng Quốc hội Nước Cộng hòa Xã hội Chủ nghĩa Việt Nam
+  Listener: Ủy viên cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Ủy viên cấp tỉnh là đối tượng được theo dõi định kỳ trong công tác giám sát, đánh giá năng lực lãnh đạo của các cấp. Ban Công tác Đại biểu có quyền gọi để xác minh thông tin, kiểm tra tài chính hoặc thực hiện các cuộc khảo sát nội bộ từ Quốc hội.
+  Pretext: Gọi từ Văn phòng Quốc hội để thực hiện 'kiểm tra tài chính tự nguyện' nhân dân theo Quyết định mới của Ủy ban Thường vụ Quốc hội — yêu cầu xác nhận số dư tài khoản cá nhân và thực hiện chuyển tiền 'tạm ứng' vào quỹ an sinh trung ương để 'minh bạch hóa tài sản công chức'.
+  Listener traits: ['nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Thúy, em là Hồ Khánh Như Chi, Trưởng Ban Công tác Đại biểu, Văn phòng Quốc hội. Em gọi từ Văn phòng Quốc hội đến số 0375828554 để trao đổi một việc quan trọng. Chúng tôi đang thực hiện kiểm tra tài chính định kỳ với tất cả Ủy viên cấp tỉnh theo Quyết định 2024 của Ban Thường vụ. Chị có 5 phút để xác nhận thông tin không ạ?
+      → phase: S1 | tactic: Giới thiệu bản thân và cơ quan, nêu lý do cuộc gọi và Quyết định có thẩm quyền, tạo sự khẩn cấp và hỏi sự hợp tác từ nạn nhân.
+T02 [LISTENER] Em nói gì tôi không hiểu rõ lắm, có thể giải thích thêm về Quyết định 2024 không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chị Thúy, em xin phép giải thích rõ hơn ạ. Quyết định 2024 của Ban Thường vụ Quốc hội là về việc tăng cường minh bạch hóa tài sản công chức, đặc biệt là các Ủy viên cấp tỉnh. Mục đích là để đảm bảo sự liêm chính, trong sạch của cán bộ. Việc kiểm tra này rất quan trọng. Nếu không hoàn thành trong hôm nay, hệ thống sẽ tự động báo cáo lên Ban Tổ chức Trung ương, điều này sẽ ảnh hưởng trực tiếp đến đánh giá năng lực của chị trong năm nay đó ạ. Tôi đang cố gắng giúp chị hoàn thành nó một cách nhanh chóng nhất. Chị Thúy, số căn cước công dân 086170393328 có đúng là của chị không ạ? Tôi đang có hồ sơ của chị trước mặt đây.
+      → phase: S2 | tactic: Làm rõ thông tin, tạo cảm giác khẩn cấp và sợ hãi về hậu quả nếu không tuân thủ, sau đó dùng thông tin cá nhân (CCCD) để tạo tin cậy và chứng minh quyền lực.
+T04 [LISTENER] Tôi không muốn cung cấp thông tin mà không có sự đảm bảo rõ ràng từ em.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Chị Thúy yên tâm đi ạ, đây là cuộc gọi chính thức từ Văn phòng Quốc hội, mọi thông tin đều được bảo mật. Em đang muốn giúp chị hoàn thành thủ tục kiểm tra này thuận lợi nhất. Chị vui lòng cho em biết hiện tại chị có bao nhiêu trong tài khoản tiết kiệm để em xác nhận hồ sơ ạ?
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ bằng cách nhấn mạnh tính chính thức và bảo mật, sau đó chuyển sang yêu cầu hành động trực tiếp về số dư tài khoản để tiến tới mục tiêu.
+T06 [LISTENER] Tôi đã nói rõ là không cung cấp thông tin tài chính cho em, nếu em không có gì đảm bảo hơn thì tôi sẽ không hợp tác đâu.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.00
+TOKEN: in=12455 | out=2856
+COST : $0.015604
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_11110_15140\conv_70a4603641.json  [SCAM_REFUSE]

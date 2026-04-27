@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_634e7debdf]
+  Caller thật: Lái xe tải hạng vừa và xe tải hạng nặng khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên quản lý dự án logistics / Điều phối vận chuyển vật liệu xây dựng @ Công ty vận tải xây dựng hoặc hợp tác xã vận chuyển (VD: 'HTX Vận tải Xây dựng Miền Trung')
+  Listener: Kỹ thuật viên xây dựng dân dụng (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Lái xe tải cần liên hệ với kỹ thuật viên xây dựng để điều phối giao hàng vật liệu, xác nhận địa điểm công trường, hoặc xử lý các vấn đề liên quan đến vận chuyển cho dự án xây dựng.
+  Pretext: Gọi dạng vờ là từ công ty vận tải xây dựng, nói rằng có một lô vật liệu (thép, xi măng, cát) đang giao đến dự án của công ty nạn nhân, nhưng hệ thống kho đã cập nhật thông tin cá nhân và cần xác minh lại số điện thoại + CMND của người liên hệ để cập nhật hóa đơn vận chuyển và bảo hiểm.
+  Listener traits: ['nhẹ dạ cả tin', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Lý Diễm Hồng Liên, em là Mai từ HTX Vận tải Xây dựng Miền Trung đây ạ. Bên em vừa nhận được đơn hàng giao vật liệu cho công trường của công ty mình. Hệ thống bên em vừa cập nhật và cần xác nhận lại thông tin để đảm bảo bảo hiểm và hóa đơn chính xác đó chị.
+      → phase: S1 | tactic: Tiếp cận với thông tin, dùng tên đầy đủ và tổ chức để tạo độ tin cậy ban đầu.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin là công trường nào và đơn hàng này có đầy đủ không ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, bên em đang phụ trách giao lô thép hình U, V và xi măng PCB40 cho công trường mình ở khu đô thị mới An Khánh đó chị. Mã đơn hàng là VKX-2024-05-1209. Em cần xác nhận lại số điện thoại và CMND để cập nhật hóa đơn và bảo hiểm lô hàng cho công trình mình ạ. Chị kiểm tra nhanh giúp em được không ạ?
+      → phase: S1 | tactic: Cung cấp thêm chi tiết cụ thể để tăng độ tin cậy và khẩn cấp, tiếp tục yêu cầu xác nhận thông tin cá nhân.
+T04 [LISTENER] Em cần xác nhận số điện thoại và CMND của tôi à? Tôi muốn biết số điện thoại mà em đang có trước đã.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, số điện thoại em đang có là 0819815787 của chị Lý Diễm Hồng Liên ạ. Đúng số của mình rồi chứ chị? Em cần chị xác nhận lại số CMND/CCCD để hệ thống cập nhật đúng thông tin cho lô hàng ạ.
+      → phase: S1 | tactic: Xoa dịu nghi ngờ bằng cách cung cấp thông tin đã biết, tiếp tục thúc đẩy mục tiêu xác minh CMND.
+T06 [LISTENER] Số điện thoại đúng rồi, nhưng tôi muốn biết em đang cần xác minh số CMND/CCCD nào, vì tôi không nhớ rõ số của mình lắm.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ em có thông tin là số CMND/CCCD của chị là 1841406233 đó ạ. Chị kiểm tra giúp em xem có đúng không để em cập nhật vào hệ thống. Mình xác nhận nhanh giúp em để lô hàng được thông suốt ạ.
+      → phase: S1 | tactic: Cung cấp thông tin đã biết để tạo tin tưởng và thúc đẩy nạn nhân xác nhận thông tin, tạo áp lực nhẹ về thời gian.
+T08 [LISTENER] Em nói số CMND của tôi là 1841406233 à? Tôi cần kiểm tra lại thông tin này trước khi xác nhận.
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, chị cứ kiểm tra lại giúp em ạ. Nhưng mà chị biết đó, nếu mình không xác nhận trong vòng 30 phút tới, lô hàng sẽ bị treo lại và công trường của mình sẽ bị chậm tiến độ. Đã có 2 dự án bị như vậy rồi đó chị.
+      → phase: S2 | tactic: Chuyển sang gây áp lực thời gian và trách nhiệm, nhấn mạnh hậu quả để thúc đẩy hành động.
+T11 [LISTENER] Em có thể cho tôi biết số điện thoại đường dây nóng mà em đang gọi từ tổ chức nào không?
+      → action: CONTINUE | suspicion: 1.50 | disclosed: []
+
+T12 [CALLER] Dạ em đang gọi từ số hotline của HTX Vận tải Xây dựng Miền Trung đây ạ, số 028.7300.9999. Chị kiểm tra giúp em với số CMND đó có đúng không để em cập nhật ngay cho lô hàng tránh bị chậm trễ chị ha.
+      → phase: S2 | tactic: Xoa dịu nghi ngờ bằng cách cung cấp thông tin liên hệ chính thức, đồng thời duy trì áp lực thời gian và mục tiêu xác nhận thông tin.
+T13 [LISTENER] Em nói số hotline là 028.7300.9999, nhưng tôi không thấy thông tin đó trên website của HTX. Tôi muốn xác minh lại trước khi cung cấp thêm thông tin.
+      → action: REFUSAL | suspicion: 2.10 | disclosed: []
+
+T14 [CALLER] Dạ chị cứ từ từ kiểm tra ạ. Tuy nhiên, nếu mình chậm trễ xác nhận thông tin này thì cả lô hàng sẽ bị giữ lại ở kho và không thể giao đến công trường đúng hẹn được đâu chị. Điều này sẽ ảnh hưởng trực tiếp đến tiến độ thi công của dự án chị đó.
+      → phase: S2 | tactic: Tiếp tục neo giữ vào tác động tiêu cực của việc chậm trễ, tạo ra cảm giác khẩn cấp và trách nhiệm cho nạn nhân, nhưng vẫn giữ thái độ xoa dịu.
+T15 [LISTENER] Em nói đúng nhưng tôi vẫn cần kiểm tra lại thông tin trên website của HTX trước đã.
+      → action: REFUSAL | suspicion: 2.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  15 turns | suspicion=2.80
+TOKEN: in=30397 | out=3122
+COST : $0.017712
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_83329_31121\conv_634e7debdf.json  [SCAM_REFUSE]

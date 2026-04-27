@@ -1,0 +1,188 @@
+{
+  "conversation_id": "conv_92e36bd66e",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0041",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lý Khánh Trang",
+    "fake_age": 38,
+    "real_occupation": "Thợ kéo dây cáp viễn thông",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý Hạ tầng Viễn thông - Chi nhánh Quận",
+    "caller_org": "Công ty Cổ phần Viễn thông Viettel - Bộ phận Kiểm soát Chất lượng Đường dây",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty Viễn thông liên hệ để thông báo sự cố đường dây hoặc nâng cấp dịch vụ tại khu vực kinh doanh của khách hàng. Hoặc xác nhận thông tin liên lạc để cập nhật hồ sơ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng (tên, phòng ban, số điện thoại đường dây nóng chính thức). 'Xin chào, tôi là Nguyễn Văn A từ Viettel, Bộ phận Chăm sóc Khách hàng. Tôi có thể nói chuyện với chị Lưu Thùy Nhàn không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: Thông báo dịch vụ/sự cố cụ thể không liên quan tới tài chính. 'Chúng tôi sắp bảo trì đường dây cáp tại khu vực Nguyễn Huệ vào thứ 6 tuần tới. Dịch vụ của chị có thể bị gián đoạn 2-3 giờ. Chị có cần hỗ trợ gì không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc tự nhiên: Ghi nhận phản hồi, cảm ơn và tạm biệt. 'Cảm ơn chị đã lắng nghe. Chúng tôi sẽ gửi SMS nhắc nhở trước. Nếu có vấn đề, chị gọi hotline 1900 1234. Chúc chị kinh doanh tốt!'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ kéo dây cáp viễn thông có quyền truy cập danh sách khách hàng và thông tin liên lạc. Người bán hàng rong thường có điểm bán hàng cố định trên đường phố, cần đảm bảo các đường dây viễn thông hoạt động tốt. Cuộc gọi từ nhân viên viễn thông để kiểm tra/khôi phục dịch vụ là tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0041",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1995,
+      "age": 30,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "95200",
+      "title": "Người bán hàng rong trên đường phố (trừ đồ ăn)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lưu Thùy Nhàn",
+      "VIC_ID_DOC": "074195059480",
+      "VIC_ADDRESS": "TP 3, Bình Dương",
+      "VIC_EMPLOYMENT": "Người bán hàng rong trên đường phố (trừ đồ ăn)",
+      "VIC_CONTACT": "0823459407",
+      "VIC_TAX_SOCIAL_ID": "9935998499"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "8528",
+      "VIC_CREDENTIAL": "2149",
+      "VIC_SIM_INFO": "0823459407",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0766458506",
+      "VIC_CARD_DATA": "4949 **** **** 4157",
+      "VIC_BALANCE": "3 triệu đồng",
+      "VIC_ASSET": "7 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lưu Thùy Nhàn",
+    "VIC_CONTACT": "0823459407",
+    "VIC_ASSET": "7 triệu đồng",
+    "VIC_BANK_ACCOUNT": "0766458506"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Hạ tầng Viễn thông - Chi nhánh Quận",
+    "caller_org": "Công ty Cổ phần Viễn thông Viettel - Bộ phận Kiểm soát Chất lượng Đường dây",
+    "scenario_context": "Thợ kéo dây cáp viễn thông có quyền truy cập danh sách khách hàng và thông tin liên lạc. Người bán hàng rong thường có điểm bán hàng cố định trên đường phố, cần đảm bảo các đường dây viễn thông hoạt động tốt. Cuộc gọi từ nhân viên viễn thông để kiểm tra/khôi phục dịch vụ là tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi từ Công ty Viễn thông để thông báo: Tài khoản của Lưu Thùy Nhàn (0823459407) bị phát hiện hoạt động bất thường - có dấu hiệu ghi nợ trên hệ thống thanh toán viễn thông. Để tránh bị khóa tài khoản và mất dữ liệu kinh doanh, cần xác minh ngay bằng cách chuyển tiền bảo đảm vào tài khoản khóa tạm thời.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là Trưởng phòng Quản lý từ Viettel. Dùng VIC_FULLNAME và VIC_CONTACT để xác nhận danh tính: 'Chị Lưu Thùy Nhàn phải không? Chúng tôi gọi từ Viettel, số điện thoại 0823459407 của chị vừa được ghi nhận trong hệ thống.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + Sợ hãi: Tạo áp lực thời gian và lo sợ mất tài sản. 'Hệ thống phát hiện tài khoản của chị có dấu hiệu bị hack - ghi nợ 7 triệu đồng. Nếu không xác minh trong 30 phút, tài khoản sẽ bị khóa vĩnh viễn. Chị sẽ mất hết dữ liệu kinh doanh và bị ảnh hưởng tín dụng.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Hướng dẫn chuyển tiền. 'Để bảo vệ tài sản, chị cần chuyển 7 triệu vào tài khoản khóa tạm thời của hệ thống: 0766458506. Đây là quy trình tiêu chuẩn, tiền sẽ được hoàn lại trong 24 giờ sau khi xác minh. Chị chuyển ngay được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, tăng áp lực: 'Chị đang rủi ro mất tất cả. Chúng tôi chỉ có thể giúp nếu chị hành động ngay. Chị có thể gọi lại số 1900 để xác nhận, nhưng sẽ mất thêm 15 phút.' (Số giả mạo cũng do scammer kiểm soát). Nếu thành công, cảm ơn và tắt máy nhanh."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty Viễn thông liên hệ để thông báo sự cố đường dây hoặc nâng cấp dịch vụ tại khu vực kinh doanh của khách hàng. Hoặc xác nhận thông tin liên lạc để cập nhật hồ sơ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng (tên, phòng ban, số điện thoại đường dây nóng chính thức). 'Xin chào, tôi là Nguyễn Văn A từ Viettel, Bộ phận Chăm sóc Khách hàng. Tôi có thể nói chuyện với chị Lưu Thùy Nhàn không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: Thông báo dịch vụ/sự cố cụ thể không liên quan tới tài chính. 'Chúng tôi sắp bảo trì đường dây cáp tại khu vực Nguyễn Huệ vào thứ 6 tuần tới. Dịch vụ của chị có thể bị gián đoạn 2-3 giờ. Chị có cần hỗ trợ gì không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc tự nhiên: Ghi nhận phản hồi, cảm ơn và tạm biệt. 'Cảm ơn chị đã lắng nghe. Chúng tôi sẽ gửi SMS nhắc nhở trước. Nếu có vấn đề, chị gọi hotline 1900 1234. Chúc chị kinh doanh tốt!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào, tôi là Lý Khánh Trang từ Bộ phận Kiểm soát Chất lượng Đường dây của Viettel. Tôi có thể nói chuyện với chị Lưu Thùy Nhàn không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, xưng danh rõ ràng để xác nhận người nhận cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đây ạ, chị gọi em có chuyện gì vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chào chị Nhàn, tôi gọi từ Viettel để thông báo rằng vào thứ Tư tuần tới, tức ngày 24 tháng 7, chúng tôi sẽ tiến hành nâng cấp hệ thống đường truyền cáp quang tại khu vực của chị. Do đó, dịch vụ internet và điện thoại của chị có thể bị gián đoạn trong khoảng ắc 3 tiếng, từ 9 giờ sáng đến 12 giờ trưa. Chị có cần tôi cung cấp thêm thông tin chi tiết nào không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Thông báo về việc nâng cấp dịch vụ và khả năng gián đoạn, đảm bảo không liên quan đến thông tin tài chính và hỏi ý kiến khách hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng chị có cần em làm gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Không cần chị làm gì đặc biệt cả. Tôi chỉ muốn thông báo để chị nắm được thông tin và sắp xếp công việc cho phù hợp. Viettel sẽ cố gắng hoàn thành việc nâng cấp nhanh nhất có thể để giảm thiểu sự bất tiện cho chị. Cảm ơn chị đã lắng nghe. Chúc chị một ngày làm việc hiệu quả!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc tự nhiên cuộc gọi sau khi hoàn thành mục đích thông báo, không yêu cầu người nghe làm gì thêm và chúc tốt đẹp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1411,
+      "output_tokens": 1797
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3308,
+      "output_tokens": 403
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 3495,
+      "output_tokens": 122
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002597,
+    "output_usd": 0.010066,
+    "total_usd": 0.012663
+  }
+}

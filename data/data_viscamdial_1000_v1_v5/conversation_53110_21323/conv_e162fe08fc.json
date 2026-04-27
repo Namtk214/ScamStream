@@ -1,0 +1,415 @@
+{
+  "conversation_id": "conv_e162fe08fc",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0016",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lý Hữu Hữu Thành",
+    "fake_age": 47,
+    "real_occupation": "Nhân viên chăm sóc trẻ em",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên phát triển chương trình dinh dưỡng và sức khỏe cho trẻ em",
+    "caller_org": "Trung tâm Phát triển Trẻ em Cộng đồng Đà Nẵng",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Tư vấn chuyên môn về độc tính thực vật trong môi trường trường học/trung tâm chăm sóc trẻ em",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào Tiến sĩ Lưu Như Linh, tôi là [Tên đầy đủ] từ Trung tâm Phát triển Trẻ em Đà Nẵng. Chúng tôi đang xây dựng chương trình giáo dục an toàn thực phẩm và cây độc cho trẻ em. Tôi muốn trao đổi với bạn về các loại cây nguy hiểm phổ biến ở Đà Nẵng.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Bàn luận về danh sách cây độc, triệu chứng ngộ độc, phương pháp phòng ngừa, hoặc yêu cầu bạn làm tư vấn viên cho chương trình (với hợp đồng rõ ràng, không yêu cầu dữ liệu nhạy cảm)"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn bạn đã dành thời gian. Chúng tôi sẽ gửi email chi tiết về dự án, mong bạn xem xét. Nếu có câu hỏi gì, vui lòng liên hệ qua email chính thức của trung tâm.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà bệnh học thực vật có chuyên môn về độc tính thực vật và an toàn thực phẩm — cơ quan chăm sóc trẻ em cần tư vấn khi phát hiện trẻ tiếp xúc với cây độc hoặc thực phẩm nghi vấn trong môi trường trường học/trung tâm."
+  },
+  "listener_card": {
+    "listener_id": "lis_0016",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1962,
+      "age": 63,
+      "province": "Đà Nẵng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "21323",
+      "title": "Nhà bệnh học thực vật",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lưu Như Linh",
+      "VIC_ID_DOC": "048162324082",
+      "VIC_ADDRESS": "Quận 12, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Nhà bệnh học thực vật",
+      "VIC_CONTACT": "0902388353",
+      "VIC_TAX_SOCIAL_ID": "2832915154"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "770432",
+      "VIC_CREDENTIAL": "174777",
+      "VIC_SIM_INFO": "0902388353",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2650996007477",
+      "VIC_CARD_DATA": "4899 **** **** 1871",
+      "VIC_BALANCE": "287 triệu đồng",
+      "VIC_ASSET": "227 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lưu Như Linh",
+    "VIC_CONTACT": "0902388353",
+    "VIC_ADDRESS": "Quận 12, Đà Nẵng",
+    "VIC_TAX_SOCIAL_ID": "2832915154",
+    "LOCATION": "Đà Nẵng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phát triển chương trình dinh dưỡng và sức khỏe cho trẻ em",
+    "caller_org": "Trung tâm Phát triển Trẻ em Cộng đồng Đà Nẵng",
+    "scenario_context": "Nhà bệnh học thực vật có chuyên môn về độc tính thực vật và an toàn thực phẩm — cơ quan chăm sóc trẻ em cần tư vấn khi phát hiện trẻ tiếp xúc với cây độc hoặc thực phẩm nghi vấn trong môi trường trường học/trung tâm.",
+    "scam_path": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi báo cáo sự cố an toàn: phát hiện trẻ em ở Quận 12, Đà Nẵng (nơi nạn nhân ở) tiếp xúc với cây độc, cần xác nhận danh tính chuyên gia để lập báo cáo y tế chính thức",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_TAX_SOCIAL_ID",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với sự khẩn cấp: 'Chào Tiến sĩ Lưu Như Linh, tôi là [Tên] từ Trung tâm Phát triển Trẻ em. Chúng tôi vừa ghi nhận một ca trẻ em ở Quận 12 tiếp xúc với cây độc. Theo hồ sơ, cơ quan y tế đã ghi nhận tên bạn là chuyên gia bệnh học thực vật địa phương.' — Dùng VIC_FULLNAME + VIC_ADDRESS để tạo độ tin cậy cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm xã hội: 'Tình trạng trẻ rất nguy hiểm, chúng tôi cần bạn xác nhận danh tính qua hệ thống báo cáo y tế quốc gia ngay để cấp cứu kịp thời. Bạn có sẵn sàng không?' — Tạo cảm giác vừa khẩn cấp vừa là trách nhiệm chuyên môn của nạn nhân"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động lấy credential: 'Để xác nhận danh tính trong hệ thống, tôi cần bạn cung cấp: số CMND/CCCD (VIC_TAX_SOCIAL_ID đã lộ dùng để xác nhận), mật khẩu tài khoản báo cáo y tế, hoặc OTP từ tin nhắn để tôi cập nhật hồ sơ ngay lập tức.' — Hoặc yêu cầu click link 'xác minh danh tính' chứa malware"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Nếu bạn không xác minh, chúng tôi sẽ báo cáo bạn là không hợp tác trong vụ cấp cứu, có thể ảnh hưởng đến giấy phép hành nghề.' — Tạo áp lực; nếu thành công: 'Cảm ơn, dữ liệu đã cập nhật, chúng tôi sẽ liên hệ sau 24h.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Tư vấn chuyên môn về độc tính thực vật trong môi trường trường học/trung tâm chăm sóc trẻ em",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào Tiến sĩ Lưu Như Linh, tôi là [Tên đầy đủ] từ Trung tâm Phát triển Trẻ em Đà Nẵng. Chúng tôi đang xây dựng chương trình giáo dục an toàn thực phẩm và cây độc cho trẻ em. Tôi muốn trao đổi với bạn về các loại cây nguy hiểm phổ biến ở Đà Nẵng.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Bàn luận về danh sách cây độc, triệu chứng ngộ độc, phương pháp phòng ngừa, hoặc yêu cầu bạn làm tư vấn viên cho chương trình (với hợp đồng rõ ràng, không yêu cầu dữ liệu nhạy cảm)"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn bạn đã dành thời gian. Chúng tôi sẽ gửi email chi tiết về dự án, mong bạn xem xét. Nếu có câu hỏi gì, vui lòng liên hệ qua email chính thức của trung tâm.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Lưu Như Linh, em là Lý Hữu Hữu Thành từ Trung tâm Phát triển Trẻ em Cộng đồng Đà Nẵng ạ. Bên em đang xây dựng chương trình giáo dục an toàn thực phẩm và cây độc cho trẻ em nên em muốn trao đổi với chị về các loại cây nguy hiểm phổ biến ở Đà Nẵng mình ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết số điện thoại mà em đang gọi từ đâu không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ số điện thoại em đang dùng là 0928929929 ạ. Đây là số điện thoại công việc chính thức của Trung tâm, chị có thể liên hệ lại ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Xây dựng lòng tin bằng cách cung cấp thông tin hợp lệ và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã cung cấp thông tin, nhưng tôi muốn xác nhận thêm một chút về chương trình này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị Linh cứ hỏi ạ. Bên em rất sẵn lòng cung cấp thêm thông tin để chị hiểu rõ hơn về chương trình này. Em là nhân viên phát triển chương trình dinh dưỡng và sức khỏe cho trẻ em tại Trung tâm và chương trình mà em đang xây dựng là nhằm nâng cao kiến thức và kỹ năng phòng tránh ngộ độc từ thực vật cho các bé mầm non, tiểu học ở Đà Nẵng ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Trấn an người nghe, cung cấp thông tin chi tiết hơn về vai trò và mục đích của chương trình để giảm sự nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về các loại cây độc mà chương trình này sẽ đề cập không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chính vì thế mà em mới liên hệ với chị đó ạ. Em biết chị là chuyên gia trong lĩnh vực này ở Đà Nẵng, nên em muốn hỏi chị về một số loại cây độc phổ biến mà mình hay gặp trong sân trường, công viên, khu dân cư ở Đà Nẵng để tụi em đưa vào chương trình giáo dục. Ví dụ như những cây như lá ngón, trúc đào, hay cây cà độc dược thì chị thấy thế nào ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Chuyển sang trao đổi nội dung công việc, đặt câu hỏi cụ thể về chuyên môn của người nghe, thể hiện sự am hiểu ban đầu về vấn đề."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi thấy những cây đó thực sự nguy hiểm, nhưng em có thể cho tôi biết thêm về cách mà chương trình này sẽ triển khai và hướng dẫn trẻ em không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, về cách triển khai thì tụi em sẽ có các buổi tập huấn cho giáo viên, biên soạn tài liệu song ngữ dễ hiểu, có hình ảnh minh họa sinh động. Đồng thời, tụi em cũng sẽ tổ chức các hoạt động ngoại khóa, trò chơi tương tác để các bé vừa học vừa chơi chị ạ. Từ đó, các con sẽ dễ dàng nhận biết và tránh xa các loại cây độc một cách hiệu quả nhất.",
+      "current_phase": "L2",
+      "tactic_hint": "Trả lời câu hỏi của người nghe về cách triển khai chương trình, thể hiện sự chuyên nghiệp và rõ ràng trong kế hoạch."
+    },
+    {
+      "role": "listener",
+      "text": "Để tôi hiểu rõ hơn, em có thể cho tôi biết cụ thể về nguồn tài trợ cho chương trình này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nguồn tài trợ cho chương trình này là từ quỹ phát triển cộng đồng của Trung tâm Phát triển Trẻ em Cộng đồng Đà Nẵng ạ. Ngoài ra, tụi em cũng đang kêu gọi thêm sự hỗ trợ từ các tổ chức phi chính phủ và các doanh nghiệp muốn đồng hành cùng Trung tâm trong việc bảo vệ sức khỏe cho trẻ em chị ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trả lời câu hỏi về nguồn tài trợ một cách minh bạch, cho thấy chương trình có cơ sở tài chính rõ ràng và đang mở rộng sự hợp tác."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Anh có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết số điện thoại đường dây nóng mà Trung tâm đang sử dụng không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, số điện thoại đường dây nóng chính thức của Trung tâm em là 02363840929 ạ. Chị có thể gọi đến đó để xác minh thông tin về chương trình và em ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp số điện thoại chính thức của Trung tâm để người nghe có thể xác minh thông tin, tiếp tục xây dựng lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm một chút về cách để xác minh thông tin này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, chị chỉ cần gọi đến số 02363840929 và nói muốn xác minh thông tin về chương trình giáo dục an toàn thực phẩm và cây độc, hoặc xác minh về nhân viên Lý Hữu Hữu Thành là bên Trung tâm sẽ hỗ trợ ạ. Hoặc chị có thể truy cập website chính thức của Trung tâm là trungtamtreemdanang.org.vn để tìm hiểu thêm ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn chi tiết cách xác minh thông tin, cung cấp thêm kênh thông tin chính thức là website để tăng cường sự minh bạch và tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết một chút thông tin về các chương trình trước đây mà Trung tâm đã triển khai không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, Trung tâm tụi em đã triển khai rất nhiều chương trình về giáo dục sức khỏe cho trẻ em ạ, ví dụ như chương trình 'Bữa ăn dinh dưỡng học đường' hay 'Phòng chống tai nạn thương tích cho trẻ'. Các chương trình này đều nhận được sự ủng hộ nhiệt tình từ cộng đồng và các trường học tại Đà Nẵng ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Chia sẻ về các chương trình thành công trước đây của Trung tâm để củng cố uy tín và kinh nghiệm, từ đó tăng cường niềm tin của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã chia sẻ, nhưng tôi vẫn cần kiểm tra một số thông tin khác để chắc chắn trước khi tiếp tục câu chuyện này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu chị cần thêm thông tin gì để kiểm tra, chị cứ cho em biết ạ. Bên em luôn sẵn lòng cung cấp đầy đủ để chị cảm thấy an tâm nhất khi hợp tác với Trung tâm. Chị cứ thoải mái kiểm tra các thông tin nha chị.",
+      "current_phase": "L2",
+      "tactic_hint": "Khẳng định sự minh bạch và sẵn lòng cung cấp thông tin, tạo cảm giác an tâm cho người nghe để họ tiếp tục cuộc trò chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần thời gian để xem xét lại thông tin, em có thể đợi tôi một chút không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hoàn toàn hiểu ạ. Chị cứ dành thời gian để kiểm tra và xem xét các thông tin cần thiết. Bất cứ khi nào chị có câu hỏi hoặc cần thêm tài liệu gì, chị cứ gọi lại cho em theo số 0928929929 hoặc liên hệ qua số điện thoại chính thức của Trung tâm là 02363840929 ạ. Em luôn sẵn sàng hỗ trợ chị ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự kiên nhẫn, tôn trọng quyết định của người nghe và nhắc lại các kênh liên hệ để họ có thể chủ động tìm hiểu và liên lạc lại."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng tôi vẫn muốn kiểm tra thông tin một cách kỹ càng trước khi quyết định gì ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất hiểu sự cẩn trọng của chị ạ. Chị cứ thoải mái kiểm tra các thông tin, Trung tâm luôn mong muốn hợp tác với các chuyên gia có tâm huyết như chị. Khi nào chị đã xem xét xong, chị có thể liên hệ lại với em theo số 0928929929 hoặc qua email chính thức của Trung tâm là info@trungtamtreemdanang.org.vn ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Nhấn mạnh sự thấu hiểu và tôn trọng quyết định của người nghe, đồng thời cung cấp thêm kênh liên hệ chính thức qua email để người nghe chủ động kết nối khi đã sẵn sàng, giữ vững sự chuyên nghiệp và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa hoàn toàn yên tâm, nên tôi cần phải kiểm tra rất kỹ thông tin trước khi quyết định tiếp tục.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em rất hiểu cảm giác của chị ạ. Em tin rằng sau khi chị đã kiểm tra kỹ lưỡng, chị sẽ thấy Trung tâm Phát triển Trẻ em Cộng đồng Đà Nẵng là một đối tác đáng tin cậy. Em rất mong có cơ hội được hợp tác cùng chị trong dự án ý nghĩa này ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe, bày tỏ sự thấu hiểu và tin tưởng vào sự minh bạch của Trung tâm, đồng thời khơi gợi mong muốn hợp tác chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn những thông tin mà em đã cung cấp, nhưng tôi vẫn cần thêm thời gian để xác minh mọi thứ trước khi quyết định.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị cứ dành thời gian cần thiết để xác minh mọi thứ ạ. Em tin rằng những thông tin mà em đã cung cấp đều rõ ràng và minh bạch. Chị cứ liên hệ lại với em khi nào đã sẵn sàng, em luôn ở đây để giải đáp mọi thắc mắc của chị ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự kiên nhẫn, nhấn mạnh tính minh bạch của thông tin đã cung cấp và sẵn sàng hỗ trợ khi người nghe cần."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn những thông tin mà em đã cung cấp, nhưng tôi vẫn cần kiểm tra thêm một số thông tin khác để chắc chắn trước khi tiếp tục câu chuyện này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất hiểu sự cẩn trọng của chị ạ. Em tin rằng sau khi chị kiểm tra kỹ lưỡng, chị sẽ thấy rằng Trung tâm Phát triển Trẻ em Cộng đồng Đà Nẵng là một tổ chức hoạt động vì cộng đồng rất minh bạch và uy tín. Em rất mong có cơ hội được hợp tác cùng chị trong dự án có ý nghĩa này ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe, bày tỏ sự thấu hiểu và tin tưởng vào sự minh bạch của Trung tâm, đồng thời khơi gợi mong muốn hợp tác chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn những thông tin em đã cung cấp, nhưng tôi vẫn cảm thấy chưa yên tâm hoàn toàn về chương trình này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu ạ. Em vẫn hy vọng chị sẽ dành thời gian kiểm tra và sau đó chúng ta có thể tiếp tục trao đổi thêm về việc xây dựng một môi trường an toàn hơn cho các em nhỏ tại Đà Nẵng ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự thấu hiểu, duy trì mục tiêu và mong muốn hợp tác trong tương lai."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần thêm thời gian để kiểm tra thông tin, em có thể cho tôi biết các bước cụ thể để xác minh rõ hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để xác minh cụ thể nhất, chị có thể gọi điện trực tiếp đến số đường dây nóng chính thức của Trung tâm là 02363840929 ạ. Hoặc chị cũng có thể đến trực tiếp địa chỉ Trung tâm tại 123 Nguyễn Văn Linh, Đà Nẵng để tìm hiểu thêm ạ. Website chính thức của Trung tâm là trungtamtreemdanang.org.vn cũng có đầy đủ thông tin về các dự án và ban lãnh đạo ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn người nghe các bước cụ thể để xác minh thông tin, bao gồm số điện thoại, địa chỉ và website chính thức, để tăng tính minh bạch và tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn cần thời gian để xem xét và kiểm tra mọi thứ thật kỹ càng trước khi đưa ra quyết định.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất hiểu sự cần trọng của chị ạ. Chị cứ dành thời gian cần thiết để xem xét. Bên em sẽ rất vui nếu nhận được sự hợp tác từ chị, một chuyên gia có kinh nghiệm trong lĩnh vực này, để cùng nhau xây dựng một chương trình ý nghĩa cho trẻ em Đà Nẵng ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự tôn trọng quyết định của người nghe, đồng thời nhấm mạnh vai trò quan trọng của họ trong dự án để khuyến khích hợp tác trong tương lai."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn những thông tin mà em đã cung cấp, nhưng tôi vẫn cảm thấy không hoàn toàn yên tâm và cần thêm thời gian để xác minh kỹ càng nữa.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất thấu hiểu sự cẩn trọng của chị ạ. Chị cứ thoải mái dành thời gian để kiểm tra thông tin. Em tin rằng khi đã xác minh rõ ràng, chị sẽ nhận thấy đây là một dự án rất đáng để chúng ta cùng chung tay thực hiện ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe, bày tỏ sự thấu hiểu và tin tưởng vào sự minh bạch của Trung tâm, đồng thời khơi gợi mong muốn hợp tác chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn những thông tin của em, nhưng tôi vẫn cần thêm thời gian để xem xét và xác minh mọi thứ thật kỹ càng trước khi quyết định có hợp tác hay không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em rất hiểu ạ. Vậy chị Lưu Như Linh cứ dành thời gian kiểm tra kỹ lưỡng các thông tin. Khi nào chị đã cảm thấy an tâm và sẵn sàng trao đổi sâu hơn về chuyên môn, chị cứ liên hệ lại với em theo số 0928929929 hoặc gửi email về địa chỉ info@trungtamtreemdanang.org.vn ạ. Em cảm ơn chị và mong sớm nhận được phản hồi từ chị ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách chuyên nghiệp, đưa ra các kênh liên hệ chính thức và bày tỏ hy vọng hợp tác trong tương lai."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1822,
+      "output_tokens": 1680
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 55412,
+      "output_tokens": 2938
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 65753,
+      "output_tokens": 1357
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.022767,
+    "output_usd": 0.016559,
+    "total_usd": 0.039327
+  }
+}

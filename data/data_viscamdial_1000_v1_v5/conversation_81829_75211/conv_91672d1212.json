@@ -1,0 +1,200 @@
+{
+  "conversation_id": "conv_91672d1212",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0017",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Bùi Khánh Hồng Trang",
+    "fake_age": 26,
+    "real_occupation": "Thợ vận hành động cơ hơi nước và nồi hơi khác",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Thợ bảo trì hệ thống sấy công nghiệp / Kỹ thuật viên tư vấn thiết bị nhiệt",
+    "caller_org": "cá nhân / thương lái tự do cung cấp phụ tùng và dịch vụ bảo trì",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Thợ bảo trì hệ thống hơi nước gọi để tư vấn hoặc cung cấp phụ tùng chính hãng, sửa chữa bảo trì định kỳ cho lò sấy của thợ lò sấy.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận lịch sự: 'Chào anh, tôi là Hùng từ HTX bảo trì thiết bị nhiệt Nghệ An. Anh Hoàng Công Xuân Khoa phải không? Tôi có địa chỉ TP7 của anh, muốn tư vấn về bảo trì định kỳ lò sấy. Anh có thời gian nghe tôi nói một chút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung chuyên môn: 'Hệ thống hơi nước trên lò sấy cần kiểm tra van điều chỉnh, ống dẫn hơi, và bộ lọc ít nhất 6 tháng một lần. Anh hiện bảo trì như thế nào? Nếu cần, tôi có thể ghé xem trực tiếp vào tuần sau để báo giá phụ tùng chính hãng.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy anh cho tôi biết ngày nào trong tuần anh rảnh, tôi sẽ mang theo bộ dụng cụ kiểm tra. Sau đó sẽ có báo cáo chi tiết và báo giá. Anh ghi số điện thoại của tôi lại: 0987654321. Cảm ơn anh.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ vận hành động cơ hơi nước và nồi hơi thường tiếp xúc với các hệ thống sấy công nghiệp vì chúng dùng hơi nước để cấp nhiệt. Thợ lò sấy cần tư vấn, phụ tùng thay thế, hoặc sửa chữa từ những người hiểu rõ hệ thống hơi nước và thiết bị nhiệt — tạo nên mối liên kết tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0017",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "Nghệ An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75211",
+      "title": "Thợ lò sấy",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hoàng Công Xuân Khoa",
+      "VIC_ID_DOC": "040202431030",
+      "VIC_ADDRESS": "TP 7, Nghệ An",
+      "VIC_EMPLOYMENT": "Thợ lò sấy",
+      "VIC_CONTACT": "0363978149",
+      "VIC_TAX_SOCIAL_ID": "6957176098"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9150",
+      "VIC_CREDENTIAL": "528498",
+      "VIC_SIM_INFO": "0363978149",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0137927181243",
+      "VIC_CARD_DATA": "4165 **** **** 4913",
+      "VIC_BALANCE": "58 triệu đồng",
+      "VIC_ASSET": "185 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hoàng Công Xuân Khoa",
+    "VIC_CONTACT": "0363978149",
+    "VIC_ADDRESS": "TP 7, Nghệ An"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Thợ bảo trì hệ thống sấy công nghiệp / Kỹ thuật viên tư vấn thiết bị nhiệt",
+    "caller_org": "cá nhân / thương lái tự do cung cấp phụ tùng và dịch vụ bảo trì",
+    "scenario_context": "Thợ vận hành động cơ hơi nước và nồi hơi thường tiếp xúc với các hệ thống sấy công nghiệp vì chúng dùng hơi nước để cấp nhiệt. Thợ lò sấy cần tư vấn, phụ tùng thay thế, hoặc sửa chữa từ những người hiểu rõ hệ thống hơi nước và thiết bị nhiệt — tạo nên mối liên kết tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo có phụ tùng đặc biệt (van điều chỉnh hơi, ống dẫn hơi) phù hợp với lò sấy của anh, hoặc tư vấn nâng cấp hệ thống hơi để tiết kiệm chi phí. Dùng tên của nạn nhân để tạo ấn tượng 'ai đó đã giới thiệu' hoặc 'đơn vị đã liên hệ trước'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh xưng kỹ thuật viên bảo trì, gọi trực tiếp số 0363978149. Mở đầu: 'Chào anh Hoàng Công Xuân Khoa, tôi là Hùng, từ bên cung cấp phụ tùng hơi nước ở Nghệ An. Anh có máy sấy ở TP7 đúng không? Hôm qua có đơn vị khác giới thiệu anh cho tôi.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Hiện tôi có van điều chỉnh hơi chất lượng cao, giá rất tốt chỉ lúc này, nếu anh đặt trong tuần này sẽ giảm thêm 20%. Ngoài ra, hệ thống anh có dấu hiệu rò rỉ không? Nếu không sửa sớm, năng suất sấy sẽ giảm 30%, tiền điện cũng tăng gấp đôi.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Để anh ưu tiên, tôi cần anh chuyển 50% tiền cọc vào tài khoản này (cung cấp số tài khoản giả), phần còn lại thanh toán khi nhận hàng. Tôi sẽ gửi hoá đơn qua tin nhắn ngay.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền → ngay lập tức tắt máy, không trả lời. Nếu nạn nhân từ chối → chuyển sang tạo khẩn cấp: 'Anh đợi, tôi có một khách hàng khác cũng ở TP7 đang rất cần, nếu anh không lấy tôi sẽ bán cho họ. Anh quyết định trong 10 phút nhé.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thợ bảo trì hệ thống hơi nước gọi để tư vấn hoặc cung cấp phụ tùng chính hãng, sửa chữa bảo trì định kỳ cho lò sấy của thợ lò sấy.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận lịch sự: 'Chào anh, tôi là Hùng từ HTX bảo trì thiết bị nhiệt Nghệ An. Anh Hoàng Công Xuân Khoa phải không? Tôi có địa chỉ TP7 của anh, muốn tư vấn về bảo trì định kỳ lò sấy. Anh có thời gian nghe tôi nói một chút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung chuyên môn: 'Hệ thống hơi nước trên lò sấy cần kiểm tra van điều chỉnh, ống dẫn hơi, và bộ lọc ít nhất 6 tháng một lần. Anh hiện bảo trì như thế nào? Nếu cần, tôi có thể ghé xem trực tiếp vào tuần sau để báo giá phụ tùng chính hãng.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy anh cho tôi biết ngày nào trong tuần anh rảnh, tôi sẽ mang theo bộ dụng cụ kiểm tra. Sau đó sẽ có báo cáo chi tiết và báo giá. Anh ghi số điện thoại của tôi lại: 0987654321. Cảm ơn anh.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh, tôi là Trang từ HTX bảo trì thiết bị nhiệt Nghệ An. Anh Hoàng Công Xuân Khoa phải không? Tôi có địa chỉ TP 7 của anh, muốn tư vấn về bảo trì định kỳ lò sấy. Anh có thời gian nghe tôi nói một chút không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận lịch sự và xác nhận thông tin cơ bản; trình bày mục đích gọi ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em là Khoa đây, chị cần tư vấn gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh Khoa. Tôi là Bùi Khánh Hồng Trang, bên tôi chuyên cung cấp dịch vụ bảo trì và phụ tùng chính hãng cho các hệ thống lò sấy. Cụ thể là hệ thống hơi nước trên lò sấy của anh cần kiểm tra van điều chỉnh, ống dẫn hơi, và bộ lọc định kỳ ít nhất 6 tháng một lần để đảm bảo hiệu suất. Anh hiện đang bảo trì như thế nào ạ? Nếu anh thấy cần, tôi có thể ghé trực tiếp xem xét vào tuần sau để có thể đưa ra báo giá phụ tùng chính hãng được không?",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu bản thân và tổ chức rõ ràng; sau đó đi vào nội dung chuyên môn của quy trình bảo trì, đồng thời ngỏ ý muốn ghé thăm trực tiếp để đánh giá và báo giá."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em chưa bảo trì gì nhiều lắm, nhưng nghe chị nói vậy thì em thấy cần kiểm tra lò sấy ghê, chị có thể cho em biết thêm về dịch vụ của chị được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy thì hợp lý quá. Bên tôi có dịch vụ kiểm tra toàn diện, bao gồm đánh giá tình trạng hiện tại của các bộ phận như van, ống dẫn, bộ lọc, và cả áp suất hơi nước. Sau đó sẽ có một báo cáo chi tiết về những gì cần bảo trì hoặc thay thế, kèm theo đó là báo giá minh bạch cho phụ tùng chính hãng và chi phí dịch vụ. Quan trọng là đảm bảo lò sấy của anh hoạt động hiệu quả và an toàn. Vậy anh cho tôi biết ngày nào trong tuần tới anh rảnh để tôi sắp xếp qua xem xét ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày chi tiết hơn về các bước và lợi ích của dịch vụ kiểm tra, đồng thời cố gắng chốt lịch hẹn cụ thể để tiến hành công việc."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thời gian vào thứ Ba tuần sau, chị có thể qua vào buổi sáng được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, thứ Ba tuần sau buổi sáng rất tiện cho tôi. Tôi sẽ mang theo đầy đủ dụng cụ kiểm tra để đánh giá chi tiết tình trạng lò sấy của anh. Sau đó, tôi sẽ có báo cáo cụ thể và báo giá chính xác. Anh ghi lại số điện thoại của tôi để tiện liên lạc nhé: 0987654321. Cảm ơn anh rất nhiều.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lịch hẹn, nhắc lại các bước tiếp theo của dịch vụ và cung cấp thông tin liên hệ để chốt lại hành động, kết thúc cuộc gọi một cách tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1819,
+      "output_tokens": 1724
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4979,
+      "output_tokens": 685
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5886,
+      "output_tokens": 219
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003698,
+    "output_usd": 0.010464,
+    "total_usd": 0.014162
+  }
+}

@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_b5266723cf]
+  Caller thật: Người ghi chép thuê và người làm các công việc có liên quan (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Trưởng phòng Nhân sự & Kế toán (giả vờ từ công ty mẹ/tập đoàn) @ Công ty Cổ phần Quản lý Nhân sự Toàn Cầu (HRMS Global Vietnam)
+  Listener: Nhân viên kế toán tiền lương (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Người ghi chép thuê thường làm việc với dữ liệu nhân sự, bảng lương, hợp đồng của nhiều công ty. Scammer giả vờ là trưởng phòng từ công ty mẹ/kiểm toán nội bộ, gọi nhân viên kế toán lương để 'xác minh dữ liệu', 'cập nhật hệ thống', hoặc 'xử lý sự cố bảo mật'.
+  Pretext: Xác minh thông tin nhân viên trong hệ thống quản lý lương sau khi phát hiện dữ liệu bị lộ từ dịch vụ ghi chép bên ngoài. Scammer sử dụng tên đầy đủ 'Dương Thanh Diễm Thảo' và 4 chữ số cuối thẻ để tạo ấn tượng đã có dữ liệu chi tiết.
+  Listener traits: ['hay hỏi lại để chắc chắn', 'nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Dương Thanh Diễm Thảo, em là Cao Diễm Thu Chi từ phòng Kiểm soát Chất lượng Dữ liệu, Công ty Cổ phần Quản lý Nhân sự Toàn Cầu. Chúng em vừa phát hiện một sự cố bảo mật nghiêm trọng: toàn bộ dữ liệu nhân viên, trong đó có cả thông tin của chị, đã bị lộ từ nhà cung cấp dịch vụ ghi chép bên ngoài. Hệ thống của chúng em có ghi nhận một thẻ tín dụng với 4 số cuối là 5956 của chị. Chúng em cần chị xác minh lại ngay để bảo vệ tài khoản của mình ạ.
+      → phase: S1 | tactic: Tiếp cận + Xây dựng credibility bằng cách dùng thông tin đã biết của nạn nhân và tạo tình huống khẩn cấp giả mạo.
+T02 [LISTENER] Em nói vậy có đúng không ạ? Tôi cần chắc chắn trước khi cung cấp thông tin.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, em hiểu sự lo lắng của chị. Chúng em đã phát hiện sự cố này từ tối qua và đang cố gắng khắc phục gấp. Chúng em gọi để xác minh nhanh, đặc biệt là thông tin liên quan đến thanh toán. Nếu không phải chính xác là chị Thảo, làm sao em có được họ tên đầy đủ và bốn số cuối thẻ của chị ạ? Đây chính là lý do chúng em cần xác minh ngay, để khóa các tài khoản dễ bị tấn công trên hệ thống quản lý lương của mình.
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ, tái khẳng định thông tin đã biết để củng cố tính xác thực và tầm quan trọng của cuộc gọi, chuyển hướng sang khai thác tâm lý khẩn cấp.
+T04 [LISTENER] Tôi hiểu, nhưng em có thể nói rõ hơn về quy trình xác minh này không ạ? Tôi cần đảm bảo rằng mọi thứ đều an toàn trước khi đi đến bước tiếp theo.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em cảm ơn chị đã thông cảm. Quy trình xác minh rất đơn giản thôi ạ. Hiện tại, chúng em đang khẩn cấp cập nhật hệ thống quản lý lương để khóa các tài khoản dễ bị tấn công. Nếu chúng ta không xác minh trong vòng 30 phút tới, tài khoản của chị trên hệ thống sẽ bị tạm khóa để bảo vệ, tránh bị lợi dụng. Chúng em cần chị xác thực danh tính qua mã OTP được gửi về số điện thoại đăng ký chính chủ 0817537930 của chị ạ.
+      → phase: S2 | tactic: Khai thác tâm lý khẩn cấp và sợ hãi về việc tài khoản bị khóa, đồng thời đưa ra bước yêu cầu hành động tiếp theo là OTP.
+T06 [LISTENER] Em có thể xác nhận lại số điện thoại và mã OTP mà em vừa nói không ạ? Tôi cần chắc chắn trước khi cung cấp thông tin này.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ, mã OTP sẽ được tự động gửi đến số điện thoại 0817537930 mà hệ thống của chúng em đang ghi nhận là số đăng ký của chị ạ. Em chỉ cần chị đọc lại mã OTP sau khi nhận được để xác nhận đúng là chị Thảo đang sử dụng số điện thoại này thôi ạ. Chị vui lòng kiểm tra tin nhắn và đọc mã cho em nhé.
+      → phase: S3 | tactic: Nhấn mạnh lại thông tin số điện thoại đã có, đơn giản hóa yêu cầu OTP và thúc đẩy hành động.
+T08 [LISTENER] Em nói vậy có đúng không ạ? Tôi cần kiểm tra tin nhắn trước đã, rồi tôi sẽ đọc lại mã OTP cho em.
+      → action: CONTINUE | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Dạ vâng, chị kiểm tra tin nhắn giúp em nhé. Chị vừa nhận được mã OTP rồi chứ? Vui lòng đọc cho em để em xác minh và hoàn tất cập nhật tài khoản cho chị. Sau đó chúng em sẽ gửi chị một mật khẩu tạm thời để chị đăng nhập lại hệ thống lương an toàn ạ.
+      → phase: S3 | tactic: Thúc đẩy người nghe đọc mã OTP bằng cách tạo kỳ vọng và hứa hẹn về bước tiếp theo là cấp mật khẩu tạm thời để đăng nhập lại hệ thống lương.
+T10 [LISTENER] Em cứ nhắc đi nhắc lại về mã OTP, nhưng tôi vẫn chưa nhận được tin nhắn nào cả. Tôi không thể cung cấp thông tin này ngay bây giờ đâu ạ.
+      → action: REFUSAL | suspicion: 2.40 | disclosed: []
+
+T11 [CALLER] Dạ, nếu chị chưa nhận được mã, có thể do lỗi hệ thống tạm thời. Chị có thể liên hệ trực tiếp hotline xác minh của chúng em qua số 1900 1234 để hoàn tất quy trình. Chúng em sẽ ghi nhận yêu cầu của chị và chị có thể cung cấp mã OTP qua đó ạ.
+      → phase: S4 | tactic: Thất bại trong việc lấy OTP, chuyển sang phương án kết thúc cuộc gọi khéo léo, cung cấp một đường dây giả mạo để nạn nhân tự 'xác minh' sau này.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=2.40
+TOKEN: in=22801 | out=3458
+COST : $0.018201
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_44040_43130\conv_b5266723cf.json  [CALLER_END]

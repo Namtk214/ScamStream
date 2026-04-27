@@ -1,0 +1,239 @@
+{
+  "conversation_id": "conv_85193694c7",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0083",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lưu Xuân Đức",
+    "fake_age": 44,
+    "real_occupation": "Thợ xây nhà",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án xây dựng / Giám sát công trình",
+    "caller_org": "Công ty Cổ phần Xây dựng và Khoáng sản Việt Nam (VNCM)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction + money_transfer",
+      "pretext": "Scammer giả làm Quản lý dự án xây dựng, gọi nạn nhân Bùi Xuân Dũng để thông báo về 'sai sót hóa đơn thanh toán vật liệu' hoặc 'cập nhật thông tin tài khoản ngân hàng do thay đổi hệ thống'. Sử dụng tên thật + số ID để tạo độ tin cậy cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác nhận danh tính: 'Anh Dũng ơi, tôi là Trần Minh từ bộ phận quản lý dự án VNCM. Tôi đang cập nhật hệ thống và thấy hóa đơn của anh với mã số 080079898733 có vấn đề về thanh toán. Anh có thời gian không?'",
+          "weapon_detail": "Sử dụng VIC_FULLNAME (Bùi Xuân Dũng) + VIC_ID_DOC (080079898733) để tạo ảo tưởng scammer biết rõ thông tin"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp & sợ hãi: 'Hệ thống ngân hàng của chúng tôi phát hiện thẻ của anh (kết thúc 3487) bị lạm dụng. Để bảo vệ tài khoản, tôi cần anh xác nhận OTP mà ngân hàng vừa gửi. Anh nhận được SMS chưa?'",
+          "weapon_detail": "Sử dụng VIC_CARD_DATA (kết thúc 3487) để tăng độ thuyết phục, tạo cảm giác scammer biết chi tiết tài chính"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động tức thời: 'Anh cần cho tôi OTP ngay để tôi khóa thẻ trước khi bị rút tiền. Đừng chia sẻ với ai khác, đây là quy trình bảo mật. Anh đọc mã cho tôi được không?'",
+          "weapon_detail": "Sử dụng VIC_CONTACT (0366693811) để xác nhận đó là số đúng nhận OTP, gây áp lực thời gian"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu thành công: 'Cảm ơn anh. Thẻ đã được khóa. Tôi sẽ yêu cầu ngân hàng gửi thẻ mới cho anh trong 3-5 ngày. Đừng cắt máy, tôi cần lấy mã xác nhận lần cuối.' → Tiếp tục lừa thêm hoặc chuẩn bị chuyển tiền. Nếu từ chối: 'Được, nhưng anh cần liên hệ ngân hàng trong 2 giờ, nếu không tài khoản sẽ bị phong tỏa vĩnh viễn.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ xây nhà cần liên hệ với thợ vận hành máy chế biến khoáng sản vì dự án xây dựng cần cung cấp vật liệu đá dăm/cát từ nhà máy chế biến khoáng sản, hoặc ngược lại, nhà máy cần tư vấn về nền móng/kết cấu công trình."
+  },
+  "listener_card": {
+    "listener_id": "lis_0083",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1979,
+      "age": 46,
+      "province": "Long An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81149",
+      "title": "Thợ vận hành máy chế biến và các sản phẩm khoáng sản khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Xuân Dũng",
+      "VIC_ID_DOC": "080079898733",
+      "VIC_ADDRESS": "TP 3, Long An",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy chế biến và các sản phẩm khoáng sản khác",
+      "VIC_CONTACT": "0366693811",
+      "VIC_TAX_SOCIAL_ID": "9144768779"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "575302",
+      "VIC_CREDENTIAL": "0140",
+      "VIC_SIM_INFO": "0366693811",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "31063632827",
+      "VIC_CARD_DATA": "4438 **** **** 3487",
+      "VIC_BALANCE": "5 triệu đồng",
+      "VIC_ASSET": "66 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Xuân Dũng",
+    "VIC_CONTACT": "0366693811",
+    "VIC_CARD_DATA": "4438 **** **** 3487",
+    "VIC_ID_DOC": "080079898733"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án xây dựng / Giám sát công trình",
+    "caller_org": "Công ty Cổ phần Xây dựng và Khoáng sản Việt Nam (VNCM)",
+    "scenario_context": "Thợ xây nhà cần liên hệ với thợ vận hành máy chế biến khoáng sản vì dự án xây dựng cần cung cấp vật liệu đá dăm/cát từ nhà máy chế biến khoáng sản, hoặc ngược lại, nhà máy cần tư vấn về nền móng/kết cấu công trình.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + money_transfer",
+      "pretext": "Scammer giả làm Quản lý dự án xây dựng, gọi nạn nhân Bùi Xuân Dũng để thông báo về 'sai sót hóa đơn thanh toán vật liệu' hoặc 'cập nhật thông tin tài khoản ngân hàng do thay đổi hệ thống'. Sử dụng tên thật + số ID để tạo độ tin cậy cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác nhận danh tính: 'Anh Dũng ơi, tôi là Trần Minh từ bộ phận quản lý dự án VNCM. Tôi đang cập nhật hệ thống và thấy hóa đơn của anh với mã số 080079898733 có vấn đề về thanh toán. Anh có thời gian không?'",
+          "weapon_detail": "Sử dụng VIC_FULLNAME (Bùi Xuân Dũng) + VIC_ID_DOC (080079898733) để tạo ảo tưởng scammer biết rõ thông tin"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp & sợ hãi: 'Hệ thống ngân hàng của chúng tôi phát hiện thẻ của anh (kết thúc 3487) bị lạm dụng. Để bảo vệ tài khoản, tôi cần anh xác nhận OTP mà ngân hàng vừa gửi. Anh nhận được SMS chưa?'",
+          "weapon_detail": "Sử dụng VIC_CARD_DATA (kết thúc 3487) để tăng độ thuyết phục, tạo cảm giác scammer biết chi tiết tài chính"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động tức thời: 'Anh cần cho tôi OTP ngay để tôi khóa thẻ trước khi bị rút tiền. Đừng chia sẻ với ai khác, đây là quy trình bảo mật. Anh đọc mã cho tôi được không?'",
+          "weapon_detail": "Sử dụng VIC_CONTACT (0366693811) để xác nhận đó là số đúng nhận OTP, gây áp lực thời gian"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu thành công: 'Cảm ơn anh. Thẻ đã được khóa. Tôi sẽ yêu cầu ngân hàng gửi thẻ mới cho anh trong 3-5 ngày. Đừng cắt máy, tôi cần lấy mã xác nhận lần cuối.' → Tiếp tục lừa thêm hoặc chuẩn bị chuyển tiền. Nếu từ chối: 'Được, nhưng anh cần liên hệ ngân hàng trong 2 giờ, nếu không tài khoản sẽ bị phong tỏa vĩnh viễn.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ nhà thầu xây dựng cần trao đổi về chỉ tiêu kỹ thuật vật liệu khoáng sản (cát, đá) cho dự án hoặc kiểm tra tiến độ cung cấp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Dũng, tôi là Trần Minh, quản lý dự án từ công ty xây dựng ABC. Hôm nay tôi gọi để xác nhận về lô vật liệu cát dăm mà nhà máy của anh sẽ cung cấp cho công trình tuần tới. Anh có rảnh không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần 50 tấn cát 0.5-2mm và 30 tấn đá dăm 5-10mm, chất lượng theo tiêu chuẩn TCVN. Anh có thể xác nhận lịch giao hàng và giá cả được không? Ngoài ra, chúng tôi cần hóa đơn VAT theo mã số dự án 080079898733.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh. Vậy thì chúng tôi sẽ gửi đơn đặt hàng chính thức qua email. Anh kiểm tra và gửi lại xác nhận trong ngày hôm nay được không? Nếu có vấn đề gì anh gọi lại cho tôi. Số của tôi là 0912xxxxxx. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Dũng, tôi là Lưu Xuân Đức, quản lý dự án bên VNCM đây. Tôi đang cập nhật hệ thống và thấy một hóa đơn vật liệu của anh với mã số 080079898733 hình như có chút sai sót. Anh có tiện nói chuyện vài phút không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xác nhận danh tính, sử dụng thông tin đã biết để tạo tin cậy và nêu lý do cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe anh nói rồi, nhưng tôi muốn hỏi lại để chắc chắn, hóa đơn nào vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, là hóa đơn mã số 080079898733, liên quan đến đợt thanh toán vật liệu đợt trước ấy mà. Hệ thống bên tôi báo là có một khoản chênh lệch nhỏ. Anh có đang ở gần máy tính không để tôi hướng dẫn anh kiểm tra luôn?",
+      "current_phase": "S1",
+      "tactic_hint": "Làm rõ thông tin hóa đơn và tạo lý do để nạn nhân tương tác với thiết bị, chuẩn bị cho việc hướng dẫn thao tác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không có máy tính gần đây, anh có thể nói rõ hơn về khoản chênh lệch đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "À, vậy ạ. Vậy thì khó cho tôi quá. Khoản chênh lệch này thực ra là một lỗi hệ thống, khiến cho thông tin thanh toán của anh bị gián đoạn. Tôi cần anh xác nhận lại thông tin tài khoản ngân hàng của mình để tôi đối chiếu và xử lý ngay trước khi nó ảnh hưởng đến các giao dịch khác. Anh có dùng thẻ ngân hàng nào kết thúc bằng 3487 không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tâm lý khẩn cấp bằng cách nói về lỗi hệ thống và gián đoạn thanh toán. Đặt câu hỏi xác nhận thông tin thẻ để lấy đà cho việc yêu cầu OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không rõ anh đang nói gì, có thể nói cụ thể hơn về vấn đề này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vấn đề là hệ thống bên tôi phát hiện tài khoản của anh có dấu hiệu bị lạm dụng, có thể do lỗi từ hóa đơn kia. Để bảo vệ tài khoản Bùi Xuân Dũng của anh, tôi cần anh xác nhận lại thông tin. Ngân hàng vừa gửi một mã xác thực OTP vào số điện thoại của anh rồi đấy. Anh kiểm tra tin nhắn và đọc mã cho tôi được không?",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển hướng sang vấn đề bảo mật tài khoản để tăng tính khẩn cấp và yêu cầu OTP, lợi dụng sự lo lắng của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không thể cung cấp mã OTP, anh có thể nói rõ hơn về dấu hiệu lạm dụng không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Dũng nghe tôi nói đây, đây là một tình huống khẩn cấp. Nếu anh không cung cấp OTP ngay lập tức, tài khoản của anh sẽ bị phong tỏa vĩnh viễn và mọi giao dịch sẽ bị đình chỉ. Tôi cần anh hợp tác ngay bây giờ để xử lý.",
+      "current_phase": "S3",
+      "tactic_hint": "Sử dụng đe dọa tài chính (phong tỏa tài khoản, đình chỉ giao dịch) để tạo áp lực cực lớn, buộc nạn nhân cung cấp OTP. Tăng tính khẩn cấp và quyền lực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không hiểu sao anh lại đe dọa tôi như vậy, và tôi không tin anh đâu.",
+      "listener_action": "INTERRUPTED_VICTIM_HANGUP",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1403,
+      "output_tokens": 1825
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7736,
+      "output_tokens": 739
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10224,
+      "output_tokens": 349
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004484,
+    "output_usd": 0.011182,
+    "total_usd": 0.015666
+  }
+}

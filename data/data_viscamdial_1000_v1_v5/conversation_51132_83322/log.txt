@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c60c868ef8]
+  Caller thật: Nhân viên hướng dẫn công viên chủ đề (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên quản lý vận tải / Điều phối logistics công viên chủ đề @ Công viên chủ đề (bộ phận vận tải/logistics nội bộ)
+  Listener: Lái xe tải rơ móoc (bao gồm cả lái xe chính) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Công viên chủ đề cần vận chuyển thiết bị, hàng hóa định kỳ hoặc khẩn cấp; lái xe tải là đối tác vận tải thường xuyên hoặc được giới thiệu. Cuộc gọi để thỏa thuận công việc, xác nhận thông tin, hoặc xử lý tình huống vận tải liên quan.
+  Pretext: Gọi giả là nhân viên quản lý vận tải của công viên chủ đề, thông báo công viên vừa phát hiện 'khoản phí vận tải chưa thanh toán' hoặc 'tiền cọc dự án vận tải mới' liên quan đến tài khoản của Phan Công Phong. Dùng tên đầy đủ nạn nhân + CMND để tạo độ tin cậy cao, khẳng định đã kiểm tra hệ thống và tìm được số điện thoại này.
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Anh Phong à, tôi là Đỗ Hữu Quang Bình từ bộ phận vận tải Công viên chủ đề đây. Tôi vừa kiểm tra hồ sơ của anh với số CMND 079076623775 và phát hiện có một khoản phí vận tải chưa thanh toán. Anh có nhận được thông báo nào về việc này không?
+      → phase: S1 | tactic: Tiếp cận và xác thực thông tin, sử dụng dữ liệu cá nhân của nạn nhân để tạo độ tin cậy.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin, em gọi từ số mấy ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Anh cứ yên tâm, số điện thoại tôi đang dùng gọi cho anh đây là số nội bộ của công viên. Anh có thể lưu lại nếu cần. Bây giờ mình quay lại vấn đề chính nhé, khoản phí này nếu không được thanh toán trong vòng 2 giờ tới, hệ thống sẽ tự động khóa tài khoản vận tải của anh và công việc của anh ở công viên sẽ bị đình chỉ, đồng thời công viên sẽ chuyển hồ sơ nợ lên cảnh sát. Anh đã nắm được thông tin này chưa?
+      → phase: S2 | tactic: Tạo áp lực khẩn cấp và đe dọa hậu quả pháp lý để nạn nhân cảm thấy sợ hãi và thúc đẩy hành động.
+T04 [LISTENER] Em không hiểu lắm về khoản phí này, tại sao em lại có thông tin của tôi và em có thể cho tôi biết thêm về nó không?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Anh Phong, như tôi đã nói, tôi là Đỗ Hữu Quang Bình, nhân viên quản lý vận tải của công viên. Chúng tôi có đầy đủ hồ sơ của anh, bao gồm cả số CMND và số điện thoại này từ hợp đồng vận tải anh đã ký. Nếu anh không tin, anh có thể tự mình gọi lên tổng đài công viên để xác minh thông tin của tôi, nhưng tôi có thể đảm bảo với anh rằng nếu khoản phí này không được giải quyết nhanh chóng, tài khoản của anh chắc chắn sẽ bị khóa. Anh có muốn tôi giúp anh giải quyết ngay bây giờ không?
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách đề nghị nạn nhân tự xác minh thông tin, đồng thời tái khẳng định mối đe dọa và đưa ra giải pháp để tạo cảm giác cấp bách cho nạn nhân.
+T06 [LISTENER] Em vẫn chưa nhận được thông tin rõ ràng về khoản phí này, anh có thể cho tôi biết cụ thể hơn được không?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Anh Phong, khoản phí này liên quan đến một dự án vận tải mới mà theo hệ thống, anh đã được phân công hoặc đăng ký tham gia. Có thể là anh chưa để ý đến thông báo mà chúng tôi đã gửi qua email hoặc tin nhắn. Bây giờ, điều quan trọng nhất là phải giải quyết nó nhanh chóng để tránh những hậu quả không mong muốn. Anh có muốn tôi hướng dẫn cách thanh toán để hệ thống có thể mở lại tài khoản cho anh ngay không?
+      → phase: S2 | tactic: Cung cấp một lý do mơ hồ nhưng có vẻ hợp lý về 'khoản phí', đồng thời tái khẳng định sự khẩn cấp và đề xuất giải pháp thanh toán.
+T08 [LISTENER] Tôi không nhớ có đăng ký tham gia dự án nào cả, em có thể cung cấp cho tôi thông tin chi tiết hơn về khoản phí này không?
+      → action: CONTINUE | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Anh Phong, tôi hiểu anh có thể không nhớ, nhưng thông tin trên hệ thống là như vậy. Việc giải thích chi tiết hơn bây giờ sẽ tốn thời gian và có thể khiến tài khoản của anh bị khóa. Điều quan trọng nhất bây giờ là anh cần chuyển ngay từ 5 đến 10 triệu đồng vào tài khoản của công ty để giải quyết khoản phí này. Sau khi thanh toán, tôi sẽ xác nhận lại trên hệ thống và đảm bảo tài khoản của anh được mở lại ngay lập tức. Anh có muốn tôi đọc số tài khoản để anh chuyển tiền không?
+      → phase: S3 | tactic: Bỏ qua yêu cầu giải thích chi tiết, nhấn mạnh sự khẩn cấp và chuyển ngay sang yêu cầu hành động chuyển tiền, đồng thời hứa hẹn giải quyết vấn đề ngay lập tức sau khi thanh toán.
+T11 [LISTENER] Em không thấy yên tâm khi chưa nhận được thông tin rõ ràng, anh có thể cho tôi biết số tài khoản và tên công ty không ạ?
+      → action: CONTINUE | suspicion: 2.40 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  11 turns | suspicion=2.40
+TOKEN: in=20512 | out=2717
+COST : $0.014824
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_51132_83322\conv_c60c868ef8.json  [SCAM_EXPOSE]

@@ -1,0 +1,248 @@
+{
+  "conversation_id": "conv_28238cf420",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0049",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tô Thùy Nhi",
+    "fake_age": 48,
+    "real_occupation": "Người phụ tá cho giáo viên",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Quản lý Dự án Sửa chữa & Bảo trì - Trường học",
+    "caller_org": "Công ty Quản lý Cơ sở hạ tầng Giáo dục Việt Nam (VIEF)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt trường học để 'xác nhận thông tin thanh toán công việc sửa chữa máy móc thể dục' mà thợ Long đã hoàn thành. Sử dụng tên đầy đủ + số điện thoại từ hệ thống để tạo uy tín, sau đó yêu cầu chuyển khoản 'tiền đặt cọc' hoặc 'phí hành chính' để xử lý thanh toán nhanh.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh - Quản lý Dự án VIEF'. Sử dụng VIC_FULLNAME ('Nguyễn Xuân Long') ngay từ đầu để tạo credibility tuyệt đối: 'Chào anh Long, tôi là Minh từ Công ty VIEF, chúng tôi có hồ sơ sửa chữa máy tập thể dục của anh từ tháng trước'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: Tạo cảm giác vội vàng ('Hôm nay là ngày cuối hạn thanh toán, nếu không xử lý sẽ ảnh hưởng hợp đồng') + lợi ích ('Anh thanh toán ngay hôm nay, chúng tôi sẽ cộng thêm 10% tiền công'). Nêu ra con số cụ thể: '25 triệu đồng là tổng giá trị công việc'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng chuyển 2 triệu tiền đặt cọc vào tài khoản tạm ứng của công ty để chúng tôi hoàn tất giấy tờ. Anh có thể chuyển vào số tài khoản [SCAMMER_ACCOUNT] không? Sau đó anh gửi lại ảnh chứng chỉ chuyển khoản cho tôi để xác nhận'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: Cảm ơn, yêu cầu thêm 'xác minh OTP' hoặc 'chuyển thêm phí xử lý 500k'. Nếu từ chối: Tạo áp lực ('Anh đang vi phạm hợp đồng, có thể bị phạt'), hoặc dọa sẽ 'báo cáo lên cơ quan chức năng'."
+        }
+      ]
+    },
+    "scenario_context": "Trường học cần sửa chữa máy móc phòng thực hành/thể dục. Quản lý dự án từ trường (giả vờ là cấp trên của người phụ tá giáo viên) gọi cho thợ sửa chữa để yêu cầu báo giá, lập hợp đồng hoặc thanh toán công việc đã hoàn thành."
+  },
+  "listener_card": {
+    "listener_id": "lis_0049",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1985,
+      "age": 40,
+      "province": "Long An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "72332",
+      "title": "Thợ sửa chữa máy móc (chung)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Xuân Long",
+      "VIC_ID_DOC": "080085141995",
+      "VIC_ADDRESS": "TP 12, Long An",
+      "VIC_EMPLOYMENT": "Thợ sửa chữa máy móc (chung)",
+      "VIC_CONTACT": "0840327600",
+      "VIC_TAX_SOCIAL_ID": "7414740686"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "246978",
+      "VIC_CREDENTIAL": "863553",
+      "VIC_SIM_INFO": "0840327600",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "36436037507512",
+      "VIC_CARD_DATA": "4870 **** **** 9342",
+      "VIC_BALANCE": "23 triệu đồng",
+      "VIC_ASSET": "25 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Xuân Long",
+    "VIC_CONTACT": "0840327600",
+    "VIC_ASSET": "25 triệu đồng",
+    "VIC_BANK_ACCOUNT": "36436037507512"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Dự án Sửa chữa & Bảo trì - Trường học",
+    "caller_org": "Công ty Quản lý Cơ sở hạ tầng Giáo dục Việt Nam (VIEF)",
+    "scenario_context": "Trường học cần sửa chữa máy móc phòng thực hành/thể dục. Quản lý dự án từ trường (giả vờ là cấp trên của người phụ tá giáo viên) gọi cho thợ sửa chữa để yêu cầu báo giá, lập hợp đồng hoặc thanh toán công việc đã hoàn thành.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt trường học để 'xác nhận thông tin thanh toán công việc sửa chữa máy móc thể dục' mà thợ Long đã hoàn thành. Sử dụng tên đầy đủ + số điện thoại từ hệ thống để tạo uy tín, sau đó yêu cầu chuyển khoản 'tiền đặt cọc' hoặc 'phí hành chính' để xử lý thanh toán nhanh.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh - Quản lý Dự án VIEF'. Sử dụng VIC_FULLNAME ('Nguyễn Xuân Long') ngay từ đầu để tạo credibility tuyệt đối: 'Chào anh Long, tôi là Minh từ Công ty VIEF, chúng tôi có hồ sơ sửa chữa máy tập thể dục của anh từ tháng trước'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: Tạo cảm giác vội vàng ('Hôm nay là ngày cuối hạn thanh toán, nếu không xử lý sẽ ảnh hưởng hợp đồng') + lợi ích ('Anh thanh toán ngay hôm nay, chúng tôi sẽ cộng thêm 10% tiền công'). Nêu ra con số cụ thể: '25 triệu đồng là tổng giá trị công việc'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng chuyển 2 triệu tiền đặt cọc vào tài khoản tạm ứng của công ty để chúng tôi hoàn tất giấy tờ. Anh có thể chuyển vào số tài khoản [SCAMMER_ACCOUNT] không? Sau đó anh gửi lại ảnh chứng chỉ chuyển khoản cho tôi để xác nhận'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: Cảm ơn, yêu cầu thêm 'xác minh OTP' hoặc 'chuyển thêm phí xử lý 500k'. Nếu từ chối: Tạo áp lực ('Anh đang vi phạm hợp đồng, có thể bị phạt'), hoặc dọa sẽ 'báo cáo lên cơ quan chức năng'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trường học liên hệ thợ sửa chữa để xác nhận hoàn thành công việc, thống nhất lịch thanh toán hợp pháp, hoặc yêu cầu báo giá cho công việc sửa chữa mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng ('Chào anh Long, tôi là Quản lý Dự án từ Trường [Tên trường cụ thể]'), xác nhận danh tính qua số điện thoại chính thức của trường (không phải số cá nhân), yêu cầu xác nhận lại danh tính của thợ."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết công việc đã làm (loại máy móc, ngày hoàn thành, chất lượng), hoặc yêu cầu báo giá viết trên giấy tờ chính thức của công ty. Nếu thanh toán, thống nhất hình thức (chuyển khoản vào tài khoản chính thức của trường hoặc thanh toán trực tiếp)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động cụ thể: Hẹn lịch thanh toán, hoặc gửi hóa đơn/biên lai chính thức qua email công ty. Chào tạm biệt chuyên nghiệp, cung cấp thông tin liên hệ chính thức để thợ có thể xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Nguyễn Xuân Long, tôi là Tô Thùy Nhi từ Công ty Quản lý Cơ sở hạ tầng Giáo dục Việt Nam, VIEF đây. Tôi gọi để xác nhận lại thông tin thanh toán công việc sửa chữa máy tập thể dục của anh từ tháng trước ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và sử dụng VIC_FULLNAME để tạo độ tin cậy ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị cho em biết rõ hơn về thông tin thanh toán đó được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Long ơi, hôm nay là ngày cuối cùng để VIEF hoàn tất thanh toán hợp đồng sửa chữa máy tập của anh, trị giá 25 triệu đồng. Nếu không xử lý kịp thì có thể ảnh hưởng đến các hợp đồng sau này đó ạ. Anh có tiện kiểm tra thông tin ngay không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp về thời hạn thanh toán và tạo áp lực tài chính bằng cách nhắc đến tổng giá trị hợp đồng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe chị nói thì có vẻ gấp gáp quá, nhưng chị cho em biết số điện thoại của chị để em kiểm tra lại thông tin được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Long cứ yên tâm, số điện thoại của tôi là 0987654321. Anh có thể kiểm tra danh bạ của VIEF. Nhưng mà tôi nghĩ anh nên giải quyết luôn việc này đi, để tránh rắc rối về sau. Phía VIEF còn muốn cộng thêm 10% tiền công cho anh nếu anh hoàn tất thanh toán hôm nay nữa cơ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách cung cấp thông tin liên hệ giả định, đồng thời tái khẳng định sự khẩn cấp và lợi ích để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em vẫn muốn xác thực xem chị có phải thật sự từ công ty đó không, chị có thể cho em biết tên công ty đầy đủ không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Công ty Quản lý Cơ sở hạ tầng Giáo dục Việt Nam, VIEF, đã có hồ sơ của anh Nguyễn Xuân Long với số tài khoản 36436037507512. Anh Long này, tôi nghĩ những thông tin này đủ để anh tin tưởng rồi. Anh vui lòng chuyển 2 triệu tiền đặt cọc vào tài khoản tạm ứng của công ty để chúng tôi hoàn tất giấy tờ và nhanh chóng giải ngân 25 triệu đồng cộng thêm 10% tiền công cho anh. Anh có thể chuyển vào số tài khoản [SCAMMER_ACCOUNT] không? Và sau đó anh gửi lại ảnh chứng từ chuyển khoản cho tôi để xác nhận nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách lặp lại thông tin đã biết về nạn nhân để củng cố uy tín, sau đó trực tiếp yêu cầu chuyển khoản 'tiền đặt cọc' vào tài khoản lừa đảo để đạt mục tiêu money_transfer."
+    },
+    {
+      "role": "listener",
+      "text": "Chị nói em chuyển 2 triệu vào tài khoản của chị, nhưng em chưa thấy thông tin gì rõ ràng về công việc đó cả, chị có thể cho em xem hóa đơn hoặc hợp đồng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Anh Long này, hợp đồng và hóa đơn đều có ở phòng hành chính bên tôi hết. Nhưng mà bây giờ đang cận giờ đóng sổ rồi, không thể tra cứu ngay được. Nếu anh không chuyển khoản đặt cọc kịp để VIEF hoàn tất thủ tục thì 25 triệu đó sẽ không được giải ngân đâu, thậm chí là anh còn bị phạt hợp đồng nữa. Anh xem xét giúp tôi nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực về mặt thời gian và dọa phạt hợp đồng để nạn nhân phải hành động ngay lập tức, bỏ qua yêu cầu kiểm tra giấy tờ."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em vẫn cảm thấy chưa yên tâm lắm, chị cho em thêm thông tin cụ thể về công ty VIEF được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Long ơi, tôi đã cung cấp tên công ty đầy đủ là Công ty Quản lý Cơ sở hạ tầng Giáo dục Việt Nam, VIEF, và thông tin rất cụ thể về công việc của anh rồi. Anh cứ chần chừ như vậy thì sẽ bỏ lỡ cơ hội nhận 25 triệu đồng cộng thêm 10% tiền công, mà còn có nguy cơ bị phạt hợp đồng nữa. Anh vui lòng hợp tác để tôi có thể hỗ trợ anh hoàn tất thủ tục ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tái khẳng định thông tin đã cung cấp, nhắc lại lợi ích và hậu quả tiêu cực nếu nạn nhân không hợp tác để tạo áp lực và thúc đẩy hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng nếu chị không có tài liệu hay hóa đơn cụ thể thì em không thể chuyển tiền được, chị thông cảm ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1379,
+      "output_tokens": 1635
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10080,
+      "output_tokens": 973
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13327,
+      "output_tokens": 461
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005394,
+    "output_usd": 0.010884,
+    "total_usd": 0.016278
+  }
+}

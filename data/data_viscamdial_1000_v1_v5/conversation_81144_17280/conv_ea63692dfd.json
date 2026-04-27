@@ -1,0 +1,230 @@
+{
+  "conversation_id": "conv_ea63692dfd",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0023",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tô Thị Vy",
+    "fake_age": 29,
+    "real_occupation": "Thợ vận hành máy trộn bê tông",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên quản lý dự án xây dựng / Người phụ trách công trường",
+    "caller_org": "Công ty xây dựng hoặc Ban quản lý dự án công cộng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi dạo với danh nghĩa 'Nhân viên quản lý công trường dự án xây dựng Trung tâm Cộng đồng Quận X' để yêu cầu xác minh thông tin cá nhân phục vụ báo cáo an toàn lao động và bảo hiểm xã hội cho công nhân.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: Scammer gọi và xưng danh là 'Anh Hải từ Ban quản lý công trường Trung tâm Cộng đồng'. Dùng VIC_FULLNAME ('Anh Gia Nam') và VIC_TAX_SOCIAL_ID để tạo vẻ đã có thông tin sẵn: 'Em đang kiểm tra danh sách nhân viên của dự án, em thấy có anh Bùi Đức Gia Nam với mã số 6079005108, đúng không ạ?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + Thương hại: Tạo sự lo lắng bằng cách nói: 'Hiện tại công ty đang cập nhật hệ thống bảo hiểm xã hội và bảo vệ dữ liệu cá nhân. Nếu không xác minh lại thông tin, bảo hiểm của anh sẽ bị tạm dừng. Chúng em cần anh xác nhận lại thêm một số chi tiết để đảm bảo an toàn.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng cung cấp: số tài khoản ngân hàng, họ tên chủ tài khoản, và gửi ảnh chụp CCCD/CMND để chúng em cập nhật vào hệ thống. Hoặc anh có thể truy cập link xác minh này [gửi link giả mạo] để tự cập nhật, nhanh hơn.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, scammer nói: 'Vâng, đây là quy trình bắt buộc từ công ty, anh có thể liên hệ phòng Nhân sự để xác minh. Nhưng nếu không cập nhật trong 24 giờ, bảo hiểm sẽ bị khóa. Anh cân nhắc nha.' Tạo áp lực thời gian và tình huống khó xử."
+        }
+      ]
+    },
+    "scenario_context": "Thợ vận hành máy trộn bê tông làm việc tại công trường xây dựng các công trình công cộng (trường học, trung tâm cộng đồng, bệnh viện). Nhân viên quản lý dự án cần liên hệ với lãnh đạo dịch vụ cộng đồng để điều phối tiến độ, an toàn lao động, hoặc thông báo về các vấn đề liên quan đến công trình."
+  },
+  "listener_card": {
+    "listener_id": "lis_0023",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1990,
+      "age": 35,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "17280",
+      "title": "Dịch vụ cá nhân và cộng đồng",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Đức Gia Nam",
+      "VIC_ID_DOC": "049090871923",
+      "VIC_ADDRESS": "TP 3, Quảng Nam",
+      "VIC_EMPLOYMENT": "Dịch vụ cá nhân và cộng đồng",
+      "VIC_CONTACT": "0336172103",
+      "VIC_TAX_SOCIAL_ID": "6079005108"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "3870",
+      "VIC_CREDENTIAL": "0332",
+      "VIC_SIM_INFO": "0336172103",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3055131264",
+      "VIC_CARD_DATA": "4702 **** **** 5187",
+      "VIC_BALANCE": "519 triệu đồng",
+      "VIC_ASSET": "920 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Đức Gia Nam",
+    "VIC_CONTACT": "0336172103",
+    "VIC_TAX_SOCIAL_ID": "6079005108"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý dự án xây dựng / Người phụ trách công trường",
+    "caller_org": "Công ty xây dựng hoặc Ban quản lý dự án công cộng",
+    "scenario_context": "Thợ vận hành máy trộn bê tông làm việc tại công trường xây dựng các công trình công cộng (trường học, trung tâm cộng đồng, bệnh viện). Nhân viên quản lý dự án cần liên hệ với lãnh đạo dịch vụ cộng đồng để điều phối tiến độ, an toàn lao động, hoặc thông báo về các vấn đề liên quan đến công trình.",
+    "scam_path": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi dạo với danh nghĩa 'Nhân viên quản lý công trường dự án xây dựng Trung tâm Cộng đồng Quận X' để yêu cầu xác minh thông tin cá nhân phục vụ báo cáo an toàn lao động và bảo hiểm xã hội cho công nhân.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: Scammer gọi và xưng danh là 'Anh Hải từ Ban quản lý công trường Trung tâm Cộng đồng'. Dùng VIC_FULLNAME ('Anh Gia Nam') và VIC_TAX_SOCIAL_ID để tạo vẻ đã có thông tin sẵn: 'Em đang kiểm tra danh sách nhân viên của dự án, em thấy có anh Bùi Đức Gia Nam với mã số 6079005108, đúng không ạ?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + Thương hại: Tạo sự lo lắng bằng cách nói: 'Hiện tại công ty đang cập nhật hệ thống bảo hiểm xã hội và bảo vệ dữ liệu cá nhân. Nếu không xác minh lại thông tin, bảo hiểm của anh sẽ bị tạm dừng. Chúng em cần anh xác nhận lại thêm một số chi tiết để đảm bảo an toàn.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng cung cấp: số tài khoản ngân hàng, họ tên chủ tài khoản, và gửi ảnh chụp CCCD/CMND để chúng em cập nhật vào hệ thống. Hoặc anh có thể truy cập link xác minh này [gửi link giả mạo] để tự cập nhật, nhanh hơn.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, scammer nói: 'Vâng, đây là quy trình bắt buộc từ công ty, anh có thể liên hệ phòng Nhân sự để xác minh. Nhưng nếu không cập nhật trong 24 giờ, bảo hiểm sẽ bị khóa. Anh cân nhắc nha.' Tạo áp lực thời gian và tình huống khó xử."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên quản lý công trường thực sự cần liên hệ lãnh đạo dịch vụ cộng đồng để phối hợp về an toàn lao động, tiến độ xây dựng, hoặc thông báo sự cố tại công trường.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Gia Nam, em là Hải từ Ban quản lý công trường Trung tâm Cộng đồng. Em có vài vấn đề về tiến độ công trình cần bàn bạc với anh để đảm bảo chất lượng dịch vụ.' Xác nhận danh tính qua số điện thoại công ty chính thức."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận về tiến độ xây dựng, yêu cầu điều phối nhân sự, hoặc thông báo về các tiêu chuẩn an toàn lao động cần tuân thủ. Có thể hỏi về lịch làm việc, yêu cầu tư vấn từ lãnh đạo cộng đồng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Thống nhất các điểm cần làm, ghi nhận feedback từ lãnh đạo, và chào tạm biệt. Có thể yêu cầu xác nhận email hoặc cuộc họp tiếp theo nếu cần."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Gia Nam ạ. Tôi là Vy, nhân viên quản lý công trường dự án xây dựng Trung tâm Cộng đồng Quận X đây. Tôi đang kiểm tra danh sách nhân viên để chuẩn bị báo cáo an toàn lao động và bảo hiểm xã hội. Anh Bùi Đức Gia Nam với mã số bảo hiểm xã hội 6079005108, đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và mục đích cuộc gọi, dùng VIC_FULLNAME và VIC_TAX_SOCIAL_ID để tạo sự tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không chắc lắm về việc cung cấp thông tin, em có thể giải thích rõ hơn về mục đích kiểm tra này được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự lo lắng của anh. Việc này là bắt buộc để cập nhật thông tin bảo hiểm xã hội và dữ liệu cá nhân của tất cả cán bộ công nhân viên. Hiện tại, công ty đang rà soát lại toàn bộ hệ thống để đảm bảo quyền lợi và an toàn thông tin cho mọi người đó anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, chuyển sang giai đoạn khai thác tâm lý khẩn cấp và thương hại bằng cách nhấn mạnh tính 'bắt buộc' và 'quyền lợi' của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng hiểu nhưng tôi vẫn cảm thấy chưa yên tâm lắm, liệu em có thể cung cấp thêm thông tin để tôi có thể tin tưởng hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Gia Nam cứ yên tâm, tôi là Vy, trưởng ban quản lý công trường bên dự án Trung tâm Cộng đồng Quận X. Thông tin mà tôi đang cần xác minh lại là để đảm bảo quyền lợi bảo hiểm xã hội của anh không bị gián đoạn. Nếu không cập nhật kịp thời, bảo hiểm của anh có thể sẽ bị tạm dừng đó ạ. Tôi cần anh xác nhận lại thêm một số chi tiết để đảm bảo an toàn cho tài khoản của anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Tăng cường độ khẩn cấp và mức độ uy hiếp tài chính bằng cách nhấn mạnh hậu quả của việc không hợp tác, đồng thời tái khẳng định vai trò của bản thân để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu điều đó, nhưng em có thể cho tôi biết cụ thể những chi tiết nào em cần xác nhận không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để hoàn tất việc cập nhật, tôi cần anh vui lòng cung cấp số tài khoản ngân hàng, họ tên đầy đủ của chủ tài khoản, và gửi một ảnh chụp CCCD/CMND rõ nét qua Zalo cho tôi. Hoặc anh có thể truy cập đường link xác minh an toàn này [https://baohiemxahoi.gov.vn/xacminh_thongtin.html] để tự cập nhật, sẽ nhanh chóng và tiện lợi hơn cho anh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trực tiếp yêu cầu thông tin nhạy cảm (tài khoản ngân hàng, CCCD) hoặc hướng dẫn truy cập link giả mạo, đạt mục tiêu credential_theft."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thể cung cấp thông tin nhạy cảm như vậy, tôi cần phải suy nghĩ thêm đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Gia Nam, tôi hoàn toàn hiểu sự cẩn trọng của anh. Tuy nhiên, đây là quy trình bắt buộc từ công ty để đảm bảo quyền lợi bảo hiểm xã hội không bị ảnh hưởng. Nếu trong vòng 24 giờ tới anh không cập nhật, hệ thống sẽ tự động tạm dừng quyền lợi bảo hiểm của anh theo quy định mới. Anh nên cân nhắc kỹ để tránh những rắc rối không đáng có sau này.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách tạo áp lực thời gian và tình huống khó xử (Threat_Financial), nhấn mạnh đây là quy trình 'bắt buộc' và hậu quả của việc không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu nhưng tôi không cảm thấy thoải mái khi cung cấp thông tin nhạy cảm qua điện thoại, tôi cần thời gian để suy nghĩ thêm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1822,
+      "output_tokens": 1628
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7939,
+      "output_tokens": 829
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10532,
+      "output_tokens": 358
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00499,
+    "output_usd": 0.010427,
+    "total_usd": 0.015417
+  }
+}

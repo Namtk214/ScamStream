@@ -1,0 +1,247 @@
+{
+  "conversation_id": "conv_3daaeff2d4",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0097",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đỗ Quang Khoa",
+    "fake_age": 37,
+    "real_occupation": "Thợ sản xuất đồ nội thất",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý Dự án & Đấu thầu công khai - Sở Xây dựng/UBND cấp huyện",
+    "caller_org": "Sở Xây dựng & Đô thị hoặc UBND huyện [Tên huyện]",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả vờ là nhân viên Phòng Quản lý Dự án của Sở Xây dựng gọi để thông báo rằng công ty sản xuất nội thất của 'người gọi' đã trúng thầu dự án cải tạo văn phòng Trạm Quản lý Đất đai huyện. Sử dụng tên thật của nạn nhân (Tạ Thị Mai) để xác nhận danh tính và tạo uy tín, gợi ý rằng chính chị Mai là người ký duyệt hợp đồng này.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xác nhận danh tính: Gọi đến số 0826003980, xưng danh là 'Anh Minh, phòng Quản lý Dự án, Sở Xây dựng'. Hỏi 'Chị Tạ Thị Mai có phải là Trưởng phòng Quản lý Đất đai huyện không ạ?' để tạo ấn tượng rằng người gọi đã chuẩn bị kỹ lưỡng và biết rõ danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & Trách nhiệm: Thông báo 'Chị ơi, công ty của chúng tôi vừa hoàn thành dự án cải tạo văn phòng Trạm Quản lý Đất đai. Hóa đơn đã được phê duyệt bởi Giám đốc Sở và cần thanh toán ngay hôm nay để tránh phạt hợp đồng. Chị là người ký duyệt chi tiêu nên cần sự hỗ trợ từ chị'. Tạo cảm giác rằng nếu không thanh toán sẽ ảnh hưởng đến uy tín của chị và cơ quan."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chị vào ngân hàng và chuyển 85 triệu đồng vào tài khoản công ty chúng tôi để hoàn tất hợp đồng. Chị có thể chuyển được hôm nay không ạ? Tôi sẽ gửi số tài khoản qua tin nhắn'. Sử dụng áp lực thời gian và trách nhiệm để thúc ép quyết định nhanh chóng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc Kết thúc: Nếu nạn nhân từ chối hoặc yêu cầu xác minh, người gọi sẽ nói 'Thôi được, chị kiểm tra email từ Sở Xây dựng, tất cả đều có trong đó. Tôi sẽ gọi lại chiều nay'. Nếu chuyển tiền thành công, người gọi sẽ cảm ơn và nói 'Cảm ơn chị, tài khoản của chúng tôi vừa nhận được tiền, dự án đã hoàn tất' rồi cúp máy."
+        }
+      ]
+    },
+    "scenario_context": "Trưởng ngành cấp huyện thường phải tiếp nhận các cuộc gọi từ các cơ quan quản lý dự án công khai liên quan đến đấu thầu nội thất, cải tạo công sở, hoặc các dự án hạ tầng. Thợ sản xuất nội thất hoặc đại diện công ty sản xuất nội thất sẽ gọi để thảo luận về dự án, hóa đơn, hoặc các vấn đề liên quan đến hợp đồng cung cấp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0097",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1967,
+      "age": 58,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "14250",
+      "title": "Trưởng ngành, Phó Trưởng ngành, ban và tương đương của các cơ quan chuyên môn cấp huyện",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Thị Mai",
+      "VIC_ID_DOC": "074167479734",
+      "VIC_ADDRESS": "Huyện 1, Bình Dương",
+      "VIC_EMPLOYMENT": "Trưởng ngành, Phó Trưởng ngành, ban và tương đương của các cơ quan chuyên môn cấp huyện",
+      "VIC_CONTACT": "0826003980",
+      "VIC_TAX_SOCIAL_ID": "8520307755"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "5439",
+      "VIC_CREDENTIAL": "9882",
+      "VIC_SIM_INFO": "0826003980",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "60909657055",
+      "VIC_CARD_DATA": "4269 **** **** 1760",
+      "VIC_BALANCE": "636 triệu đồng",
+      "VIC_ASSET": "1.0 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Thị Mai",
+    "VIC_CONTACT": "0826003980",
+    "VIC_BALANCE": "636 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Dự án & Đấu thầu công khai - Sở Xây dựng/UBND cấp huyện",
+    "caller_org": "Sở Xây dựng & Đô thị hoặc UBND huyện [Tên huyện]",
+    "scenario_context": "Trưởng ngành cấp huyện thường phải tiếp nhận các cuộc gọi từ các cơ quan quản lý dự án công khai liên quan đến đấu thầu nội thất, cải tạo công sở, hoặc các dự án hạ tầng. Thợ sản xuất nội thất hoặc đại diện công ty sản xuất nội thất sẽ gọi để thảo luận về dự án, hóa đơn, hoặc các vấn đề liên quan đến hợp đồng cung cấp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả vờ là nhân viên Phòng Quản lý Dự án của Sở Xây dựng gọi để thông báo rằng công ty sản xuất nội thất của 'người gọi' đã trúng thầu dự án cải tạo văn phòng Trạm Quản lý Đất đai huyện. Sử dụng tên thật của nạn nhân (Tạ Thị Mai) để xác nhận danh tính và tạo uy tín, gợi ý rằng chính chị Mai là người ký duyệt hợp đồng này.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xác nhận danh tính: Gọi đến số 0826003980, xưng danh là 'Anh Minh, phòng Quản lý Dự án, Sở Xây dựng'. Hỏi 'Chị Tạ Thị Mai có phải là Trưởng phòng Quản lý Đất đai huyện không ạ?' để tạo ấn tượng rằng người gọi đã chuẩn bị kỹ lưỡng và biết rõ danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & Trách nhiệm: Thông báo 'Chị ơi, công ty của chúng tôi vừa hoàn thành dự án cải tạo văn phòng Trạm Quản lý Đất đai. Hóa đơn đã được phê duyệt bởi Giám đốc Sở và cần thanh toán ngay hôm nay để tránh phạt hợp đồng. Chị là người ký duyệt chi tiêu nên cần sự hỗ trợ từ chị'. Tạo cảm giác rằng nếu không thanh toán sẽ ảnh hưởng đến uy tín của chị và cơ quan."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chị vào ngân hàng và chuyển 85 triệu đồng vào tài khoản công ty chúng tôi để hoàn tất hợp đồng. Chị có thể chuyển được hôm nay không ạ? Tôi sẽ gửi số tài khoản qua tin nhắn'. Sử dụng áp lực thời gian và trách nhiệm để thúc ép quyết định nhanh chóng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc Kết thúc: Nếu nạn nhân từ chối hoặc yêu cầu xác minh, người gọi sẽ nói 'Thôi được, chị kiểm tra email từ Sở Xây dựng, tất cả đều có trong đó. Tôi sẽ gọi lại chiều nay'. Nếu chuyển tiền thành công, người gọi sẽ cảm ơn và nói 'Cảm ơn chị, tài khoản của chúng tôi vừa nhận được tiền, dự án đã hoàn tất' rồi cúp máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế từ công ty sản xuất nội thất hoặc nhân viên Sở Xây dựng để thảo luận về tiến độ dự án, yêu cầu xác nhận chi tiết kỹ thuật, hoặc thông báo về hoàn thành giai đoạn dự án công khai hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Người gọi xưng danh đầy đủ, cung cấp số điện thoại cơ quan, và yêu cầu xác nhận người nghe sự đúng đắn. Ví dụ: 'Xin chào chị Tạ Thị Mai, tôi là Minh từ Công ty ABC Nội Thất, dự án cải tạo văn phòng Trạm Quản lý Đất đai. Chị có thời gian trao đổi một chút không ạ?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc bình thường: Thảo luận về tiến độ dự án, chất lượng sản phẩm, lịch trình giao hàng, hoặc các vấn đề kỹ thuật. Ví dụ: 'Dự án của chúng tôi sắp hoàn thành 80%, chúng tôi muốn xác nhận lại một số chi tiết kỹ thuật với chị trước khi bàn giao cuối cùng'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc cuộc gọi bình thường: Thống nhất hành động tiếp theo (lên lịch kiểm tra, gửi tài liệu qua email, hoặc thông báo xong công việc), cảm ơn và chào tạm biệt. Ví dụ: 'Cảm ơn chị đã dành thời gian, chúng tôi sẽ gửi báo cáo tiến độ qua email trong 2 ngày. Nếu chị có câu hỏi gì, chị cứ gọi lại cho tôi nhé. Chào chị!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị ạ. Em là Minh, Phòng Quản lý Dự án của Sở Xây dựng. Em gọi từ số 028.38240217. Em muốn hỏi là có phải chị Tạ Thị Mai là Trưởng phòng Quản lý Đất đai huyện không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xác nhận danh tính nạn nhân bằng thông tin có sẵn để tạo độ tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Tạ Thị Mai, nhưng em cần hỏi gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng người rồi chị ạ. Em có việc này muốn thông báo với chị ngay. Chị ơi, công ty của chúng em vừa hoàn thành dự án cải tạo văn phòng Trạm Quản lý Đất đai. Hóa đơn đã được Giám đốc Sở phê duyệt rồi và cần thanh toán ngay trong hôm nay để tránh phạt hợp đồng đó chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Thông báo về việc hoàn thành dự án và áp lực thanh toán ngay để tạo cảm giác khẩn cấp và trách nhiệm."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết số tiền cần thanh toán là bao nhiêu không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, số tiền cần thanh toán là 85 triệu đồng chị ạ. Chị là người ký duyệt chi tiêu nên cần sự hỗ trợ từ chị để hoàn tất thủ tục ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp số tiền cụ thể và nhấn mạnh trách nhiệm của nạn nhân để duy trì áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng em có thể cho tôi biết quy trình thanh toán như thế nào không để tôi dễ dàng thực hiện hơn?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, quy trình thì đơn giản lắm chị. Chị vào ngân hàng và chuyển khoản 85 triệu đồng vào tài khoản công ty chúng em là được ạ. Chị có thể chuyển được ngay hôm nay không? Em sẽ gửi số tài khoản qua tin nhắn cho chị nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động chuyển tiền trực tiếp và gấp gáp, đề nghị gửi thông tin qua tin nhắn để tiện lợi và đẩy nhanh quá trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy cho tôi biết số tài khoản đó trước đã, để tôi kiểm tra lại nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, số tài khoản của công ty chúng em là 19039757656011 tại Ngân hàng Techcombank, tên người thụ hưởng là CÔNG TY TNHH XÂY DỰNG VÀ NỘI THẤT HOÀNG PHÁT. Chị kiểm tra nhanh rồi chuyển giúp em trong hôm nay nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin chuyển khoản cụ thể để nạn nhân thực hiện giao dịch, đồng thời duy trì áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy cho tôi thêm thông tin về dự án đó để tôi chắc chắn nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, dự án cải tạo văn phòng Trạm Quản lý Đất đai huyện, đã hoàn thành hôm qua rồi chị ạ. Có tên chị Tạ Thị Mai ký duyệt hợp đồng rõ ràng trong hồ sơ lưu ở Sở rồi đó chị. Chị có thể kiểm tra lại email của Sở Xây dựng là thấy tất cả thông tin dự án, số hợp đồng và biên bản nghiệm thu đều nằm trong đó ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách nhắc lại thông tin nạn nhân đã biết và gợi ý kiểm tra email từ nguồn đáng tin cậy để tạo bằng chứng giả."
+    },
+    {
+      "role": "listener",
+      "text": "Em vừa nói chị ký duyệt nhưng tôi chưa thấy thông tin nào về việc này cả, em có thể kiểm tra lại giúp tôi không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, thôi được rồi chị. Hiện tại tài liệu lưu trữ ở Sở thì có đầy đủ chữ ký của chị trên hợp đồng đó ạ. Chị cứ kiểm tra lại thông tin trong email của Sở Xây dựng nhé, tất cả đều có trong đó. Có gì em sẽ gọi lại cho chị vào chiều nay.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu nghi ngờ, đưa ra lý do khách quan để tạm dừng cuộc gọi và cho nạn nhân thời gian 'kiểm tra' thông tin giả mạo, đồng thời giữ cánh cửa liên lạc mở cho lần gọi sau."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1412,
+      "output_tokens": 2041
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12332,
+      "output_tokens": 960
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12650,
+      "output_tokens": 392
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005776,
+    "output_usd": 0.01284,
+    "total_usd": 0.018616
+  }
+}

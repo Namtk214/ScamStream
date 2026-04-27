@@ -1,0 +1,283 @@
+{
+  "conversation_id": "conv_ee37aa1272",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0004",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Gia Hữu Đạt",
+    "fake_age": 26,
+    "real_occupation": "Người mang vác hàng hóa xuống tàu và lên bờ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý rủi ro & Bảo hiểm Hàng hóa - Cảng biển",
+    "caller_org": "Công ty Cảng Quốc tế Sài Gòn - Phòng Bảo hiểm & Rủi ro",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty cảng phát hiện lô hàng của khách hàng của bạn (Đỗ Thế Khoa) bị hư hỏng trong quá trình bốc dỡ, cần xử lý bồi thường khẩn cấp. Scammer sẽ yêu cầu chuyển tiền từ tài khoản bảo hiểm của nạn nhân để 'tạm ứng' trước khi giải quyết claim chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trưởng phòng Bảo hiểm Cảng Quốc tế' gọi cho 'Đỗ Thế Khoa' (dùng tên đầy đủ để tạo tin cậy), nói rằng 'Công ty chúng tôi vừa phát hiện lô hàng của khách hàng VIP của anh bị hư hỏng trong quá trình bốc dỡ ngày hôm qua'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + thiệt hại tài chính: 'Khách hàng đó rất tức giận, đã yêu cầu bồi thường ngay lập tức. Nếu không xử lý trong 24 giờ, chúng ta sẽ bị phạt 10% giá trị hàng hóa (~24 triệu). Anh là đại lý chính, anh phải chịu trách nhiệm hành chính'. Tạo cảm giác rằng nạn nhân sẽ mất tiền nếu không hành động nhanh."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh cần chuyển tạm ứng 50 triệu từ tài khoản bảo hiểm của anh sang tài khoản công ty cảng (số tài khoản giả) để tôi có thể giải quyết claim ngay. Sau đó công ty bảo hiểm sẽ hoàn lại toàn bộ trong vòng 3-5 ngày công'. Đưa ra số tài khoản ngân hàng giả và yêu cầu chuyển khoản."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Anh thực sự muốn mất 24 triệu tiền phạt hơn là chuyển 50 triệu tạm ứng? Quyết định của anh'. Nếu thành công: Tắt máy, chặn số điện thoại, chiếm đoạt tiền."
+        }
+      ]
+    },
+    "scenario_context": "Người làm công việc bốc dỡ hàng hóa tại cảng thường phải liên hệ với đại lý bảo hiểm để tư vấn, giải quyết các vụ hư hỏng hàng hóa, yêu cầu bồi thường, hoặc cập nhật hợp đồng bảo hiểm cho các lô hàng. Đây là mối quan hệ B2B tự nhiên trong chuỗi cung ứng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0004",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1982,
+      "age": 43,
+      "province": "Thanh Hóa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "33211",
+      "title": "Đại lý môi giới bảo hiểm (gồm cả nhà kế hoạch tài chính độc lập)",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Thế Khoa",
+      "VIC_ID_DOC": "038082486653",
+      "VIC_ADDRESS": "TP 1, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Đại lý môi giới bảo hiểm (gồm cả nhà kế hoạch tài chính độc lập)",
+      "VIC_CONTACT": "0766623431",
+      "VIC_TAX_SOCIAL_ID": "5302521637"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "490641",
+      "VIC_CREDENTIAL": "770675",
+      "VIC_SIM_INFO": "0766623431",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0576777105",
+      "VIC_CARD_DATA": "4424 **** **** 7336",
+      "VIC_BALANCE": "249 triệu đồng",
+      "VIC_ASSET": "208 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Thế Khoa",
+    "VIC_CONTACT": "0766623431",
+    "VIC_BALANCE": "249 triệu đồng",
+    "VIC_ASSET": "208 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý rủi ro & Bảo hiểm Hàng hóa - Cảng biển",
+    "caller_org": "Công ty Cảng Quốc tế Sài Gòn - Phòng Bảo hiểm & Rủi ro",
+    "scenario_context": "Người làm công việc bốc dỡ hàng hóa tại cảng thường phải liên hệ với đại lý bảo hiểm để tư vấn, giải quyết các vụ hư hỏng hàng hóa, yêu cầu bồi thường, hoặc cập nhật hợp đồng bảo hiểm cho các lô hàng. Đây là mối quan hệ B2B tự nhiên trong chuỗi cung ứng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty cảng phát hiện lô hàng của khách hàng của bạn (Đỗ Thế Khoa) bị hư hỏng trong quá trình bốc dỡ, cần xử lý bồi thường khẩn cấp. Scammer sẽ yêu cầu chuyển tiền từ tài khoản bảo hiểm của nạn nhân để 'tạm ứng' trước khi giải quyết claim chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trưởng phòng Bảo hiểm Cảng Quốc tế' gọi cho 'Đỗ Thế Khoa' (dùng tên đầy đủ để tạo tin cậy), nói rằng 'Công ty chúng tôi vừa phát hiện lô hàng của khách hàng VIP của anh bị hư hỏng trong quá trình bốc dỡ ngày hôm qua'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + thiệt hại tài chính: 'Khách hàng đó rất tức giận, đã yêu cầu bồi thường ngay lập tức. Nếu không xử lý trong 24 giờ, chúng ta sẽ bị phạt 10% giá trị hàng hóa (~24 triệu). Anh là đại lý chính, anh phải chịu trách nhiệm hành chính'. Tạo cảm giác rằng nạn nhân sẽ mất tiền nếu không hành động nhanh."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh cần chuyển tạm ứng 50 triệu từ tài khoản bảo hiểm của anh sang tài khoản công ty cảng (số tài khoản giả) để tôi có thể giải quyết claim ngay. Sau đó công ty bảo hiểm sẽ hoàn lại toàn bộ trong vòng 3-5 ngày công'. Đưa ra số tài khoản ngân hàng giả và yêu cầu chuyển khoản."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Anh thực sự muốn mất 24 triệu tiền phạt hơn là chuyển 50 triệu tạm ứng? Quyết định của anh'. Nếu thành công: Tắt máy, chặn số điện thoại, chiếm đoạt tiền."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cảng biển liên hệ với đại lý bảo hiểm để thông báo về một vụ hư hỏng hàng hóa thực tế, yêu cầu tư vấn quy trình claim và cập nhật hợp đồng bảo hiểm cho các lô hàng tiếp theo.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Xin chào, tôi là Trương Minh Đức, Trưởng phòng Bảo hiểm Cảng Quốc tế Sài Gòn. Tôi gọi để tìm Đỗ Thế Khoa, đại lý bảo hiểm của chúng ta. Anh có phải người này không?' Xác nhận danh tính chính xác."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi vừa tiếp nhận lô hàng điện tử từ Trung Quốc, nhưng phát hiện 3 container bị ẩm ướt trong quá trình vận chuyển. Khách hàng đã yêu cầu bồi thường. Anh có thể giúp chúng tôi kiểm tra hợp đồng bảo hiểm hiện tại và hướng dẫn quy trình claim không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Đại lý bảo hiểm sẽ yêu cầu thông tin chi tiết (bill of lading, hóa đơn, ảnh chứng minh), hẹn gặp hoặc gửi tài liệu qua email, và xác nhận lịch trình xử lý claim. Chào tạm biệt chuyên nghiệp, lên lịch follow-up."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Em chào anh Đỗ Thế Khoa đúng không ạ? Em là Hồ Gia Hữu Đạt, Trưởng phòng Bảo hiểm Cảng Quốc tế Sài Gòn. Có vẻ như công ty em vừa phát hiện lô hàng của khách hàng VIP của anh bị hư hỏng trong quá trình bốc dỡ ngày hôm qua.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và nêu lý do cuộc gọi, sử dụng tên đầy đủ của nạn nhân và thông tin về lô hàng để tạo tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói lô hàng bị hư hỏng của ai vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, lô hàng của công ty An Gia Phát nhập khẩu linh kiện điện tử đó anh. Khách hàng này là đối tác lớn của bên mình mà, anh Khoa nắm rõ chứ ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xác nhận lại chi tiết về lô hàng và khách hàng để củng cố thêm độ tin cậy, đồng thời tạo áp lực tinh thần bằng việc nhắc đến 'đối tác lớn'."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ lắm, nhưng có chuyện gì đặc biệt xảy ra không em?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, vâng. Chuyện là thế này anh Khoa. Khách hàng đó rất tức giận, đã yêu cầu chúng em bồi thường ngay lập tức. Nếu không xử lý trong vòng 24 giờ tới, công ty chúng ta sẽ bị phạt 10% giá trị hàng hóa, tương đương khoảng 24 triệu đồng đó anh. Anh là đại lý chính, chắc chắn anh phải chịu trách nhiệm hành chính cho việc này.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và đe dọa thiệt hại tài chính trực tiếp đến nạn nhân nếu không hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể giải thích rõ hơn về quy trình bồi thường này không ạ? Tôi cảm thấy hơi lo lắng.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, quy trình thì thông thường sẽ cần thời gian để xác minh và thẩm định thiệt hại, nhưng tình hình hiện tại đang rất gấp. Khách hàng đang gây áp lực rất lớn, và nếu vượt quá 24h thì không chỉ là 24 triệu đồng tiền phạt, mà uy tín của anh với An Gia Phát cũng sẽ bị ảnh hưởng nghiêm trọng nữa. Em không muốn điều đó xảy ra với anh Khoa chút nào.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự lo lắng nhưng đồng thời nhấn mạnh thêm mức độ khẩn cấp và hậu quả nghiêm trọng về uy tín và tài chính nếu không xử lý kịp thời, đặt nạn nhân vào thế phải hành động. Đặt bản thân tôi vào vị trí 'người quan tâm' tới nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói cũng đúng, nhưng tôi vẫn chưa hiểu rõ về cách giải quyết vấn đề này, em có thể hướng dẫn tôi cụ thể hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để giải quyết ngay lập tức, em cần anh Khoa hỗ trợ chuyển tạm ứng 50 triệu đồng từ tài khoản bảo hiểm của anh sang tài khoản công ty cảng của em. Sau đó, công ty bảo hiểm sẽ hoàn lại toàn bộ số tiền này trong vòng 3 đến 5 ngày làm việc và giải quyết dứt điểm cho anh. Anh có sẵn sàng làm việc này ngay bây giờ không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể là chuyển tiền tạm ứng, đưa ra số tiền và hứa hẹn hoàn trả để giảm bớt sự nghi ngờ, đồng thời vẫn giữ được sự khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, nhưng sao tôi phải chuyển tiền tạm ứng trước, không có cách nào khác sao?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ thưa anh, đây là quy trình xử lý khẩn cấp bắt buộc ạ. Khách hàng VIP của anh đang gây áp lực rất lớn, và công ty cảng cần có một khoản đảm bảo để bắt đầu quá trình bồi thường ngay lập tức. Em tin là anh không muốn để tình hình trở nên phức tạp hơn, làm ảnh hưởng đến cả uy tín và tài chính của anh đâu ạ, đúng không anh Khoa?",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh đây là quy trình bắt buộc trong trường hợp khẩn cấp, nhắc lại hậu quả về uy tín và tài chính để thúc đẩy nạn nhân hành động, đồng thời vẫn giữ tông giọng thuyết phục, quan tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Em à, nhưng tôi vẫn cảm thấy lo lắng về việc chuyển tiền trước, có cách nào xác minh rõ hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu sự lo lắng của anh Khoa. Nhưng anh cứ hình dung, nếu mình không có khoản tạm ứng này, công ty cảng sẽ không thể bắt đầu các thủ tục bồi thường. Điều này sẽ khiến anh mất 24 triệu tiền phạt và có thể mất cả một đối tác lớn như An Gia Phát. Với số dư trong tài khoản của anh hiện tại là 249 triệu và tài sản ròng là 208 triệu, 50 triệu tạm ứng này thực sự không phải là vấn đề lớn, phải không anh? Em đảm bảo sẽ hoàn lại đầy đủ cho anh trong 3-5 ngày làm việc.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu lo lắng, nhắc lại hậu quả tài chính và uy tín, đồng thời sử dụng thông tin tài chính của nạn nhân (VIC_BALANCE, VIC_ASSET) để giảm gánh nặng tâm lý về số tiền yêu cầu. Tăng tính thuyết phục bằng cách khẳng định sự đảm bảo hoàn trả."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi vẫn thấy việc chuyển tiền trước là không ổn, có thể nào làm theo quy trình bình thường không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Khoa à, nếu làm theo quy trình bình thường thì sẽ mất ít nhất 1-2 tuần, và khi đó thì không chỉ là 24 triệu tiền phạt mà còn là rủi ro mất đi đối tác An Gia Phát của anh nữa. Anh thực sự muốn mất 24 triệu tiền phạt hơn là chuyển 50 triệu tạm ứng, mà số tiền đó sẽ được hoàn lại đầy đủ trong vài ngày tới sao ạ? Anh cho em xin số tài khoản của công ty Cảng Quốc tế Sài Gòn để em hướng dẫn anh chuyển khoản ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Trực tiếp đối đầu với sự từ chối bằng cách đặt câu hỏi so sánh thiệt hại, nhắc lại nguy cơ mất tiền phạt và đối tác. Chuyển sang phase S4 để tạo áp lực mạnh mẽ và yêu cầu hành động cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói cũng đúng, nhưng tôi vẫn cảm thấy lo lắng về việc chuyển tiền mà không xác minh được rõ ràng thông tin này, mong em thông cảm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em rất hiểu cảm giác của anh. Nhưng anh Khoa ơi, nếu em lừa anh thì tại sao em lại biết rõ về lô hàng, về khách hàng An Gia Phát, và thậm chí là chi tiết tài chính của anh như số dư tài khoản hay tài sản ròng? Đây là thông tin nội bộ của công ty. Em chỉ đang cố gắng giúp anh giải quyết tình huống khẩn cấp này một cách nhanh nhất thôi ạ. Anh cho em số tài khoản để em hướng dẫn anh chuyển khoản nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự lo lắng, nhưng đồng thời sử dụng thông tin đã biết về nạn nhân để củng cố độ tin cậy và gạt bỏ nghi ngờ. Đặt câu hỏi tu từ để thách thức sự nghi ngờ và tái khẳng định mục đích 'giúp đỡ'. Tiếp tục yêu cầu hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng, nhưng tôi vẫn thấy cần phải có một xác nhận rõ ràng hơn về việc này trước khi hành động.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1439,
+      "output_tokens": 1744
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 17977,
+      "output_tokens": 1616
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 23211,
+      "output_tokens": 627
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008516,
+    "output_usd": 0.013136,
+    "total_usd": 0.021652
+  }
+}

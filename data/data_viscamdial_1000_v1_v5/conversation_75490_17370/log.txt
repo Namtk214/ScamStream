@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_f1250d6eb3]
+  Caller thật: Thợ thủ công và các thợ khác chưa được phân vào đâu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Kỹ sư/Chuyên gia tư vấn cải tiến quy trình sản xuất @ Công ty tư vấn tối ưu hóa sản xuất độc lập
+  Listener: Nghiên cứu và phát triển (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: LEGIT | Path: LEGIT
+  Context: Các công ty R&D thường hợp tác với các nhà cung cấp, thợ thủ công, và chuyên gia tư vấn để phát triển nguyên mẫu, kiểm thử công nghệ mới, hoặc tối ưu hóa quy trình. Cuộc gọi từ một chuyên gia tư vấn sản xuất đến trưởng phòng R&D là hoàn toàn tự nhiên.
+  Pretext: Một chuyên gia tư vấn thực sự gọi để thảo luận về việc áp dụng quy trình kiểm soát chất lượng mới hoặc công nghệ sản xuất vào dây chuyền R&D của công ty.
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào chị Khánh Hương, tôi là Minh từ Công ty Tư vấn Quy trình Sản xuất. Tôi được giới thiệu bởi phòng Kỹ thuật của nhiều công ty trong ngành. Chị có khoảng 15 phút để thảo luận về giải pháp tối ưu hóa chi phí sản xuất, đặc biệt là trong quy trình R&D của bên mình không?
+      → phase: L1 | tactic: Giới thiệu bản thân và mục đích cuộc gọi một cách chuyên nghiệp, đề xuất thời gian ngắn gọn để thảo luận.
+T02 [LISTENER] Em không rõ anh gọi từ số mấy ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, tôi đang gọi từ số 0989xxxxxx. Chị có tiện nghe máy không ạ? Như tôi đã giới thiệu, tôi là Minh, chuyên về tư vấn tối ưu hóa quy trình sản xuất.
+      → phase: L1 | tactic: Xác nhận số điện thoại và nhắc lại giới thiệu bản thân để xây dựng lòng tin, sau đó nhắc lại mục đích cuộc gọi.
+T04 [LISTENER] Em vẫn chưa rõ về công ty và dịch vụ mà anh đang nói, có thể cho em biết thêm thông tin không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Vâng, Công ty của chúng tôi chuyên tư vấn các giải pháp nâng cao hiệu quả và giảm chi phí sản xuất cho các đơn vị R&D. Đặc biệt, chúng tôi có nhiều kinh nghiệm trong việc áp dụng công nghệ mới để tối ưu hóa quy trình. Không biết bên chị hiện tại đang gặp những thách thức nào trong quy trình R&D?
+      → phase: L2 | tactic: Cung cấp thông tin chi tiết hơn về công ty và dịch vụ, sau đó chuyển sang trao đổi nội dung cụ thể để khuyến khích sự tham gia của người nghe.
+T06 [LISTENER] Em vẫn cảm thấy chưa đủ thông tin, anh có thể gửi cho em một số tài liệu cụ thể về dịch vụ của công ty không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ vâng, tôi hoàn toàn có thể gửi tài liệu chi tiết qua email cho chị. Chị có thể vui lòng cung cấp địa chỉ email công ty của chị để tôi gửi thông tin và sắp xếp một cuộc họp giới thiệu chuyên sâu hơn nếu chị quan tâm không?
+      → phase: L2 | tactic: Đáp ứng yêu cầu của người nghe bằng cách đề nghị gửi tài liệu, đồng thời yêu cầu email công ty để tiến tới việc sắp xếp một cuộc họp chi tiết hơn, duy trì luồng hội thoại.
+T08 [LISTENER] Em chưa thấy đồng ý cho anh gửi email vì cảm thấy còn thiếu thông tin, anh có thể cho em biết thêm về những dự án cụ thể mà công ty đã thực hiện không ạ?
+      → action: CONTINUE | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Vâng, tôi hiểu. Gần đây nhất, chúng tôi đã hợp tác với một công ty sản xuất thiết bị y tế để tối ưu hóa quy trình kiểm tra chất lượng sản phẩm R&D của họ, giúp giảm thiểu 20% thời gian phát triển sản phẩm. Một dự án khác là với một công ty điện tử, nơi chúng tôi áp dụng công nghệ tự động hóa để tăng năng suất thử nghiệm lên 30%. Chị Hương có thể chia sẻ một chút về những mục tiêu hoặc vấn đề mà bên chị đang quan tâm nhất trong R&D không?
+      → phase: L2 | tactic: Cung cấp các ví dụ cụ thể về dự án đã thực hiện để tạo thêm niềm tin và sự thuyết phục, sau đó khuyến khích người nghe chia sẻ về nhu cầu của họ.
+T10 [LISTENER] Em thấy những dự án đó rất ấn tượng, nhưng em vẫn cảm thấy không đủ an tâm để chia sẻ thông tin cụ thể với anh được.
+      → action: REFUSAL | suspicion: 2.20 | disclosed: []
+
+T11 [CALLER] Tôi hiểu. Với những thông tin chị vừa chia sẻ, tôi nhận thấy có thể chị đang khá bận rộn và chưa tiện thảo luận sâu. Vậy, tôi xin phép gửi cho chị một tài liệu tổng quan về các giải pháp và case study của chúng tôi qua email. Khi nào có thời gian, chị có thể xem qua và nếu có bất kỳ câu hỏi nào, chị cứ liên hệ lại cho tôi bất cứ lúc nào qua số điện thoại này. Chúc chị một ngày làm việc hiệu quả.
+      → phase: L3 | tactic: Tôn trọng sự từ chối chia sẻ thông tin, đề nghị gửi tài liệu tổng quan và kết thúc cuộc gọi một cách lịch sự, để lại cơ hội liên hệ sau.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=2.20
+TOKEN: in=19929 | out=2895
+COST : $0.015599
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_75490_17370\conv_f1250d6eb3.json  [CALLER_END]

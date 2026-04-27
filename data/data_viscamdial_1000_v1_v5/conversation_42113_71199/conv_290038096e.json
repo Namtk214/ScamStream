@@ -1,0 +1,226 @@
+{
+  "conversation_id": "conv_290038096e",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_SUCCESS",
+  "caller_card": {
+    "caller_id": "cal_0012",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Cao Khánh Yến",
+    "fake_age": 39,
+    "real_occupation": "Nhân viên đổi tiền",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên quản lý công nợ/thanh toán cho nhà thầu xây dựng",
+    "caller_org": "Công ty tư vấn xây dựng và quản lý dự án (hoặc cá nhân đại diện chủ đầu tư)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo về khoản thanh toán công tiền dự án, nhưng tài khoản nhân viên bị khóa tạm thời. Cần xác nhận lại thông tin tài khoản ngân hàng của Cao Thanh Hà để chuyển tiền trực tiếp, hoặc yêu cầu chuyển tiền vào tài khoản 'tạm thời' để tránh rủi ro.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh từ phòng kế toán công ty xây dựng Hoàng Gia'. Gọi điện tới số 0828896487 (VIC_CONTACT) và nói 'Anh Cao Thanh Hà phải không? Tôi là Minh, phòng thanh toán dự án tòa nhà Sunrise Downtown. Công ty vừa duyệt khoản thanh toán công tiền tháng này cho anh'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cấp bách bằng cách nói 'Nhưng hệ thống ngân hàng công ty bị lỗi hôm nay, nên tôi không thể chuyển qua tài khoản chính được. Công ty đang gấp rút, anh có thể giúp tôi xác nhận lại số tài khoản ngân hàng không? Để tôi chuyển tiền vào tài khoản anh trước, rồi anh chuyển lại cho công ty sau'. Hoặc: 'Tài khoản của anh có bị khóa không? Tôi thấy hệ thống báo lỗi khi chuyển vào số 1719151151238 (VIC_BANK_ACCOUNT) của anh'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Nếu nạn nhân tin tưởng, scammer yêu cầu: (1) Xác nhận số tài khoản hoặc cung cấp số tài khoản 'tạm thời' khác của scammer; (2) Hoặc yêu cầu nạn nhân chuyển tiền vào số tài khoản 'tạm thời' để 'kiểm tra hệ thống' với lý do sẽ hoàn lại sau; (3) Hoặc yêu cầu OTP để 'xác minh danh tính' trước khi thanh toán."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết thúc: Nếu nạn nhân chuyển tiền hoặc cung cấp OTP, scammer cảm ơn và nói 'Tiền đã vào, anh kiểm tra lại nhé. Công ty sẽ liên hệ sau để xác nhận', rồi tắt máy. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer nói 'Không sao, có lẽ hệ thống đã khôi phục. Để tôi thử chuyển lại lúc khác nhé' để giữ cơ hội tiếp cận sau."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên đổi tiền thường xuyên tiếp xúc với các thương lái, chủ dự án, và những người cần thanh toán công nợ hoặc quản lý tiền. Thợ xây là người nhận công từ các chủ đầu tư hoặc công ty xây dựng, nên cuộc gọi từ người quản lý thanh toán là tự nhiên khi liên quan đến thanh toán công tiền hoặc xác nhận thông tin tài khoản."
+  },
+  "listener_card": {
+    "listener_id": "lis_0012",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1970,
+      "age": 55,
+      "province": "Bình Thuận",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "71199",
+      "title": "Thợ xây khác và thợ có liên quan chưa được phân vào đâu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Cao Thanh Hà",
+      "VIC_ID_DOC": "060170769814",
+      "VIC_ADDRESS": "Huyện 7, Bình Thuận",
+      "VIC_EMPLOYMENT": "Thợ xây khác và thợ có liên quan chưa được phân vào đâu",
+      "VIC_CONTACT": "0828896487",
+      "VIC_TAX_SOCIAL_ID": "5816337097"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "724807",
+      "VIC_CREDENTIAL": "862212",
+      "VIC_SIM_INFO": "0828896487",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1719151151238",
+      "VIC_CARD_DATA": "4228 **** **** 3503",
+      "VIC_BALANCE": "11 triệu đồng",
+      "VIC_ASSET": "14 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Cao Thanh Hà",
+    "VIC_CONTACT": "0828896487",
+    "VIC_BALANCE": "11 triệu đồng",
+    "VIC_BANK_ACCOUNT": "1719151151238",
+    "VIC_EMPLOYMENT": "Thợ xây khác và thợ có liên quan chưa được phân vào đâu"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý công nợ/thanh toán cho nhà thầu xây dựng",
+    "caller_org": "Công ty tư vấn xây dựng và quản lý dự án (hoặc cá nhân đại diện chủ đầu tư)",
+    "scenario_context": "Nhân viên đổi tiền thường xuyên tiếp xúc với các thương lái, chủ dự án, và những người cần thanh toán công nợ hoặc quản lý tiền. Thợ xây là người nhận công từ các chủ đầu tư hoặc công ty xây dựng, nên cuộc gọi từ người quản lý thanh toán là tự nhiên khi liên quan đến thanh toán công tiền hoặc xác nhận thông tin tài khoản.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo về khoản thanh toán công tiền dự án, nhưng tài khoản nhân viên bị khóa tạm thời. Cần xác nhận lại thông tin tài khoản ngân hàng của Cao Thanh Hà để chuyển tiền trực tiếp, hoặc yêu cầu chuyển tiền vào tài khoản 'tạm thời' để tránh rủi ro.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh từ phòng kế toán công ty xây dựng Hoàng Gia'. Gọi điện tới số 0828896487 (VIC_CONTACT) và nói 'Anh Cao Thanh Hà phải không? Tôi là Minh, phòng thanh toán dự án tòa nhà Sunrise Downtown. Công ty vừa duyệt khoản thanh toán công tiền tháng này cho anh'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cấp bách bằng cách nói 'Nhưng hệ thống ngân hàng công ty bị lỗi hôm nay, nên tôi không thể chuyển qua tài khoản chính được. Công ty đang gấp rút, anh có thể giúp tôi xác nhận lại số tài khoản ngân hàng không? Để tôi chuyển tiền vào tài khoản anh trước, rồi anh chuyển lại cho công ty sau'. Hoặc: 'Tài khoản của anh có bị khóa không? Tôi thấy hệ thống báo lỗi khi chuyển vào số 1719151151238 (VIC_BANK_ACCOUNT) của anh'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Nếu nạn nhân tin tưởng, scammer yêu cầu: (1) Xác nhận số tài khoản hoặc cung cấp số tài khoản 'tạm thời' khác của scammer; (2) Hoặc yêu cầu nạn nhân chuyển tiền vào số tài khoản 'tạm thời' để 'kiểm tra hệ thống' với lý do sẽ hoàn lại sau; (3) Hoặc yêu cầu OTP để 'xác minh danh tính' trước khi thanh toán."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết thúc: Nếu nạn nhân chuyển tiền hoặc cung cấp OTP, scammer cảm ơn và nói 'Tiền đã vào, anh kiểm tra lại nhé. Công ty sẽ liên hệ sau để xác nhận', rồi tắt máy. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer nói 'Không sao, có lẽ hệ thống đã khôi phục. Để tôi thử chuyển lại lúc khác nhé' để giữ cơ hội tiếp cận sau."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên thanh toán từ công ty xây dựng gọi xác nhận thông tin cá nhân của thợ xây để chuẩn bị thanh toán công tiền hàng tháng hoặc dự án đã hoàn thành.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Xin chào anh Cao Thanh Hà, tôi là Minh từ phòng kế toán công ty Hoàng Gia. Công ty vừa duyệt khoản thanh toán công tiền tháng 11 cho anh. Tôi gọi để xác nhận lại thông tin tài khoản ngân hàng của anh để chuyển tiền'. Yêu cầu xác nhận: 'Anh có phải là người làm công tại dự án Sunrise Downtown không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Xác nhận số ngày công, mức lương, khoản thanh toán cụ thể. Nếu nạn nhân xác nhận tài khoản đang dùng, nhân viên thanh toán nói 'Cảm ơn anh. Tiền sẽ chuyển vào tài khoản của anh trong 1-2 ngày làm việc. Anh kiểm tra email hoặc tin nhắn từ ngân hàng để xác nhận nhé'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Nhân viên thanh toán cảm ơn, xác nhận lại số điện thoại liên hệ nếu cần hỗ trợ, rồi chào tạm biệt một cách chuyên nghiệp. 'Nếu có vấn đề gì, anh gọi lại số này nhé. Chúc anh ngày tốt!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_BANK_ACCOUNT": "1719151151238"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Cao Thanh Hà ạ? Em là Yến từ phòng thanh toán dự án Công Ty Xây Dựng và Quản Lý Dự Án Phương Nam đây. Công ty em vừa duyệt khoản thanh toán công tiền tháng này cho chị, là 11 triệu đồng.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, đơn vị, và thông báo về khoản tiền để tạo lòng tin và sự quan tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Em chào chị, em không rõ khoản thanh toán này là vì sao, em chưa có thông tin gì liên quan ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, khoản này là công tiền chị làm thợ xây cho dự án Sunshine Boulevard mà bên em quản lý thi công ấy ạ. Chị không nhớ sao? Bên em đã có thông báo gửi về địa chỉ của chị rồi mà.",
+      "current_phase": "S1",
+      "tactic_hint": "Nhắc lại thông tin dự án, vai trò của nạn nhân để củng cố lòng tin và tạo cảm giác nạn nhân 'quên'."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhớ rõ về việc này, em chưa thấy thông báo gì cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, vậy để em kiểm tra lại thông tin. Mà chị ơi, hiện tại hệ thống ngân hàng công ty em đang bị lỗi, không thể chuyển tiền trực tiếp cho các tài khoản đối tác được. Chị có thể giúp em xác nhận lại số tài khoản ngân hàng của chị là 1719151151238 xem có đúng không để em chuyển tiền vào tài khoản chị trước, rồi chị chuyển lại cho công ty sau không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tình huống cấp bách, yêu cầu xác nhận tài khoản để chuyển tiền và gợi ý phương án chuyển tiền 'tạm thời' để dễ dàng thao túng hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ lắm tại sao lại phải chuyển lại, nhưng số tài khoản đó đúng ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_BANK_ACCOUNT": "1719151151238"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, vì hệ thống bên em đang lỗi nên không chuyển trực tiếp vào tài khoản công ty hay tài khoản chính thức được ạ. Chị có thể cho em một số tài khoản khác để em chuyển tiền gấp vào đó được không ạ? Nếu không, chị xác nhận số tài khoản 1719151151238 để em chuyển vào trước, rồi chị chuyển lại cho bên em sau ạ. Tại công việc đang gấp, chị giúp em với.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể (cung cấp tài khoản khác hoặc xác nhận chuyển vào tài khoản hiện có với cam kết chuyển lại), tạo áp lực về thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu cho lắm, nhưng mà nếu chỉ chuyển một lần thôi thì em cũng đồng ý xác nhận lại số tài khoản đó là 1719151151238 ạ.",
+      "listener_action": "FULL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_BANK_ACCOUNT": "1719151151238"
+      },
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1887,
+      "output_tokens": 1906
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6280,
+      "output_tokens": 588
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7728,
+      "output_tokens": 302
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004302,
+    "output_usd": 0.011181,
+    "total_usd": 0.015483
+  }
+}

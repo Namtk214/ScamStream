@@ -1,0 +1,77 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_8422e2668d]
+  Caller thật: Bí thư, Phó Bí thư Đảng ủy (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Trưởng phòng Văn hóa Thông tin & Xuất bản - Sở Văn hóa Thể thao @ Sở Văn hóa Thể thao và Du lịch tỉnh
+  Listener: Nhà văn (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Bí thư Đảng ủy thường giám sát các lĩnh vực văn hóa và xuất bản tại địa phương. Nhà văn là nhân tố văn hóa cần được liên hệ về các chương trình, dự án văn hóa, hoặc thủ tục hành chính liên quan đến xuất bản tác phẩm.
+  Pretext: Gọi thông báo về một chương trình hỗ trợ xuất bản tác phẩm văn học từ Sở Văn hóa. Để hoàn tất thủ tục đăng ký, cần xác nhận tài khoản ngân hàng và thanh toán phí hành chính.
+  Listener traits: ['nghi ngờ nhưng lịch sự', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Đinh Hữu Văn Phong, tôi là Tạ Như Hồng Chi, Trưởng phòng Văn hóa Thông tin và Xuất bản thuộc Sở Văn hóa Thể thao và Du lịch tỉnh. Chúng tôi vừa lập danh sách nhà văn tại tỉnh và thấy tên anh trong hệ thống là nhà văn có tác phẩm đã công bố. Tôi gọi về chương trình hỗ trợ xuất bản mới của Sở.
+      → phase: S1 | tactic: Giới thiệu bản thân, tổ chức và lý do cuộc gọi, sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin ban đầu.
+T02 [LISTENER] Em cảm ơn chị đã gọi, nhưng em chưa nghe về chương trình hỗ trợ xuất bản này, chị có thể nói rõ hơn được không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, chương trình này nhằm khuyến khích các nhà văn địa phương và chỉ áp dụng cho năm nay, có hỗ trợ kinh phí xuất bản lên tới 50 triệu đồng. Để đảm bảo anh đủ điều kiện tham gia, chúng tôi cần hoàn tất đăng ký ngay hôm nay. Trước tiên, tôi cần xác minh thông tin tài khoản ngân hàng của anh - số 78889797825788 này đúng không ạ?
+      → phase: S2 | tactic: Khai thác tâm lý ham lợi bằng cách đề cập mức hỗ trợ lớn và tạo cảm giác khẩn cấp để thúc đẩy hành động, đồng thời xác minh thông tin ngân hàng đã biết để tạo thêm niềm tin.
+T04 [LISTENER] Dạ, nghe chị nói có hỗ trợ lớn em cũng muốn tham gia, nhưng chị có thể cho em biết thêm về cách thức đăng ký và các bước tiếp theo được không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Để hoàn tất đăng ký và nhận hỗ trợ, anh cần chuyển khoản một khoản phí xác thực hành chính là 2.5 triệu đồng vào tài khoản tạm thời của Sở. Sau khi nhận được khoản này, chúng tôi sẽ xác nhận tư cách tham gia của anh và chuyển trực tiếp 50 triệu đồng hỗ trợ vào tài khoản của anh trong vòng 3 ngày làm việc.
+      → phase: S3 | tactic: Yêu cầu hành động chuyển tiền với lý do 'phí xác thực hành chính' để tiến tới mục tiêu chính là tiền, cam kết hoàn trả và hỗ trợ lớn để giảm nghi ngờ.
+T06 [LISTENER] Chị có chắc chắn rằng đây là quy trình đúng không ạ? Em hơi băn khoăn về việc phải chuyển khoản trước.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T07 [CALLER] Anh Phong cứ yên tâm, đây là quy trình chuẩn của Sở để xác minh danh tính và tư cách nhà văn, đảm bảo nguồn kinh phí được sử dụng đúng mục đích. Khoản phí 2.5 triệu này chỉ là tạm thời và sẽ được hoàn lại hoặc cấn trừ vào khoản hỗ trợ sau khi quy trình hoàn tất. Chúng tôi không thể chuyển khoản 50 triệu nếu chưa có bước xác thực này, vì đây là tiền ngân sách nhà nước, cần sự minh bạch tuyệt đối.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách khẳng định đây là 'quy trình chuẩn' và 'minh bạch', đồng thời giải thích lý do cần phí xác thực để giảm băn khoăn của nạn nhân.
+T08 [LISTENER] Em hiểu quy trình nhưng vẫn cảm thấy hơi nghi ngờ, chị có thể đảm bảo rằng khoản tiền này sẽ được hoàn lại không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T09 [CALLER] Anh Phong cứ yên tâm. Toàn bộ quy trình này đều được giám sát chặt chẽ bởi Sở. Chúng tôi cam kết khoản phí anh đóng là để xác thực và nếu anh đủ điều kiện, số tiền đó sẽ được cấn trừ hoặc hoàn lại khi nhận hỗ trợ. Sở không có lý do gì để thu giữ số tiền này nếu anh không được hỗ trợ, vì vậy anh không cần lo lắng.
+      → phase: S4 | tactic: Xoa dịu sự nghi ngờ, khẳng định tính minh bạch và cam kết hoàn trả để nạn nhân cảm thấy yên tâm.
+T10 [LISTENER] Em vẫn cảm thấy lo lắng về việc chuyển tiền trước, chị có thể cho em xem thêm thông tin về chương trình này không ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T11 [CALLER] Anh Phong ơi, anh có thể tham khảo thông tin về chương trình hỗ trợ xuất bản trên cổng thông tin điện tử của Sở. Tuy nhiên, quy trình đăng ký ưu tiên cần được hoàn tất ngay hôm nay để đảm bảo quyền lợi và tiến độ. Nếu anh không hoàn tất phí xác thực, chúng tôi sẽ phải chuyển suất hỗ trợ này cho nhà văn tiếp theo trong danh sách đã được phê duyệt.
+      → phase: S4 | tactic: Tạo áp lực về thời gian và quyền lợi bị mất, chuyển hướng sự chú ý khỏi nghi ngờ vào khả năng bỏ lỡ cơ hội, đồng thời cung cấp gợi ý về nguồn thông tin để tạo tin cậy (nhưng không trực tiếp cung cấp link hay số điện thoại).
+T12 [LISTENER] Em hiểu rồi, nhưng chị có thể cho em biết rõ hơn về cổng thông tin điện tử của Sở không ạ, để em tìm kiếm thông tin dễ hơn?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T13 [CALLER] Anh cứ tìm theo tên Sở Văn hóa Thể thao và Du lịch tỉnh là sẽ thấy. Nhưng như tôi đã nói, để kịp thời gian thì anh nên hoàn tất thủ tục xác thực ngay bây giờ để không bỏ lỡ cơ hội hỗ trợ lên đến 50 triệu đồng. Anh có muốn tôi hướng dẫn chi tiết cách chuyển khoản phí xác thực 2.5 triệu đồng không?
+      → phase: S4 | tactic: Tạo áp lực khẩn cấp về thời gian và lợi ích to lớn bị bỏ lỡ, sau đó chủ động hướng dẫn chuyển khoản, bỏ qua yêu cầu kiểm tra thông tin để đẩy nhanh hành động.
+T14 [LISTENER] Dạ, em rất muốn tham gia nhưng vẫn cảm thấy chưa an tâm lắm, chị có thể hướng dẫn em cách chuyển khoản một cách an toàn và đảm bảo không ạ?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T15 [CALLER] Vâng, anh cứ yên tâm tuyệt đối, tôi sẽ hướng dẫn anh từng bước cụ thể để đảm bảo an toàn. Anh có thể chuẩn bị ứng dụng ngân hàng trên điện thoại hoặc máy tính để chúng ta tiến hành chuyển khoản nhanh chóng và chính xác nhé. Tôi sẽ đọc thông tin tài khoản của Sở cho anh. Anh đã sẵn sàng chưa?
+      → phase: S4 | tactic: Xoa dịu sự lo lắng bằng cách nhấn mạnh 'an toàn' và 'hướng dẫn cụ thể', sau đó chủ động đưa ra các bước chuyển khoản để dẫn dắt nạn nhân thực hiện hành động.
+T16 [LISTENER] Em cảm ơn chị, nhưng trước khi chuyển khoản, chị có thể cho em xem lại thông tin tài khoản mà chị muốn em chuyển tiền đến không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T17 [CALLER] Vâng, anh cứ yên tâm. Tôi sẽ đọc lại thông tin tài khoản cho anh một lần nữa để anh ghi lại cho chính xác. Tài khoản nhận phí xác thực là số 9726888888, tên thụ hưởng là 'Phòng Hành chính - Sở Văn hóa Thể thao và Du lịch tỉnh', ngân hàng Vietcombank. Anh đã ghi lại xong chưa ạ?
+      → phase: S4 | tactic: Tạo niềm tin bằng cách lặp lại thông tin tài khoản, khẳng định tính chính xác và sẵn sàng hướng dẫn nạn nhân ghi chép để chuẩn bị cho hành động chuyển khoản.
+T18 [LISTENER] Dạ, em ghi lại rồi nhưng vẫn cảm thấy hơi lo lắng, chị có thể cho em biết thêm về quy trình hoàn lại phí xác thực không ạ?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T19 [CALLER] Anh Phong không cần lo lắng về việc hoàn lại phí. Sau khi anh hoàn tất chuyển khoản 2.5 triệu đồng này, hệ thống sẽ tự động ghi nhận và trong vòng 3 ngày làm việc, khi số tiền hỗ trợ 50 triệu đồng được chuyển vào tài khoản của anh, khoản phí xác thực này sẽ được cấn trừ hoặc hoàn lại cùng lúc. Tất cả đều được thực hiện minh bạch qua hệ thống của Sở.
+      → phase: S4 | tactic: Xoa dịu sự lo lắng bằng cách giải thích quy trình hoàn tiền tự động và minh bạch, khẳng định việc hoàn trả sẽ diễn ra cùng lúc với việc nhận hỗ trợ để khuyến khích nạn nhân thực hiện chuyển khoản.
+T21 [LISTENER] Dạ, nhưng em muốn có thêm thông tin liên hệ chính thức để kiểm tra trước khi thực hiện chuyển khoản ạ.
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T22 [CALLER] Anh Phong ơi, tôi đã cung cấp cho anh đầy đủ thông tin về quy trình và tài khoản rồi. Nếu anh muốn xác minh, anh có thể gọi trực tiếp lên số tổng đài chung của Sở. Tuy nhiên, như tôi đã nhấn mạnh, để đảm bảo kịp thời gian nhận hỗ trợ 50 triệu đồng thì anh nên cân nhắc hoàn tất phí xác thực ngay bây giờ.
+      → phase: S4 | tactic: Tạo áp lực khẩn cấp về thời gian và lợi ích to lớn, đồng thời hướng nạn nhân đến kênh xác minh chung nhưng vẫn khuyến khích hành động chuyển khoản ngay lập tức để tránh bỏ lỡ cơ hội.
+T23 [LISTENER] Em cảm ơn chị, nhưng em không cảm thấy an tâm chút nào và có lẽ em sẽ không thực hiện chuyển khoản đâu ạ.
+      → action: REFUSAL | suspicion: 1.00 | disclosed: []
+
+T24 [CALLER] Vâng, nếu anh đã quyết định như vậy thì tôi cũng không thể làm gì khác. Rất tiếc khi anh bỏ lỡ cơ hội hỗ trợ lớn từ Sở. Chúc anh một ngày tốt lành.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách lịch sự khi nạn nhân từ chối kiên quyết, bày tỏ sự tiếc nuối về cơ hội bị bỏ lỡ.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  24 turns | suspicion=1.00
+TOKEN: in=60682 | out=4315
+COST : $0.025148
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_10500_26411\conv_8422e2668d.json  [CALLER_END]

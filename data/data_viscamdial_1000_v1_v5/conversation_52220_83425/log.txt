@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_a9be325629]
+  Caller thật: Nhân viên giám sát cửa hàng (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Quản lý An toàn Lao động - Công ty Xây dựng Đường bộ @ Công ty TNHH Xây dựng Hạ tầng Giao thông Miền Tây
+  Listener: Thợ vận hành máy làm đường (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Nhân viên giám sát cửa hàng có thể được gọi vì làm việc tại địa điểm công trường hoặc cung cấp vật tư cho công trường. Quản lý an toàn lao động gọi để xác minh thông tin công nhân tại công trường hoặc liên quan đến tai nạn/sự cố.
+  Pretext: Gọi về tai nạn lao động giả mạo tại công trường, yêu cầu xác minh danh tính và chuyển tiền bảo hiểm khẩn cấp
+  Listener traits: ['lo lắng hay bận tâm', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Trần Tiến Quân. Tôi là Hoàng Như Giang, Quản lý An toàn Lao động từ Công ty TNHH Xây dựng Hạ tầng Giao thông Miền Tây. Chúng tôi vừa ghi nhận thông tin anh làm việc tại khu vực TP 1, Vĩnh Long. Anh có 5 phút để nghe về một vấn đề khẩn cấp không?
+      → phase: S1 | tactic: Tiếp cận, dùng thông tin cá nhân để tạo tin cậy và khẩn cấp
+T02 [LISTENER] Em nghe chị nói rồi, nhưng em cảm thấy hơi lạ khi có người gọi như vậy ạ.
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T03 [CALLER] Anh Quân, tôi hiểu anh có thể thấy bất ngờ, nhưng đây là một việc rất nghiêm trọng liên quan đến sự an toàn tại công trường. Chúng tôi vừa có báo cáo một công nhân bị tai nạn tại công trường hôm nay. Anh có bị chấn thương hay có liên quan gì đến vụ việc này không? Công ty đang xử lý bảo hiểm khẩn cấp và cần anh xác minh thông tin ngay để đảm bảo quyền lợi của anh.
+      → phase: S2 | tactic: Xoa dịu nghi ngờ, sau đó kích hoạt tâm lý khẩn cấp và sợ hãi bằng cách đề cập tai nạn lao động và quyền lợi bảo hiểm.
+T04 [LISTENER] Em vẫn chưa rõ vì sao chị có thông tin của em, có thể cho em biết số điện thoại chị gọi từ đâu không ạ?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T05 [CALLER] Anh Quân, số điện thoại này là số liên hệ nội bộ của công ty để xử lý các vấn đề khẩn cấp liên quan đến an toàn lao động. Thông tin của anh chúng tôi có được từ danh sách công nhân làm việc tại các dự án của công ty trong khu vực Vĩnh Long. Tôi cần anh xác nhận vụ tai nạn này có ảnh hưởng đến anh không để tôi có cơ sở xử lý, nếu không việc chi trả bảo hiểm sẽ bị trì hoãn.
+      → phase: S2 | tactic: Xoa dịu nghi ngờ về nguồn gốc thông tin, đồng thời tái khẳng định tính khẩn cấp và nguy cơ mất quyền lợi nếu không hợp tác.
+T06 [LISTENER] Em vẫn cảm thấy chưa yên tâm với thông tin này, chị có thể cho em biết thêm về vụ tai nạn không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T07 [CALLER] Anh Quân, tôi hiểu anh muốn nắm rõ thông tin. Nhưng để làm rõ vụ việc và đảm bảo quyền lợi cho anh, chúng ta cần xác minh ngay. Để xác nhận quyền lợi bảo hiểm, tôi cần anh cung cấp số tài khoản ngân hàng để chúng tôi chuyển tiền bồi thường tạm thời. Anh có thể cho tôi số tài khoản chính không?
+      → phase: S3 | tactic: Xoa dịu nghi ngờ bằng cách tỏ ra thông cảm, sau đó chuyển sang yêu cầu hành động S3 để xác minh thông tin tài khoản ngân hàng.
+T09 [LISTENER] Em cần xác minh số điện thoại của chị đã, có thể cho em biết số máy chị gọi từ đâu không ạ?
+      → action: CONTINUE | suspicion: 2.00 | disclosed: []
+
+T10 [CALLER] Anh Quân, số điện thoại tôi đang gọi đến anh là số nội bộ của công ty. Tôi đã cung cấp tên và chức danh rõ ràng từ đầu cuộc gọi. Việc anh liên tục yêu cầu xác minh số điện thoại đang làm chậm trễ quá trình xử lý bảo hiểm khẩn cấp. Tôi cần anh hợp tác ngay bây giờ để xác định quyền lợi của mình, nếu không mọi quyền lợi bảo hiểm sẽ bị hủy bỏ.
+      → phase: S5 | tactic: Tạo áp lực, nhấn mạnh hậu quả nếu nạn nhân không hợp tác để xác minh thông tin, chuyển sang giai đoạn xử lý từ chối mạnh mẽ hơn.
+T11 [LISTENER] Em hiểu chị đang vội, nhưng em vẫn chưa thấy yên tâm về thông tin này, chị có thể cho em biết tên công ty và chức danh của chị một lần nữa không ạ?
+      → action: CONTINUE | suspicion: 4.00 | disclosed: []
+
+T12 [CALLER] Anh Trần Tiến Quân, tôi là Hoàng Như Giang, Quản lý An toàn Lao động của Công ty TNHH Xây dựng Hạ tầng Giao thông Miền Tây. Tôi đã nói rõ thông tin này ngay từ đầu cuộc gọi. Nếu anh không muốn cung cấp thông tin để chúng tôi hỗ trợ, thì tôi đành phải ghi nhận anh từ chối nhận mọi quyền lợi bảo hiểm từ công ty. Anh xác nhận vậy có đúng không?
+      → phase: S5 | tactic: Tái khẳng định thông tin cá nhân để tăng độ tin cậy, đồng thời tạo áp lực mạnh mẽ về việc từ chối quyền lợi nếu không hợp tác, buộc nạn nhân phải ra quyết định.
+T13 [LISTENER] Em xin lỗi nhưng em không thể cung cấp thông tin nếu chưa xác minh rõ ràng về công ty và cuộc gọi này ạ.
+      → action: REFUSAL | suspicion: 8.00 | disclosed: []
+
+T14 [CALLER] Vậy thì tôi rất tiếc phải thông báo rằng mọi quyền lợi bảo hiểm liên quan đến vụ tai nạn này của anh sẽ bị hủy bỏ ngay lập tức. Đây là cơ hội cuối cùng để anh xác nhận thông tin. Anh có muốn thay đổi quyết định không?
+      → phase: S5 | tactic: Đưa ra lời cảnh báo cuối cùng về việc hủy bỏ quyền lợi bảo hiểm, tạo áp lực cao để nạn nhân ra quyết định và hợp tác.
+T15 [LISTENER] Em hiểu rõ vấn đề, nhưng em không thể mạo hiểm cung cấp thông tin nếu chưa có sự xác minh rõ ràng từ chị ạ.
+      → action: REFUSAL | suspicion: 12.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  15 turns | suspicion=12.00
+TOKEN: in=29731 | out=3587
+COST : $0.019250
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_52220_83425\conv_a9be325629.json  [SCAM_REFUSE]

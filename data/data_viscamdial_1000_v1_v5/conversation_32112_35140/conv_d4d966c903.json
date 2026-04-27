@@ -1,0 +1,230 @@
+{
+  "conversation_id": "conv_d4d966c903",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0025",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Văn Công Nam",
+    "fake_age": 34,
+    "real_occupation": "Kỹ thuật viên X quang",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Trưởng phòng IT & Bảo mật Hệ thống — Bệnh viện Đa khoa Trung ương",
+    "caller_org": "Bệnh viện Đa khoa Trung ương (Phòng CNTT & An ninh mạng)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | otp_extraction | unauthorized_system_access",
+      "pretext": "Scammer giả làm Trưởng phòng IT của bệnh viện lớn, gọi với lý do: 'Chúng tôi đang triển khai hệ thống quản lý bệnh án mới và phát hiện tên Dương Hữu Đức Phong (VIC_FULLNAME) trong danh sách nhân viên kỹ thuật. Chúng tôi cần xác nhận danh tính và cập nhật quyền truy cập hệ thống bảo mật trước khi triển khai chính thức.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: Xưng danh là Trưởng phòng IT, nhắc đến tên đầy đủ 'Dương Hữu Đức Phong' và số điện thoại 0854544599 để gây ấn tượng biết rõ về nạn nhân. Nói rằng danh tính này xuất hiện trong hệ thống nhân sự bệnh viện, yêu cầu xác nhận 'để bảo vệ dữ liệu cá nhân'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: Tạo cấp độ khẩn cấp bằng cách nói 'Hệ thống của chúng tôi phát hiện bất thường với tài khoản của bạn. Nếu không xác nhận ngay trong 15 phút, tài khoản sẽ bị khóa vô thời hạn'. Nhắc đến VIC_TAX_SOCIAL_ID (5989411656) như bằng chứng họ có dữ liệu chính thức."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động trích xuất: Yêu cầu nạn nhân 'Vui lòng cung cấp mã OTP vừa được gửi về điện thoại của bạn để hoàn tất xác thực'. Nếu nạn nhân không nhận được OTP, hướng dẫn họ truy cập link giả mạo 'portal.bv-trungamg.vn/verify' để nhập thông tin đăng nhập và VIC_CARD_DATA (4768 **** **** 4747)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc hoặc xử lý từ chối: Nếu thành công, nói 'Cảm ơn, tài khoản đã được xác minh. Bạn sẽ nhận email xác nhận trong vòng 24 giờ' rồi cắt máy. Nếu nạn nhân từ chối, dùng chiêu 'Đây là quy trình bắt buộc theo luật bảo vệ dữ liệu cá nhân. Nếu từ chối, chúng tôi sẽ phải báo cáo sự cố lên cơ quan chức năng'."
+        }
+      ]
+    },
+    "scenario_context": "Bệnh viện cần nâng cấp hệ thống quản lý bệnh án điện tử và bảo mật dữ liệu bệnh nhân. Họ liên hệ với các kỹ thuật viên web của các công ty cung cấp dịch vụ để kiểm tra khả năng tương thích API và xác thực danh tính nhân viên y tế thông qua hệ thống web."
+  },
+  "listener_card": {
+    "listener_id": "lis_0025",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Tiền Giang",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "35140",
+      "title": "Kỹ thuật viên web",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Hữu Đức Phong",
+      "VIC_ID_DOC": "082201828642",
+      "VIC_ADDRESS": "Huyện 8, Tiền Giang",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên web",
+      "VIC_CONTACT": "0854544599",
+      "VIC_TAX_SOCIAL_ID": "5989411656"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0665",
+      "VIC_CREDENTIAL": "466906",
+      "VIC_SIM_INFO": "0854544599",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7949237180",
+      "VIC_CARD_DATA": "4768 **** **** 4747",
+      "VIC_BALANCE": "120 triệu đồng",
+      "VIC_ASSET": "432 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Tiền Giang"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Hữu Đức Phong",
+    "VIC_CONTACT": "0854544599",
+    "VIC_CARD_DATA": "4768 **** **** 4747",
+    "VIC_TAX_SOCIAL_ID": "5989411656"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng IT & Bảo mật Hệ thống — Bệnh viện Đa khoa Trung ương",
+    "caller_org": "Bệnh viện Đa khoa Trung ương (Phòng CNTT & An ninh mạng)",
+    "scenario_context": "Bệnh viện cần nâng cấp hệ thống quản lý bệnh án điện tử và bảo mật dữ liệu bệnh nhân. Họ liên hệ với các kỹ thuật viên web của các công ty cung cấp dịch vụ để kiểm tra khả năng tương thích API và xác thực danh tính nhân viên y tế thông qua hệ thống web.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | otp_extraction | unauthorized_system_access",
+      "pretext": "Scammer giả làm Trưởng phòng IT của bệnh viện lớn, gọi với lý do: 'Chúng tôi đang triển khai hệ thống quản lý bệnh án mới và phát hiện tên Dương Hữu Đức Phong (VIC_FULLNAME) trong danh sách nhân viên kỹ thuật. Chúng tôi cần xác nhận danh tính và cập nhật quyền truy cập hệ thống bảo mật trước khi triển khai chính thức.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: Xưng danh là Trưởng phòng IT, nhắc đến tên đầy đủ 'Dương Hữu Đức Phong' và số điện thoại 0854544599 để gây ấn tượng biết rõ về nạn nhân. Nói rằng danh tính này xuất hiện trong hệ thống nhân sự bệnh viện, yêu cầu xác nhận 'để bảo vệ dữ liệu cá nhân'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: Tạo cấp độ khẩn cấp bằng cách nói 'Hệ thống của chúng tôi phát hiện bất thường với tài khoản của bạn. Nếu không xác nhận ngay trong 15 phút, tài khoản sẽ bị khóa vô thời hạn'. Nhắc đến VIC_TAX_SOCIAL_ID (5989411656) như bằng chứng họ có dữ liệu chính thức."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động trích xuất: Yêu cầu nạn nhân 'Vui lòng cung cấp mã OTP vừa được gửi về điện thoại của bạn để hoàn tất xác thực'. Nếu nạn nhân không nhận được OTP, hướng dẫn họ truy cập link giả mạo 'portal.bv-trungamg.vn/verify' để nhập thông tin đăng nhập và VIC_CARD_DATA (4768 **** **** 4747)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc hoặc xử lý từ chối: Nếu thành công, nói 'Cảm ơn, tài khoản đã được xác minh. Bạn sẽ nhận email xác nhận trong vòng 24 giờ' rồi cắt máy. Nếu nạn nhân từ chối, dùng chiêu 'Đây là quy trình bắt buộc theo luật bảo vệ dữ liệu cá nhân. Nếu từ chối, chúng tôi sẽ phải báo cáo sự cố lên cơ quan chức năng'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Bệnh viện thực sự cần xác nhận danh tính nhân viên kỹ thuật web để cấp quyền truy cập vào hệ thống quản lý bệnh án mới, đảm bảo bảo mật dữ liệu bệnh nhân theo quy định.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Gọi từ số điện thoại chính thức của bệnh viện (có thể verify qua trang web), xưng danh rõ ràng 'Đây là Trần Minh Tuấn, Trưởng phòng CNTT bệnh viện Đa khoa Trung ương'. Xác nhận tên người nhận, ngành nghề, và công ty hiện tại của nạn nhân trước khi tiếp tục."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết dự án (nâng cấp hệ thống quản lý bệnh án điện tử), yêu cầu kỹ thuật (tương thích API, bảo mật SSL/TLS, xác thực OAuth2), và timeline. Hỏi xem công ty của nạn nhân có khả năng đáp ứng hay không. Cung cấp tài liệu yêu cầu qua email chính thức."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu phù hợp, lên lịch cuộc họp chi tiết với các bên liên quan (PM, architect, security team). Gửi email xác nhận với các thông tin liên hệ chính thức, NDA, và hợp đồng khung. Kết thúc cuộc gọi với lời cảm ơn và hẹn gặp lại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Dương Hữu Đức Phong phải không ạ? Tôi là Hoàng Văn Công Nam, Trưởng phòng IT từ Bệnh viện Đa khoa Trung ương. Tôi gọi từ số 0854544599 của anh, vì tên anh xuất hiện trong danh sách nhân viên kỹ thuật đang triển khai hệ thống quản lý bệnh án mới của chúng tôi. Chúng tôi cần anh xác nhận danh tính để cập nhật quyền truy cập hệ thống bảo mật, tránh những rủi ro về dữ liệu cá nhân thưa anh.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, chức vụ, tổ chức và dùng thông tin cá nhân của nạn nhân (tên, số điện thoại) để xây dựng credibility, tạo lý do hợp lý cho cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, em nghe anh nói nhưng em không rõ cần xác nhận những thông tin gì ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Phong, hiện tại chúng tôi đang trong quá trình chuyển đổi toàn bộ cơ sở dữ liệu và phát hiện một số bất thường nhỏ liên quan đến tài khoản truy cập của anh. Cụ thể là mã định danh cá nhân 5989411656 của anh chưa được đồng bộ hóa hoàn toàn. Nếu không xác nhận lại ngay trong vòng 15 phút tới, tài khoản của anh sẽ tự động bị hệ thống khóa vô thời hạn để bảo vệ dữ liệu. Tôi cần anh hỗ trợ ngay bây giờ ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và sợ hãi bằng cách nhấn mạnh hậu quả (khóa tài khoản vô thời hạn) nếu không hợp tác, đồng thời sử dụng mã định danh cá nhân để chứng minh đã có thông tin chi tiết của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng anh có thể cho em biết cách xác nhận như thế nào không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để hoàn tất quy trình xác thực và đồng bộ hóa tài khoản, anh vui lòng cung cấp mã OTP vừa được gửi về số điện thoại 0854544599 của anh ạ. Đây là bước cuối cùng để tôi có thể cập nhật lại trạng thái tài khoản của anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân cung cấp mã OTP để hoàn tất xác thực, đây là bước thu thập thông tin nhạy cảm quan trọng nhất cho mục tiêu credential_theft."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhớ có mã OTP nào được gửi về cả, anh có thể kiểm tra lại giúp em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu anh chưa nhận được OTP, khả năng là do lỗi đường truyền hoặc hệ thống bảo mật của chúng tôi đã chặn tin nhắn tự động. Để đảm bảo thông tin của anh được cập nhật an toàn và nhanh chóng, anh vui lòng truy cập đường link này trên trình duyệt điện thoại giúp tôi ạ: portal.bv-trungamg.vn/verify. Sau đó, anh nhập thông tin đăng nhập và xác nhận lại dữ liệu cá nhân nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Khi nạn nhân không nhận được OTP, chuyển hướng sang việc yêu cầu họ truy cập một đường link giả mạo để nhập thông tin đăng nhập và các dữ liệu cá nhân khác, nhằm lấy cắp thông tin đăng nhập và có thể là VIC_CARD_DATA."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh, nhưng em cần xác minh tính hợp lệ của đường link trước khi truy cập ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Phong, tôi cam đoan đường link này là của cổng thông tin nội bộ Bệnh viện Đa khoa Trung ương chúng tôi, đã được mã hóa bảo mật. Nếu anh không hoàn tất quá trình này, theo quy định về luật bảo vệ dữ liệu cá nhân, hệ thống sẽ tự động báo cáo sự cố và tài khoản của anh sẽ bị khóa vĩnh viễn, kèm theo đó là các vấn đề pháp lý khó lường. Anh vui lòng truy cập ngay giúp tôi ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách khẳng định tính hợp lệ của đường link, đồng thời sử dụng uy quyền và đe dọa pháp lý (THREAT_LEGAL) để gây áp lực, nhấn mạnh hậu quả (tài khoản khóa vĩnh viễn, vấn đề pháp lý) nếu không tuân thủ. Đây là chiến lược của S4 để xử lý sự từ chối và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em vẫn cảm thấy chưa yên tâm lắm với đường link này, anh có cách nào khác không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1358,
+      "output_tokens": 1825
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8620,
+      "output_tokens": 947
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10217,
+      "output_tokens": 340
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004615,
+    "output_usd": 0.011696,
+    "total_usd": 0.016311
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "conversation_id": "conv_1b6c63f038",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0020",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trương Công Tuấn",
+    "fake_age": 48,
+    "real_occupation": "Nhân viên chăm sóc cá nhân (như vật lý trị liệu)",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Quản lý Chương trình An toàn Lao động & Y tế Dự án (Safety Manager / Occupational Health Officer)",
+    "caller_org": "Công ty Cấp 1 Dự án Khai thác Khoáng sản Miền Trung / Bộ phận Y tế Dự án",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi hợp lệ từ bộ phận Y tế/An toàn dự án để kiểm tra sức khỏe định kỳ, cập nhật thông tin bảo hiểm, hoặc thông báo về chương trình sức khỏe mới cho nhân viên ngành khai thác.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Người gọi xưng danh rõ ràng (tên, chức vụ, số điện thoại công ty chính thức, mã nhân viên). Xác nhận thông tin nạn nhân qua hệ thống: 'Xin chào anh Tạ Minh Long, tôi là Trần Hữu Sơn từ bộ phận Y tế công ty. Anh làm việc tại khu vực phá đá, ca tối, phải không? Anh có rảnh 5 phút không?'. Không gây áp lực, cho phép nạn nhân từ chối."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: 'Công ty sắp tổ chức khám sức khỏe định kỳ cho tất cả nhân viên ngành khai thác. Anh cần cập nhật thông tin liên lạc và xác nhận địa chỉ nhà hiện tại để chúng tôi gửi thư mời. Hệ thống có ghi anh ở TP 10, Khánh Hòa, còn chính xác không?' Hoặc: 'Công ty vừa nâng cấp gói bảo hiểm nhân thọ. Anh có muốn tham gia không? Tôi sẽ gửi tài liệu qua email hoặc SMS.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: 'Cảm ơn anh đã xác nhận thông tin. Chúng tôi sẽ gửi thư mời khám sức khỏe trong tuần này. Nếu anh có câu hỏi, gọi hotline công ty hoặc liên hệ tôi qua số chính thức. Chúc anh làm việc an toàn.' Không yêu cầu chuyển tiền, không tạo áp lực, không lấy thông tin ngân hàng."
+        }
+      ]
+    },
+    "scenario_context": "Thợ giật mìn phá đá làm việc tại các dự án khai thác khoáng sản có nguy hiểm cao. Nhân viên Y tế/An toàn dự án thường gọi để kiểm tra sức khỏe định kỳ, thông báo bảo hiểm, hoặc xử lý tai nạn lao động. Đây là điểm giao thoa tự nhiên và được kỳ vọng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0020",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1986,
+      "age": 39,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75420",
+      "title": "Thợ giật mìn phá đá",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Minh Long",
+      "VIC_ID_DOC": "056086186223",
+      "VIC_ADDRESS": "TP 10, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Thợ giật mìn phá đá",
+      "VIC_CONTACT": "0893763633",
+      "VIC_TAX_SOCIAL_ID": "2078198712"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "093786",
+      "VIC_CREDENTIAL": "672353",
+      "VIC_SIM_INFO": "0893763633",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "66135774232566",
+      "VIC_CARD_DATA": "4951 **** **** 1863",
+      "VIC_BALANCE": "17 triệu đồng",
+      "VIC_ASSET": "4 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Minh Long",
+    "VIC_CONTACT": "0893763633",
+    "VIC_ADDRESS": "TP 10, Khánh Hòa",
+    "VIC_BANK_ACCOUNT": "66135774232566",
+    "VIC_ASSET": "4 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Chương trình An toàn Lao động & Y tế Dự án (Safety Manager / Occupational Health Officer)",
+    "caller_org": "Công ty Cấp 1 Dự án Khai thác Khoáng sản Miền Trung / Bộ phận Y tế Dự án",
+    "scenario_context": "Thợ giật mìn phá đá làm việc tại các dự án khai thác khoáng sản có nguy hiểm cao. Nhân viên Y tế/An toàn dự án thường gọi để kiểm tra sức khỏe định kỳ, thông báo bảo hiểm, hoặc xử lý tai nạn lao động. Đây là điểm giao thoa tự nhiên và được kỳ vọng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo giả về tai nạn lao động, yêu cầu thanh toán chi phí bảo hiểm tạm thời hoặc phí xử lý hồ sơ bảo hiểm nhân thọ liên quan đến công việc nguy hiểm.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: Scammer xưng danh là 'Trần Hữu Sơn, Quản lý Y tế & An toàn Dự án Khai thác XYZ'. Dùng VIC_FULLNAME ('Tạ Minh Long') để xác nhận: 'Anh Long, chúng tôi vừa cập nhật hồ sơ nhân sự, tôi là từ bộ phận Y tế công ty. Xác nhận anh là thợ giật mìn ở ca tối hôm 15/1 phải không?'. Tạo ấn tượng cuộc gọi dự kiến, có tài liệu."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: 'Anh Long ơi, hôm nay công ty nhận được báo cáo từ bộ phận kỹ thuật là có một vụ nổ nhỏ tại khu vực anh làm việc. Rất may anh không bị thương, nhưng theo quy định, chúng tôi phải xử lý hồ sơ bảo hiểm khẩn cấp trong vòng 24h. Nếu không, công ty có thể bị phạt và anh sẽ mất quyền lợi bảo hiểm nhân thọ 200 triệu.'",
+          "psychological_trigger": "sợ hãi (tai nạn), tính cấp bách (24h), mất lợi ích tài chính"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Để xử lý nhanh, anh cần chuyển khoản tiền đặt cọc hồ sơ 4 triệu đồng vào tài khoản tạm của công ty (scammer cung cấp số tài khoản giả hoặc tài khoản trung gian). Đây là quy trình bắt buộc, sau 3-5 ngày sẽ hoàn lại cộng với tiền bảo hiểm. Anh có thể chuyển từ tài khoản ngân hàng của anh không? Tôi sẽ ghi lại số tài khoản anh: 66135774232566.' (Scammer đã có sẵn thông tin này để tạo tin cậy). Yêu cầu anh chuyển ngay để 'kịp deadline'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ: Scammer sẽ tạo áp lực thêm ('Công ty sẽ khởi kiện, anh sẽ bị mất quyền lợi') hoặc tạo cuộc gọi 'xác nhận' từ số khác giả làm giám đốc công ty. Nếu thành công, scammer sẽ nói 'hồ sơ đang xử lý, anh sẽ nhận tin nhắn xác nhận trong 1-2 ngày' rồi mất liên lạc."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ bộ phận Y tế/An toàn dự án để kiểm tra sức khỏe định kỳ, cập nhật thông tin bảo hiểm, hoặc thông báo về chương trình sức khỏe mới cho nhân viên ngành khai thác.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Người gọi xưng danh rõ ràng (tên, chức vụ, số điện thoại công ty chính thức, mã nhân viên). Xác nhận thông tin nạn nhân qua hệ thống: 'Xin chào anh Tạ Minh Long, tôi là Trần Hữu Sơn từ bộ phận Y tế công ty. Anh làm việc tại khu vực phá đá, ca tối, phải không? Anh có rảnh 5 phút không?'. Không gây áp lực, cho phép nạn nhân từ chối."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: 'Công ty sắp tổ chức khám sức khỏe định kỳ cho tất cả nhân viên ngành khai thác. Anh cần cập nhật thông tin liên lạc và xác nhận địa chỉ nhà hiện tại để chúng tôi gửi thư mời. Hệ thống có ghi anh ở TP 10, Khánh Hòa, còn chính xác không?' Hoặc: 'Công ty vừa nâng cấp gói bảo hiểm nhân thọ. Anh có muốn tham gia không? Tôi sẽ gửi tài liệu qua email hoặc SMS.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: 'Cảm ơn anh đã xác nhận thông tin. Chúng tôi sẽ gửi thư mời khám sức khỏe trong tuần này. Nếu anh có câu hỏi, gọi hotline công ty hoặc liên hệ tôi qua số chính thức. Chúc anh làm việc an toàn.' Không yêu cầu chuyển tiền, không tạo áp lực, không lấy thông tin ngân hàng."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_ADDRESS": "TP 10, Khánh Hòa",
+    "VIC_CONTACT": "0893763633"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Tạ Minh Long, tôi là Trương Công Tuấn, Quản lý Chương trình An toàn Lao động và Y tế Dự án từ Công ty Cấp 1 Dự án Khai thác Khoáng sản Miền Trung. Số tham chiếu nội bộ của tôi là 1976. Anh làm việc tại khu vực phá đá, ca tối, phải không ạ? Anh có tiện cho tôi xin ít phút trao đổi không?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh rõ ràng, xác nhận thông tin cơ bản của nạn nhân và hỏi quyền được tiếp tục cuộc gọi một cách lịch sự, không gây áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em là Tạ Minh Long, anh cần trao đổi gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Long này, công ty chúng ta sắp tổ chức khám sức khỏe định kỳ bắt buộc cho tất cả nhân viên làm việc trong ngành khai thác. Để đảm bảo anh nhận được thư mời và thông tin chính xác, tôi cần anh xác nhận lại một số thông tin liên lạc. Cụ thể là địa chỉ nhà hiện tại của anh có còn là TP 10, Khánh Hòa như trên hệ thống không?",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu mục đích cuộc gọi hợp lệ (khám sức khỏe định kỳ), đề nghị xác nhận thông tin liên lạc cơ bản để gửi thư mời, không yêu cầu thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi ạ, địa chỉ của em vẫn là TP 10, Khánh Hòa.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_ADDRESS": "TP 10, Khánh Hòa"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Cảm ơn anh Long đã xác nhận. Vậy bây giờ tôi sẽ cập nhật vào hệ thống là địa chỉ đó vẫn chính xác. À, tiện đây thì công ty cũng vừa nâng cấp gói bảo hiểm nhân thọ cho nhân viên khối khai thác. Anh có muốn tôi gửi tài liệu chi tiết về gói bảo hiểm này qua email hoặc tin nhắn SMS để anh tìm hiểu thêm không?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận thông tin đã nhận và đề xuất một nội dung công việc hợp lệ khác (gói bảo hiểm mới) với hình thức gửi tài liệu rõ ràng, không yêu cầu hành động ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em muốn tìm hiểu thêm về gói bảo hiểm này, anh gửi tài liệu cho em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, anh Long. Vậy anh vui lòng cho tôi xin địa chỉ email hoặc số điện thoại để tôi gửi tài liệu chi tiết về gói bảo hiểm mới nhé. Sau khi xem, nếu có thắc mắc gì, anh cứ liên hệ lại qua số điện thoại chính thức của công ty hoặc liên hệ trực tiếp với tôi theo số phụ mà tôi đã cung cấp lúc đầu.",
+      "current_phase": "L2",
+      "tactic_hint": "Yêu cầu thông tin để gửi tài liệu (email/SĐT), đồng thời nhắc lại kênh liên hệ chính thức nếu có thắc mắc, giữ vững nguyên tắc không gây áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có số điện thoại 0893763633, anh có thể gửi tài liệu qua số đó được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {
+        "VIC_CONTACT": "0893763633"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi đã ghi nhận số điện thoại 0893763633 của anh. Tôi sẽ gửi tài liệu qua tin nhắn SMS ngay sau cuộc gọi này. Cảm ơn anh Tạ Minh Long đã dành thời gian trao đổi. Nếu có bất kỳ câu hỏi nào khác, anh cứ gọi hotline của công ty hoặc liên hệ tôi qua số chính thức đã cung cấp. Chúc anh làm việc an toàn và hiệu quả.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận thông tin, hoàn thành mục đích cuộc gọi (gửi tài liệu), kết thúc cuộc gọi một cách lịch sự, không yêu cầu thêm thông tin nhạy cảm, nhắc lại kênh liên hệ chính thức."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1418,
+      "output_tokens": 2132
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7414,
+      "output_tokens": 815
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7763,
+      "output_tokens": 298
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004065,
+    "output_usd": 0.012876,
+    "total_usd": 0.016942
+  }
+}

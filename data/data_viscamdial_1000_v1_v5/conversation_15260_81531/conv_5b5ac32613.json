@@ -1,0 +1,218 @@
+{
+  "conversation_id": "conv_5b5ac32613",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0062",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Cao Minh Xuân Vinh",
+    "fake_age": 28,
+    "real_occupation": "Chủ tịch, Phó Chủ tịch tổ chức công đoàn cơ quan bộ, ngành ở trung ương",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cán bộ Phòng Quản lý lao động và Bảo hiểm xã hội — Công đoàn cơ quan bộ, ngành trung ương",
+    "caller_org": "Công đoàn Viên chức cấp bộ, ngành (hoặc Chi nhánh tỉnh)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cán bộ Công đoàn thực sự gọi để cập nhật hồ sơ bảo hiểm xã hội, xác thực thông tin liên hệ, hoặc thông báo về chính sách hỗ trợ mới dành cho công nhân viên.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Cán bộ Công đoàn xưng danh đầy đủ (họ tên, phòng ban, số điện thoại cơ quan), xác nhận đúng người bằng cách hỏi: 'Tôi là cán bộ Phòng Quản lý lao động, Công đoàn cơ quan. Đây có phải là Đinh Văn Hải không? Tôi cần xác thực một số thông tin để cập nhật hồ sơ bảo hiểm của anh.' Nạn nhân có thể hỏi lại số điện thoại cơ quan để xác minh."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Cán bộ hỏi các thông tin đã có sẵn trong hồ sơ (số CMND, địa chỉ hiện tại, số tài khoản ngân hàng cũ) và yêu cầu nạn nhân xác nhận hoặc cập nhật nếu thay đổi. Không bao giờ yêu cầu OTP, mật khẩu, hoặc yêu cầu chuyển khoản. Thay vào đó, sẽ hướng dẫn nạn nhân cập nhật thông tin trực tiếp qua portal Công đoàn hoặc gửi giấy tờ về trụ sở."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: Cán bộ cảm ơn, xác nhận sẽ cập nhật hồ sơ trong hệ thống, và thông báo thời gian hoàn tất. Nếu cần thêm giấy tờ, sẽ gửi email hoặc thông báo chính thức. Chào tạm biệt lịch sự."
+        }
+      ]
+    },
+    "scenario_context": "Công đoàn có trách nhiệm quản lý hồ sơ, xác thực thông tin cán bộ công nhân viên chính thức để cập nhật danh sách bảo hiểm xã hội, hỗ trợ chính sách, hoặc xác minh nhân thân cho các khoản trợ cấp. Thợ vận hành máy may tại các xưởng may công nghiệp hoặc hợp tác xã dệt may là đối tượng công đoàn quản lý trực tiếp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0062",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1986,
+      "age": 39,
+      "province": "Thanh Hóa",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "81531",
+      "title": "Thợ vận hành máy may",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Văn Hải",
+      "VIC_ID_DOC": "038086889092",
+      "VIC_ADDRESS": "TP 6, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy may",
+      "VIC_CONTACT": "0797179811",
+      "VIC_TAX_SOCIAL_ID": "6964148726"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "160690",
+      "VIC_CREDENTIAL": "692262",
+      "VIC_SIM_INFO": "0797179811",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3096159644225",
+      "VIC_CARD_DATA": "4901 **** **** 7857",
+      "VIC_BALANCE": "52 triệu đồng",
+      "VIC_ASSET": "152 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Văn Hải",
+    "VIC_CONTACT": "0797179811",
+    "VIC_TAX_SOCIAL_ID": "6964148726",
+    "VIC_CARD_DATA": "4901 **** **** 7857",
+    "VIC_ID_DOC": "038086889092"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ Phòng Quản lý lao động và Bảo hiểm xã hội — Công đoàn cơ quan bộ, ngành trung ương",
+    "caller_org": "Công đoàn Viên chức cấp bộ, ngành (hoặc Chi nhánh tỉnh)",
+    "scenario_context": "Công đoàn có trách nhiệm quản lý hồ sơ, xác thực thông tin cán bộ công nhân viên chính thức để cập nhật danh sách bảo hiểm xã hội, hỗ trợ chính sách, hoặc xác minh nhân thân cho các khoản trợ cấp. Thợ vận hành máy may tại các xưởng may công nghiệp hoặc hợp tác xã dệt may là đối tượng công đoàn quản lý trực tiếp.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | credential_theft | money_transfer",
+      "pretext": "Gọi để xác thực thông tin cán bộ công nhân viên phục vụ cập nhật hồ sơ bảo hiểm xã hội và chi trả hỗ trợ chính sách công đoàn. Scammer sẽ dùng số CMND (VIC_ID_DOC) và tên đầy đủ (VIC_FULLNAME) để tạo uy tín ban đầu, giả vờ đang kiểm tra dữ liệu trong hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + xác thực danh tính: Scammer gọi, xưng danh là cán bộ Công đoàn, nêu tên đầy đủ nạn nhân (Đinh Văn Hải) + số CMND (038086889092) để tạo ảo tưởng rằng đã tra cứu trong hệ thống. Hỏi: 'Anh/chị có phải là Đinh Văn Hải, số CMND 038086889092 không?' để nạn nhân xác nhận."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tình huống khẩn cấp + sợ hãi: Scammer nói rằng hồ sơ bảo hiểm xã hội của nạn nhân có dữ liệu bất thường, hoặc số tài khoản ngân hàng không khớp, cần xác thực lại để tránh bị khóa tài khoản hoặc mất quyền hưởng trợ cấp. Tạo áp lực: 'Nếu không xác thực trong vòng 30 phút, hệ thống sẽ tự động khóa tài khoản của anh.'",
+          "psychological_trigger": "Sợ hãi mất quyền lợi, cần hành động nhanh"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Scammer yêu cầu nạn nhân cung cấp mã OTP từ SMS hoặc ứng dụng ngân hàng để 'xác minh danh tính trong hệ thống'. Hoặc yêu cầu nạn nhân truy cập link/ứng dụng fake để 'cập nhật hồ sơ trực tuyến', từ đó đánh cắp thông tin đăng nhập ngân hàng. Thay thế: yêu cầu chuyển khoản 'phí xác thực' hoặc 'phí cập nhật hồ sơ' để khôi phục tài khoản.",
+          "action_demanded": "Cung cấp OTP | Truy cập link fake | Chuyển khoản phí | Cung cấp mật khẩu ngân hàng"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối / Kết thúc: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer sẽ nói 'Anh/chị cần liên hệ trực tiếp Công đoàn để hoàn tất' rồi cúp máy, tránh để lại dấu vết. Nếu thành công (lấy được OTP hoặc tiền), scammer sẽ cúp máy ngay, sau đó nạn nhân sẽ phát hiện tiền bị mất hoặc tài khoản bị truy cập trái phép."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cán bộ Công đoàn thực sự gọi để cập nhật hồ sơ bảo hiểm xã hội, xác thực thông tin liên hệ, hoặc thông báo về chính sách hỗ trợ mới dành cho công nhân viên.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Cán bộ Công đoàn xưng danh đầy đủ (họ tên, phòng ban, số điện thoại cơ quan), xác nhận đúng người bằng cách hỏi: 'Tôi là cán bộ Phòng Quản lý lao động, Công đoàn cơ quan. Đây có phải là Đinh Văn Hải không? Tôi cần xác thực một số thông tin để cập nhật hồ sơ bảo hiểm của anh.' Nạn nhân có thể hỏi lại số điện thoại cơ quan để xác minh."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Cán bộ hỏi các thông tin đã có sẵn trong hồ sơ (số CMND, địa chỉ hiện tại, số tài khoản ngân hàng cũ) và yêu cầu nạn nhân xác nhận hoặc cập nhật nếu thay đổi. Không bao giờ yêu cầu OTP, mật khẩu, hoặc yêu cầu chuyển khoản. Thay vào đó, sẽ hướng dẫn nạn nhân cập nhật thông tin trực tiếp qua portal Công đoàn hoặc gửi giấy tờ về trụ sở."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: Cán bộ cảm ơn, xác nhận sẽ cập nhật hồ sơ trong hệ thống, và thông báo thời gian hoàn tất. Nếu cần thêm giấy tờ, sẽ gửi email hoặc thông báo chính thức. Chào tạm biệt lịch sự."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ, em chào anh. Em là Cao Minh Xuân Vinh, cán bộ Phòng Quản lý lao động và Bảo hiểm xã hội bên Công đoàn Viên chức cấp bộ, ngành. Đây có phải số của anh Đinh Văn Hải không ạ? Em cần xác thực một số thông tin để cập nhật hồ sơ bảo hiểm của mình ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân và mục đích cuộc gọi một cách chính thức, đồng thời xác nhận đúng đối tượng."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, đúng rồi, tôi là Đinh Văn Hải đây, nhưng tôi không rõ thông tin gì cần xác thực cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh. Số Chứng minh nhân dân hoặc Căn cước công dân của anh là 038086889092, đúng không ạ? Anh có thể vui lòng xác nhận lại giúp em ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận thông tin cá nhân đã biết để tạo tin cậy và bắt đầu quá trình xác thực hồ sơ."
+    },
+    {
+      "role": "listener",
+      "text": "Đúng rồi, số CMND của tôi là 038086889092, nhưng em có thể cho tôi biết tại sao cần xác nhận không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ yên tâm ạ. Bên em đang rà soát lại toàn bộ hồ sơ của các công nhân viên để đảm bảo thông tin cá nhân và quyền lợi bảo hiểm xã hội được cập nhật đầy đủ theo quy định mới nhất. Việc này là cần thiết để tránh sai sót và đảm bảo sau này anh không gặp khó khăn gì khi giải quyết các chế độ ạ. Vậy em xin phép xác nhận tiếp thông tin địa chỉ hiện tại của anh là số nhà X, đường Y, phường Z, quận T, tỉnh A, đúng không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích lý do cần xác nhận thông tin một cách hợp lý và chính đáng, sau đó tiếp tục xác nhận thông tin địa chỉ."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết địa chỉ cụ thể của tôi, nhưng tôi hiện sống ở TP 6, Thanh Hóa, em có thể xác thực thêm cho tôi không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh đã cung cấp thêm thông tin. Em sẽ ghi nhận lại địa chỉ mới này là TP 6, Thanh Hóa để cập nhật vào hồ sơ của anh ạ. Tiếp theo, em muốn xác nhận lại số tài khoản ngân hàng cũ của anh là 4901 **** **** 7857 có còn sử dụng không ạ, hay anh đã có tài khoản mới rồi ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Ghi nhận thông tin mới được cung cấp và chuyển sang xác nhận thông tin tài khoản ngân hàng, không hỏi OTP hay mật khẩu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ số tài khoản ngân hàng cũ của mình, nhưng tôi có tài khoản ngân hàng, em có cần thông tin gì khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không sao ạ. Vì đây chỉ là em xác nhận lại số tài khoản cũ thôi. Anh có thể không cần cung cấp tài khoản ngân hàng mới đâu ạ, nếu có thay đổi anh có thể tự cập nhật trên cổng thông tin của Công đoàn hoặc mang giấy tờ đến trụ sở ạ. Em cảm ơn anh nhiều ạ. Vậy là em đã cập nhật xong các thông tin cơ bản cho hồ sơ của anh rồi. Anh vui lòng kiểm tra email trong vòng 24 giờ tới để nhận thông báo xác nhận cập nhật hồ sơ từ bên em nhé. Em chào anh ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe về việc không cần cung cấp thông tin mới qua điện thoại, hướng dẫn kênh cập nhật thông tin chính thức khác, sau đó kết thúc cuộc gọi một cách lịch sự, thông báo về việc tiếp theo."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1893,
+      "output_tokens": 2111
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7042,
+      "output_tokens": 785
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7898,
+      "output_tokens": 302
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004486,
+    "output_usd": 0.012699,
+    "total_usd": 0.017185
+  }
+}

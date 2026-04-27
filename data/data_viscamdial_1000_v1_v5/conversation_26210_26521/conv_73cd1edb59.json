@@ -1,0 +1,242 @@
+{
+  "conversation_id": "conv_73cd1edb59",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0051",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Cao Minh Minh",
+    "fake_age": 37,
+    "real_occupation": "Nhà chuyên môn về lưu trữ và giám tuyển",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhân viên quản lý hồ sơ nhân sự & lưu trữ tài liệu",
+    "caller_org": "Trung tâm Văn hóa và Nghệ thuật Cần Thơ",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Xác nhận cập nhật thông tin hồ sơ lưu trữ định kỳ hoặc thông báo về tài liệu bổ sung cần nộp để hoàn tất hồ sơ nhạc công tại Trung tâm Văn hóa",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh từ 'Phòng Lưu trữ Trung tâm Văn hóa Cần Thơ', xác nhận danh tính bằng tên và số CMND, giải thích mục đích cuộc gọi rõ ràng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo cần cập nhật địa chỉ liên hệ, thông tin tài khoản ngân hàng (KHÔNG yêu cầu OTP), hoặc thông báo về tài liệu thiếu (giấy phép biểu diễn, hợp đồng mới). Yêu cầu nạn nhân gửi tài liệu qua email chính thức hoặc đến trực tiếp"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lịch nộp tài liệu, cung cấp email chính thức hoặc địa chỉ bộ phận, ghi chú thời hạn. Chào tạm biệt chuyên nghiệp, cung cấp số điện thoại bộ phận để nạn nhân liên hệ xác nhận nếu cần"
+        }
+      ]
+    },
+    "scenario_context": "Nhạc công thường phải nộp hồ sơ, giấy tờ pháp lý cho cơ quan quản lý văn hóa hoặc ban tổ chức sự kiện. Nhân viên lưu trữ gọi để xác nhận thông tin, cập nhật hồ sơ, hoặc thông báo về tài liệu thiếu là điều tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0051",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1999,
+      "age": 26,
+      "province": "Cần Thơ",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "26521",
+      "title": "Nhạc công",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Cao Thanh Hà",
+      "VIC_ID_DOC": "092199426501",
+      "VIC_ADDRESS": "Quận 10, Cần Thơ",
+      "VIC_EMPLOYMENT": "Nhạc công",
+      "VIC_CONTACT": "0944138433",
+      "VIC_TAX_SOCIAL_ID": "4928801518"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "5130",
+      "VIC_CREDENTIAL": "286262",
+      "VIC_SIM_INFO": "0944138433",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "172020789691",
+      "VIC_CARD_DATA": "4694 **** **** 1431",
+      "VIC_BALANCE": "419 triệu đồng",
+      "VIC_ASSET": "218 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Cao Thanh Hà",
+    "VIC_CONTACT": "0944138433",
+    "VIC_ID_DOC": "092199426501",
+    "VIC_ASSET": "218 triệu đồng",
+    "LOCATION": "Cần Thơ"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý hồ sơ nhân sự & lưu trữ tài liệu",
+    "caller_org": "Trung tâm Văn hóa và Nghệ thuật Cần Thơ",
+    "scenario_context": "Nhạc công thường phải nộp hồ sơ, giấy tờ pháp lý cho cơ quan quản lý văn hóa hoặc ban tổ chức sự kiện. Nhân viên lưu trữ gọi để xác nhận thông tin, cập nhật hồ sơ, hoặc thông báo về tài liệu thiếu là điều tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | credential_theft | money_transfer",
+      "pretext": "Gọi để xác nhận cập nhật hồ sơ lưu trữ và kiểm tra tài khoản ngân hàng liên kết cho lệnh chi trả thù lao biểu diễn hoặc hỗ trợ chính sách văn hóa.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_ASSET",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Phòng Lưu trữ Trung tâm Văn hóa Cần Thơ', gọi cho Cao Thanh Hà, xác nhận danh tính bằng cách đọc lại số CMND 092199426501 và tên đầy đủ để tạo credibility cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Hệ thống lưu trữ của chúng tôi sắp nâng cấp. Để đảm bảo không mất thông tin tài khoản của anh/chị, chúng tôi cần xác nhận lại dữ liệu ngân hàng liên kết. Nếu không cập nhật trong 24h, sẽ không thể chi trả thù lao của các buổi biểu diễn tháng này (218 triệu đồng đang chờ xử lý)'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh/chị vui lòng cung cấp số tài khoản, tên chủ tài khoản, và OTP sẽ được gửi đến điện thoại 0944138433 để xác nhận. Sau đó chúng tôi sẽ kích hoạt thanh toán ngay'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, tăng áp lực bằng cách nói 'Đây là thủ tục bắt buộc từ Sở Văn hóa Thể thao & Du lịch. Nếu không tuân thủ, anh/chị sẽ bị khóa hồ sơ và không nhận được khoản chi trả nào trong 3 tháng tới'. Nếu thành công, cảm ơn và kết thúc cuộc gọi nhanh chóng"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Xác nhận cập nhật thông tin hồ sơ lưu trữ định kỳ hoặc thông báo về tài liệu bổ sung cần nộp để hoàn tất hồ sơ nhạc công tại Trung tâm Văn hóa",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh từ 'Phòng Lưu trữ Trung tâm Văn hóa Cần Thơ', xác nhận danh tính bằng tên và số CMND, giải thích mục đích cuộc gọi rõ ràng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo cần cập nhật địa chỉ liên hệ, thông tin tài khoản ngân hàng (KHÔNG yêu cầu OTP), hoặc thông báo về tài liệu thiếu (giấy phép biểu diễn, hợp đồng mới). Yêu cầu nạn nhân gửi tài liệu qua email chính thức hoặc đến trực tiếp"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lịch nộp tài liệu, cung cấp email chính thức hoặc địa chỉ bộ phận, ghi chú thời hạn. Chào tạm biệt chuyên nghiệp, cung cấp số điện thoại bộ phận để nạn nhân liên hệ xác nhận nếu cần"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, tôi là Cao Minh Minh từ Phòng Lưu trữ Trung tâm Văn hóa Cần Thơ. Tôi gọi để xác nhận lại thông tin hồ sơ nhạc công của chị Cao Thanh Hà, số CMND 092199426501, về việc cập nhật định kỳ ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh, xác nhận danh tính và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu anh đang nói gì ạ, anh có thể cho em biết số điện thoại anh gọi từ đâu không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số điện thoại tôi đang gọi là số nội bộ của Trung tâm Văn hóa Cần Thơ. Chị có thể cho tôi xin một chút thời gian để tôi giải thích rõ hơn về yêu cầu cập nhật thông tin này không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Làm dịu sự nghi ngờ, xác nhận lại thông tin nguồn gốc và đề nghị tiếp tục giải thích."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, anh cho em thêm thông tin cụ thể về yêu cầu cập nhật thông tin được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Hà thân mến, Trung tâm đang tiến hành rà soát và cập nhật lại thông tin hồ sơ của các nhạc công định kỳ. Cụ thể, bên tôi cần chị cung cấp lại địa chỉ liên hệ và thông tin tài khoản ngân hàng mới nhất để đảm bảo việc chi trả thù lao và các thông báo khác được thuận tiện, chính xác hơn. Chị yên tâm là chúng tôi không yêu cầu bất kỳ mã OTP hay mật khẩu nào đâu ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Thông báo cụ thể nội dung cần cập nhật, nhấn mạnh không yêu cầu OTP để trấn an."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng anh có thể cho em biết thêm thông tin về quy trình này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Hà. Để quy trình được thực hiện đúng quy định, chị vui lòng gửi các thông tin cập nhật này (địa chỉ liên hệ, số tài khoản ngân hàng) về địa chỉ email chính thức của Phòng Lưu trữ là luutru.ttvhct@gmail.com, hoặc chị có thể đến trực tiếp tại văn phòng của Trung tâm để bổ sung hồ sơ ạ. Thời hạn là trước ngày 15 tháng sau.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn phương thức nộp tài liệu, cung cấp email chính thức và thời hạn. Không tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã giải thích rõ, nhưng em vẫn muốn xác minh thông tin trước khi cung cấp ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hoàn toàn hiểu sự cẩn trọng của chị. Nếu chị muốn xác minh lại thông tin này, chị có thể gọi trực tiếp về số tổng đài của Trung tâm Văn hóa Cần Thơ, số 0292.3821.572, và yêu cầu gặp Phòng Lưu trữ để được xác nhận. Chị có cần tôi đọc lại số điện thoại không ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe bằng cách cung cấp thông tin liên hệ chính thức để họ có thể tự xác minh."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, anh đọc lại số điện thoại cho em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị ghi lại giúp tôi: 0292.3821.572. Chị cứ gọi vào số đó và yêu cầu gặp Phòng Lưu trữ để được hỗ trợ kiểm tra thông tin nhé. Mong nhận được phản hồi sớm từ chị.",
+      "current_phase": "L3",
+      "tactic_hint": "Nhấn mạnh lại thông tin liên hệ xác thực và thể hiện sự chuyên nghiệp khi kết thúc cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại thông tin và sẽ gọi lại sau ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 2.4
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ kiểm tra kỹ lưỡng nhé. Có gì chị cứ liên hệ lại theo số tổng đài tôi đã cung cấp. Chào chị.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận sự lựa chọn của người nghe, nhắc lại thông tin liên hệ và kết thúc cuộc gọi một cách chuyên nghiệp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1822,
+      "output_tokens": 1545
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10003,
+      "output_tokens": 899
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12623,
+      "output_tokens": 397
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005716,
+    "output_usd": 0.010211,
+    "total_usd": 0.015927
+  }
+}

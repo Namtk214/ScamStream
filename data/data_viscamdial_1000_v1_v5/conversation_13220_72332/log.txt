@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_7a2b15ac71]
+  Caller thật: Chánh án, Phó Chánh án Tòa án nhân dân cấp huyện (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Nhân viên phòng Thi hành án dân sự, Tòa án nhân dân cấp huyện @ Tòa án nhân dân huyện Khánh Hòa
+  Listener: Thợ sửa chữa máy móc (chung) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Tòa án cần liên hệ với chủ thể để thực hiện công việc thi hành án (thu giữ tài sản, kiểm kê), hoặc xác minh địa chỉ/tài khoản liên quan đến vụ án dân sự. Thợ sửa chữa có thể là bị đơn, người liên quan hoặc nhân chứng trong vụ tranh chấp.
+  Pretext: Gọi giả danh nhân viên Tòa án thực hiện công việc thi hành án liên quan đến tài khoản ngân hàng 8428947425037 của Bùi Thu Thúy tại địa chỉ TP 1, Khánh Hòa. Yêu cầu xác nhận hoặc chuyển tiền để 'giải tỏa khoản nợ', 'lệnh phong tỏa tài khoản', hoặc 'bảo vệ tài sản trước khi bị tịch thu'.
+  Listener traits: ['nhẹ dạ cả tin', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Alo, em chào chị Thúy ạ. Em là Lý Xuân Cường đây, cán bộ từ Phòng Thi hành án dân sự, Tòa án nhân dân huyện Khánh Hòa. Em gọi chị liên quan đến tài khoản ngân hàng số 8428947425037 của chị tại địa chỉ TP 1, Khánh Hòa ạ.
+      → phase: S1 | tactic: Xưng danh, giới thiệu rõ ràng và nêu thông tin nạn nhân để tạo trust và credibility.
+T02 [LISTENER] Em chào anh Cường, nhưng tôi không rõ về việc này lắm, anh có thể nói rõ hơn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, em xin phép nói rõ hơn ạ. Hiện tại tài khoản ngân hàng 8428947425037 của chị Thúy vừa bị phong tỏa theo lệnh khẩn cấp từ Tòa án vì có liên quan đến một khoản nợ cần xử lý ngay trong vài giờ tới. Nếu không xử lý kịp thời, tài sản của chị có thể sẽ bị tịch thu.
+      → phase: S2 | tactic: Tạo tình huống khẩn cấp, gây sợ hãi và nhấn mạnh hậu quả pháp lý để khai thác tâm lý nạn nhân.
+T04 [LISTENER] Tôi không biết việc này có đúng không, nhưng anh có thể cho tôi biết thêm chi tiết về khoản nợ mà anh nhắc đến không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Em hiểu sự lo lắng của chị. Đây là quyết định của Tòa án, liên quan đến một vụ án dân sự mà tài khoản của chị có liên đới. Em không thể cung cấp chi tiết toàn bộ vụ án qua điện thoại vì lý do bảo mật, nhưng em cần chị xác nhận là chị đã nhận được thông báo về việc phong tỏa này chưa ạ?
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ, nhấn mạnh tính chính thức và hạn chế thông tin để tạo sự bí ẩn, đồng thời đẩy trách nhiệm xác nhận về phía nạn nhân.
+T06 [LISTENER] Tôi vẫn chưa nhận được thông báo nào cả, nhưng tôi rất lo lắng về việc này, em có thể giúp tôi biết rõ hơn về cách xử lý không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T07 [CALLER] Vâng, nếu chị chưa nhận được thông báo thì bây giờ em sẽ hướng dẫn chị cách giải quyết ngay để tránh tài sản bị tịch thu. Chị cần chuyển khoản số tiền nợ vào một tài khoản tạm thời của Tòa án để bảo toàn tài sản của chị. Số tiền này sẽ được hoàn lại sau khi vụ việc được làm rõ.
+      → phase: S3 | tactic: Hướng dẫn nạn nhân chuyển tiền vào tài khoản tạm thời để 'bảo vệ tài sản', đạt mục tiêu cuối cùng là lấy tiền của nạn nhân.
+T08 [LISTENER] Em có thể cho tôi biết chính xác số tiền cần chuyển và tài khoản của Tòa án là số nào không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T09 [CALLER] Vâng, chị yên tâm, số tiền cần chuyển là 25 triệu đồng ạ. Đây là khoản nợ phát sinh theo quyết định của Tòa án. Chị vui lòng chuyển vào tài khoản tạm giữ của Tòa án, số tài khoản là 924732009384742 tại ngân hàng Vietinbank, chủ tài khoản là 'Phòng Thi hành án dân sự'. Chị có thể thực hiện chuyển khoản ngay bây giờ được không ạ?
+      → phase: S3 | tactic: Cung cấp thông tin chi tiết về số tiền và tài khoản nhận tiền lừa đảo, thúc giục nạn nhân hành động ngay lập tức.
+T10 [LISTENER] Em ơi, nhưng tôi chưa rõ lý do tại sao lại phải chuyển khoản vào tài khoản của Tòa án và tôi không nhớ đã ký bất kỳ giấy tờ nào liên quan đến khoản nợ này cả.
+      → action: CONTINUE | suspicion: 1.10 | disclosed: []
+
+T11 [CALLER] Chị Thúy này, em hiểu chị có nhiều thắc mắc, nhưng đây là lệnh của Tòa án và thời hạn để thực hiện chỉ có trong hôm nay thôi. Nếu chị không chuyển tiền để bảo toàn, chúng tôi buộc phải thực hiện lệnh tịch thu tài sản. Chị cứ chuyển trước đi, mọi thắc mắc sẽ được giải đáp và xử lý sau khi chị đã bảo toàn được tài sản của mình. Em sẽ hướng dẫn chị làm đơn khiếu nại sau.
+      → phase: S4 | tactic: Tạo áp lực thời gian, nhấn mạnh hậu quả pháp lý nghiêm trọng để đẩy nạn nhân vào thế phải hành động nhanh chóng mà không suy nghĩ kỹ. Đồng thời hứa hẹn giải quyết sau để xoa dịu.
+T12 [LISTENER] Em ơi, nhưng tôi vẫn thấy chưa yên tâm lắm và không rõ lắm về quá trình này, em có thể cho tôi biết ai là người đã ký quyết định này không ạ?
+      → action: CONTINUE | suspicion: 2.20 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  12 turns | suspicion=2.20
+TOKEN: in=25521 | out=3202
+COST : $0.017527
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_13220_72332\conv_7a2b15ac71.json  [SCAM_EXPOSE]

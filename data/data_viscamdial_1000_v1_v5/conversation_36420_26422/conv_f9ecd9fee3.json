@@ -1,0 +1,310 @@
+{
+  "conversation_id": "conv_f9ecd9fee3",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0053",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Tô Tiến Vinh",
+    "fake_age": 29,
+    "real_occupation": "Giáo viên đào tạo khác",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Chuyên viên phát triển nội dung đào tạo / Biên tập nội dung khóa học",
+    "caller_org": "Công ty Cổ phần Giáo dục Kỹ năng Việt / Cá nhân - Freelancer thiết kế khóa học online",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Liên hệ tuyển dụng hoặc hợp tác: Giáo viên đào tạo / Chuyên viên phát triển khóa học cần tìm biên tập viên tự do hoặc toàn thời gian để chỉnh sửa nội dung, kiểm duyệt chất lượng văn bản, hoặc chuẩn bị tài liệu huấn luyện.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào Lưu Thế Tuấn, tôi là Trần Minh từ Công ty Giáo dục Kỹ năng Việt. Tôi tìm được hồ sơ của bạn trên nền tảng Topdev/LinkedIn. Tôi đang tìm một biên tập viên chuyên nghiệp cho dự án khóa học. Bạn có quan tâm tìm hiểu thêm không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giải thích chi tiết về dự án (nội dung, thời hạn, phạm vi công việc), mức lương/công việc, hình thức làm việc, quy trình thanh toán minh bạch (hợp đồng → làm việc → thanh toán), yêu cầu kỹ năng cụ thể."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Nếu biên tập viên đồng ý, sẽ gửi hợp đồng chính thức qua email, xác nhận ngân hàng, thời gian bắt đầu. Hoặc nếu không phù hợp, cảm ơn và chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    },
+    "scenario_context": "Giáo viên đào tạo tìm kiếm biên tập viên chuyên nghiệp để chỉnh sửa, kiểm duyệt nội dung khóa học hoặc tài liệu huấn luyện. Biên tập viên là đối tác tự nhiên trong quy trình sản xuất nội dung giáo dục."
+  },
+  "listener_card": {
+    "listener_id": "lis_0053",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1999,
+      "age": 26,
+      "province": "Bình Thuận",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "26422",
+      "title": "Biên tập viên",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lưu Thế Tuấn",
+      "VIC_ID_DOC": "060099376657",
+      "VIC_ADDRESS": "Huyện 8, Bình Thuận",
+      "VIC_EMPLOYMENT": "Biên tập viên",
+      "VIC_CONTACT": "0837497904",
+      "VIC_TAX_SOCIAL_ID": "3993165953"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "171413",
+      "VIC_CREDENTIAL": "5769",
+      "VIC_SIM_INFO": "0837497904",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "720876798335",
+      "VIC_CARD_DATA": "4476 **** **** 4760",
+      "VIC_BALANCE": "86 triệu đồng",
+      "VIC_ASSET": "365 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lưu Thế Tuấn",
+    "VIC_CONTACT": "0837497904",
+    "VIC_ASSET": "365 triệu đồng",
+    "VIC_EMPLOYMENT": "Biên tập viên",
+    "VIC_CARD_DATA": "4476 **** **** 4760"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chuyên viên phát triển nội dung đào tạo / Biên tập nội dung khóa học",
+    "caller_org": "Công ty Cổ phần Giáo dục Kỹ năng Việt / Cá nhân - Freelancer thiết kế khóa học online",
+    "scenario_context": "Giáo viên đào tạo tìm kiếm biên tập viên chuyên nghiệp để chỉnh sửa, kiểm duyệt nội dung khóa học hoặc tài liệu huấn luyện. Biên tập viên là đối tác tự nhiên trong quy trình sản xuất nội dung giáo dục.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa là chuyên viên phát triển khóa học online, cần thuê dịch vụ biên tập nội dung gấp. Dùng tên đầy đủ của nạn nhân để tạo ấn tượng đã xác nhận được thông tin, sau đó yêu cầu thanh toán trước hoặc chuyển tiền bảo đảm hợp đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào Lưu Thế Tuấn, tôi là Trần Minh từ Công ty Giáo dục Kỹ năng Việt. Tôi có được số điện thoại của bạn từ danh sách biên tập viên chuyên nghiệp. Hiện tôi đang có một dự án khóa học trực tuyến cần biên tập gấp.' — Sử dụng VIC_FULLNAME để tạo ấn tượng xác nhận được danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cấp bách — 'Khóa học phải ra mắt tuần sau, đây là dự án lớn của công ty, bạn có kinh nghiệm biên tập nên tôi rất tin tưởng. Nếu bạn nhận, mình sẽ trả công rất hậu hĩnh.' Gợi ý thu nhập cao, dự án uy tín, tạo ham lợi."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để bắt đầu, bạn cần chuyển tiền bảo đảm hợp đồng 5 triệu để tôi lập giấy tờ chính thức và gửi tài liệu. Sau khi hoàn thành, tôi sẽ hoàn lại + công việc.' Hoặc: 'Chuyển vào tài khoản công ty này để thanh toán platform lưu trữ dự án, tôi sẽ hoàn lại ngay.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, tăng áp lực — 'Bạn có vấn đề gì không? Đây là quy trình chuẩn của công ty, những biên tập viên khác đã làm rồi.' Nếu chuyển tiền thành công, sau đó tắt máy hoặc nói 'hợp đồng bị hủy do thay đổi dự án.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Liên hệ tuyển dụng hoặc hợp tác: Giáo viên đào tạo / Chuyên viên phát triển khóa học cần tìm biên tập viên tự do hoặc toàn thời gian để chỉnh sửa nội dung, kiểm duyệt chất lượng văn bản, hoặc chuẩn bị tài liệu huấn luyện.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào Lưu Thế Tuấn, tôi là Trần Minh từ Công ty Giáo dục Kỹ năng Việt. Tôi tìm được hồ sơ của bạn trên nền tảng Topdev/LinkedIn. Tôi đang tìm một biên tập viên chuyên nghiệp cho dự án khóa học. Bạn có quan tâm tìm hiểu thêm không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giải thích chi tiết về dự án (nội dung, thời hạn, phạm vi công việc), mức lương/công việc, hình thức làm việc, quy trình thanh toán minh bạch (hợp đồng → làm việc → thanh toán), yêu cầu kỹ năng cụ thể."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Nếu biên tập viên đồng ý, sẽ gửi hợp đồng chính thức qua email, xác nhận ngân hàng, thời gian bắt đầu. Hoặc nếu không phù hợp, cảm ơn và chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Lưu Thế Tuấn, tôi là Tô Tiến Vinh, hiện đang là Chuyên viên phát triển nội dung đào tạo tại Công ty Cổ phần Giáo dục Kỹ năng Việt. Tôi tìm được hồ sơ của anh trên nền tảng Topdev và có ấn tượng với kinh nghiệm Biên tập viên của anh. Chúng tôi đang tìm kiếm một biên tập viên chuyên nghiệp để hợp tác cho dự án khóa học mới. Anh có quan tâm tìm hiểu thêm về cơ hội này không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và giới thiệu cơ hội hợp tác biên tập viên"
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn anh đã gọi, nhưng em muốn hỏi rõ hơn về công ty và dự án này có phải thật sự uy tín không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự quan tâm của anh. Công ty Cổ phần Giáo dục Kỹ năng Việt là đơn vị đã có kinh nghiệm lâu năm trong việc phát triển các chương trình đào tạo kỹ năng mềm và chuyên môn. Anh có thể tìm hiểu thêm thông tin về chúng tôi trên website chính thức hoặc các kênh truyền thông uy tín khác. Dự án hiện tại của chúng tôi là phát triển một chuỗi khóa học online về kỹ năng quản lý thời gian và năng suất làm việc, chúng tôi cần một biên tập viên để rà soát, chỉnh sửa và chuẩn bị nội dung khóa học. Anh có muốn tôi đi sâu hơn vào chi tiết công việc không?",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu thông tin công ty và dự án, đề nghị cung cấp chi tiết công việc để trấn an người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn còn chút lo lắng về tính minh bạch của dự án và cách mà công ty vận hành, anh có thể cho em biết thêm về quy trình làm việc và các thành viên trong nhóm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn cứ yên tâm về quy trình làm việc. Chúng tôi luôn tuân thủ quy trình minh bạch, bắt đầu bằng việc ký kết hợp đồng rõ ràng, sau đó là quá trình làm việc và thanh toán theo đúng thỏa thuận. Hiện tại, đội ngũ phát triển nội dung của chúng tôi có khoảng 15 người, bao gồm các chuyên gia giáo dục, nhà thiết kế khóa học và chuyên viên biên tập. Trưởng dự án này là chị Nguyễn Thị Hoài An, Thạc sĩ Giáo dục với hơn 10 năm kinh nghiệm trong ngành. Anh có thể trao đổi trực tiếp với chị Hoài An nếu cần thêm thông tin. Anh có câu hỏi nào cụ thể hơn về quy trình hay đội ngũ không?",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe bằng cách mô tả chi tiết quy trình làm việc minh bạch và giới thiệu về đội ngũ dự án, bao gồm cả trưởng dự án để tăng tính xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe nói công ty mình đã hoạt động lâu năm, nhưng có tài liệu hay đánh giá nào từ các biên tập viên trước đây không ạ? Em muốn chắc chắn rằng đây là một cơ hội thực sự tốt.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn có thể tham khảo các đánh giá của đối tác và nhân sự đã từng cộng tác với chúng tôi trên website công ty hoặc các trang mạng xã hội chuyên về tuyển dụng. Chúng tôi cũng có nhiều bài viết chia sẻ về các dự án đã thực hiện và thành công của những khóa học trước đây. Ngoài ra chúng tôi luôn khuyến khích đối tác tìm hiểu kỹ thông tin trước khi hợp tác. Anh có muốn tôi gửi đường dẫn trực tiếp đến các tài liệu tham khảo đó qua tin nhắn không?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp bằng chứng xã hội và tài liệu tham khảo để tăng cường uy tín, đồng thời thể hiện sự minh bạch và chủ động hỗ trợ người nghe tìm hiểu thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất muốn xem những tài liệu đó, nhưng anh có thể cho em biết rõ hơn về cách công ty sẽ liên lạc và làm việc với em sau khi ký hợp đồng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, tôi sẽ gửi các đường dẫn đó cho anh ngay. Về cách thức làm việc, sau khi ký hợp đồng chính thức, chúng ta sẽ có một buổi họp online đầu tiên để phổ biến chi tiết dự án, giới thiệu công cụ làm việc và sắp xếp lịch trình. Toàn bộ công việc sẽ được quản lý thông qua một nền tảng trực tuyến chuyên biệt mà chúng tôi cung cấp để đảm bảo sự tiện lợi và minh bạch. Anh và tôi sẽ thường xuyên trao đổi qua nền tảng này, email, hoặc họp online định kỳ để đảm bảo tiến độ và chất lượng. Công việc của anh sẽ được đánh giá dựa trên các tiêu chí rõ ràng đã thống nhất trong hợp đồng và mọi thắc mắc sẽ được giải đáp kịp thời. Anh có thêm câu hỏi nào về quy trình phối hợp công việc không?",
+      "current_phase": "L2",
+      "tactic_hint": "Miêu tả chi tiết quy trình làm việc sau hợp đồng, cách thức liên lạc và quản lý công việc để trấn an người nghe về sự minh bạch và chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm thấy vẫn còn lo lắng về độ tin cậy của việc thanh toán và xác minh công việc sau khi ký hợp đồng, anh có thể nói thêm về điều này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn hoàn toàn có thể yên tâm về vấn đề thanh toán và xác minh công việc. Trong hợp đồng sẽ có điều khoản rõ ràng về các mốc thanh toán dựa trên tiến độ công việc đã hoàn thành và được nghiệm thu. Chúng tôi cũng sẽ có đội ngũ quản lý dự án hỗ trợ anh trong suốt quá trình làm việc, đảm bảo mọi công việc đều được ghi nhận và đánh giá minh bạch. Sau mỗi giai đoạn, anh sẽ được cung cấp báo cáo đánh giá và xác nhận hoàn thành công việc trước khi tiến hành thanh toán. Anh có cần tôi giải thích cụ thể hơn về các mốc thanh toán hoặc quy trình nghiệm thu không?",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe về quy trình thanh toán và xác minh công việc bằng cách nhấn mạnh tính minh bạch của hợp đồng và sự hỗ trợ từ đội ngũ dự án, đồng thời đề xuất cung cấp thêm chi tiết."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, anh đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn xác nhận rõ hơn, anh đang gọi từ số máy nào để em có thể kiểm tra lại thông tin ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi đang gọi cho anh từ số điện thoại 02871095900, đây là số tổng đài của Công ty Cổ phần Giáo dục Kỹ năng Việt. Anh hoàn toàn có thể kiểm tra lại thông tin này trên website chính thức của chúng tôi. Anh có muốn tôi gửi đường dẫn website qua tin nhắn để anh tiện kiểm tra không?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp số điện thoại chính thức và hướng dẫn người nghe xác minh thông tin để xây dựng lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy nghi ngờ về thông tin này, anh có thể cho em biết thêm số liệu hoặc cách thức liên lạc khác của công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự lo lắng của anh. Ngoài website và số tổng đài tôi vừa cung cấp, anh có thể tìm kiếm thông tin về Công ty Cổ phần Giáo dục Kỹ năng Việt trên các kênh truyền thông chính thức của chúng tôi như LinkedIn, Facebook, hoặc các báo cáo về giáo dục thường niên. Chúng tôi cũng thường xuyên tham gia các sự kiện, hội thảo giáo dục lớn. Nếu anh vẫn còn băn khoăn, anh có thể gọi trực tiếp đến tổng đài của công ty Cổ phần Giáo dục Kỹ năng Việt để xác minh thông tin. Hoặc anh có muốn tôi gửi anh địa chỉ văn phòng để anh có thể trực tiếp đến tìm hiểu không?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thêm nhiều kênh để người nghe xác minh thông tin công ty, thể hiện sự minh bạch và sẵn sàng hỗ trợ, đồng thời đưa ra lựa chọn gặp trực tiếp để tăng tính xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghĩ em cần thêm thông tin cụ thể hơn về địa chỉ văn phòng và các kênh liên lạc khác của công ty trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ văn phòng chính của chúng tôi là Tầng 8, Tòa nhà Detech Tower 2, số 107 Nguyễn Phong Sắc, P. Dịch Vọng Hậu, Q. Cầu Giấy, Hà Nội. Anh có thể đến trực tiếp trong giờ hành chính để tìm hiểu rõ hơn về công ty và dự án. Ngoài ra, tôi có thể gửi cho anh flyer điện tử về công ty hoặc bản giới thiệu năng lực của chúng tôi qua email để anh tham khảo thêm. Anh muốn tôi gửi đến địa chỉ email nào của anh ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp địa chỉ văn phòng cụ thể và đề nghị gửi tài liệu công ty qua email để tăng tính xác thực và tiếp tục trao đổi thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn xác nhận lại địa chỉ email của anh để nhận tài liệu, và em rất quan tâm đến việc tìm hiểu thêm về công ty ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ email của tôi là vinh.to@kynangviet.vn. Anh có thể gửi yêu cầu hoặc câu hỏi về đó. Anh vui lòng cung cấp địa chỉ email của anh để tôi có thể gửi các tài liệu giới thiệu công ty và chi tiết dự án cho anh tham khảo. Sau khi anh xem qua tài liệu, chúng ta có thể sắp xếp một buổi trao đổi cụ thể hơn để giải đáp mọi thắc mắc của anh một cách trực tiếp.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp địa chỉ email của bản thân và yêu cầu địa chỉ email của người nghe để gửi tài liệu, đồng thời đề xuất buổi trao đổi chi tiết sau khi người nghe đã tìm hiểu thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa thấy rõ được thông tin về anh và công ty, anh có thể cung cấp thêm về những dự án cụ thể mà công ty đã thực hiện không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Công ty chúng tôi đã triển khai thành công nhiều dự án đào tạo cho các tập đoàn lớn như FPT, Viettel, và Ngân hàng Vietcombank, tập trung vào các khóa học về lãnh đạo, kỹ năng mềm và chuyển đổi số. Anh có thể tìm thấy các case study chi tiết trên website. Đối với kênh cá nhân của tôi, anh có thể tìm kiếm profile của tôi trên LinkedIn với tên Tô Tiến Vinh, chức danh Chuyên viên phát triển nội dung đào tạo tại Công ty Cổ phần Giáo dục Kỹ năng Việt để xem các dự án tôi đã tham gia. Anh vẫn muốn tôi gửi các tài liệu liên quan đến dự án này và thông tin công ty qua email chứ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp các ví dụ dự án cụ thể của công ty và thông tin cá nhân trên LinkedIn để tăng độ tin cậy, sau đó xác nhận lại việc gửi tài liệu qua email."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa đủ thông tin để quyết định, nên em cần thêm thời gian để xem xét trước khi tiếp tục ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Anh cứ dành thời gian để tìm hiểu và xem xét kỹ lưỡng. Tôi sẽ gửi cho anh các tài liệu mà tôi đã đề cập, bao gồm thông tin công ty, chi tiết dự án, và các đường dẫn để anh có thể tự mình xác minh. Nếu anh có bất kỳ câu hỏi nào trong quá trình tìm hiểu, đừng ngần ngại liên hệ lại với tôi qua email hoặc số điện thoại này nhé. Tôi luôn sẵn lòng hỗ trợ. Chúc anh một ngày làm việc hiệu quả.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng quyết định của người nghe, đề nghị gửi tài liệu để họ tự tìm hiểu, và để ngỏ khả năng liên hệ lại để thể hiện sự chuyên nghiệp và không gây áp lực."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1811,
+      "output_tokens": 1667
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 28338,
+      "output_tokens": 2363
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 33768,
+      "output_tokens": 876
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.012544,
+    "output_usd": 0.014768,
+    "total_usd": 0.027312
+  }
+}

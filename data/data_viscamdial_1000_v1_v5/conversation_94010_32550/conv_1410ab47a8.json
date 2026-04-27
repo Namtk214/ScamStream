@@ -1,0 +1,216 @@
+{
+  "conversation_id": "conv_1410ab47a8",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "LEGIT_COMPLETED",
+  "caller_card": {
+    "caller_id": "cal_0018",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lý Thùy Ngọc Liên",
+    "fake_age": 30,
+    "real_occupation": "Người chuẩn bị đồ ăn nhanh",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Dinh dưỡng & Sức khỏe Nhân viên",
+    "caller_org": "Công ty Quản lý Sức khỏe Doanh nghiệp VN (VHMS)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty chuỗi cơm nhanh ABC thực sự liên hệ để mời kỹ thuật viên vật lý trị liệu tham gia chương trình sức khỏe doanh nghiệp hoặc xác minh thông tin bảo hiểm",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào chị Trần Thanh Trang, đây là bộ phận Nhân sự của chuỗi cơm nhanh ABC. Chúng tôi muốn xác minh thông tin liên lạc của chị để cập nhật vào hệ thống bảo hiểm y tế doanh nghiệp. Chị có thể xác nhận là số điện thoại này của chị không?'",
+          "verification": "Yêu cầu xác nhận số điện thoại, không yêu cầu thông tin nhạy cảm"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi đang triển khai gói bảo hiểm sức khỏe cho toàn bộ nhân viên y tế. Chị sẽ được hưởng khám phòng khám định kỳ miễn phí. Chúng tôi cần cập nhật một số thông tin cơ bản như tên, địa chỉ, số CMND để hoàn tất hồ sơ'",
+          "action": "Chỉ yêu cầu thông tin cơ bản, không yêu cầu OTP, mật khẩu, hoặc số tài khoản"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Cảm ơn chị. Chúng tôi sẽ gửi thư xác nhận chính thức qua địa chỉ nhà của chị trong vòng 3-5 ngày. Nếu chị có câu hỏi, vui lòng gọi hotline 1800-XXXX hoặc email chính thức của công ty. Chúc chị sức khỏe!'",
+          "closure": "Kết thúc cuộc gọi một cách bình thường, cung cấp thông tin liên hệ chính thức để nạn nhân có thể xác minh"
+        }
+      ]
+    },
+    "scenario_context": "Các chuỗi cơm nhanh/nhà hàng thường hợp tác với các công ty cung cấp dịch vụ y tế/dinh dưỡng cho nhân viên. Kỹ thuật viên vật lý trị liệu được liên hệ để tham gia chương trình sức khỏe doanh nghiệp hoặc xác minh thông tin bảo hiểm y tế."
+  },
+  "listener_card": {
+    "listener_id": "lis_0018",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "Hải Phòng",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "32550",
+      "title": "Kỹ thuật viên vật lý trị liệu và phụ tá",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Thanh Trang",
+      "VIC_ID_DOC": "031300831902",
+      "VIC_ADDRESS": "Huyện 11, Hải Phòng",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên vật lý trị liệu và phụ tá",
+      "VIC_CONTACT": "0895423533",
+      "VIC_TAX_SOCIAL_ID": "5889051085"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "214430",
+      "VIC_CREDENTIAL": "3107",
+      "VIC_SIM_INFO": "0895423533",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "19745901241",
+      "VIC_CARD_DATA": "4823 **** **** 9088",
+      "VIC_BALANCE": "640 triệu đồng",
+      "VIC_ASSET": "577 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Thanh Trang",
+    "VIC_CONTACT": "0895423533",
+    "VIC_EMPLOYMENT": "Kỹ thuật viên vật lý trị liệu và phụ tá",
+    "VIC_ADDRESS": "Huyện 11, Hải Phòng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Dinh dưỡng & Sức khỏe Nhân viên",
+    "caller_org": "Công ty Quản lý Sức khỏe Doanh nghiệp VN (VHMS)",
+    "scenario_context": "Các chuỗi cơm nhanh/nhà hàng thường hợp tác với các công ty cung cấp dịch vụ y tế/dinh dưỡng cho nhân viên. Kỹ thuật viên vật lý trị liệu được liên hệ để tham gia chương trình sức khỏe doanh nghiệp hoặc xác minh thông tin bảo hiểm y tế.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi để xác minh hồ sơ tham gia chương trình 'Sức khỏe toàn diện cho y tá' của công ty chuỗi cơm nhanh ABC, yêu cầu cập nhật thông tin tài khoản ngân hàng để nhận hỗ trợ y tế 500k VNĐ",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào chị Trần Thanh Trang, đây là công ty VHMS. Chúng tôi nhận được danh sách từ chuỗi cơm nhanh ABC ở Huyện 11 về các kỹ thuật viên vật lý trị liệu cần tham gia chương trình sức khỏe. Chị có thể nghe được không?'",
+          "tactic": "Dùng đầy đủ tên + địa chỉ + chuyên ngành để tạo ảo tưởng thông tin chính xác"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Chương trình hỗ trợ y tế 500k VNĐ cho nhân viên y tế sắp hết hạn. Chị cần cập nhật thông tin ngân hàng ngay hôm nay để không mất quyền lợi. Đây là lần cuối cơ hội này'",
+          "tactic": "Tạo áp lực thời gian + mục tiêu tiền tệ"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng cung cấp: số tài khoản ngân hàng, tên chủ tài khoản, và OTP từ app ngân hàng để xác minh. Hoặc chị có thể cài app 'VHMS Care' (link giả) để tự cập nhật'",
+          "tactic": "Chiếu xuất OTP hoặc credential qua ứng dụng giả mạo"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Không sao, chúng tôi sẽ gửi link xác minh qua SMS. Chị kiểm tra tin nhắn và click vào link' hoặc cắt máy nếu bị phát hiện"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty chuỗi cơm nhanh ABC thực sự liên hệ để mời kỹ thuật viên vật lý trị liệu tham gia chương trình sức khỏe doanh nghiệp hoặc xác minh thông tin bảo hiểm",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào chị Trần Thanh Trang, đây là bộ phận Nhân sự của chuỗi cơm nhanh ABC. Chúng tôi muốn xác minh thông tin liên lạc của chị để cập nhật vào hệ thống bảo hiểm y tế doanh nghiệp. Chị có thể xác nhận là số điện thoại này của chị không?'",
+          "verification": "Yêu cầu xác nhận số điện thoại, không yêu cầu thông tin nhạy cảm"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi đang triển khai gói bảo hiểm sức khỏe cho toàn bộ nhân viên y tế. Chị sẽ được hưởng khám phòng khám định kỳ miễn phí. Chúng tôi cần cập nhật một số thông tin cơ bản như tên, địa chỉ, số CMND để hoàn tất hồ sơ'",
+          "action": "Chỉ yêu cầu thông tin cơ bản, không yêu cầu OTP, mật khẩu, hoặc số tài khoản"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Cảm ơn chị. Chúng tôi sẽ gửi thư xác nhận chính thức qua địa chỉ nhà của chị trong vòng 3-5 ngày. Nếu chị có câu hỏi, vui lòng gọi hotline 1800-XXXX hoặc email chính thức của công ty. Chúc chị sức khỏe!'",
+          "closure": "Kết thúc cuộc gọi một cách bình thường, cung cấp thông tin liên hệ chính thức để nạn nhân có thể xác minh"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_CONTACT": "0895423533",
+    "VIC_FULLNAME": "Trần Thanh Trang",
+    "VIC_ADDRESS": "Huyện 11, Hải Phòng",
+    "VIC_ID_DOC": "031300831902"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Trần Thanh Trang, tôi là Lý Thùy Ngọc Liên từ Công ty Quản lý Sức khỏe Doanh nghiệp VN (VHMS), bên tôi hợp tác với chuỗi cơm nhanh ABC. Chúng tôi muốn xác minh thông tin liên lạc của chị để cập nhật vào hệ thống bảo hiểm y tế doanh nghiệp. Chị có thể xác nhận là số điện thoại 0895423533 này của chị không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chính thức và xác minh thông tin liên hệ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em xác nhận số điện thoại đó là của em ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_CONTACT": "0895423533"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Cảm ơn chị đã xác nhận. Hiện tại, chúng tôi đang triển khai gói bảo hiểm sức khỏe đặc biệt cho toàn bộ nhân viên y tế đang hợp tác với chuỗi ABC, trong đó có cả các kỹ thuật viên vật lý trị liệu như chị. Chị sẽ được hưởng các quyền lợi như khám sức khỏe định kỳ miễn phí và tư vấn dinh dưỡng chuyên sâu. Để hoàn tất hồ sơ và đảm bảo chị nhận được đầy đủ quyền lợi, chúng tôi cần cập nhật một số thông tin cơ bản như tên đầy đủ, địa chỉ nhà hiện tại và số căn cước công dân của chị vào hệ thống. Chị có tiện cung cấp thông tin này bây giờ không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu lợi ích của chương trình và yêu cầu cung cấp thông tin cá nhân cơ bản để hoàn tất hồ sơ. Tập trung vào quyền lợi để khuyến khích sự hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thể cung cấp thông tin đó cho chị, tên đầy đủ của em là Trần Thanh Trang, địa chỉ em đang sống ở Huyện 11, Hải Phòng ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_FULLNAME": "Trần Thanh Trang",
+        "VIC_ADDRESS": "Huyện 11, Hải Phòng"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, cảm ơn chị Trang. Chị có thể cho tôi xin thêm số căn cước công dân của chị không ạ? Đây là thông tin bắt buộc để kích hoạt gói bảo hiểm sức khỏe cho chị trên hệ thống của chúng tôi.",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục thu thập thông tin cơ bản còn thiếu (số CMND) để hoàn tất hồ sơ bảo hiểm, nhấn mạnh tính bắt buộc của thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị cần số căn cước công dân của em là 031300831902 ạ.",
+      "listener_action": "FULL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_ID_DOC": "031300831902"
+      },
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1414,
+      "output_tokens": 1774
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3497,
+      "output_tokens": 484
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5792,
+      "output_tokens": 265
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002982,
+    "output_usd": 0.010239,
+    "total_usd": 0.013221
+  }
+}

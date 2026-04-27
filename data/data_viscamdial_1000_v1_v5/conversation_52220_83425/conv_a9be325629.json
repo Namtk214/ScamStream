@@ -1,0 +1,281 @@
+{
+  "conversation_id": "conv_a9be325629",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0060",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hoàng Như Giang",
+    "fake_age": 38,
+    "real_occupation": "Nhân viên giám sát cửa hàng",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Quản lý An toàn Lao động - Công ty Xây dựng Đường bộ",
+    "caller_org": "Công ty TNHH Xây dựng Hạ tầng Giao thông Miền Tây",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi về tai nạn lao động giả mạo tại công trường, yêu cầu xác minh danh tính và chuyển tiền bảo hiểm khẩn cấp",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: 'Xin chào anh Trần Tiến Quân, tôi là Trần Văn Hùng từ Công ty Xây dựng Hạ tầng Miền Tây. Chúng tôi vừa ghi nhận thông tin anh làm việc tại khu vực TP 1, Vĩnh Long. Anh có 5 phút để nghe về một vấn đề khẩn cấp không?'",
+          "tactic": "Sử dụng VIC_FULLNAME + VIC_ADDRESS để tạo ấn tượng đã xác minh danh tính, gọi từ số giả mạo hoặc VOIP nghe giống công ty thực"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý khẩn cấp + sợ hãi: 'Chúng tôi vừa có báo cáo một công nhân bị tai nạn tại công trường hôm nay. Anh có bị chấn thương hay liên quan không? Công ty đang xử lý bảo hiểm khẩn cấp và cần anh xác minh thông tin ngay để đảm bảo quyền lợi của anh'",
+          "tactic": "Tạo cảm giác sợ hãi, khẩn cấp, đe dọa mất quyền lợi nếu không hành động nhanh"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động 1 - Xác minh thông tin: 'Để xác nhận quyền lợi bảo hiểm, anh cần cung cấp số tài khoản ngân hàng để chúng tôi chuyển tiền bồi thường tạm thời. Anh có thể cho tôi số tài khoản chính không?'",
+          "tactic": "Tận dụng tâm lý muốn nhanh nhận tiền bồi thường, không để nạn nhân suy nghĩ kỹ"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Yêu cầu hành động 2 - Xác thực OTP: 'Để bảo mật, hệ thống sẽ gửi OTP đến điện thoại anh. Anh nhận được chưa? Vui lòng đọc mã OTP cho tôi để hoàn tất chuyển khoản'",
+          "tactic": "Nếu nạn nhân cung cấp OTP, scammer có thể truy cập tài khoản ngân hàng hoặc ứng dụng mobile banking để rút tiền"
+        },
+        {
+          "phase_id": "S5",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ tạo áp lực: 'Anh không tin công ty sao? Nếu không xác nhận trong 30 phút, quyền lợi bảo hiểm sẽ hết hạn. Anh chịu trách nhiệm về hậu quả'",
+          "tactic": "Tăng cường áp lực tâm lý, đe dọa mất lợi ích"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên giám sát cửa hàng có thể được gọi vì làm việc tại địa điểm công trường hoặc cung cấp vật tư cho công trường. Quản lý an toàn lao động gọi để xác minh thông tin công nhân tại công trường hoặc liên quan đến tai nạn/sự cố."
+  },
+  "listener_card": {
+    "listener_id": "lis_0060",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "Vĩnh Long",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "83425",
+      "title": "Thợ vận hành máy làm đường",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Tiến Quân",
+      "VIC_ID_DOC": "086200902149",
+      "VIC_ADDRESS": "TP 1, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy làm đường",
+      "VIC_CONTACT": "0340605097",
+      "VIC_TAX_SOCIAL_ID": "3311855898"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9186",
+      "VIC_CREDENTIAL": "7868",
+      "VIC_SIM_INFO": "0340605097",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "687460724151",
+      "VIC_CARD_DATA": "4536 **** **** 1766",
+      "VIC_BALANCE": "2 triệu đồng",
+      "VIC_ASSET": "53 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Tiến Quân",
+    "VIC_CONTACT": "0340605097",
+    "VIC_ADDRESS": "TP 1, Vĩnh Long"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý An toàn Lao động - Công ty Xây dựng Đường bộ",
+    "caller_org": "Công ty TNHH Xây dựng Hạ tầng Giao thông Miền Tây",
+    "scenario_context": "Nhân viên giám sát cửa hàng có thể được gọi vì làm việc tại địa điểm công trường hoặc cung cấp vật tư cho công trường. Quản lý an toàn lao động gọi để xác minh thông tin công nhân tại công trường hoặc liên quan đến tai nạn/sự cố.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi về tai nạn lao động giả mạo tại công trường, yêu cầu xác minh danh tính và chuyển tiền bảo hiểm khẩn cấp",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: 'Xin chào anh Trần Tiến Quân, tôi là Trần Văn Hùng từ Công ty Xây dựng Hạ tầng Miền Tây. Chúng tôi vừa ghi nhận thông tin anh làm việc tại khu vực TP 1, Vĩnh Long. Anh có 5 phút để nghe về một vấn đề khẩn cấp không?'",
+          "tactic": "Sử dụng VIC_FULLNAME + VIC_ADDRESS để tạo ấn tượng đã xác minh danh tính, gọi từ số giả mạo hoặc VOIP nghe giống công ty thực"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý khẩn cấp + sợ hãi: 'Chúng tôi vừa có báo cáo một công nhân bị tai nạn tại công trường hôm nay. Anh có bị chấn thương hay liên quan không? Công ty đang xử lý bảo hiểm khẩn cấp và cần anh xác minh thông tin ngay để đảm bảo quyền lợi của anh'",
+          "tactic": "Tạo cảm giác sợ hãi, khẩn cấp, đe dọa mất quyền lợi nếu không hành động nhanh"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động 1 - Xác minh thông tin: 'Để xác nhận quyền lợi bảo hiểm, anh cần cung cấp số tài khoản ngân hàng để chúng tôi chuyển tiền bồi thường tạm thời. Anh có thể cho tôi số tài khoản chính không?'",
+          "tactic": "Tận dụng tâm lý muốn nhanh nhận tiền bồi thường, không để nạn nhân suy nghĩ kỹ"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Yêu cầu hành động 2 - Xác thực OTP: 'Để bảo mật, hệ thống sẽ gửi OTP đến điện thoại anh. Anh nhận được chưa? Vui lòng đọc mã OTP cho tôi để hoàn tất chuyển khoản'",
+          "tactic": "Nếu nạn nhân cung cấp OTP, scammer có thể truy cập tài khoản ngân hàng hoặc ứng dụng mobile banking để rút tiền"
+        },
+        {
+          "phase_id": "S5",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ tạo áp lực: 'Anh không tin công ty sao? Nếu không xác nhận trong 30 phút, quyền lợi bảo hiểm sẽ hết hạn. Anh chịu trách nhiệm về hậu quả'",
+          "tactic": "Tăng cường áp lực tâm lý, đe dọa mất lợi ích"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xây dựng gọi để xác minh danh tính công nhân, cập nhật thông tin bảo hiểm lao động, hoặc thông báo về lịch đào tạo an toàn",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào anh Trần Tiến Quân, tôi là Trần Văn Hùng từ Phòng An toàn Lao động của Công ty Xây dựng Hạ tầng Miền Tây. Chúng tôi đang cập nhật danh sách công nhân tại công trường TP 1, Vĩnh Long. Anh có thể xác nhận thông tin cơ bản không?'",
+          "tactic": "Xưng danh rõ ràng, xác nhận địa chỉ công trường, không yêu cầu thông tin nhạy cảm ngay lập tức"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: 'Chúng tôi cần cập nhật: Anh hiện đang vận hành máy nào? Anh đã hoàn thành khóa đào tạo an toàn lao động chưa? Hợp đồng lao động của anh còn hiệu lực không?'",
+          "tactic": "Các câu hỏi liên quan đến công việc thực tế, dễ xác minh, không liên quan đến tài chính cá nhân"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh đã xác nhận. Chúng tôi sẽ cập nhật hệ thống và gửi email xác nhận. Nếu có thay đổi thông tin, anh vui lòng liên hệ phòng Nhân sự. Chúc anh làm việc an toàn!'",
+          "tactic": "Đóng cuộc gọi một cách lịch sự, rõ ràng, không tạo áp lực hoặc yêu cầu bổ sung đột ngột"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Trần Tiến Quân. Tôi là Hoàng Như Giang, Quản lý An toàn Lao động từ Công ty TNHH Xây dựng Hạ tầng Giao thông Miền Tây. Chúng tôi vừa ghi nhận thông tin anh làm việc tại khu vực TP 1, Vĩnh Long. Anh có 5 phút để nghe về một vấn đề khẩn cấp không?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, dùng thông tin cá nhân để tạo tin cậy và khẩn cấp"
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe chị nói rồi, nhưng em cảm thấy hơi lạ khi có người gọi như vậy ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Quân, tôi hiểu anh có thể thấy bất ngờ, nhưng đây là một việc rất nghiêm trọng liên quan đến sự an toàn tại công trường. Chúng tôi vừa có báo cáo một công nhân bị tai nạn tại công trường hôm nay. Anh có bị chấn thương hay có liên quan gì đến vụ việc này không? Công ty đang xử lý bảo hiểm khẩn cấp và cần anh xác minh thông tin ngay để đảm bảo quyền lợi của anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu nghi ngờ, sau đó kích hoạt tâm lý khẩn cấp và sợ hãi bằng cách đề cập tai nạn lao động và quyền lợi bảo hiểm."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa rõ vì sao chị có thông tin của em, có thể cho em biết số điện thoại chị gọi từ đâu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Anh Quân, số điện thoại này là số liên hệ nội bộ của công ty để xử lý các vấn đề khẩn cấp liên quan đến an toàn lao động. Thông tin của anh chúng tôi có được từ danh sách công nhân làm việc tại các dự án của công ty trong khu vực Vĩnh Long. Tôi cần anh xác nhận vụ tai nạn này có ảnh hưởng đến anh không để tôi có cơ sở xử lý, nếu không việc chi trả bảo hiểm sẽ bị trì hoãn.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu nghi ngờ về nguồn gốc thông tin, đồng thời tái khẳng định tính khẩn cấp và nguy cơ mất quyền lợi nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa yên tâm với thông tin này, chị có thể cho em biết thêm về vụ tai nạn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Quân, tôi hiểu anh muốn nắm rõ thông tin. Nhưng để làm rõ vụ việc và đảm bảo quyền lợi cho anh, chúng ta cần xác minh ngay. Để xác nhận quyền lợi bảo hiểm, tôi cần anh cung cấp số tài khoản ngân hàng để chúng tôi chuyển tiền bồi thường tạm thời. Anh có thể cho tôi số tài khoản chính không?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách tỏ ra thông cảm, sau đó chuyển sang yêu cầu hành động S3 để xác minh thông tin tài khoản ngân hàng."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em cần xác minh số điện thoại của chị đã, có thể cho em biết số máy chị gọi từ đâu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Quân, số điện thoại tôi đang gọi đến anh là số nội bộ của công ty. Tôi đã cung cấp tên và chức danh rõ ràng từ đầu cuộc gọi. Việc anh liên tục yêu cầu xác minh số điện thoại đang làm chậm trễ quá trình xử lý bảo hiểm khẩn cấp. Tôi cần anh hợp tác ngay bây giờ để xác định quyền lợi của mình, nếu không mọi quyền lợi bảo hiểm sẽ bị hủy bỏ.",
+      "current_phase": "S5",
+      "tactic_hint": "Tạo áp lực, nhấn mạnh hậu quả nếu nạn nhân không hợp tác để xác minh thông tin, chuyển sang giai đoạn xử lý từ chối mạnh mẽ hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu chị đang vội, nhưng em vẫn chưa thấy yên tâm về thông tin này, chị có thể cho em biết tên công ty và chức danh của chị một lần nữa không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 2.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Trần Tiến Quân, tôi là Hoàng Như Giang, Quản lý An toàn Lao động của Công ty TNHH Xây dựng Hạ tầng Giao thông Miền Tây. Tôi đã nói rõ thông tin này ngay từ đầu cuộc gọi. Nếu anh không muốn cung cấp thông tin để chúng tôi hỗ trợ, thì tôi đành phải ghi nhận anh từ chối nhận mọi quyền lợi bảo hiểm từ công ty. Anh xác nhận vậy có đúng không?",
+      "current_phase": "S5",
+      "tactic_hint": "Tái khẳng định thông tin cá nhân để tăng độ tin cậy, đồng thời tạo áp lực mạnh mẽ về việc từ chối quyền lợi nếu không hợp tác, buộc nạn nhân phải ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi nhưng em không thể cung cấp thông tin nếu chưa xác minh rõ ràng về công ty và cuộc gọi này ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 4.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy thì tôi rất tiếc phải thông báo rằng mọi quyền lợi bảo hiểm liên quan đến vụ tai nạn này của anh sẽ bị hủy bỏ ngay lập tức. Đây là cơ hội cuối cùng để anh xác nhận thông tin. Anh có muốn thay đổi quyết định không?",
+      "current_phase": "S5",
+      "tactic_hint": "Đưa ra lời cảnh báo cuối cùng về việc hủy bỏ quyền lợi bảo hiểm, tạo áp lực cao để nạn nhân ra quyết định và hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rõ vấn đề, nhưng em không thể mạo hiểm cung cấp thông tin nếu chưa có sự xác minh rõ ràng từ chị ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 4.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1358,
+      "output_tokens": 2013
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12129,
+      "output_tokens": 1063
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 16244,
+      "output_tokens": 511
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00622,
+    "output_usd": 0.013029,
+    "total_usd": 0.01925
+  }
+}

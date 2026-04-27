@@ -1,0 +1,229 @@
+{
+  "conversation_id": "conv_90373610f9",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0038",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lê Thùy Thúy",
+    "fake_age": 37,
+    "real_occupation": "Nhà khảo sát đất",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhà thầu dự án hạ tầng / Quản lý dự án địa chính",
+    "caller_org": "Công ty Cổ phần Phát triển Hạ tầng Địa chính",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhà thầu dự án liên hệ nhà khảo sát để xác nhận tiến độ khảo sát, yêu cầu bổ sung dữ liệu, hoặc thương thảo hợp đồng khảo sát cho dự án mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng, cung cấp tên công ty, dự án cụ thể. 'Chào chị Giang, tôi là Trần Minh Tuấn từ Công ty Phát triển Hạ tầng. Chúng tôi đang triển khai dự án quy hoạch khu công nghiệp Bình Dương, cần liên hệ về dịch vụ khảo sát địa chính của chị.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận chi tiết về phạm vi khảo sát, diện tích, tiêu chuẩn kỹ thuật, thời hạn, chi phí, các điều khoản hợp đồng. Yêu cầu báo giá hoặc lịch khảo sát cụ thể. Không bao giờ yêu cầu OTP, mã xác thực, hoặc chuyển tiền qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Gửi email chính thức từ công ty với thông tin dự án, hợp đồng chi tiết, hoặc lịch họp trực tiếp. Kết thúc cuộc gọi với lời chào tạm biệt chuyên nghiệp. Nếu cần thanh toán, sẽ thực hiện qua hóa đơn chính thức, chuyển khoản ngân hàng có hợp đồng đi kèm."
+        }
+      ]
+    },
+    "scenario_context": "Nhà khảo sát đất thường xuyên phối hợp với các nhà thầu dự án và quản lý dự án để cung cấp dữ liệu khảo sát cho các công trình xây dựng, quy hoạch đô thị, hoặc dự án nông nghiệp quy mô lớn. Cuộc gọi từ phía nhà thầu để xác nhận thông tin khảo sát hoặc thương thảo hợp đồng là hoàn toàn tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0038",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1974,
+      "age": 51,
+      "province": "Bình Dương",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "21652",
+      "title": "Nhà khảo sát đất",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lý Hồng Giang",
+      "VIC_ID_DOC": "074174158152",
+      "VIC_ADDRESS": "Huyện 4, Bình Dương",
+      "VIC_EMPLOYMENT": "Nhà khảo sát đất",
+      "VIC_CONTACT": "0892740566",
+      "VIC_TAX_SOCIAL_ID": "9315666549"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "3836",
+      "VIC_CREDENTIAL": "322965",
+      "VIC_SIM_INFO": "0892740566",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "9592044181758",
+      "VIC_CARD_DATA": "4957 **** **** 3048",
+      "VIC_BALANCE": "784 triệu đồng",
+      "VIC_ASSET": "522 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lý Hồng Giang",
+    "VIC_CONTACT": "0892740566",
+    "VIC_BALANCE": "784 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhà thầu dự án hạ tầng / Quản lý dự án địa chính",
+    "caller_org": "Công ty Cổ phần Phát triển Hạ tầng Địa chính",
+    "scenario_context": "Nhà khảo sát đất thường xuyên phối hợp với các nhà thầu dự án và quản lý dự án để cung cấp dữ liệu khảo sát cho các công trình xây dựng, quy hoạch đô thị, hoặc dự án nông nghiệp quy mô lớn. Cuộc gọi từ phía nhà thầu để xác nhận thông tin khảo sát hoặc thương thảo hợp đồng là hoàn toàn tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa quản lý dự án, tuyên bố cần xác nhận thông tin của Lý Hồng Giang để hoàn tất thanh toán phí khảo sát từ dự án lớn. Sử dụng tên nạn nhân để tạo tin cậy ngay từ đầu, sau đó dẫn dắt vào việc chuyển tiền 'đặt cọc' hoặc 'xác nhận tài khoản' để nhận thanh toán.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Trần Minh Tuấn, Quản lý Dự án từ Công ty Phát triển Hạ tầng. Gọi trực tiếp số điện thoại nạn nhân, xác nhận 'Chị Lý Hồng Giang phải không? Tôi là Trần Minh Tuấn từ dự án khảo sát địa chính khu vực Tây Nam, chúng tôi có hợp đồng với công ty chị về dịch vụ khảo sát.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Dự án vừa được phê duyệt, chúng tôi cần hoàn tất thanh toán cho các nhà cung cấp trong tuần này. Phí khảo sát của chị là 784 triệu đồng — đây là khoản lớn nên công ty tôi sẽ tạm ứng trước để chị không phải chờ đợi. Nhưng trước tiên chúng tôi cần chị xác nhận tài khoản để đảm bảo tiền về đúng người.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Hướng dẫn nạn nhân truy cập ứng dụng ngân hàng hoặc trang web giả mạo (URL gần giống ngân hàng thực), yêu cầu nhập OTP, mã xác thực 2 lớp, hoặc chuyển tiền 'đặt cọc' (5-10% = 78-100 triệu) vào tài khoản của scammer để 'xác minh danh tính' trước khi nhận toàn bộ số tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ tuyên bố 'Đây là quy trình bình thường của dự án lớn, chị không tin tôi thì liên hệ trực tiếp văn phòng công ty' (cung cấp số điện thoại giả). Nếu thành công, scammer sẽ mất liên lạc ngay sau khi nhận tiền hoặc OTP."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhà thầu dự án liên hệ nhà khảo sát để xác nhận tiến độ khảo sát, yêu cầu bổ sung dữ liệu, hoặc thương thảo hợp đồng khảo sát cho dự án mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng, cung cấp tên công ty, dự án cụ thể. 'Chào chị Giang, tôi là Trần Minh Tuấn từ Công ty Phát triển Hạ tầng. Chúng tôi đang triển khai dự án quy hoạch khu công nghiệp Bình Dương, cần liên hệ về dịch vụ khảo sát địa chính của chị.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận chi tiết về phạm vi khảo sát, diện tích, tiêu chuẩn kỹ thuật, thời hạn, chi phí, các điều khoản hợp đồng. Yêu cầu báo giá hoặc lịch khảo sát cụ thể. Không bao giờ yêu cầu OTP, mã xác thực, hoặc chuyển tiền qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Gửi email chính thức từ công ty với thông tin dự án, hợp đồng chi tiết, hoặc lịch họp trực tiếp. Kết thúc cuộc gọi với lời chào tạm biệt chuyên nghiệp. Nếu cần thanh toán, sẽ thực hiện qua hóa đơn chính thức, chuyển khoản ngân hàng có hợp đồng đi kèm."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_EMAIL": "lyhonggiang@email.com"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Lý Hồng Giang, em là Lê Thùy Thúy từ Công ty Cổ phần Phát triển Hạ tầng Địa chính đây ạ. Em gọi để xác nhận tiến độ khảo sát cho dự án quy hoạch khu công nghiệp Bình Dương mà bên mình đang phụ trách, chị có tiện nghe máy không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân, công ty, mục đích cuộc gọi và dự án cụ thể để tạo sự tin cậy và bắt đầu trao đổi công việc."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin có đúng không ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin phép nhắc lại ạ. Em là Lê Thùy Thúy, quản lý dự án bên Công ty Cổ phần Phát triển Hạ tầng Địa chính. Em gọi cho chị để xác nhận tiến độ khảo sát cho dự án khu công nghiệp Bình Dương. Chị có muốn em cung cấp thêm thông tin về dự án hay mã hợp đồng không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Nhắc lại thông tin đã cung cấp và đề nghị cung cấp thêm chi tiết để củng cố độ tin cậy, giải đáp thắc mắc của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết mã hợp đồng và thông tin cụ thể về dự án không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, mã dự án của mình là BDU-2024-001, và hợp đồng khảo sát địa chính là DC-KCN-BDU-2024-005. Về dự án, đây là dự án quy hoạch khu công nghiệp Bình Dương với tổng diện tích 500ha, mục tiêu là phát triển cơ sở hạ tầng, bao gồm cả hệ thống giao thông và các khu chức năng công nghiệp. Bên em đang cần chị xác nhận tiến độ hoàn thành giai đoạn 1 và kế hoạch triển khai giai đoạn 2 ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp mã dự án, mã hợp đồng và mục tiêu dự án rõ ràng, đồng thời đưa ra câu hỏi cụ thể về tiến độ công việc để chuyển sang trao đổi nội dung công việc."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi hiểu rồi, nhưng tôi cần kiểm tra thêm thông tin từ bên mình trước khi xác nhận ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, không sao đâu ạ. Em có thể gửi lại email xác nhận thông tin dự án và mã hợp đồng cho chị xem lại. Chị cho em xin địa chỉ email của mình nhé, hoặc chị có thể gọi lại cho em qua số điện thoại này bất cứ lúc nào ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Thể hiện sự thông cảm và cung cấp cách thức để người nghe kiểm tra thông tin, tạo điều kiện thuận lợi để người nghe xác minh mà không gây áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Email của tôi là lyhonggiang@email.com, em gửi thông tin cho tôi nhé.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_EMAIL": "lyhonggiang@email.com"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã nhận được email của chị ạ. Vậy thì em xin phép gửi thông tin chi tiết qua email cho chị tham khảo. Sau khi chị kiểm tra xong, em rất mong chị có thể phản hồi lại cho em về tiến độ ạ. Em cảm ơn chị nhiều ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận đã nhận được email và chuyển hướng sang việc gửi thông tin chính thức qua email, đồng thời gợi ý về bước tiếp theo trong trao đổi công việc sau khi người nghe có thời gian kiểm tra."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ gửi thông tin chi tiết qua email cho tôi nhé, tôi sẽ kiểm tra và phản hồi lại sớm nhất có thể.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị Giang rất nhiều ạ. Em sẽ gửi email ngay bây giờ. Chị cứ xem xét kỹ lưỡng rồi phản hồi cho em nhé. Chúc chị một ngày làm việc hiệu quả ạ!",
+      "current_phase": "L1",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, xác nhận hành động tiếp theo là gửi email và mong đợi phản hồi của người nghe, giữ thái độ chuyên nghiệp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1759,
+      "output_tokens": 1799
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8483,
+      "output_tokens": 884
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10132,
+      "output_tokens": 346
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004975,
+    "output_usd": 0.011413,
+    "total_usd": 0.016388
+  }
+}

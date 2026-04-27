@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_41faddc1cd]
+  Caller thật: Thợ vận hành máy đào hầm (kể cả thợ vận hành máy kích ống) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên an toàn lao động / Kiểm tra sức khỏe định kỳ từ công ty xây dựng @ Công ty Xây dựng Hạ tầng Việt Nam (hoặc chi nhánh địa phương)
+  Listener: Huấn luyện viên thể thao (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ vận hành máy đào hầm làm việc tại các công trường xây dựng lớn, nơi thường có yêu cầu kiểm tra sức khỏe định kỳ cho công nhân. Huấn luyện viên thể thao có thể được liên hệ để cung cấp chứng chỉ sức khỏe hoặc tham gia chương trình kiểm tra y tế doanh nghiệp mở rộng cho nhân viên/gia đình của công ty xây dựng.
+  Pretext: Công ty xây dựng liên hệ để thông báo chương trình kiểm tra sức khỏe định kỳ hoặc mời huấn luyện viên thể thao tham gia hợp tác (cung cấp dịch vụ huấn luyện thể lực, tư vấn sức khỏe cho nhân viên).
+  Listener traits: ['bảo thủ ngại thay đổi']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Đây là phòng Nhân sự công ty Xây dựng Hạ tầng Việt Nam. Tôi cần tìm chị Dương Thu Nhi, phải không ạ? Số điện thoại của công ty chúng tôi là 02838123456.
+      → phase: L1 | tactic: Xưng danh rõ ràng, cung cấp số điện thoại chính thức, xác nhận đúng người nghe.
+T02 [LISTENER] Vâng, tôi là Dương Thu Nhi, nhưng anh cần thông tin gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào chị Nhi. Tôi là Lê Quang Thành, nhân viên phòng An toàn lao động thuộc Công ty Xây dựng Hạ tầng Việt Nam. Tôi gọi để thông báo về chương trình kiểm tra sức khỏe định kỳ năm nay dành cho các đối tác và nhân viên của công ty mình. Chúng tôi muốn mời chị tham gia vào ngày 15 tháng 10 tới tại Trung tâm Y tế dự phòng quận 1, địa chỉ 123 Nguyễn Thị Minh Khai.
+      → phase: L2 | tactic: Giới thiệu bản thân, tổ chức, chức danh và giải thích rõ ràng mục đích cuộc gọi là mời khám sức khỏe định kỳ, cung cấp thông tin chi tiết về thời gian và địa điểm.
+T04 [LISTENER] Cảm ơn anh Thành đã thông báo, nhưng tôi có cần phải chuẩn bị gì cho buổi kiểm tra sức khỏe này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, chị Nhi không cần chuẩn bị gì đặc biệt ạ. Chỉ cần mang theo căn cước công dân khi đến, các thủ tục còn lại sẽ có nhân viên y tế hướng dẫn chi tiết tại chỗ. Chúng tôi cũng sẽ gửi xác nhận qua email của chị về thời gian và địa điểm cụ thể trong hôm nay.
+      → phase: L2 | tactic: Cung cấp thêm thông tin chi tiết về thủ tục tham gia khám sức khỏe để người nghe an tâm, đồng thời nhấn mạnh việc sẽ gửi thông tin chính thức qua email.
+T06 [LISTENER] Cảm ơn anh đã chỉ rõ, tôi sẽ chuẩn bị căn cước công dân. Nhưng anh có thể cho tôi biết địa chỉ email của anh để tôi có thể xác nhận không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị có thể yên tâm. Địa chỉ email chính thức của phòng An toàn lao động công ty Hạ tầng Việt Nam là antoanlaodong@hathangvietnam.vn. Chị có thể gửi email xác nhận hoặc có bất kỳ thắc mắc nào khác đến địa chỉ này ạ. Chúng tôi cũng sẽ gửi email thông báo chi tiết đến chị trong vài giờ tới.
+      → phase: L2 | tactic: Cung cấp địa chỉ email chính thức của công ty để nạn nhân có thể xác nhận và liên hệ, đồng thời khẳng định sẽ gửi thông tin chi tiết qua email, tạo sự tin tưởng và chuyên nghiệp.
+T08 [LISTENER] Vâng, cảm ơn anh Thành đã cung cấp thông tin, tôi sẽ kiểm tra email của mình để xem thông báo nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, chị kiểm tra email nhé. Nếu có bất kỳ vấn đề gì, chị cứ liên hệ lại theo số điện thoại đã gọi hoặc gửi email cho chúng tôi. Cảm ơn chị Nhi đã dành thời gian. Chúc chị một ngày làm việc hiệu quả!
+      → phase: L3 | tactic: Xác nhận hành động tiếp theo của người nghe, cung cấp kênh liên hệ nếu cần, và kết thúc cuộc gọi một cách chuyên nghiệp và tự nhiên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.00
+TOKEN: in=16052 | out=2706
+COST : $0.014782
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_83426_34221\conv_41faddc1cd.json  [CALLER_END]

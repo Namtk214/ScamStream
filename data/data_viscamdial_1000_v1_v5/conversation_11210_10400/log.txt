@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c7994f4975]
+  Caller thật: Chủ tịch nước, Phó Chủ tịch nước (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Phó Chủ tịch nước / Văn phòng Chủ tịch nước @ Văn phòng Chủ tịch nước - Bộ phận Kiểm tra và Giám sát Đảng
+  Listener: Bí thư, Phó Bí thư Đảng ủy cấp xã (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Phó Chủ tịch nước có quyền kiểm tra, giám sát hoạt động Đảng tại các cấp. Bí thư Đảng ủy cấp xã là đối tượng cần báo cáo và tuân thủ trong các vụ kiểm tra đột xuất về tài chính, kỷ luật hoặc an ninh.
+  Pretext: Kiểm tra tài chính đột xuất - yêu cầu nạn nhân chuyển tiền vào tài khoản 'tạm khóa' để xác minh tài sản và khai báo trung thực, tránh bị xử lý kỷ luật Đảng
+  Listener traits: ['ham lợi dễ bị bait', 'sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Bình. Tôi là Trần Xuân Văn Phong, Phó Chủ tịch nước, Văn phòng Chủ tịch nước. Tôi đang nói chuyện với anh Phan Thế Công Bình, Bí thư Đảng ủy xã đúng không ạ?
+      → phase: S1 | tactic: Xưng danh chức vụ cao, dùng thông tin cá nhân nạn nhân để tạo độ tin cậy và uy quyền.
+T02 [LISTENER] Vâng, tôi là Bình đây, em có việc gì cần nói với tôi không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Anh Bình, tôi gọi đến để thông báo về một đợt kiểm tra tài chính đột xuất trên diện rộng toàn quốc. Chúng tôi đã phát hiện nhiều trường hợp cán bộ khai báo tài sản không trung thực, và tài khoản của anh, số 87166981685753, hiện đang có số dư 519 triệu đồng, nằm trong diện cần phải làm rõ nguồn gốc. Anh có biết về việc này không?
+      → phase: S2 | tactic: Thông báo về việc kiểm tra tài chính, sử dụng uy quyền để gây áp lực, đồng thời đề cập cụ thể thông tin tài khoản và số dư để gia tăng tính xác thực và tạo lo lắng.
+T04 [LISTENER] Tôi không rõ lắm về việc này, em có thể cho tôi biết thêm chi tiết cụ thể được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Anh Bình, đây là một cuộc kiểm tra nghiêm ngặt từ Trung Ương. Nếu anh không hợp tác làm rõ nguồn gốc số tiền này trong thời gian sớm nhất, chúng tôi sẽ buộc phải lập biên bản, đình chỉ công tác của anh và tiến hành khởi tố kỷ luật Đảng. Anh phải hiểu đây là việc rất nghiêm trọng liên quan đến sự nghiệp và danh dự của anh.
+      → phase: S2 | tactic: Gây áp lực bằng các hình phạt kỷ luật Đảng và pháp luật nếu không hợp tác, nhấn mạnh sự nghiêm trọng của vấn đề để nạn nhân hoảng sợ.
+T06 [LISTENER] Em hiểu rằng đây là việc nghiêm trọng, nhưng tôi cần thêm thời gian để kiểm tra và xác thực các thông tin trước khi quyết định hợp tác.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Anh Bình, thời gian không cho phép. Cuộc kiểm tra này đang được thực hiện gấp rút và chúng tôi yêu cầu sự hợp tác ngay lập tức. Nếu anh Bình cần xác thực, tôi có thể cung cấp thêm thông tin về cuộc họp khẩn cấp của Văn phòng Chủ tịch nước sáng nay về vấn đề này. Tuy nhiên, tôi cần anh xác nhận ngay bây giờ là anh có sẵn sàng hợp tác để làm rõ nguồn gốc số tiền này hay không để tránh những hậu quả đáng tiếc.
+      → phase: S2 | tactic: Tăng cường áp lực về thời gian, đề nghị cung cấp thêm thông tin để chứng minh nhưng vẫn yêu cầu cam kết hợp tác ngay lập tức. Đe dọa hậu quả nếu không hợp tác.
+T08 [LISTENER] Em thấy chuyện này thật sự nghiêm trọng, nhưng trước khi quyết định, em cần kiểm tra lại một số thông tin cụ thể để đảm bảo mình không mắc phải sai lầm.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=0.00
+TOKEN: in=14939 | out=2519
+COST : $0.013532
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_11210_10400\conv_c7994f4975.json  [SCAM_REFUSE]

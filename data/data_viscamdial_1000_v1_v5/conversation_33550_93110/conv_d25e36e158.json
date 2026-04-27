@@ -1,0 +1,245 @@
+{
+  "conversation_id": "conv_d25e36e158",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0099",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Cao Như Nhàn",
+    "fake_age": 30,
+    "real_occupation": "Kiểm lâm",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Cán bộ Kiểm lâm cấp Chi cục - Phòng Quản lý Tài nguyên Khoáng sản",
+    "caller_org": "Chi cục Kiểm lâm tỉnh / Phòng Liên ngành Tài nguyên Thiên nhiên",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo rằng nạn nhân bị ghi nhận vi phạm môi trường hoặc chưa hoàn tất thủ tục khai báo tài sản/thuế tài nguyên. Scammer sẽ sử dụng tên thật + số định danh để khẳng định đã 'kiểm tra trong hệ thống' và đe dọa phạt nếu không nộp khoản 'bảo lãnh tạm thời' hoặc 'lệ phí xử lý nhanh'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác thực giả: Gọi đến, xưng danh là 'Cán bộ Chi cục Kiểm lâm', yêu cầu xác nhận thông tin. Dùng VIC_FULLNAME + VIC_TAX_SOCIAL_ID để khẳng định 'tôi đang nhìn hồ sơ của anh/chị Phan Thanh Nhi, số định danh 8886783443'. Nạn nhân sẽ giật mình vì thông tin chính xác → tin tưởng."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khủng hoảng: Thông báo 'Hệ thống phát hiện hoạt động khai thác của công ty/cơ sở anh/chị chưa khai báo đầy đủ tác động môi trường' hoặc 'Có dấu hiệu trốn tránh nộp lệ phí khai thác khoáng sản'. Tạo áp lực thời gian: 'Nếu không xử lý trong 2 giờ, sẽ phát hành quyết định phạt 50-100 triệu đồng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để tránh phạt, anh/chị cần nộp khoản bảo lãnh tạm thời là 8 triệu đồng (tương ứng VIC_ASSET) vào tài khoản của Chi cục để chứng minh thiện chí'. Cung cấp số tài khoản giả hoặc tài khoản rửa tiền. Yêu cầu nạn nhân chuyển tiền ngay qua ATM/Mobile banking."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết thúc: Nếu nạn nhân chuyển tiền, scammer tạo biên lai giả, hứa 'sẽ hoàn lại sau 3-5 ngày khi hồ sơ được xử lý'. Nếu nạn nhân từ chối, tăng cảnh báo: 'Anh/chị sẽ bị cấm hoạt động khai thác, có thể bị khởi tố hình sự' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Khai thác mỏ và đá nằm trong vùng rừng hoặc gần rừng — kiểm lâm có quyền giám sát, cấp phép và kiểm tra các hoạt động khai thác để đảm bảo tuân thủ luật bảo vệ môi trường. Điểm giao thoa tự nhiên: kiểm tra hợp lệ hoặc thông báo vi phạm."
+  },
+  "listener_card": {
+    "listener_id": "lis_0099",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1965,
+      "age": 60,
+      "province": "Vĩnh Long",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "93110",
+      "title": "Lao động trong khai thác mỏ và khai thác đá",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phan Thanh Nhi",
+      "VIC_ID_DOC": "086165284050",
+      "VIC_ADDRESS": "Huyện 1, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Lao động trong khai thác mỏ và khai thác đá",
+      "VIC_CONTACT": "0708854353",
+      "VIC_TAX_SOCIAL_ID": "8886783443"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "1937",
+      "VIC_CREDENTIAL": "7812",
+      "VIC_SIM_INFO": "0708854353",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "31949417451",
+      "VIC_CARD_DATA": "4885 **** **** 7913",
+      "VIC_BALANCE": "17 triệu đồng",
+      "VIC_ASSET": "8 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phan Thanh Nhi",
+    "VIC_CONTACT": "0708854353",
+    "VIC_TAX_SOCIAL_ID": "8886783443",
+    "VIC_CARD_DATA": "4885 **** **** 7913",
+    "VIC_ASSET": "8 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ Kiểm lâm cấp Chi cục - Phòng Quản lý Tài nguyên Khoáng sản",
+    "caller_org": "Chi cục Kiểm lâm tỉnh / Phòng Liên ngành Tài nguyên Thiên nhiên",
+    "scenario_context": "Khai thác mỏ và đá nằm trong vùng rừng hoặc gần rừng — kiểm lâm có quyền giám sát, cấp phép và kiểm tra các hoạt động khai thác để đảm bảo tuân thủ luật bảo vệ môi trường. Điểm giao thoa tự nhiên: kiểm tra hợp lệ hoặc thông báo vi phạm.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo rằng nạn nhân bị ghi nhận vi phạm môi trường hoặc chưa hoàn tất thủ tục khai báo tài sản/thuế tài nguyên. Scammer sẽ sử dụng tên thật + số định danh để khẳng định đã 'kiểm tra trong hệ thống' và đe dọa phạt nếu không nộp khoản 'bảo lãnh tạm thời' hoặc 'lệ phí xử lý nhanh'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác thực giả: Gọi đến, xưng danh là 'Cán bộ Chi cục Kiểm lâm', yêu cầu xác nhận thông tin. Dùng VIC_FULLNAME + VIC_TAX_SOCIAL_ID để khẳng định 'tôi đang nhìn hồ sơ của anh/chị Phan Thanh Nhi, số định danh 8886783443'. Nạn nhân sẽ giật mình vì thông tin chính xác → tin tưởng."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khủng hoảng: Thông báo 'Hệ thống phát hiện hoạt động khai thác của công ty/cơ sở anh/chị chưa khai báo đầy đủ tác động môi trường' hoặc 'Có dấu hiệu trốn tránh nộp lệ phí khai thác khoáng sản'. Tạo áp lực thời gian: 'Nếu không xử lý trong 2 giờ, sẽ phát hành quyết định phạt 50-100 triệu đồng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để tránh phạt, anh/chị cần nộp khoản bảo lãnh tạm thời là 8 triệu đồng (tương ứng VIC_ASSET) vào tài khoản của Chi cục để chứng minh thiện chí'. Cung cấp số tài khoản giả hoặc tài khoản rửa tiền. Yêu cầu nạn nhân chuyển tiền ngay qua ATM/Mobile banking."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết thúc: Nếu nạn nhân chuyển tiền, scammer tạo biên lai giả, hứa 'sẽ hoàn lại sau 3-5 ngày khi hồ sơ được xử lý'. Nếu nạn nhân từ chối, tăng cảnh báo: 'Anh/chị sẽ bị cấm hoạt động khai thác, có thể bị khởi tố hình sự' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi kiểm tra thực tế từ Chi cục Kiểm lâm để xác nhận điều kiện môi trường, giấy phép hoạt động, hoặc thông báo về khóa đào tạo tuân thủ pháp luật khai thác khoáng sản.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Cán bộ kiểm lâm xưng danh đầy đủ (tên, cơ quan, mục đích gọi), yêu cầu xác nhận thông tin cá nhân nhưng không dùng thông tin đã có để 'kiểm tra' — thay vào đó là hỏi xác nhận lại một cách lịch sự: 'Tôi đang liên hệ với anh/chị Phan Thanh Nhi phải không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo chính thức về nội dung (ví dụ: 'Chúng tôi đang tiến hành kiểm tra định kỳ các cơ sở khai thác trong khu vực. Anh/chị có sẵn sàng để chúng tôi ghé thăm vào tuần tới không?') hoặc 'Mời tham dự buổi hướng dẫn tuân thủ quy định môi trường'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác định lịch gặp gỡ, địa điểm, hoặc yêu cầu nộp tài liệu qua đường chính thức (email công ty, trực tiếp). Không bao giờ yêu cầu tiền qua điện thoại. Kết thúc bằng cách cung cấp số điện thoại chính thức của cơ quan để nạn nhân có thể gọi lại xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Phan Thanh Nhi ạ. Em là Cao Như Nhàn, cán bộ Phòng Quản lý Tài nguyên Khoáng sản thuộc Chi cục Kiểm lâm tỉnh. Em gọi từ số 02838383838 để xác nhận một số thông tin liên quan đến mã số định danh 8886783443 của chị, chị có thể dành cho em vài phút được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xác thực giả bằng cách xưng danh tổ chức, chức vụ và sử dụng thông tin cá nhân chính xác của nạn nhân để tạo niềm tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói lại cho tôi rõ lý do tại sao cần xác nhận thông tin này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, thưa chị. Hệ thống của chúng tôi vừa ghi nhận một số bất thường liên quan đến hoạt động khai thác của cơ sở chị, cụ thể là chưa có đầy đủ hồ sơ khai báo tác động môi trường. Đây là vấn đề nghiêm trọng có thể dẫn đến việc xử phạt hành chính rất nặng, nên em cần xác minh gấp ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu vấn đề, tạo khủng hoảng ban đầu bằng cách nhấn mạnh mức độ nghiêm trọng và hậu quả có thể xảy ra."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng cụ thể là cần thông tin gì từ tôi để giải quyết vấn đề này ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, trước hết để xác minh thông tin chính chủ và tiến hành rà soát lại hồ sơ trong hệ thống, em cần chị cung cấp đầy đủ họ tên, ngày tháng năm sinh và địa chỉ thường trú của chị ạ. Sau đó em sẽ hướng dẫn chị các bước tiếp theo để tránh bị phạt nguội ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Yêu cầu cung cấp thông tin cá nhân bổ sung để tăng tính xác thực của cuộc gọi và gợi ý về hậu quả nếu không hợp tác, chuẩn bị cho bước yêu cầu hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần thông tin gì cụ thể từ tôi ạ? Tôi không tự dưng cung cấp thông tin cho em được.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Vậy thì để rút ngắn thời gian, em sẽ đọc lại những thông tin đã có trong hệ thống và chị chỉ cần xác nhận lại thôi nhé. Chị Phan Thanh Nhi, sinh ngày 15/05/1963, thường trú tại số 23, đường Nguyễn Thị Minh Khai, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, có đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề nghị xác nhận thông tin đã có, sử dụng thông tin cá nhân chính xác của nạn nhân để củng cố lòng tin, và tái khẳng định tính chính xác của dữ liệu trong hệ thống."
+    },
+    {
+      "role": "listener",
+      "text": "Thông tin em vừa đọc không đúng đâu, tôi ở Vĩnh Long chứ không phải Hồ Chí Minh.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng ạ, do hệ thống có thể chưa cập nhật thông tin địa chỉ mới nhất của chị. Em xin lỗi về sự bất tiện này. Nhưng chị đừng lo, thông tin về mã số định danh và tên vẫn hoàn toàn chính xác. Quan trọng nhất lúc này là vấn đề về hồ sơ khai báo môi trường của cơ sở chị đang có sai sót, cần phải khắc phục ngay để tránh bị phạt nặng ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, giải thích lý do sai lệch thông tin bằng cách đổ lỗi cho 'hệ thống' và tái khẳng định các thông tin chính xác khác để giữ vững lòng tin, đồng thời nhanh chóng chuyển trọng tâm lại vào 'khủng hoảng' để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng em vẫn cần nói rõ tôi có thể làm gì để khắc phục vấn đề này nhỉ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để khắc phục ngay vấn đề này, chị cần nộp ngay một khoản bảo lãnh tạm thời là 8 triệu đồng vào tài khoản của Chi cục để chứng minh thiện chí và cam kết bổ sung hồ sơ đầy đủ. Nếu không xử lý gấp trong vòng 2 giờ tới, Chi cục sẽ tiến hành phát hành quyết định xử phạt hành chính với mức phạt từ 50 đến 100 triệu đồng và có thể đình chỉ hoạt động của cơ sở chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể là nộp khoản bảo lãnh tạm thời, đồng thời tái khẳng định áp lực thời gian và hậu quả nghiêm trọng nếu không hợp tác, bao gồm phạt tiền và đình chỉ hoạt động."
+    },
+    {
+      "role": "listener",
+      "text": "Em ngừng ngay việc đe dọa tôi, tôi không có tiền để nộp đâu, em hãy bỏ qua chuyện này đi!",
+      "listener_action": "INTERRUPTED_VICTIM_HANGUP",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1395,
+      "output_tokens": 1801
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10517,
+      "output_tokens": 1003
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13290,
+      "output_tokens": 413
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005492,
+    "output_usd": 0.01176,
+    "total_usd": 0.017252
+  }
+}

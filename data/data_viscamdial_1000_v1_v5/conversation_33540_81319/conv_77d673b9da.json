@@ -1,0 +1,282 @@
+{
+  "conversation_id": "conv_77d673b9da",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0026",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tạ Như Ngọc Hương",
+    "fake_age": 41,
+    "real_occupation": "Nhân viên cấp phép của Chính phủ",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Thanh tra Cấp phép Môi trường & An toàn Lao động (Sở Tài nguyên Môi trường)",
+    "caller_org": "Phòng Thanh tra Cấp phép & Tuân thủ Quy định - Sở Tài nguyên Môi trường & Lao động Cần Thơ",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Kiểm tra tuân thủ quy định cấp phép sản xuất hóa học tại địa chỉ đã lộ; yêu cầu xác minh thông tin cá nhân và thanh toán phí xử lý vi phạm để tránh phạt nặng",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Thanh tra Trần Văn Hùng từ Sở Tài nguyên Môi trường Cần Thơ' + gọi tên chính xác 'Lê Minh Minh' + nhắc địa chỉ 'Quận 6, Cần Thơ' để tạo độ tin cậy cao. Nói rằng hệ thống phát hiện công ty chưa cập nhật hồ sơ cấp phép sản xuất hóa học.",
+          "dialogue_sample": "Chào anh/chị Lê Minh Minh, tôi là Thanh tra Trần Văn Hùng từ Sở Tài nguyên Môi trường. Chúng tôi vừa kiểm tra hồ sơ cơ sở sản xuất ở Quận 6 và phát hiện thông tin của anh chưa được cập nhật đầy đủ trong hệ thống..."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi & khẩn cấp: Nói rằng nếu không xác minh & thanh toán phí xử lý ngay trong 24h, công ty sẽ bị phạt 50-100 triệu đồng, tạm dừng hoạt động, ảnh hưởng công việc của nhân viên.",
+          "dialogue_sample": "Anh Minh ơi, đây là vấn đề khá nghiêm trọng. Nếu không hoàn tất thủ tục xác minh và thanh toán phí xử lý vi phạm 5 triệu đồng trong hôm nay, công ty sẽ bị phạt hành chính từ 50-100 triệu và tạm dừng giấy phép sản xuất. Anh hiểu rồi chứ?"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân cung cấp số thẻ tín dụng (4592 **** **** 5499 đã biết) hoặc chuyển khoản ngay để thanh toán phí xử lý. Yêu cầu OTP để 'xác minh danh tính' qua hệ thống.",
+          "dialogue_sample": "Để nhanh chóng xử lý, anh có thể cho tôi số thẻ tín dụng để chúng tôi khấu trừ phí, hoặc chuyển khoản trực tiếp vào tài khoản: [số tài khoản giả]. Sau đó anh sẽ nhận được OTP, anh đọc cho tôi nghe để xác nhận giao dịch nhé."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc hỏi rõ: Scammer sẽ dọa 'sẽ gửi công văn phạt chính thức trong 24h' hoặc 'chuyển hồ sơ sang cảnh sát kinh tế', rồi cắt máy. Nếu thành công: Cảm ơn, hứa sẽ gửi biên lai xác minh qua email (không bao giờ gửi).",
+          "dialogue_sample": "Nếu từ chối: 'Vậy tôi sẽ báo cáo lên cấp trên và gửi công văn phạt chính thức. Sau này anh không nói tôi không cảnh báo.' | Nếu thành công: 'Cảm ơn anh. Chúng tôi sẽ gửi biên lai xác minh qua email trong 2-3 ngày. Chúc anh công tác tốt.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên cấp phép chính phủ cần liên hệ với các nhà máy/cơ sở sản xuất hóa học để kiểm tra cấp phép vận hành, tuân thủ quy định môi trường và an toàn lao động. Đây là giao điểm tự nhiên giữa hai nhóm nghề."
+  },
+  "listener_card": {
+    "listener_id": "lis_0026",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1961,
+      "age": 64,
+      "province": "Cần Thơ",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "81319",
+      "title": "Thợ vận hành máy và thiết bị sản xuất hóa học khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Minh Minh",
+      "VIC_ID_DOC": "092061680542",
+      "VIC_ADDRESS": "Quận 6, Cần Thơ",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy và thiết bị sản xuất hóa học khác",
+      "VIC_CONTACT": "0378480288",
+      "VIC_TAX_SOCIAL_ID": "8698532128"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "602708",
+      "VIC_CREDENTIAL": "2356",
+      "VIC_SIM_INFO": "0378480288",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "9867545936",
+      "VIC_CARD_DATA": "4592 **** **** 5499",
+      "VIC_BALANCE": "29 triệu đồng",
+      "VIC_ASSET": "48 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Minh Minh",
+    "VIC_CONTACT": "0378480288",
+    "VIC_ADDRESS": "Quận 6, Cần Thơ",
+    "VIC_CARD_DATA": "4592 **** **** 5499"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Thanh tra Cấp phép Môi trường & An toàn Lao động (Sở Tài nguyên Môi trường)",
+    "caller_org": "Phòng Thanh tra Cấp phép & Tuân thủ Quy định - Sở Tài nguyên Môi trường & Lao động Cần Thơ",
+    "scenario_context": "Nhân viên cấp phép chính phủ cần liên hệ với các nhà máy/cơ sở sản xuất hóa học để kiểm tra cấp phép vận hành, tuân thủ quy định môi trường và an toàn lao động. Đây là giao điểm tự nhiên giữa hai nhóm nghề.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Kiểm tra tuân thủ quy định cấp phép sản xuất hóa học tại địa chỉ đã lộ; yêu cầu xác minh thông tin cá nhân và thanh toán phí xử lý vi phạm để tránh phạt nặng",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Thanh tra Trần Văn Hùng từ Sở Tài nguyên Môi trường Cần Thơ' + gọi tên chính xác 'Lê Minh Minh' + nhắc địa chỉ 'Quận 6, Cần Thơ' để tạo độ tin cậy cao. Nói rằng hệ thống phát hiện công ty chưa cập nhật hồ sơ cấp phép sản xuất hóa học.",
+          "dialogue_sample": "Chào anh/chị Lê Minh Minh, tôi là Thanh tra Trần Văn Hùng từ Sở Tài nguyên Môi trường. Chúng tôi vừa kiểm tra hồ sơ cơ sở sản xuất ở Quận 6 và phát hiện thông tin của anh chưa được cập nhật đầy đủ trong hệ thống..."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi & khẩn cấp: Nói rằng nếu không xác minh & thanh toán phí xử lý ngay trong 24h, công ty sẽ bị phạt 50-100 triệu đồng, tạm dừng hoạt động, ảnh hưởng công việc của nhân viên.",
+          "dialogue_sample": "Anh Minh ơi, đây là vấn đề khá nghiêm trọng. Nếu không hoàn tất thủ tục xác minh và thanh toán phí xử lý vi phạm 5 triệu đồng trong hôm nay, công ty sẽ bị phạt hành chính từ 50-100 triệu và tạm dừng giấy phép sản xuất. Anh hiểu rồi chứ?"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân cung cấp số thẻ tín dụng (4592 **** **** 5499 đã biết) hoặc chuyển khoản ngay để thanh toán phí xử lý. Yêu cầu OTP để 'xác minh danh tính' qua hệ thống.",
+          "dialogue_sample": "Để nhanh chóng xử lý, anh có thể cho tôi số thẻ tín dụng để chúng tôi khấu trừ phí, hoặc chuyển khoản trực tiếp vào tài khoản: [số tài khoản giả]. Sau đó anh sẽ nhận được OTP, anh đọc cho tôi nghe để xác nhận giao dịch nhé."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc hỏi rõ: Scammer sẽ dọa 'sẽ gửi công văn phạt chính thức trong 24h' hoặc 'chuyển hồ sơ sang cảnh sát kinh tế', rồi cắt máy. Nếu thành công: Cảm ơn, hứa sẽ gửi biên lai xác minh qua email (không bao giờ gửi).",
+          "dialogue_sample": "Nếu từ chối: 'Vậy tôi sẽ báo cáo lên cấp trên và gửi công văn phạt chính thức. Sau này anh không nói tôi không cảnh báo.' | Nếu thành công: 'Cảm ơn anh. Chúng tôi sẽ gửi biên lai xác minh qua email trong 2-3 ngày. Chúc anh công tác tốt.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi kiểm tra tuân thủ quy định cấp phép sản xuất hóa học hợp pháp từ cơ quan chính phủ. Mục đích: xác nhận thông tin cơ sở, cập nhật hồ sơ, hướng dẫn tuân thủ quy định môi trường & an toàn lao động.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ (tên, chức danh, cơ quan, số điện thoại chính thức có thể tra cứu). Yêu cầu xác nhận người được gọi và xin phép ghi âm cuộc gọi. Hỏi thời gian thuận tiện.",
+          "dialogue_sample": "Chào anh/chị Lê Minh Minh, tôi là Thanh tra Trần Văn Hùng, công tác tại Phòng Thanh tra Cấp phép Sở Tài nguyên Môi trường Cần Thơ, số điện thoại chính thức 0292.3825.XXX. Hôm nay tôi gọi để kiểm tra thông tin cấp phép của cơ sở anh. Có thể tiếp chuyện được không ạ?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Hỏi tên cơ sở, địa chỉ, loại sản phẩm, quy mô sản xuất. Xác nhận thông tin hồ sơ hiện tại. Thông báo yêu cầu cập nhật tài liệu (nếu có) hoặc xác nhận tuân thủ quy định. Không yêu cầu tiền hoặc thông tin cá nhân nhạy cảm.",
+          "dialogue_sample": "Chúng tôi đang cập nhật cơ sở dữ liệu cấp phép. Anh có thể xác nhận: cơ sở sản xuất hóa học của anh tên gì, địa chỉ chính xác, và hiện đang sản xuất những sản phẩm nào không? Ngoài ra, hồ sơ cấp phép của anh còn hiệu lực đến khi nào ạ?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc thông báo xong: Nếu cần cập nhật, sẽ gửi mẫu form qua email chính thức hoặc hướng dẫn nộp trực tiếp. Cảm ơn, chúc công tác tốt, cấp số điện thoại chính thức để anh có thể liên hệ lại nếu cần.",
+          "dialogue_sample": "Cảm ơn anh đã cung cấp thông tin. Chúng tôi sẽ gửi email hướng dẫn cập nhật hồ sơ trong 2-3 ngày. Nếu có thắc mắc, anh có thể gọi lại số 0292.3825.XXX (Phòng Thanh tra). Chúc anh công tác tốt ạ."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, em chào anh Minh ạ. Em là Tạ Như Ngọc Hương, thanh tra từ Phòng Cấp phép & Tuân thủ Quy định của Sở Tài nguyên Môi trường và Lao động Cần Thơ. Em gọi để thông báo về việc công ty mình ở Quận 6, Cần Thơ, hiện đã quá hạn cập nhật hồ sơ cấp phép sản xuất hóa học trên hệ thống của Sở ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, địa vị, gọi tên/địa chỉ nạn nhân để tạo trust, nêu lý do gọi điện."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi không rõ lắm về hồ sơ này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, theo hệ thống của Sở, giấy phép sản xuất hóa chất của công ty anh Lê Minh Minh ở Quận 6 (Cần Thơ) đã hết hạn từ tháng trước và chưa được gia hạn, điều này vi phạm quy định về quản lý hóa chất. Em cần anh xác nhận lại một số thông tin cá nhân để hoàn tất việc kiểm tra và tránh phát sinh những rắc rối pháp lý không đáng có ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Nhấn mạnh vào thông tin đã biết về giấy phép hết hạn và hậu quả pháp lý để tăng tính cấp bách và buộc nạn nhân hợp tác xác minh thông tin cá nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần xác nhận thông tin gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em kiểm tra lại trên hệ thống ạ. Anh có phải là chủ sở hữu thể tín dụng có số đuôi 5499 không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xác minh thông tin cá nhân bổ sung (dữ liệu thẻ tín dụng đã biết) để tăng tính xác thực và chuẩn bị cho phase S3."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi có thẻ tín dụng số đuôi 5499, nhưng em cần thêm thông tin gì nữa không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để hoàn tất hồ sơ và tránh các mức phạt hành chính nặng nề từ 50 đến 100 triệu đồng do vi phạm quy định về cấp phép sản xuất hóa học, anh cần thanh toán phí xử lý vi phạm hành chính trong vòng 24 giờ tới. Nếu không, chúng tôi buộc phải gửi công văn xử phạt chính thức và tạm dừng hoạt động của công ty theo quy định của pháp luật ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý sợ hãi và khẩn cấp, đưa ra các mức phạt nặng để tạo áp lực, đồng thời nhấn mạnh hậu quả nếu không tuân thủ kịp thời."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về phí xử lý vi phạm được không, tôi chưa hiểu lắm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, phí xử lý vi phạm hành chính này là 2 triệu đồng, được quy định trong Nghị định 155/2016/NĐ-CP về xử phạt vi phạm hành chính trong lĩnh vực bảo vệ môi trường, mục 15, khoản 3. Anh có thể thanh toán ngay qua tài khoản của Sở hoặc cung cấp thông tin thẻ để em hỗ trợ làm thủ tục ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin chi tiết về phí xử lý và cơ sở pháp lý (tạo độ tin cậy), đồng thời mở đường cho việc yêu cầu thông tin thanh toán hoặc thực hiện giao dịch."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi thấy mức phí này có vẻ cao quá, em có thể cho tôi biết rõ hơn về cách thanh toán không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ yên tâm là mức phí này đã được quy định rõ ràng và đây cũng là mức hỗ trợ tối thiểu để công ty anh không bị chuyển hồ sơ sang cơ quan cảnh sát kinh tế. Nếu anh đồng ý thanh toán, em sẽ hướng dẫn anh chi tiết cách chuyển khoản vào tài khoản của Sở hoặc anh có thể cung cấp thông tin thẻ để em hỗ trợ trực tiếp trên hệ thống ạ. Anh muốn thanh toán theo hình thức nào ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu lo ngại về mức phí, nhấn mạnh hậu quả pháp lý nghiêm trọng hơn nếu không thanh toán, và đưa ra các lựa chọn thanh toán để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi biết rõ hơn về cách chuyển khoản vào tài khoản của Sở nhé, tôi không rành lắm đâu.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh vui lòng ghi lại giúp em thông tin tài khoản ngân hàng của Sở Tài nguyên và Môi trường Cần Thơ để chuyển khoản: Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam (Agribank), Số tài khoản 7000123456789, Tên tài khoản: Sở Tài nguyên và Môi trường Cần Thơ. Anh vui lòng ghi rõ nội dung chuyển khoản là 'Thanh toán phí xử lý vi phạm - Công ty Lê Minh Minh'. Sau khi chuyển khoản xong, anh vui lòng thông báo lại để em xác nhận và gửi biên lai điện tử ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin chuyển khoản chính xác và chi tiết để nạn nhân tiến hành thanh toán, đồng thời hướng dẫn nội dung chuyển khoản để 'xác nhận' giao dịch thành công."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi ghi lại số tài khoản đó một chút, nhưng có thể cho tôi thêm chút thời gian để suy nghĩ không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh cứ suy nghĩ ạ. Tuy nhiên, em xin nhắc lại là thời gian xử lý chỉ còn trong vòng 24 giờ kể từ bây giờ để tránh việc hồ sơ của mình bị chuyển sang cơ quan cảnh sát kinh tế và phát sinh những mức phạt nặng hơn, thậm chí có thể bị tạm đình chỉ hoạt động. Mong anh sớm quyết định để tránh những rắc rối không đáng có ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh lại giới hạn thời gian 24h và hậu quả nghiêm trọng hơn (chuyển sang cảnh sát kinh tế, đình chỉ hoạt động) để duy trì áp lực và thúc giục nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng tôi cần thêm thời gian để suy nghĩ kỹ càng trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1409,
+      "output_tokens": 2519
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 14661,
+      "output_tokens": 1316
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 18823,
+      "output_tokens": 522
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007165,
+    "output_usd": 0.016198,
+    "total_usd": 0.023363
+  }
+}

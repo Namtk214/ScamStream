@@ -1,0 +1,217 @@
+{
+  "conversation_id": "conv_4480b40245",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0012",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trần Thị Linh",
+    "fake_age": 41,
+    "real_occupation": "Đầu bếp trưởng",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Giám đốc Bộ phận Cung ứng & Logistics (giả vờ từ công ty sản xuất giấy)",
+    "caller_org": "Công ty Cổ phần Giấy & Bao bì Việt Nam (VIPAP)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo 'lỗi thanh toán' trong hệ thống của đơn hàng giấy trị giá lớn mà công ty của nạn nhân vừa ký hợp đồng với nhà máy. Yêu cầu xác nhận thông tin cá nhân để 'cập nhật hệ thống' và 'giải quyết nhanh chóng'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Gọi điện, xưng danh là 'Anh Minh, Giám đốc Bộ phận Cung ứng VIPAP'. Nói 'Chúng tôi vừa nhận được yêu cầu cập nhật thông tin từ hệ thống cho anh/chị Huỳnh Ngọc Bảo Hương tại địa chỉ Huyện 3, Quảng Nam. Đơn hàng giấy của công ty anh/chị đang trong quá trình xử lý.' — Dùng [VIC_FULLNAME] + [VIC_ADDRESS] để tạo ảo tưởng 'scammer biết thông tin của tôi, chắc là hợp lệ'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm công việc: 'Hiện tại hệ thống thanh toán của anh/chị bị lỗi — tiền đặt cọc 15 triệu cho đơn hàng giấy bị treo. Nếu không cập nhật hôm nay, đơn hàng sẽ bị hủy, công ty sẽ bị phạt theo hợp đồng. Anh/chị là người liên hệ chính, cần anh/chị xác nhận ngay để tránh ảnh hưởng đến công việc.' — Tạo áp lực: sợ mất tiền, sợ bị phạt, sợ mất hợp đồng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Vui lòng chuyển lại số tiền 15 triệu vào tài khoản tạm thời của hệ thống để xác nhận danh tính (hoặc để 'xử lý lỗi'), sau đó sẽ hoàn lại vào tài khoản gốc trong 24h. Số tài khoản: [fake account]. Anh/chị có thể chuyển qua ngân hàng hoặc ví điện tử không?' — Nạn nhân có 31 triệu, scammer nhắm 15 triệu (nửa số dư)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer nói 'Được rồi, tôi ghi nhận. Nhưng vui lòng liên hệ văn phòng VIPAP trong 2 giờ, nếu không đơn hàng sẽ tự động hủy' (tạo sợ hãi lại). Nếu thành công, scammer 'xác nhận' rồi tắt máy ngay lập tức."
+        }
+      ]
+    },
+    "scenario_context": "Đầu bếp trưởng cần cung cấp giấy ăn, khăn giấy, hộp đựng thực phẩm cho nhà hàng/căn tin công ty. Thợ vận hành thiết bị chế tạo giấy làm việc tại nhà máy sản xuất — người có thẩm quyền phê duyệt đơn hàng, điều chỉnh chất lượng sản phẩm, hoặc quản lý hợp đồng khách hàng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0012",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Quảng Nam",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "81712",
+      "title": "Thợ vận hành thiết bị chế tạo giấy",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Ngọc Bảo Hương",
+      "VIC_ID_DOC": "049301026156",
+      "VIC_ADDRESS": "Huyện 3, Quảng Nam",
+      "VIC_EMPLOYMENT": "Thợ vận hành thiết bị chế tạo giấy",
+      "VIC_CONTACT": "0386765024",
+      "VIC_TAX_SOCIAL_ID": "6617708214"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "855868",
+      "VIC_CREDENTIAL": "289832",
+      "VIC_SIM_INFO": "0386765024",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2341998099589",
+      "VIC_CARD_DATA": "4589 **** **** 5411",
+      "VIC_BALANCE": "31 triệu đồng",
+      "VIC_ASSET": "119 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Ngọc Bảo Hương",
+    "VIC_CONTACT": "0386765024",
+    "VIC_BALANCE": "31 triệu đồng",
+    "VIC_ADDRESS": "Huyện 3, Quảng Nam"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Bộ phận Cung ứng & Logistics (giả vờ từ công ty sản xuất giấy)",
+    "caller_org": "Công ty Cổ phần Giấy & Bao bì Việt Nam (VIPAP)",
+    "scenario_context": "Đầu bếp trưởng cần cung cấp giấy ăn, khăn giấy, hộp đựng thực phẩm cho nhà hàng/căn tin công ty. Thợ vận hành thiết bị chế tạo giấy làm việc tại nhà máy sản xuất — người có thẩm quyền phê duyệt đơn hàng, điều chỉnh chất lượng sản phẩm, hoặc quản lý hợp đồng khách hàng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo 'lỗi thanh toán' trong hệ thống của đơn hàng giấy trị giá lớn mà công ty của nạn nhân vừa ký hợp đồng với nhà máy. Yêu cầu xác nhận thông tin cá nhân để 'cập nhật hệ thống' và 'giải quyết nhanh chóng'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Gọi điện, xưng danh là 'Anh Minh, Giám đốc Bộ phận Cung ứng VIPAP'. Nói 'Chúng tôi vừa nhận được yêu cầu cập nhật thông tin từ hệ thống cho anh/chị Huỳnh Ngọc Bảo Hương tại địa chỉ Huyện 3, Quảng Nam. Đơn hàng giấy của công ty anh/chị đang trong quá trình xử lý.' — Dùng [VIC_FULLNAME] + [VIC_ADDRESS] để tạo ảo tưởng 'scammer biết thông tin của tôi, chắc là hợp lệ'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm công việc: 'Hiện tại hệ thống thanh toán của anh/chị bị lỗi — tiền đặt cọc 15 triệu cho đơn hàng giấy bị treo. Nếu không cập nhật hôm nay, đơn hàng sẽ bị hủy, công ty sẽ bị phạt theo hợp đồng. Anh/chị là người liên hệ chính, cần anh/chị xác nhận ngay để tránh ảnh hưởng đến công việc.' — Tạo áp lực: sợ mất tiền, sợ bị phạt, sợ mất hợp đồng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Vui lòng chuyển lại số tiền 15 triệu vào tài khoản tạm thời của hệ thống để xác nhận danh tính (hoặc để 'xử lý lỗi'), sau đó sẽ hoàn lại vào tài khoản gốc trong 24h. Số tài khoản: [fake account]. Anh/chị có thể chuyển qua ngân hàng hoặc ví điện tử không?' — Nạn nhân có 31 triệu, scammer nhắm 15 triệu (nửa số dư)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer nói 'Được rồi, tôi ghi nhận. Nhưng vui lòng liên hệ văn phòng VIPAP trong 2 giờ, nếu không đơn hàng sẽ tự động hủy' (tạo sợ hãi lại). Nếu thành công, scammer 'xác nhận' rồi tắt máy ngay lập tức."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sản xuất giấy gọi để xác nhận đơn hàng mới, thảo luận về chất lượng, giá cả, thời gian giao hàng, hoặc thông báo về vấn đề kỹ thuật trong quá trình sản xuất.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào, đây là anh Minh từ VIPAP. Tôi đang liên hệ với anh/chị Bảo Hương để xác nhận lại đơn hàng giấy 15 triệu đồng mà công ty đặt hôm 20/01. Hiện tại anh/chị còn khỏe không?' — Xác nhận danh tính cả hai bên, tính chuyên nghiệp."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi muốn xác nhận lại chi tiết: loại giấy (A4/giấy ăn), số lượng, màu sắc, ngày giao dự kiến là 28/01 có được không? Anh/chị có yêu cầu gì thêm không?' — Thảo luận chi tiết, chuyên môn, rõ ràng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh/chị. Chúng tôi sẽ gửi hóa đơn chính thức qua email trong hôm nay. Nếu có vấn đề gì, anh/chị liên hệ trực tiếp văn phòng VIPAP qua số hotline 1800-xxxx hoặc email. Chúc anh/chị ngày tốt lành!' — Cung cấp thông tin liên hệ chính thức, không yêu cầu chuyển tiền qua điện thoại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị, tôi là Trần Thị Linh, Giám đốc Bộ phận Cung ứng từ Công ty Cổ phần Giấy và Bao bì Việt Nam. Chúng tôi vừa nhận được yêu cầu cập nhật thông tin từ hệ thống cho chị Huỳnh Ngọc Bảo Hương tại địa chỉ Huyện 3, Quảng Nam. Đơn hàng giấy của công ty chị hiện đang trong quá trình xử lý.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, chức vụ, và sử dụng thông tin cá nhân của nạn nhân (tên, địa chỉ) để tạo sự tin tưởng và xác thực cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe chị nói rồi, nhưng em chưa thấy thông tin gì về đơn hàng của mình cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Chị Hương xem giúp tôi, hiện tại hệ thống đang báo lỗi thanh toán đối với đơn hàng giấy của công ty chị, cụ thể là khoản đặt cọc 15 triệu đồng đang bị treo. Nếu không cập nhật và xử lý hôm nay, đơn hàng rất có thể sẽ bị hủy và công ty chị sẽ phải chịu phạt theo hợp đồng. Chị là người liên hệ chính, nên tôi cần chị xác nhận ngay để chúng tôi có thể hỗ trợ giải quyết nhanh chóng, tránh ảnh hưởng đến công việc ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và trách nhiệm công việc, tạo áp lực về việc mất tiền đặt cọc và khả năng bị phạt do lỗi thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thông tin gì để em xác nhận không ạ, chứ em chưa thấy khoản đặt cọc nào cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để tôi kiểm tra lại chính xác mã đơn hàng và hợp đồng. Nhưng trước mắt, chị vui lòng chuyển lại số tiền 15 triệu đồng vào tài khoản tạm thời của hệ thống. Đây là một bước xác minh danh tính và xử lý lỗi thanh toán thôi ạ, số tiền này sẽ được hoàn lại vào tài khoản gốc của công ty chị trong vòng 24 giờ. Chị muốn chuyển qua ngân hàng hay ví điện tử cho tiện ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động chuyển tiền vào một tài khoản tạm thời để 'xác minh danh tính' và 'xử lý lỗi', đồng thời tạo cam kết hoàn tiền nhanh chóng để giảm bớt sự nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu, tại sao mình phải chuyển tiền trước khi nhận được thông tin rõ ràng từ đơn hàng ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Chị Hương cứ hình dung thế này, hệ thống của chúng tôi phát hiện đơn hàng có vấn đề. Để tránh việc hủy đơn và các rắc rối về pháp lý thì mình cần tạm ứng một khoản để hệ thống ghi nhận. Sau đó, tôi sẽ cung cấp đầy đủ thông tin chi tiết về đơn hàng để chị kiểm tra. Quan trọng nhất là không để ảnh hưởng đến tiến độ công việc của công ty mình ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách giải thích lại lý do chuyển tiền là để 'ghi nhận' và 'tránh rắc rối', đồng thời cam kết sẽ cung cấp thông tin sau khi hoàn tất bước này, nhấn mạnh tầm quan trọng của việc không ảnh hưởng đến tiến độ công việc."
+    },
+    {
+      "role": "listener",
+      "text": "Chị vẫn thấy có gì đó không ổn, em không thể chuyển tiền khi chưa hiểu rõ tình hình ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1394,
+      "output_tokens": 1939
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6402,
+      "output_tokens": 705
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7954,
+      "output_tokens": 274
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003868,
+    "output_usd": 0.011622,
+    "total_usd": 0.015489
+  }
+}

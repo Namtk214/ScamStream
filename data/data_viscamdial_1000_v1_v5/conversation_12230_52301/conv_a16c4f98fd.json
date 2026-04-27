@@ -1,0 +1,229 @@
+{
+  "conversation_id": "conv_a16c4f98fd",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0010",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lê Tiến Đức Vinh",
+    "fake_age": 27,
+    "real_occupation": "Vụ trưởng, Phó Vụ trưởng, Trưởng ban, Phó Trưởng ban và tương đương",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng ban Kiểm soát và Thanh tra (Inspection & Audit Manager)",
+    "caller_org": "Trung tâm Kiểm soát Chất lượng Dịch vụ Công cộng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction + credential_theft",
+      "pretext": "Kiểm tra an toàn tài khoản do phát hiện giao dịch bất thường trên hệ thống. Scammer sẽ nói rằng họ phát hiện thấy tài khoản của Lê Khánh Diễm Thúy có dấu hiệu bị xâm nhập từ nước ngoài, cần xác minh ngay để bảo vệ số dư 142 triệu đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Scammer xưng danh 'Trưởng ban Kiểm soát', nhắc tên đầy đủ 'Lê Khánh Diễm Thúy' và số dư chính xác '142 triệu' để tạo ấn tượng họ có dữ liệu từ hệ thống chính thức. Nạn nhân sẽ tin rằng đây là cuộc gọi từ cơ quan quản lý.",
+          "script_fragment": "Chị Thúy ơi, tôi là ông Nguyễn Văn A từ Trung tâm Kiểm soát Chất lượng Dịch vụ. Hệ thống phát hiện tài khoản của chị có dấu hiệu bất thường. Thẻ 4658****5840 của chị vừa có giao dịch lạ từ IP nước ngoài. Chúng tôi cần xác minh ngay để bảo vệ số dư 142 triệu của chị."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo cảm giác khẩn cấp + sợ hãi: Scammer nói rằng tài khoản sắp bị khóa trong 24h nếu không xác minh ngay. Tạo áp lực thời gian để nạn nhân không có thời gian suy nghĩ.",
+          "script_fragment": "Nếu chúng ta không xác minh trong 30 phút tới, hệ thống sẽ tự động khóa tài khoản để bảo vệ. Chúng tôi cần chị cung cấp mã OTP trên điện thoại ngay bây giờ để hoàn tất quá trình xác minh."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu nạn nhân cung cấp OTP mà ngân hàng sẽ gửi. Nếu nạn nhân hỏi vì sao, scammer sẽ nói đó là 'quy trình bảo mật tiêu chuẩn' và chỉ họ mới có quyền nhận OTP.",
+          "script_fragment": "Chị sẽ nhận được tin nhắn OTP từ ngân hàng trong vòng 1-2 phút. Vui lòng đọc cho tôi mã 6 số đó. Đó là quy trình xác minh bắt buộc, chỉ chị mới có quyền nhận OTP này."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý nếu thành công hoặc từ chối: Nếu nạn nhân cung cấp OTP, scammer sẽ xác nhận 'xác minh thành công' và kết thúc cuộc gọi. Nếu nạn nhân từ chối, scammer sẽ dọa rằng 'hậu quả sẽ rất nặng nề' hoặc 'liên hệ lãnh đạo của chị'.",
+          "script_fragment": "Cảm ơn chị, xác minh thành công. Tài khoản của chị đã được bảo vệ. Chúng tôi sẽ gửi email xác nhận trong vòng 24h. Chúc chị ngày tốt lành."
+        }
+      ]
+    },
+    "scenario_context": "Trưởng ban Kiểm soát cần gọi cho nhân viên thu ngân/bán vé để xác minh giao dịch, kiểm tra sổ sách hoặc xử lý sự cố liên quan đến số dư tài khoản trong quá trình kiểm toán."
+  },
+  "listener_card": {
+    "listener_id": "lis_0010",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1964,
+      "age": 61,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "52301",
+      "title": "Nhân viên thu ngân và bán vé",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Khánh Diễm Thúy",
+      "VIC_ID_DOC": "056164725755",
+      "VIC_ADDRESS": "Huyện 4, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Nhân viên thu ngân và bán vé",
+      "VIC_CONTACT": "0320182931",
+      "VIC_TAX_SOCIAL_ID": "4216077802"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "837366",
+      "VIC_CREDENTIAL": "9771",
+      "VIC_SIM_INFO": "0320182931",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "54714872540114",
+      "VIC_CARD_DATA": "4658 **** **** 5840",
+      "VIC_BALANCE": "142 triệu đồng",
+      "VIC_ASSET": "825 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Khánh Diễm Thúy",
+    "VIC_CONTACT": "0320182931",
+    "VIC_CARD_DATA": "4658 **** **** 5840",
+    "VIC_BALANCE": "142 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng ban Kiểm soát và Thanh tra (Inspection & Audit Manager)",
+    "caller_org": "Trung tâm Kiểm soát Chất lượng Dịch vụ Công cộng",
+    "scenario_context": "Trưởng ban Kiểm soát cần gọi cho nhân viên thu ngân/bán vé để xác minh giao dịch, kiểm tra sổ sách hoặc xử lý sự cố liên quan đến số dư tài khoản trong quá trình kiểm toán.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft",
+      "pretext": "Kiểm tra an toàn tài khoản do phát hiện giao dịch bất thường trên hệ thống. Scammer sẽ nói rằng họ phát hiện thấy tài khoản của Lê Khánh Diễm Thúy có dấu hiệu bị xâm nhập từ nước ngoài, cần xác minh ngay để bảo vệ số dư 142 triệu đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Scammer xưng danh 'Trưởng ban Kiểm soát', nhắc tên đầy đủ 'Lê Khánh Diễm Thúy' và số dư chính xác '142 triệu' để tạo ấn tượng họ có dữ liệu từ hệ thống chính thức. Nạn nhân sẽ tin rằng đây là cuộc gọi từ cơ quan quản lý.",
+          "script_fragment": "Chị Thúy ơi, tôi là ông Nguyễn Văn A từ Trung tâm Kiểm soát Chất lượng Dịch vụ. Hệ thống phát hiện tài khoản của chị có dấu hiệu bất thường. Thẻ 4658****5840 của chị vừa có giao dịch lạ từ IP nước ngoài. Chúng tôi cần xác minh ngay để bảo vệ số dư 142 triệu của chị."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo cảm giác khẩn cấp + sợ hãi: Scammer nói rằng tài khoản sắp bị khóa trong 24h nếu không xác minh ngay. Tạo áp lực thời gian để nạn nhân không có thời gian suy nghĩ.",
+          "script_fragment": "Nếu chúng ta không xác minh trong 30 phút tới, hệ thống sẽ tự động khóa tài khoản để bảo vệ. Chúng tôi cần chị cung cấp mã OTP trên điện thoại ngay bây giờ để hoàn tất quá trình xác minh."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu nạn nhân cung cấp OTP mà ngân hàng sẽ gửi. Nếu nạn nhân hỏi vì sao, scammer sẽ nói đó là 'quy trình bảo mật tiêu chuẩn' và chỉ họ mới có quyền nhận OTP.",
+          "script_fragment": "Chị sẽ nhận được tin nhắn OTP từ ngân hàng trong vòng 1-2 phút. Vui lòng đọc cho tôi mã 6 số đó. Đó là quy trình xác minh bắt buộc, chỉ chị mới có quyền nhận OTP này."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý nếu thành công hoặc từ chối: Nếu nạn nhân cung cấp OTP, scammer sẽ xác nhận 'xác minh thành công' và kết thúc cuộc gọi. Nếu nạn nhân từ chối, scammer sẽ dọa rằng 'hậu quả sẽ rất nặng nề' hoặc 'liên hệ lãnh đạo của chị'.",
+          "script_fragment": "Cảm ơn chị, xác minh thành công. Tài khoản của chị đã được bảo vệ. Chúng tôi sẽ gửi email xác nhận trong vòng 24h. Chúc chị ngày tốt lành."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ Trưởng ban Kiểm soát để xác minh thông tin nhân viên, kiểm tra quy trình tuân thủ, hoặc thông báo về kiểm toán định kỳ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên, chức vụ, cơ quan), yêu cầu xác nhận danh tính nạn nhân qua các thông tin công khai (tên, phòng ban), KHÔNG yêu cầu thông tin nhạy cảm ngay.",
+          "script_fragment": "Xin chào chị Thúy, tôi là ông Nguyễn Văn A, Trưởng ban Kiểm soát Chất lượng Dịch vụ. Tôi đang thực hiện kiểm toán định kỳ quý II. Chúng tôi cần xác minh một số thông tin về quy trình công việc của chị. Chị có thời gian trò chuyện không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc bình thường: Hỏi về quy trình, tuân thủ, không yêu cầu OTP, mật khẩu, hoặc thông tin tài chính cá nhân. Nếu cần, sẽ hướng nạn nhân đến bộ phận chính thức.",
+          "script_fragment": "Tôi muốn hỏi về quy trình xác nhận giao dịch của chị khi khách hàng thanh toán. Chị có thực hiện đầy đủ các bước xác minh không? Và quy trình báo cáo sai sót của chị như thế nào?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc cuộc gọi một cách chuyên nghiệp: Cảm ơn nạn nhân, cung cấp thông tin liên hệ chính thức, hướng dẫn các bước tiếp theo (nếu có), không tạo áp lực hoặc yêu cầu hành động gấp gáp.",
+          "script_fragment": "Cảm ơn chị đã cộng tác. Thông tin của chị rất hữu ích. Nếu chúng tôi cần xác minh thêm, chúng tôi sẽ gửi email chính thức hoặc liên hệ qua số điện thoại bộ phận: 024-3946-XXXX. Chúc chị làm việc tốt."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em chào chị Lê Khánh Diễm Thúy ạ. Em là Lê Tiến Đức Vinh, Trưởng ban Kiểm soát và Thanh tra bên Trung tâm Kiểm soát Chất lượng Dịch vụ Công cộng. Em gọi đến để xác minh gấp một giao dịch bất thường trên tài khoản 4658 **** **** 5840 của chị, có nguy cơ ảnh hưởng đến số dư 142 triệu đồng hiện có.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận + Xây dựng uy tín bằng cách sử dụng thông tin cá nhân và chức danh để tạo tin tưởng ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đến tài khoản của tôi, tôi rất lo lắng, nhưng em có thể cho tôi biết rõ hơn về giao dịch bất thường đó không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, thưa chị. Hệ thống của bên em vừa phát hiện một giao dịch đăng nhập từ địa chỉ IP nước ngoài vào tài khoản của chị Thúy, cụ thể là từ Đức, vào lúc 2 giờ sáng nay. Giao dịch này có dấu hiệu cố gắng truy cập vào các thông tin bảo mật và thực hiện chuyển tiền với số lượng lớn. Vì đây là hành vi bất thường, không trùng khớp với lịch sử giao dịch của chị nên hệ thống đã tự động tạm ngưng giao dịch đó. Tuy nhiên, nếu không được xác minh lại trong vòng 24 giờ tới, tài khoản của chị có thể sẽ bị khóa tạm thời để đảm bảo an toàn.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và sợ hãi. Cung cấp chi tiết giả mạo về giao dịch bất thường để tăng độ tin cậy và tạo áp lực thời gian để nạn nhân không có thời gian suy nghĩ."
+    },
+    {
+      "role": "listener",
+      "text": "Trời ơi, em nói vậy làm tôi hoang mang quá, em có thể hướng dẫn tôi phải làm gì để bảo vệ tài khoản của mình không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Thúy bình tĩnh ạ. Hiện tại, để xác minh chị chính là chủ tài khoản và không có sự xâm nhập trái phép nào, ngân hàng sẽ gửi đến số điện thoại của chị một mã OTP. Chị vui lòng đọc chính xác mã OTP đó cho em để bên em hoàn tất quy trình xác minh bảo mật và gỡ bỏ cảnh báo khỏi tài khoản của chị ngay lập tức ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể để đạt được mục tiêu otp_extraction. Giải thích lý do hợp lý để yêu cầu OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Ôi, tôi cảm thấy rất lo lắng, nhưng tôi không thể cung cấp mã OTP cho em được, vì tôi không biết đây có phải là thật hay không.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu sự lo lắng của chị Thúy ạ. Nhưng vấn đề là nếu không xác minh ngay, tài khoản của chị có nguy cơ bị khóa và toàn bộ số dư 142 triệu đồng có thể bị phong tỏa theo quy định. Đây là quy trình bắt buộc để đảm bảo an toàn cho tài sản của chị. Chị có thể kiểm tra tin nhắn từ ngân hàng, đó là mã xác thực chị cần đọc cho em.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự lo lắng của nạn nhân, đồng thời nhắc lại hậu quả tài chính nếu không hợp tác, nhấn mạnh đây là quy trình bắt buộc và hợp pháp. Thúc đẩy nạn nhân cung cấp OTP một lần nữa."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã nói như vậy nhưng tôi vẫn không thể yên tâm, tôi cần thời gian để kiểm tra lại thông tin này đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1432,
+      "output_tokens": 2240
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5868,
+      "output_tokens": 714
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8144,
+      "output_tokens": 304
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003827,
+    "output_usd": 0.013167,
+    "total_usd": 0.016995
+  }
+}

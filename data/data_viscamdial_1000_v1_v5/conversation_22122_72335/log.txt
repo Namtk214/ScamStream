@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c4e7152127]
+  Caller thật: Bác sỹ da liễu (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Giám đốc Y tế - Trung tâm Thẩm mỹ & Khám chữa bệnh Công nghiệp @ Trung tâm Y tế Công nghiệp & An toàn Lao động Miền Nam
+  Listener: Thợ lắp đặt máy móc, thiết bị (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Bác sỹ da liễu làm giám đốc y tế tại một trung tâm chuyên khám sức khỏe cho công nhân công nghiệp. Thợ lắp đặt máy móc là công nhân cần khám định kỳ hoặc khám sức khỏe trước kỳ hợp đồng; bác sỹ gọi để xác nhận lịch khám hoặc thông báo kết quả.
+  Pretext: Gọi với danh nghĩa Giám đốc Y tế, thông báo rằng công ty của nạn nhân (hoặc chính nạn nhân) có yêu cầu khám sức khỏe định kỳ bắt buộc. Sử dụng tên đầy đủ của nạn nhân để tạo tin cậy, sau đó dùng lý do 'phát hiện bất thường trong hồ sơ' để tạo cấp bách.
+  Listener traits: ['nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào anh Phạm Tiến Minh Phong, em là Bác sỹ Tô Khánh Vy, Giám đốc Y tế từ Trung tâm Y tế Công nghiệp & An toàn Lao động Miền Nam. Em vừa nhận được thông tin anh là thợ lắp đặt máy móc tại công ty. Anh có nhận được thư mời khám sức khỏe định kỳ không ạ?
+      → phase: S1 | tactic: Tiếp cận, xác minh danh tính và tạo độ tin cậy bằng cách sử dụng thông tin cá nhân của nạn nhân và chức danh giả mạo.
+T02 [LISTENER] Tôi chưa nhận được thư mời khám sức khỏe nào cả, em có thể cho tôi biết thêm thông tin không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Anh Phạm Tiến Minh Phong ơi, hệ thống của em vừa phát hiện một bất thường trong kết quả xét nghiệm của anh từ lần khám trước. Chỉ số viêm da có dấu hiệu bất thường. Để không ảnh hưởng đến hợp đồng lao động, anh cần phải thanh toán ngay phí khám chuyên sâu thêm 5 triệu đồng để chúng em cập nhật hồ sơ.
+      → phase: S2 | tactic: Tạo tâm lý khẩn cấp và sợ hãi bằng cách thông báo về 'bất thường' trong hồ sơ sức khỏe và liên kết nó với hợp đồng lao động.
+T04 [LISTENER] Em nói vậy khiến tôi lo quá, nhưng tôi chưa chuẩn bị tiền để thanh toán ngay bây giờ, em có cách nào khác không?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ em hiểu ạ. Tuy nhiên, đây là thủ tục hành chính bắt buộc để cập nhật hồ sơ y tế cho anh, đảm bảo anh đủ tiêu chuẩn sức khỏe theo quy định của công ty. Để thuận tiện nhất, anh vui lòng chuyển khoản số tiền này vào tài khoản của trung tâm em qua ứng dụng ngân hàng hoặc tại cây ATM. Số tài khoản trung tâm là 1903827465389. Sau khi thanh toán, chúng em sẽ cập nhật hồ sơ của anh trong vòng 2 giờ làm việc để anh không bị ảnh hưởng đến hợp đồng lao động ạ.
+      → phase: S3 | tactic: Yêu cầu chuyển tiền qua hình thức 'an toàn' (ngân hàng/ATM) và nhấn mạnh tính bắt buộc, lợi ích cho nạn nhân.
+T06 [LISTENER] Em nói như vậy nhưng tôi vẫn không yên tâm lắm, có cách nào khác để tôi có thể kiểm tra được không?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.00
+TOKEN: in=11167 | out=2879
+COST : $0.015317
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_22122_72335\conv_c4e7152127.json  [SCAM_REFUSE]

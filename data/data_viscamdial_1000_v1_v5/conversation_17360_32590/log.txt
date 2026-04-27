@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_875ab9f436]
+  Caller thật: Dịch vụ và tính toán (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Nhân viên tư vấn tài chính & bảo hiểm sức khỏe @ Công ty Dịch vụ Tư vấn Tài chính và Bảo hiểm Sức khỏe (hoặc tự do)
+  Listener: Kỹ thuật viên sức khỏe khác chưa được phân vào đâu (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Kỹ thuật viên sức khỏe có mức thu nhập ổn định (141 triệu đồng tiết kiệm) và tài sản (212 triệu đồng) — đó là đối tượng tiềm năng cho các gói bảo hiểm, tư vấn đầu tư, hoặc tối ưu hóa tài chính sức khỏe. Nhân viên tư vấn tài chính có lý do hợp lệ để gọi.
+  Pretext: Gọi thông báo rằng Mai Thanh Anh đã được chọn vào chương trình 'Bảo hiểm Sức khỏe Toàn diện + Tối ưu Tài chính' dành riêng cho cán bộ y tế. Để kích hoạt gói bảo hiểm với lợi suất đầu tư cao (12-15%/năm), cần chuyển khoản 'ký quỹ ban đầu' vào tài khoản ủy thác.
+  Listener traits: ['sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Mai Thanh Anh, tôi là Bùi Thu Linh, nhân viên tư vấn tài chính từ công ty Dịch vụ Tư vấn Tài chính và Bảo hiểm Sức khỏe. Chúng tôi vừa phát hiện hồ sơ của chị có điều kiện rất tốt để tham gia chương trình 'Bảo hiểm Sức khỏe Toàn diện + Tối ưu Tài chính' dành riêng cho cán bộ y tế tại Thanh Hóa của mình, đặc biệt với khoản tiết kiệm 141 triệu và tổng tài sản lên đến 212 triệu đồng.
+      → phase: S1 | tactic: Giới thiệu bản thân và sử dụng thông tin cá nhân của nạn nhân (tên tuổi, địa điểm, tài chính) để tạo tin tưởng và gây ấn tượng rằng họ biết rõ về nạn nhân.
+T02 [LISTENER] Em nghe chị nói rồi, nhưng em muốn biết thêm thông tin về chương trình bảo hiểm này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Tuyệt vời, chị Mai Thanh Anh! Đây là một chương trình rất đặc biệt, được thiết kế riêng cho các chuyên gia y tế ưu tú. Chương trình này chỉ dành cho vỏn vẹn 100 chuyên gia trên cả nước và chúng tôi thấy chị có đủ điều kiện để tham gia. Lợi suất đầu tư dự kiến lên tới 12-15% mỗi năm và được đảm bảo bằng bảo hiểm nhân thọ uy tín. Quan trọng hơn, hạn chót để đăng ký và kích hoạt gói này là chiều nay 17h, chị ạ.
+      → phase: S2 | tactic: Tạo cảm giác 'cơ hội hiếm' và 'bảo mật' bằng cách nhấn mạnh số lượng giới hạn và lợi ích cao, đồng thời tạo áp lực thời gian để nạn nhân phải hành động nhanh chóng.
+T04 [LISTENER] Nghe có vẻ hấp dẫn quá, nhưng em cần thêm thời gian để suy nghĩ và kiểm tra lại thông tin ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Tôi hiểu là chị cần thời gian để suy nghĩ, chị Mai Thanh Anh ạ. Tuy nhiên, vì đây là chương trình VIP với số lượng có hạn và lợi suất đặc biệt nên quy định là phải kích hoạt trong hôm nay. Nếu chị bỏ lỡ, rất khó để có lại cơ hội tương tự. Tôi có thể giải đáp thêm bất kỳ thắc mắc nào của chị lúc này để chị đưa ra quyết định tốt nhất.
+      → phase: S2 | tactic: Xoa dịu sự từ chối bằng cách thể hiện sự thấu hiểu, nhưng đồng thời tái khẳng định áp lực thời gian và lợi ích độc quyền để duy trì cảm giác 'cơ hội hiếm'. Kêu gọi nạn nhân đặt câu hỏi để tiếp tục tương tác và khai thác.
+T06 [LISTENER] Chị nói cũng đúng, nhưng em vẫn cần thời gian để suy nghĩ cẩn thận hơn về quyết định này ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.00
+TOKEN: in=12160 | out=2727
+COST : $0.014901
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_17360_32590\conv_875ab9f436.json  [SCAM_REFUSE]

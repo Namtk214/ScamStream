@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c61b0df592]
+  Caller thật: Ca sỹ (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên kinh doanh/Đại lý thiết bị sân khấu và công nghiệp @ cá nhân/thương lái tự do
+  Listener: Thợ hàn (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Ca sỹ/nghệ sỹ thường cần hàn, sửa chữa thiết bị sân khấu, giàn nhôm, micro stand. Thợ hàn là người họ tìm kiếm trực tiếp hoặc qua giới thiệu. Đồng thời, thợ hàn cũng tiếp xúc với các đơn đặt hàng từ các công ty sự kiện, liveshow — đây là giao điểm tự nhiên.
+  Pretext: Đại lý thiết bị thực sự hoặc công ty sự kiện liên hệ thợ hàn để nhận đơn công việc hàn chính hãng, có hợp đồng, thanh toán minh bạch sau khi hoàn thành.
+  Listener traits: ['sĩ diện không muốn thua kém', 'nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh An, tôi là Lan từ đại lý thiết bị sân khấu. Chúng tôi đang tìm thợ hàn uy tín cho một dự án gấp ở Bình Dương. Anh có rảnh để trao đổi thêm không ạ?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi.
+T02 [LISTENER] Chào chị, tôi nghe chị nói rồi, nhưng tôi muốn biết thêm chi tiết về dự án ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, dự án là lắp đặt khung, giàn nhôm cho một sự kiện âm nhạc lớn sắp tới. Khối lượng công việc khá nhiều, cần thợ có kinh nghiệm hàn kết cấu chịu lực tốt. Địa điểm chính xác là ở trung tâm hội nghị thành phố mới Bình Dương. Về thời gian, chúng tôi cần hoàn thành trong 5 ngày, bắt đầu từ tuần sau. Anh An có thể sắp xếp thời gian được không? Và anh cho tôi hỏi thêm về kinh nghiệm của anh với các dự án tương tự ạ?
+      → phase: L2 | tactic: Cung cấp chi tiết cụ thể về dự án (loại công việc, địa điểm, thời gian, yêu cầu kỹ thuật) để người nghe hình dung rõ hơn, đồng thời thăm dò kinh nghiệm của họ.
+T04 [LISTENER] Chị nói rõ vậy tôi thấy dự án cũng hấp dẫn, tôi đã từng làm nhiều dự án hàn khác nhau, nhưng có điều tôi cần phải xem xét thêm thời gian và chi phí ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, tôi hiểu. Về chi phí, chúng tôi sẽ đưa ra mức giá cạnh tranh và có hợp đồng rõ ràng, đảm bảo quyền lợi cho anh. Chúng tôi cũng có thể ứng trước một phần để anh chuẩn bị vật tư nếu cần. Anh An có thể dành chút thời gian gặp trực tiếp để chúng ta trao đổi kỹ hơn và tôi có thể cho anh xem bản vẽ chi tiết không?
+      → phase: L2 | tactic: Thảo luận về chi phí và điều khoản thanh toán ban đầu, đồng thời đề xuất gặp mặt trực tiếp để cung cấp thêm thông tin chi tiết và tạo sự tin tưởng.
+T06 [LISTENER] Tôi thấy chị đề nghị gặp trực tiếp khá hấp dẫn, nhưng tôi cần thời gian suy nghĩ thêm để sắp xếp công việc của mình ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, anh cứ suy nghĩ và sắp xếp công việc của mình nhé. Khi nào anh có thể gặp, anh nhắn lại cho tôi qua số Zalo này cũng được. Tôi sẽ gửi thông tin chi tiết về dự án và các điều khoản thanh toán để anh tham khảo trước qua Zalo. Anh An có tiện cho tôi xin Zalo không ạ?
+      → phase: L2 | tactic: Tôn trọng quyết định của người nghe, tạo điều kiện thuận lợi để họ liên hệ lại bằng cách gợi ý Zalo để gửi thông tin và duy trì kênh liên lạc.
+T08 [LISTENER] Tôi xin lỗi, nhưng tôi không sử dụng Zalo, chị có thể gửi thông tin qua số điện thoại của tôi được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] À, vậy ạ. Vậy thì tôi sẽ gửi tin nhắn SMS chứa thông tin tóm tắt và một bản scan hợp đồng mẫu qua số điện thoại của anh nhé. Sau khi xem qua, nếu anh thấy phù hợp, anh có thể gọi lại cho tôi bất cứ lúc nào để chúng ta bàn bạc chi tiết hơn và sắp xếp buổi gặp mặt. Số điện thoại của tôi là 0987654321.
+      → phase: L2 | tactic: Thích nghi với yêu cầu của người nghe, cung cấp thông tin qua kênh khác (SMS) và duy trì sự chủ động trong liên lạc, nhắc nhở về số điện thoại của mình.
+T10 [LISTENER] Cảm ơn chị, tôi sẽ đợi tin nhắn và xem qua thông tin ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, vậy tôi sẽ gửi thông tin cho anh ngay đây. Cảm ơn anh An đã dành thời gian trao đổi với tôi nhé! Mong sớm nhận được phản hồi từ anh.
+      → phase: L2 | tactic: Kết thúc cuộc gọi một cách lịch sự sau khi đạt được mục tiêu gửi thông tin, đồng thời bày tỏ mong muốn được hợp tác.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=20777 | out=2866
+COST : $0.015596
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_26524_72121\conv_c61b0df592.json  [CALLER_END]

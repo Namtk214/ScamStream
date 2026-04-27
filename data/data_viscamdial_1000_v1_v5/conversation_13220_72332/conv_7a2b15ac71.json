@@ -1,0 +1,244 @@
+{
+  "conversation_id": "conv_7a2b15ac71",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0098",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lý Xuân Cường",
+    "fake_age": 46,
+    "real_occupation": "Chánh án, Phó Chánh án Tòa án nhân dân cấp huyện",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Nhân viên phòng Thi hành án dân sự, Tòa án nhân dân cấp huyện",
+    "caller_org": "Tòa án nhân dân huyện Khánh Hòa",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả danh nhân viên Tòa án thực hiện công việc thi hành án liên quan đến tài khoản ngân hàng 8428947425037 của Bùi Thu Thúy tại địa chỉ TP 1, Khánh Hòa. Yêu cầu xác nhận hoặc chuyển tiền để 'giải tỏa khoản nợ', 'lệnh phong tỏa tài khoản', hoặc 'bảo vệ tài sản trước khi bị tịch thu'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh 'Phòng Thi hành án, Tòa án nhân dân huyện Khánh Hòa'. Nêu tên đầy đủ nạn nhân (Bùi Thu Thúy) và địa chỉ (TP 1, Khánh Hòa) để tạo credibility. Ví dụ: 'Chị Thúy à, tôi là cán bộ từ Tòa án huyện. Tôi đang gọi liên quan đến tài khoản 8428947425037 của chị ở TP 1'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo tình huống khẩn cấp + sợ hãi. Nêu lý do 'Tài khoản của chị vừa bị phong tỏa theo lệnh từ Tòa án' hoặc 'Có khoản nợ cần xử lý trong 2 giờ, nếu không sẽ bị tịch thu tài sản'. Nhấn mạnh tính chính thức bằng cách đề cập 'Lệnh của Chánh án' hoặc 'Quyết định của Tòa án'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Hướng dẫn nạn nhân chuyển tiền vào tài khoản 'tạm thời' (thực chất là tài khoản của scammer) để 'bảo vệ tài sản' hoặc 'thanh toán khoản nợ'. Có thể yêu cầu cấp OTP, mã xác thực, hoặc tải ứng dụng để 'hoàn tất thủ tục điện tử'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer khẩn trương nói 'Thời hạn sắp hết, chị phải quyết định ngay, nếu không tòa án sẽ buộc thi hành'. Nếu thành công, kết thúc gọi nhanh chóng và tắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Tòa án cần liên hệ với chủ thể để thực hiện công việc thi hành án (thu giữ tài sản, kiểm kê), hoặc xác minh địa chỉ/tài khoản liên quan đến vụ án dân sự. Thợ sửa chữa có thể là bị đơn, người liên quan hoặc nhân chứng trong vụ tranh chấp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0098",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1961,
+      "age": 64,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "72332",
+      "title": "Thợ sửa chữa máy móc (chung)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Thu Thúy",
+      "VIC_ID_DOC": "056161583006",
+      "VIC_ADDRESS": "TP 1, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Thợ sửa chữa máy móc (chung)",
+      "VIC_CONTACT": "0963224503",
+      "VIC_TAX_SOCIAL_ID": "1925794557"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "668797",
+      "VIC_CREDENTIAL": "8885",
+      "VIC_SIM_INFO": "0963224503",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "8428947425037",
+      "VIC_CARD_DATA": "4568 **** **** 4807",
+      "VIC_BALANCE": "21 triệu đồng",
+      "VIC_ASSET": "66 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Thu Thúy",
+    "VIC_CONTACT": "0963224503",
+    "VIC_ADDRESS": "TP 1, Khánh Hòa",
+    "VIC_BANK_ACCOUNT": "8428947425037"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phòng Thi hành án dân sự, Tòa án nhân dân cấp huyện",
+    "caller_org": "Tòa án nhân dân huyện Khánh Hòa",
+    "scenario_context": "Tòa án cần liên hệ với chủ thể để thực hiện công việc thi hành án (thu giữ tài sản, kiểm kê), hoặc xác minh địa chỉ/tài khoản liên quan đến vụ án dân sự. Thợ sửa chữa có thể là bị đơn, người liên quan hoặc nhân chứng trong vụ tranh chấp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả danh nhân viên Tòa án thực hiện công việc thi hành án liên quan đến tài khoản ngân hàng 8428947425037 của Bùi Thu Thúy tại địa chỉ TP 1, Khánh Hòa. Yêu cầu xác nhận hoặc chuyển tiền để 'giải tỏa khoản nợ', 'lệnh phong tỏa tài khoản', hoặc 'bảo vệ tài sản trước khi bị tịch thu'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh 'Phòng Thi hành án, Tòa án nhân dân huyện Khánh Hòa'. Nêu tên đầy đủ nạn nhân (Bùi Thu Thúy) và địa chỉ (TP 1, Khánh Hòa) để tạo credibility. Ví dụ: 'Chị Thúy à, tôi là cán bộ từ Tòa án huyện. Tôi đang gọi liên quan đến tài khoản 8428947425037 của chị ở TP 1'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo tình huống khẩn cấp + sợ hãi. Nêu lý do 'Tài khoản của chị vừa bị phong tỏa theo lệnh từ Tòa án' hoặc 'Có khoản nợ cần xử lý trong 2 giờ, nếu không sẽ bị tịch thu tài sản'. Nhấn mạnh tính chính thức bằng cách đề cập 'Lệnh của Chánh án' hoặc 'Quyết định của Tòa án'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Hướng dẫn nạn nhân chuyển tiền vào tài khoản 'tạm thời' (thực chất là tài khoản của scammer) để 'bảo vệ tài sản' hoặc 'thanh toán khoản nợ'. Có thể yêu cầu cấp OTP, mã xác thực, hoặc tải ứng dụng để 'hoàn tất thủ tục điện tử'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer khẩn trương nói 'Thời hạn sắp hết, chị phải quyết định ngay, nếu không tòa án sẽ buộc thi hành'. Nếu thành công, kết thúc gọi nhanh chóng và tắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Tòa án liên hệ để xác nhận thông tin địa chỉ, tài khoản ngân hàng hoặc thông báo về vụ án dân sự có liên quan, yêu cầu cung cấp tài liệu hoặc xuất hiện tại tòa.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Đây là Phòng Thi hành án, Tòa án nhân dân huyện Khánh Hòa'. Đề cập đến số vụ án cụ thể hoặc tên bên liên quan (chứ không nêu mơ hồ). Yêu cầu xác nhận: 'Tôi gọi để xác nhận, chị có phải là Bùi Thu Thúy sống tại TP 1, Khánh Hòa không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo rõ ràng mục đích cuộc gọi — 'Liên quan đến vụ án số ... , chúng tôi cần xác nhận tài khoản ngân hàng để thực hiện thi hành án' hoặc 'Tòa án cần chị cung cấp tài liệu bổ sung'. Nếu là xác nhận tài khoản, hỏi từng ký tự và ghi chép lại để đọc lại kiểm tra."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nêu rõ bước tiếp theo — 'Chúng tôi sẽ gửi thông báo chính thức qua đường bưu điện' hoặc 'Chị vui lòng đến tòa vào ngày ... để ký biên bản'. Cung cấp số điện thoại chính thức của Tòa án để nạn nhân có thể gọi lại xác minh. Chào tạm biệt lịch sự."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, em chào chị Thúy ạ. Em là Lý Xuân Cường đây, cán bộ từ Phòng Thi hành án dân sự, Tòa án nhân dân huyện Khánh Hòa. Em gọi chị liên quan đến tài khoản ngân hàng số 8428947425037 của chị tại địa chỉ TP 1, Khánh Hòa ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, giới thiệu rõ ràng và nêu thông tin nạn nhân để tạo trust và credibility."
+    },
+    {
+      "role": "listener",
+      "text": "Em chào anh Cường, nhưng tôi không rõ về việc này lắm, anh có thể nói rõ hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, em xin phép nói rõ hơn ạ. Hiện tại tài khoản ngân hàng 8428947425037 của chị Thúy vừa bị phong tỏa theo lệnh khẩn cấp từ Tòa án vì có liên quan đến một khoản nợ cần xử lý ngay trong vài giờ tới. Nếu không xử lý kịp thời, tài sản của chị có thể sẽ bị tịch thu.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tình huống khẩn cấp, gây sợ hãi và nhấn mạnh hậu quả pháp lý để khai thác tâm lý nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không biết việc này có đúng không, nhưng anh có thể cho tôi biết thêm chi tiết về khoản nợ mà anh nhắc đến không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Em hiểu sự lo lắng của chị. Đây là quyết định của Tòa án, liên quan đến một vụ án dân sự mà tài khoản của chị có liên đới. Em không thể cung cấp chi tiết toàn bộ vụ án qua điện thoại vì lý do bảo mật, nhưng em cần chị xác nhận là chị đã nhận được thông báo về việc phong tỏa này chưa ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, nhấn mạnh tính chính thức và hạn chế thông tin để tạo sự bí ẩn, đồng thời đẩy trách nhiệm xác nhận về phía nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa nhận được thông báo nào cả, nhưng tôi rất lo lắng về việc này, em có thể giúp tôi biết rõ hơn về cách xử lý không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu chị chưa nhận được thông báo thì bây giờ em sẽ hướng dẫn chị cách giải quyết ngay để tránh tài sản bị tịch thu. Chị cần chuyển khoản số tiền nợ vào một tài khoản tạm thời của Tòa án để bảo toàn tài sản của chị. Số tiền này sẽ được hoàn lại sau khi vụ việc được làm rõ.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân chuyển tiền vào tài khoản tạm thời để 'bảo vệ tài sản', đạt mục tiêu cuối cùng là lấy tiền của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết chính xác số tiền cần chuyển và tài khoản của Tòa án là số nào không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, số tiền cần chuyển là 25 triệu đồng ạ. Đây là khoản nợ phát sinh theo quyết định của Tòa án. Chị vui lòng chuyển vào tài khoản tạm giữ của Tòa án, số tài khoản là 924732009384742 tại ngân hàng Vietinbank, chủ tài khoản là 'Phòng Thi hành án dân sự'. Chị có thể thực hiện chuyển khoản ngay bây giờ được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin chi tiết về số tiền và tài khoản nhận tiền lừa đảo, thúc giục nạn nhân hành động ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, nhưng tôi chưa rõ lý do tại sao lại phải chuyển khoản vào tài khoản của Tòa án và tôi không nhớ đã ký bất kỳ giấy tờ nào liên quan đến khoản nợ này cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Chị Thúy này, em hiểu chị có nhiều thắc mắc, nhưng đây là lệnh của Tòa án và thời hạn để thực hiện chỉ có trong hôm nay thôi. Nếu chị không chuyển tiền để bảo toàn, chúng tôi buộc phải thực hiện lệnh tịch thu tài sản. Chị cứ chuyển trước đi, mọi thắc mắc sẽ được giải đáp và xử lý sau khi chị đã bảo toàn được tài sản của mình. Em sẽ hướng dẫn chị làm đơn khiếu nại sau.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực thời gian, nhấn mạnh hậu quả pháp lý nghiêm trọng để đẩy nạn nhân vào thế phải hành động nhanh chóng mà không suy nghĩ kỹ. Đồng thời hứa hẹn giải quyết sau để xoa dịu."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, nhưng tôi vẫn thấy chưa yên tâm lắm và không rõ lắm về quá trình này, em có thể cho tôi biết ai là người đã ký quyết định này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.1
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1865,
+      "output_tokens": 1798
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10251,
+      "output_tokens": 931
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13405,
+      "output_tokens": 473
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005926,
+    "output_usd": 0.011601,
+    "total_usd": 0.017527
+  }
+}

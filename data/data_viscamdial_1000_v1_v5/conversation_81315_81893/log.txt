@@ -1,0 +1,29 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_e0ed0bcb05]
+  Caller thật: Thợ vận hành máy sợi tổng hợp (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên kiểm soát chất lượng / Kỹ thuật viên công nghệ vật liệu @ Công ty cung cấp nguyên liệu sợi tổng hợp cho ngành bán dẫn
+  Listener: Thợ vận hành máy sản xuất con chip silicon (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Chuỗi cung ứng công nghiệp: sợi tổng hợp được dùng trong quy trình vận chuyển, lưu trữ chip silicon. Nhân viên kiểm soát chất lượng từ nhà cung cấp nguyên liệu có lý do tự nhiên để liên hệ với thợ vận hành máy sản xuất chip về các yêu cầu kỹ thuật, kiểm tra lô hàng, hoặc xác nhận thông tin đơn hàng.
+  Pretext: Gọi báo cáo sự cố: Phát hiện giao dịch bất thường trên tài khoản công ty của bạn liên quan đến đơn hàng vật liệu. Cần xác minh ngay để tránh khóa tài khoản và ảnh hưởng đến lương tháng này.
+  Listener traits: ['nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Dương Ngọc Giang, tôi là Hoàng Công Dũng từ phòng Kiểm soát Chất lượng của công ty cung cấp nguyên liệu sợi tổng hợp. Hệ thống của chúng tôi vừa phát hiện một giao dịch bất thường trên thẻ 4453 **** 3136 của chị — đó là thẻ công ty phải không ạ? Chúng tôi cần xác nhận ngay trước khi hệ thống tự động khóa tài khoản của chị.
+      → phase: S1 | tactic: Tiếp cận và tạo credibility bằng cách sử dụng thông tin cá nhân và thẻ công ty đã biết, đồng thời tạo cảm giác khẩn cấp để xác minh giao dịch bất thường.
+T02 [LISTENER] Anh nói sao? Tôi không hiểu anh đang nói gì cả.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, xin lỗi chị. Tôi xin nhắc lại. Hệ thống bên tôi ghi nhận trên thẻ 4453 **** 3136 của chị có phát sinh một giao dịch đáng ngờ, cụ thể là một khoản chi 86 triệu đồng. Chị có đang thực hiện giao dịch nào với số tiền này không ạ? Nếu không, chúng ta cần xử lý gấp để tránh việc tài khoản bị khóa tạm thời.
+      → phase: S1 | tactic: Làm rõ thông tin giao dịch bất thường để tăng sự tin cậy và khẩn cấp, khai thác tâm lý lo lắng về việc tài khoản bị khóa.
+T04 [LISTENER] Tôi không có giao dịch nào như vậy cả, anh làm ơn ngừng gọi cho tôi nhé.
+      → action: EXPOSURE | suspicion: 0.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  4 turns | suspicion=0.60
+TOKEN: in=7952 | out=2162
+COST : $0.012378
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_81315_81893\conv_e0ed0bcb05.json  [SCAM_EXPOSE]

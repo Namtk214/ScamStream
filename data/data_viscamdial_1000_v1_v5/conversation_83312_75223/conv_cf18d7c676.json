@@ -1,0 +1,219 @@
+{
+  "conversation_id": "conv_cf18d7c676",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0006",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Bùi Thu Chi",
+    "fake_age": 29,
+    "real_occupation": "Lái xe điện",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên Quản lý Bảo trì & An toàn - Công ty Vận tải Điện tử",
+    "caller_org": "Công ty Cổ phần Vận tải Điện Xanh (Green Transport Co.)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + otp_extraction + money_transfer",
+      "pretext": "Gọi điện thông báo: 'Hệ thống kế toán của chúng tôi vừa phát hiện bất thường trong hóa đơn thanh toán của bạn (Đinh Thu Thanh Chi) cho đơn hàng khung hình tháng trước. Để xác minh danh tính và phê duyệt thanh toán lại, chúng tôi cần xác nhận một số thông tin.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CARD_DATA",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: Xưng danh là 'Trần Minh - Nhân viên Kiểm soát Tài chính, Công ty Green Transport'. Đọc tên đầy đủ 'Đinh Thu Thanh Chi' + 4 chữ số cuối thẻ '5409' để chứng minh 'đã truy cập hệ thống'. Tạo cảm giác 'chúng tôi biết về bạn'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Hệ thống phát hiện giao dịch bất thường - có thể bạn bị lộ thông tin. Để bảo vệ tài khoản, bạn cần xác minh ngay bây giờ. Nếu không, tài khoản sẽ bị khóa trong 24 giờ và hợp đồng với chúng tôi sẽ bị hủy'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - bước 1: 'Để xác minh, bạn cần cung cấp số CMT/CCCD (040174576366) để so khớp với hệ thống'. Sau khi nạn nhân cung cấp, nói 'Đúng rồi. Bây giờ hãy vào ứng dụng ngân hàng của bạn và nhấn vào giao dịch bất thường để nhận mã OTP xác minh'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Yêu cầu hành động - bước 2: Khi nạn nhân nhận OTP, bảo 'Bây giờ hãy đọc mã OTP cho tôi để hoàn tất xác minh'. Sau khi có OTP, scammer dùng để chuyển tiền hoặc thay đổi mật khẩu tài khoản. Nếu nạn nhân từ chối, tăng áp lực: 'Nếu bạn không xác minh, tài khoản sẽ bị khóa vĩnh viễn. Bạn sẽ không thể nhận thanh toán từ các khách hàng khác'."
+        }
+      ]
+    },
+    "scenario_context": "Thợ sản xuất khung hình thường cung cấp linh kiện/khung cho các công ty vận tải điện (xe điện, xe tải điện) để sử dụng trong sản xuất hoặc lắp ráp. Nhân viên bảo trì của công ty vận tải sẽ gọi để kiểm tra đơn hàng, xác nhận thông tin hợp đồng, hoặc thông báo vấn đề thanh toán/giao hàng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0006",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1974,
+      "age": 51,
+      "province": "Nghệ An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75223",
+      "title": "Thợ sản xuất khung hình",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Thu Thanh Chi",
+      "VIC_ID_DOC": "040174576366",
+      "VIC_ADDRESS": "TP 5, Nghệ An",
+      "VIC_EMPLOYMENT": "Thợ sản xuất khung hình",
+      "VIC_CONTACT": "0778205912",
+      "VIC_TAX_SOCIAL_ID": "9838017656"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4381",
+      "VIC_CREDENTIAL": "2128",
+      "VIC_SIM_INFO": "0778205912",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3873475246",
+      "VIC_CARD_DATA": "4292 **** **** 5409",
+      "VIC_BALANCE": "8 triệu đồng",
+      "VIC_ASSET": "56 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Thu Thanh Chi",
+    "VIC_CONTACT": "0778205912",
+    "VIC_CARD_DATA": "4292 **** **** 5409",
+    "VIC_ID_DOC": "040174576366",
+    "VIC_TAX_SOCIAL_ID": "9838017656"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Quản lý Bảo trì & An toàn - Công ty Vận tải Điện tử",
+    "caller_org": "Công ty Cổ phần Vận tải Điện Xanh (Green Transport Co.)",
+    "scenario_context": "Thợ sản xuất khung hình thường cung cấp linh kiện/khung cho các công ty vận tải điện (xe điện, xe tải điện) để sử dụng trong sản xuất hoặc lắp ráp. Nhân viên bảo trì của công ty vận tải sẽ gọi để kiểm tra đơn hàng, xác nhận thông tin hợp đồng, hoặc thông báo vấn đề thanh toán/giao hàng.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + otp_extraction + money_transfer",
+      "pretext": "Gọi điện thông báo: 'Hệ thống kế toán của chúng tôi vừa phát hiện bất thường trong hóa đơn thanh toán của bạn (Đinh Thu Thanh Chi) cho đơn hàng khung hình tháng trước. Để xác minh danh tính và phê duyệt thanh toán lại, chúng tôi cần xác nhận một số thông tin.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CARD_DATA",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: Xưng danh là 'Trần Minh - Nhân viên Kiểm soát Tài chính, Công ty Green Transport'. Đọc tên đầy đủ 'Đinh Thu Thanh Chi' + 4 chữ số cuối thẻ '5409' để chứng minh 'đã truy cập hệ thống'. Tạo cảm giác 'chúng tôi biết về bạn'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Hệ thống phát hiện giao dịch bất thường - có thể bạn bị lộ thông tin. Để bảo vệ tài khoản, bạn cần xác minh ngay bây giờ. Nếu không, tài khoản sẽ bị khóa trong 24 giờ và hợp đồng với chúng tôi sẽ bị hủy'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - bước 1: 'Để xác minh, bạn cần cung cấp số CMT/CCCD (040174576366) để so khớp với hệ thống'. Sau khi nạn nhân cung cấp, nói 'Đúng rồi. Bây giờ hãy vào ứng dụng ngân hàng của bạn và nhấn vào giao dịch bất thường để nhận mã OTP xác minh'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Yêu cầu hành động - bước 2: Khi nạn nhân nhận OTP, bảo 'Bây giờ hãy đọc mã OTP cho tôi để hoàn tất xác minh'. Sau khi có OTP, scammer dùng để chuyển tiền hoặc thay đổi mật khẩu tài khoản. Nếu nạn nhân từ chối, tăng áp lực: 'Nếu bạn không xác minh, tài khoản sẽ bị khóa vĩnh viễn. Bạn sẽ không thể nhận thanh toán từ các khách hàng khác'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty vận tải điện gọi để kiểm tra tình trạng đơn hàng khung hình, xác nhận thông tin hóa đơn, hoặc thông báo về lịch thanh toán/giao hàng sắp tới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào anh/chị Thanh Chi, tôi là Trần Minh từ bộ phận Quản lý Đơn hàng - Công ty Green Transport. Tôi đang gọi để xác nhận thông tin về đơn hàng khung hình số [XXX] mà chúng tôi vừa nhận được từ bạn tuần trước'. Không yêu cầu thông tin nhạy cảm ngay lập tức."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi vừa kiểm tra hàng và chất lượng rất tốt. Tôi chỉ cần xác nhận lại số hóa đơn và địa chỉ giao hàng để hoàn tất quy trình. Bạn có sẵn sàng không?' Nếu cần xác minh, chỉ yêu cầu thông tin công khai (số hóa đơn, địa chỉ) - KHÔNG yêu cầu OTP, mật khẩu, hay CMT."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: 'Cảm ơn anh/chị đã xác nhận. Chúng tôi sẽ thanh toán vào ngày [ngày cụ thể] theo hợp đồng. Nếu có vấn đề gì, anh/chị có thể liên hệ lại cho tôi qua số này. Chúc anh/chị một ngày tốt lành!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị ạ. Em là Bùi Thu Chi, nhân viên Kiểm soát Tài chính của Công ty Cổ phần Vận tải Điện Xanh. Em gọi cho chị Đinh Thu Thanh Chi từ số điện thoại 0778205912 phải không ạ? Hệ thống kế toán của bên em vừa phát hiện một giao dịch bất thường trên hóa đơn thanh toán đơn hàng khung hình tháng trước của chị, liên quan đến thẻ có 4 số cuối là 5409. Em gọi để xác minh lại thông tin với chị ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, xác nhận danh tính nạn nhân với thông tin chính xác để tạo sự tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi không nhớ rõ về giao dịch đó lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu ạ. Giao dịch này khá đặc biệt nên hệ thống của chúng em đã tự động đánh dấu cảnh báo. Em muốn thông báo với chị rằng, hệ thống đang ghi nhận một sự cố bảo mật thông tin liên quan và nếu không xác minh ngay, tài khoản của chị có thể bị khóa trong vòng 24 giờ tới và hợp đồng của chị với công ty cũng có nguy cơ bị hủy bỏ, ảnh hưởng đến các khoản thanh toán của chị sau này.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi bằng cách nhấn mạnh các hậu quả tiêu cực nếu không xác minh tài khoản, đồng thời tạo cảm giác đây là vấn đề bảo mật nghiêm trọng."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, nghe em nói thì có vẻ nghiêm trọng, nhưng tôi vẫn chưa hiểu rõ lắm về giao dịch đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để làm rõ hơn cho chị, giao dịch bất thường này là một khoản thanh toán phát sinh mà hệ thống của chúng em nhận thấy không khớp với lịch sử chi tiêu thông thường của chị. Để xác minh chính xác đây có phải là chị thực hiện hay không, và bảo vệ tài khoản của chị khỏi những rủi ro lộ thông tin, trước tiên, em cần chị cung cấp số Căn cước công dân hoặc Chứng minh thư nhân dân của chị để so khớp với dữ liệu trong hệ thống của chúng em ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ hơn về 'giao dịch bất thường' và yêu cầu cung cấp số CCCD/CMND để xác minh, bắt đầu quá trình thu thập thông tin cá nhân. Vẫn giữ thái độ lịch sự nhưng kiên quyết."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi không quen cung cấp số Căn cước hay Chứng minh thư cho ai cả, tôi muốn tìm hiểu thêm trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu sự lo lắng của chị ạ. Tuy nhiên, việc cung cấp số Căn cước công dân là bước cần thiết để chúng em có thể đối chiếu thông tin và xác định xem có ai đó đang mạo danh chị hay không. Nếu chị không cung cấp, hệ thống sẽ không thể xác minh và tình trạng tài khoản của chị vẫn sẽ bị đóng băng. Chị có thể cho em xin 12 số Căn cước công dân của chị là 040174576366 để em đối chiếu nhanh chóng không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tiếp tục giải thích lý do cần CCCD và nhấn mạnh hậu quả nếu không hợp tác, đồng thời nhắc lại thông tin CCCD đã biết để tạo cảm giác 'chúng tôi đã có thông tin này rồi'."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi vẫn thấy không thoải mái khi cung cấp thông tin như vậy, tôi muốn kiểm tra lại đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1380,
+      "output_tokens": 1785
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6329,
+      "output_tokens": 775
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8299,
+      "output_tokens": 281
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003891,
+    "output_usd": 0.011031,
+    "total_usd": 0.014922
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "conversation_id": "conv_81b2a22e64",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0007",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Cao Diễm Trang",
+    "fake_age": 26,
+    "real_occupation": "Thợ khắc kim hoàn",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên bán hàng / Tư vấn viên trang sức",
+    "caller_org": "cá nhân / thương lái tự do",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Thợ khắc kim hoàn gọi thợ làm đầu để tìm hiểu nhu cầu trang sức cho khách, hoặc giới thiệu dịch vụ khắc tên/logo lên trang sức để làm quà tặng cho khách VIP của thợ làm đầu.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: xưng danh là 'Anh Sơn - thợ khắc kim hoàn ở Sài Gòn / Biên Hòa', giới thiệu sơ lược về dịch vụ khắc trang sức, xác nhận đúng người (Lý Quang Quân) và xin phép nói chuyện."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: hỏi thợ làm đầu có khách nào cần trang sức cao cấp hoặc quà tặng khắc tên, mô tả mẫu mã, giá cả, thời gian giao hàng, điều kiện thanh toán (có thể trả tiền sau khi giao)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: nếu có nhu cầu → ghi lại thông tin đơn hàng, thời hạn giao, cách liên lạc tiếp theo. Nếu không → cảm ơn, giữ số điện thoại để liên hệ lần sau, chào tạm biệt tự nhiên."
+        }
+      ]
+    },
+    "scenario_context": "Thợ khắc kim hoàn thường liên hệ với thợ làm đầu để hợp tác bán trang sức, phụ kiện đầu đắt tiền (dây chuyền, vòng tay, khuyên) hoặc để giới thiệu dịch vụ khắc tên/logo lên sản phẩm cho khách hàng của thợ làm đầu (quà tặng cho khách VIP)."
+  },
+  "listener_card": {
+    "listener_id": "lis_0007",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1996,
+      "age": 29,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "51410",
+      "title": "Thợ làm đầu",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lý Quang Quân",
+      "VIC_ID_DOC": "075096109230",
+      "VIC_ADDRESS": "Quận 6, Đồng Nai",
+      "VIC_EMPLOYMENT": "Thợ làm đầu",
+      "VIC_CONTACT": "0974482385",
+      "VIC_TAX_SOCIAL_ID": "5763183368"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "726649",
+      "VIC_CREDENTIAL": "352220",
+      "VIC_SIM_INFO": "0974482385",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "16576599023",
+      "VIC_CARD_DATA": "4472 **** **** 2621",
+      "VIC_BALANCE": "53 triệu đồng",
+      "VIC_ASSET": "128 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lý Quang Quân",
+    "VIC_CONTACT": "0974482385",
+    "VIC_BALANCE": "53 triệu đồng",
+    "VIC_ID_DOC": "075096109230",
+    "LOCATION": "Đồng Nai"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán hàng / Tư vấn viên trang sức",
+    "caller_org": "cá nhân / thương lái tự do",
+    "scenario_context": "Thợ khắc kim hoàn thường liên hệ với thợ làm đầu để hợp tác bán trang sức, phụ kiện đầu đắt tiền (dây chuyền, vòng tay, khuyên) hoặc để giới thiệu dịch vụ khắc tên/logo lên sản phẩm cho khách hàng của thợ làm đầu (quà tặng cho khách VIP).",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi bảo có khách hàng VIP tên Lý Quang Quân (dùng VIC_FULLNAME) muốn đặt trang sức cao cấp khắc tên, yêu cầu nạn nhân thanh toán trước tiền cọc để đặt hàng, hoặc bảo nạn nhân là 'đại lý' và cần nộp tiền bảo lãnh để mở tài khoản hợp tác.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: xưng danh là 'Anh Minh - nhân viên kinh doanh trang sức' / 'thương lái kim hoàn Sài Gòn', nhắc tên khách hàng VIP 'Lý Quang Quân' (VIC_FULLNAME) để tạo credibility, bảo có 'cơ hội hợp tác' hoặc 'đơn hàng lớn'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: tạo cảm giác [ham lợi] bằng cách mô tả lợi nhuận cao (30-50% lợi nhuận nếu là đại lý), hoặc tạo [khẩn cấp] bằng cách bảo khách Lý Quang Quân 'sắp sang Đồng Nai gặp' (dùng LOCATION) và cần giao hàng ngay hôm nay, không kịp chuyển tiền vào tài khoản công ty."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: bảo nạn nhân chuyển tiền cọc (5-10 triệu) vào tài khoản 'của công ty' để 'giữ chỗ hàng' hoặc 'nộp tiền bảo lãnh đại lý', hoặc yêu cầu nạn nhân 'tạm ứng' tiền từ số dư tài khoản của mình (VIC_BALANCE: 53 triệu) vì 'sắp thanh toán lại ngay'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền → tắt máy, block số. Nếu nạn nhân từ chối → bảo 'cơ hội này chỉ dành cho đại lý tin cậy' để gây áp lực tâm lý, hoặc thử lại bằng cách 'hạ giá' để kích thích."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thợ khắc kim hoàn gọi thợ làm đầu để tìm hiểu nhu cầu trang sức cho khách, hoặc giới thiệu dịch vụ khắc tên/logo lên trang sức để làm quà tặng cho khách VIP của thợ làm đầu.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: xưng danh là 'Anh Sơn - thợ khắc kim hoàn ở Sài Gòn / Biên Hòa', giới thiệu sơ lược về dịch vụ khắc trang sức, xác nhận đúng người (Lý Quang Quân) và xin phép nói chuyện."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: hỏi thợ làm đầu có khách nào cần trang sức cao cấp hoặc quà tặng khắc tên, mô tả mẫu mã, giá cả, thời gian giao hàng, điều kiện thanh toán (có thể trả tiền sau khi giao)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: nếu có nhu cầu → ghi lại thông tin đơn hàng, thời hạn giao, cách liên lạc tiếp theo. Nếu không → cảm ơn, giữ số điện thoại để liên hệ lần sau, chào tạm biệt tự nhiên."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Quang Quân ạ, tôi là Diễm Trang, nhân viên tư vấn từ một cửa hàng trang sức ở Đồng Nai, trước tôi có ghé thăm tiệm tóc của anh rồi. Hôm nay, tôi xin phép liên hệ để giới thiệu một số mẫu trang sức mới có thể khắc chữ theo yêu cầu, rất phù hợp làm quà tặng cho khách hàng VIP đó anh. Anh có tiện nói chuyện vài phút không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân, mục đích cuộc gọi và xác nhận sự tiện lợi của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe rồi, nhưng em chưa rõ lắm về những mẫu trang sức mới này, em có thể biết thêm không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, những mẫu mới bên tôi đa dạng từ vòng tay, dây chuyền đến nhẫn, được chế tác tinh xảo, chất liệu cao cấp và đặc biệt là có thể khắc tên, logo hoặc bất kỳ thông điệp nào anh muốn lên đó. Giá cả cũng rất linh hoạt, từ vài trăm nghìn đến vài triệu tùy chất liệu và độ phức tạp. Anh có khách hàng nào đang có nhu cầu về những món quà tặng độc đáo như vậy không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Mô tả cụ thể về sản phẩm, giá cả và gợi ý nhu cầu của khách hàng của thợ làm tóc."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe có vẻ thú vị đấy, em đang có một vài khách hàng VIP có thể sẽ thích món quà như vậy, nhưng không biết chất lượng thực tế ra sao?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên tôi luôn cam kết chất lượng sản phẩm tốt nhất ạ. Anh có thể cho tôi biết về số lượng và loại trang sức mà anh đang nghĩ đến không? Hoặc anh có muốn tôi gửi một vài mẫu thiết kế và bảng giá chi tiết hơn qua Zalo để anh tham khảo không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận cam kết chất lượng, cố gắng thu thập thông tin cụ thể về nhu cầu để tiến tới đặt hàng hoặc gửi thông tin chi tiết."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghĩ chắc khoảng 5-7 món quà để tặng cho khách hàng, nhưng mà nếu có mẫu thiết kế đẹp thì có thể em sẽ đặt nhiều hơn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy anh cho tôi xin số Zalo hoặc địa chỉ email để tôi gửi catalogue mẫu mã và báo giá chi tiết, cũng như các chương trình ưu đãi dành cho đơn hàng số lượng lớn để anh tham khảo nhé. Bên tôi còn hỗ trợ khắc logo tiệm tóc của anh lên sản phẩm nữa đó ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Xin thông tin liên lạc để gửi tài liệu chi tiết, đồng thời đưa ra ưu đãi và gợi ý cá nhân hóa sản phẩm."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho em biết trước một số chương trình ưu đãi mà bên mình đang có được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nếu anh đặt từ 5 sản phẩm trở lên, bên tôi sẽ miễn phí thiết kế và khắc tên/logo. Ngoài ra, với đơn hàng trên 10 triệu, anh sẽ được tặng thêm một món trang sức nhỏ làm quà tri ân. Anh có thể cho tôi xin Zalo để tôi gửi chi tiết hơn và dễ trao đổi hình ảnh không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu các chương trình ưu đãi cụ thể để khuyến khích đặt hàng, đồng thời nhắc lại việc xin thông tin liên lạc để tiện trao đổi."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy các chương trình ưu đãi này hấp dẫn đấy, nhưng em vẫn chưa chắc chắn lắm về việc khắc logo, có cần thêm phí không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không đâu anh, việc khắc logo tiệm tóc của anh hoàn toàn miễn phí ạ, đây là một trong những ưu đãi đặc biệt dành riêng cho đối tác của bên tôi. Anh chỉ cần cung cấp mẫu logo, bên tôi sẽ thực hiện chi tiết theo yêu cầu của anh. Vậy anh có thể cho tôi xin số Zalo để tôi gửi thông tin chi tiết và mẫu mã trực tiếp cho anh tham khảo không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận lại ưu đãi về việc khắc logo miễn phí, nhấn mạnh đây là ưu đãi đặc biệt và tiếp tục xin thông tin liên lạc để gửi tài liệu và mẫu mã."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em muốn chắc chắn rằng sản phẩm thật sự chất lượng trước khi quyết định, em có thể xem sản phẩm mẫu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ được chứ anh, bên tôi có thể sắp xếp để anh xem trực tiếp các mẫu sản phẩm tại cửa hàng hoặc tôi có thể mang một vài mẫu đến tận tiệm tóc của anh để anh xem tận mắt và cảm nhận chất lượng. Anh thấy cách nào tiện cho mình hơn ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Đề xuất phương án để khách hàng xem trực tiếp sản phẩm, đưa ra hai lựa chọn để tăng tính khả thi và tiện lợi cho khách."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghĩ nếu có thể mang mẫu đến tiệm tóc thì sẽ tiện hơn, nhưng em muốn biết khi nào em có thể xem được ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy anh rảnh buổi sáng hay buổi chiều ạ? Tôi sẽ sắp xếp ghé tiệm của anh vào thời gian sớm nhất có thể để anh xem trực tiếp mẫu và mình tiện trao đổi kỹ hơn về nhu cầu của anh nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác định thời gian phù hợp để mang mẫu sản phẩm đến tận nơi cho khách hàng, hẹn gặp trực tiếp để tiện trao đổi."
+    },
+    {
+      "role": "listener",
+      "text": "Em rảnh vào buổi sáng, em có thể hẹn khoảng 9 giờ được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ được ạ, vậy là 9 giờ sáng mai, tôi sẽ có mặt tại tiệm tóc của anh Lý Quang Quân với các mẫu trang sức để anh xem và mình sẽ trao đổi chi tiết hơn nhé. Cảm ơn anh rất nhiều ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lại lịch hẹn, tóm tắt nội dung cuộc gặp và cảm ơn khách hàng."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1811,
+      "output_tokens": 1540
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15153,
+      "output_tokens": 1242
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19089,
+      "output_tokens": 586
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007705,
+    "output_usd": 0.011157,
+    "total_usd": 0.018862
+  }
+}

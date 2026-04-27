@@ -1,0 +1,203 @@
+{
+  "conversation_id": "conv_1117b45182",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0081",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Bùi Bảo Thanh Vy",
+    "fake_age": 28,
+    "real_occupation": "Người dọn dẹp khu vực công cộng (như trạm dừng xe buýt, đường sắt, cống rãnh, cầu trên cao, đường giao thông, đường cao tốc, công viên, bãi biển)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý và Bảo vệ Môi trường Đô thị - Sở Xây dựng",
+    "caller_org": "Sở Xây dựng và Đô thị / Ban Quản lý Dự án Cấp tỉnh",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả danh cán bộ Sở Xây dựng, thông báo rằng khu vực công cộng mà nạn nhân quản lý (trạm xe buýt/công viên/bãi biển) được chọn cho dự án 'Nâng cấp Hạ tầng Công cộng - Giai đoạn 2' và cần Phó Chủ tịch Võ Hồng Thị Thúy ký duyệt ngay để nhận quỹ hỗ trợ địa phương.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: 'Chào Phó Chủ tịch Võ Hồng Thị Thúy, tôi là ông Trần Minh Hùng, Trưởng phòng Quản lý Môi trường Đô thị - Sở Xây dựng. Tôi gọi để thông báo về dự án nâng cấp hạ tầng công cộng ở huyện của bà.' [Dùng VIC_FULLNAME để tạo ấn tượng đã xác minh danh tính]"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Khẩn cấp + Danh dự: 'Dự án này được Tỉnh chọn làm mô hình, và huyện bà là địa điểm tiêu biểu. Tuy nhiên, để nhận khoản hỗ trợ 35 triệu đồng từ Quỹ Phát triển Đô thị, cần bà ký duyệt và chuyển khoản tạm ứng vào tài khoản quỹ để xác nhận cam kết của UBND huyện trong 2 giờ. Sau đó sẽ hoàn lại gấp đôi khi dự án khởi động.' [Tâm lý: sợ mất cơ hội, muốn đạt thành tích, tin tưởng vì là dự án chính thức]"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bà vui lòng chuyển 35 triệu đồng sang tài khoản này [số tài khoản giả mạo] để xác nhận. Tôi sẽ gửi biên lai chính thức và hướng dẫn chi tiết qua SMS ngay.' [Scammer dùng VIC_BALANCE chính xác để tăng tính thuyết phục]"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer nói 'Đây là thủ tục bắt buộc, bà có thể gọi Sở Xây dựng để xác minh, nhưng sẽ mất thời gian. Dự án phải khởi động hôm nay. Bà có thể để tôi gọi lại sau 1 giờ?' [Tạo áp lực thời gian và lựa chọn giả]"
+        }
+      ]
+    },
+    "scenario_context": "Người dọn dẹp khu vực công cộng báo cáo vấn đề về cơ sở hạ tầng, an toàn công cộng hoặc dự án cải tạo môi trường cần sự phê duyệt/hỗ trợ từ lãnh đạo cấp huyện. Phó Chủ tịch UBND huyện có trách nhiệm phối hợp các dự án phát triển hạ tầng công cộng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0081",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1994,
+      "age": 31,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "14220",
+      "title": "Chủ tịch, Phó Chủ tịch và Ủy viên thường trực Ủy ban nhân dân cấp huyên",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Võ Hồng Thị Thúy",
+      "VIC_ID_DOC": "075194665591",
+      "VIC_ADDRESS": "TP 11, Đồng Nai",
+      "VIC_EMPLOYMENT": "Chủ tịch, Phó Chủ tịch và Ủy viên thường trực Ủy ban nhân dân cấp huyên",
+      "VIC_CONTACT": "0914327810",
+      "VIC_TAX_SOCIAL_ID": "4031018790"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0515",
+      "VIC_CREDENTIAL": "5364",
+      "VIC_SIM_INFO": "0914327810",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "64078231738",
+      "VIC_CARD_DATA": "4918 **** **** 6869",
+      "VIC_BALANCE": "35 triệu đồng",
+      "VIC_ASSET": "620 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Võ Hồng Thị Thúy",
+    "VIC_CONTACT": "0914327810",
+    "VIC_BALANCE": "35 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý và Bảo vệ Môi trường Đô thị - Sở Xây dựng",
+    "caller_org": "Sở Xây dựng và Đô thị / Ban Quản lý Dự án Cấp tỉnh",
+    "scenario_context": "Người dọn dẹp khu vực công cộng báo cáo vấn đề về cơ sở hạ tầng, an toàn công cộng hoặc dự án cải tạo môi trường cần sự phê duyệt/hỗ trợ từ lãnh đạo cấp huyện. Phó Chủ tịch UBND huyện có trách nhiệm phối hợp các dự án phát triển hạ tầng công cộng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả danh cán bộ Sở Xây dựng, thông báo rằng khu vực công cộng mà nạn nhân quản lý (trạm xe buýt/công viên/bãi biển) được chọn cho dự án 'Nâng cấp Hạ tầng Công cộng - Giai đoạn 2' và cần Phó Chủ tịch Võ Hồng Thị Thúy ký duyệt ngay để nhận quỹ hỗ trợ địa phương.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: 'Chào Phó Chủ tịch Võ Hồng Thị Thúy, tôi là ông Trần Minh Hùng, Trưởng phòng Quản lý Môi trường Đô thị - Sở Xây dựng. Tôi gọi để thông báo về dự án nâng cấp hạ tầng công cộng ở huyện của bà.' [Dùng VIC_FULLNAME để tạo ấn tượng đã xác minh danh tính]"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Khẩn cấp + Danh dự: 'Dự án này được Tỉnh chọn làm mô hình, và huyện bà là địa điểm tiêu biểu. Tuy nhiên, để nhận khoản hỗ trợ 35 triệu đồng từ Quỹ Phát triển Đô thị, cần bà ký duyệt và chuyển khoản tạm ứng vào tài khoản quỹ để xác nhận cam kết của UBND huyện trong 2 giờ. Sau đó sẽ hoàn lại gấp đôi khi dự án khởi động.' [Tâm lý: sợ mất cơ hội, muốn đạt thành tích, tin tưởng vì là dự án chính thức]"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bà vui lòng chuyển 35 triệu đồng sang tài khoản này [số tài khoản giả mạo] để xác nhận. Tôi sẽ gửi biên lai chính thức và hướng dẫn chi tiết qua SMS ngay.' [Scammer dùng VIC_BALANCE chính xác để tăng tính thuyết phục]"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer nói 'Đây là thủ tục bắt buộc, bà có thể gọi Sở Xây dựng để xác minh, nhưng sẽ mất thời gian. Dự án phải khởi động hôm nay. Bà có thể để tôi gọi lại sau 1 giờ?' [Tạo áp lực thời gian và lựa chọn giả]"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Sở Xây dựng liên hệ Phó Chủ tịch UBND huyện để phối hợp thực hiện dự án cải tạo/bảo vệ hạ tầng công cộng, cần sự chỉ đạo hoặc hỗ trợ từ cấp huyện.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào Phó Chủ tịch Võ Hồng Thị Thúy, tôi là ông Trần Minh Hùng, Trưởng phòng Quản lý Môi trường Đô thị - Sở Xây dựng. Tôi gọi để báo cáo tiến độ dự án nâng cấp trạm dừng xe buýt/công viên ở huyện. Bà có thời gian nghe báo cáo không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Dự án đã hoàn thành khảo sát, dự kiến cần phê duyệt thiết kế và phối hợp với các phòng ban huyện. Chúng tôi sẽ gửi hồ sơ chính thức qua công文 hành chính. Bà có ý kiến gì về lịch triển khai không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: 'Vậy chúng tôi sẽ gửi hồ sơ trình cấp có thẩm quyền xem xét. Xin cảm ơn sự hỗ trợ của bà. Chào bà!' [Không có yêu cầu chuyển tiền, chỉ phối hợp công vụ bình thường]"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Võ Hồng Thị Thúy, tôi là Bùi Bảo Thanh Vy, Trưởng phòng Quản lý Môi trường Đô thị - Sở Xây dựng. Tôi gọi để thông báo về dự án nâng cấp hạ tầng công cộng ở huyện của chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và mục đích cuộc gọi, sử dụng tên đầy đủ của nạn nhân để tạo độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn cán bộ đã gọi cho tôi, nhưng tôi có thể hỏi thêm chi tiết về dự án không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, thưa chị Thúy, dự án này được Tỉnh chọn làm mô hình điểm, và huyện của chị là một trong những địa điểm tiêu biểu. Để chúng tôi có thể triển khai nhanh chóng và nhận khoản hỗ trợ 35 triệu đồng từ Quỹ Phát triển Đô thị, tôi cần chị ký duyệt và chuyển khoản tạm ứng vào tài khoản quỹ để xác nhận cam kết của UBND huyện trong vòng 2 giờ tới. Sau đó, khoản này sẽ được hoàn lại gấp đôi khi dự án chính thức khởi động ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và danh dự, nhấn mạnh cơ hội và lợi ích tài chính, đồng thời tạo áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Cán bộ ơi, em nghe nói đến việc hỗ trợ, nhưng em vẫn chưa rõ câu chuyện thanh toán này lắm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Là thế này ạ, chị Thúy, khoản tiền 35 triệu đồng này là một hình thức cam kết ban đầu từ phía địa phương để Sở Xây dựng khẳng định với Quỹ Phát triển Đô thị rằng huyện mình hoàn toàn sẵn sàng và ủng hộ dự án. Đây là yêu cầu bắt buộc và khoản này sẽ được hoàn lại gấp đôi cho ngân sách huyện khi dự án chính thức khởi động. Chị cứ yên tâm ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, giải thích lý do của khoản thanh toán dưới góc độ 'cam kết' và 'yêu cầu bắt buộc' từ cấp trên, đồng thời tái khẳng định lợi ích tài chính."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn chưa thấy rõ quy trình và tính hợp pháp của việc này, nên em chưa thể quyết định ngay được ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1537,
+      "output_tokens": 1857
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4200,
+      "output_tokens": 475
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5577,
+      "output_tokens": 216
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003214,
+    "output_usd": 0.010602,
+    "total_usd": 0.013816
+  }
+}

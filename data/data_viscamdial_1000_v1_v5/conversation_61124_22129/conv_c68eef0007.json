@@ -1,0 +1,231 @@
+{
+  "conversation_id": "conv_c68eef0007",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0048",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Cao Công Long",
+    "fake_age": 48,
+    "real_occupation": "Lao động trồng, thu hoạch sản phẩm cây điều",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh / Người đại diện HTX nông sản",
+    "caller_org": "HTX Nông sản Xanh Việt",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi tên đầy đủ nạn nhân + xưng là nhân viên HTX, nói rằng bác sỹ Lê Như Linh đã được đề cử làm bác sỹ tư vấn sức khỏe cho công nhân HTX, cần xác nhận thông tin và cập nhật hệ thống bảo hiểm y tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào bác sỹ Lê Như Linh, em gọi từ HTX Nông sản Xanh Việt. Chúng tôi vừa nhận được hồ sơ của bác sỹ và muốn mời bác sỹ làm bác sỹ tư vấn cho công nhân. Bác sỹ có biết không ạ?' → Tạo ấn tượng đây là cơ hội công việc, ghi tên + chức vụ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: 'Để hoàn tất hồ sơ, em cần bác sỹ xác nhận lại số CCCD [đọc lại VIC_ID_DOC] và cập nhật số điện thoại liên hệ. Đây là thủ tục bắt buộc trước khi ký hợp đồng.' → Tạo cảm giác thủ tục bình thường, khẩn cấp."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Bác sỹ có thể cung cấp mật khẩu email công việc hoặc OTP từ ứng dụng ngân hàng để xác minh định danh không? Hệ thống của chúng tôi yêu cầu như vậy.' → Khi nạn nhân cung cấp OTP, scammer dùng để truy cập tài khoản."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân từ chối, scammer nói 'Được, em sẽ gửi form điện tử qua email, bác sỹ điền rồi gửi lại nhé' → Tạo form giả lấy thông tin. Nếu thành công, scammer dùng OTP để chuyển tiền từ tài khoản ngân hàng hoặc truy cập email để thay đổi mật khẩu."
+        }
+      ]
+    },
+    "scenario_context": "Người lao động/đại diện HTX cây điều cần liên hệ bác sỹ để tư vấn về vấn đề sức khỏe lao động, bệnh nghề nghiệp hoặc đăng ký kiểm tra sức khỏe định kỳ cho công nhân. Đây là nhu cầu tự nhiên của lĩnh vực nông nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0048",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1981,
+      "age": 44,
+      "province": "Hải Phòng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "22129",
+      "title": "Bác sỹ chuyên khoa khác",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Như Linh",
+      "VIC_ID_DOC": "031181939713",
+      "VIC_ADDRESS": "Huyện 5, Hải Phòng",
+      "VIC_EMPLOYMENT": "Bác sỹ chuyên khoa khác",
+      "VIC_CONTACT": "0322141517",
+      "VIC_TAX_SOCIAL_ID": "5688540443"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "079079",
+      "VIC_CREDENTIAL": "373993",
+      "VIC_SIM_INFO": "0322141517",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "5799000066",
+      "VIC_CARD_DATA": "4243 **** **** 3278",
+      "VIC_BALANCE": "946 triệu đồng",
+      "VIC_ASSET": "305 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Như Linh",
+    "VIC_CONTACT": "0322141517",
+    "VIC_EMPLOYMENT": "Bác sỹ chuyên khoa khác",
+    "VIC_ID_DOC": "031181939713"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh / Người đại diện HTX nông sản",
+    "caller_org": "HTX Nông sản Xanh Việt",
+    "scenario_context": "Người lao động/đại diện HTX cây điều cần liên hệ bác sỹ để tư vấn về vấn đề sức khỏe lao động, bệnh nghề nghiệp hoặc đăng ký kiểm tra sức khỏe định kỳ cho công nhân. Đây là nhu cầu tự nhiên của lĩnh vực nông nghiệp.",
+    "scam_path": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi tên đầy đủ nạn nhân + xưng là nhân viên HTX, nói rằng bác sỹ Lê Như Linh đã được đề cử làm bác sỹ tư vấn sức khỏe cho công nhân HTX, cần xác nhận thông tin và cập nhật hệ thống bảo hiểm y tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào bác sỹ Lê Như Linh, em gọi từ HTX Nông sản Xanh Việt. Chúng tôi vừa nhận được hồ sơ của bác sỹ và muốn mời bác sỹ làm bác sỹ tư vấn cho công nhân. Bác sỹ có biết không ạ?' → Tạo ấn tượng đây là cơ hội công việc, ghi tên + chức vụ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: 'Để hoàn tất hồ sơ, em cần bác sỹ xác nhận lại số CCCD [đọc lại VIC_ID_DOC] và cập nhật số điện thoại liên hệ. Đây là thủ tục bắt buộc trước khi ký hợp đồng.' → Tạo cảm giác thủ tục bình thường, khẩn cấp."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Bác sỹ có thể cung cấp mật khẩu email công việc hoặc OTP từ ứng dụng ngân hàng để xác minh định danh không? Hệ thống của chúng tôi yêu cầu như vậy.' → Khi nạn nhân cung cấp OTP, scammer dùng để truy cập tài khoản."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân từ chối, scammer nói 'Được, em sẽ gửi form điện tử qua email, bác sỹ điền rồi gửi lại nhé' → Tạo form giả lấy thông tin. Nếu thành công, scammer dùng OTP để chuyển tiền từ tài khoản ngân hàng hoặc truy cập email để thay đổi mật khẩu."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "HTX Nông sản Xanh Việt thực sự cần tuyển bác sỹ làm cố vấn sức khỏe cho công nhân, hoặc cần kiểm tra sức khỏe định kỳ cho đội ngũ lao động.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào bác sỹ Lê Như Linh, em là [tên cụ thể] từ HTX Nông sản Xanh Việt, địa chỉ tại [địa chỉ cụ thể]. Chúng tôi có nhu cầu tuyển bác sỹ tư vấn sức khỏe. Bác sỹ có quan tâm không?' → Xác nhận đúng người, xưng danh rõ ràng."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi có khoảng 50 công nhân làm việc với nông sản cây điều. Công việc bao gồm tư vấn về bệnh lao động, kiểm tra sức khỏe định kỳ, và hỗ trợ hồ sơ bảo hiểm. Bác sỹ có kinh nghiệm lĩnh vực này không?' → Thảo luận chi tiết, lắng nghe phản hồi."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: 'Nếu bác sỹ quan tâm, chúng tôi sẽ gửi hợp đồng qua email. Bác sỿ có thể xem xét và liên hệ lại trong vòng 3 ngày. Cảm ơn bác sỹ!' → Kết thúc tự nhiên, có chu kỳ xem xét hợp lý."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Lê Như Linh, tôi là Cao Công Long, nhân viên từ HTX Nông sản Xanh Việt. Chúng tôi vừa nhận được hồ sơ của chị và đang có một đề xuất công việc, mời chị làm bác sỹ tư vấn sức khỏe cho công nhân viên của HTX. Chị đã biết thông tin này rồi đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, đề cập cơ hội công việc hấp dẫn để tạo ấn tượng và sự tin tưởng."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhớ gì về hồ sơ đó cả, anh có thể nói rõ hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Ồ, vậy ạ? Chuyện là, bác sỹ Lê Như Linh đã được một đối tác giới thiệu cho HTX chúng tôi với vai trò bác sỹ chuyên khoa, và chúng tôi rất ấn tượng với kinh nghiệm của chị. Hiện tại, chúng tôi đang muốn mở rộng chương trình chăm sóc sức khỏe cho công nhân và cần một bác sỹ tay nghề cao như chị. Hồ sơ là do bên đối tác gửi sang để đề cử, có thể chị chưa trực tiếp làm việc với bên tôi nên chưa rõ. Để thuận tiện cho việc ký kết hợp đồng sắp tới, tôi có thể xác nhận lại một vài thông tin trên hồ sơ giúp tôi được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, giải thích lý do nạn nhân không biết về hồ sơ và mượt mà chuyển sang bước xác nhận thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy điều này khá mơ hồ, anh có thể cho em biết đối tác nào đã giới thiệu em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự băn khoăn của chị. Đối tác của chúng tôi là Công ty Cổ phần Dược phẩm An Bình, họ đang hợp tác với HTX trong một dự án chăm sóc sức khỏe cộng đồng. Sau khi hợp đồng được ký kết và chị chính thức trở thành bác sỹ tư vấn, chúng tôi sẽ sắp xếp buổi họp giới thiệu chi tiết hơn. Hiện tại, để hoàn tất hồ sơ cho buổi ký kết, tôi cần chị xác nhận lại số CCCD là 031181939713 và cập nhật số điện thoại liên hệ mới nhất. Đây là thủ tục bắt buộc để chuẩn bị hợp đồng điện tử đó chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Trả lời câu hỏi về đối tác để xoa dịu nghi ngờ, sau đó chuyển sang phase S2 bằng cách yêu cầu xác nhận thông tin cá nhân (CCCD, SĐT) với lý do 'hoàn tất hồ sơ trước khi ký hợp đồng'."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thấy yên tâm cho lắm, anh có thể cho em biết thêm về hợp đồng này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu chị vẫn còn một số băn khoăn. Hợp đồng này đơn giản là hợp đồng cộng tác dịch vụ tư vấn, chị sẽ làm việc bán thời gian hoặc theo ca linh hoạt để tư vấn sức khỏe cho công nhân viên của HTX. Mức thù lao cũng rất cạnh tranh, và chúng tôi có những phúc lợi hấp dẫn cho người cộng tác. Tuy nhiên, mọi việc phải tuân theo quy trình, và bước đầu tiên là phải xác minh thông tin cá nhân trên hồ sơ để lập hợp đồng điện tử. Chị cứ yên tâm, đây là bước chuẩn bị cần thiết thôi ạ. Chị có thể xác nhận lại giúp tôi số căn cước công dân và số điện thoại liên hệ không?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách giải thích về hợp đồng và lợi ích, sau đó khẳng định lại yêu cầu xác nhận thông tin cá nhân là bước bắt buộc trong quy trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng vẫn cảm thấy không thoải mái khi phải cung cấp thông tin cá nhân như vậy, anh có thể hiểu cho em không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi rất hiểu cảm giác của chị. Thật ra, việc xác nhận thông tin cá nhân như CCCD và số điện thoại là quy định bắt buộc của bất kỳ tổ chức nào khi tiến hành ký kết hợp đồng, đặc biệt là hợp đồng lao động hay cộng tác. Đây là để đảm bảo tính pháp lý và quyền lợi cho cả hai bên. Tôi chỉ cần chị xác nhận lại thôi, chứ không yêu cầu cung cấp gì mới cả. Thông tin này đã có trong hồ sơ đề cử của chị rồi ạ. Chị chỉ cần nói 'đúng' hoặc có chỉnh sửa gì thì báo lại tôi là được.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự không thoải mái của nạn nhân bằng cách nhấn mạnh tính pháp lý và sự cần thiết của việc xác nhận thông tin, khẳng định chỉ cần xác nhận thông tin đã có, không yêu cầu cung cấp mới."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy không thoải mái với việc này, anh có thể hiểu cho em không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1830,
+      "output_tokens": 1599
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8000,
+      "output_tokens": 1014
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10958,
+      "output_tokens": 350
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005074,
+    "output_usd": 0.01074,
+    "total_usd": 0.015814
+  }
+}

@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_fcd4533966]
+  Caller thật: Bí thư, Phó Bí thư Đảng ủy ban, ngành cấp huyện (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Cộng tác viên Văn hóa - Tôn giáo, Phòng Văn hóa - Thông tin huyện @ Phòng Văn hóa - Thông tin, UBND Huyện 6, TP Hồ Chí Minh
+  Listener: Nhà chiêm tinh, nhà tướng số và những người có liên quan đến tâm linh khác (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: LEGIT | Path: LEGIT
+  Context: Người làm công tác văn hóa - tôn giáo huyện có trách nhiệm quản lý các hoạt động tâm linh, thầy bói, nhà chiêm tinh trong địa bàn và thường liên lạc để kiểm tra, lập danh sách hoặc thông báo chính sách. Đây là giao điểm tự nhiên giữa cơ quan hành chính và nhân sĩ tâm linh địa phương.
+  Pretext: Phòng Văn hóa - Thông tin huyện liên lạc để cập nhật danh sách các hoạt động tâm linh hợp pháp, thông báo quy định quản lý, hoặc mời tham gia hội thảo, đào tạo về quy chuẩn hoạt động văn hóa - tôn giáo.
+  Listener traits: ['lo lắng cho con cái', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Đặng Tiến An, tôi là Lưu Thanh Như Chi, cộng tác viên Phòng Văn hóa - Thông tin Huyện 6. Chúng tôi đang cập nhật danh sách nhân sĩ tâm linh địa bàn. Bạn có đang hoạt động dịch vụ chiêm tinh, tướng số không?
+      → phase: L1 | tactic: Tiếp cận và giới thiệu mục đích cuộc gọi.
+T02 [LISTENER] Em đang hoạt động trong lĩnh vực chiêm tinh, chị có cần gì không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào anh. Chúng tôi muốn biết anh đang hoạt động ở địa chỉ nào, có bao nhiêu khách hàng, và hoạt động có tuân thủ quy định không. Mục đích là để hỗ trợ anh tốt hơn, chứ không phải kiểm tra. Ngoài ra, huyện có kế hoạch tổ chức hội thảo về đạo đức nghề nghiệp cho nhân sĩ tâm linh, anh có quan tâm không?
+      → phase: L2 | tactic: Trao đổi nội dung cụ thể, nhấn mạnh mục đích hỗ trợ và mời tham gia sự kiện.
+T04 [LISTENER] Em đang hoạt động tại Huyện 6, chị có thể cho em biết thêm về hội thảo đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Về hội thảo, chúng tôi đang dự kiến tổ chức vào cuối tháng sau tại Trung tâm Văn hóa huyện. Nội dung sẽ xoay quanh các quy định mới về hoạt động tâm linh, các vấn đề về đạo đức nghề nghiệp và cách thức để phát triển bền vững trong lĩnh vực này. Anh sẽ được nghe chia sẻ từ các chuyên gia và cơ hội giao lưu với các đồng nghiệp. Nếu anh quan tâm, tôi sẽ ghi lại thông tin để gửi thư mời chi tiết sau nhé.
+      → phase: L2 | tactic: Cung cấp thêm thông tin về hội thảo để khơi gợi sự quan tâm và thu thập thông tin liên hệ.
+T06 [LISTENER] Dạ, em rất quan tâm đến hội thảo đó, chị ghi lại thông tin cho em nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Tuyệt vời. Vậy để tôi ghi nhận thông tin đăng ký tham gia hội thảo của anh. Anh có thể xác nhận lại giúp tôi địa chỉ hoạt động cụ thể của mình để chúng tôi tiện việc gửi thư mời chính thức không?
+      → phase: L2 | tactic: Xác nhận đăng ký tham gia hội thảo và tiếp tục thu thập thông tin địa chỉ.
+T08 [LISTENER] Em hoạt động tại Huyện 6, huyện 6, TP Hồ Chí Minh, chị cần em cung cấp thêm thông tin gì không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Cảm ơn anh. Vậy là anh hoạt động tại Huyện 6, TP Hồ Chí Minh. Tôi đã ghi nhận lại thông tin tham gia hội thảo của anh. Chúng tôi sẽ liên lạc lại khi có chính sách mới hoặc sự kiện. Nếu anh có câu hỏi, anh có thể gọi trực tiếp đến Phòng Văn hóa theo số 028-XXXX-XXXX. Chúc anh công tác tốt!
+      → phase: L3 | tactic: Kết thúc cuộc gọi sau khi đã thu thập đủ thông tin và mời tham gia sự kiện, đồng thời cung cấp kênh liên hệ chính thức.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.00
+TOKEN: in=16334 | out=3002
+COST : $0.016578
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_10320_51610\conv_fcd4533966.json  [CALLER_END]

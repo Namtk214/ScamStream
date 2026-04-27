@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_4b42dfcad7]
+  Caller thật: Chủ tịch nước, Phó Chủ tịch nước (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Trưởng phòng Kiểm tra An toàn Lao động - Sở Lao động, Thương binh và Xã hội @ Văn phòng Chính phủ / Sở Lao động, Thương binh và Xã hội tỉnh
+  Listener: Thợ vận hành máy dệt (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Thợ vận hành máy dệt là lao động trực tiếp có liên quan đến an toàn lao động tại nhà máy dệt. Cơ quan nhà nước có thẩm quyền cần liên hệ để kiểm tra, rà soát hoặc xác minh thông tin khi có sự cố hoặc chiến dịch kiểm tra định kỳ.
+  Pretext: Xưng danh là cán bộ Sở Lao động gọi để rà soát thông tin công nhân sau sự cố tai nạn lao động tại nhà máy (hoặc chương trình kiểm tra an toàn). Sử dụng tên đầy đủ 'Tô Văn Vinh' và số CCCD '079091882980' để tạo ấn tượng đã kiểm tra hồ sơ sẵn, từ đó yêu cầu xác nhận hoặc cập nhật thông tin tài khoản ngân hàng để 'nhận trợ cấp' hoặc 'giải quyết bảo hiểm'.
+  Listener traits: ['lo lắng cho con cái', 'sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, chào anh Vinh. Tôi là Thế Bình, cán bộ Phòng An toàn Lao động, tôi đang gọi từ Sở Lao động, Thương binh và Xã hội tỉnh. Tôi vừa xem hồ sơ của anh - mã CCCD 079091882980 - để kiểm tra về chương trình hỗ trợ công nhân mới.
+      → phase: S1 | tactic: Tiếp cận, xưng danh, dùng thông tin cá nhân của nạn nhân để tạo niềm tin và uy quyền.
+T02 [LISTENER] Dạ, em nghe anh nói rồi, nhưng em chưa rõ lắm về chương trình hỗ trợ này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Anh là công nhân dệt phải không ạ? Hiện tại, công ty anh nằm trong danh sách các doanh nghiệp được ưu tiên trong chương trình hỗ trợ tăng bảo hiểm xã hội năm nay. Nhưng do hệ thống cũ của chúng tôi chưa có thông tin tài khoản ngân hàng của anh, nên việc chi trả đang bị gián đoạn.
+      → phase: S2 | tactic: Xác định ngành nghề, tạo ra bối cảnh 'cơ hội' nhưng có 'vấn đề' cần giải quyết ngay, dẫn dắt sang việc cần cập nhật thông tin tài khoản.
+T04 [LISTENER] Dạ, em là thợ vận hành máy dệt, nhưng anh có thể nói rõ hơn về việc cần cập nhật thông tin ngân hàng không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, anh là thợ vận hành máy dệt thì đúng rồi. Tổng số tiền hỗ trợ tăng bảo hiểm xã hội anh có thể nhận được là khoảng 2 đến 3 triệu đồng. Nếu anh không cập nhật thông tin tài khoản ngân hàng ngay hôm nay, hệ thống có thể sẽ tự động xóa tên anh khỏi danh sách ưu tiên. Anh vui lòng cung cấp số tài khoản ngân hàng, tên ngân hàng và để xác minh danh tính, anh cần nhập mã OTP mà hệ thống sẽ gửi đến điện thoại của anh trong giây lát. Anh kiểm tra điện thoại xem có nhận được mã OTP chưa?
+      → phase: S3 | tactic: Tạo áp lực khẩn cấp và ham lợi (2-3 triệu đồng), yêu cầu cung cấp thông tin ngân hàng và mã OTP để hoàn tất.
+T06 [LISTENER] Dạ, nhưng em chưa hiểu rõ lắm về mã OTP và lý do cần phải cung cấp thông tin ngân hàng, anh có thể giải thích thêm cho em được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, mã OTP đó là để xác nhận anh là chủ tài khoản chính chủ thôi anh ạ, tránh trường hợp bị mạo danh nhận tiền hỗ trợ. Anh cứ yên tâm, sau khi anh cung cấp tài khoản và xác nhận OTP thì hệ thống sẽ ghi nhận và tiền sẽ được chuyển về tài khoản của anh trong vòng 24 giờ. Anh cho tôi biết anh dùng ngân hàng nào, và anh đọc mã OTP trên điện thoại giúp tôi nhé?
+      → phase: S3 | tactic: Xoa dịu nghi ngờ về OTP bằng cách giải thích mục đích giả mạo, nhấn mạnh tính bảo mật và lợi ích nhận được, sau đó lặp lại yêu cầu cung cấp thông tin. Sử dụng AUTHORITY để trấn an và thúc giục.
+T08 [LISTENER] Dạ, nhưng em vẫn cảm thấy không yên tâm lắm, anh có thể gửi cho em thông tin chi tiết về chương trình hỗ trợ này được không ạ?
+      → action: REFUSAL | suspicion: 0.10 | disclosed: []
+
+T09 [CALLER] Anh Vinh cứ yên tâm, đây là chương trình hỗ trợ trực tiếp từ Sở Lao động, không có văn bản hay đường link nào cả. Chỉ cần anh cung cấp thông tin tài khoản và mã OTP xác minh, chúng tôi sẽ hoàn tất thủ tục ngay để anh nhận được tiền hỗ trợ. Nếu anh không tin tưởng, tôi e là anh sẽ bỏ lỡ cơ hội này và bị xóa khỏi danh sách hỗ trợ. Anh cho tôi xin mã OTP trên điện thoại của anh đi ạ?
+      → phase: S3 | tactic: Phủ nhận yêu cầu gửi thông tin bằng cách nhấn mạnh tính trực tiếp của chương trình, tạo áp lực khẩn cấp và đe dọa mất cơ hội, sau đó lặp lại yêu cầu OTP.
+T10 [LISTENER] Dạ, em hiểu rồi nhưng em vẫn không cảm thấy yên tâm để cung cấp mã OTP đâu ạ.
+      → action: REFUSAL | suspicion: 0.20 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=0.20
+TOKEN: in=20497 | out=3196
+COST : $0.016884
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_11210_81521\conv_4b42dfcad7.json  [SCAM_REFUSE]

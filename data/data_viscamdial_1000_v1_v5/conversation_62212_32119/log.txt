@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_37885398ab]
+  Caller thật: Lao động nuôi tôm (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên bán hàng thiết bị y tế / Đại lý cung cấp máy móc nông nghiệp @ Công ty cung cấp thiết bị y tế và nông nghiệp (hoặc thương lái tự do)
+  Listener: Kỹ thuật viên thiết bị y tế và hình ảnh khác (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Người làm tôm thường cần thiết bị y tế để theo dõi sức khỏe tôm (máy đo pH, oxy, nhiệt độ). Kỹ thuật viên y tế có thể được liên hệ để tư vấn cài đặt, bảo trì hoặc xác minh thông tin khách hàng trong hệ thống bán hàng.
+  Pretext: Nhân viên bán hàng thiết bị y tế liên hệ kỹ thuật viên để xác nhận thông tin bảo hành, hỗ trợ kỹ thuật, hoặc mời tham gia đào tạo sử dụng sản phẩm mới
+  Listener traits: ['dễ bị lừa bởi authority', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Thu Chi, tôi là Nguyễn Thế Nam từ công ty cung cấp thiết bị y tế. Tôi đang liên hệ để xác nhận thông tin bảo hành cho chiếc máy đo y tế mà chị mua hồi tháng trước. Chị có tiện nghe máy không ạ?
+      → phase: L1 | tactic: Tiếp cận khách hàng với mục đích xác nhận thông tin bảo hành thiết bị y tế.
+T02 [LISTENER] Dạ, em nghe anh nói rồi, nhưng anh có thể cho em biết rõ hơn về chiếc máy đo y tế đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, đó là chiếc máy đo đường huyết Medisure 2000 mà chị đã mua vào ngày 15 tháng 10 năm ngoái tại cửa hàng của chúng tôi. Em cần cập nhật số điện thoại và địa chỉ ghi trên hồ sơ để hỗ trợ bảo hành nhanh hơn. Số điện thoại của chị là 0890366978 đúng không ạ? Chị có cần em gửi lại chứng chỉ bảo hành hoặc hỗ trợ kỹ thuật gì không?
+      → phase: L2 | tactic: Xác định sản phẩm cụ thể và yêu cầu cập nhật thông tin liên hệ, đồng thời gợi ý hỗ trợ thêm để tạo sự tin tưởng.
+T04 [LISTENER] Dạ, đúng rồi, nhưng em muốn xác nhận lại địa chỉ của mình trước ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, địa chỉ trên hệ thống của chúng tôi hiện đang là số 123 đường Lê Lợi, phường Bến Nghé, Quận 1, TP.HCM. Chị có cần tôi chỉnh sửa hay cập nhật gì không ạ?
+      → phase: L2 | tactic: Xác nhận lại địa chỉ hiện có trên hệ thống để người nghe kiểm tra và yêu cầu cập nhật nếu cần.
+T06 [LISTENER] Dạ, địa chỉ đó không đúng, địa chỉ của em là Huyện 12, TP Hồ Chí Minh ạ.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_ADDRESS']
+
+T07 [CALLER] À vâng, tôi xin lỗi vì sự bất tiện này. Cảm ơn chị đã cung cấp thông tin. Vậy tôi sẽ cập nhật địa chỉ của chị là Huyện 12, TP Hồ Chí Minh. Chị còn cần hỗ trợ kỹ thuật hay gửi lại chứng chỉ bảo hành nào khác không ạ?
+      → phase: L2 | tactic: Xác nhận và cập nhật thông tin địa chỉ mới, sau đó hỏi lại về các nhu cầu hỗ trợ khác để tiếp tục hoàn thành mục đích cuộc gọi.
+T08 [LISTENER] Dạ, em cảm ơn anh. Chắc em không cần hỗ trợ gì thêm đâu ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Cảm ơn chị. Tôi sẽ cập nhật hệ thống ngay lập tức. Nếu có vấn đề gì, chị cứ gọi cho tôi theo số này. Chúc chị ngày tốt lành!
+      → phase: L3 | tactic: Kết thúc cuộc gọi sau khi đã hoàn thành mục đích xác nhận và cập nhật thông tin.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.00
+TOKEN: in=16256 | out=2382
+COST : $0.013411
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_62212_32119\conv_37885398ab.json  [CALLER_END]

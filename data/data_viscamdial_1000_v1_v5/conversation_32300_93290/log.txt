@@ -1,0 +1,74 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_dff6e12340]
+  Caller thật: Kỹ thuật viên y học cổ truyền và bổ trợ (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Trưởng phòng Quản lý Sức khỏe Lao động & An toàn Công nhân @ Trung tâm Y tế Dự phòng Công nghiệp - Chi nhánh Miền Nam
+  Listener: Lao động công nghiệp khác chưa được phân vào đâu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Kỹ thuật viên y học cổ truyền có thể được nâng cấp thành trưởng phòng y tế lao động để gọi cho công nhân công nghiệp với lý do kiểm tra sức khỏe định kỳ, khám sàng lọc bệnh nghề nghiệp hoặc cập nhật hồ sơ y tế bắt buộc theo quy định.
+  Pretext: Gọi thông báo kiểm tra sức khỏe định kỳ bắt buộc cho công nhân; sử dụng tên đầy đủ nạn nhân (Nguyễn Thế Thế Hùng) để tạo ảo tưởng đã có hồ sơ; yêu cầu thanh toán phí khám online để cập nhật hệ thống trước khi làm quy trình kiểm tra tại công ty.
+  Listener traits: ['ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Hùng, tôi là Tô Gia Văn Khoa, Trưởng phòng Quản lý Sức khỏe Lao động & An toàn Công nhân từ Trung tâm Y tế Dự phòng Công nghiệp chi nhánh miền Nam. Hệ thống của chúng tôi có hồ sơ của anh Nguyễn Thế Thế Hùng với số điện thoại 0850494649 và số tài khoản ngân hàng 2171603509800 được cung cấp từ công ty. Hiện tại chúng tôi đang thực hiện kiểm tra sức khỏe định kỳ bắt buộc cho tất cả công nhân theo quy định của Bộ Lao động, và hồ sơ của anh có trong danh sách cần kiểm tra đợt này ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân, tổ chức, mục đích cuộc gọi. Củng cố lòng tin bằng cách nhắc lại thông tin cá nhân chính xác của nạn nhân đã có sẵn.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng có gì em cần tôi phải làm không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, anh Hùng. Theo quy định, việc kiểm tra sức khỏe này là bắt buộc và anh cần hoàn tất trước ngày 15/01. Để tạo điều kiện thuận lợi, chúng tôi có chương trình khám sơ bộ online qua hồ sơ với mức phí 450.000 đồng, sau đó anh sẽ được miễn phí khám chi tiết tại cơ sở. Đây là quy trình bắt buộc để đảm bảo quyền lợi về sức khỏe cho anh cũng như tuân thủ quy định của công ty.
+      → phase: S2 | tactic: Nhấn mạnh tính bắt buộc và thời hạn. Đề xuất giải pháp online tiện lợi nhưng yêu cầu thanh toán phí để tạo tâm lý tuân thủ và bước đầu 'nhử' nạn nhân trả tiền.
+T04 [LISTENER] Em hiểu rồi, nhưng em cần hỏi thêm về chương trình này và cách thanh toán ra sao ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, để tiếp tục quy trình, anh vui lòng chuyển khoản đúng số tiền 450.000 đồng vào tài khoản tạm thời của hệ thống chúng tôi là 1234567890, tên thụ hưởng là 'TT Y Tế Dự Phòng'. Sau khi chuyển xong, anh Hùng vui lòng gửi mã OTP giao dịch cho tôi để xác nhận, hệ thống sẽ tự động gửi link khám sàng lọc online cho anh ngay lập tức.
+      → phase: S3 | tactic: Ra yêu cầu chuyển tiền cụ thể vào tài khoản giả mạo. Yêu cầu mã OTP để xác nhận, tạo cảm giác gấp gáp và ràng buộc. Sau đó sẽ cung cấp 'link khám sàng lọc' để giữ nạn nhân trong vòng kiểm soát.
+T06 [LISTENER] Em không hiểu rõ về mã OTP là gì, em có cần phải gửi mã đó không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Anh Hùng, mã OTP là mã xác thực giao dịch mà ngân hàng gửi cho anh sau khi anh thực hiện lệnh chuyển khoản. Mã này để tôi xác nhận rằng giao dịch đã thành công và hồ sơ của anh được cập nhật vào hệ thống khám online. Anh cứ yên tâm, đây là quy trình chuẩn để bảo mật thông tin và đảm bảo anh nhận được link khám chính xác.
+      → phase: S3 | tactic: Giải thích khái niệm OTP một cách mơ hồ để nạn nhân vẫn cung cấp mã, đồng thời trấn an về tính bảo mật và sự cần thiết của nó để tiếp tục quy trình.
+T08 [LISTENER] Em không chắc lắm, nhưng nếu cần thiết thì em sẽ làm theo để không ảnh hưởng tới quyền lợi của mình.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Tuyệt vời, anh Hùng cứ thực hiện chuyển khoản vào số tài khoản 1234567890, tên thụ hưởng 'TT Y Tế Dự Phòng' ạ. Sau đó anh chỉ cần gửi mã OTP là tôi sẽ hoàn tất các bước tiếp theo để anh nhận được link và tiến hành khám sàng lọc online ngay.
+      → phase: S3 | tactic: Thúc giục nạn nhân thực hiện chuyển khoản và gửi mã OTP, đồng thời tái khẳng định lợi ích liền kề (nhận link khám online) để duy trì động lực.
+T10 [LISTENER] Em sẽ chuyển khoản ngay, nhưng em cần hỏi lại một lần nữa là tài khoản em chuyển có đúng là 1234567890 không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, anh cứ yên tâm ạ, số tài khoản chính xác là 1234567890, tên thụ hưởng là 'TT Y Tế Dự Phòng'. Anh cứ chuyển khoản xong thì gửi mã OTP cho tôi, sau đó tôi sẽ kích hoạt hệ thống và anh sẽ nhận được link khám sàng lọc online ngay.
+      → phase: S3 | tactic: Tái xác nhận thông tin tài khoản để nạn nhân tự tin chuyển tiền. Nhấn mạnh việc cung cấp mã OTP là bước cuối cùng để nhận được 'lợi ích' đã hứa (link khám online).
+T12 [LISTENER] Em đã hiểu rõ rồi, em sẽ chuyển khoản ngay và gửi mã OTP cho em nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Vâng, anh cứ thực hiện đi ạ. Tôi sẽ đợi mã OTP của anh tại đây để hoàn tất quy trình cập nhật hồ sơ cho anh sớm nhất.
+      → phase: S3 | tactic: Khẳng định lại sự sẵn sàng chờ đợi và nhấn mạnh việc nạn nhân cần gửi mã OTP để hoàn tất quy trình, tạo cảm giác gấp gáp và mong chờ hành động của nạn nhân. Giữ chân nạn nhân trên điện thoại để nhận OTP nhanh nhất.
+T14 [LISTENER] Em sẽ chuyển khoản ngay lập tức và gửi mã OTP cho em nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Vâng, anh cứ chuyển đi ạ. Sau khi chuyển xong và gửi mã OTP, anh sẽ nhận được link khám sàng lọc trong vòng 5 phút, nhanh thôi ạ.
+      → phase: S3 | tactic: Thúc đẩy nạn nhân hành động chuyển tiền và gửi OTP bằng cách trấn an về tốc độ xử lý, hứa hẹn sẽ nhận được link khám sàng lọc nhanh chóng.
+T16 [LISTENER] Em hiểu rồi, em sẽ chuyển khoản và gửi mã OTP cho em ngay.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Vâng, anh cứ hoàn tất đi ạ. Tôi sẽ đợi mã OTP của anh để xác nhận hồ sơ và gửi link khám ngay. Anh cố gắng hoàn thành sớm để không ảnh hưởng đến thời hạn quy định nhé.
+      → phase: S3 | tactic: Tiếp tục thúc giục nạn nhân chuyển tiền và gửi OTP, nhắc lại về thời hạn quy định để tạo áp lực nhẹ. Giữ sự giao tiếp mở để kịp thời nhận thông tin OTP.
+T18 [LISTENER] Em sẽ chuyển khoản ngay và gửi mã OTP cho em nhé, nhưng em vẫn hơi băn khoăn về việc này đấy.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Anh Hùng, tôi hiểu sự băn khoăn của anh. Nhưng anh cứ yên tâm, mọi thông tin tôi cung cấp đều để anh có thể hoàn tất quy trình kiểm tra sức khỏe một cách nhanh chóng và thuận tiện nhất. Anh cứ gửi mã OTP xong là tôi sẽ hỗ trợ anh ngay lập tức.
+      → phase: S3 | tactic: Trấn an nạn nhân trước sự băn khoăn nhẹ, tái khẳng định lợi ích của việc tuân thủ và hứa hẹn hỗ trợ nhanh chóng sau khi nhận được OTP, giữ nạn nhân trên đường dây để hoàn thành mục tiêu.
+T20 [LISTENER] Em sẽ cố gắng thực hiện đúng quy trình, nhưng em vẫn cảm thấy nghi ngờ về tính xác thực của cuộc gọi này.
+      → action: REFUSAL | suspicion: 0.50 | disclosed: []
+
+T21 [CALLER] Anh Hùng, tôi hiểu sự nghi ngờ của anh là chính đáng. Nhưng nếu đây là lừa đảo, làm sao tôi có thể biết chi tiết về họ tên, số điện thoại và số tài khoản ngân hàng của anh một cách chính xác như vậy? Đây là những thông tin chỉ có trong hệ thống nội bộ của công ty anh và Trung tâm Y tế liên kết. Tôi chỉ muốn đảm bảo anh hoàn tất đúng quy trình của công ty để không ảnh hưởng đến quyền lợi của mình thôi.
+      → phase: S3 | tactic: Đối phó nghi ngờ bằng cách sử dụng thông tin cá nhân đã biết của nạn nhân để củng cố niềm tin. Đặt câu hỏi tu từ để thách thức sự nghi ngờ, đồng thời tái khẳng định mục đích hỗ trợ nạn nhân.
+T22 [LISTENER] Em hiểu, nhưng em muốn xác nhận lại một lần nữa trước khi thực hiện chuyển khoản và gửi mã OTP.
+      → action: REFUSAL | suspicion: 0.50 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  22 turns | suspicion=0.50
+TOKEN: in=55878 | out=4676
+COST : $0.026625
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_32300_93290\conv_dff6e12340.json  [SCAM_REFUSE]

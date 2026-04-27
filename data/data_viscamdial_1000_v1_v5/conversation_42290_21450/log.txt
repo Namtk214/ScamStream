@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_7b93566b6a]
+  Caller thật: Nhân viên thông tin khách hàng chưa được phân vào đâu (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Chuyên viên Quản lý Chất lượng & Tuân thủ - Bộ phận Hóa chất công nghiệp @ Công ty Cổ phần Kiểm định và Chứng nhận Quốc tế (VICERT) - Chi nhánh TP.HCM
+  Listener: Kỹ sư hóa học (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhân viên CSKH/thông tin khách hàng của công ty cấp phép hóa chất sẽ gọi cho các kỹ sư hóa học để xác nhận thông tin đăng ký, kiểm tra tuân thủ quy chuẩn kỹ thuật, hoặc thông báo cập nhật quy định mới. Đây là giao thoa tự nhiên trong chuỗi giám sát ngành hóa chất.
+  Pretext: Xác minh thông tin kỹ sư trên hệ thống quản lý nhân lực ngành hóa chất để cấp lại chứng chỉ hành nghề năm 2024. Phát hiện dữ liệu cũ trong hệ thống cần cập nhật ngay để tránh bị khóa tài khoản truy cập portal công khai.
+  Listener traits: ['nóng tính dễ cáu', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Mai Hữu Vinh, tôi là Lưu Bảo Ngân từ VICERT. Chúng tôi vừa phát hiện hồ sơ của anh (079099108671) trong hệ thống quản lý có dữ liệu không khớp. Để tránh ảnh hưởng tới chứng chỉ hành nghề năm 2024, chúng tôi cần anh xác nhận lại thông tin.
+      → phase: S1 | tactic: Tiếp cận và tạo niềm tin bằng cách sử dụng thông tin cá nhân chính xác của nạn nhân.
+T02 [LISTENER] Chị ơi, chị có thể cho em biết cụ thể thông tin nào không khớp không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, dữ liệu nghề nghiệp hiện tại của anh là 'Kỹ sư hóa học' nhưng khi đối chiếu với thông tin mới nhất từ cơ quan chủ quản ngành nghề thì hệ thống đang báo thiếu mã số quản lý chuyên môn 2024. Anh biết chứ, nếu hồ sơ không được xác minh trước 48 giờ, hệ thống sẽ tự động khóa quyền truy cập portal cấp phép. Lúc đó anh sẽ không thể gia hạn chứng chỉ hay tải tài liệu kỹ thuật. Chúng tôi có thể giúp anh cập nhật ngay qua điện thoại được không?
+      → phase: S2 | tactic: Kích hoạt tâm lý khẩn cấp và sợ hãi mất tài khoản bằng cách nhấn mạnh hậu quả nếu không hợp tác.
+T04 [LISTENER] Chị có chắc thông tin đó là đúng không ạ? Em không nhớ có vấn đề gì về mã số quản lý chuyên môn cả.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Anh Vinh, tôi hiểu sự hoài nghi của anh. Nhưng thông tin này là từ hệ thống nội bộ của chúng tôi, có liên kết trực tiếp với cơ quan chủ quản ngành hóa chất. Hiện tại, dù anh không nhớ nhưng trên hệ thống đang hiển thị cần cập nhật khẩn cấp. Việc này quan trọng để tránh gián đoạn công việc của anh. Vậy anh xác nhận lại một lần nữa nhé: tên đầy đủ là Mai Hữu Vinh, số CMND 079099108671, hiện tại làm việc tại vị trí Kỹ sư hóa học. Đúng không ạ?
+      → phase: S3 | tactic: Xoa dịu nghi ngờ bằng cách khẳng định nguồn thông tin, tái khẳng định tầm quan trọng và đề xuất xác minh lại thông tin cơ bản để chuyển sang phase lấy thông tin xác nhận.
+T06 [LISTENER] Chị ơi, em hiểu nhưng cũng hơi băn khoăn, sao chị lại cần chứng minh thông tin đó qua điện thoại vậy ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T07 [CALLER] Anh Vinh, việc xác minh thông tin qua điện thoại là cần thiết trong trường hợp khẩn cấp để đảm bảo quyền lợi của anh không bị ảnh hưởng. Nếu chờ đến khi anh tự đến văn phòng, có thể đã quá thời hạn 48 giờ và tài khoản của anh sẽ bị khóa. Anh yên tâm, đây chỉ là bước xác minh cơ bản thôi. Email của anh là gì để chúng tôi gửi link xác minh, sau đó anh có thể đọc mã OTP để xác nhận chính chủ nhé?
+      → phase: S3 | tactic: Xoa dịu sự băn khoăn về việc xác minh qua điện thoại bằng cách nhấn mạnh tính khẩn cấp và sự tiện lợi, đồng thời dẫn dắt tới yêu cầu lấy email và OTP.
+T08 [LISTENER] Em vẫn không yên tâm lắm, chị có thể cho em biết thêm lý do vì sao không thể đến văn phòng để xác minh không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T09 [CALLER] Anh Vinh, tôi hiểu anh muốn mọi việc rõ ràng. Tuy nhiên, thời điểm hiện tại hệ thống đang tự động rà soát và khóa các tài khoản có thông tin không khớp để chuẩn bị cho đợt cấp mới chứng chỉ hành nghề 2024. Việc anh đến văn phòng sẽ tốn thêm thời gian di chuyển và làm thủ tục, trong khi chúng tôi có thể hỗ trợ anh ngay lập tức để hồ sơ của anh không bị ảnh hưởng. Anh chỉ cần cung cấp địa chỉ email công ty, chúng tôi sẽ gửi mã OTP để xác nhận danh tính, không có thông tin nhạy cảm nào bị lộ ra ngoài đâu ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ về địa điểm xác minh bằng cách nhấn mạnh tính khẩn cấp của hệ thống tự động, sự tiện lợi khi giải quyết qua điện thoại và đảm bảo an toàn thông tin để tiếp tục yêu cầu email và OTP.
+T10 [LISTENER] Chị ơi, em vẫn chưa thấy yên tâm lắm vì sao lại không thể đến văn phòng, chị có thể giải thích rõ hơn không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T11 [CALLER] Anh Vinh, tôi đã giải thích rất rõ về tình hình khẩn cấp của hệ thống. Nếu anh vẫn không muốn hợp tác qua điện thoại, chúng tôi sẽ ghi nhận là anh từ chối cập nhật thông tin và hồ sơ của anh sẽ bị khóa theo quy định. Việc này đồng nghĩa với việc chứng chỉ hành nghề của anh sẽ không được gia hạn trong năm 2024. Anh có chắc muốn như vậy không?
+      → phase: S2 | tactic: Tăng cường áp lực bằng cách đưa ra hậu quả trực tiếp và nghiêm trọng nếu nạn nhân tiếp tục từ chối hợp tác, nhấn mạnh sự từ chối của nạn nhân sẽ dẫn đến điều khoản tự động khóa tài khoản.
+T13 [LISTENER] Chị ơi, em cảm thấy mọi thứ quá bất hợp lý và em không đồng ý với cách làm này đâu.
+      → action: INTERRUPTED_VICTIM_HANGUP | suspicion: 2.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  13 turns | suspicion=2.00
+TOKEN: in=26123 | out=3716
+COST : $0.019536
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_42290_21450\conv_7b93566b6a.json  [SCAM_REFUSE]

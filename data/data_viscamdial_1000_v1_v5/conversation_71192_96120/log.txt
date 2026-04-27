@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_eba664cf33]
+  Caller thật: Thợ phá dỡ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý công trường phá dỡ / Người phụ trách xử lý chất thải xây dựng @ Công ty phá dỡ tư nhân / Đội xây dựng cơ sở hạ tầng
+  Listener: Người thu dọn, sắp xếp, phân loại rác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Thợ phá dỡ cần liên hệ với người thu dọn rác để phối hợp xử lý chất thải từ công trường phá dỡ hoặc để xác nhận thông tin nhân viên thu dọn đã đăng ký dịch vụ vệ sinh công trường.
+  Pretext: Gọi tên nạn nhân (Ngô Gia Long) + nhắc đến địa chỉ Hà Nội để giả vờ xác nhận đơn hàng dịch vụ vệ sinh công trường, yêu cầu xác thực lại thông tin cá nhân và số thẻ để 'cập nhật hệ thống thanh toán' hoặc 'xác nhận hợp đồng'.
+  Listener traits: ['nghi ngờ nhưng lịch sự', 'sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Ngô Gia Long ạ. Em là Vy, gọi từ Công ty phá dỡ công trình XYZ ở Hà Nội. Bên em có hợp đồng dịch vụ vệ sinh công trường với mình ở địa chỉ Hà Nội, nhưng hiện tại hệ thống thanh toán bên em đang có chút trục trặc, em cần anh xác nhận lại thông tin để thanh toán ạ.
+      → phase: S1 | tactic: Giả mạo tổ chức, gọi tên nạn nhân, nhắc đến địa chỉ và hợp đồng để tạo trust, sau đó nêu lý do gọi điện liên quan đến thanh toán.
+T02 [LISTENER] Em nói vậy thì tôi cũng thấy nghi nghi, nhưng em có thể cho tôi biết cần xác nhận thông tin gì không?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T03 [CALLER] Dạ vâng, để tránh trường hợp bị hủy đơn hàng và phát sinh chi phí phạt không đáng có, anh Ngô Gia Long vui lòng xác nhận lại số thẻ cuối của mình là 6652 giúp em ạ. Sau đó em sẽ gửi một mã OTP về để mình xác minh danh tính trên hệ thống ạ.
+      → phase: S2 | tactic: Tạo áp lực khẩn cấp về việc hủy đơn hàng và phạt tiền, đồng thời yêu cầu xác nhận số thẻ và OTP để 'xác minh danh tính', dẫn dụ nạn nhân vào bẫy.
+T04 [LISTENER] Tôi không nhớ rõ số thẻ đó, nhưng em có thể cho tôi biết thêm về lý do cần xác nhận không?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T05 [CALLER] Dạ em hiểu ạ. Anh thông cảm giúp em nhé, do hệ thống bên em đang trong quá trình nâng cấp nên tất cả các giao dịch đều cần xác minh lại ạ. Nếu không xác minh kịp thời thì đơn hàng của mình sẽ bị hủy và anh sẽ phải chịu phí phạt đó ạ.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách giải thích lý do kỹ thuật (nâng cấp hệ thống) và tái khẳng định hậu quả (hủy đơn hàng, phí phạt) để duy trì áp lực, thúc đẩy nạn nhân hợp tác.
+T06 [LISTENER] Em nói vậy thì tôi thấy có vẻ không hợp lý, nhưng mình cần xác minh thì cũng được, nhưng tôi sẽ không xác nhận số thẻ đâu.
+      → action: REFUSAL | suspicion: 2.00 | disclosed: []
+
+T07 [CALLER] Dạ em hiểu ạ. Nhưng mà anh cứ xác nhận lại 4 số cuối của thẻ là 6652 cho em, rồi sau đó anh sẽ nhận được OTP gửi về điện thoại, anh đọc OTP đó cho em để hoàn tất xác thực là xong thôi ạ. Chỉ mất một phút thôi mà anh.
+      → phase: S3 | tactic: Thử lại yêu cầu xác nhận số thẻ kèm theo gợi ý OTP, đồng thời giảm nhẹ mức độ phức tạp của hành động và tạo cảm giác khẩn trương, đơn giản.
+T08 [LISTENER] Em cứ ép tôi như vậy thì tôi càng không muốn xác nhận gì cả, tôi không thấy rõ lý do ạ.
+      → action: REFUSAL | suspicion: 3.50 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=3.50
+TOKEN: in=15790 | out=2408
+COST : $0.013535
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_71192_96120\conv_eba664cf33.json  [SCAM_REFUSE]

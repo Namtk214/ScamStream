@@ -1,0 +1,259 @@
+{
+  "conversation_id": "conv_94a685c9a2",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0054",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Mai Ngọc Anh",
+    "fake_age": 34,
+    "real_occupation": "Nhân viên hướng dẫn công viên chủ đề",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Trưởng phòng Pháp chế & Quản lý Rủi ro - Công viên Chủ đề Á Châu",
+    "caller_org": "Công viên Chủ đề Á Châu (Asia Theme Park) - Chi nhánh Quảng Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Có vụ khách du lịch bị tai nạn tại công viên, cần luật sư ký xác nhận bản báo cáo y tế & hợp đồng bồi thường khẩn cấp. Sử dụng tên đầy đủ & số điện thoại của nạn nhân để xác nhận danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Gọi điện giới thiệu là Trưởng phòng Pháp chế công viên Quảng Nam, xác nhận tên 'Chị Lê Hồng Bảo Chi' và số điện thoại để tạo cảm giác scammer biết thông tin sẵn rồi. Nói có vụ khách du lịch bị tai nạn, cần tư vấn pháp lý gấp."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: Tạo áp lực thời gian ('Sự cố xảy ra hôm qua, khách đòi bồi thường hôm nay'). Gợi ý nạn nhân có thể bị kiện nếu không giải quyết nhanh. Khẩn cấp + trách nhiệm pháp lý = nạn nhân không có thời gian suy nghĩ."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu nạn nhân truy cập link 'hệ thống quản lý bồi thường' (phishing site) để ký số hóa tài liệu. Hoặc yêu cầu chuyển tiền đặt cọc pháp lý ('để công viên xử lý nhanh, sẽ hoàn lại'). Lấy thông tin đăng nhập ngân hàng hoặc OTP để chuyển tiền từ thẻ."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, giả vờ cắt máy và gọi lại từ 'số công ty' (spoofed number). Nếu thành công, xóa dấu vết & khóa tài khoản sau khi chuyển tiền."
+        }
+      ]
+    },
+    "scenario_context": "Công viên chủ đề cần tư vấn pháp luật về tranh chấp hợp đồng với khách du lịch hoặc vấn đề an toàn. Luật sư là chuyên gia pháp lý địa phương mà công viên thường liên hệ khi có sự cố pháp lý cần xử lý nhanh."
+  },
+  "listener_card": {
+    "listener_id": "lis_0054",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1992,
+      "age": 33,
+      "province": "Quảng Nam",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "26112",
+      "title": "Luật sư tư vấn pháp luật",
+      "group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Hồng Bảo Chi",
+      "VIC_ID_DOC": "049192227157",
+      "VIC_ADDRESS": "TP 11, Quảng Nam",
+      "VIC_EMPLOYMENT": "Luật sư tư vấn pháp luật",
+      "VIC_CONTACT": "0399216771",
+      "VIC_TAX_SOCIAL_ID": "2431760870"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "045123",
+      "VIC_CREDENTIAL": "246911",
+      "VIC_SIM_INFO": "0399216771",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "94450330820580",
+      "VIC_CARD_DATA": "4329 **** **** 4317",
+      "VIC_BALANCE": "88 triệu đồng",
+      "VIC_ASSET": "338 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Hồng Bảo Chi",
+    "VIC_CONTACT": "0399216771",
+    "VIC_CARD_DATA": "4329 **** **** 4317",
+    "LOCATION": "Quảng Nam",
+    "VIC_EMPLOYMENT": "Luật sư tư vấn pháp luật"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Pháp chế & Quản lý Rủi ro - Công viên Chủ đề Á Châu",
+    "caller_org": "Công viên Chủ đề Á Châu (Asia Theme Park) - Chi nhánh Quảng Nam",
+    "scenario_context": "Công viên chủ đề cần tư vấn pháp luật về tranh chấp hợp đồng với khách du lịch hoặc vấn đề an toàn. Luật sư là chuyên gia pháp lý địa phương mà công viên thường liên hệ khi có sự cố pháp lý cần xử lý nhanh.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Có vụ khách du lịch bị tai nạn tại công viên, cần luật sư ký xác nhận bản báo cáo y tế & hợp đồng bồi thường khẩn cấp. Sử dụng tên đầy đủ & số điện thoại của nạn nhân để xác nhận danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Gọi điện giới thiệu là Trưởng phòng Pháp chế công viên Quảng Nam, xác nhận tên 'Chị Lê Hồng Bảo Chi' và số điện thoại để tạo cảm giác scammer biết thông tin sẵn rồi. Nói có vụ khách du lịch bị tai nạn, cần tư vấn pháp lý gấp."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: Tạo áp lực thời gian ('Sự cố xảy ra hôm qua, khách đòi bồi thường hôm nay'). Gợi ý nạn nhân có thể bị kiện nếu không giải quyết nhanh. Khẩn cấp + trách nhiệm pháp lý = nạn nhân không có thời gian suy nghĩ."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu nạn nhân truy cập link 'hệ thống quản lý bồi thường' (phishing site) để ký số hóa tài liệu. Hoặc yêu cầu chuyển tiền đặt cọc pháp lý ('để công viên xử lý nhanh, sẽ hoàn lại'). Lấy thông tin đăng nhập ngân hàng hoặc OTP để chuyển tiền từ thẻ."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, giả vờ cắt máy và gọi lại từ 'số công ty' (spoofed number). Nếu thành công, xóa dấu vết & khóa tài khoản sau khi chuyển tiền."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công viên chủ đề liên hệ luật sư để tư vấn về hợp đồng khách du lịch, bảo hiểm trách nhiệm dân sự, hoặc xử lý tranh chấp thực tế.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Giới thiệu đầy đủ (tên, chức vụ, công ty, mục đích gọi). Xác nhận thời gian phù hợp để trao đổi. Không dùng thông tin cá nhân nạn nhân để 'chứng minh' quen biết."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết sự cố pháp lý (ngày giờ, bên liên quan, thiệt hại). Hỏi ý kiến luật sư về trách nhiệm pháp lý, quy trình bồi thường. Thống nhất phí dịch vụ & hình thức thanh toán hợp lệ (hóa đơn, chuyển khoản công ty)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Xác nhận lịch tư vấn tiếp theo, gửi tài liệu qua email công ty. Chào tạm biệt lịch sự, không yêu cầu hành động gấp hoặc chia sẻ thông tin nhạy cảm qua điện thoại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Lê Hồng Bảo Chi, tôi Mai Ngọc Anh, Trưởng phòng Pháp chế Công viên Chủ đề Á Châu chi nhánh Quảng Nam. Tôi gọi từ số 0399216771 của chị để xác nhận thông tin khẩn cấp liên quan đến một sự cố pháp lý tại công viên chúng tôi.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và tổ chức, xác nhận thông tin nạn nhân để xây dựng niềm tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Chị thấy có sự cố pháp lý gì mà chị cần xác nhận với tôi vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, thưa chị. Chiều hôm qua tại công viên chúng tôi có một vụ tai nạn khá nghiêm trọng liên quan đến du khách nước ngoài. Hiện tại, chúng tôi cần chị, với vai trò là luật sư, hỗ trợ xác nhận khẩn cấp một số giấy tờ liên quan đến báo cáo y tế và hợp đồng bồi thường. Đây là trường hợp cần giải quyết ngay để tránh những rắc rối pháp lý lớn hơn cho công viên.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu tình huống khẩn cấp, nhấn mạnh vai trò của nạn nhân và tạo áp lực về trách nhiệm pháp lý."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng chị có thể giải thích rõ hơn về giấy tờ mà chị cần tôi xác nhận không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Cụ thể là bản báo cáo y tế của du khách bị nạn và hợp đồng bồi thường giữa công viên và gia đình họ. Do đây là du khách nước ngoài và phía họ đang rất gay gắt, muốn giải quyết nhanh gọn trong hôm nay để kịp về nước nên chúng tôi cần chữ ký xác nhận của một luật sư độc lập để đảm bảo tính khách quan và hợp pháp. Công viên mong muốn chị có thể hỗ trợ khẩn cấp.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực thời gian và tình huống khẩn cấp, nhấn mạnh tính quốc tế và yêu cầu 'luật sư độc lập' để tăng tính thuyết phục."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng tôi cần thêm thông tin về tình huống này để có thể hỗ trợ tốt hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Để chị có đầy đủ thông tin chi tiết và thuận tiện cho việc ký xác nhận số hóa, tôi sẽ gửi chị một đường dẫn vào hệ thống quản lý bồi thường của công viên. Chị vui lòng truy cập đường dẫn này để xem xét toàn bộ hồ sơ vụ việc, bao gồm báo cáo y tế và dự thảo hợp đồng bồi thường. Sau khi xem xong, chị chỉ cần thực hiện chữ ký điện tử trên hệ thống là được ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân truy cập đường link phishing để khai thác thông tin đăng nhập hoặc thực hiện hành vi theo yêu cầu."
+    },
+    {
+      "role": "listener",
+      "text": "Chị muốn hỏi thêm về đường dẫn này để đảm bảo nó an toàn trước khi tôi truy cập ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị cứ yên tâm, đây là đường dẫn nội bộ của công ty chúng tôi, được mã hóa bảo mật hoàn toàn để đảm bảo an toàn thông tin. Chị sẽ cần đăng nhập bằng tài khoản email mà chị đã sử dụng để đăng ký thông tin luật sư độc lập với chúng tôi trước đây. Đây là quy trình chuẩn để đảm bảo tính bảo mật và xác thực của người ký ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách khẳng định đường dẫn an toàn và là 'quy trình chuẩn', đồng thời nhắc đến việc đăng nhập bằng email để khai thác thông tin đăng nhập."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ tài khoản email đó, chị có thể cho tôi biết thêm về quy trình này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm. Tài khoản email đó là địa chỉ mà chị dùng để đăng ký thông tin luật sư tư vấn pháp luật với Hiệp hội Du lịch Quảng Nam. Khi chị truy cập vào đường link, hệ thống sẽ yêu cầu chị xác thực bằng địa chỉ email đó cũng như số điện thoại của chị. Quy trình này là để đảm bảo chỉ có chị, với tư cách là luật sư độc lập, mới có thể truy cập và ký xác nhận tài liệu. Chị kiểm tra giúp tôi email chính thức mà chị hay dùng nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nghi ngờ, cung cấp thêm thông tin chi tiết về quy trình xác thực để tăng tính hợp lý của yêu cầu, đồng thời hướng nạn nhân đến việc cung cấp email và số điện thoại."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa rõ lắm về địa chỉ email đó, nhưng nếu không có sự trợ giúp rõ ràng thì tôi không thể truy cập ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy để tiện cho chị, tôi sẽ gửi trực tiếp đường link kèm theo hướng dẫn cụ thể và các bước đăng nhập vào số điện thoại của chị. Chị chỉ cần làm theo hướng dẫn là được. Nếu có bất kỳ khó khăn nào, chị cứ gọi lại cho tôi ngay nhé. Tôi đang cần gấp để giải quyết sự cố này ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giả vờ hỗ trợ bằng cách gửi đường link và hướng dẫn vào số điện thoại, vẫn duy trì mục tiêu khai thác thông tin đăng nhập, đồng thời tạo thêm áp lực khẩn cấp để nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Chị đã nói rõ là cần gửi hướng dẫn, nhưng tôi vẫn cảm thấy không yên tâm khi truy cập vào đường link đó, chị thông cảm nhé.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1408,
+      "output_tokens": 1516
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12218,
+      "output_tokens": 1135
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 15629,
+      "output_tokens": 493
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006196,
+    "output_usd": 0.010713,
+    "total_usd": 0.016909
+  }
+}

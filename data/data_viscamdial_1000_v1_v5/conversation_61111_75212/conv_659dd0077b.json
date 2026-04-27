@@ -1,0 +1,221 @@
+{
+  "conversation_id": "conv_659dd0077b",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0091",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đặng Văn Cường",
+    "fake_age": 30,
+    "real_occupation": "Lao động trồng, thu hoạch lúa",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Giám đốc Dự án / Quản lý Chuỗi cung ứng Nông lâm sản",
+    "caller_org": "Công ty TNHH Phát triển Nông lâm Sản Việt (VLDC)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty VLDC đang triển khai dự án xây dựng kho chứa lúa hiện đại tại địa phương. Scammer xưng danh là Giám đốc Dự án, gọi cho Võ Công Tiến Thành (sử dụng tên thật) để mời tham gia dự án cung cấp gỗ kết cấu. Ban đầu tạo ấn tượng là cơ hội kiếm tiền lớn, sau đó tạo tình huống khẩn cấp về tiền đặt cọc/bảo lãnh.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Scammer gọi trực tiếp cho 'anh Tiến Thành' (dùng VIC_FULLNAME), tự xưng là Giám đốc Dự án VLDC, nói rằng công ty có số điện thoại từ danh sách thợ xử lý gỗ uy tín địa phương. Nhắc đến dự án cụ thể (tên địa phương có thể được suy luận từ số điện thoại), tạo cảm giác 'không phải lạ'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + khẩn cấp: Scammer mô tả dự án quy mô lớn, nhu cầu gỗ kết cấu 50-100 tấn, đơn giá cao, lợi nhuận 15-20%. Sau đó đột ngột nói rằng 'hiện đang có 3 nhà thầu khác cạnh tranh, nhưng anh Tiến Thành được ưu tiên vì danh tiếng'. Tuy nhiên, để 'khóa hợp đồng', cần chuyển tiền đặt cọc 10% ngay hôm nay (1 triệu đồng từ 10 triệu tài sản)."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Scammer cung cấp số tài khoản 'của công ty' (thực chất là tài khoản của đối tượng khác), yêu cầu nạn nhân chuyển 1 triệu đồng từ VIC_BANK_ACCOUNT (1238866921481) trong vòng 2 giờ. Sử dụng sơ đồ 'chứng thực' giả mạo hoặc link giả để nạn nhân tin tưởng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối / Kết thúc: Nếu nạn nhân từ chối, scammer tạo áp lực bằng cách nói 'công ty sẽ mời nhà thầu khác, anh sẽ mất cơ hội'. Nếu thành công, scammer sẽ tắt điện thoại hoặc tìm cách yêu cầu tiền lần 2 với lý do 'phí hành chính' hoặc 'bảo lãnh bổ sung'."
+        }
+      ]
+    },
+    "scenario_context": "Người làm nông nghiệp (trồng lúa) thường liên hệ với thợ xử lý gỗ để đàm phán hợp tác về cung cấp gỗ kết cấu cho kho chứa nông sản, hoặc để thảo luận về dự án phát triển chuỗi giá trị nông lâm sản chung."
+  },
+  "listener_card": {
+    "listener_id": "lis_0091",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1979,
+      "age": 46,
+      "province": "Hải Phòng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "75212",
+      "title": "Thợ xử lý gỗ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Võ Công Tiến Thành",
+      "VIC_ID_DOC": "031079180392",
+      "VIC_ADDRESS": "TP 12, Hải Phòng",
+      "VIC_EMPLOYMENT": "Thợ xử lý gỗ",
+      "VIC_CONTACT": "0997929192",
+      "VIC_TAX_SOCIAL_ID": "5630908606"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "059423",
+      "VIC_CREDENTIAL": "8665",
+      "VIC_SIM_INFO": "0997929192",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1238866921481",
+      "VIC_CARD_DATA": "4576 **** **** 3246",
+      "VIC_BALANCE": "6 triệu đồng",
+      "VIC_ASSET": "10 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Võ Công Tiến Thành",
+    "VIC_CONTACT": "0997929192",
+    "VIC_BANK_ACCOUNT": "1238866921481",
+    "VIC_ASSET": "10 triệu đồng",
+    "VIC_CARD_DATA": "4576 **** **** 3246"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Dự án / Quản lý Chuỗi cung ứng Nông lâm sản",
+    "caller_org": "Công ty TNHH Phát triển Nông lâm Sản Việt (VLDC)",
+    "scenario_context": "Người làm nông nghiệp (trồng lúa) thường liên hệ với thợ xử lý gỗ để đàm phán hợp tác về cung cấp gỗ kết cấu cho kho chứa nông sản, hoặc để thảo luận về dự án phát triển chuỗi giá trị nông lâm sản chung.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty VLDC đang triển khai dự án xây dựng kho chứa lúa hiện đại tại địa phương. Scammer xưng danh là Giám đốc Dự án, gọi cho Võ Công Tiến Thành (sử dụng tên thật) để mời tham gia dự án cung cấp gỗ kết cấu. Ban đầu tạo ấn tượng là cơ hội kiếm tiền lớn, sau đó tạo tình huống khẩn cấp về tiền đặt cọc/bảo lãnh.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Scammer gọi trực tiếp cho 'anh Tiến Thành' (dùng VIC_FULLNAME), tự xưng là Giám đốc Dự án VLDC, nói rằng công ty có số điện thoại từ danh sách thợ xử lý gỗ uy tín địa phương. Nhắc đến dự án cụ thể (tên địa phương có thể được suy luận từ số điện thoại), tạo cảm giác 'không phải lạ'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + khẩn cấp: Scammer mô tả dự án quy mô lớn, nhu cầu gỗ kết cấu 50-100 tấn, đơn giá cao, lợi nhuận 15-20%. Sau đó đột ngột nói rằng 'hiện đang có 3 nhà thầu khác cạnh tranh, nhưng anh Tiến Thành được ưu tiên vì danh tiếng'. Tuy nhiên, để 'khóa hợp đồng', cần chuyển tiền đặt cọc 10% ngay hôm nay (1 triệu đồng từ 10 triệu tài sản)."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Scammer cung cấp số tài khoản 'của công ty' (thực chất là tài khoản của đối tượng khác), yêu cầu nạn nhân chuyển 1 triệu đồng từ VIC_BANK_ACCOUNT (1238866921481) trong vòng 2 giờ. Sử dụng sơ đồ 'chứng thực' giả mạo hoặc link giả để nạn nhân tin tưởng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối / Kết thúc: Nếu nạn nhân từ chối, scammer tạo áp lực bằng cách nói 'công ty sẽ mời nhà thầu khác, anh sẽ mất cơ hội'. Nếu thành công, scammer sẽ tắt điện thoại hoặc tìm cách yêu cầu tiền lần 2 với lý do 'phí hành chính' hoặc 'bảo lãnh bổ sung'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xây dựng/phát triển nông sản thực sự cần tìm nhà cung cấp gỗ kết cấu chất lượng cao cho dự án xây dựng kho chứa. Gọi để tham khảo giá, khả năng cung cấp, và thảo luận hợp tác lâu dài.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Người gọi xưng danh rõ ràng (tên, chức vụ, công ty), xin phép nạn nhân có thời gian nói chuyện, xác nhận đúng người (kiểm tra tên đầy đủ, địa chỉ, hoặc tham chiếu từ nguồn uy tín)."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết nhu cầu (loại gỗ, số lượng, tiêu chuẩn chất lượng, tiến độ dự án), hỏi về khả năng cung cấp, giá cả, điều kiện thanh toán (thường là 30-50% trước, 50-70% khi giao, không yêu cầu tiền đặt cọc quá cao)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất bước tiếp theo: Nếu quan tâm, hai bên sẽ hẹn gặp trực tiếp, gửi hợp đồng qua email chính thức, hoặc lên lịch gọi lại để thảo luận chi tiết. Cuộc gọi kết thúc lịch sự, không có áp lực thời gian hoặc yêu cầu tiền liền."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Thành ạ, em là Cường, Giám đốc Dự án bên Công ty Phát triển Nông lâm Sản Việt VLDC. Em gọi từ số 0997929192 của anh đây để trao đổi về dự án kho chứa lúa ở địa phương mình ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, công ty, mục đích cuộc gọi, và dùng VIC_CONTACT để tạo trust ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em chào anh Cường, anh có thông tin gì về dự án này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng anh Thành, bên em đang triển khai dự án xây dựng cụm kho chứa lúa hiện đại tại khu vực anh ở, quy mô rất lớn. Qua tìm hiểu, em được biết anh là một thợ xử lý gỗ rất có tiếng, đặc biệt là về gỗ kết cấu, nên em muốn mời anh tham gia cung cấp vật tư cho dự án này ạ. Hiện tại, nhu cầu gỗ kết cấu của tụi em phải lên đến 50-100 tấn lận, và giá công ty đưa ra rất cạnh tranh, đảm bảo anh có lợi nhuận từ 15-20% đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xây dựng sự hào hứng bằng cách mô tả quy mô dự án, nhu cầu lớn, lợi nhuận hấp dẫn, và nhắc lại danh tiếng của nạn nhân để tạo cảm giác được ưu tiên."
+    },
+    {
+      "role": "listener",
+      "text": "Thật hấp dẫn quá, em ạ! Vậy em có thể cho tôi biết thêm chi tiết về cách thức hợp tác và các bước tiếp theo được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, rất sẵn lòng anh ạ. Tuy nhiên, tình hình là hiện tại bên em đang có 3 nhà thầu khác cũng đang trong quá trình đàm phán cung cấp gỗ cho dự án này. Nhưng do uy tín và chất lượng của anh Thành đã được bên em thẩm định kỹ, nên bọn em muốn ưu tiên anh. Để xác nhận việc hợp tác và chốt đơn hàng, công ty có yêu cầu một khoản đặt cọc nhỏ là 10% giá trị hợp đồng ban đầu, tương đương khoảng 1 triệu đồng để gọi là 'giữ chỗ' cho anh, tránh tình trạng anh rút bên em giữa chừng và cả 2 bên cùng thiệt thòi ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo ra tình huống khẩn cấp, cảm giác cạnh tranh và cơ hội bị bỏ lỡ, đồng thời đưa ra yêu cầu đặt cọc nhỏ để 'giữ chỗ' nhưng ngụ ý là tiền bảo lãnh."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn muốn tìm hiểu kỹ hơn về công ty và dự án trước khi quyết định đặt cọc ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu tâm lý của anh Thành mà. Chính vì vậy, để anh tin tưởng hơn, em có thể gửi cho anh xem trước bản phác thảo dự án, rồi hợp đồng mẫu, và cả giấy phép kinh doanh của công ty VLDC bên em. Anh cứ xem kỹ lưỡng rồi mình trao đổi tiếp nhé. Quan trọng là cơ hội này thực sự tốt, và em không muốn anh bỏ lỡ vì những thủ tục ban đầu ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề xuất cung cấp tài liệu chứng thực giả mạo, nhấn mạnh lại cơ hội và giảm nhẹ tầm quan trọng của yêu cầu ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã giải thích, nhưng tôi vẫn cần thời gian để suy nghĩ và tìm hiểu thêm về công ty đã nhé.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1402,
+      "output_tokens": 1813
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6545,
+      "output_tokens": 737
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8228,
+      "output_tokens": 288
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003945,
+    "output_usd": 0.01108,
+    "total_usd": 0.015026
+  }
+}

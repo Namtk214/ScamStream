@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_a1321924c5]
+  Caller thật: Chủ tịch, Phó Chủ tịch Ủy ban nhân dân cấp xã (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Cán bộ Phòng Tài chính - Kế hoạch, UBND xã @ UBND xã (cùng địa phương)
+  Listener: Lao động công nghiệp khác chưa được phân vào đâu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Cán bộ xã cần liên hệ với lao động công nghiệp địa phương về kiểm tra thuế, bảo hiểm xã hội hoặc thông báo chính sách hỗ trợ lao động tự do. Đây là điểm giao thoa tự nhiên trong quản lý hành chính cộng đồng.
+  Pretext: UBND xã thực sự gọi để thông báo hoặc xác minh thông tin trong quá trình cấp phát hỗ trợ chính sách hoặc kiểm tra thông tin hộ gia đình định kỳ
+  Listener traits: ['bảo thủ ngại thay đổi']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Alo, tôi là Lý Như Hồng Anh, cán bộ Phòng Tài chính - Kế hoạch của UBND xã đây ạ. Không biết có phải số điện thoại của chị Lý Khánh Thúy không ạ?
+      → phase: L1 | tactic: Xưng danh cán bộ và xác nhận thông tin cơ bản để chứng minh danh tính và sự đúng người.
+T02 [LISTENER] Dạ, đúng rồi ạ, em là Khánh Thúy đây.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào chị Thúy. Tôi gọi từ UBND xã để thông báo về việc hỗ trợ kinh phí cho các hộ gia đình có hoàn cảnh khó khăn theo chính sách mới của địa phương mình. Chị có phải là người đang cư trú tại địa chỉ mà chúng tôi ghi nhận là [địa chỉ nhà chị Thúy] không ạ?
+      → phase: L1 | tactic: Giới thiệu mục đích cuộc gọi và tiếp tục xác minh thông tin cá nhân khách hàng để tạo sự tin cậy.
+T04 [LISTENER] Dạ, em đang sống ở đó ạ, chị có cần thông tin gì thêm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ không có gì ạ. Hiện tại, theo danh sách hỗ trợ, chị Lý Khánh Thúy có mã số hồ sơ là HT2024-076 thuộc diện được nhận hỗ trợ một khoản kinh phí. Để chúng tôi có thể chuyển khoản số tiền này đến chị, chị vui lòng cung cấp số tài khoản ngân hàng của chị để tôi cập nhật vào hệ thống nhận hỗ trợ của xã ạ.
+      → phase: L2 | tactic: Thông báo về hỗ trợ và yêu cầu thông tin số tài khoản ngân hàng để thực hiện việc chuyển khoản, không yêu cầu các thông tin nhạy cảm khác.
+T06 [LISTENER] Dạ, nhưng em không chắc có thể cung cấp số tài khoản ngay bây giờ, chị có thể cho em biết thêm về quy trình được không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị Thúy cứ yên tâm ạ. Quy trình rất đơn giản, chị chỉ cần cung cấp số tài khoản ngân hàng của chị để chúng tôi ghi nhận vào hệ thống. Tuyệt đối chúng tôi không yêu cầu chị cung cấp mã OTP, mật khẩu hay mã PIN của ngân hàng đâu ạ. Sau khi có số tài khoản, chúng tôi sẽ tiến hành chuyển khoản hỗ trợ cho chị trong vòng 3 đến 5 ngày làm việc. Chị đã sẵn sàng cung cấp số tài khoản chưa ạ?
+      → phase: L2 | tactic: Trấn an người nghe về quy trình an toàn, nhấn mạnh không yêu cầu thông tin nhạy cảm và nhắc lại yêu cầu số tài khoản.
+T08 [LISTENER] Em hiểu quy trình rồi, nhưng vẫn cảm thấy không thoải mái khi cung cấp số tài khoản ngay bây giờ, chị có thể thông cảm cho em không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=0.00
+TOKEN: in=14004 | out=2423
+COST : $0.013354
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_14230_93290\conv_a1321924c5.json  [SCAM_REFUSE]

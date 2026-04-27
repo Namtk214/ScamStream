@@ -1,0 +1,37 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_511f2925c0]
+  Caller thật: Lao động chăn nuôi gia súc tự cung tự cấp (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Thương lái/Môi giới mua bán gia súc @ cá nhân / thương lái tự do
+  Listener: Lao động chăn nuôi dê, cừu, hươu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Thương lái gia súc thường xuyên liên hệ với các chủ trang chăn nuôi để mua bán, trao đổi thông tin giá cả và chất lượng vật nuôi. Đặng Minh Bình là chủ trang chăn nuôi dê, cừu, hươu — đối tượng khách hàng tiềm năng hoặc đã quen biết của thương lái.
+  Pretext: Thương lái gọi để trao đổi thông tin về chất lượng gia súc hiện tại của nạn nhân, giá bán, hoặc để giới thiệu một cơ hội hợp tác thực sự (mua bán, trao đổi) với thủ tục rõ ràng.
+  Listener traits: ['thiếu hiểu biết công nghệ', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Bình, tôi là Hoàng Thanh Linh, thương lái gia súc. Tôi xin số điện thoại của anh từ hội nông dân địa phương. Hiện tôi đang tìm các chủ trang trại uy tín để hợp tác. Anh có rảnh nói chuyện không?
+      → phase: L1 | tactic: Tiếp cận và xác nhận thông tin ban đầu, tự giới thiệu và hỏi sự tiện lợi của người nghe.
+T02 [LISTENER] Tôi nghe chị nói rồi, nhưng tôi muốn biết thêm về cách hợp tác của chị.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, thế thì tốt quá. Anh hiện chăn nuôi những loại gia súc nào? Số lượng khoảng bao nhiêu con? Chất lượng đàn của mình dạo này thế nào anh?
+      → phase: L2 | tactic: Chuyển sang trao đổi thông tin cụ thể về hoạt động chăn nuôi của đối tác tiềm năng để đánh giá cơ hội hợp tác.
+T04 [LISTENER] Tôi hiện đang chăn nuôi dê, cừu và hươu, số lượng khoảng mười mấy con, chất lượng cũng ổn chị ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Mười mấy con mỗi loại hay tổng cộng vậy anh? Và anh có đang có ý định bán hoặc trao đổi không ạ?
+      → phase: L2 | tactic: Làm rõ thông tin về số lượng và thăm dò ý định hợp tác của người nghe.
+T06 [LISTENER] Tôi tổng cộng mười mấy con thôi, và hiện tại tôi chưa có ý định bán hay trao đổi gì cả chị ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] À vậy ạ. Tôi hiểu. Vậy tôi xin phép ghi nhận thông tin này. Khi nào anh có nhu cầu bán hoặc trao đổi gia súc, anh cứ liên hệ lại cho tôi theo số này nhé. Tôi là Hoàng Thanh Linh.
+      → phase: L3 | tactic: Thống nhất cách tiếp cận, kết thúc cuộc gọi lịch sự khi đối tác chưa có nhu cầu, để lại thông tin liên hệ.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  7 turns | suspicion=0.00
+TOKEN: in=11933 | out=2142
+COST : $0.012343
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_63200_61212\conv_511f2925c0.json  [CALLER_END]

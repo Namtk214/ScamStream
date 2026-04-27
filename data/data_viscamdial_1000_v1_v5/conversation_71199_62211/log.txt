@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_362d95049d]
+  Caller thật: Thợ xây khác và thợ có liên quan chưa được phân vào đâu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý dự án xây dựng / Giám sát công trình @ Công ty Cổ phần Xây dựng và Phát triển Ven biển Đà Nẵng (COASTAL BUILD)
+  Listener: Lao động nuôi cá (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Dự án nuôi trồng thủy sản hoặc hạ tầng ao nuôi cá ở Đà Nẵng thường cần thi công, xây dựng hệ thống nước, bể chứa. Quản lý công trình sẽ liên hệ trực tiếp với chủ hộ/lao động nuôi cá để xác nhận địa điểm, tiến độ, hoặc yêu cầu hỗ trợ.
+  Pretext: Gọi thay mặt công ty xây dựng để thông báo về dự án cải tạo ao nuôi cá tại địa chỉ của nạn nhân ở Đà Nẵng. Sử dụng tên đầy đủ của nạn nhân để tạo ảo giác đã xác minh thông tin. Khẩn cấp hóa tình huống bằng cách nói rằng cần thanh toán trước để bắt đầu công trình, hoặc có vấn đề tài chính phát sinh cần xử lý ngay.
+  Listener traits: ['sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Võ Khánh Hồng Thảo, tôi là Lê Xuân Khoa từ công ty COASTAL BUILD. Chúng tôi đang phụ trách dự án cải tạo hệ thống nuôi cá tại khu vực Đà Nẵng của anh chị. Chị có nhận được thông báo từ chính quyền địa phương về việc này chưa ạ?
+      → phase: S1 | tactic: Tiếp cận với danh tính và thông tin đã biết để tạo credibility cao.
+T02 [LISTENER] Em chưa nhận được thông báo nào từ chính quyền địa phương cả, anh có thông tin gì cụ thể hơn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Thật ạ? Lạ nhỉ, đáng lẽ chính quyền phải gửi văn bản trước rồi chứ. Công ty chúng tôi được chỉ định trực tiếp từ Sở Nông nghiệp và Phát triển nông thôn Đà Nẵng để triển khai dự án này, chủ yếu là nâng cấp hạ tầng để đảm bảo môi trường nuôi cá bền vững, tránh tình trạng ô nhiễm đang diễn ra trên diện rộng. Chắc là do hồ sơ nhiều quá nên thông báo của chị bị chậm trễ thôi. Nhưng dù sao thì dự án cũng phải bắt đầu ngay trong tuần này rồi, nếu không sẽ bị chậm tiến độ theo hợp đồng với chính quyền đấy chị ạ. Mà em thấy ở đây ghi là chị đang làm lao động nuôi cá đúng không?
+      → phase: S2 | tactic: Tạo áp lực thời gian và trách nhiệm, khéo léo khẳng định tính hợp pháp của dự án và thông tin đã biết về nạn nhân để củng cố niềm tin. Đồng thời, gợi ý khả năng lỗi hành chính để xoa dịu sự nghi ngờ ban đầu.
+T04 [LISTENER] Vâng, đúng rồi anh, em đang làm lao động nuôi cá, nhưng em vẫn chưa rõ lắm về dự án này. Anh có thể cho em biết thêm thông tin chi tiết được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, chị yên tâm, tôi sẽ giải thích cụ thể hơn. Để dự án diễn ra thuận lợi, chúng tôi cần chị xác nhận lại một số thông tin và làm một thủ tục nhỏ về việc bàn giao mặt bằng để đội thi công có thể tiến hành khảo sát lần cuối vào sáng mai. Việc này phải xong trong hôm nay để đảm bảo tiến độ. Chị có thể dành ra 15 phút để tôi hướng dẫn chị hoàn tất các thủ tục cần thiết không ạ?
+      → phase: S2 | tactic: Tiếp tục tạo áp lực thời gian, khẩn cấp hóa tình huống và hướng đến hành động cụ thể. Giữ cho yêu cầu ban đầu nhỏ và hợp lý để xây dựng sự tin tưởng và chuẩn bị cho yêu cầu chuyển tiền sau.
+T06 [LISTENER] Em cần thêm thông tin cụ thể về những thủ tục này vì em chưa quen với các bước như vậy ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Mấy thủ tục này đơn giản thôi chị, chủ yếu là xác nhận thông tin thửa đất và ký một số giấy tờ bàn giao mặt bằng để chúng tôi có đủ cơ sở pháp lý thi công. Sau đó công ty sẽ tiến hành đặt cọc trước một phần chi phí để mua vật liệu, đảm bảo đúng tiến độ. Chị có thể chuyển khoản số tiền tạm ứng này trực tiếp vào tài khoản công ty giúp tôi, sau đó chúng tôi sẽ gửi lại biên lai và các giấy tờ xác nhận đầy đủ. Chị có tiện thực hiện giao dịch trong vòng 2 tiếng tới không ạ?
+      → phase: S3 | tactic: Yêu cầu chuyển tiền vào tài khoản công ty với lý do tạm ứng chi phí vật liệu, tạo áp lực thời gian.
+T08 [LISTENER] Em không quen với việc chuyển khoản như vậy, anh có thể hướng dẫn em cụ thể hơn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, chị đừng lo lắng. Việc này đơn giản thôi. Chị chỉ cần mở ứng dụng ngân hàng trên điện thoại hoặc ra cây ATM gần nhất, chọn mục 'Chuyển tiền'. Sau đó, tôi sẽ cung cấp cho chị thông tin số tài khoản và tên ngân hàng của công ty. Chị nhập số tiền tạm ứng vào, xác nhận giao dịch là xong. Tôi sẽ chờ chị trong lúc đó, chị có thể làm luôn bây giờ được không ạ?
+      → phase: S3 | tactic: Hướng dẫn chi tiết cách chuyển tiền, giữ nguyên áp lực thời gian và khuyến khích hành động ngay lập tức.
+T10 [LISTENER] Em chưa quen với việc này lắm, anh có thể cho em biết thông tin số tài khoản và tên ngân hàng của công ty được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ vâng, số tài khoản của công ty chúng tôi là 190300800001, tại Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank) - Chi nhánh Đà Nẵng. Tên thụ hưởng là Công ty Cổ phần Xây dựng và Phát triển Ven biển Đà Nẵng. Chị kiểm tra lại đúng tên công ty giúp tôi nhé. Số tiền tạm ứng là 5 triệu đồng, đây là chi phí đặt cọc vật liệu ban đầu để kịp tiến độ. Chị có thể thao tác luôn bây giờ không ạ?
+      → phase: S3 | tactic: Cung cấp thông tin tài khoản ngân hàng và số tiền cụ thể cần chuyển, tiếp tục thúc giục hành động ngay lập tức.
+T12 [LISTENER] Em cần chút thời gian để kiểm tra và suy nghĩ, có thể em sẽ thực hiện giao dịch sau được không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Chị Thảo ơi, việc này rất gấp ạ. Như tôi đã nói, dự án phải khởi công trong tuần này. Nếu chị không chuyển khoản ngay để đặt cọc vật liệu, đội thi công sẽ không thể bắt đầu công việc đúng hẹn được. Điều này có thể ảnh hưởng đến tiến độ chung và thậm chí là phát sinh các khoản phạt hành chính từ chính quyền địa phương, mà công ty chúng tôi chỉ là đơn vị thi công thôi, mọi trách nhiệm về hồ sơ và tiến độ là của chủ đầu tư - tức là chị đó ạ. Chị cố gắng sắp xếp chuyển khoản giúp tôi ngay nhé.
+      → phase: S4 | tactic: Tăng áp lực bằng cách nhấn mạnh về các khoản phạt hành chính và trách nhiệm pháp lý nếu không thực hiện chuyển khoản ngay lập tức, đẩy trách nhiệm cho nạn nhân.
+T14 [LISTENER] Em hiểu rằng dự án quan trọng, nhưng em vẫn cần thêm thời gian để quyết định ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  14 turns | suspicion=0.00
+TOKEN: in=31432 | out=4463
+COST : $0.023465
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_71199_62211\conv_362d95049d.json  [SCAM_REFUSE]

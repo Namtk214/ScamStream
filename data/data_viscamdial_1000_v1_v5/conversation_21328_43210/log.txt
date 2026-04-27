@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_3edb95b362]
+  Caller thật: Nhà tư vấn nuôi trồng thủy sản (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Nhân viên kinh doanh/Tư vấn bán hàng tại công ty cung cấp thức ăn và hóa chất nuôi trồng thủy sản @ Công ty TNHH Thực Phẩm Thủy Sản Minh Phát
+  Listener: Nhân viên ghi chép tồn kho (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên bán hàng thủy sản thường xuyên phải liên hệ với các cơ sở nuôi trồng, hợp tác xã, và các bộ phận quản lý tồn kho để cập nhật đơn hàng, kiểm tra lượng hàng tồn, và xử lý thanh toán. Nhân viên ghi chép tồn kho là người trực tiếp quản lý kho và có quyền quyết định mua hàng, nên là điểm liên lạc tự nhiên.
+  Pretext: Nhân viên bán hàng liên hệ để xác nhận lại thông tin đơn hàng, cập nhật lượng hàng tồn kho, thương thảo về hóa đơn tháng này hoặc thông báo về chương trình khuyến mãi mới.
+  Listener traits: ['lo lắng cho con cái', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Phạm Ngọc Ngọc Thúy, em là Hải từ công ty Minh Phát đây. Hôm nay em gọi để xác nhận lại đơn hàng thức ăn cá tháng này của mình ạ. Chị có tiện nghe máy vài phút không chị?
+      → phase: L1 | tactic: Xưng danh rõ ràng, xác nhận đúng người và mục đích cuộc gọi.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng có phải em cần xác nhận gì thêm không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, em muốn hỏi về số lượng và loại thức ăn thủy sản mà bên mình dự kiến nhập trong tháng tới ạ. Đồng thời, em cũng muốn thông báo về chương trình chiết khấu mới nếu mình nhập hàng số lượng lớn trong đợt này ạ.
+      → phase: L2 | tactic: Trao đổi nội dung công việc, hỏi về nhu cầu và thông báo khuyến mãi.
+T04 [LISTENER] Em có thể cho tôi biết thêm chi tiết về chương trình chiết khấu và số lượng thức ăn mà em dự kiến nhập không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, bên em đang có chương trình chiết khấu 5% cho các đơn hàng thức ăn cá từ 5 tấn trở lên và 10% nếu từ 10 tấn trở lên ạ. Về số lượng dự kiến, theo lịch sử đơn hàng thì tháng trước mình nhập khoảng 7 tấn, nên tháng này không biết chị muốn duy trì hay điều chỉnh ạ?
+      → phase: L2 | tactic: Cung cấp chi tiết chương trình khuyến mãi và gợi ý về số lượng dựa trên lịch sử mua hàng.
+T06 [LISTENER] Em có thể cho tôi thời gian để suy nghĩ thêm về số lượng và chương trình khuyến mãi đó được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ được chứ chị. Vậy em sẽ gửi lại chi tiết chương trình khuyến mãi qua Zalo để chị tiện xem xét nhé. Khi nào chị có quyết định cuối cùng, chị cứ báo lại em ạ.
+      → phase: L2 | tactic: Tạo không gian cho khách hàng suy nghĩ, đồng thời duy trì liên lạc và gợi ý phương thức phản hồi.
+T08 [LISTENER] Em cứ gửi thông tin qua Zalo cho tôi, tôi sẽ xem xét và phản hồi lại nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, vậy em sẽ gửi thông tin qua Zalo cho chị Thúy ạ. Cảm ơn chị đã dành thời gian nghe máy. Chúc chị một ngày tốt lành ạ!
+      → phase: L3 | tactic: Thống nhất sẽ gửi thông tin và kết thúc cuộc gọi lịch sự.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.00
+TOKEN: in=15532 | out=2525
+COST : $0.014278
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_21328_43210\conv_3edb95b362.json  [CALLER_END]

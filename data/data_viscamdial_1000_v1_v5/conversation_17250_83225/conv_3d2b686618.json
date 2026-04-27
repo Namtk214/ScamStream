@@ -1,0 +1,261 @@
+{
+  "conversation_id": "conv_3d2b686618",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_SUCCESS",
+  "caller_card": {
+    "caller_id": "cal_0069",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trương Thanh Lan",
+    "fake_age": 42,
+    "real_occupation": "Dịch vụ lưu trú và ăn uống",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng phòng Quản lý Dịch vụ Khách sạn & Nhà hàng",
+    "caller_org": "Công ty Du lịch & Dịch vụ Lưu trú Long An (hoặc khách sạn cụ thể)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi báo cáo 'sự cố bảo mật bãi đỗ xe' tại địa điểm khách sạn ở Long An, cần xác minh danh tính và thông tin tài khoản ngân hàng của nhân viên để 'bồi thường thiệt hại xe bị trộm' hoặc 'cập nhật hệ thống truy cập'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng uy tín: Scammer xưng danh là 'Trưởng phòng Quản lý Dịch vụ' của khách sạn X ở Long An, gọi cho Tạ Ngọc Mai (dùng tên thật), nhắc lại địa điểm Long An để tạo quen thuộc, nói đã lấy danh sách nhân viên bãi đỗ từ hệ thống công ty"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: Báo cáo 'chiếc xe khách hàng bị mất tại bãi đỗ xe hôm qua', khách sạn phải bồi thường 50-100 triệu, cần xác minh thông tin cá nhân của nhân viên trực để 'chịu trách nhiệm' hoặc 'giảm nhẹ hình phạt', tạo áp lực thời gian ('phải xử lý trong 2 tiếng')"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu Tạ Ngọc Mai cung cấp 'tài khoản ngân hàng để khách sạn chuyển tiền bồi thường trước', hoặc 'tải app xác thực' để 'cập nhật hệ thống quản lý bãi đỗ', lấy OTP/mã xác thực"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý hoàn tất: Nếu nạn nhân cung cấp TK hoặc OTP, scammer thực hiện chuyển tiền hoặc truy cập tài khoản. Nếu bị từ chối, scammer tạo thêm áp lực bằng cách 'liên hệ sếp' hoặc đe dọa 'báo cảnh sát'"
+        }
+      ]
+    },
+    "scenario_context": "Người quản lý dịch vụ lưu trú cần liên hệ với người trông bãi đỗ xe để điều phối các vấn đề về gửi xe khách, xe nhân viên, hoặc xử lý sự cố tại bãi đỗ của khách sạn/nhà hàng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0069",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1985,
+      "age": 40,
+      "province": "Long An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "83225",
+      "title": "Người trông bãi đỗ xe",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Ngọc Mai",
+      "VIC_ID_DOC": "080185222153",
+      "VIC_ADDRESS": "Quận 6, Long An",
+      "VIC_EMPLOYMENT": "Người trông bãi đỗ xe",
+      "VIC_CONTACT": "0788517983",
+      "VIC_TAX_SOCIAL_ID": "3904834206"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "243294",
+      "VIC_CREDENTIAL": "1415",
+      "VIC_SIM_INFO": "0788517983",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3576551176359",
+      "VIC_CARD_DATA": "4656 **** **** 5843",
+      "VIC_BALANCE": "13 triệu đồng",
+      "VIC_ASSET": "32 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Ngọc Mai",
+    "VIC_CONTACT": "0788517983",
+    "LOCATION": "Long An"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Dịch vụ Khách sạn & Nhà hàng",
+    "caller_org": "Công ty Du lịch & Dịch vụ Lưu trú Long An (hoặc khách sạn cụ thể)",
+    "scenario_context": "Người quản lý dịch vụ lưu trú cần liên hệ với người trông bãi đỗ xe để điều phối các vấn đề về gửi xe khách, xe nhân viên, hoặc xử lý sự cố tại bãi đỗ của khách sạn/nhà hàng.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi báo cáo 'sự cố bảo mật bãi đỗ xe' tại địa điểm khách sạn ở Long An, cần xác minh danh tính và thông tin tài khoản ngân hàng của nhân viên để 'bồi thường thiệt hại xe bị trộm' hoặc 'cập nhật hệ thống truy cập'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng uy tín: Scammer xưng danh là 'Trưởng phòng Quản lý Dịch vụ' của khách sạn X ở Long An, gọi cho Tạ Ngọc Mai (dùng tên thật), nhắc lại địa điểm Long An để tạo quen thuộc, nói đã lấy danh sách nhân viên bãi đỗ từ hệ thống công ty"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: Báo cáo 'chiếc xe khách hàng bị mất tại bãi đỗ xe hôm qua', khách sạn phải bồi thường 50-100 triệu, cần xác minh thông tin cá nhân của nhân viên trực để 'chịu trách nhiệm' hoặc 'giảm nhẹ hình phạt', tạo áp lực thời gian ('phải xử lý trong 2 tiếng')"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu Tạ Ngọc Mai cung cấp 'tài khoản ngân hàng để khách sạn chuyển tiền bồi thường trước', hoặc 'tải app xác thực' để 'cập nhật hệ thống quản lý bãi đỗ', lấy OTP/mã xác thực"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý hoàn tất: Nếu nạn nhân cung cấp TK hoặc OTP, scammer thực hiện chuyển tiền hoặc truy cập tài khoản. Nếu bị từ chối, scammer tạo thêm áp lực bằng cách 'liên hệ sếp' hoặc đe dọa 'báo cảnh sát'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên quản lý khách sạn cần liên hệ với người trông bãi đỗ xe để xử lý công việc hàng ngày: báo cáo tình trạng bãi, yêu cầu hỗ trợ khách, thay đổi ca trực, hoặc cập nhật quy định an ninh",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng (tên + chức vụ + công ty), xác nhận người nghe là Tạ Ngọc Mai, nhân viên bãi đỗ xe tại địa điểm Long An, giải thích lý do gọi một cách rõ ràng và ngắn gọn"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận vấn đề cụ thể (ví dụ: 'có khách phàn nàn về thời gian gửi xe', 'cần cập nhật lịch ca tuần sau', 'yêu cầu kiểm tra camera'), lắng nghe phản hồi, đưa ra giải pháp"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc tự nhiên: Thống nhất hành động tiếp theo (ví dụ: 'em kiểm tra camera và báo lại trong 1 tiếng'), cảm ơn, chào tạm biệt, không yêu cầu thông tin cá nhân hay tài khoản"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_BANK_ACCOUNT": "3576551176359"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Tạ Ngọc Mai, tôi là Trương Thanh Lan, Trưởng phòng Quản lý Dịch vụ của khách sạn bên mình ở Long An. Tôi gọi từ số của công ty để xác minh một việc gấp liên quan đến danh sách nhân viên bãi đỗ xe của khách sạn chúng ta.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, chức vụ, địa điểm Long An, tên thật nạn nhân để tạo uy tín và quen thuộc. Giới thiệu lý do cuộc gọi qua loa ban đầu để nạn nhân không nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị nói gì cũng được, tôi sẵn sàng nghe ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, cảm ơn chị Mai. Chị có đang ở khu vực Long An không ạ? Tôi cần trao đổi gấp về một sự cố bảo mật nghiêm trọng tại bãi đỗ xe của khách sạn chúng ta xảy ra đêm qua, có liên quan đến thông tin nhân viên trực ca đêm đó.",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận lại địa điểm Long An để tăng tính xác thực, sau đó giới thiệu khẩn cấp về 'sự cố bảo mật' tại bãi đỗ xe và liên hệ đến 'thông tin nhân viên trực ca đêm' để bắt đầu khai thác tâm lý lo lắng và trách nhiệm."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi đang ở Long An đây, chị cần tôi làm gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Sự việc là thế này, chị Mai. Đêm qua, có một chiếc xe của khách hàng đã bị mất cắp ngay tại bãi đỗ xe của khách sạn. Khách sạn đang đứng trước nguy cơ phải bồi thường một khoản rất lớn, có thể lên tới 50-100 triệu đồng. Chúng tôi cần chị xác minh gấp một số thông tin để làm rõ trách nhiệm và giảm thiểu thiệt hại, có thể chị cũng bị ảnh hưởng.",
+      "current_phase": "S2",
+      "tactic_hint": "Làm rõ sự cố 'mất cắp xe', đưa ra con số bồi thường lớn để tạo tâm lý khẩn cấp và sợ hãi. Đề cập đến 'trách nhiệm' và 'ảnh hưởng' đến nạn nhân để tăng áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi rất lo lắng cho sự việc này, chị có cần tôi cung cấp thông tin gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Mai đừng quá lo lắng. Hiện tại, chúng tôi cần xác nhận nhanh thông tin cá nhân của các nhân viên trực bãi đỗ xe đêm qua, bao gồm cả chị, để làm hồ sơ báo cáo lên cấp trên và phối hợp với cơ quan công an. Việc này phải hoàn tất trong vòng 2 tiếng tới. Chị vui lòng cung cấp giúp tôi mã số nhân viên hoặc một số thông tin cá nhân cơ bản để tôi đối chiếu, tránh trường hợp bị sai sót ảnh hưởng đến chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Thúc đẩy yêu cầu thông tin cá nhân dưới lý do 'xác nhận nhanh thông tin cá nhân' để 'làm hồ sơ báo cáo' và 'phối hợp công an', đồng thời tạo áp lực thời gian 'trong vòng 2 tiếng' và nhắc lại khả năng 'ảnh hưởng đến chị' nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị cần thông tin gì, tôi có thể cung cấp mã số nhân viên cho chị ngay ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Rất tốt. Để tôi kiểm tra nhanh. Chị Mai có thể cho tôi biết chị đã từng đăng ký tài khoản ngân hàng nào để nhận lương hoặc các khoản bồi dưỡng từ công ty chưa? Chúng tôi cần đối chiếu thông tin này để đảm bảo rằng nếu có khoản bồi thường nào liên quan đến sự cố này, chị sẽ nhận được đúng và đủ.",
+      "current_phase": "S3",
+      "tactic_hint": "Chuyển sang yêu cầu thông tin tài khoản ngân hàng dưới vỏ bọc 'kiểm tra nhanh' và 'đối chiếu thông tin' để 'nhận bồi thường', tạo động lực cho nạn nhân cung cấp thông tin tài chính cá nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi đã đăng ký tài khoản ngân hàng Vietcombank để nhận lương ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_BANK_ACCOUNT": "3576551176359"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, Vietcombank. Chị có thể vui lòng cung cấp số tài khoản Vietcombank của mình được không? Tôi cần nhập vào hệ thống để đối chiếu với thông tin lương của công ty, cũng như đảm bảo rằng nếu có bất kỳ khoản hỗ trợ nào từ khách sạn để bù đắp thiệt hại, thì số tài khoản này sẽ được cập nhật chính xác. Việc này rất quan trọng để đảm bảo quyền lợi cho chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Trực tiếp yêu cầu số tài khoản ngân hàng, liên kết với việc 'đối chiếu thông tin lương' và 'hỗ trợ bù đắp thiệt hại' để làm tăng tính hợp lý và tạo cảm giác có lợi cho nạn nhân, nhấn mạnh 'đảm bảo quyền lợi'."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị cần số tài khoản của tôi là gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị đọc giúp tôi số tài khoản Vietcombank của chị nhé. Tôi sẽ ghi lại đây để kiểm tra ngay trên hệ thống của công ty, đảm bảo mọi thứ được khớp và chị không gặp bất kỳ vướng mắc nào về sau.",
+      "current_phase": "S3",
+      "tactic_hint": "Trực tiếp yêu cầu nạn nhân cung cấp số tài khoản ngân hàng, nhấn mạnh việc 'kiểm tra trên hệ thống công ty' để tạo cảm giác xác thực và cam kết 'không gặp vướng mắc nào về sau' nhằm trấn an nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, số tài khoản của tôi là 3576551176359 ạ.",
+      "listener_action": "FULL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_BANK_ACCOUNT": "3576551176359"
+      },
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1350,
+      "output_tokens": 1516
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12459,
+      "output_tokens": 1212
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 16115,
+      "output_tokens": 477
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006259,
+    "output_usd": 0.010896,
+    "total_usd": 0.017155
+  }
+}

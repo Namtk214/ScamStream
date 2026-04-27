@@ -1,0 +1,263 @@
+{
+  "conversation_id": "conv_3c4adce404",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0053",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Võ Như Ngọc Yến",
+    "fake_age": 46,
+    "real_occupation": "Tài chính, kế toán, quản trị hành chính",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng phòng Tài chính - Kế toán, Bộ/Ngành (hoặc giả danh Cục Quản lý Tài chính Công đoàn Trung ương)",
+    "caller_org": "Cục Quản lý Tài chính & Kiểm toán, Liên đoàn Lao động Việt Nam / Bộ Lao động - Thương binh & Xã hội",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer | credential_theft",
+      "pretext": "Kiểm tra tài chính định kỳ / Rà soát tài khoản công đoàn liên quan đến chương trình hỗ trợ thành viên / Xác nhận thông tin ngân hàng để cập nhật hệ thống quản lý tài chính tập trung",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác lập credibility: Gọi đến VIC_CONTACT, xưng danh là 'Trưởng phòng Tài chính, Cục Quản lý Tài chính Liên đoàn Lao động Việt Nam'. Sử dụng VIC_FULLNAME ('Ông Lê Công Hữu Vinh') và VIC_EMPLOYMENT để xác nhận đúng người. Nói: 'Xin chào ông Vinh, tôi là [Tên giả] từ Cục Quản lý Tài chính. Hôm nay chúng tôi đang rà soát tài khoản của các tổ chức công đoàn cấp cơ sở, bao gồm tổ chức của ông. Ông có thể xác nhận một vài thông tin được không?'",
+          "tactic": "Authority + Legitimacy (sử dụng tên cơ quan thực, cấu trúc hành chính thật)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: Tạo cảm giác hối thúc: 'Theo thông báo mới của Bộ Lao động, chúng tôi phải hoàn thành kiểm toán tài chính trong tuần này. Nếu không cập nhật kịp, tổ chức ông sẽ bị tạm dừng các khoản hỗ trợ thành viên. Ông có thể giúp chúng tôi không?' Tạo áp lực: 'Ông là Chủ tịch, ông phải chịu trách nhiệm nếu có sai sót.'",
+          "tactic": "Urgency + Accountability + Threat of Consequence"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để cập nhật nhanh, ông vui lòng cung cấp: (1) Số tài khoản ngân hàng hiện tại của tổ chức; (2) Tên đăng nhập hệ thống quản lý tài chính; (3) Hoặc ông có thể chuyển khoản kiểm tra 500.000 đ vào tài khoản tạm thời của chúng tôi (tài khoản giả) để xác minh. Chúng tôi sẽ hoàn lại ngay sau khi kiểm tra xong.'",
+          "tactic": "Direct Request for Sensitive Data or Money + False Promise of Return"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân từ chối hoặc nghi ngờ: 'Ông vui lòng gọi lại Cục Quản lý Tài chính để xác nhận, số điện thoại là [số giả hoặc số thật nhưng scammer kiểm soát]. Hoặc ông có thể nhắn tin OTP để chúng tôi xác minh danh tính ông.' Nếu thành công: Nạn nhân cung cấp tài khoản hoặc chuyển tiền → Scammer rút tiền hoặc truy cập tài khoản → Kết thúc cuộc gọi với lời cảm ơn giả tạo.",
+          "tactic": "Redirect to Fake Verification | Money Extraction | Account Compromise"
+        }
+      ]
+    },
+    "scenario_context": "Chủ tịch công đoàn cơ quan bộ, ngành có trách nhiệm giám sát tài chính, báo cáo ngân sách và thực hiện các quy định tài chính từ cơ quan cấp trên. Người phụ trách tài chính - kế toán từ Liên đoàn hoặc Bộ sẽ thường xuyên liên hệ để kiểm tra, rà soát, hoặc yêu cầu cung cấp tài liệu tài chính từ các tổ chức công đoàn cấp dưới."
+  },
+  "listener_card": {
+    "listener_id": "lis_0053",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1987,
+      "age": 38,
+      "province": "Tiền Giang",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "15260",
+      "title": "Chủ tịch, Phó Chủ tịch tổ chức công đoàn cơ quan bộ, ngành ở trung ương",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Công Hữu Vinh",
+      "VIC_ID_DOC": "082087554183",
+      "VIC_ADDRESS": "Quận 12, Tiền Giang",
+      "VIC_EMPLOYMENT": "Chủ tịch, Phó Chủ tịch tổ chức công đoàn cơ quan bộ, ngành ở trung ương",
+      "VIC_CONTACT": "0979459532",
+      "VIC_TAX_SOCIAL_ID": "4915029710"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9358",
+      "VIC_CREDENTIAL": "7335",
+      "VIC_SIM_INFO": "0979459532",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "968439784779",
+      "VIC_CARD_DATA": "4634 **** **** 7089",
+      "VIC_BALANCE": "112 triệu đồng",
+      "VIC_ASSET": "397 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Tiền Giang"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Công Hữu Vinh",
+    "VIC_CONTACT": "0979459532",
+    "VIC_EMPLOYMENT": "Chủ tịch, Phó Chủ tịch tổ chức công đoàn cơ quan bộ, ngành ở trung ương"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Tài chính - Kế toán, Bộ/Ngành (hoặc giả danh Cục Quản lý Tài chính Công đoàn Trung ương)",
+    "caller_org": "Cục Quản lý Tài chính & Kiểm toán, Liên đoàn Lao động Việt Nam / Bộ Lao động - Thương binh & Xã hội",
+    "scenario_context": "Chủ tịch công đoàn cơ quan bộ, ngành có trách nhiệm giám sát tài chính, báo cáo ngân sách và thực hiện các quy định tài chính từ cơ quan cấp trên. Người phụ trách tài chính - kế toán từ Liên đoàn hoặc Bộ sẽ thường xuyên liên hệ để kiểm tra, rà soát, hoặc yêu cầu cung cấp tài liệu tài chính từ các tổ chức công đoàn cấp dưới.",
+    "scam_path": {
+      "fraud_goal": "money_transfer | credential_theft",
+      "pretext": "Kiểm tra tài chính định kỳ / Rà soát tài khoản công đoàn liên quan đến chương trình hỗ trợ thành viên / Xác nhận thông tin ngân hàng để cập nhật hệ thống quản lý tài chính tập trung",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác lập credibility: Gọi đến VIC_CONTACT, xưng danh là 'Trưởng phòng Tài chính, Cục Quản lý Tài chính Liên đoàn Lao động Việt Nam'. Sử dụng VIC_FULLNAME ('Ông Lê Công Hữu Vinh') và VIC_EMPLOYMENT để xác nhận đúng người. Nói: 'Xin chào ông Vinh, tôi là [Tên giả] từ Cục Quản lý Tài chính. Hôm nay chúng tôi đang rà soát tài khoản của các tổ chức công đoàn cấp cơ sở, bao gồm tổ chức của ông. Ông có thể xác nhận một vài thông tin được không?'",
+          "tactic": "Authority + Legitimacy (sử dụng tên cơ quan thực, cấu trúc hành chính thật)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: Tạo cảm giác hối thúc: 'Theo thông báo mới của Bộ Lao động, chúng tôi phải hoàn thành kiểm toán tài chính trong tuần này. Nếu không cập nhật kịp, tổ chức ông sẽ bị tạm dừng các khoản hỗ trợ thành viên. Ông có thể giúp chúng tôi không?' Tạo áp lực: 'Ông là Chủ tịch, ông phải chịu trách nhiệm nếu có sai sót.'",
+          "tactic": "Urgency + Accountability + Threat of Consequence"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để cập nhật nhanh, ông vui lòng cung cấp: (1) Số tài khoản ngân hàng hiện tại của tổ chức; (2) Tên đăng nhập hệ thống quản lý tài chính; (3) Hoặc ông có thể chuyển khoản kiểm tra 500.000 đ vào tài khoản tạm thời của chúng tôi (tài khoản giả) để xác minh. Chúng tôi sẽ hoàn lại ngay sau khi kiểm tra xong.'",
+          "tactic": "Direct Request for Sensitive Data or Money + False Promise of Return"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân từ chối hoặc nghi ngờ: 'Ông vui lòng gọi lại Cục Quản lý Tài chính để xác nhận, số điện thoại là [số giả hoặc số thật nhưng scammer kiểm soát]. Hoặc ông có thể nhắn tin OTP để chúng tôi xác minh danh tính ông.' Nếu thành công: Nạn nhân cung cấp tài khoản hoặc chuyển tiền → Scammer rút tiền hoặc truy cập tài khoản → Kết thúc cuộc gọi với lời cảm ơn giả tạo.",
+          "tactic": "Redirect to Fake Verification | Money Extraction | Account Compromise"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kiểm tra tài chính định kỳ từ cơ quan cấp trên / Rà soát báo cáo tài chính năm / Thông báo chương trình hỗ trợ thành viên mới hoặc cập nhật quy định tài chính",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Gọi đến VIC_CONTACT, xưng danh đầy đủ: 'Xin chào ông Lê Công Hữu Vinh, tôi là [Tên thật] từ Cục Quản lý Tài chính Liên đoàn Lao động Việt Nam. Hôm nay chúng tôi cần liên hệ để rà soát báo cáo tài chính năm 2024 của tổ chức công đoàn ông.' Yêu cầu xác nhận: 'Ông có thể xác nhận bạn là Chủ tịch công đoàn cơ quan [tên cơ quan] không?'",
+          "tactic": "Clear Introduction + Legitimate Purpose + Verification"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần ông cung cấp: (1) Báo cáo tài chính quý IV; (2) Danh sách các dự án hỗ trợ thành viên; (3) Xác nhận người đại diện tài chính hiện tại.' Nếu cần, hẹn gặp mặt hoặc gửi tài liệu qua email chính thức (có domain bộ/ngành).",
+          "tactic": "Specific Requests + Proper Channels + Documentation Trail"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn ông đã cung cấp thông tin. Chúng tôi sẽ gửi danh sách tài liệu chi tiết qua email chính thức. Nếu ông có thắc mắc, vui lòng liên hệ lại số hotline [số chính thức]. Chúc ông công tác tốt.' Không yêu cầu thông tin nhạy cảm qua điện thoại.",
+          "tactic": "Professional Closure + Official Communication Channel + No Sensitive Data Over Phone"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Lê Công Hữu Vinh, tôi là Võ Như Ngọc Yến, Trưởng phòng Tài chính từ Cục Quản lý Tài chính Liên đoàn Lao động Việt Nam. Hôm nay chúng tôi đang thực hiện rà soát tài khoản của các tổ chức công đoàn cấp cơ sở, bao gồm cả tổ chức của anh. Anh có thể xác nhận một vài thông tin được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, xưng danh và sử dụng thông tin đã biết (VIC_FULLNAME, VIC_EMPLOYMENT) để tạo lòng tin, xác nhận đúng người."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết số điện thoại chị gọi từ số nào không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi gọi từ số 0243.8256.xxx của Cục Quản lý Tài chính. Anh Vinh cứ an tâm, thông tin này chúng tôi có lưu lại trên hệ thống nội bộ của Cục.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách cung cấp thông tin liên hệ giả định, khẳng định tính chính thống của cuộc gọi và uy tín của tổ chức."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy lo lắng và chưa chắc chắn lắm về cuộc gọi này, chị có thể cho em biết thêm thông tin để xác nhận không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh cứ bình tĩnh. Chúng tôi chỉ đang làm nhiệm vụ rà soát định kỳ thôi. Anh là Chủ tịch công đoàn cơ sở, chắc anh cũng nắm rõ quy trình này mà. Theo thông báo mới nhất từ Bộ Lao động, chúng tôi phải hoàn thành việc kiểm toán tài chính này trong tuần này. Nếu không cập nhật kịp thời, tổ chức của anh có thể sẽ bị tạm dừng các khoản hỗ trợ dành cho thành viên đó. Tôi cần anh giúp chúng tôi hoàn thành đúng tiến độ.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang giai đoạn S2, tạo tâm lý khẩn cấp và trách nhiệm, nhắc nhở về hậu quả nếu không hợp tác để thúc đẩy nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu nhưng em vẫn cần thêm thông tin cụ thể để chắc chắn hơn, chị có thể cung cấp cho em tên và chức vụ của một người mà em có thể liên hệ lại không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Lê Công Hữu Vinh, tôi đã nói rõ là tôi là Võ Như Ngọc Yến, Trưởng phòng Tài chính từ Cục Quản lý Tài chính Liên đoàn Lao động Việt Nam. Đây là đợt rà soát tài chính định kỳ và rất quan trọng, đặc biệt là với vai trò Chủ tịch công đoàn như anh. Việc trì hoãn này có thể ảnh hưởng trực tiếp đến quyền lợi của các thành viên công đoàn. Anh có thể nói rõ anh muốn xác nhận thông tin gì nữa không? Tôi đang cố gắng hỗ trợ anh nhanh nhất có thể.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách lặp lại thông tin cá nhân và tổ chức, đồng thời nhắc lại lợi ích của việc hợp tác và tạo ra một cảm giác khẩn cấp để gây áp lực cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn xác nhận thông tin để đảm bảo an toàn, chị có thể cung cấp địa chỉ văn phòng Cục Quản lý Tài chính mà chị đang làm việc không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, tôi hiểu sự cẩn trọng của anh. Tuy nhiên, việc rà soát này được tiến hành trực tuyến qua hệ thống để đảm bảo nhanh chóng và hiệu quả, tránh làm gián đoạn công việc của các cơ sở. Tôi đã cung cấp tên và chức vụ rõ ràng. Nếu anh vẫn còn băn khoăn, anh có thể gọi trực tiếp lên tổng đài của Liên đoàn Lao động Việt Nam theo số 1900 xxxx để xác minh thông tin này. Nhưng anh cần hiểu rằng mọi sự chậm trễ sẽ tự anh chịu trách nhiệm về quyền lợi đoàn viên đấy.",
+      "current_phase": "S2",
+      "tactic_hint": "Giả vờ cung cấp thông tin xác minh (số tổng đài giả hoặc đang bị kiểm soát), đồng thời tái khẳng định áp lực trách nhiệm để tiếp tục thúc đẩy nạn nhân hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em biết rồi, nhưng em vẫn thấy không an toàn khi cung cấp thông tin, chị có thể gửi cho em một email từ địa chỉ chính thức của Cục không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Lê Công Hữu Vinh, tôi đã đề nghị anh liên hệ trực tiếp tổng đài rồi. Hiện tại, thời gian của tôi rất hạn chế và chúng tôi thực sự cần hoàn thành việc rà soát này. Nếu anh không thể hợp tác, tôi e rằng chúng tôi sẽ phải ghi nhận trường hợp của tổ chức anh là không phối hợp và tạm dừng các khoản hỗ trợ theo đúng quy định. Anh có muốn điều đó xảy ra không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tăng cường áp lực trách nhiệm và hậu quả tiêu cực nếu không hợp tác, đồng thời tạo cảm giác khan hiếm thời gian và sự kiên nhẫn. Đẩy nạn nhân vào thế phải đưa ra quyết định."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi nhưng hiện tại em vẫn cảm thấy không an toàn để cung cấp thông tin, chị có thể hiểu cho em không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 2.8
+    },
+    {
+      "role": "caller",
+      "text": "Anh Lê Công Hữu Vinh, nếu anh đã không cảm thấy an toàn và không muốn hợp tác, thì tôi cũng không thể tiếp tục hỗ trợ được nữa. Anh vui lòng liên hệ lại Cục Quản lý Tài chính khi nào anh cảm thấy sẵn sàng để chúng tôi có thể xử lý việc này sau.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách khéo léo khi nạn nhân từ chối kiên quyết và suspicion đã quá cao. Diễn đạt sự 'thông cảm' nhưng thực chất là đặt trách nhiệm về phía nạn nhân."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1459,
+      "output_tokens": 2252
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 13635,
+      "output_tokens": 1183
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13336,
+      "output_tokens": 462
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006186,
+    "output_usd": 0.014495,
+    "total_usd": 0.020681
+  }
+}

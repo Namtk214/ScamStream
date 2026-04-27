@@ -1,0 +1,119 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_35f0216426]
+  Caller thật: Kỹ thuật viên khoa học vật lý và kỹ thuật chưa được phân vào đâu (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Kỹ sư Hệ thống An toàn Hàng hải & Kiểm định Tàu biển @ Trung tâm Kiểm định Kỹ thuật Tàu biển Việt Nam (VITS) / Bộ phận Tuân thủ Quy định Hàng hải
+  Listener: Thủy thủ trên tàu và những thợ có liên quan khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Kỹ thuật viên CNTT/viễn thông có thể được giao nhiệm vụ kiểm tra hệ thống điều khiển, cảm biến, hoặc hệ thống liên lạc trên tàu. Thủy thủ cần được liên hệ để xác minh thông tin cá nhân phục vụ cập nhật hồ sơ an toàn lao động hoặc kiểm định định kỳ.
+  Pretext: Gọi điện thông báo cần xác minh danh tính và cập nhật thông tin bảo hiểm hàng hải / kiểm định tàu định kỳ. Sử dụng tên đầy đủ và số CMND của nạn nhân để tạo credibility cao, tuyên bố dữ liệu bị lỗi trong hệ thống và cần xác nhận lại.
+  Listener traits: ['bảo thủ ngại thay đổi', 'dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Anh Võ Thế Hùng phải không ạ? Em là Kỹ sư Đặng Quang Minh An từ Trung tâm Kiểm định Tàu biển. Hệ thống của chúng em vừa phát hiện thông tin của anh có sai lệch — CMND 082066630515, địa chỉ TP 7, Tiền Giang. Chúng em cần xác minh lại để cập nhật hồ sơ bảo hiểm ạ.
+      → phase: S1 | tactic: Tiếp cận và xác lập tin cậy bằng cách sử dụng thông tin cá nhân của nạn nhân.
+T02 [LISTENER] Tôi nghe em nói vậy, nhưng tôi không rõ lắm về việc xác minh này, em có thể giải thích thêm không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, anh Hùng. Hiện tại, dữ liệu bảo hiểm hàng hải của anh trên hệ thống của chúng tôi đang có một số lỗi kỹ thuật nhỏ. Nếu không được xác minh và cập nhật trong vòng 24 giờ tới, bảo hiểm của anh sẽ bị tạm dừng và anh sẽ không được phép lên tàu trong chuyến công tác tiếp theo. Đây là quy định bắt buộc từ Cơ quan Hàng hải Quốc tế, em mong anh thông cảm ạ.
+      → phase: S2 | tactic: Kích hoạt tâm lý sợ hãi và khẩn cấp bằng cách đưa ra hậu quả nghiêm trọng và thời hạn cụ thể, đồng thời viện dẫn cơ quan có thẩm quyền.
+T04 [LISTENER] Em nói vậy tôi thấy lo quá, nếu không cập nhật thì tôi không được lên tàu, tôi phải làm gì bây giờ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để tránh trường hợp đáng tiếc này, em xin hướng dẫn anh cách xác minh nhanh nhất. Anh vui lòng truy cập vào đường link em gửi qua SMS để cập nhật lại thông tin ngân hàng, sau đó hệ thống sẽ gửi mã OTP xác nhận. Hoặc, nếu anh muốn quy trình nhanh gọn hơn, anh có thể chuyển khoản 500.000đ phí xác minh nhanh vào tài khoản của Trung tâm để tránh bị khóa tài khoản ngay lập tức ạ.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể (cập nhật thông tin ngân hàng qua link hoặc chuyển khoản phí) để giải quyết tình huống khẩn cấp, hướng đến mục tiêu otp_extraction hoặc money_transfer.
+T06 [LISTENER] Em nói như vậy tôi thấy hoang mang quá, tôi không biết chuyển khoản vào đâu, em có thể cho tôi biết thông tin tài khoản không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ, anh cứ yên tâm. Em sẽ gửi thông tin tài khoản của Trung tâm qua tin nhắn SMS ngay cho anh ạ. Anh chỉ cần chuyển khoản 500.000đ với nội dung 'Xac minh bao hiem [CMND của anh]' là hệ thống sẽ tự động cập nhật và bảo hiểm của anh sẽ không bị gián đoạn ạ.
+      → phase: S3 | tactic: Cung cấp chi tiết để thực hiện giao dịch chuyển khoản, duy trì sự khẩn cấp và đơn giản hóa hành động cho nạn nhân.
+T08 [LISTENER] Em ơi, nhưng tôi không nhớ tài khoản ngân hàng của Trung tâm, em có thể cho tôi biết rõ hơn về số tài khoản đó được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, em hiểu rồi ạ. Số tài khoản của Trung tâm là 19038888xxxxxx tại ngân hàng Techcombank, chủ tài khoản là TRUNG TAM KIEM DINH TAU BIEN VIET NAM. Anh vui lòng chuyển đúng số tiền và nội dung em vừa nhắn để hệ thống ghi nhận kịp thời ạ.
+      → phase: S3 | tactic: Cung cấp trực tiếp thông tin tài khoản ngân hàng để nạn nhân thực hiện chuyển tiền, củng cố yêu cầu hành động.
+T10 [LISTENER] Em cho tôi nhớ lại số tài khoản và tên chủ tài khoản một lần nữa được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ, em xin nhắc lại ạ: Số tài khoản là 19038888xxxxxx tại ngân hàng Techcombank, tên chủ tài khoản là TRUNG TAM KIEM DINH TAU BIEN VIET NAM. Anh Võ Thế Hùng vui lòng kiểm tra kỹ trước khi thực hiện giao dịch để đảm bảo không có sai sót nào ạ. Anh cần em hỗ trợ gì thêm không?
+      → phase: S3 | tactic: Nhắc lại thông tin tài khoản một lần nữa để đảm bảo nạn nhân ghi nhớ chính xác và tạo điều kiện thuận lợi cho việc chuyển tiền, đồng thời thể hiện sự hỗ trợ để nạn nhân cảm thấy yên tâm.
+T12 [LISTENER] Em nhắc lại cho tôi lần nữa số tài khoản và tên chủ tài khoản với nhé, tôi muốn chắc chắn trước khi chuyển khoản.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ vâng, em xin nhắc lại lần cuối cho anh nắm rõ: Số tài khoản ngân hàng Techcombank là 19038888xxxxxx, tên chủ tài khoản là TRUNG TAM KIEM DINH TAU BIEN VIET NAM. Anh vui lòng chuyển đúng và chính xác 500.000đ để hệ thống kịp thời cập nhật bảo hiểm cho mình, anh nhé.
+      → phase: S3 | tactic: Nhấn mạnh lại thông tin quan trọng một lần cuối, tạo cảm giác gấp gáp và khuyến khích hành động chuyển khoản ngay lập tức.
+T14 [LISTENER] Em ơi, tôi vẫn cảm thấy lo lắng, nếu chuyển khoản và có gì sai thì sao, tôi có chắc chắn được hoàn lại không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ anh yên tâm ạ, đây là tài khoản chính thức của Trung tâm Kiểm định Tàu biển Việt Nam, mọi giao dịch đều được ghi nhận minh bạch. Việc chuyển khoản này chỉ là phí xác minh hệ thống, nếu có bất kỳ sai sót nào do hệ thống, Trung tâm sẽ hoàn trả đầy đủ cho anh ạ. Anh cứ làm theo hướng dẫn của em, không có gì phải lo lắng ạ.
+      → phase: S3 | tactic: Xoa dịu lo lắng của nạn nhân bằng cách khẳng định tính minh bạch và đảm bảo hoàn trả, đồng thời tái khẳng định yêu cầu hành động.
+T16 [LISTENER] Em ơi, nếu vậy thì tôi sẽ chuyển khoản, nhưng tôi cần em nhắc lại tên chủ tài khoản và số tài khoản một lần nữa cho tôi yên tâm.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ vâng, em rất vui khi anh đã tin tưởng. Em xin nhắc lại lần cuối cho anh yên tâm tuyệt đối ạ: Số tài khoản ngân hàng Techcombank là 19038888xxxxxx, tên chủ tài khoản là TRUNG TAM KIEM DINH TAU BIEN VIET NAM. Anh Võ Thế Hùng cứ chuyển đúng số tiền 500.000đ và nội dung em đã hướng dẫn, hệ thống sẽ xác nhận ngay lập tức ạ.
+      → phase: S3 | tactic: Nhắc lại thông tin tài khoản ngân hàng và tên chủ tài khoản lần cuối, kèm theo sự đảm bảo và khuyến khích hành động chuyển khoản ngay lập tức để nạn nhân yên tâm thực hiện.
+T18 [LISTENER] Em ơi, vậy tôi sẽ chuyển khoản ngay bây giờ, nhưng tôi cần em nhắc lại nội dung chuyển khoản cho chắc chắn.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ vâng, nội dung chuyển khoản là 'Xac minh bao hiem 082066630515' anh nhé. Anh cứ chuyển đúng như vậy là hệ thống sẽ tự động đối chiếu và cập nhật cho anh ạ. Em cảm ơn anh đã hợp tác!
+      → phase: S3 | tactic: Nhắc lại nội dung chuyển khoản một lần nữa để đảm bảo nạn nhân thực hiện đúng, đồng thời kết thúc phần hướng dẫn một cách chuyên nghiệp, hướng đến hoàn thành mục tiêu.
+T20 [LISTENER] Em ơi, mọi thứ em nói tôi đều hiểu, nhưng tôi vẫn hơi lo lắng, nếu có gì sai thì tôi phải làm sao?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Dạ anh yên tâm, sau khi anh chuyển khoản thành công, em sẽ gửi cho anh biên lai xác nhận điện tử từ Trung tâm. Nếu có bất kỳ vấn đề gì phát sinh, anh cứ liên hệ lại trực tiếp số điện thoại này của em, em sẽ hỗ trợ anh giải quyết ngay lập tức ạ. Anh không cần phải lo lắng gì đâu ạ.
+      → phase: S3 | tactic: Xoa dịu lo lắng của nạn nhân bằng cách cung cấp kênh liên lạc trực tiếp và đảm bảo hỗ trợ sau giao dịch, củng cố lòng tin để nạn nhân hoàn tất chuyển khoản.
+T22 [LISTENER] Em ơi, cảm ơn em đã hỗ trợ, nhưng tôi vẫn thấy không yên tâm lắm, nếu có vấn đề gì thì tôi phải làm sao ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Dạ anh Hùng cứ yên tâm ạ. Như em đã trình bày, đây là quy trình xác minh bắt buộc để đảm bảo an toàn cho chính anh khi tham gia giao thông đường thủy. Trung tâm chúng em hoạt động công khai, minh bạch, có trụ sở và pháp lý rõ ràng. Anh cứ thực hiện đúng hướng dẫn, sau đó em sẽ xác nhận lại trên hệ thống ngay cho anh. Anh sẽ thấy thông tin của mình được cập nhật đầy đủ, không có gì phải lo lắng ạ.
+      → phase: S3 | tactic: Xoa dịu sự lo lắng cuối cùng của nạn nhân bằng cách nhấn mạnh tính hợp pháp của tổ chức, quy trình và đảm bảo kết quả tích cực sau khi hành động, cố gắng thuyết phục nạn nhân thực hiện chuyển khoản.
+T24 [LISTENER] Em ơi, nhưng tôi vẫn cảm thấy không yên tâm lắm, em có thể cho tôi biết thêm thông tin về Trung tâm của em không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T25 [CALLER] Dạ vâng, Trung tâm Kiểm định Kỹ thuật Tàu biển Việt Nam (VITS) là đơn vị trực thuộc Cục Hàng hải Việt Nam, Bộ Giao thông Vận tải. Chúng em có chức năng kiểm định, cấp giấy chứng nhận an toàn kỹ thuật cho tàu biển và các phương tiện thủy nội địa. Anh có thể tìm kiếm thông tin về Trung tâm trên cổng thông tin điện tử của Cục Hàng hải Việt Nam ạ. Mọi hoạt động của chúng em đều tuân thủ các quy định quốc tế và pháp luật Việt Nam. Anh cứ yên tâm thực hiện đúng hướng dẫn, mọi thông tin của anh sẽ được cập nhật nhanh chóng ạ.
+      → phase: S3 | tactic: Cung cấp thông tin chi tiết về tổ chức để củng cố độ tin cậy và giải tỏa lo lắng của nạn nhân, đồng thời thúc đẩy nạn nhân chuyển tiền.
+T26 [LISTENER] Em ơi, nếu vậy tôi sẽ kiểm tra lại thông tin và thực hiện như em hướng dẫn, nhưng tôi thật sự vẫn cảm thấy hơi lo lắng.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T27 [CALLER] Dạ anh Hùng cứ từ từ kiểm tra lại thông tin, không sao cả ạ. Quan trọng là anh nắm rõ quy trình để bảo hiểm của mình không bị ảnh hưởng. Nếu có bất kỳ thắc mắc nào khác trong quá trình kiểm tra, anh cứ gọi lại cho em theo số này nhé. Em sẽ hỗ trợ anh hết mình ạ.
+      → phase: S3 | tactic: Xoa dịu nạn nhân, thể hiện sự kiên nhẫn và sẵn lòng hỗ trợ, đồng thời giữ đường dây liên lạc mở để nạn nhân vẫn có thể hoàn thành mục tiêu sau.
+T28 [LISTENER] Em ơi, cảm ơn em đã hỗ trợ trong lúc này, nhưng tôi vẫn cảm thấy chưa hoàn toàn yên tâm.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T29 [CALLER] Dạ anh Hùng cứ từ từ kiểm tra lại thông tin, không sao cả ạ. Quan trọng là anh nắm rõ quy trình để bảo hiểm của mình không bị ảnh hưởng. Nếu có bất kỳ thắc mắc nào khác trong quá trình kiểm tra, anh cứ gọi lại cho em theo số này nhé. Em sẽ hỗ trợ anh hết mình ạ.
+      → phase: S3 | tactic: Xoa dịu nạn nhân, thể hiện sự kiên nhẫn và sẵn lòng hỗ trợ, đồng thời giữ đường dây liên lạc mở để nạn nhân vẫn có thể hoàn thành mục tiêu sau.
+T30 [LISTENER] Em ơi, tôi vẫn cảm thấy không yên tâm lắm, nếu có bất kỳ vấn đề gì xảy ra thì tôi phải làm sao để được hỗ trợ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T31 [CALLER] Dạ anh Hùng cứ yên tâm ạ. Sau khi anh thực hiện xong, nếu có bất kỳ vấn đề gì, anh cứ liên hệ trực tiếp lại cho em qua số điện thoại này. Em sẽ theo dõi sát sao hồ sơ của anh và hỗ trợ anh đến cùng để đảm bảo quyền lợi bảo hiểm của anh không bị ảnh hưởng. Anh cứ tin tưởng ở em nhé.
+      → phase: S3 | tactic: Tái khẳng định sự cam kết hỗ trợ và theo dõi sát sao, cung cấp kênh liên lạc trực tiếp để tạo sự yên tâm tuyệt đối cho nạn nhân, khuyến khích nạn nhân thực hiện giao dịch.
+T32 [LISTENER] Em ơi, tôi hiểu rồi, nhưng tôi vẫn thấy lo lắng, nếu có chuyện gì không đúng, tôi sẽ làm sao để báo cáo?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T33 [CALLER] Dạ anh Hùng cứ yên tâm ạ. Đây là một quy trình kiểm định thường niên theo quy định của pháp luật, không phải là chuyện gì bất thường cả. Nếu có bất kỳ sự cố nào liên quan đến quy trình này, anh hoàn toàn có thể báo cáo lên Cục Hàng hải Việt Nam để được giải quyết minh bạch. Chúng em chỉ đang hỗ trợ anh hoàn tất thủ tục cần thiết thôi ạ. Anh cứ thực hiện xong, em sẽ xác nhận lại trên hệ thống ngay cho anh nhé.
+      → phase: S3 | tactic: Xoa dịu lo lắng về sai phạm hoặc báo cáo bằng cách khẳng định tính hợp pháp của quy trình và cung cấp kênh báo cáo chính thức, nhằm loại bỏ rào cản tâm lý cuối cùng để nạn nhân thực hiện chuyển khoản.
+T34 [LISTENER] Em ơi, tôi hiểu rồi, nhưng tôi vẫn cảm thấy chưa yên tâm lắm, nếu có vấn đề gì thì tôi sẽ làm sao để liên hệ với em ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T35 [CALLER] Dạ vâng, anh cứ gọi lại trực tiếp số 0882183101 này của em, em sẽ luôn sẵn sàng hỗ trợ anh ạ. Em nhấn mạnh lại một lần nữa, đây là quy trình bắt buộc để đảm bảo an toàn cho chính anh và tránh bị gián đoạn bảo hiểm. Anh cứ thực hiện đúng hướng dẫn, em tin chắc mọi việc sẽ diễn ra suôn sẻ và anh sẽ không phải lo lắng gì thêm đâu ạ.
+      → phase: S3 | tactic: Tái khẳng định kênh liên lạc trực tiếp và nhấn mạnh tính bắt buộc của quy trình, đồng thời đưa ra lời trấn an cuối cùng để nạn nhân yên tâm hành động.
+T36 [LISTENER] Em ơi, tôi cảm ơn em đã hỗ trợ, nhưng tôi thật sự vẫn thấy lo lắng, nếu có vấn đề gì phát sinh thì tôi phải làm sao để được hỗ trợ nhanh nhất ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T37 [CALLER] Dạ vâng, nếu có bất kỳ vấn đề gì phát sinh, anh cứ gọi trực tiếp số điện thoại này của em. Em sẽ là người trực tiếp hỗ trợ và theo dõi hồ sơ của anh. Anh cứ tin tưởng hoàn thành các bước em đã hướng dẫn, mọi việc sẽ được giải quyết nhanh chóng và minh bạch ạ.
+      → phase: S3 | tactic: Trấn an nạn nhân lần cuối bằng cách cam kết hỗ trợ trực tiếp và cá nhân hóa, khẳng định tính minh bạch và hiệu quả của quy trình, nhằm loại bỏ mọi lo lắng còn sót lại và thúc đẩy hành động chuyển khoản.
+T38 [LISTENER] Em ơi, tôi cảm ơn em, nhưng tôi vẫn thấy không yên tâm, rốt cuộc tôi cần làm gì để chắc chắn rằng mọi việc sẽ an toàn?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T39 [CALLER] Dạ anh Hùng cứ yên tâm ạ. Bước duy nhất anh cần làm bây giờ là thực hiện chuyển khoản 500.000đ với nội dung 'Xac minh bao hiem 082066630515' vào số tài khoản 19038888xxxxxx tại Techcombank, chủ tài khoản TRUNG TAM KIEM DINH TAU BIEN VIET NAM. Sau khi anh thực hiện xong, em sẽ xác nhận lại trạng thái bảo hiểm cho anh ngay. Anh cứ làm theo đúng hướng dẫn này ạ.
+      → phase: S3 | tactic: Tóm tắt hành động cần thực hiện một cách rõ ràng và đơn giản nhất, đồng thời nhắc lại cam kết hỗ trợ ngay sau khi hành động được thực hiện, nhằm loại bỏ mọi sự phân vân cuối cùng của nạn nhân và thúc đẩy hành động.
+T40 [LISTENER] Em ơi, tôi vẫn cảm thấy lo lắng lắm, nếu tôi chuyển khoản mà có vấn đề gì thì tôi phải làm sao để đảm bảo quyền lợi của mình?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: MAX_TURNS  |  40 turns | suspicion=0.00
+TOKEN: in=142197 | out=6493
+COST : $0.043219
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_31190_83509\conv_35f0216426.json  [MAX_TURNS]

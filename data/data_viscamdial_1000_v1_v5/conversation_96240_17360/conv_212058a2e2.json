@@ -1,0 +1,195 @@
+{
+  "conversation_id": "conv_212058a2e2",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0032",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trần Diễm Linh",
+    "fake_age": 34,
+    "real_occupation": "Người thu gom nước và củi",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên quản lý tài chính / Kế toán viên",
+    "caller_org": "HTX Quản lý Tài nguyên Nước và Năng lượng Bình Minh",
+    "is_scam": false,
+    "plan": {
+      "purpose": "HTX cần xác nhận thông tin thanh toán định kỳ, cập nhật dữ liệu tài khoản hoặc thông báo về thay đổi chính sách thanh toán hóa đơn.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào chị Trương Thùy Lan, em là Minh từ bộ phận Kế toán HTX Quản lý Tài nguyên Nước Bình Minh. Em gọi để xác nhận lại thông tin tài khoản của chị để cập nhật hệ thống. Chị có thời gian nói chuyện được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Em cần xác minh tài khoản ngân hàng hiện tại của chị có còn là 027119591139 không, và chứng minh thư 048178708960 có còn hiệu lực không? Nếu có thay đổi, chị cho em biết để em cập nhật vào hệ thống.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị đã xác nhận. Chúng tôi sẽ cập nhật vào hệ thống trong 24 giờ. Nếu có thắc mắc, chị gọi lại cho em hoặc liên hệ trực tiếp văn phòng HTX. Chúc chị ngày tốt lành.'"
+        }
+      ]
+    },
+    "scenario_context": "HTX thu gom nước và củi cần liên hệ với bộ phận Dịch vụ và tính toán để xác nhận thông tin thanh toán hóa đơn, kiểm tra sổ sách hoặc báo cáo tài chính định kỳ. Đây là giao tiếp tự nhiên giữa bộ phận vận hành và bộ phận quản lý tài chính."
+  },
+  "listener_card": {
+    "listener_id": "lis_0032",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1978,
+      "age": 47,
+      "province": "Đà Nẵng",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "17360",
+      "title": "Dịch vụ và tính toán",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Thùy Lan",
+      "VIC_ID_DOC": "048178708960",
+      "VIC_ADDRESS": "Huyện 4, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Dịch vụ và tính toán",
+      "VIC_CONTACT": "0831994659",
+      "VIC_TAX_SOCIAL_ID": "3250454780"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "163324",
+      "VIC_CREDENTIAL": "903512",
+      "VIC_SIM_INFO": "0831994659",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "027119591139",
+      "VIC_CARD_DATA": "4556 **** **** 5628",
+      "VIC_BALANCE": "160 triệu đồng",
+      "VIC_ASSET": "560 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Thùy Lan",
+    "VIC_CONTACT": "0831994659",
+    "VIC_BANK_ACCOUNT": "027119591139",
+    "VIC_ID_DOC": "048178708960"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý tài chính / Kế toán viên",
+    "caller_org": "HTX Quản lý Tài nguyên Nước và Năng lượng Bình Minh",
+    "scenario_context": "HTX thu gom nước và củi cần liên hệ với bộ phận Dịch vụ và tính toán để xác nhận thông tin thanh toán hóa đơn, kiểm tra sổ sách hoặc báo cáo tài chính định kỳ. Đây là giao tiếp tự nhiên giữa bộ phận vận hành và bộ phận quản lý tài chính.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để xác nhận thông tin tài khoản ngân hàng do hệ thống quản lý tài chính bị lỗi, yêu cầu xác minh OTP để cập nhật dữ liệu thanh toán hóa đơn định kỳ của HTX.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: 'Chị Trương Thùy Lan ơi, em là Minh từ bộ phận Kế toán của HTX Quản lý Tài nguyên Nước. Em gọi để xác nhận thông tin thanh toán của chị. Chúng tôi có ghi nhận tài khoản 027119591139 và chứng minh thư 048178708960 phải không?' — dùng VIC_FULLNAME, VIC_BANK_ACCOUNT, VIC_ID_DOC để tạo tin cậy tức thì."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Vì lý do bảo mật, hệ thống yêu cầu chúng tôi xác minh lại tất cả tài khoản trong tuần này. Nếu không xác minh, hóa đơn tháng sau sẽ bị tạm dừng. Chị có thể xác nhận nhanh được không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động OTP: 'Em sẽ gửi mã OTP qua tin nhắn cho chị. Chị vui lòng đọc mã đó cho em để em kích hoạt lại hệ thống. Mã sẽ gửi trong vòng 30 giây nữa.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Vậy chị ghi nhớ xác minh trong 24 giờ, nếu không tài khoản sẽ bị khóa tạm thời' để tạo sợ hãi. Nếu thành công, cắt máy ngay lập tức."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "HTX cần xác nhận thông tin thanh toán định kỳ, cập nhật dữ liệu tài khoản hoặc thông báo về thay đổi chính sách thanh toán hóa đơn.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào chị Trương Thùy Lan, em là Minh từ bộ phận Kế toán HTX Quản lý Tài nguyên Nước Bình Minh. Em gọi để xác nhận lại thông tin tài khoản của chị để cập nhật hệ thống. Chị có thời gian nói chuyện được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Em cần xác minh tài khoản ngân hàng hiện tại của chị có còn là 027119591139 không, và chứng minh thư 048178708960 có còn hiệu lực không? Nếu có thay đổi, chị cho em biết để em cập nhật vào hệ thống.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị đã xác nhận. Chúng tôi sẽ cập nhật vào hệ thống trong 24 giờ. Nếu có thắc mắc, chị gọi lại cho em hoặc liên hệ trực tiếp văn phòng HTX. Chúc chị ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Trương Thùy Lan, em là Linh từ bộ phận Kế toán HTX Quản lý Tài nguyên Nước và Năng lượng Bình Minh. Em gọi để xác nhận lại thông tin tài khoản của chị để cập nhật hệ thống. Chị có thời gian nói chuyện được không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và xác nhận thông tin cơ bản, hỏi về sự tiện lợi của người nghe để bắt đầu cuộc trò chuyện. Xưng 'em' gọi 'chị' theo đúng quy tắc."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị yên tâm ạ. Em cần xác minh tài khoản ngân hàng hiện tại của chị có còn là 027119591139 không, và chứng minh thư 048178708960 có còn hiệu lực không? Nếu có thay đổi, chị cho em biết để em cập nhật vào hệ thống ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trực tiếp đi vào nội dung công việc, trấn an người nghe và yêu cầu xác nhận thông tin cụ thể để tiến hành cập nhật. Tiếp tục xưng 'em' gọi 'chị'."
+    },
+    {
+      "role": "listener",
+      "text": "Em không chắc là thông tin này có thích hợp không, nhưng tôi muốn kiểm tra kỹ hơn trước khi cung cấp nhé.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để đảm bảo minh bạch, chị có thể gọi trực tiếp lên tổng đài của HTX theo số 1900 6789 để được xác thực thông tin và hỗ trợ ạ. Em xin phép đợi phản hồi từ chị sau ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn người nghe gọi lại tổng đài chính thức để xác minh, giảm sự nghi ngờ và tuân thủ nguyên tắc không tạo áp lực. Giữ nguyên xưng hô 'em' và 'chị'."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn cán bộ đã cung cấp thông tin tổng đài, nhưng em vẫn cần thêm thời gian để xem xét đã nhé.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1803,
+      "output_tokens": 1483
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3368,
+      "output_tokens": 443
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5373,
+      "output_tokens": 203
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003283,
+    "output_usd": 0.008644,
+    "total_usd": 0.011927
+  }
+}

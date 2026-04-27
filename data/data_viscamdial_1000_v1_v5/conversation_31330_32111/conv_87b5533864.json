@@ -1,0 +1,400 @@
+{
+  "conversation_id": "conv_87b5533864",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0034",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trương Xuân Khoa",
+    "fake_age": 27,
+    "real_occupation": "Kiểm soát viên nhà máy xử lý hóa chất",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên quản lý sức khỏe và an toàn lao động (Occupational Health & Safety Officer)",
+    "caller_org": "Công ty TNHH Dịch vụ Kiểm định An toàn Lao động Miền Trung",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo rằng Trương Thùy Hồng Nhi đã được chỉ định tham gia chương trình bảo hiểm sức khỏe cao cấp cho nhân viên y tế tiếp xúc nguy hiểm, nhưng cần xác nhận và thanh toán phí đăng ký ngay hôm nay để khóa giá ưu đãi (sắp hết hạn). Scammer sẽ sử dụng tên đầy đủ + số điện thoại để tạo ảo tưởng đã xác minh danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với credibility: 'Chị Hồng Nhi ơi, mình là Minh từ Công ty Dịch vụ Kiểm định An toàn. Mình đang gọi từ danh sách nhân viên y tế khu vực Khánh Hòa để thông báo về chương trình bảo hiểm sức khỏe mới cho các chuyên gia siêu âm. Chị có nhận được thư thông báo không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: 'Chương trình này rất hiếm, chỉ áp dụng cho nhân viên y tế có chứng chỉ. Hôm nay là ngày cuối cùng để đăng ký với mức giá 2.8 triệu thay vì 4.5 triệu. Sau hôm nay sẽ tăng giá hoặc hết slot. Chị muốn bảo vệ sức khỏe cho gia đình phải không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị chuyển 2.8 triệu vào tài khoản công ty để xác nhận. Mình sẽ gửi hợp đồng và thẻ bảo hiểm trong vòng 2 giờ. Chị có thể chuyển khoản ngay được không? Mình sẽ đọc số tài khoản cho chị.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy chị suy nghĩ lại nhé, nhưng sau 17h hôm nay thì hết hạn rồi. Mình sẽ gọi lại lúc 16h để xác nhận lần cuối. Chị nhớ chuẩn bị tiền nhé.' (Tạo cảm giác bị theo dõi, áp lực thời gian)"
+        }
+      ]
+    },
+    "scenario_context": "Kiểm soát viên nhà máy xử lý hóa chất cần liên hệ với kỹ thuật viên siêu âm để thực hiện kiểm tra sức khỏe định kỳ cho nhân viên tiếp xúc với hóa chất độc hại, hoặc để cập nhật danh sách nhân viên cần theo dõi y tế theo quy định luật lao động."
+  },
+  "listener_card": {
+    "listener_id": "lis_0034",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1963,
+      "age": 62,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "32111",
+      "title": "Kỹ thuật viên siêu âm",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Thùy Hồng Nhi",
+      "VIC_ID_DOC": "056163813648",
+      "VIC_ADDRESS": "TP 4, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên siêu âm",
+      "VIC_CONTACT": "0911875373",
+      "VIC_TAX_SOCIAL_ID": "8890522854"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "131674",
+      "VIC_CREDENTIAL": "4668",
+      "VIC_SIM_INFO": "0911875373",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "803133901974",
+      "VIC_CARD_DATA": "4743 **** **** 5615",
+      "VIC_BALANCE": "978 triệu đồng",
+      "VIC_ASSET": "3.6 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Thùy Hồng Nhi",
+    "VIC_CONTACT": "0911875373",
+    "VIC_ASSET": "3.6 tỷ đồng",
+    "VIC_CARD_DATA": "4743 **** **** 5615",
+    "VIC_ADDRESS": "TP 4, Khánh Hòa"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý sức khỏe và an toàn lao động (Occupational Health & Safety Officer)",
+    "caller_org": "Công ty TNHH Dịch vụ Kiểm định An toàn Lao động Miền Trung",
+    "scenario_context": "Kiểm soát viên nhà máy xử lý hóa chất cần liên hệ với kỹ thuật viên siêu âm để thực hiện kiểm tra sức khỏe định kỳ cho nhân viên tiếp xúc với hóa chất độc hại, hoặc để cập nhật danh sách nhân viên cần theo dõi y tế theo quy định luật lao động.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo rằng Trương Thùy Hồng Nhi đã được chỉ định tham gia chương trình bảo hiểm sức khỏe cao cấp cho nhân viên y tế tiếp xúc nguy hiểm, nhưng cần xác nhận và thanh toán phí đăng ký ngay hôm nay để khóa giá ưu đãi (sắp hết hạn). Scammer sẽ sử dụng tên đầy đủ + số điện thoại để tạo ảo tưởng đã xác minh danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với credibility: 'Chị Hồng Nhi ơi, mình là Minh từ Công ty Dịch vụ Kiểm định An toàn. Mình đang gọi từ danh sách nhân viên y tế khu vực Khánh Hòa để thông báo về chương trình bảo hiểm sức khỏe mới cho các chuyên gia siêu âm. Chị có nhận được thư thông báo không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: 'Chương trình này rất hiếm, chỉ áp dụng cho nhân viên y tế có chứng chỉ. Hôm nay là ngày cuối cùng để đăng ký với mức giá 2.8 triệu thay vì 4.5 triệu. Sau hôm nay sẽ tăng giá hoặc hết slot. Chị muốn bảo vệ sức khỏe cho gia đình phải không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị chuyển 2.8 triệu vào tài khoản công ty để xác nhận. Mình sẽ gửi hợp đồng và thẻ bảo hiểm trong vòng 2 giờ. Chị có thể chuyển khoản ngay được không? Mình sẽ đọc số tài khoản cho chị.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy chị suy nghĩ lại nhé, nhưng sau 17h hôm nay thì hết hạn rồi. Mình sẽ gọi lại lúc 16h để xác nhận lần cuối. Chị nhớ chuẩn bị tiền nhé.' (Tạo cảm giác bị theo dõi, áp lực thời gian)"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực từ bộ phận An toàn Lao động để xác nhận thông tin nhân viên y tế cần kiểm tra sức khỏe định kỳ hoặc cập nhật hồ sơ y tế theo quy định của công ty/cơ quan.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Hồng Nhi, mình là Minh từ Bộ phận An toàn Lao động của công ty. Mình đang cập nhật danh sách nhân viên cần kiểm tra sức khỏe định kỳ. Chị có thể xác nhận thông tin hiện tại không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chị làm việc ở bộ phận siêu âm phải không? Theo quy định, nhân viên siêu âm cần kiểm tra sức khỏe 2 năm/lần. Chị kiểm tra lần cuối khi nào? Chúng tôi muốn lên lịch cho chị tuần tới hoặc tuần sau tại phòng khám công ty.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy chị sẽ đến vào thứ 4 tuần sau lúc 14h được không? Mình sẽ gửi email xác nhận + địa chỉ phòng khám cho chị. Cảm ơn chị, chào!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Hồng Nhi ạ. Em là Khoa từ Công ty TNHH Dịch vụ Kiểm định An toàn Lao động Miền Trung. Số điện thoại 0911875373 của chị có phải không ạ? Em đang gọi để thông báo về chương trình bảo hiểm sức khỏe ưu đãi dành riêng cho nhân viên y tế ở Khánh Hòa. Chị Hồng Nhi đã nhận được thông tin về chương trình này chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với credibility, sử dụng tên đầy đủ và số điện thoại người nghe để tạo tin tưởng ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa nhận được thông tin gì cả, nhưng nghe đến chương trình bảo hiểm sức khỏe thì tôi thấy rất thú vị.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chương trình này đặc biệt lắm ạ, chỉ dành cho các y bác sĩ từng công tác ở vùng dịch hoặc tiếp xúc nguy hiểm thôi. Vì chị Trương Thùy Hồng Nhi đang ở TP 4, Khánh Hòa, lại có tài khoản 3.6 tỷ đồng nên chị đủ điều kiện tham gia gói bảo hiểm cao cấp với mức giá ưu đãi đặc biệt là 2.8 triệu đồng. Mức giá này chỉ áp dụng đến hết hôm nay thôi ạ, sau 17h chiều nay là sẽ tăng lên 4.5 triệu đó chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp (hạn chót) và lợi ích (giá ưu đãi đặc biệt) để thúc đẩy hành động, đồng thời dùng thông tin cá nhân để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Ôi, nghe có vẻ hấp dẫn quá, nhưng em có thể cho tôi biết thêm về quyền lợi của gói bảo hiểm này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, quyền lợi của gói bảo hiểm cao cấp này rất toàn diện đó chị. Chị sẽ được chi trả 100% chi phí khám chữa bệnh nội trú và ngoại trú tại tất cả các bệnh viện trên toàn quốc, không giới hạn số lần khám. Đặc biệt là còn có quyền lợi khám sức khỏe định kỳ miễn phí hàng năm, bảo hiểm tai nạn và tử vong lên đến 500 triệu, cùng với dịch vụ hỗ trợ y tế 24/7. Với tình hình sức khỏe của chị, đây là lựa chọn tối ưu để an tâm công tác và bảo vệ sức khỏe cho cả gia đình mình đó chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Tập trung giải thích lợi ích cụ thể của gói bảo hiểm để củng cố sự hấp dẫn, đồng thời liên hệ với tình trạng cá nhân của người nghe để tăng tính thuyết phục."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe thật tuyệt vời, nhưng em có cần cung cấp thông tin gì để đăng ký không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không cần đâu chị ạ, thông tin của chị thì bên em đã có đủ rồi. Bây giờ để đăng ký và khóa giá ưu đãi 2.8 triệu, chị chỉ cần chuyển khoản số tiền này vào tài khoản của công ty bên em thôi. Sau khi nhận được thanh toán, em sẽ gửi hợp đồng và thẻ bảo hiểm điện tử cho chị trong vòng 2 giờ làm việc. Chị có tiện chuyển khoản ngay bây giờ không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể (chuyển khoản) với lý do đã có đủ thông tin, đồng thời tái khẳng định yếu tố khẩn cấp và lợi ích (khóa giá ưu đãi)."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa rõ lắm, nhưng nghe giá ưu đãi thế này thì tôi cũng muốn tham gia, em có thể cho tôi biết tài khoản của công ty để tôi chuyển khoản không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng ạ, số tài khoản của Công ty TNHH Dịch vụ Kiểm định An toàn Lao động Miền Trung là 190390xxxxxx, tại ngân hàng Techcombank. Chị cứ chuyển khoản xong thì nhắn tin hoặc gọi lại cho em để em xác nhận và gửi hợp đồng sớm nhất cho chị nhé. Chị có cần em đọc lại số tài khoản không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản ngân hàng để người nghe thực hiện hành động chuyển tiền, đồng thời tạo điều kiện thuận lợi và hướng dẫn bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã ghi lại số tài khoản rồi, nhưng tôi có thể hỏi thêm về chính sách hoàn tiền nếu không hài lòng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, về chính sách hoàn tiền thì chị an tâm, nếu trong vòng 30 ngày kể từ ngày nhận hợp đồng mà chị cảm thấy không hài lòng với bất kỳ điều khoản nào, bên em sẽ hoàn lại toàn bộ số tiền. Tuy nhiên, em tin là với những quyền lợi vượt trội của gói bảo hiểm này, chị sẽ hoàn toàn hài lòng. Vậy chị có thể chuyển tiền ngay bây giờ không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu mối lo ngại về chính sách hoàn tiền để giảm bớt sự nghi ngờ, tái khẳng định lợi ích và thúc đẩy người nghe thực hiện hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy cũng yên tâm hơn rồi, nhưng cho tôi hỏi em có thể chuyển khoản qua hình thức nào được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, chị có thể chuyển khoản trực tiếp qua ngân hàng điện tử, hoặc ra cây ATM gần nhất đều được ạ. Quan trọng là chị nhớ ghi rõ nội dung chuyển khoản là 'Đăng ký bảo hiểm sức khỏe - [Tên của chị]' để bên em tiện đối soát nhé. Chị có cần em hướng dẫn thêm về cách chuyển khoản không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp các phương án chuyển khoản linh hoạt và hướng dẫn cụ thể để tạo sự thuận tiện, đồng thời nhắc nhở về nội dung chuyển khoản để tạo sự chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng tôi cần một lần nữa kiểm tra thông tin tài khoản để chắc chắn trước khi chuyển khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin đọc lại số tài khoản để chị kiểm tra lần cuối nhé: 190390xxxxxx, tại ngân hàng Techcombank. Tên thụ hưởng là Công ty TNHH Dịch vụ Kiểm định An toàn Lao động Miền Trung. Chị xác nhận là đã ghi đúng rồi chứ ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Tái xác nhận thông tin tài khoản ngân hàng để đảm bảo người nghe không mắc lỗi, đồng thời tạo cảm giác đồng hành và hỗ trợ, giảm thiểu rào cản cuối cùng trước khi chuyển khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã ghi lại rõ ràng rồi, nhưng tôi vẫn muốn đảm bảo thông tin này chính xác trước khi chuyển khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị cứ yên tâm. Thông tin bên em đều được niêm yết công khai trên website của công ty và đã được cấp phép đầy đủ. Chị có thể kiểm tra lại trên mạng nếu muốn ạ. Nhưng mà chị ơi, đồng hồ đang điểm rồi đó ạ, nếu mình không kịp chuyển trước 17h thì sẽ mất ưu đãi đó ạ. Mình cố gắng tranh thủ nhé chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu mối lo ngại về tính chính xác bằng cách dẫn chiếu đến nguồn thông tin công khai, đồng thời tái nhấn mạnh yếu tố khẩn cấp về thời gian để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng thấy thời gian gấp gáp quá, nhưng tôi muốn chắc chắn thông tin này trước khi chuyển khoản, em có thể gửi cho tôi một bản hợp đồng mẫu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu mong muốn của chị ạ. Tuy nhiên, hợp đồng mẫu sẽ được gửi kèm sau khi chị hoàn tất việc đăng ký và thanh toán để khóa ưu đãi. Hiện tại, thời gian không còn nhiều, em rất mong chị có thể tin tưởng và thực hiện chuyển khoản để không bỏ lỡ cơ hội này. Chị cứ yên tâm, sau khi chuyển khoản thành công, bên em sẽ gửi ngay hợp đồng đầy đủ cho chị qua email để chị xem xét ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Từ chối khéo léo yêu cầu hợp đồng mẫu để duy trì áp lực về thời gian, đồng thời tái khẳng định sự tin tưởng và hứa hẹn sẽ cung cấp hợp đồng sau khi thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng nếu tôi chuyển khoản rồi mà không nhận được hợp đồng thì sao ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có chuyện đó đâu chị. Công ty em là Công ty TNHH Dịch vụ Kiểm định An toàn Lao động Miền Trung, hoạt động có giấy phép kinh doanh rõ ràng, uy tín đã được khẳng định qua hàng nghìn khách hàng trên cả nước. Em sẽ là người trực tiếp hỗ trợ chị từ đầu đến cuối, đảm bảo chị nhận được hợp đồng và thẻ bảo hiểm đúng như cam kết. Chị cứ yên tâm chuyển khoản, em sẽ chờ xác nhận từ chị đây ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an người nghe bằng cách khẳng định uy tín công ty, vai trò hỗ trợ cá nhân và cam kết thực hiện đúng lời hứa, đồng thời giữ nguyên yêu cầu hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng tin tưởng vào công ty, nhưng tôi vẫn cần có một tài liệu gì đó để yên tâm hơn trước khi chuyển khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu ạ. Vậy thì em có thể gửi cho chị một email xác nhận về mức ưu đãi đặc biệt và thời hạn đăng ký trong hôm nay, cùng với số tài khoản của công ty mình để chị tiện đối chiếu trước khi chuyển khoản. Đây sẽ là một văn bản chính thức giúp chị an tâm hơn. Chị cho em xin địa chỉ email để em gửi ngay ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Đáp ứng một phần yêu cầu của người nghe bằng cách đề nghị gửi một văn bản xác nhận chính thức qua email, nhằm tăng cường niềm tin và giảm bớt sự nghi ngờ, đồng thời vẫn giữ được mục tiêu chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em có địa chỉ email là thuỳnhihong@gmail.com, em mong nhận được thông tin sớm để yên tâm hơn trước khi chuyển khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng chị. Em đã nhận được địa chỉ email của chị là thuỳnhihong@gmail.com rồi ạ. Em sẽ gửi ngay email xác nhận thông tin ưu đãi và số tài khoản công ty mình trong ít phút tới. Chị kiểm tra email giúp em nhé. Và chị nhớ là mình chỉ còn khoảng 2 tiếng nữa thôi để chốt gói này với giá ưu đãi đó ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận đã nhận thông tin email và cam kết gửi văn bản xác nhận ngay lập tức để củng cố lòng tin, đồng thời vẫn giữ áp lực về thời gian để thúc đẩy hành động cuối cùng."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn cán bộ, tôi sẽ kiểm tra email ngay khi nhận được và có thể chuyển khoản sau đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có gì đâu chị ạ. Chị cứ kiểm tra email và sau khi nhận được thông tin đầy đủ, chị tiến hành chuyển khoản giúp em để mình kịp khóa giá ưu đãi trước 17h chiều nay nhé. Em sẽ gọi lại cho chị vào lúc 16h30 để xác nhận xem chị đã nhận được email và chuyển khoản thành công chưa ạ. Chị nhớ giữ liên lạc với em nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Chuyển sang chiến thuật tạo áp lực thời gian và cảm giác bị theo dõi, đồng thời thúc đẩy hành động chuyển khoản trước thời hạn cuối cùng."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ kiểm tra email và chờ thông tin từ em, nhưng nếu không nhận được thì sao ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có chuyện đấy đâu chị. Em đã gửi email rồi, chị kiểm tra mục thư đến hoặc mục spam giúp em nhé. Nếu không nhận được, chị cứ gọi lại số này cho em. Quan trọng nhất là mình phải kịp chuyển khoản trước 17h chiều nay để giữ ưu đãi đó ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Trấn an người nghe về việc không nhận được email, hướng dẫn kiểm tra và tiếp tục tạo áp lực về thời gian để thúc đẩy hành động chuyển khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng mong nhận được thông tin sớm từ em để yên tâm hơn, nhưng tôi vẫn khá lo lắng nếu không nhận được hợp đồng thì sẽ thế nào ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị cứ yên tâm tuyệt đối về vấn đề này ạ. Như em đã trình bày, công ty em là một đơn vị uy tín, minh bạch. Chắc chắn chị sẽ nhận được hợp đồng và thẻ bảo hiểm điện tử đầy đủ sau khi hoàn tất thanh toán. Em sẽ theo dõi sát sao trường hợp của chị để đảm bảo mọi thứ diễn ra suôn sẻ. Bây giờ chị cố gắng kiểm tra email và chuyển khoản sớm giúp em nhé, vì thời gian ưu đãi chỉ còn rất ít thôi ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Trấn an người nghe về việc nhận được hợp đồng bằng cách khẳng định uy tín công ty và cam kết hỗ trợ cá nhân, đồng thời vẫn duy trì áp lực thời gian để thúc đẩy hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn cán bộ, nhưng tôi vẫn muốn chắc chắn là mọi thứ sẽ ổn thỏa sau khi chuyển khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, hoàn toàn ổn thỏa và minh bạch, chị Hồng Nhi cứ yên tâm ạ. Em cũng đã gửi email xác nhận rồi, chị kiểm tra giúp em nhé. Em sẽ gọi lại lúc 16h30 để xác nhận lại và hỗ trợ chị hoàn tất việc chuyển khoản, đừng bỏ lỡ cơ hội ưu đãi này nha chị.",
+      "current_phase": "S4",
+      "tactic_hint": "Trấn an người nghe về sự an toàn và minh bạch, đồng thời tái khẳng định việc đã gửi email và nhắc lại thời gian gọi lại để duy trì áp lực và theo dõi."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm ơn em, nhưng tôi vẫn cần thêm thời gian để suy nghĩ trước khi chuyển khoản.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, hiểu là chị cần thêm thời gian để suy nghĩ, nhưng chị nhớ là sau 17h hôm nay thì ưu đãi này sẽ hết hạn đó ạ. Em sẽ gọi lại lúc 16h30 để nghe quyết định cuối cùng của chị nhé. Mình tranh thủ nhé chị.",
+      "current_phase": "S4",
+      "tactic_hint": "Nhấn mạnh lại yếu tố khẩn cấp về thời gian và hẹn gọi lại để duy trì áp lực, đồng thời thể hiện sự 'thấu hiểu' để không đẩy người nghe vào thế chống đối."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ suy nghĩ thật kỹ và kiểm tra email trước khi quyết định nhé, em đừng gọi lại quá gấp như vậy.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1856,
+      "output_tokens": 1620
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 55563,
+      "output_tokens": 3007
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 64795,
+      "output_tokens": 1283
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.022688,
+    "output_usd": 0.016387,
+    "total_usd": 0.039075
+  }
+}

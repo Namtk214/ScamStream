@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_f196167876]
+  Caller thật: Lao động trồng trọt (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên kinh doanh/phát triển bản thảo dự án nông nghiệp công nghệ @ Công ty Tư vấn Nông lâm nghiệp Xanh Việt
+  Listener: Giáo viên ngôn ngữ khác (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Công ty nông nghiệp công nghệ cần giáo viên ngôn ngữ để dạy tiếng Anh cho nhân viên xuất khẩu nông sản, hoặc dịch tài liệu kỹ thuật. Đây là giao thoa tự nhiên giữa lĩnh vực nông nghiệp hiện đại và nhu cầu đào tạo ngôn ngữ.
+  Pretext: Công ty nông nghiệp hoặc tổ chức huấn luyện nông dân thực sự cần thuê giáo viên ngôn ngữ để dạy tiếng Anh cho nhân viên/nông dân, hoặc dịch tài liệu kỹ thuật canh tác.
+  Listener traits: ['dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Ngô Tiến Hùng, tôi là Thanh Hương từ Công ty Tư vấn Nông lâm nghiệp Xanh Việt. Chúng tôi được giáo viên Thùy Linh giới thiệu về chuyên môn tiếng Anh của anh. Hiện tại, chúng tôi đang tìm giảng viên hỗ trợ khóa đào tạo tiếng Anh cho nông dân vào tháng 3 tới. Không biết anh có quan tâm đến cơ hội này không ạ?
+      → phase: L1 | tactic: Tiếp cận, giới thiệu mục đích gọi và nghe phản hồi từ người nghe.
+T02 [LISTENER] Dạ, em nghe chị nói rồi, nhưng em muốn biết thêm thông tin về khóa đào tạo này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, khóa học này là một chương trình đào tạo tiếng Anh cơ bản, tập trung vào các thuật ngữ nông nghiệp và giao tiếp hàng ngày cho bà con nông dân. Chúng tôi dự kiến khóa học kéo dài khoảng 2 tháng, với 2 buổi học mỗi tuần, mỗi buổi 2 tiếng vào các buổi tối hoặc cuối tuần để phù hợp với lịch làm việc của bà con. Về mức thù lao, chúng tôi sẽ trao đổi cụ thể hơn khi anh quan tâm và có thể gửi CV để chúng tôi xem xét ạ.
+      → phase: L2 | tactic: Cung cấp thêm chi tiết về khóa học (nội dung, thời lượng, lịch trình) và yêu cầu CV để đánh giá chuyên môn của Ngô Tiến Hùng.
+T04 [LISTENER] Dạ, khóa học nghe có vẻ thú vị, nhưng em muốn hỏi thêm về mức thù lao được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Về mức thù lao, chúng tôi sẽ dựa trên kinh nghiệm và bằng cấp của anh Hùng để đưa ra con số cụ thể, nhưng dự kiến sẽ dao động từ 400.000 đến 600.000 đồng cho mỗi buổi học. Anh Hùng có thể gửi CV của mình đến địa chỉ email xuan@xanhviet.com để chúng tôi đánh giá và trao đổi chi tiết hơn không ạ?
+      → phase: L2 | tactic: Trả lời trực tiếp câu hỏi về mức thù lao để củng cố sự tin tưởng, đồng thời tiếp tục yêu cầu CV để tiến tới bước tiếp theo.
+T06 [LISTENER] Dạ, em sẽ xem xét gửi CV nhưng chị có thể cho em biết thêm về cách thức hợp tác và thanh toán được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, về cách thức hợp tác và thanh toán, sau khi nhận được CV của anh và chúng tôi đánh giá là phù hợp, chúng ta sẽ có một buổi trao đổi cụ thể hơn về hợp đồng giảng dạy. Các khoản thanh toán sẽ được thực hiện theo từng đợt, thường là sau mỗi 2 tuần hoặc theo thỏa thuận trong hợp đồng, thông qua chuyển khoản ngân hàng trực tiếp vào tài khoản của anh Hùng. Anh cứ yên tâm về vấn đề này ạ.
+      → phase: L2 | tactic: Giảm thiểu sự nghi ngờ và cam kết sự minh bạch trong thanh toán, đồng thời thúc đẩy việc gửi CV để chuyển sang giai đoạn hợp tác.
+T08 [LISTENER] Dạ, em cảm ơn chị đã giải thích rõ ràng, em sẽ suy nghĩ và gửi CV sớm ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, anh cứ suy nghĩ và gửi CV sớm cho chúng tôi nhé. Nếu có bất kỳ câu hỏi nào khác trong quá trình này, anh đừng ngần ngại liên hệ lại với tôi qua số điện thoại này ạ. Chúng tôi rất mong được hợp tác với anh.
+      → phase: L3 | tactic: Khuyến khích Ngô Tiến Hùng gửi CV, cung cấp kênh liên hệ và bày tỏ mong muốn hợp tác để thúc đẩy hành động tiếp theo, đồng thời kết thúc cuộc gọi một cách lịch sự.
+T10 [LISTENER] Dạ, em cảm ơn chị đã chia sẻ thông tin, em sẽ liên hệ lại nếu có câu hỏi ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, vậy thì tôi sẽ chờ CV của anh, và rất mong được hợp tác cùng anh Ngô Tiến Hùng. Chào anh nhé!
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự, củng cố mong muốn hợp tác và chờ đợi hành động tiếp theo từ phía Ngô Tiến Hùng.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=20559 | out=2870
+COST : $0.015601
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_92010_23930\conv_f196167876.json  [CALLER_END]

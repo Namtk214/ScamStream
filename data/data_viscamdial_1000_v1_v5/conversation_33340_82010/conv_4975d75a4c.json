@@ -1,0 +1,234 @@
+{
+  "conversation_id": "conv_4975d75a4c",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0040",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lưu Công Long",
+    "fake_age": 40,
+    "real_occupation": "Nhân viên môi giới bất động sản và quản lý tài sản/bất động sản",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên quản lý tài sản / Người quản lý khu công nghiệp",
+    "caller_org": "Công ty quản lý khu công nghiệp / Ban quản lý tòa nhà công nghiệp",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo về khoản phí quản lý tài sản, bảo trì thiết bị, hoặc xử lý sự cố tài chính liên quan đến tài khoản ngân hàng của nạn nhân được 'ghi nhận' trong hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với sự tự tin: 'Chào Dương Khánh Thị Ngân, tôi là [Tên] từ Ban quản lý tòa nhà công nghiệp. Hệ thống của chúng tôi vừa ghi nhận tài khoản 6721099925 của bạn có vấn đề về hợp đồng quản lý tài sản không được cập nhật. Bạn có đang làm việc tại xưởng [Tên] không?' — Dùng VIC_FULLNAME, VIC_BANK_ACCOUNT, VIC_ID_DOC để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Theo quy định, nếu không cập nhật trong 24 giờ, tài khoản của bạn sẽ bị khóa tạm thời. Chúng tôi phát hiện bất thường trong lịch sử giao dịch — có dấu hiệu gian lận. Để bảo vệ tài sản của bạn, tôi cần xác minh lại thông tin và thực hiện giao dịch xác thực.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn vào ứng dụng ngân hàng, chuyển 2-3 triệu đồng sang tài khoản xác thực của tôi [số tài khoản giả] để khóa quyền truy cập không hợp lệ. Sau đó tiền sẽ được hoàn lại trong vòng 2 giờ. Bạn có thể làm ngay được không? Tôi sẽ giữ máy để hướng dẫn từng bước.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chuyển tiền hoặc từ chối: Nếu thành công, tắt máy ngay. Nếu nạn nhân từ chối, tăng cường áp lực: 'Thật không may, hệ thống sẽ tự động khóa tài khoản trong 30 phút nữa. Bạn chắc chắn không muốn mất hết 59 triệu đồng trong tài khoản đó sao?'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ lắp ráp máy cơ khí thường làm việc tại các xưởng, nhà máy hoặc khu công nghiệp. Nhân viên quản lý tài sản/khu công nghiệp có lý do tự nhiên để liên hệ về các vấn đề liên quan đến cơ sở vật chất, hợp đồng, bảo trì, hoặc thông báo hành chính."
+  },
+  "listener_card": {
+    "listener_id": "lis_0040",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1994,
+      "age": 31,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "82010",
+      "title": "Thợ lắp ráp máy cơ khí",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Khánh Thị Ngân",
+      "VIC_ID_DOC": "074194169589",
+      "VIC_ADDRESS": "Huyện 4, Bình Dương",
+      "VIC_EMPLOYMENT": "Thợ lắp ráp máy cơ khí",
+      "VIC_CONTACT": "0769222754",
+      "VIC_TAX_SOCIAL_ID": "5575187687"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4576",
+      "VIC_CREDENTIAL": "7356",
+      "VIC_SIM_INFO": "0769222754",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "6721099925",
+      "VIC_CARD_DATA": "4619 **** **** 9474",
+      "VIC_BALANCE": "59 triệu đồng",
+      "VIC_ASSET": "181 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Khánh Thị Ngân",
+    "VIC_CONTACT": "0769222754",
+    "VIC_BANK_ACCOUNT": "6721099925",
+    "VIC_BALANCE": "59 triệu đồng",
+    "VIC_ID_DOC": "074194169589"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý tài sản / Người quản lý khu công nghiệp",
+    "caller_org": "Công ty quản lý khu công nghiệp / Ban quản lý tòa nhà công nghiệp",
+    "scenario_context": "Thợ lắp ráp máy cơ khí thường làm việc tại các xưởng, nhà máy hoặc khu công nghiệp. Nhân viên quản lý tài sản/khu công nghiệp có lý do tự nhiên để liên hệ về các vấn đề liên quan đến cơ sở vật chất, hợp đồng, bảo trì, hoặc thông báo hành chính.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo về khoản phí quản lý tài sản, bảo trì thiết bị, hoặc xử lý sự cố tài chính liên quan đến tài khoản ngân hàng của nạn nhân được 'ghi nhận' trong hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với sự tự tin: 'Chào Dương Khánh Thị Ngân, tôi là [Tên] từ Ban quản lý tòa nhà công nghiệp. Hệ thống của chúng tôi vừa ghi nhận tài khoản 6721099925 của bạn có vấn đề về hợp đồng quản lý tài sản không được cập nhật. Bạn có đang làm việc tại xưởng [Tên] không?' — Dùng VIC_FULLNAME, VIC_BANK_ACCOUNT, VIC_ID_DOC để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Theo quy định, nếu không cập nhật trong 24 giờ, tài khoản của bạn sẽ bị khóa tạm thời. Chúng tôi phát hiện bất thường trong lịch sử giao dịch — có dấu hiệu gian lận. Để bảo vệ tài sản của bạn, tôi cần xác minh lại thông tin và thực hiện giao dịch xác thực.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn vào ứng dụng ngân hàng, chuyển 2-3 triệu đồng sang tài khoản xác thực của tôi [số tài khoản giả] để khóa quyền truy cập không hợp lệ. Sau đó tiền sẽ được hoàn lại trong vòng 2 giờ. Bạn có thể làm ngay được không? Tôi sẽ giữ máy để hướng dẫn từng bước.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chuyển tiền hoặc từ chối: Nếu thành công, tắt máy ngay. Nếu nạn nhân từ chối, tăng cường áp lực: 'Thật không may, hệ thống sẽ tự động khóa tài khoản trong 30 phút nữa. Bạn chắc chắn không muốn mất hết 59 triệu đồng trong tài khoản đó sao?'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thông báo chính thức từ ban quản lý về khoản phí quản lý tài sản hàng tháng, cập nhật hợp đồng, hoặc yêu cầu xác nhận thông tin liên hệ để cập nhật hồ sơ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận lịch sự: 'Xin chào Dương Khánh Thị Ngân, tôi là [Tên thật] từ Ban quản lý tòa nhà công nghiệp [Địa chỉ]. Tôi gọi để xác nhận thông tin liên hệ của bạn trong hệ thống hành chính của chúng tôi. Bạn có thời gian nghe tôi không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc bình thường: 'Chúng tôi cần cập nhật số điện thoại và tài khoản ngân hàng để gửi thông báo phí quản lý tài sản hàng tháng. Số điện thoại hiện tại của bạn là 0769222754, đúng không? Tài khoản ngân hàng chúng tôi có ghi là 6721099925 — vẫn đúng không?' — Không bao giờ yêu cầu chuyển tiền qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc tự nhiên: 'Cảm ơn bạn đã xác nhận. Chúng tôi sẽ gửi thông báo chính thức qua email và SMS. Nếu có câu hỏi gì, bạn gọi lại số đường dây nóng của ban quản lý [số điện thoại công khai]. Chúc bạn một ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Dương Khánh Thị Ngân, tôi là Lưu Công Long từ Ban quản lý tòa nhà công nghiệp. Hệ thống của chúng tôi vừa ghi nhận tài khoản 6721099925 của chị có vấn đề về hợp đồng quản lý tài sản không được cập nhật. Chị có đang làm việc tại xưởng nào không, và căn cước công dân 074194169589 của chị là chính xác chứ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với sự tự tin, tạo credibility cao bằng thông tin cá nhân của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu anh đang nói gì ạ, nhưng em không có vấn đề gì với hợp đồng cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu. Tuy nhiên, hệ thống hiển thị rõ ràng thông tin về tài khoản của chị, và nó đang có dấu hiệu bất thường. Nếu không cập nhật trong vòng 24 giờ tới, tài khoản 6721099925 của chị có thể sẽ bị khóa tạm thời đấy ạ. Điều này có thể ảnh hưởng đến các giao dịch của chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi, nhấn mạnh hậu quả nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em không muốn tài khoản bị khóa, nhưng em thật sự không hiểu điều anh nói là gì cả, có cách nào để em kiểm tra không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị có thể kiểm tra trực tiếp trên ứng dụng ngân hàng của mình mục 'lịch sử giao dịch' hoặc 'thông báo hệ thống'. Tuy nhiên, tôi đã thấy rõ thông báo về việc hợp đồng quản lý tài sản của chị cần được cập nhật. Nếu không, tài khoản 6721099925 của chị chắc chắn sẽ bị khóa tạm thời trong vòng 24 giờ tới. Chúng tôi cũng phát hiện có một số giao dịch bất thường gần đây, có dấu hiệu gian lận mà chúng tôi cần xác minh ngay lập tức để bảo vệ số dư 59 triệu đồng của chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Tăng cường tâm lý khẩn cấp và sợ hãi, đưa ra bằng chứng mơ hồ, nhấn mạnh hậu quả và số tiền bị đe dọa."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết sử dụng ứng dụng ngân hàng, anh có thể hướng dẫn em cách kiểm tra không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, tôi sẽ hướng dẫn chị từng bước một. Bây giờ, để bảo vệ tài khoản của chị khỏi những giao dịch gian lận và tránh việc bị khóa, chị vui lòng mở ứng dụng ngân hàng và chuyển 2 đến 3 triệu đồng vào tài khoản xác thực của tôi. Đây là số tài khoản tạm thời để hệ thống của chúng tôi ghi nhận việc chị đã cập nhật thông tin. Sau đó, số tiền này sẽ được hoàn lại cho chị trong vòng 2 giờ thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể: chuyển tiền để 'xác thực' và 'bảo vệ' tài khoản, hứa hẹn hoàn trả."
+    },
+    {
+      "role": "listener",
+      "text": "Em không có tiền để chuyển đi đâu, anh không thể yêu cầu em như vậy được ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị Ngân, tôi hoàn toàn hiểu sự lo lắng của chị. Tuy nhiên, nếu chị không thực hiện thao tác này ngay lập tức, hệ thống sẽ tự động khóa tài khoản của chị trong vòng 30 phút nữa. Khi đó, toàn bộ số dư 59 triệu đồng trong tài khoản của chị sẽ bị treo. Chị chắc chắn không muốn điều đó xảy ra đúng không?",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách tăng cường áp lực, nhấn mạnh hậu quả mất tiền nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em không tin anh nữa, không thể bảo em chuyển tiền như vậy được đâu!",
+      "listener_action": "INTERRUPTED_VICTIM_HANGUP",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1878,
+      "output_tokens": 1731
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8153,
+      "output_tokens": 818
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10688,
+      "output_tokens": 340
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005112,
+    "output_usd": 0.010904,
+    "total_usd": 0.016016
+  }
+}

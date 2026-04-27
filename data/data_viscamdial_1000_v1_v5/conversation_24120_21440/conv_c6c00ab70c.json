@@ -1,0 +1,268 @@
+{
+  "conversation_id": "conv_c6c00ab70c",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0037",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Huỳnh Thu Mai",
+    "fake_age": 29,
+    "real_occupation": "Nhà tư vấn tài chính và đầu tư",
+    "real_group": "Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh",
+    "role_job": "Chuyên viên tư vấn tài chính cá nhân & Quản lý tài sản",
+    "caller_org": "cá nhân",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi tư vấn về cơ hội đầu tư lợi suất cao, hoặc kiểm tra tình trạng tài chính để 'bảo vệ tài sản' — sử dụng tên đầy đủ và địa chỉ để tạo ảo tưởng đã xác minh danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_ID_DOC",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: 'Chị Bảo Trang à, tôi là Minh từ Công ty tư vấn tài chính ABC. Chúng tôi vừa xác nhận thông tin của chị từ hệ thống — địa chỉ Huyện 6, Bình Dương phải không? Chúng tôi có cơ hội đầu tư đặc biệt dành cho các chuyên gia kỹ thuật như chị.'",
+          "caller_statement": "Xưng danh + nhắc lại tên + địa chỉ (từ VIC_ADDRESS) để tạo ảo tưởng công ty đã xác minh"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý & tạo khẩn cấp: Mô tả cơ hội lợi suất 15-20%/năm, 'chỉ còn 2 ngày nữa vòng đầu tư này đóng', hoặc 'hệ thống phát hiện giao dịch bất thường trên tài khoản chị, cần xác minh ngay để bảo vệ'.",
+          "psychological_trigger": "khẩn cấp + ham lợi + sợ mất cơ hội"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động & thu thập credential: 'Để tham gia, chị cần xác nhận thông tin: số CMT là 074176720809 đúng không? Và xin chị cập nhật mã số thuế 2062411878 — sau đó chúng tôi sẽ gửi link đăng ký hoặc yêu cầu chị chuyển tiền ký quỹ 5-10 triệu để khóa suất.'",
+          "extraction_method": "Lặp lại thông tin đã lộ để nạn nhân xác nhận (gây ảo tưởng công ty đã biết) → yêu cầu OTP/mã xác thực → hoặc yêu cầu chuyển tiền trực tiếp"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer dùng áp lực ('chị sẽ mất cơ hội này, những người khác đang vào', 'hệ thống sẽ khóa tài khoản nếu không xác minh'). Nếu thành công, tắt máy & xóa dấu vết.",
+          "backup_tactic": "Yêu cầu cài app 'xác thực' hoặc gọi lại từ 'số công ty' (thực chất là số lạ) để tạo ảo tưởng cuộc gọi lại từ tổ chức chính thức"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ sư cơ khí có thu nhập ổn định và tài sản — là đối tượng tiềm năng cho tư vấn đầu tư. Nhà tư vấn tài chính tìm kiếm khách hàng mới thông qua mạng lưới, danh sách tiềm năng, hoặc giới thiệu. Đây là giao thoa tự nhiên trong lĩnh vực tài chính cá nhân."
+  },
+  "listener_card": {
+    "listener_id": "lis_0037",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1976,
+      "age": 49,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21440",
+      "title": "Kỹ sư cơ học, cơ khí",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "nghi ngờ nhưng lịch sự"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Ngọc Bảo Trang",
+      "VIC_ID_DOC": "074176720809",
+      "VIC_ADDRESS": "Huyện 6, Bình Dương",
+      "VIC_EMPLOYMENT": "Kỹ sư cơ học, cơ khí",
+      "VIC_CONTACT": "0914988741",
+      "VIC_TAX_SOCIAL_ID": "2062411878"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "399553",
+      "VIC_CREDENTIAL": "3367",
+      "VIC_SIM_INFO": "0914988741",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "392068620402",
+      "VIC_CARD_DATA": "4139 **** **** 9988",
+      "VIC_BALANCE": "202 triệu đồng",
+      "VIC_ASSET": "538 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Ngọc Bảo Trang",
+    "VIC_CONTACT": "0914988741",
+    "VIC_ID_DOC": "074176720809",
+    "VIC_TAX_SOCIAL_ID": "2062411878",
+    "VIC_ADDRESS": "Huyện 6, Bình Dương"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chuyên viên tư vấn tài chính cá nhân & Quản lý tài sản",
+    "caller_org": "cá nhân",
+    "scenario_context": "Kỹ sư cơ khí có thu nhập ổn định và tài sản — là đối tượng tiềm năng cho tư vấn đầu tư. Nhà tư vấn tài chính tìm kiếm khách hàng mới thông qua mạng lưới, danh sách tiềm năng, hoặc giới thiệu. Đây là giao thoa tự nhiên trong lĩnh vực tài chính cá nhân.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi tư vấn về cơ hội đầu tư lợi suất cao, hoặc kiểm tra tình trạng tài chính để 'bảo vệ tài sản' — sử dụng tên đầy đủ và địa chỉ để tạo ảo tưởng đã xác minh danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_ID_DOC",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: 'Chị Bảo Trang à, tôi là Minh từ Công ty tư vấn tài chính ABC. Chúng tôi vừa xác nhận thông tin của chị từ hệ thống — địa chỉ Huyện 6, Bình Dương phải không? Chúng tôi có cơ hội đầu tư đặc biệt dành cho các chuyên gia kỹ thuật như chị.'",
+          "caller_statement": "Xưng danh + nhắc lại tên + địa chỉ (từ VIC_ADDRESS) để tạo ảo tưởng công ty đã xác minh"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý & tạo khẩn cấp: Mô tả cơ hội lợi suất 15-20%/năm, 'chỉ còn 2 ngày nữa vòng đầu tư này đóng', hoặc 'hệ thống phát hiện giao dịch bất thường trên tài khoản chị, cần xác minh ngay để bảo vệ'.",
+          "psychological_trigger": "khẩn cấp + ham lợi + sợ mất cơ hội"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động & thu thập credential: 'Để tham gia, chị cần xác nhận thông tin: số CMT là 074176720809 đúng không? Và xin chị cập nhật mã số thuế 2062411878 — sau đó chúng tôi sẽ gửi link đăng ký hoặc yêu cầu chị chuyển tiền ký quỹ 5-10 triệu để khóa suất.'",
+          "extraction_method": "Lặp lại thông tin đã lộ để nạn nhân xác nhận (gây ảo tưởng công ty đã biết) → yêu cầu OTP/mã xác thực → hoặc yêu cầu chuyển tiền trực tiếp"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer dùng áp lực ('chị sẽ mất cơ hội này, những người khác đang vào', 'hệ thống sẽ khóa tài khoản nếu không xác minh'). Nếu thành công, tắt máy & xóa dấu vết.",
+          "backup_tactic": "Yêu cầu cài app 'xác thực' hoặc gọi lại từ 'số công ty' (thực chất là số lạ) để tạo ảo tưởng cuộc gọi lại từ tổ chức chính thức"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Tư vấn tài chính hợp pháp: Quản lý danh mục đầu tư, lập kế hoạch tiết kiệm, hoặc thông báo về dịch vụ bảo hiểm/quỹ hưu trí dành cho kỹ sư.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh đầy đủ (tên + chức vị + tổ chức thực), yêu cầu xác nhận 'Tôi có đang nói chuyện với Ngô Ngọc Bảo Trang không?', không nhắc lại thông tin cá nhân trừ khi nạn nhân xác nhận trước."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giới thiệu dịch vụ cụ thể (VD: 'Chúng tôi tư vấn quản lý tài sản cho chuyên gia kỹ thuật, lợi suất thực tế 8-12%/năm từ các quỹ đã được cấp phép'), cung cấp thông tin chi tiết, không tạo áp lực khẩn cấp."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu chị quan tâm, chúng tôi sẽ gửi tài liệu qua email hoặc chị ghé văn phòng để tìm hiểu thêm' → không yêu cầu tiền hoặc OTP qua điện thoại, mà qua quy trình chính thức (ký hợp đồng tại văn phòng, chuyển khoản qua tài khoản công ty được công khai)."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Ngô Ngọc Bảo Trang ạ, em là Huỳnh Thu Mai từ công ty tư vấn tài chính. Bên em vừa xác nhận thông tin của chị từ hệ thống là địa chỉ Huyện 6, Bình Dương đúng không ạ? Chúng em có một cơ hội đầu tư đặc biệt muốn chia sẻ với chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xây dựng lòng tin bằng cách sử dụng thông tin cá nhân đã biết của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về cơ hội đầu tư này đi, tôi có thể tin tưởng được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để chị có thể hoàn toàn tin tưởng thì em xin khẳng định lại là chúng em có đầy đủ giấy phép hoạt động và tất cả thông tin cá nhân của chị đều được bảo mật tuyệt đối. Em muốn giới thiệu đến chị gói đầu tư chuyên biệt dành cho những nhà đầu tư có kinh nghiệm như chị, với mức lợi nhuận cam kết lên đến 15-20% mỗi năm, cao hơn hẳn lãi suất ngân hàng hiện tại ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách khẳng định uy tín và bảo mật, sau đó khai thác tâm lý muốn lợi nhuận cao bằng cách giới thiệu cơ hội đầu tư hấp dẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe em nói lợi nhuận hấp dẫn thật, nhưng tôi vẫn chưa rõ về cách thức đầu tư này lắm, em có thể giải thích thêm không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, về cách thức thì gói đầu tư này tập trung vào các dự án công nghệ xanh và năng lượng tái tạo, những lĩnh vực đang có tốc độ tăng trưởng rất cao. Chị sẽ được cung cấp một tài khoản riêng trên nền tảng của chúng em để theo dõi dòng tiền và lợi nhuận. Chỉ cần một khoản ký quỹ ban đầu từ 5 đến 10 triệu đồng để chúng em có thể giữ chỗ ưu đãi cho chị thôi ạ, vì gói này chỉ còn nhận đăng ký trong 2 ngày tới thôi. Sau đó, chuyên viên sẽ hướng dẫn chị chi tiết từng bước ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích chi tiết hơn về cách thức đầu tư, nhấn mạnh sự tiện lợi trong việc theo dõi, và tạo yếu tố khẩn cấp để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa hiểu rõ về tài khoản đó lắm, em có thể cho tôi biết thêm thông tin cụ thể hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, tài khoản này sẽ là một cổng giao dịch trực tuyến riêng biệt dành cho chị, nơi chị có thể xem báo cáo lợi nhuận hàng ngày, giao dịch các sản phẩm đầu tư và rút tiền trực tiếp. Em cũng muốn xác nhận lại một lần nữa để tiện cho việc đăng ký tài khoản cho chị, số căn cước của chị là 074176720809 và mã số thuế là 2062411878 đúng không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ thông tin về tài khoản và chuyển sang bước yêu cầu hành động, thu thập thông tin cá nhân quan trọng như số CCCD và mã số thuế để tạo tiền đề cho giao dịch giả mạo."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi vẫn cảm thấy chưa yên tâm lắm, không biết có cách nào để kiểm tra tính xác thực của công ty không em?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu cảm giác của chị. Để chị yên tâm hơn, em có thể cung cấp đầy đủ thông tin về giấy phép kinh doanh, mã số thuế của công ty em. Chị có thể tự mình kiểm tra trên Cổng thông tin quốc gia về đăng ký doanh nghiệp. Hoặc nếu chị muốn, em có thể gửi đường link trang web chính thức của công ty và fanpage để chị tìm hiểu kỹ hơn về các dự án và đội ngũ của chúng em ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin có vẻ minh bạch và khuyên nạn nhân tự kiểm tra, đồng thời vẫn giữ nguyên mục tiêu thu thập thông tin cá nhân và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể gửi cho tôi đường link trang web chính thức của công ty được không? Tôi muốn tìm hiểu kỹ hơn trước khi quyết định.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em sẽ gửi ngay đường link trang web chính thức của công ty qua Zalo cho chị ạ. Chị vui lòng kiểm tra tin nhắn giúp em nhé. Và sau khi chị đã tìm hiểu kỹ càng, nếu chị đồng ý tham gia thì chị có thể xác nhận lại thông tin cá nhân giúp em để em tiến hành đăng ký tài khoản cho chị. Em nhắc lại số căn cước của chị là 074176720809 và mã số thuế là 2062411878 đúng không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Thực hiện lời hứa để củng cố lòng tin, sau đó nhắc lại yêu cầu xác nhận thông tin cá nhân. Nhấn mạnh rằng hành động đó là bước tiếp theo sau khi nạn nhân đã tìm hiểu kỹ."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ kiểm tra thông tin đó, nhưng tôi vẫn không thấy thoải mái khi phải xác nhận lại những thông tin nhạy cảm như vậy.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Trang đừng lo lắng ạ. Việc xác nhận thông tin này hoàn toàn là bước cần thiết để đảm bảo đúng người, đúng tài khoản khi chị tham gia đầu tư. Tất cả thông tin của chị sẽ được bảo mật tuyệt đối. Em chỉ cần chị xác nhận lại một lần nữa thôi để em có thể nhanh chóng hoàn tất hồ sơ và giữ chỗ ưu đãi cho chị, vì gói này sắp đóng rồi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự lo lắng của nạn nhân về việc cung cấp thông tin nhạy cảm, nhấn mạnh tầm quan trọng của việc xác nhận để đảm bảo bảo mật và thúc đẩy hành động bằng cách tạo cảm giác khẩn cấp về việc gói đầu tư sắp hết hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu là em muốn bảo mật thông tin, nhưng tôi vẫn cảm thấy không yên tâm khi phải xác nhận lại thông tin nhạy cảm như vậy.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1850,
+      "output_tokens": 1844
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12804,
+      "output_tokens": 1257
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 17089,
+      "output_tokens": 517
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006974,
+    "output_usd": 0.012673,
+    "total_usd": 0.019647
+  }
+}

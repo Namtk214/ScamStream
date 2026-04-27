@@ -1,0 +1,221 @@
+{
+  "conversation_id": "conv_acfaa51a90",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0090",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Ngô Thanh Thị Thúy",
+    "fake_age": 41,
+    "real_occupation": "Lao động chăn nuôi gà",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Chuyên viên kiểm tra chất lượng sản phẩm chăn nuôi / Nhân viên Sở Nông Nghiệp",
+    "caller_org": "Trung tâm Kiểm dịch Động vật Quận 6 / Công ty Thương mại Nông sản ABC",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi từ 'Trung tâm Kiểm dịch Động vật Quận 6' thông báo: Sản phẩm chăn nuôi có vấn đề về chứng chỉ vệ sinh, cần xác minh thông tin cá nhân của lao động tham gia chuỗi sản xuất. Scammer sẽ gọi tên đầy đủ 'Ngô Xuân Quân' + nhắc địa chỉ 'Quận 6' để tạo tin cậy ngay từ đầu.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác nhận danh tính: 'Chào anh Quân, đây là Trung tâm Kiểm dịch Động vật Quận 6. Chúng tôi có hồ sơ anh ở địa chỉ Quận 6 — anh có phải là người tham gia chuỗi sản xuất gà thịt không?' — Dùng tên + địa chỉ thực tế để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + sợ hãi: 'Hôm nay chúng tôi phát hiện lô hàng gà từ nhà cung cấp của anh có vấn đề về sức khỏe động vật. Cơ quan quản lý yêu cầu chúng tôi xác minh toàn bộ thông tin lao động liên quan. Nếu không xác minh trong 2 giờ, anh sẽ bị phạt 10-20 triệu hoặc bị cấm kinh doanh.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần cung cấp: Số CCCD/Hộ chiếu (đã biết: 6165429877), số tài khoản ngân hàng để chúng tôi xác minh. Sau đó anh phải chuyển 5 triệu đồng vào tài khoản đặc cách để lập hồ sơ xin miễn trách nhiệm pháp lý.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Anh suy nghĩ lại — nếu không hợp tác, chúng tôi sẽ báo cáo lên Cục Thú y, anh sẽ mất giấy phép. Anh có 30 phút để quyết định.' Nếu thành công: Cắt máy ngay, chuyển hướng tài khoản."
+        }
+      ]
+    },
+    "scenario_context": "Người chăn nuôi gà cần liên hệ với lao động giản đơn trong chuỗi cung ứng nông sản (vận chuyển, kho bãi, xử lý) hoặc cơ quan kiểm dịch cần xác minh thông tin lao động tham gia sản xuất nông sản để cấp chứng chỉ vệ sinh an toàn thực phẩm."
+  },
+  "listener_card": {
+    "listener_id": "lis_0090",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1960,
+      "age": 65,
+      "province": "Hà Nội",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "96290",
+      "title": "Lao động giản đơn khác chưa được phân vào đâu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Xuân Quân",
+      "VIC_ID_DOC": "001060541523",
+      "VIC_ADDRESS": "Quận 6, Hà Nội",
+      "VIC_EMPLOYMENT": "Lao động giản đơn khác chưa được phân vào đâu",
+      "VIC_CONTACT": "0776239355",
+      "VIC_TAX_SOCIAL_ID": "6165429877"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "642083",
+      "VIC_CREDENTIAL": "993576",
+      "VIC_SIM_INFO": "0776239355",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "82396628344",
+      "VIC_CARD_DATA": "4781 **** **** 4521",
+      "VIC_BALANCE": "15 triệu đồng",
+      "VIC_ASSET": "17 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Xuân Quân",
+    "VIC_CONTACT": "0776239355",
+    "VIC_ADDRESS": "Quận 6, Hà Nội",
+    "VIC_TAX_SOCIAL_ID": "6165429877",
+    "VIC_CARD_DATA": "4781 **** **** 4521"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chuyên viên kiểm tra chất lượng sản phẩm chăn nuôi / Nhân viên Sở Nông Nghiệp",
+    "caller_org": "Trung tâm Kiểm dịch Động vật Quận 6 / Công ty Thương mại Nông sản ABC",
+    "scenario_context": "Người chăn nuôi gà cần liên hệ với lao động giản đơn trong chuỗi cung ứng nông sản (vận chuyển, kho bãi, xử lý) hoặc cơ quan kiểm dịch cần xác minh thông tin lao động tham gia sản xuất nông sản để cấp chứng chỉ vệ sinh an toàn thực phẩm.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi từ 'Trung tâm Kiểm dịch Động vật Quận 6' thông báo: Sản phẩm chăn nuôi có vấn đề về chứng chỉ vệ sinh, cần xác minh thông tin cá nhân của lao động tham gia chuỗi sản xuất. Scammer sẽ gọi tên đầy đủ 'Ngô Xuân Quân' + nhắc địa chỉ 'Quận 6' để tạo tin cậy ngay từ đầu.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác nhận danh tính: 'Chào anh Quân, đây là Trung tâm Kiểm dịch Động vật Quận 6. Chúng tôi có hồ sơ anh ở địa chỉ Quận 6 — anh có phải là người tham gia chuỗi sản xuất gà thịt không?' — Dùng tên + địa chỉ thực tế để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + sợ hãi: 'Hôm nay chúng tôi phát hiện lô hàng gà từ nhà cung cấp của anh có vấn đề về sức khỏe động vật. Cơ quan quản lý yêu cầu chúng tôi xác minh toàn bộ thông tin lao động liên quan. Nếu không xác minh trong 2 giờ, anh sẽ bị phạt 10-20 triệu hoặc bị cấm kinh doanh.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần cung cấp: Số CCCD/Hộ chiếu (đã biết: 6165429877), số tài khoản ngân hàng để chúng tôi xác minh. Sau đó anh phải chuyển 5 triệu đồng vào tài khoản đặc cách để lập hồ sơ xin miễn trách nhiệm pháp lý.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Anh suy nghĩ lại — nếu không hợp tác, chúng tôi sẽ báo cáo lên Cục Thú y, anh sẽ mất giấy phép. Anh có 30 phút để quyết định.' Nếu thành công: Cắt máy ngay, chuyển hướng tài khoản."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan kiểm dịch động vật thực sự liên hệ xác minh thông tin lao động trong chuỗi sản xuất nông sản để cấp giấy chứng nhận vệ sinh an toàn thực phẩm hoặc kiểm tra định kỳ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Ngô Xuân Quân, tôi là cán bộ Trung tâm Kiểm dịch Động vật Quận 6. Chúng tôi cần xác minh thông tin cơ bản của anh để hoàn thiện hồ sơ. Anh có thời gian không?' — Xin phép, tự xưng danh cụ thể (tên + chức vụ)."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi thông tin công khai: 'Chúng tôi chỉ cần xác minh: Anh tên gì, sinh năm bao nhiêu, địa chỉ hiện tại, và anh tham gia công đoạn nào trong sản xuất?' — Chỉ hỏi thông tin cơ bản, không yêu cầu số tài khoản hay tiền."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh. Chúng tôi sẽ gửi giấy chứng nhận về địa chỉ anh trong 5-7 ngày. Nếu anh có câu hỏi gì, gọi lại cho chúng tôi qua số tổng đài chính thức [số công khai].' — Không yêu cầu hành động gấp, không đe dọa."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Quân, đây là Trung tâm Kiểm dịch Động vật Quận 6. Chúng tôi có hồ sơ anh ở địa chỉ Quận 6 – anh có phải là người tham gia chuỗi sản xuất gà thịt không?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xác nhận danh tính với thông tin chính xác về nạn nhân để tạo độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ là mình có tham gia chuỗi sản xuất gà thịt nào cả, em có thể nói rõ hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, em Ngô Thanh Thị Thúy đây ạ. Hồ sơ bên em có lưu số CCCD/Hộ chiếu 6165429877 của anh Ngô Xuân Quân, địa chỉ Quận 6. Thông tin này khớp với giấy phép kinh doanh nông sản của anh. Có thể đó là giấy phép con hoặc hợp tác với bên khác mà anh không để ý. Hôm nay chúng tôi phát hiện lô hàng gà từ nhà cung cấp của bên anh có vấn đề về sức khỏe động vật.",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận lại thông tin cá nhân chính xác để củng cố lòng tin, sau đó tạo tình huống khẩn cấp và sợ hãi liên quan đến hoạt động kinh doanh của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói có vấn đề gì với lô hàng gà thì tôi phải làm gì ngay để giải quyết ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu không xác minh trong 2 giờ, anh sẽ bị phạt 10-20 triệu đồng hoặc bị cấm kinh doanh hoạt động liên quan đến chăn nuôi, đấy là quy định của cơ quan quản lý ạ. Anh vui lòng cung cấp số tài khoản ngân hàng để chúng em xác minh thông tin nhanh nhất và giải tỏa hồ sơ của anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Tăng cường yếu tố khẩn cấp và đe dọa hậu quả pháp lý/tài chính, sau đó yêu cầu thông tin ngân hàng để chuẩn bị cho giao dịch chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không thể cung cấp số tài khoản ngân hàng cho em được, em cần thông tin gì khác không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Quân ơi, mình cứ bình tĩnh ạ. Đây là quy định bắt buộc từ phía Cơ quan Thú y cấp trên. Em cần anh cung cấp số tài khoản để xác minh ngay thôi, không có ý gì khác đâu ạ. Nếu không hợp tác, bên em buộc lòng phải báo cáo lên Cục Thú y và có thể anh sẽ mất giấy phép kinh doanh vĩnh viễn đó ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự từ chối, giải thích rằng đây là quy định bắt buộc, sau đó tiếp tục tạo áp lực và đe dọa hậu quả nghiêm trọng hơn nếu nạn nhân không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không thể làm theo yêu cầu của em được, em hãy giải thích rõ hơn nếu không thì tôi sẽ không cung cấp thông tin.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1418,
+      "output_tokens": 1711
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5998,
+      "output_tokens": 612
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7969,
+      "output_tokens": 279
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003813,
+    "output_usd": 0.010252,
+    "total_usd": 0.014065
+  }
+}

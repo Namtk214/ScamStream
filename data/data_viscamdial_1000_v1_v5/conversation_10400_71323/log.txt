@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_ddc29a7ce9]
+  Caller thật: Bí thư, Phó Bí thư Đảng ủy cấp xã (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Chủ tịch UBND xã (nâng cấp từ Bí thư Đảng ủy) @ UBND xã Thanh Phúc, huyện Bắc Tân Uyên, tỉnh Bình Dương
+  Listener: Thợ vẽ bảng hiệu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Thợ vẽ bảng hiệu thường được gọi bởi chính quyền địa phương để làm/sửa bảng hiệu công cộng, biển quảng cáo công sự hoặc bảng thông báo hành chính. Đây là mối quan hệ công việc tự nhiên và thường xuyên trong cộng đồng.
+  Pretext: Gọi yêu cầu thanh toán đặt cọc cho công việc sửa bảng hiệu công cộng. Scammer sử dụng tên thật của nạn nhân và số CMND để tạo ảo tưởng đã xác minh danh tính, từ đó yêu cầu chuyển tiền 'đặt cọc' vào tài khoản 'quỹ công sự' hoặc 'tài khoản dự án'.
+  Listener traits: ['bảo thủ ngại thay đổi']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, em chào anh Đặng Đức Tùng ạ? Em là Đỗ Thu Giang, Chủ tịch UBND xã Thanh Phúc đây ạ. Anh Tùng, em gọi điện để xin anh giúp một việc công ích, số CMND của anh là 038071416680 đúng không ạ? Em có danh sách những thợ giỏi có tâm ở địa phương mình, và thấy tên anh nổi bật trong đó.
+      → phase: S1 | tactic: Tiếp cận, xây dựng tin cậy bằng cách sử dụng tên thật và số CMND của nạn nhân, giới thiệu chức danh thật và đề nghị trợ giúp công ích.
+T02 [LISTENER] Dạ, tôi nghe em nói rồi, nhưng tôi không hiểu em cần gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, anh Tùng ơi, trước trụ sở xã mình có cái bảng hiệu bị hỏng nặng, cần sửa gấp để kịp đón đoàn kiểm tra của tỉnh cuối tuần này ạ. Chi phí dự kiến khoảng 3-4 triệu đồng. Em xin phép nhờ anh giúp đỡ, và mình sẽ cần đặt cọc trước khoảng 50% để bên em mua vật liệu luôn cho kịp tiến độ ạ.
+      → phase: S2 | tactic: Tạo tâm lý khẩn cấp và áp lực về thời gian, đề xuất công việc và yêu cầu đặt cọc ban đầu.
+T04 [LISTENER] Tôi hiểu rồi, nhưng tôi cần suy nghĩ thêm về chi phí này trước đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ, anh Tùng thông cảm giúp em. Tình hình là kinh phí xã đoàn còn eo hẹp, nên em mới phải tìm đến các mạnh thường quân như anh để hỗ trợ trước. Anh cứ tạm ứng giúp em 1,5 - 2 triệu để mình nhập vật liệu trước, sau này em tổng hợp đầy đủ chứng từ rồi mình quyết toán một thể ạ.
+      → phase: S2 | tactic: Xoa dịu sự từ chối bằng cách giải thích về khó khăn ngân sách, tái khẳng định việc đặt cọc là tạm ứng và sẽ được quyết toán sau.
+T06 [LISTENER] Em nói vậy tôi cũng hiểu, nhưng tôi thật sự cần phải xem xét kỹ lưỡng về chi phí và cách thức làm việc trước khi quyết định.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.00
+TOKEN: in=10959 | out=2304
+COST : $0.012491
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_10400_71323\conv_ddc29a7ce9.json  [SCAM_REFUSE]

@@ -1,0 +1,318 @@
+{
+  "conversation_id": "conv_9865aa0e9a",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0093",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đinh Hữu Khoa",
+    "fake_age": 43,
+    "real_occupation": "Bí thư, Phó Bí thư Đảng ủy cấp xã",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng phòng Quản lý Đô thị & Vệ sinh Công cộng - Sở Xây dựng (hoặc nâng cấp: Phó Chủ tịch UBND xã)",
+    "caller_org": "Sở Xây dựng / UBND xã / Ban Quản lý Vệ sinh Đô thị",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Xác minh thông tin cấp bảo hiểm xã hội & bảo hiểm y tế cho công nhân vệ sinh công cộng trong khuôn khổ chương trình hỗ trợ kinh tế từ Chính phủ. Scammer sẽ dùng tên thật + CCCD của nạn nhân để tạo độ tin cậy ban đầu, sau đó yêu cầu xác thực qua OTP ngân hàng hoặc chuyển khoản 'phí xác minh' để nhận hỗ trợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: Xưng danh là 'Trưởng phòng Quản lý Đô thị - Sở Xây dựng' hoặc 'Phó Chủ tịch UBND xã'. Sử dụng VIC_FULLNAME + VIC_ID_DOC để xác nhận: 'Chị/anh Trần Thanh Trang, số CCCD 040184911018 phải không? Chúng tôi đang xác minh danh sách công nhân vệ sinh để cấp bảo hiểm xã hội.'",
+          "scammer_tactic": "Lợi dụng thứ bậc quyền lực: công nhân vệ sinh thường tuân theo hành chính, ít dám từ chối cuộc gọi từ cơ quan Nhà nước"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & ham lợi: 'Chúng tôi phát hiện hồ sơ của chị bị thiếu tài liệu. Nếu không xác minh trong 24 giờ, chị sẽ mất quyền nhận hỗ trợ 3 triệu đồng từ Chính phủ. Hôm nay là hạn chót, chúng tôi sẽ giúp chị xử lý ngay.'",
+          "scammer_tactic": "Tạo cảm giác rủi ro tài chính + sợ hãi mất cơ hội, từ đó nạn nhân sẽ hành động nhanh mà không suy nghĩ"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Để xác minh, chúng tôi sẽ gửi OTP tới điện thoại chị. Chị nhận OTP rồi đọc lại cho chúng tôi để hoàn tất thủ tục.' (Hoặc: 'Chị cần chuyển 500 ngàn đồng phí xác minh, sau khi hoàn tất sẽ hoàn lại cộng hỗ trợ 3 triệu.')",
+          "scammer_tactic": "Yêu cầu OTP hoặc thực hiện chuyển khoản qua Momo/Ngân hàng; scammer sẽ chuyển hướng nạn nhân tới app/web giả mạo hoặc lấy OTP trực tiếp để truy cập tài khoản"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân cung cấp OTP, scammer sẽ sử dụng để rút tiền hoặc thay đổi thông tin tài khoản. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm: 'Thế chị sẽ chịu trách nhiệm khi mất hỗ trợ này' rồi cắt máy. Nếu thành công, scammer sẽ biến mất.",
+          "scammer_tactic": "Vô hiệu hóa nghi ngờ bằng cách duy trì 'giọng nói chính thức' và áp dụng áp lực thời gian"
+        }
+      ]
+    },
+    "scenario_context": "Người thu dọn rác là đối tượng trực tiếp thuộc diện quản lý của cơ quan công quyền cấp xã/huyện. Lãnh đạo Đảng ủy hoặc Sở Xây dựng có lý do chính đáng gọi để kiểm tra, xác minh thông tin công nhân vệ sinh (hợp đồng, bảo hiểm, kỷ luật, hoặc thông báo chương trình đặc biệt)."
+  },
+  "listener_card": {
+    "listener_id": "lis_0093",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1984,
+      "age": 41,
+      "province": "Nghệ An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "96120",
+      "title": "Người thu dọn, sắp xếp, phân loại rác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Thanh Trang",
+      "VIC_ID_DOC": "040184911018",
+      "VIC_ADDRESS": "TP 8, Nghệ An",
+      "VIC_EMPLOYMENT": "Người thu dọn, sắp xếp, phân loại rác",
+      "VIC_CONTACT": "0848339940",
+      "VIC_TAX_SOCIAL_ID": "7316324046"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "422618",
+      "VIC_CREDENTIAL": "5837",
+      "VIC_SIM_INFO": "0848339940",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "12349343603745",
+      "VIC_CARD_DATA": "4383 **** **** 4710",
+      "VIC_BALANCE": "36 triệu đồng",
+      "VIC_ASSET": "138 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Thanh Trang",
+    "VIC_CONTACT": "0848339940",
+    "VIC_ID_DOC": "040184911018"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Đô thị & Vệ sinh Công cộng - Sở Xây dựng (hoặc nâng cấp: Phó Chủ tịch UBND xã)",
+    "caller_org": "Sở Xây dựng / UBND xã / Ban Quản lý Vệ sinh Đô thị",
+    "scenario_context": "Người thu dọn rác là đối tượng trực tiếp thuộc diện quản lý của cơ quan công quyền cấp xã/huyện. Lãnh đạo Đảng ủy hoặc Sở Xây dựng có lý do chính đáng gọi để kiểm tra, xác minh thông tin công nhân vệ sinh (hợp đồng, bảo hiểm, kỷ luật, hoặc thông báo chương trình đặc biệt).",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Xác minh thông tin cấp bảo hiểm xã hội & bảo hiểm y tế cho công nhân vệ sinh công cộng trong khuôn khổ chương trình hỗ trợ kinh tế từ Chính phủ. Scammer sẽ dùng tên thật + CCCD của nạn nhân để tạo độ tin cậy ban đầu, sau đó yêu cầu xác thực qua OTP ngân hàng hoặc chuyển khoản 'phí xác minh' để nhận hỗ trợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: Xưng danh là 'Trưởng phòng Quản lý Đô thị - Sở Xây dựng' hoặc 'Phó Chủ tịch UBND xã'. Sử dụng VIC_FULLNAME + VIC_ID_DOC để xác nhận: 'Chị/anh Trần Thanh Trang, số CCCD 040184911018 phải không? Chúng tôi đang xác minh danh sách công nhân vệ sinh để cấp bảo hiểm xã hội.'",
+          "scammer_tactic": "Lợi dụng thứ bậc quyền lực: công nhân vệ sinh thường tuân theo hành chính, ít dám từ chối cuộc gọi từ cơ quan Nhà nước"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & ham lợi: 'Chúng tôi phát hiện hồ sơ của chị bị thiếu tài liệu. Nếu không xác minh trong 24 giờ, chị sẽ mất quyền nhận hỗ trợ 3 triệu đồng từ Chính phủ. Hôm nay là hạn chót, chúng tôi sẽ giúp chị xử lý ngay.'",
+          "scammer_tactic": "Tạo cảm giác rủi ro tài chính + sợ hãi mất cơ hội, từ đó nạn nhân sẽ hành động nhanh mà không suy nghĩ"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Để xác minh, chúng tôi sẽ gửi OTP tới điện thoại chị. Chị nhận OTP rồi đọc lại cho chúng tôi để hoàn tất thủ tục.' (Hoặc: 'Chị cần chuyển 500 ngàn đồng phí xác minh, sau khi hoàn tất sẽ hoàn lại cộng hỗ trợ 3 triệu.')",
+          "scammer_tactic": "Yêu cầu OTP hoặc thực hiện chuyển khoản qua Momo/Ngân hàng; scammer sẽ chuyển hướng nạn nhân tới app/web giả mạo hoặc lấy OTP trực tiếp để truy cập tài khoản"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân cung cấp OTP, scammer sẽ sử dụng để rút tiền hoặc thay đổi thông tin tài khoản. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm: 'Thế chị sẽ chịu trách nhiệm khi mất hỗ trợ này' rồi cắt máy. Nếu thành công, scammer sẽ biến mất.",
+          "scammer_tactic": "Vô hiệu hóa nghi ngờ bằng cách duy trì 'giọng nói chính thức' và áp dụng áp lực thời gian"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan quản lý Nhà nước (Sở Xây dựng hoặc UBND xã) gọi để xác minh thông tin công nhân vệ sinh công cộng nhằm cập nhật danh sách bảo hiểm, kiểm tra hợp đồng lao động, hoặc thông báo chương trình hỗ trợ chính thức từ Chính phủ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp & xác nhận danh tính: Xưng danh đầy đủ (tên, chức danh, cơ quan), yêu cầu xác nhận tên + CCCD của nạn nhân. Nêu rõ mục đích: 'Chúng tôi là Phòng Quản lý Đô thị - Sở Xây dựng. Chúng tôi cần xác minh thông tin để cập nhật bảo hiểm xã hội cho công nhân vệ sinh. Chị có thể xác nhận không?'",
+          "legit_signal": "Cơ quan chính thức sẽ cung cấp số điện thoại bộ phận để nạn nhân gọi lại xác minh; không yêu cầu OTP hay chuyển tiền ngay"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi thông tin công việc bình thường: Hỏi về thời gian làm việc, địa điểm, hợp đồng hiện tại, thông tin liên hệ khẩn cấp. Thông báo rõ: 'Chúng tôi đang cập nhật danh sách để đảm bảo chị có bảo hiểm đầy đủ. Không cần chuyển tiền hay cung cấp mã OTP qua điện thoại.'",
+          "legit_signal": "Cuộc gọi kéo dài 3-5 phút, nội dung cụ thể về công việc thực tế, không tạo sức ép thời gian"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn chị đã xác minh. Chúng tôi sẽ gửi thư xác nhận qua địa chỉ công sở hoặc email. Nếu có câu hỏi, chị có thể gọi lại Phòng Quản lý Đô thị theo số [số điện thoại công khai]. Chào chị!'",
+          "legit_signal": "Cung cấp thông tin liên hệ công khai để nạn nhân có thể xác minh lại; không yêu cầu hành động khẩn cấp"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, tôi là Đinh Hữu Khoa, Trưởng phòng Quản lý Đô thị và Vệ sinh Công cộng Sở Xây dựng đây ạ. Tôi muốn xác nhận thông tin với chị Trần Thanh Trang, số căn cước công dân 040184911018, có phải không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và dùng thông tin cá nhân để tạo lòng tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Trần Thanh Trang, có chuyện gì không anh?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Trang. Hiện tại, Sở chúng tôi đang rà soát và cấp bổ sung chính sách bảo hiểm xã hội, bảo hiểm y tế theo chương trình hỗ trợ kinh tế của Chính phủ cho các công nhân vệ sinh công cộng. Chúng tôi phát hiện hồ sơ của chị đang bị thiếu một số tài liệu quan trọng.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích lý do cuộc gọi và tạo tình huống khẩn cấp về việc thiếu tài liệu để nhận hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Ôi, anh nói vậy thì tôi lo quá, vậy tôi cần làm gì để bổ sung hồ sơ ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, chúng tôi gọi để hỗ trợ chị hoàn thiện thủ tục thôi. Nhưng hôm nay là hạn chót để nộp bổ sung đấy ạ. Nếu không hoàn thành trong hôm nay, chị sẽ mất quyền nhận khoản hỗ trợ 3 triệu đồng từ Chính phủ đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh tính khẩn cấp và lợi ích bị mất nếu không hành động để tạo áp lực cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Ôi, 3 triệu đồng thì quan trọng quá, anh có thể cho tôi biết cần bổ sung tài liệu gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, do hồ sơ của chị có sự thiếu sót về mặt thông tin, nên để xác minh lại và đẩy nhanh tiến độ cho chị kịp nhận hỗ trợ, chúng tôi sẽ gửi một mã OTP về số điện thoại của chị. Chị nhận được mã rồi đọc lại cho tôi để chúng tôi hoàn tất thủ tục nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể để xác minh thông tin, cụ thể là yêu cầu OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Cái mã OTP là gì anh, tôi không rõ lắm ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "OTP là mã xác thực dùng một lần để bảo vệ thông tin cá nhân của chị đấy ạ. Chị cứ yên tâm, đây là thủ tục bắt buộc để đảm bảo chỉ có chính chủ mới được nhận hỗ trợ thôi. Chị kiểm tra điện thoại xem có tin nhắn chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Giáo dục nạn nhân về OTP để giảm nghi ngờ và thúc đẩy hành động, đồng thời khẳng định tính bảo mật và cấp thiết."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa thấy tin nhắn nào, anh có thể giải thích thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, có thể do hệ thống đang hơi chậm một chút. Chị cứ giữ máy, tôi sẽ thử gửi lại mã OTP ngay bây giờ. Chị để ý tin nhắn đến nhé. Sau khi nhận được mã, chị vui lòng đọc lại giúp tôi để tôi cập nhật hồ sơ cho chị kịp thời.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ nạn nhân trên điện thoại, trấn an và tiếp tục thúc đẩy việc nhận và đọc OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn đang đợi đây, anh có thể gửi lại cho tôi nhanh không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, tôi đang thao tác gửi lại ạ. Chị kiểm tra điện thoại xem có tin nhắn từ ngân hàng hoặc một mã số gửi đến không nhé. Mã này chỉ có giá trị trong vài phút thôi, để đảm bảo kịp thời xử lý hồ sơ, chị nhận được thì đọc lại giúp tôi nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an và tạo áp lực về thời gian, đồng thời hướng dẫn cụ thể nạn nhân tìm kiếm tin nhắn OTP và yêu cầu đọc lại ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa nhận được tin nhắn nào cả, anh có thể kiểm tra lại giúp tôi không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị Trang, chị kiểm tra lại giúp tôi xem có thể tin nhắn rơi vào mục spam hoặc tin nhắn quảng cáo không ạ? Đôi khi các nhà mạng sẽ lọc các tin nhắn mã xác thực. Chị xem kỹ giúp tôi nhé, mã này rất quan trọng để hoàn thành hồ sơ.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân kiểm tra các thư mục tin nhắn khác, vẫn giữ áp lực về tầm quan trọng của OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi kiểm tra rồi, không thấy tin nhắn nào hết, anh có cách nào khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, để tôi kiểm tra lại trong hệ thống bên tôi liệu có lỗi gì không. Chị cứ giữ máy giúp tôi một chút nhé. Có thể do trục trặc kỹ thuật tạm thời, nhưng chị cứ yên tâm là chúng tôi sẽ hỗ trợ chị đến cùng để chị không mất quyền lợi.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân và tạo cảm giác bên mình đang cố gắng hỗ trợ, đồng thời giữ nạn nhân trên đường dây để tìm cách khác khai thác."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi sẽ giữ máy, nhưng anh cố gắng nhanh lên nhé vì tôi rất lo lắng cho khoản hỗ trợ này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Trang cứ yên tâm. Tôi đã kiểm tra lại rồi, có vẻ như hệ thống đang gặp lỗi nhỏ trong việc gửi mã xác thực qua tin nhắn. Vậy thì để thuận tiện hơn và đảm bảo chị nhận được hỗ trợ kịp thời, chị có thể chuyển tạm một khoản phí xác minh 500 nghìn đồng vào tài khoản của Sở. Khoản phí này sẽ được hoàn lại ngay sau khi hồ sơ của chị được cập nhật, cộng với 3 triệu đồng hỗ trợ kia, tổng cộng là 3 triệu 500 nghìn đồng ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Chuyển sang yêu cầu chuyển khoản tiền phí xác minh thay vì OTP, tận dụng sự lo lắng của nạn nhân về khoản hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Ôi, anh nói vậy thì tôi thấy không ổn lắm, tôi chỉ muốn nhận khoản hỗ trợ 3 triệu đồng thôi, không biết có cách nào khác không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự lo lắng của chị. Nhưng đây là quy trình bắt buộc để đảm bảo tính minh bạch và tránh trục lợi chính sách. Số tiền 500 nghìn đồng này sẽ được hoàn lại ngay lập tức khi hệ thống ghi nhận hồ sơ của chị đã được xác minh thành công. Nếu không có khoản chuyển khoản này để xác nhận, hồ sơ của chị vẫn sẽ bị coi là chưa hoàn tất và nguy cơ mất trắng 3 triệu đồng hỗ trợ là rất cao đấy chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an, nhấn mạnh tính bắt buộc của quy trình và tạo áp lực về hậu quả tài chính nếu không tuân thủ."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng 500 nghìn đồng là số tiền cũng không nhỏ, liệu có cách nào khác không anh?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1389,
+      "output_tokens": 2387
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 22815,
+      "output_tokens": 1503
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 27429,
+      "output_tokens": 736
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.010066,
+    "output_usd": 0.016134,
+    "total_usd": 0.0262
+  }
+}

@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_eb6c525ef1]
+  Caller thật: Nhân viên thông tin khách hàng chưa được phân vào đâu (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Chuyên viên Quản lý Tài khoản & Hỗ trợ Vay vốn @ Ngân hàng Nông nghiệp & Phát triển Nông thôn (Agribank) - Phòng Dịch vụ Khách hàng
+  Listener: Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhân viên thông tin khách hàng của ngân hàng nông nghiệp có lý do hợp lý gọi cho nông dân/lao động nông nghiệp để thông báo về chương trình vay vốn, kiểm tra tài khoản, hoặc xác nhận thông tin định danh liên quan đến tài sản/tín dụng.
+  Pretext: Xác nhận thông tin tài khoản ngân hàng và kích hoạt gói vay ưu đãi dành cho nông dân với lãi suất thấp, để giúp nạn nhân mở rộng sản xuất. Scammer sẽ dùng tên thật (Ngô Khánh Hà) + số CMND (080165623452) để tạo sự tin tưởng ngay từ đầu.
+  Listener traits: ['nóng tính dễ cáu', 'sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào chị Ngô Khánh Hà ạ. Em là Trương Văn Khoa, chuyên viên từ Ngân hàng Agribank đây ạ. Em gọi từ phòng dịch vụ khách hàng để xác nhận một số thông tin quan trọng liên quan đến tài khoản 080165623452 đứng tên chị. Bên em vừa phát hiện có giao dịch bất thường và muốn kiểm tra lại để đảm bảo an toàn cho 166 triệu đồng trong tài khoản của chị ạ.
+      → phase: S1 | tactic: Xưng danh, dùng tên thật và số CMND của nạn nhân để tạo niềm tin, đồng thời nhắc đến số tiền lớn để gây chú ý và lo lắng.
+T02 [LISTENER] Em gọi để xác nhận thông tin gì, tôi chưa hiểu rõ lắm.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ em xin lỗi vì đã làm chị bối rối ạ. Cụ thể là hệ thống của bên em ghi nhận tài khoản của chị, với số CMND 080165623452, có dấu hiệu truy cập từ một thiết bị lạ. Điều này có thể ảnh hưởng đến số dư 166 triệu đồng của chị. Em muốn hướng dẫn chị xác thực lại ngay để bảo vệ tài sản và tránh việc tài khoản bị khóa tạm thời ạ.
+      → phase: S2 | tactic: Khai thác tâm lý sợ mất tiền, tạo cảm giác khẩn cấp về truy cập lạ và nguy cơ tài khoản bị khóa, đồng thời nhắc lại thông tin cá nhân và số tiền để tăng uy tín.
+T04 [LISTENER] Tôi không hiểu tại sao tài khoản của tôi lại bị truy cập lạ, em có thể giải thích rõ hơn không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em rất hiểu sự lo lắng của chị ạ. Thường thì những trường hợp này là do có phần mềm độc hại hoặc sơ suất trong việc bảo mật thông tin cá nhân. Nhưng chị yên tâm, Agribank luôn có quy trình bảo vệ khách hàng. Quan trọng nhất lúc này là chúng ta cần xác minh lại quyền sở hữu tài khoản ngay lập tức để ngăn chặn bất kỳ giao dịch trái phép nào có thể xảy ra và đảm bảo an toàn cho 166 triệu đồng của chị ạ.
+      → phase: S2 | tactic: Xoa dịu sự lo lắng của nạn nhân, giải thích nguyên nhân chung chung để nạn nhân không nghi ngờ vào ngân hàng, đồng thời nhấn mạnh sự cấp bách của việc xác minh để bảo vệ tài sản.
+T06 [LISTENER] Thế em bảo tôi làm gì để xác minh lại tài khoản đây?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, để xác minh nhanh chóng và đảm bảo chị được hưởng gói vay ưu đãi cho nông dân với lãi suất 0% trong 12 tháng mà bên em đang triển khai, chị vui lòng cung cấp giúp em mã OTP vừa được gửi đến số điện thoại của chị. Mã này sẽ giúp hệ thống của Agribank xác nhận chị chính là chủ tài khoản và kích hoạt gói vay ngay lập tức ạ.
+      → phase: S3 | tactic: Yêu cầu OTP trực tiếp để xác minh, đồng thời kết hợp đề nghị gói vay ưu đãi để tạo động lực và đánh lạc hướng nạn nhân.
+T08 [LISTENER] Tôi chưa bao giờ nghe về mã OTP, em có thể nói rõ hơn cho tôi được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, mã OTP là viết tắt của One-Time Password đó chị ạ. Đây là một dãy số bảo mật duy nhất chỉ dùng được một lần, thường được gửi vào số điện thoại của chị mỗi khi có giao dịch hoặc xác thực quan trọng trên hệ thống ngân hàng. Bây giờ, chị vui lòng kiểm tra tin nhắn điện thoại giúp em nhé, sẽ có một tin nhắn từ Agribank chứa mã OTP đó ạ. Chị đọc lại mã đó cho em để em hỗ trợ chị xác thực và kích hoạt gói vay ngay nhé.
+      → phase: S3 | tactic: Giải thích rõ ràng về OTP để nạn nhân hiểu và tin tưởng, sau đó nhắc lại yêu cầu cung cấp mã OTP để kích hoạt gói vay, tạo cảm giác gấp gáp và có lợi.
+T10 [LISTENER] Tôi không biết cái mã OTP đó là gì, em có chắc là cần thiết không? Tôi thấy hơi nghi ngờ đấy.
+      → action: REFUSAL | suspicion: 0.20 | disclosed: []
+
+T11 [CALLER] Dạ em hiểu sự lo lắng của chị ạ. Tuy nhiên, mã OTP là một phần bắt buộc trong quy trình xác thực bảo mật của ngân hàng, không chỉ Agribank mà tất cả các ngân hàng khác đều sử dụng để bảo vệ tài sản cho khách hàng. Nếu không có mã này, hệ thống sẽ không thể xác nhận chị là chủ tài khoản, và như vậy, em không thể hỗ trợ chị kích hoạt gói vay ưu đãi 0% lãi suất hay bảo vệ số tiền 166 triệu đồng của chị đang có nguy cơ bị rút ra bởi kẻ gian được. Chị vui lòng xem lại tin nhắn điện thoại để tìm mã OTP và đọc cho em nhé.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ, nhấn mạnh tính cần thiết và phổ biến của OTP trong giao dịch ngân hàng, đồng thời nhắc lại lợi ích (gói vay ưu đãi) và nguy cơ (mất tiền) để tạo áp lực và động lực cho nạn nhân cung cấp OTP.
+T12 [LISTENER] Em không có mã OTP nào cả, tôi không hiểu tại sao phải cung cấp cái đó.
+      → action: REFUSAL | suspicion: 0.50 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=0.50
+TOKEN: in=26741 | out=3504
+COST : $0.018777
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_42290_61129\conv_eb6c525ef1.json  [SCAM_REFUSE]

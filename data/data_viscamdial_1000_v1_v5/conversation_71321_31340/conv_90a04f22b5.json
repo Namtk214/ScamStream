@@ -1,0 +1,360 @@
+{
+  "conversation_id": "conv_90a04f22b5",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0099",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trần Công Gia Phong",
+    "fake_age": 45,
+    "real_occupation": "Thợ sơn kết cấu thép/sơn tàu",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kiểm tra và bảo dưỡng hệ thống ống dẫn/sơn phủ bảo vệ — công ty cung cấp dịch vụ bảo trì cơ sở hạ tầng",
+    "caller_org": "Công ty TNHH Dịch vụ Bảo trì Công nghiệp Minh Phát",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty cung cấp dịch vụ bảo trì liên hệ xác nhận lịch kiểm tra/bảo dưỡng định kỳ hoặc thông báo hoàn tất công việc bảo trì đã thực hiện.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh 'Tôi là Anh Hùng từ bộ phận lập lịch Công ty Minh Phát, tôi gọi để xác nhận lịch bảo trì ống dẫn và kiểm tra lớp sơn phủ tuần tới, anh có rảnh không?' → xác minh đúng người liên hệ"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận thời gian bảo trì, phạm vi công việc (kiểm tra ống, đánh giá sơn phủ, sơn lại nếu cần), thiết bị cần tắt, biện pháp an toàn → cả hai bên thống nhất chi tiết"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận lại ngày giờ, tên người đến kiểm tra, số điện thoại liên hệ khẩn cấp → chào tạm biệt, hứa gửi email xác nhận sau cuộc gọi"
+        }
+      ]
+    },
+    "scenario_context": "Nhà máy lọc dầu và khí tự nhiên cần bảo dưỡng định kỳ các ống dẫn, thiết bị kim loại có lớp sơn phủ chống ăn mòn. Nhân viên bảo trì từ công ty cung cấp dịch vụ sơn/phủ bảo vệ sẽ liên hệ với người vận hành để xác nhận lịch bảo dưỡng hoặc thông báo vấn đề kỹ thuật."
+  },
+  "listener_card": {
+    "listener_id": "lis_0099",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "31340",
+      "title": "Người vận hành nhà máy lọc dầu và khí tự nhiên",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Công Minh",
+      "VIC_ID_DOC": "079202341186",
+      "VIC_ADDRESS": "Huyện 4, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Người vận hành nhà máy lọc dầu và khí tự nhiên",
+      "VIC_CONTACT": "0990856727",
+      "VIC_TAX_SOCIAL_ID": "7775699061"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "305099",
+      "VIC_CREDENTIAL": "6424",
+      "VIC_SIM_INFO": "0990856727",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "97576827641",
+      "VIC_CARD_DATA": "4723 **** **** 8549",
+      "VIC_BALANCE": "538 triệu đồng",
+      "VIC_ASSET": "220 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Công Minh",
+    "VIC_CONTACT": "0990856727",
+    "VIC_CARD_DATA": "4723 **** **** 8549"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kiểm tra và bảo dưỡng hệ thống ống dẫn/sơn phủ bảo vệ — công ty cung cấp dịch vụ bảo trì cơ sở hạ tầng",
+    "caller_org": "Công ty TNHH Dịch vụ Bảo trì Công nghiệp Minh Phát",
+    "scenario_context": "Nhà máy lọc dầu và khí tự nhiên cần bảo dưỡng định kỳ các ống dẫn, thiết bị kim loại có lớp sơn phủ chống ăn mòn. Nhân viên bảo trì từ công ty cung cấp dịch vụ sơn/phủ bảo vệ sẽ liên hệ với người vận hành để xác nhận lịch bảo dưỡng hoặc thông báo vấn đề kỹ thuật.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo rằng hệ thống thanh toán bảo trì định kỳ của nhà máy gặp lỗi, cần xác minh lại thông tin thẻ tín dụng để hoàn tất hóa đơn tháng này. Sử dụng tên đầy đủ 'Huỳnh Công Minh' để tạo ảo tưởng đã tra cứu được dữ liệu từ hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh từ bộ phận kế toán Công ty Minh Phát' + gọi đến số điện thoại nạn nhân, xác nhận 'Anh Huỳnh Công Minh phải không? Chúng tôi có ghi nhận anh là người liên hệ kỹ thuật của nhà máy lọc dầu' → tạo tin cậy ban đầu"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo tình huống khẩn cấp — 'Hóa đơn bảo trì tháng này chưa thanh toán, nếu không xác nhận lại thẻ trong 10 phút thì hệ thống sẽ tự động tạm dừng dịch vụ, ảnh hưởng đến lịch bảo dưỡng thiết bị tuần sau' → áp lực thời gian"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần cung cấp 3 chữ số phía sau thẻ (CVV) và OTP sẽ được gửi đến điện thoại anh, anh đọc lại cho tôi để hoàn tất xác nhận' → chiết xuất OTP + CVV"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: 'Cảm ơn anh, giao dịch đã xác nhận, chúng tôi sẽ tiếp tục dịch vụ bảo trì. Tạm biệt anh' → kết thúc nhanh. Nếu từ chối: 'Không sao anh, có thể anh liên hệ trực tiếp qua email hóa đơn hoặc gọi lại số 1900-xxxx để xác nhận, chúng tôi sẽ chờ' → tránh nghi ngờ"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cung cấp dịch vụ bảo trì liên hệ xác nhận lịch kiểm tra/bảo dưỡng định kỳ hoặc thông báo hoàn tất công việc bảo trì đã thực hiện.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh 'Tôi là Anh Hùng từ bộ phận lập lịch Công ty Minh Phát, tôi gọi để xác nhận lịch bảo trì ống dẫn và kiểm tra lớp sơn phủ tuần tới, anh có rảnh không?' → xác minh đúng người liên hệ"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận thời gian bảo trì, phạm vi công việc (kiểm tra ống, đánh giá sơn phủ, sơn lại nếu cần), thiết bị cần tắt, biện pháp an toàn → cả hai bên thống nhất chi tiết"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận lại ngày giờ, tên người đến kiểm tra, số điện thoại liên hệ khẩn cấp → chào tạm biệt, hứa gửi email xác nhận sau cuộc gọi"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Tôi là Trần Công Gia Phong từ bộ phận lập lịch Công ty Minh Phát, tôi gọi để xác nhận lịch bảo trì ống dẫn và kiểm tra lớp sơn phủ cho cơ sở của anh vào tuần tới, anh Huỳnh Công Minh có rảnh vào thời gian đó không?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh, giới thiệu công ty và mục đích cuộc gọi, xác minh đúng người liên hệ và lịch trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa hiểu rõ lịch bảo trì này, anh có thể cho em biết cụ thể hơn về thời gian và địa điểm được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, bên tôi có lịch hẹn bảo trì định kỳ cho cơ sở hiện tại của anh ở địa chỉ 123 đường ABC, quận 1, TP. Hồ Chí Minh. Lịch dự kiến là vào thứ Tư tuần tới, ngày 15 tháng 5, khung giờ từ 9 giờ sáng đến 12 giờ trưa. Chúng tôi sẽ kiểm tra toàn diện hệ thống ống dẫn để đảm bảo không có rò rỉ hay hư hại, đồng thời đánh giá lại chất lượng lớp sơn phủ bảo vệ. Nếu cần thì sẽ tiến hành sơn dặm hoặc sơn lại những chỗ bị xuống cấp ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về địa điểm, thời gian và phạm vi công việc bảo trì để giải đáp thắc mắc của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng sao anh biết chắc là em rảnh vào thời gian đó ạ? Em cần kiểm tra lại xem có công việc gì khác không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Lịch này thì bên tôi đã lên kế hoạch dựa trên chu kỳ bảo trì định kỳ của hệ thống. Anh cứ kiểm tra lại lịch cá nhân của mình xem có vướng gì không. Nếu cần thay đổi, anh cứ báo lại sớm giúp tôi để chúng tôi sắp xếp lại nhân sự cho phù hợp nhất với anh nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự thông cảm với lịch trình của người nghe, giải thích cơ sở của lịch bảo trì, và mở ra lựa chọn điều chỉnh lịch nếu người nghe không sắp xếp được, nhấn mạnh sự linh hoạt và sẵn lòng hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã thông cảm, nhưng em vẫn chưa chắc chắn lắm về lịch trình của mình, có thể cho em thêm thời gian để kiểm tra và thông báo lại được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy anh Huỳnh Công Minh cứ kiểm tra lại nhé. Anh có thể gọi lại cho tôi theo số 090xxxxxxx hoặc nhắn tin để xác nhận lại thời gian thuận tiện nhất cho anh. Chúng tôi sẽ cố gắng sắp xếp theo lịch của anh. Anh cứ báo lại cho tôi trước thứ Hai tuần tới là được ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự linh hoạt, cung cấp kênh liên hệ để người nghe chủ động báo lại lịch, đồng thời đưa ra mốc thời gian cụ thể để người nghe biết khi nào cần phản hồi."
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi anh, nhưng em vẫn cảm thấy chưa hoàn toàn yên tâm về cuộc gọi này, có cách nào để xác minh thông tin rõ hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự lo lắng của anh. Nếu anh cần xác minh thêm thông tin, anh có thể gọi trực tiếp đến tổng đài chính thức của Công ty Minh Phát qua số điện thoại 1900 xxxx (số này có trên website của công ty) để xác nhận lại lịch bảo trì và thông tin của tôi nhé. Bên cạnh đó, sau cuộc gọi này tôi cũng sẽ gửi email xác nhận tất cả các thông tin đã trao đổi đến địa chỉ email của anh.",
+      "current_phase": "L3",
+      "tactic_hint": "Hướng dẫn người nghe xác minh thông tin qua kênh chính thức của công ty (tổng đài, website) để tăng độ tin cậy, đồng thời cam kết gửi email xác nhận sau cuộc gọi, nhằm giảm bớt sự nghi ngờ của người nghe và củng cố thông tin đã cung cấp."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Anh có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh, nhưng anh có thể cho em biết số điện thoại đường dây nóng chính xác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số tổng đài chăm sóc khách hàng của Công ty Minh Phát là 1900 xxxx anh nhé. Anh có thể lên website chính thức của công ty để tham khảo thêm ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Cung cấp lại số điện thoại tổng đài chính thức và hướng dẫn người nghe kiểm tra trên website để xác minh, tăng độ tin cậy và trấn an người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp thông tin, nhưng em vẫn cảm thấy hơi lo lắng liệu số điện thoại đó có phải là chính xác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra lại trên website chính thức của Công ty Minh Phát là minhphat.com.vn nhé. Tất cả thông tin liên hệ và số tổng đài đều được công khai trên đó ạ. Tôi cam đoan đây là thông tin chính xác.",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe bằng cách hướng dẫn kiểm tra thông tin trên website chính thức của công ty, đồng thời khẳng định tính chính xác của thông tin đã cung cấp để giảm sự nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại thông tin trên website của công ty, nhưng có thể cho em biết địa chỉ email mà anh sẽ gửi xác nhận được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ email tôi sẽ gửi xác nhận là huynhcongminh@gmail.com, địa chỉ mà công ty chúng tôi vẫn thường liên hệ với anh trước đây. Anh có cần tôi gửi tới một địa chỉ email khác không?",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận địa chỉ email sẽ gửi thông tin, đồng thời hỏi xem người nghe có muốn cập nhật địa chỉ email khác không, thể hiện sự chu đáo và mong muốn hỗ trợ tối đa."
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi anh, nhưng địa chỉ email này em không chắc là đúng, anh có thể cho em biết thêm thông tin để xác minh được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ email này là địa chỉ mà bên tôi ghi nhận trong hồ sơ khách hàng. Nếu anh cần cập nhật lại email để nhận thông tin xác nhận thì báo tôi ngay nhé, tôi sẽ cập nhật và gửi lại vào đúng địa chỉ anh muốn.",
+      "current_phase": "L3",
+      "tactic_hint": "Nhắc lại rằng email được sử dụng là theo hồ sơ hiện tại, đồng thời đề nghị cập nhật nếu người nghe muốn nhận thư xác nhận ở một địa chỉ khác, thể hiện sự linh hoạt và sẵn lòng hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng em vẫn cảm thấy lo lắng về việc cung cấp thông tin như vậy, anh có thể cho em biết thêm chi tiết về công ty và lịch sử làm việc của công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Công ty TNHH Dịch vụ Bảo trì Công nghiệp Minh Phát chúng tôi đã hoạt động được hơn 15 năm trong lĩnh vực bảo trì cơ sở hạ tầng, chuyên về hệ thống ống dẫn và sơn phủ bảo vệ cho các doanh nghiệp lớn. Anh có thể tìm hiểu thêm về các dự án và đối tác của chúng tôi trên website minhphat.com.vn. Chúng tôi luôn đặt uy tín và chất lượng dịch vụ lên hàng đầu.",
+      "current_phase": "L3",
+      "tactic_hint": "Cung cấp thêm thông tin về lịch sử và uy tín của công ty, hướng dẫn người nghe kiểm tra trên website để tăng niềm tin và giảm bớt sự lo lắng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cám ơn anh đã chia sẻ, nhưng em vẫn muốn đảm bảo mọi thông tin đều chính xác, anh có thể gửi cho em một tài liệu xác nhận không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, sau cuộc gọi này tôi sẽ gửi cho anh một email xác nhận đầy đủ các thông tin chi tiết về lịch bảo trì, phạm vi công việc, tên nhân viên kỹ thuật sẽ đến, và số điện thoại liên hệ khẩn cấp của phòng kỹ thuật. Anh cứ yên tâm kiểm tra các thông tin đó nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Cam kết gửi email xác nhận với đầy đủ thông tin chi tiết như đã hứa, trấn an người nghe rằng mọi thông tin sẽ được cung cấp rõ ràng qua văn bản để họ có thể kiểm tra lại."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh đã hỗ trợ, nhưng em vẫn thấy chưa yên tâm lắm, anh có thể cho em biết thêm về nhân viên kỹ thuật sẽ đến không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, khi gửi email xác nhận, tôi sẽ ghi rõ tên của các kỹ thuật viên sẽ đến làm việc tại cơ sở của anh. Họ đều là những người có kinh nghiệm lâu năm của công ty chúng tôi. Anh có thể an tâm nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Cam kết cung cấp thông tin chi tiết về nhân viên kỹ thuật trong email xác nhận, đồng thời nhấn mạnh kinh nghiệm của đội ngũ để trấn an người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã chia sẻ, nhưng em vẫn muốn biết thêm một chút về quy trình làm việc của công ty trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, quy trình làm việc của chúng tôi rất rõ ràng và chuyên nghiệp. Đầu tiên, đội ngũ kỹ thuật sẽ đến kiểm tra hiện trạng, sau đó lập báo cáo và đề xuất các hạng mục cần bảo trì hoặc sửa chữa. Tất cả các bước đều được thực hiện theo tiêu chuẩn an toàn nghiêm ngặt và chúng tôi sẽ thông báo cho anh mọi lúc ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Trình bày rõ ràng quy trình làm việc của công ty để người nghe hiểu và tin tưởng, nhấn mạnh tính chuyên nghiệp và an toàn."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh về thông tin chi tiết, nhưng em vẫn muốn biết thêm về các dự án lớn mà công ty đã thực hiện để có thể tin tưởng hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Huỳnh Công Minh có thể tham khảo mục 'Dự án tiêu biểu' trên website minhphat.com.vn của chúng tôi. Ở đó có nhiều thông tin về các dự án lớn mà Công ty Minh Phát đã thực hiện cho các đối tác uy tín, bao gồm cả các tập đoàn công nghiệp và xí nghiệp lớn trong và ngoài nước ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Hướng dẫn người nghe đến nguồn thông tin cụ thể trên website của công ty (mục 'Dự án tiêu biểu') để họ tự tìm hiểu và xác minh về các dự án lớn và uy tín, từ đó tăng cường niềm tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh đã cung cấp thông tin, nhưng em thấy vẫn cần thêm thời gian để tìm hiểu kỹ hơn về công ty trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Anh cứ dành thời gian tìm hiểu kỹ về công ty chúng tôi trên website minhphat.com.vn nhé. Nếu anh có bất kỳ câu hỏi nào khác, đừng ngần ngại liên hệ lại với chúng tôi. Tôi sẽ gửi email xác nhận ngay sau đây để anh tiện tham khảo ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng quyết định của người nghe để họ có thời gian tìm hiểu, nhắc lại việc sẽ gửi email xác nhận và khuyến khích liên hệ lại nếu có thắc mắc, đồng thời chuẩn bị kết thúc cuộc gọi một cách tự nhiên."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh đã hỗ trợ, nhưng em vẫn thấy cần thêm thời gian để kiểm tra kỹ hơn và quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy anh Huỳnh Công Minh cứ dành thời gian kiểm tra kỹ nhé. Tôi sẽ gửi email xác nhận tất cả các thông tin đã trao đổi như đã nói. Nếu có bất kỳ câu hỏi nào nữa, anh cứ liên hệ lại với Công ty Minh Phát. Chào anh và hẹn gặp lại ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng quyết định của người nghe khi họ muốn thêm thời gian tìm hiểu, tái cam kết gửi email xác nhận, đề nghị liên hệ lại nếu có thắc mắc, và kết thúc cuộc gọi một cách lịch sự, tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1848,
+      "output_tokens": 1611
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 39444,
+      "output_tokens": 2386
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 48081,
+      "output_tokens": 1201
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.016949,
+    "output_usd": 0.014741,
+    "total_usd": 0.03169
+  }
+}

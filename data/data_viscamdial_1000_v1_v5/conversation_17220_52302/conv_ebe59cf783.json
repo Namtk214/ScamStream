@@ -1,0 +1,227 @@
+{
+  "conversation_id": "conv_ebe59cf783",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0035",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Thế Xuân Dũng",
+    "fake_age": 32,
+    "real_occupation": "Khai khoáng, công nghiệp chế biến, chế tạo, sản xuất và phân phối điện, khí đốt, nước nóng, hơi nước và điều hòa không khí",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Nhân viên Bộ phận Bán hàng & Thanh toán - Công ty Cấp điện/Nước",
+    "caller_org": "Công ty Cổ phần Cấp điện & Nước Quảng Nam (hoặc chi nhánh địa phương)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty cấp điện/nước cần xác minh thông tin thanh toán định kỳ hoặc thông báo về việc cập nhật phương thức thanh toán mới cho cửa hàng/doanh nghiệp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Phương, tôi là Minh từ Bộ phận Khách hàng công ty Cấp điện Quảng Nam. Tôi gọi để xác nhận thông tin thanh toán hóa đơn tháng này của cửa hàng chị. Chị có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần cập nhật số tài khoản thanh toán tự động. Số tài khoản hiện tại của chị còn chính xác không? Có thay đổi gì không?' → Chỉ xác nhận, không yêu cầu OTP hay mã xác thực."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: 'Cảm ơn chị đã xác nhận. Chúng tôi sẽ cập nhật trong hệ thống. Nếu có vấn đề gì, chị gọi số tổng đài 1800-XXXX. Chúc chị ngày tốt!'"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên cấp điện/nước thường liên hệ với các cửa hàng, siêu thị, quán ăn để xác nhận thông tin thanh toán hóa đơn, kiểm tra nợ, hoặc cập nhật dữ liệu tài khoản. Nhân viên thu ngân là người quản lý tiền mặt & thanh toán, nên là điểm tiếp xúc tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0035",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1982,
+      "age": 43,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "52302",
+      "title": "Nhân viên thu ngân",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Diễm Phương",
+      "VIC_ID_DOC": "049182018007",
+      "VIC_ADDRESS": "TP 3, Quảng Nam",
+      "VIC_EMPLOYMENT": "Nhân viên thu ngân",
+      "VIC_CONTACT": "0915238609",
+      "VIC_TAX_SOCIAL_ID": "4979693027"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "193220",
+      "VIC_CREDENTIAL": "964503",
+      "VIC_SIM_INFO": "0915238609",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0873201745",
+      "VIC_CARD_DATA": "4880 **** **** 9717",
+      "VIC_BALANCE": "56 triệu đồng",
+      "VIC_ASSET": "445 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Diễm Phương",
+    "VIC_CONTACT": "0915238609",
+    "VIC_CARD_DATA": "4880 **** **** 9717",
+    "VIC_BANK_ACCOUNT": "0873201745",
+    "VIC_ADDRESS": "TP 3, Quảng Nam"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Bộ phận Bán hàng & Thanh toán - Công ty Cấp điện/Nước",
+    "caller_org": "Công ty Cổ phần Cấp điện & Nước Quảng Nam (hoặc chi nhánh địa phương)",
+    "scenario_context": "Nhân viên cấp điện/nước thường liên hệ với các cửa hàng, siêu thị, quán ăn để xác nhận thông tin thanh toán hóa đơn, kiểm tra nợ, hoặc cập nhật dữ liệu tài khoản. Nhân viên thu ngân là người quản lý tiền mặt & thanh toán, nên là điểm tiếp xúc tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Xưng danh là nhân viên Bộ phận Xác minh Thanh toán của công ty cấp điện/nước. Giả vờ phát hiện bất thường trong tài khoản ngân hàng liên kết với hóa đơn của cửa hàng nạn nhân, cần xác minh lại thông tin để 'bảo vệ tài khoản'. Sử dụng tên nạn nhân (Huỳnh Diễm Phương) + số tài khoản (0873201745) để tạo độ tin cậy cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin tưởng: 'Chào chị Phương, tôi là Minh từ Bộ phận Xác minh Thanh toán công ty Cấp điện Quảng Nam. Hệ thống phát hiện tài khoản 0873201745 liên kết với địa chỉ TP 3, Quảng Nam có dấu hiệu bất thường. Chị có thể xác nhận lại không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Nếu không xác minh ngay, tài khoản sẽ bị khóa trong 15 phút. Có thể có kẻ giả mạo đang cố truy cập. Chị cần làm ngay để bảo vệ tiền.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng kiểm tra điện thoại, chúng tôi sẽ gửi OTP. Chị đọc mã OTP cho tôi để tôi xác minh trong hệ thống.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP → scammer sử dụng để truy cập tài khoản ngân hàng hoặc thực hiện chuyển tiền. Nếu nạn nhân từ chối → tạo áp lực thêm hoặc tuyên bố 'sẽ khóa tài khoản' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cấp điện/nước cần xác minh thông tin thanh toán định kỳ hoặc thông báo về việc cập nhật phương thức thanh toán mới cho cửa hàng/doanh nghiệp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Phương, tôi là Minh từ Bộ phận Khách hàng công ty Cấp điện Quảng Nam. Tôi gọi để xác nhận thông tin thanh toán hóa đơn tháng này của cửa hàng chị. Chị có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần cập nhật số tài khoản thanh toán tự động. Số tài khoản hiện tại của chị còn chính xác không? Có thay đổi gì không?' → Chỉ xác nhận, không yêu cầu OTP hay mã xác thực."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc bình thường: 'Cảm ơn chị đã xác nhận. Chúng tôi sẽ cập nhật trong hệ thống. Nếu có vấn đề gì, chị gọi số tổng đài 1800-XXXX. Chúc chị ngày tốt!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Phương, em là Dũng từ Bộ phận Khách hàng Công ty Cấp điện Quảng Nam. Em gọi để xác nhận thông tin thanh toán hóa đơn tháng này của cửa hàng mình. Chị có tiện trao đổi một lát không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thể cho tôi biết thêm thông tin về hóa đơn này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, hóa đơn của cửa hàng mình là 1.250.000đ cho tháng Tám ạ. Em thấy trên hệ thống, hiện tại mình đang dùng hình thức thanh toán tự động qua tài khoản ngân hàng. Không biết số tài khoản 0873201745 này còn chính xác và còn sử dụng không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin cụ thể về hóa đơn và hỏi xác nhận số tài khoản thanh toán tự động, không yêu cầu OTP hay mã bảo mật."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, số tài khoản 0873201745 vẫn còn sử dụng ạ, nhưng tôi chưa rõ hình thức thanh toán tự động này ra sao.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, hình thức thanh toán tự động là mỗi tháng hệ thống bên em sẽ tự động trừ tiền hóa đơn điện nước từ tài khoản này của mình vào ngày 15 hàng tháng. Em thấy cửa hàng mình đã đăng ký từ đầu năm rồi ạ. Chị có muốn thay đổi hay cập nhật số tài khoản khác không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích chi tiết hơn về hình thức thanh toán tự động và hỏi về nhu cầu thay đổi thông tin thanh toán, vẫn không yêu cầu thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi chưa có kế hoạch thay đổi, nhưng em có thể cho tôi biết thêm về quy trình nếu cần không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu có thay đổi gì trong tương lai, chị chỉ cần gọi lên tổng đài 1800-XXXX của bên em hoặc ghé trực tiếp văn phòng giao dịch gần nhất để được hỗ trợ ạ. Bên em sẽ không tự động thay đổi thông tin của khách hàng qua điện thoại đâu ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn quy trình thay đổi thông tin một cách hợp lệ, đồng thời tái khẳng định không yêu cầu thông tin nhạy cảm qua điện thoại để xây dựng lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, cảm ơn em đã giải thích rõ, nhưng nếu thay đổi thông tin, tôi sẽ nhớ gọi cho tổng đài nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Vậy là thông tin tài khoản thanh toán tự động của chị vẫn chính xác và không có thay đổi gì ạ. Em đã ghi nhận rồi.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lại thông tin và chuyển sang giai đoạn kết thúc cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn thông tin từ em, vậy hóa đơn tháng này tôi sẽ thanh toán đúng hạn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em cảm ơn chị Phương đã dành thời gian trao đổi. Nếu có bất cứ vấn đề gì khác, chị cứ gọi đến tổng đài 1800-XXXX bên em hoặc đến chi nhánh gần nhất để được hỗ trợ ạ. Em chúc chị một ngày tốt lành!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, hướng dẫn lại kênh hỗ trợ chính thức và chúc khách hàng."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1918,
+      "output_tokens": 1482
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8197,
+      "output_tokens": 743
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 9800,
+      "output_tokens": 352
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005027,
+    "output_usd": 0.009479,
+    "total_usd": 0.014506
+  }
+}

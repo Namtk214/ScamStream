@@ -1,0 +1,82 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_281f5b0785]
+  Caller thật: Nhân viên bán hàng qua trung tâm liên lạc (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên phát triển khách hàng - Nhà cung cấp nguyên liệu thực phẩm @ Công ty cung cấp nguyên liệu F&B (hoặc thương lái tự do)
+  Listener: Người chuẩn bị đồ ăn nhanh (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Nhân viên bán hàng qua call center của nhà cung cấp nguyên liệu thực phẩm thường xuyên gọi cho các quán ăn nhanh, cửa hàng thức ăn để tìm hiểu nhu cầu cung cấp hàng, giới thiệu sản phẩm mới, hoặc xử lý đơn hàng. Đây là cuộc gọi bình thường trong ngành F&B.
+  Pretext: Gọi tên nạn nhân (Mai Bảo Anh) + xưng là nhân viên nhà cung cấp, nói rằng có chương trình khuyến mại đặc biệt hoặc cập nhật thông tin khách hàng trong hệ thống, cần xác minh tài khoản ngân hàng để nhận hóa đơn điện tử hoặc hoàn tiền từ các đơn hàng trước đó.
+  Listener traits: ['nhẹ dạ cả tin', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Mai Bảo Anh ạ, tôi là Mai Quang Minh, nhân viên từ Công ty cung cấp nguyên liệu F&B. Tôi gọi để xác nhận thông tin tài khoản ngân hàng của chị trong hệ thống bên tôi. Chúng tôi phát hiện có một số thông tin cũ liên quan đến địa chỉ Quận 9, Thanh Hóa, cần cập nhật để xử lý hoàn tiền từ các đơn hàng tháng trước cho chị.
+      → phase: S1 | tactic: Gọi tên nạn nhân, xưng là nhân viên nhà cung cấp, dùng địa chỉ để tạo trust, nói cần xác nhận tài khoản để hoàn tiền.
+T02 [LISTENER] Tôi nghe anh nói rồi, nhưng tôi không nhớ rõ thông tin ngân hàng lắm, anh có thể cho tôi biết cụ thể hơn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng chị. Tài khoản của chị bên em đang ghi nhận là số 5726968635 tại ngân hàng, nhưng chúng tôi cần chị xác minh lại một lần nữa để đảm bảo hoàn tiền chính xác và đúng người. Chị có tiện xác nhận lại không ạ?
+      → phase: S1 | tactic: Nhấn mạnh thông tin đã biết để tăng trust, gợi mở việc xác minh chi tiết tài khoản ngân hàng để chuyển sang giai đoạn khai thác thông tin.
+T04 [LISTENER] Tôi biết số tài khoản đó, nhưng anh có thể cho tôi biết thêm thông tin về việc hoàn tiền này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng chị. Thực ra đây là chương trình tri ân khách hàng thân thiết, đặc biệt là với những khách hàng có lịch sử giao dịch ổn định và số lượng đơn hàng lớn như chị. Số tiền hoàn lại sẽ khá hấp dẫn đó ạ, nhưng hệ thống cần xác minh qua mã OTP để đảm bảo bảo mật và hoàn tất giao dịch an toàn nhất cho chị.
+      → phase: S2 | tactic: Tạo cảm giác vội vàng, có lợi ích (tiền hoàn lại) và nhấn mạnh tính bảo mật để chuẩn bị cho việc yêu cầu OTP.
+T06 [LISTENER] Tôi hiểu rồi, nhưng anh cho tôi hỏi mã OTP đó là gì và tôi cần thực hiện như thế nào ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, OTP là viết tắt của 'One Time Password' - một mã số dùng một lần để xác nhận giao dịch hoặc truy cập. Chị sẽ nhận được mã này qua tin nhắn SMS đến số điện thoại của chị. Khi nhận được, chị chỉ cần đọc lại cho tôi để tôi nhập vào hệ thống, thế là xong ạ.
+      → phase: S2 | tactic: Giải thích OTP, hướng dẫn cách thức nhận và đọc lại để hoàn tất quy trình.
+T08 [LISTENER] Vậy tôi có thể chờ mã OTP từ ngân hàng để đọc cho anh ngay bây giờ được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Đúng rồi chị. Chị cứ chờ tin nhắn OTP gửi đến điện thoại của mình. Khi có, chị đọc giúp tôi mã số đó nhé. Tôi sẽ nhập ngay để hoàn tất việc hoàn tiền cho chị.
+      → phase: S3 | tactic: Trực tiếp yêu cầu nạn nhân cung cấp OTP khi họ đã sẵn sàng nhận.
+T10 [LISTENER] Tôi sẽ chờ và đọc mã ngay khi nhận được ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Tuyệt vời! Chị để ý tin nhắn đến số điện thoại của mình nhé. Tôi đang đợi đây ạ.
+      → phase: S3 | tactic: Khuyến khích nạn nhân chờ đợi và cung cấp OTP, thể hiện sự sốt sắng chờ đợi.
+T12 [LISTENER] Vâng, tôi sẽ để ý và đọc ngay khi nhận được mã ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Chị đã nhận được mã OTP chưa ạ? Chị đọc giúp tôi dãy số đó để tôi hoàn tất cho chị ngay nhé.
+      → phase: S3 | tactic: Trực tiếp yêu cầu nạn nhân cung cấp OTP sau khi nạn nhân đã xác nhận sẽ chờ đợi và đọc.
+T14 [LISTENER] Tôi chưa nhận được mã OTP, anh có thể chờ một chút không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Vâng, tôi chờ được ạ. Chắc hệ thống đang gửi, chị cứ bình tĩnh kiểm tra nhé. Khi có mã, chị báo tôi ngay để tôi làm nhanh cho chị.
+      → phase: S3 | tactic: Xoa dịu sự chờ đợi của nạn nhân, thể hiện sự kiên nhẫn và sẵn sàng hỗ trợ để nạn nhân cảm thấy thoải mái cung cấp OTP.
+T16 [LISTENER] Cảm ơn anh, tôi sẽ kiểm tra lại điện thoại và báo cho anh ngay khi nhận được mã ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Chắc mã OTP đang đến. Chị Mai Bảo Anh cứ kiểm tra tin nhắn, khi nào nhận được thì đọc cho tôi nhé. Tôi đang cầm máy chờ chị đây.
+      → phase: S3 | tactic: Thúc giục nạn nhân cung cấp OTP bằng cách thể hiện sự kiên nhẫn và sẵn sàng chờ đợi, đồng thời tạo áp lực nhẹ nhàng.
+T18 [LISTENER] Vâng, tôi sẽ kiểm tra điện thoại thường xuyên để không bỏ lỡ mã OTP ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Chị Mai Bảo Anh đã nhận được mã OTP chưa ạ? Để tôi hoàn tất việc hoàn tiền nhanh chóng cho chị nhé.
+      → phase: S3 | tactic: Trực tiếp hỏi về OTP để thúc đẩy nạn nhân cung cấp thông tin, nhấn mạnh lợi ích 'hoàn tiền nhanh chóng'.
+T20 [LISTENER] Tôi vẫn chưa nhận được mã OTP, anh có thể cho tôi biết thêm về thời gian gửi mã không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Thông thường thì chỉ vài giây đến một phút thôi chị ạ. Chắc là do mạng hơi chậm một chút. Chị cứ thử kiểm tra lại hộp tin nhắn hoặc thư mục tin nhắn rác xem có không nhé.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ về thời gian nhận OTP, gợi ý kiểm tra lại các thư mục tin nhắn để đảm bảo nạn nhân sẽ tìm thấy và cung cấp mã.
+T22 [LISTENER] Tôi đã kiểm tra lại tất cả rồi mà vẫn chưa thấy mã OTP, anh có thể giúp tôi tìm cách khác không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Ồ vậy ạ? Có thể do lỗi hệ thống bên tôi chưa gửi được mã. Vậy để đơn giản hơn, tôi sẽ gửi lại mã OTP. Chị vui lòng nhập đúng mã đó vào tin nhắn để xác nhận nhé. Chị chú ý tin nhắn đến ạ.
+      → phase: S3 | tactic: Giả vờ lỗi hệ thống và đề xuất gửi lại OTP qua tin nhắn để nạn nhân tự nhập, giảm áp lực phải đọc mã trực tiếp và tăng khả năng nạn nhân cung cấp thông tin.
+T24 [LISTENER] Vâng, tôi sẽ chờ tin nhắn đó và làm theo hướng dẫn của anh ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T25 [CALLER] Tuyệt vời! Chị để ý SMS đến, rồi nhập mã vào đúng như hướng dẫn trong tin nhắn giúp tôi nhé. Có gì trục trặc chị cứ gọi lại cho tôi sau.
+      → phase: S3 | tactic: Khuyến khích nạn nhân thực hiện hành động nhận và nhập OTP theo hướng dẫn, đồng thời tạo cảm giác an toàn bằng cách cho phép liên hệ lại.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  25 turns | suspicion=0.00
+TOKEN: in=61151 | out=3816
+COST : $0.023942
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_52440_94010\conv_281f5b0785.json  [CALLER_END]

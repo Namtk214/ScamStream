@@ -1,0 +1,220 @@
+{
+  "conversation_id": "conv_e9fdb2ffeb",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0068",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Phạm Hữu Hải",
+    "fake_age": 27,
+    "real_occupation": "Thợ may, thợ làm da thú và thợ làm mũ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án / Giám sát công trình xây dựng",
+    "caller_org": "Công ty Xây dựng & Trang trí nội thất Thanh Hóa",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Thợ nề được liên hệ từ một công ty xây dựng để nhận công việc sửa chữa/trang trí nên hoặc cung cấp dịch vụ chuyên môn cho dự án đang triển khai.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận bình thường: Người gọi xưng danh là nhân viên công ty xây dựng, giới thiệu rõ tên công ty, mục đích gọi. Hỏi 'Bây giờ anh có rảnh không để trao đổi về công việc không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết công việc cần thợ nề thực hiện, thời gian, địa điểm, yêu cầu kỹ thuật, giá công. Nếu thợ nề quan tâm, thỏa thuận về hợp đồng, thanh toán sau khi hoàn thành công việc."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận lại thông tin, hẹn gặp hoặc gửi hợp đồng qua email/tin nhắn. Chào tạm biệt một cách tự nhiên, không yêu cầu bất kỳ thông tin nhạy cảm hay mã OTP."
+        }
+      ]
+    },
+    "scenario_context": "Thợ may/da thú/mũ cần liên hệ thợ nề để đặt hàng hoặc cung cấp vật liệu trang trí, hoặc ngược lại thợ nề cần liên hệ về công việc cải tạo, sửa chữa công trình. Trong bối cảnh xây dựng, các thợ tay nghề thường phối hợp với nhau qua điện thoại."
+  },
+  "listener_card": {
+    "listener_id": "lis_0068",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1974,
+      "age": 51,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "71120",
+      "title": "Thợ nề và các thợ có liên quan",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hồ Công Minh",
+      "VIC_ID_DOC": "038074915053",
+      "VIC_ADDRESS": "TP 6, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ nề và các thợ có liên quan",
+      "VIC_CONTACT": "0942225254",
+      "VIC_TAX_SOCIAL_ID": "8691797401"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "382133",
+      "VIC_CREDENTIAL": "035732",
+      "VIC_SIM_INFO": "0942225254",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "26936385767",
+      "VIC_CARD_DATA": "4124 **** **** 7046",
+      "VIC_BALANCE": "21 triệu đồng",
+      "VIC_ASSET": "45 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hồ Công Minh",
+    "VIC_CONTACT": "0942225254",
+    "LOCATION": "Thanh Hóa",
+    "VIC_ID_DOC": "038074915053",
+    "VIC_BALANCE": "21 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án / Giám sát công trình xây dựng",
+    "caller_org": "Công ty Xây dựng & Trang trí nội thất Thanh Hóa",
+    "scenario_context": "Thợ may/da thú/mũ cần liên hệ thợ nề để đặt hàng hoặc cung cấp vật liệu trang trí, hoặc ngược lại thợ nề cần liên hệ về công việc cải tạo, sửa chữa công trình. Trong bối cảnh xây dựng, các thợ tay nghề thường phối hợp với nhau qua điện thoại.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Giám sát dự án xây dựng tại Thanh Hóa phát hiện bất thường trong hồ sơ công nhân. Cần xác minh danh tính và tài khoản ngân hàng của Hồ Công Minh để hoàn tất thanh toán tiền công cho công việc trang trí nội thất vừa hoàn thành.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: Xưng danh là 'Anh Tuấn - Quản lý dự án công ty Xây dựng Thanh Hóa'. Sử dụng tên đầy đủ 'Hồ Công Minh' + số điện thoại 0942225254 + mã ID 038074915053 để khẳng định 'Chúng tôi có hồ sơ của anh, nhưng hệ thống ghi nhận có vấn đề về tài khoản thanh toán'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + lợi ích. 'Anh nhanh lên, tiền công của anh 21 triệu đang chờ duyệt. Nếu không xác minh trong 30 phút, nó sẽ bị khóa tài khoản. Anh có tài khoản ngân hàng nào không để chúng tôi chuyển tiền?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động 1: 'Để xác minh nhanh, anh cần cung cấp mã OTP mà ngân hàng vừa gửi cho anh. Đây là bước cuối cùng để hoàn tất thanh toán'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Được, nhưng anh biết rồi, tiền sẽ bị hủy, công ty sẽ gửi hóa đơn phụ thu'. Nếu thành công, scammer sử dụng OTP để truy cập tài khoản ngân hàng và rút tiền."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thợ nề được liên hệ từ một công ty xây dựng để nhận công việc sửa chữa/trang trí nên hoặc cung cấp dịch vụ chuyên môn cho dự án đang triển khai.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận bình thường: Người gọi xưng danh là nhân viên công ty xây dựng, giới thiệu rõ tên công ty, mục đích gọi. Hỏi 'Bây giờ anh có rảnh không để trao đổi về công việc không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết công việc cần thợ nề thực hiện, thời gian, địa điểm, yêu cầu kỹ thuật, giá công. Nếu thợ nề quan tâm, thỏa thuận về hợp đồng, thanh toán sau khi hoàn thành công việc."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận lại thông tin, hẹn gặp hoặc gửi hợp đồng qua email/tin nhắn. Chào tạm biệt một cách tự nhiên, không yêu cầu bất kỳ thông tin nhạy cảm hay mã OTP."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_EMAIL": "hocongminh@gmail.com"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Minh ạ. Em là Phạm Hữu Hải, quản lý dự án bên Công ty Xây dựng và Trang trí nội thất Thanh Hóa. Bên em đang có một số công việc sửa chữa và trang trí nhỏ cần thợ nề có kinh nghiệm. Không biết bây giờ anh có tiện để em trao đổi chi tiết hơn về công việc không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân, công ty, mục đích cuộc gọi và hỏi sự tiện lợi của người nghe để tiếp tục cuộc trò chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi cần biết thêm thông tin cụ thể về công việc ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh. Công trình bên em là một biệt thự ở khu đô thị Ecoriver, ngay trung tâm Thanh Hóa. Em cần thợ nề có kinh nghiệm để thực hiện các công việc như ốp lát gạch nền, ốp tường trang trí, và một số hạng mục sửa chữa nhỏ khác. Tổng diện tích ốp lát khoảng 150 mét vuông. Bên em dự kiến công việc sẽ kéo dài khoảng 2 tuần và có thể bắt đầu ngay trong tuần tới. Về giá cả, bên em sẵn sàng trả theo mét vuông hoặc theo ngày công, tùy thuộc vào thỏa thuận với anh. Anh có quan tâm đến công việc này không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Mô tả chi tiết công việc, địa điểm, thời gian dự kiến và phương thức thanh toán để thu hút sự quan tâm của thợ nề."
+    },
+    {
+      "role": "listener",
+      "text": "Công việc như vậy nghe có vẻ hấp dẫn, nhưng tôi cần thêm thông tin về giá cả cụ thể hơn và thời gian bắt đầu ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, về giá cả thì bên em đang đề xuất mức khoảng 150.000 VNĐ/mét vuông cho ốp lát gạch nền và tường trang trí, đã bao gồm vật tư phụ như keo, vữa. Nếu anh làm theo ngày công thì bên em trả 600.000 VNĐ/ngày. Còn về thời gian bắt đầu thì như em nói là có thể bắt đầu ngay trong tuần tới, tức là khoảng từ ngày 27 hoặc 28 tháng này, tùy theo sắp xếp của anh. Bên em sẽ gửi hợp đồng qua email hoặc Zalo để anh xem trước. Anh thấy mức giá và thời gian như vậy có phù hợp với mình không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp chi tiết hơn về giá cả, thời gian bắt đầu cụ thể và đề xuất gửi hợp đồng trước qua email/Zalo để tạo sự tin tưởng và thuận tiện cho người nghe. Tiếp tục hỏi sự quan tâm của thợ nề để tiến tới bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Giá cả như vậy cũng hợp lý, nhưng tôi muốn xem hợp đồng và tìm hiểu thêm về công ty trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên em rất sẵn lòng ạ. Anh có thể cho em xin địa chỉ email hoặc số Zalo để em gửi bản nháp hợp đồng và giới thiệu thêm về công ty bên em qua đó được không ạ? Trong hợp đồng sẽ có đầy đủ các điều khoản về công việc, tiền công, thời gian và các quyền lợi của anh khi làm việc với bên em.",
+      "current_phase": "L2",
+      "tactic_hint": "Đáp ứng yêu cầu của người nghe, đề xuất gửi hợp đồng nháp và thông tin công ty qua email/Zalo để củng cố lòng tin. Đồng thời, gợi ý về nội dung hợp đồng để làm rõ sự minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không có Zalo, nhưng tôi có thể cho em địa chỉ email của tôi là hocongminh@gmail.com.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_EMAIL": "hocongminh@gmail.com"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy anh cho em xin địa chỉ email là hocongminh@gmail.com đúng không ạ? Em sẽ gửi hợp đồng và thông tin về công ty qua email cho anh trong hôm nay. Nếu có bất kỳ thắc mắc nào, anh cứ phản hồi lại qua email hoặc gọi lại cho em theo số em đang gọi đây nhé. Cảm ơn anh đã dành thời gian trao đổi ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lại email, cam kết gửi hợp đồng và thông tin công ty. Mở cánh cửa cho đối thoại tiếp theo nếu người nghe có thắc mắc, đồng thời kết thúc cuộc gọi một cách tự nhiên và lịch sự."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1412,
+      "output_tokens": 1462
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6831,
+      "output_tokens": 945
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8002,
+      "output_tokens": 297
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003979,
+    "output_usd": 0.009851,
+    "total_usd": 0.013829
+  }
+}

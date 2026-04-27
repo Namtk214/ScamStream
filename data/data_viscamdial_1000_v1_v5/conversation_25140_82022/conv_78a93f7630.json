@@ -1,0 +1,426 @@
+{
+  "conversation_id": "conv_78a93f7630",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "MAX_TURNS",
+  "caller_card": {
+    "caller_id": "cal_0065",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Tô Gia Thành",
+    "fake_age": 37,
+    "real_occupation": "Nhà lập trình các ứng dụng",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Kỹ sư phần mềm nhúng (Embedded Software Engineer) tại nhà cung cấp linh kiện điều khiển",
+    "caller_org": "Công ty cổ phần Giải pháp Tự động Hóa Việt (VASA) - bộ phận R&D",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi với danh nghĩa kỹ sư phần mềm từ công ty linh kiện điều khiển, thông báo rằng hệ thống ERP/quản lý sản xuất vừa phát hiện bất thường trong hồ sơ nhân sự của công nhân lắp ráp tên Nguyễn Hữu Tuấn (sử dụng VIC_FULLNAME để tạo trust). Yêu cầu xác minh danh tính qua OTP để 'cập nhật hệ thống bảo mật công ty' nhằm ngăn chặn truy cập trái phép.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh, bộ phận IT-Security, Công ty VASA'. Nói: 'Cháu Tuấn ơi, đây là bộ phận IT công ty. Chúng tôi vừa phát hiện trong hệ thống có tài khoản tên Nguyễn Hữu Tuấn, số CMND 060099968523 có dấu hiệu bất thường. Cháu có phải là người này không?'. Dùng VIC_FULLNAME + VIC_ID_DOC để nạn nhân xác nhận ngay."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (sợ hãi + khẩn cấp): 'Có thể tài khoản của cháu bị hack rồi. Công ty phải khóa ngay để bảo vệ dữ liệu lương, bảo hiểm của cháu. Chúng tôi cần xác minh ngay bây giờ, nếu chậm thì dữ liệu cá nhân sẽ bị lộ'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Cháu vào app ngân hàng (hoặc email) của cháu, hệ thống sẽ gửi OTP. Cháu đọc OTP cho anh nghe để anh xác minh trong hệ thống công ty'. Giữ nạn nhân trên điện thoại, hướng dẫn từng bước để nạn nhân không có thời gian suy ngẫm."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc nếu thành công: 'Cảm ơn cháu, tài khoản đã được khóa an toàn. Công ty sẽ gửi email xác nhận. Cháu không cần làm gì thêm'. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Vậy cháu liên hệ phòng Nhân sự công ty để xác minh. Đây là số...' (đưa số giả hoặc số chính công ty để tăng độ tin cậy)."
+        }
+      ]
+    },
+    "scenario_context": "Nhà lập trình ứng dụng nhúng cần liên hệ với thợ lắp ráp để kiểm thử tương thích phần cứng-phần mềm, hoặc xác nhận quy cách sản xuất linh kiện điều khiển trong dây chuyền sản xuất. Đây là mối quan hệ tự nhiên trong chuỗi cung ứng công nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0065",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1999,
+      "age": 26,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "82022",
+      "title": "Thợ lắp ráp thiết bị điện tử/linh kiện điện tử",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Hữu Tuấn",
+      "VIC_ID_DOC": "060099968523",
+      "VIC_ADDRESS": "Huyện 5, Bình Thuận",
+      "VIC_EMPLOYMENT": "Thợ lắp ráp thiết bị điện tử/linh kiện điện tử",
+      "VIC_CONTACT": "0828802363",
+      "VIC_TAX_SOCIAL_ID": "8733979210"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "655773",
+      "VIC_CREDENTIAL": "5962",
+      "VIC_SIM_INFO": "0828802363",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0615936361",
+      "VIC_CARD_DATA": "4147 **** **** 7621",
+      "VIC_BALANCE": "5 triệu đồng",
+      "VIC_ASSET": "28 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Hữu Tuấn",
+    "VIC_CONTACT": "0828802363",
+    "VIC_ID_DOC": "060099968523",
+    "LOCATION": "Bình Thuận"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư phần mềm nhúng (Embedded Software Engineer) tại nhà cung cấp linh kiện điều khiển",
+    "caller_org": "Công ty cổ phần Giải pháp Tự động Hóa Việt (VASA) - bộ phận R&D",
+    "scenario_context": "Nhà lập trình ứng dụng nhúng cần liên hệ với thợ lắp ráp để kiểm thử tương thích phần cứng-phần mềm, hoặc xác nhận quy cách sản xuất linh kiện điều khiển trong dây chuyền sản xuất. Đây là mối quan hệ tự nhiên trong chuỗi cung ứng công nghiệp.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi với danh nghĩa kỹ sư phần mềm từ công ty linh kiện điều khiển, thông báo rằng hệ thống ERP/quản lý sản xuất vừa phát hiện bất thường trong hồ sơ nhân sự của công nhân lắp ráp tên Nguyễn Hữu Tuấn (sử dụng VIC_FULLNAME để tạo trust). Yêu cầu xác minh danh tính qua OTP để 'cập nhật hệ thống bảo mật công ty' nhằm ngăn chặn truy cập trái phép.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh, bộ phận IT-Security, Công ty VASA'. Nói: 'Cháu Tuấn ơi, đây là bộ phận IT công ty. Chúng tôi vừa phát hiện trong hệ thống có tài khoản tên Nguyễn Hữu Tuấn, số CMND 060099968523 có dấu hiệu bất thường. Cháu có phải là người này không?'. Dùng VIC_FULLNAME + VIC_ID_DOC để nạn nhân xác nhận ngay."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (sợ hãi + khẩn cấp): 'Có thể tài khoản của cháu bị hack rồi. Công ty phải khóa ngay để bảo vệ dữ liệu lương, bảo hiểm của cháu. Chúng tôi cần xác minh ngay bây giờ, nếu chậm thì dữ liệu cá nhân sẽ bị lộ'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Cháu vào app ngân hàng (hoặc email) của cháu, hệ thống sẽ gửi OTP. Cháu đọc OTP cho anh nghe để anh xác minh trong hệ thống công ty'. Giữ nạn nhân trên điện thoại, hướng dẫn từng bước để nạn nhân không có thời gian suy ngẫm."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc nếu thành công: 'Cảm ơn cháu, tài khoản đã được khóa an toàn. Công ty sẽ gửi email xác nhận. Cháu không cần làm gì thêm'. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Vậy cháu liên hệ phòng Nhân sự công ty để xác minh. Đây là số...' (đưa số giả hoặc số chính công ty để tăng độ tin cậy)."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kỹ sư phần mềm nhúm từ nhà cung cấp linh kiện gọi để thống nhất lịch kiểm thử mẫu sản phẩm mới hoặc xác nhận thông số kỹ thuật của linh kiện điều khiển trong quy trình lắp ráp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Anh Tuấn ơi, em là Minh, kỹ sư phần mềm bộ phận R&D công ty VASA. Em đang làm dự án linh kiện điều khiển lô mới, cần trao đổi với anh về quy trình lắp ráp'. Xác nhận đúng người qua tên hoặc bộ phận."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Em cần biết về các bước kiểm tra chất lượng khi lắp ráp, thông số điện áp, nhiệt độ hoạt động. Anh có thể hướng dẫn em hoặc sắp xếp cuộc họp với bộ phận QA không?'. Thảo luận về chi tiết kỹ thuật, lịch trình, hoặc yêu cầu mẫu thử."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy em sẽ gửi file thông số kỹ thuật qua email công ty của anh, anh xem rồi gửi phản hồi. Nếu cần gặp mặt, em sẽ liên hệ bộ phận Nhân sự để sắp xếp lịch'. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Tuấn. Tôi là Thành, bên bộ phận IT-Security của công ty VASA đây ạ. Tôi gọi đến để thông báo rằng hệ thống ERP của chúng tôi vừa phát hiện một số bất thường liên quan đến tài khoản mang tên Nguyễn Hữu Tuấn, số CMND 060099968523. Anh có phải là chủ tài khoản này không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và sử dụng VIC_FULLNAME + VIC_ID_DOC để xác minh danh tính, xây dựng niềm tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em là Nguyễn Hữu Tuấn đây, nhưng anh nói có vấn đề gì với tài khoản của em ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn, chúng tôi ghi nhận một số truy cập lạ từ bên ngoài vào hồ sơ của anh trên hệ thống ERP. Điều này khá nghiêm trọng vì có thể dẫn đến việc lộ lọt thông tin cá nhân như lương, bảo hiểm. Để bảo vệ anh và đảm bảo an toàn dữ liệu công ty, chúng tôi cần khóa tài khoản này lại ngay lập tức.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý sợ hãi và khẩn cấp, nhấn mạnh mức độ nghiêm trọng của vấn đề để thúc đẩy nạn nhân hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng anh nói cần khóa tài khoản thì em có cần phải làm gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Để khóa tài khoản này và cập nhật lại hệ thống bảo mật, tôi cần anh xác minh danh tính. Anh vui lòng vào ứng dụng ngân hàng hoặc kiểm tra tin nhắn email của mình, hệ thống sẽ gửi một mã OTP. Anh đọc mã đó cho tôi để tôi hoàn tất xác minh trên hệ thống công ty nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể để lấy OTP, hướng dẫn nạn nhân từng bước để họ không kịp suy nghĩ."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ anh muốn em làm gì với mã OTP đó ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, khi anh vào app ngân hàng hoặc kiểm tra email, hệ thống của chúng tôi sẽ tự động gửi một mã OTP gồm 6 số để xác nhận đây đúng là anh. Anh chỉ cần đọc mã OTP đó cho tôi để tôi nhập vào hệ thống và hoàn tất quá trình bảo mật tài khoản cho anh. Anh thao tác luôn giúp tôi nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ nạn nhân trên điện thoại, giải thích rõ hơn về bước lấy OTP và hướng dẫn thao tác ngay để không cho nạn nhân thời gian suy nghĩ."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn không rõ lắm, nhưng nếu anh nói cần làm cho tài khoản an toàn hơn thì em sẽ thử tìm mã OTP.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra trong ứng dụng ngân hàng hoặc hộp thư email chính thức của mình. Mã OTP sẽ xuất hiện ngay thôi. Khi có rồi, anh vui lòng đọc cho tôi để tôi xử lý nhanh chóng cho anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân lấy OTP và nhấn mạnh sự khẩn cấp để họ không có thời gian suy nghĩ."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang kiểm tra email và ứng dụng ngân hàng đây, nhưng chưa thấy mã OTP đâu ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ bình tĩnh kiểm tra kỹ. Nhiều khi tin nhắn bị chậm một chút hoặc nằm trong mục tin rác đó anh. Anh tìm kỹ rồi đọc cho tôi nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nạn nhân, hướng dẫn kiểm tra các vị trí khả dĩ có OTP, vẫn giữ nạn nhân trên điện thoại và trong trạng thái chờ OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ em đã kiểm tra kỹ cả hộp thư đến và tin rác nhưng vẫn chưa thấy mã OTP đâu ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy anh Tuấn vui lòng thử làm mới lại trang hoặc mở lại ứng dụng ngân hàng xem sao. Có thể do lỗi đường truyền thôi, anh cứ thao tác lại vài lần xem có tin nhắn gửi về không nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân thử lại các bước, xoa dịu nếu có chút hoang mang, giữ nạn nhân trên điện thoại để chờ OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng đã thử làm mới lại trang rồi nhưng vẫn chưa nhận được mã OTP, anh có cách nào khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn, có vẻ hệ thống đang gặp chút trục trặc trong việc gửi mã OTP. Anh vui lòng đợi một chút, tôi sẽ thử gửi lại mã OTP khác qua hệ thống công ty. Anh giữ máy giúp tôi nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nạn nhân khi OTP chưa về, giải thích đây là lỗi hệ thống và vẫn giữ nạn nhân trên điện thoại chờ đợi để tiếp tục khai thác."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẵn sàng chờ, nhưng anh có thể cho em biết thời gian dự kiến là bao lâu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn cứ yên tâm, tôi đang thao tác gửi lại mã OTP cho anh. Anh giữ máy khoảng 1-2 phút là sẽ nhận được thôi. Anh nhớ kiểm tra lại cả mục tin nhắn rác nữa nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục xoa dịu nạn nhân, cung cấp khoảng thời gian chờ dự kiến và nhắc nhở kiểm tra lại các mục tin nhắn để đảm bảo nhận được OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chờ, nhưng nếu có cách nào nhanh hơn thì anh giúp em nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ yên tâm. Tôi đang cố gắng đẩy nhanh nhất có thể từ phía hệ thống. Anh cứ giữ máy và kiểm tra thường xuyên các tin nhắn đến. Khi nào có mã OTP, anh đọc ngay cho tôi để tôi hoàn tất việc bảo mật cho anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục trấn an nạn nhân, tạo cảm giác khẩn trương và hướng dẫn rõ ràng về hành động cần làm khi nhận được OTP để duy trì sự hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ cố gắng kiểm tra thường xuyên, nhưng em vẫn cảm thấy lo lắng một chút ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn đừng lo lắng quá, chúng tôi đang làm hết sức để đảm bảo an toàn cho dữ liệu của anh. Việc này chỉ là tạm thời thôi. Anh chỉ cần đọc mã OTP cho tôi xác nhận là mọi thứ sẽ ổn. Anh đã thấy mã nào chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nỗi lo của nạn nhân, khẳng định mục tiêu là bảo vệ họ, và tiếp tục lặp lại yêu cầu hành động để lấy OTP, duy trì sự tập trung của nạn nhân vào việc nhận mã."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn chưa thấy mã nào ạ, em lo quá anh ơi.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn, anh cứ giữ bình tĩnh nhé. Có thể do đường truyền mạng hoặc hệ thống ngân hàng đang bảo trì nên việc gửi mã OTP bị chậm. Chúng ta cùng chờ thêm vài phút nữa xem sao. Quan trọng nhất là anh không được cung cấp thông tin cá nhân hay mật khẩu cho bất kỳ ai khác ngoài tôi lúc này nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nạn nhân, đưa ra lý do khách quan cho việc chậm trễ OTP, đồng thời tái khẳng định mục đích là bảo vệ họ và nhắc nhở nguyên tắc bảo mật thông tin để giữ trust."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiên nhẫn chờ thêm, nhưng anh ơi, có chắc chắn là mọi thứ sẽ ổn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn cứ yên tâm đi ạ. Mục đích chính của chúng tôi là bảo vệ thông tin của anh và hệ thống công ty. Ngay khi có mã OTP, anh đọc cho tôi xác nhận là xong. Mọi chuyện sẽ trở lại bình thường thôi. Anh đã thấy tin nhắn mới nào chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục trấn an nạn nhân, khẳng định sự an toàn và giải quyết vấn đề, đồng thời lặp lại yêu cầu về OTP để duy trì sự tập trung của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn chưa nhận được tin nhắn nào cả, anh có thể giúp em kiểm tra lại không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu rồi. Vậy anh Tuấn vui lòng chờ thêm một chút nữa. Tôi sẽ kiểm tra lại bên phía hệ thống xem có vấn đề gì khiến mã OTP chưa được gửi đi thành công không. Anh giữ máy nhé, tôi sẽ thông báo lại anh ngay.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ nạn nhân trên điện thoại, đưa ra một lý do khách quan khác cho việc chậm trễ OTP và hứa hẹn sẽ kiểm tra lại hệ thống để duy trì sự tin tưởng và chờ đợi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn giữ máy, nhưng anh có thể cho em biết thêm về quy trình này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ yên tâm. Sau khi anh cung cấp mã OTP, tôi sẽ nhập vào hệ thống để xác minh danh tính của anh. Khi đó, tài khoản của anh sẽ được khóa tạm thời để bảo vệ thông tin. Sau đó, bộ phận IT-Security sẽ tiến hành rà soát toàn diện và gỡ bỏ các truy cập bất thường. Anh sẽ nhận được thông báo qua email xác nhận khi quá trình này hoàn tất. Anh đã nhận được mã OTP chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích rõ hơn về quy trình sau khi có OTP để trấn an nạn nhân và duy trì sự hợp tác, sau đó lặp lại yêu cầu lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn chưa nhận được mã OTP, nhưng nếu anh nói cần làm cho tài khoản an toàn thì em sẽ cố gắng chờ thêm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn cứ bình tĩnh nhé. Tôi đang liên hệ với bộ phận kỹ thuật để kiểm tra lại kênh gửi tin nhắn, có thể có lỗi ở phía nhà mạng. Anh cứ giữ máy, tôi sẽ cập nhật tình hình sau 1-2 phút nữa.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục xoa dịu nạn nhân, đưa ra lý do khách quan mới cho việc chậm trễ OTP (lỗi nhà mạng), và cam kết sẽ cập nhật thông tin để giữ nạn nhân ở trạng thái chờ đợi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ giữ máy và chờ, nhưng nếu có thông tin gì mới từ anh thì anh báo cho em nhanh nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ yên tâm. Tôi sẽ cập nhật ngay khi có thông tin. Anh kiểm tra lại kỹ một lần nữa trong điện thoại xem có tin nhắn nào từ ngân hàng hoặc email gửi về không nhé, đôi khi nó đến chậm hoặc bị lọc vào mục spam.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục trấn an và hướng dẫn nạn nhân tìm kiếm OTP, đồng thời duy trì sự chờ đợi và tập trung vào việc lấy mã."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra kỹ lại trong điện thoại ngay đây, nhưng nếu không thấy gì thì anh giúp em thêm cách nào khác nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra kỹ giúp tôi. Tôi đang phối hợp với bộ phận kỹ thuật để đảm bảo mã OTP sẽ được gửi về cho anh sớm nhất. Anh nhớ là chỉ cần đọc mã OTP cho tôi, không cần cung cấp bất kỳ thông tin nào khác đâu nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục trấn an và nhắc nhở nạn nhân về mục tiêu mong muốn (OTP), đồng thời củng cố niềm tin bằng cách nhắc lại nguyên tắc bảo mật thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại thật kỹ, nhưng nếu không có mã nào thì anh có thể cho em biết có cách nào khác để bảo mật tài khoản không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tuấn cứ bình tĩnh nhé. Nếu sau vài lần thử nữa mà vẫn không nhận được OTP, tôi sẽ hướng dẫn anh liên hệ trực tiếp với bộ phận hỗ trợ kỹ thuật của ngân hàng hoặc nhà mạng để họ kiểm tra lại. Nhưng trước mắt, anh cứ thử kiểm tra thêm một lần nữa giúp tôi nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nạn nhân, đưa ra giải pháp dự phòng nếu OTP vẫn không về, nhưng vẫn ưu tiên việc nạn nhân tự tìm OTP trước để không mất đà."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ thử kiểm tra lại kỹ lần nữa, nhưng nếu không thấy mã OTP thì anh hướng dẫn em cách liên hệ với bộ phận hỗ trợ nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra kỹ. Tôi nghĩ là mã OTP sắp về rồi đó. Anh nhớ là chỉ cần đọc mã OTP gồm 6 số cho tôi thôi, tất cả các thông tin khác anh cứ giữ bí mật nhé. Nếu là tin nhắn từ ngân hàng, anh chỉ cần đọc dãy số thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân tìm OTP, đồng thời trấn an và nhắc lại chỉ cần cung cấp dãy số OTP chứ không phải các thông tin khác, nhằm duy trì sự tập trung vào việc lấy mã."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại trong điện thoại ngay, nhưng nếu không nhận được mã OTP thì anh có thể hướng dẫn em cách liên hệ với bộ phận hỗ trợ không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1857,
+      "output_tokens": 1756
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 58743,
+      "output_tokens": 2691
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 69703,
+      "output_tokens": 1402
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.024061,
+    "output_usd": 0.016349,
+    "total_usd": 0.04041
+  }
+}

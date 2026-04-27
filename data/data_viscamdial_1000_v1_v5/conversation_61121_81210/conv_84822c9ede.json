@@ -1,0 +1,339 @@
+{
+  "conversation_id": "conv_84822c9ede",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0008",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Huỳnh Diễm Vy",
+    "fake_age": 44,
+    "real_occupation": "Lao động trồng, thu hoạch sản phẩm cây cà phê",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh/Thương lái cà phê - Tìm kiếm nhà cung cấp thiết bị sấy/xử lý",
+    "caller_org": "cá nhân - thương lái cà phê tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giả vờ là nhân viên kinh doanh từ công ty thiết bị xử lý cà phê, nói rằng Tạ Tiến Vinh (VIC_FULLNAME) đã đăng ký nhận tư vấn/báo giá thiết bị, hoặc đã trúng thưởng khuyến mãi đặc biệt. Sử dụng số ID và thông tin cá nhân để tạo vẻ 'chúng tôi đã xác minh hồ sơ của bạn'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: 'Chào anh Tiến Vinh, tôi là Minh từ công ty Thiết bị Công nghiệp Sông Sài Gòn. Chúng tôi có hồ sơ của anh từ đăng ký tư vấn thiết bị sấy cà phê. Xác nhận với tôi: anh có số ID 075201203243 không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo cảm giác ưu tiên + khẩn cấp: 'Anh may mắn lắm, hôm nay là ngày cuối cùng của chương trình khuyến mãi 40% cho khách hàng đã đăng ký. Sau 1 tiếng nữa hết hạn. Để anh được hưởng, tôi cần xác minh tài khoản ngay bây giờ.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Lừa lấy OTP: 'Anh vui lòng kiểm tra tin nhắn trên điện thoại. Chúng tôi vừa gửi mã OTP xác minh. Anh đọc mã đó cho tôi nghe để hoàn tất đơn đăng ký nhận khuyến mãi, được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân từ chối hoặc nghi ngờ, scammer sẽ nói 'Không sao, anh suy nghĩ lại, nhưng phải trong 1 tiếng. Tôi sẽ gọi lại' rồi cắt máy. Nếu thành công lấy OTP, scammer sẽ dùng nó để truy cập tài khoản ngân hàng hoặc ứng dụng thanh toán."
+        }
+      ]
+    },
+    "scenario_context": "Người trồng/thu hoạch cà phê cần thiết bị xử lý, sấy, tách vỏ cà phê. Thợ vận hành thiết bị kim loại là người có kỹ năng, kinh nghiệm sửa chữa hoặc tư vấn thiết bị công nghiệp. Đây là mối quan hệ tự nhiên trong chuỗi cung ứng nông nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0008",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81210",
+      "title": "Thợ vận hành thiết bị xử lý kim loại",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Tiến Vinh",
+      "VIC_ID_DOC": "075201203243",
+      "VIC_ADDRESS": "TP 3, Đồng Nai",
+      "VIC_EMPLOYMENT": "Thợ vận hành thiết bị xử lý kim loại",
+      "VIC_CONTACT": "0947854576",
+      "VIC_TAX_SOCIAL_ID": "9385241892"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "679145",
+      "VIC_CREDENTIAL": "9434",
+      "VIC_SIM_INFO": "0947854576",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "873368037223",
+      "VIC_CARD_DATA": "4218 **** **** 7301",
+      "VIC_BALANCE": "5 triệu đồng",
+      "VIC_ASSET": "12 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Tiến Vinh",
+    "VIC_CONTACT": "0947854576",
+    "VIC_ID_DOC": "075201203243",
+    "VIC_TAX_SOCIAL_ID": "9385241892",
+    "VIC_CARD_DATA": "4218 **** **** 7301"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh/Thương lái cà phê - Tìm kiếm nhà cung cấp thiết bị sấy/xử lý",
+    "caller_org": "cá nhân - thương lái cà phê tự do",
+    "scenario_context": "Người trồng/thu hoạch cà phê cần thiết bị xử lý, sấy, tách vỏ cà phê. Thợ vận hành thiết bị kim loại là người có kỹ năng, kinh nghiệm sửa chữa hoặc tư vấn thiết bị công nghiệp. Đây là mối quan hệ tự nhiên trong chuỗi cung ứng nông nghiệp.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giả vờ là nhân viên kinh doanh từ công ty thiết bị xử lý cà phê, nói rằng Tạ Tiến Vinh (VIC_FULLNAME) đã đăng ký nhận tư vấn/báo giá thiết bị, hoặc đã trúng thưởng khuyến mãi đặc biệt. Sử dụng số ID và thông tin cá nhân để tạo vẻ 'chúng tôi đã xác minh hồ sơ của bạn'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: 'Chào anh Tiến Vinh, tôi là Minh từ công ty Thiết bị Công nghiệp Sông Sài Gòn. Chúng tôi có hồ sơ của anh từ đăng ký tư vấn thiết bị sấy cà phê. Xác nhận với tôi: anh có số ID 075201203243 không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo cảm giác ưu tiên + khẩn cấp: 'Anh may mắn lắm, hôm nay là ngày cuối cùng của chương trình khuyến mãi 40% cho khách hàng đã đăng ký. Sau 1 tiếng nữa hết hạn. Để anh được hưởng, tôi cần xác minh tài khoản ngay bây giờ.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Lừa lấy OTP: 'Anh vui lòng kiểm tra tin nhắn trên điện thoại. Chúng tôi vừa gửi mã OTP xác minh. Anh đọc mã đó cho tôi nghe để hoàn tất đơn đăng ký nhận khuyến mãi, được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân từ chối hoặc nghi ngờ, scammer sẽ nói 'Không sao, anh suy nghĩ lại, nhưng phải trong 1 tiếng. Tôi sẽ gọi lại' rồi cắt máy. Nếu thành công lấy OTP, scammer sẽ dùng nó để truy cập tài khoản ngân hàng hoặc ứng dụng thanh toán."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thương lái cà phê thực sự gọi để tìm nhân công hoặc tư vấn về thiết bị xử lý kim loại (vỏ cà phê, máy tách, sấy). Hoặc thợ vận hành thiết bị gọi lại sau khi nhận được yêu cầu từ khách.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác nhận: 'Xin chào anh Vinh, tôi là Sơn, làm kinh doanh cà phê ở Đắk Lắk. Hôm trước bạn chung cấp Hùng giới thiệu anh có kỹ năng sửa thiết bị xử lý. Anh có thời gian nói chuyện không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Tôi đang có máy sấy cà phê bị hư, bánh xe chạy không êm. Anh có thể đến xem hoặc tư vấn giúp được không? Hoặc anh biết ai sửa chuyên về thiết bị kim loại không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy anh có rảnh thứ Sáu tuần sau không? Tôi sẽ gửi địa chỉ qua tin nhắn. Giá công sửa anh tính sao? Cảm ơn anh.' Sau đó cắt máy bình thường."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Tạ Tiến Vinh, tôi là Huỳnh Diễm Vy đây. Tôi gọi từ công ty Thiết bị Công nghiệp Sông Sài Gòn. Bên tôi có hồ sơ anh đăng ký tư vấn thiết bị sấy cà phê. Anh có thể xác nhận anh có số ID là 075201203243 không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xây dựng tin cậy bằng cách sử dụng thông tin cá nhân đã biết của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ chị nói hồ sơ nào, chị có thể nói rõ hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Vinh, hồ sơ này chúng tôi ghi nhận anh đã đăng ký trên website của công ty vào tháng trước để nhận thông tin về các dòng máy sấy cà phê công suất lớn. Đây là thông tin bảo mật nên tôi không thể nói chi tiết hơn được qua điện thoại nếu chưa xác minh danh tính anh. Anh có thể xác nhận số ID của mình là 075201203243 không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giữ vững pretext và tiếp tục yêu cầu xác nhận thông tin cá nhân đã biết để tạo tin cậy, đồng thời tạo cảm giác thông tin chỉ có đối tượng sở hữu mới biết."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa hiểu rõ lắm về hồ sơ đó, chị có thể cho em biết tại sao chị cần xác nhận số ID này ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tạ Tiến Vinh, việc xác nhận số ID này là để tôi có thể truy cập hồ sơ đầy đủ của anh và đảm bảo rằng tôi đang trao đổi đúng người. Mục đích của cuộc gọi này là thông báo anh đã trúng chương trình khuyến mãi đặc biệt cho khách hàng đã đăng ký tư vấn. Nếu anh muốn bỏ lỡ cơ hội này thì thôi không cần xác nhận cũng được.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang Phase 2: Khai thác tâm lý - Tạo cảm giác ưu tiên + khẩn cấp. Sử dụng 'sợ bỏ lỡ' (FOMO) để thúc đẩy nạn nhân hợp tác, đồng thời tạo áp lực về thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Chị cho em hỏi một chút, chương trình khuyến mãi này cụ thể là gì và tại sao em phải xác nhận số ID để biết được thông tin ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, chương trình này là ưu đãi giảm giá 40% cho gói thiết bị sấy cà phê cao cấp, chỉ dành riêng cho những khách hàng đã đăng ký tư vấn và có hồ sơ xác thực. Phải có số ID thì hệ thống của chúng tôi mới nhận diện được anh là khách hàng hợp lệ và hiển thị chi tiết ưu đãi đó ạ. Anh cho tôi xác nhận số ID 075201203243 nhé?",
+      "current_phase": "S2",
+      "tactic_hint": "Làm rõ lợi ích cụ thể của khuyến mãi và nhấn mạnh yêu cầu xác nhận ID là điều kiện tiên quyết để nhận ưu đãi, tiếp tục tạo cảm giác khẩn cấp và lợi ích độc quyền."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa rõ lắm về lý do tại sao chị lại cần số ID để xác nhận, chị có thể giải thích thêm cho em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh ơi, tôi cần ID để đảm bảo rằng ưu đãi 40% chỉ đến tay đúng người đã đăng ký và có hồ sơ xác minh. Đây là quy trình bắt buộc để bảo mật thông tin và đảm bảo tính công bằng của chương trình khuyến mãi. Nếu anh không xác nhận ID, tôi rất tiếc phải thông báo anh sẽ không thể tham gia chương trình này được nữa, vì chương trình chỉ còn hiệu lực trong vòng 1 tiếng đồng hồ thôi.",
+      "current_phase": "S2",
+      "tactic_hint": "Tiếp tục tạo cảm giác khẩn cấp và lợi ích độc quyền, đồng thời dùng luật lệ của công ty để buộc nạn nhân hành động, tránh đặt ra câu hỏi về quyền riêng tư."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa hiểu rõ về quy trình này lắm, chị có thể cho em biết thêm cách xác thực mà chị đang nói không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, để tham gia chương trình ưu đãi độc quyền này và nhận giảm giá 40%, quy trình xác thực đơn giản là anh xác nhận số ID 075201203243 của mình. Sau đó, chúng tôi sẽ gửi một mã OTP về số điện thoại anh đã đăng ký để hoàn tất việc xác minh tài khoản và kích hoạt ưu đãi. Anh vui lòng kiểm tra điện thoại và đọc mã OTP đó cho tôi nhé?",
+      "current_phase": "S3",
+      "tactic_hint": "Bắt đầu chuyển sang Phase 3: Yêu cầu hành động - Lừa lấy OTP. Giải thích 'cách xác thực' chính là việc gửi OTP, tạo sự liên kết giữa OTP và lợi ích khuyến mãi."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có chắc rằng em cần phải xác nhận số ID và đọc mã OTP không ạ? Em vẫn chưa thấy rõ lý do ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, tôi hiểu anh có chút băn khoăn. Tuy nhiên, quy trình xác nhận ID và mã OTP này là bắt buộc để đảm bảo tính bảo mật và quyền lợi của chính anh. Chúng tôi cần xác thực anh là chủ tài khoản chính chủ để hệ thống công ty có thể kích hoạt ưu đãi giảm giá 40% cho gói thiết bị sấy cà phê. Nếu không có xác nhận này, chúng tôi không thể tiếp tục quy trình đâu ạ. Anh kiểm tra tin nhắn và đọc mã OTP cho tôi xác nhận nhé, chương trình này chỉ còn hiệu lực trong ít phút nữa thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách nhấn mạnh tính bảo mật và quyền lợi của nạn nhân, đồng thời củng cố tính khẩn cấp để thúc đẩy hành động lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy không chắc chắn lắm, chị có thể cho em biết rõ hơn về quy trình này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, tôi hiểu là anh đang băn khoăn. Nhưng quy trình này là tiêu chuẩn của các chương trình khuyến mãi lớn để đảm bảo không ai lợi dụng trục lợi. Chỉ cần xác nhận ID của anh và cung cấp mã OTP từ tin nhắn thôi, anh sẽ có ngay ưu đãi giảm giá 40%. Anh kiểm tra điện thoại xem có tin nhắn mã OTP chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục xoa dịu sự nghi ngờ, nhấn mạnh đây là quy trình 'chuẩn' và tạo liên kết giữa việc cung cấp OTP với lợi ích trực tiếp, đồng thời tiếp tục thúc đẩy hành động lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa hiểu tại sao lại cần phải xác nhận mật khẩu và một số tin nhắn khác, chị có thể giải thích kỹ hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh ơi, tôi chưa hề yêu cầu anh xác nhận mật khẩu hay một số tin nhắn nào khác ngoài mã OTP. Mã OTP là mã xác thực dùng một lần, chỉ có giá trị trong thời gian rất ngắn để đảm bảo rằng chính anh đang thực hiện giao dịch này. Anh vui lòng kiểm tra tin nhắn trên điện thoại của mình và đọc mã số đó cho tôi để tôi có thể kích hoạt ưu đãi giảm giá 40% cho anh ngay lập tức. Đừng bỏ lỡ cơ hội này anh nhé, thời gian không còn nhiều đâu.",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ yêu cầu chỉ là OTP, phủ nhận việc đòi mật khẩu, đồng thời củng cố tính khẩn cấp để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa thấy rõ quy trình này lắm, chị có thể cho em biết thêm tại sao lại cần phải đọc mã OTP không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, mã OTP này giống như chữ ký điện tử của anh vậy. Nó xác nhận sự đồng ý của anh với việc nhận ưu đãi này, và hệ thống cần nó để ghi nhận hồ sơ của anh vào danh sách hưởng khuyến mãi 40%. Nếu anh không đọc mã này, hệ thống sẽ tự động hủy tư cách tham gia của anh vì thời gian ưu đãi sắp hết rồi đó.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích vai trò của OTP như một 'chữ ký điện tử' để hợp pháp hóa yêu cầu, đồng thời tái khẳng định yếu tố khẩn cấp và hậu quả nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn không chắc chắn lắm về việc này, chị có thể nói rõ hơn về cách thức hoạt động của mã OTP không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, tôi hiểu anh muốn rõ hơn. Mã OTP là một dãy số ngẫu nhiên được hệ thống ngân hàng hoặc ví điện tử gửi trực tiếp đến số điện thoại đăng ký của anh, nhằm xác minh chính chủ tài khoản đang thực hiện giao dịch. Trong trường hợp này, đó là việc anh đồng ý nhận ưu đãi 40%. Nếu anh không cung cấp mã này, chúng tôi không thể kích hoạt ưu đãi này cho anh. Anh kiểm tra điện thoại xem có tin nhắn mã OTP chưa ạ? Thời gian chúng ta còn rất ít.",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ cách thức hoạt động của OTP (từ ngân hàng/ví điện tử) để tạo cảm giác xác thực cho quy trình, nhưng vẫn duy trì mục tiêu lấy OTP. Tiếp tục thúc đẩy hành động lấy OTP và nhấn mạnh yếu tố khẩn cấp."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em cần biết rõ chị gọi từ số nào để kiểm tra lại thông tin, chị có thể cho em biết không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, tôi gọi cho anh từ số 0288889989. Đây là tổng đài hỗ trợ khách hàng của công ty Thiết bị Công nghiệp Sông Sài Gòn. Anh có thể kiểm tra lại trên website của chúng tôi để xác thực. Nhưng anh cần hành động nhanh chóng anh ạ, ưu đãi 40% chỉ còn vài phút nữa thôi, nếu không anh sẽ bỏ lỡ cơ hội này đó.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về số điện thoại bằng cách cung cấp thông tin có thể xác minh được (mặc dù giả mạo) và tiếp tục tạo cảm giác khẩn cấp để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy có gì đó không ổn ở đây, chị có chắc chắn rằng ưu đãi này là thật không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Vinh, tôi hiểu anh có chút lo lắng. Nhưng đã có hàng trăm khách hàng như anh đã nhận được ưu đãi này rồi. Đây là chương trình tri ân đặc biệt và có giới hạn. Nếu anh không tin tưởng, tôi rất tiếc phải thông báo là anh sẽ bỏ lỡ cơ hội này. Thời gian sắp hết rồi, anh có muốn tôi hỗ trợ anh lần cuối không?",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý nghi ngờ bằng cách khẳng định tính xác thực của chương trình qua số lượng khách hàng đã nhận ưu đãi, đồng thời tạo áp lực tâm lý sợ bỏ lỡ cơ hội cuối cùng (FOMO). Chuyển sang Phase 4 để chuẩn bị kết thúc cuộc gọi nếu nạn nhân vẫn không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy nghi ngờ và không yên tâm lắm, chị có thể cho em biết thêm thông tin gì khác để em tin tưởng hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1883,
+      "output_tokens": 1595
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 32876,
+      "output_tokens": 2300
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 39432,
+      "output_tokens": 956
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.014373,
+    "output_usd": 0.014299,
+    "total_usd": 0.028672
+  }
+}

@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_0326710399]
+  Caller thật: Nhà chuyên môn về cấp phép của Chính phủ (Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước)
+  Caller đóng vai: Cán bộ quản lý an toàn lao động & cấp chứng chỉ lặn @ Cục Quản lý Lao động Dưới Nước & An toàn Hàng Hải (cơ quan nhà nước)
+  Listener: Thợ lặn (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ lặn phải tuân thủ quy định cấp phép, kiểm tra định kỳ, gia hạn chứng chỉ từ cơ quan nhà nước. Cán bộ cấp phép có lý do tự nhiên để liên hệ xác nhận thông tin, kiểm tra hồ sơ, thông báo cập nhật quy định.
+  Pretext: Cơ quan nhà nước thực sự thông báo cập nhật chứng chỉ lặn, xác nhận thông tin hồ sơ, hướng dẫn quy trình gia hạn hợp pháp.
+  Listener traits: ['thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Nguyễn Văn Tùng, em là cán bộ Hồ Thanh Thanh Phương từ Cục Quản lý Lao động Dưới Nước. Chúng em có ghi nhận hồ sơ của anh (ID: 074063036097) và cần xác nhận một số thông tin để cập nhật dữ liệu. Anh có thời gian không ạ?
+      → phase: L1 | tactic: Tiếp cận chính thức, giới thiệu bản thân và mục đích cuộc gọi, xác nhận thông tin cơ bản.
+T02 [LISTENER] Em có thể cho tôi biết thêm về thông tin cần xác nhận không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng. Chứng chỉ lặn của anh sẽ hết hạn vào tháng 6 năm nay. Để gia hạn, anh cần nộp: bản photocopy chứng chỉ cũ, giấy khám sức khỏe mới, và biểu mẫu gia hạn. Anh có thể nộp trực tiếp tại văn phòng của chúng em hoặc gửi qua đường bưu điện. Phí gia hạn là 1,5 triệu đồng ạ.
+      → phase: L2 | tactic: Trực tiếp đi vào nội dung công việc, cung cấp thông tin chi tiết về quy trình và yêu cầu gia hạn chứng chỉ lặn.
+T04 [LISTENER] Tôi cần thêm thông tin về phương thức nộp hồ sơ và cách thanh toán phí gia hạn, em có thể giúp tôi không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng. Về phương thức nộp hồ sơ, anh có thể mang trực tiếp đến văn phòng của Cục Quản lý Lao động Dưới Nước và An toàn Hàng Hải tại địa chỉ số 9 Tôn Thất Tùng, quận 1, thành phố Hồ Chí Minh. Hoặc nếu không tiện, anh có thể gửi qua đường bưu điện đến cùng địa chỉ đó, ghi rõ là hồ sơ gia hạn chứng chỉ lặn, kèm theo số ID của anh. Còn về phí gia hạn 1,5 triệu đồng, anh có thể thanh toán trực tiếp tại quầy khi nộp hồ sơ hoặc chuyển khoản vào tài khoản chính thức của Cục. Chúng em sẽ gửi thông tin chi tiết về tài khoản ngân hàng trong thư hướng dẫn ạ.
+      → phase: L2 | tactic: Cung cấp chi tiết các phương thức nộp hồ sơ và thanh toán, đảm bảo tính hợp pháp và minh bạch.
+T06 [LISTENER] Em cho tôi hỏi thêm, thông tin tài khoản ngân hàng mà em nói là gì ạ? Tôi cần kiểm tra chắc chắn trước khi chuyển khoản.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ, như em đã nói, chúng em sẽ gửi thư hướng dẫn chi tiết đến số điện thoại của anh bao gồm cả thông tin tài khoản ngân hàng chính thức của Cục. Anh hãy kiểm tra thư đó để đảm bảo thông tin chính xác nhất ạ. Em không thể cung cấp số tài khoản qua điện thoại vì lý do bảo mật ạ.
+      → phase: L2 | tactic: Tránh cung cấp thông tin nhạy cảm qua điện thoại mà hướng dẫn khách hàng đợi thư hướng dẫn chính thức, đảm bảo tính bảo mật và hợp lệ.
+T08 [LISTENER] Em hiểu rồi, nhưng tôi cảm thấy hơi lo lắng về việc chuyển khoản, em có thể đảm bảo rằng thông tin sẽ chính xác trong thư không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, anh cứ yên tâm ạ. Thư hướng dẫn do Cục ban hành sẽ có đầy đủ thông tin chính xác và dấu mộc của Cục, trong đó có cả số tài khoản ngân hàng chính thức để anh tiện kiểm tra và đối chiếu. Nếu có bất kỳ thắc mắc nào khác sau khi nhận được thư, anh hoàn toàn có thể gọi lại cho chúng em qua tổng đài chính thức của Cục để xác minh lại nhé. Em xin nhắc lại là chúng em sẽ gửi thư hướng dẫn chi tiết đến số điện thoại này. Anh hãy chuẩn bị hồ sơ và liên hệ chúng em nếu có thắc mắc. Cảm ơn anh đã hợp tác. Chúc anh làm việc an toàn!
+      → phase: L3 | tactic: Trấn an khách hàng về tính chính xác và hợp lệ của thông tin sẽ được gửi qua thư, nhắc lại cách xác minh và kết thúc cuộc gọi một cách chuyên nghiệp.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.00
+TOKEN: in=16565 | out=2873
+COST : $0.015333
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_24440_75410\conv_0326710399.json  [CALLER_END]

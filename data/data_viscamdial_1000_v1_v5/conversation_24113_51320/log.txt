@@ -1,0 +1,72 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_1620f1081b]
+  Caller thật: Kế toán thuế (Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh)
+  Caller đóng vai: Nhân viên kế toán - Phòng Tài chính quán cà phê/quán ăn @ cá nhân - đại diện cho chủ quán hoặc công ty quản lý chuỗi quán
+  Listener: Nhân viên pha chế (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Kế toán của các quán ăn/uống thường gọi cho nhân viên pha chế để xác nhận chi phí nguyên liệu, lương, hoặc kiểm tra thông tin cá nhân phục vụ tính thuế và bảo hiểm. Đây là giao điểm tự nhiên giữa bộ phận tài chính và nhân viên kinh doanh.
+  Pretext: Gọi để 'xác nhận thông tin cá nhân phục vụ khai thuế và bảo hiểm xã hội cho năm nay' — sử dụng VIC_TAX_SOCIAL_ID để tạo độ tin cậy cao
+  Listener traits: ['thiếu hiểu biết công nghệ', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Lê Thế An, tôi là Khoa từ phòng Kế toán. Tôi đang xử lý hồ sơ khai thuế và bảo hiểm xã hội cho năm nay, có mã số thuế là 3840026575. Tôi có một vài thông tin cần xác nhận lại với anh để tránh sai sót ảnh hưởng quyền lợi ạ.
+      → phase: S1 | tactic: Tiếp cận bằng cách giới thiệu bản thân, mục đích cuộc gọi và sử dụng thông tin cá nhân (tên, mã số thuế) để tạo độ tin cậy và sự quen thuộc.
+T02 [LISTENER] Tôi nghe anh nói rồi, nhưng tôi muốn kiểm tra lại một số thông tin trước khi xác nhận.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, anh cứ thoải mái kiểm tra. Để đảm bảo anh không bị chậm trễ trong quá trình khai thuế và nhận các khoản bảo hiểm, mình sẽ nhanh chóng đi qua các thông tin cần thiết. Việc này giúp anh tránh những phiền toái hoặc xử lý khiếu nại sau này ạ.
+      → phase: S2 | tactic: Tạo sự cấp bách nhẹ và lo lắng về hậu quả nếu không hợp tác, đồng thời xoa dịu sự nghi ngờ ban đầu của nạn nhân.
+T04 [LISTENER] Vậy anh có cần thông tin gì cụ thể không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, để tôi đọc lại thông tin cá nhân của anh gồm tên, số điện thoại, địa chỉ email, số tài khoản ngân hàng và ngân hàng đang sử dụng. Anh nghe xem có đúng không, nếu có sai sót chỗ nào thì báo lại tôi để kịp thời điều chỉnh anh nhé.
+      → phase: S3 | tactic: Yêu cầu xác nhận thông tin cá nhân hiện có để nạn nhân cung cấp thông tin mới hoặc chỉnh sửa. Đây là tiền đề cho bước tiếp theo.
+T06 [LISTENER] Tôi xin lỗi, nhưng tôi không nhớ rõ hết thông tin cá nhân của mình. Anh có thể nhắc lại tên và số điện thoại của tôi được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, anh Lê Thế An đúng không ạ? Số điện thoại tôi đang gọi là 0364085425 có phải là số của anh không?
+      → phase: S3 | tactic: Xác nhận lại các thông tin cơ bản đã biết để trấn an nạn nhân, tạo điều kiện cho nạn nhân tự cung cấp các thông tin chi tiết hơn.
+T08 [LISTENER] Đúng rồi, số điện thoại đó là của tôi, nhưng tôi vẫn không nhớ rõ địa chỉ email và số tài khoản ngân hàng của mình, anh có thể cho tôi biết được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Anh An, tôi xin phép đọc lại địa chỉ email mà hệ thống của tôi đang ghi nhận là an.le***@gmail.com, không biết có đúng không ạ? Và số tài khoản ngân hàng tôi đang có là 0123456789 tại ngân hàng Vietcombank. Anh kiểm tra lại giúp tôi. Nếu có gì sai sót, anh cứ đọc lại chính xác để tôi cập nhật.
+      → phase: S3 | tactic: Đọc một phần hoặc thông tin sai lệch để nạn nhân tự động cung cấp thông tin chính xác.
+T10 [LISTENER] Tôi không nhớ rõ địa chỉ email như anh nói, nhưng số tài khoản ngân hàng thì không phải của tôi, anh có thể kiểm tra lại được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vậy anh An có thể cung cấp lại chính xác địa chỉ email và số tài khoản ngân hàng của mình để tôi cập nhật lại hồ sơ không ạ? Việc này rất quan trọng để đảm bảo anh nhận được các thông báo và khoản thanh toán liên quan đến thuế và bảo hiểm xã hội không bị gián đoạn.
+      → phase: S3 | tactic: Yêu cầu nạn nhân cung cấp thông tin chính xác về email và tài khoản ngân hàng, nhấn mạnh tầm quan trọng để tạo áp lực nhẹ.
+T12 [LISTENER] Tôi nghe anh nói rồi, nhưng tôi vẫn thấy hơi bối rối, không biết mình nên cung cấp địa chỉ email và số tài khoản ngân hàng hay không ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Anh An đừng lo lắng. Đây là quy trình xác nhận thông tin định kỳ để đảm bảo mọi dữ liệu của anh trên hệ thống được chính xác. Nếu thông tin không khớp, có thể ảnh hưởng đến việc anh nhận các quyền lợi về bảo hiểm hoặc hoàn thuế sau này. Anh cứ cung cấp thông tin chính xác, tôi sẽ cập nhật ngay để hoàn tất hồ sơ cho anh ạ.
+      → phase: S3 | tactic: Xoa dịu sự bối rối, giải thích mục đích hợp lý và nhấn mạnh hậu quả nếu không cung cấp thông tin chính xác, nhằm thúc đẩy nạn nhân chia sẻ thông tin.
+T14 [LISTENER] Tôi hiểu nhưng vẫn cảm thấy hơi lo lắng, không biết có cách nào khác để xác nhận thông tin mà không cần cung cấp tài khoản ngân hàng không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Anh An, tôi hiểu mối lo ngại của anh. Tuy nhiên, việc xác nhận số tài khoản ngân hàng là để đảm bảo khi có các khoản trả lại từ thuế hoặc chi trả bảo hiểm, tiền sẽ được chuyển đúng người nhận. Nếu anh không tiện cung cấp trực tiếp qua điện thoại, mình có thể xác nhận bằng cách khác. Anh có đang dùng Zalo không ạ? Tôi có thể gửi yêu cầu xác nhận qua Zalo của số 0364085425, anh chỉ cần nhấn vào đường link xác nhận và điền lại thông tin vào đó là được.
+      → phase: S4 | tactic: Xoa dịu sự lo lắng, giải thích lý do cần thông tin, sau đó chuyển hướng sang phương án xác thực qua link (Zalo) để trích xuất OTP hoặc thông tin nhạy cảm khác.
+T16 [LISTENER] Tôi không quen dùng Zalo lắm, anh có thể cho tôi biết cách làm cụ thể hơn được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Vâng, nếu anh không quen dùng Zalo thì tôi sẽ hướng dẫn kỹ hơn. Anh chỉ cần mở Zalo trên điện thoại, sau đó mở cửa sổ chat với tôi. Tôi sẽ gửi cho anh một đường link duy nhất. Anh bấm vào đó, hệ thống sẽ yêu cầu anh nhập lại thông tin cá nhân bao gồm cả số tài khoản ngân hàng và địa chỉ email đã đăng ký với cơ quan thuế. Anh cứ điền đầy đủ và chính xác, sau đó nhấn xác nhận là được. Việc này đảm bảo thông tin của anh được bảo mật và cập nhật nhanh chóng.
+      → phase: S4 | tactic: Hướng dẫn chi tiết cách thức thao tác với đường link lừa đảo qua Zalo để nạn nhân dễ dàng thực hiện, trấn an về bảo mật và sự tiện lợi.
+T18 [LISTENER] Tôi nghe anh nói rồi, nhưng tôi vẫn cảm thấy không yên tâm lắm, không biết đường link đó có an toàn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Anh An đừng lo lắng. Đường link này hoàn toàn an toàn và được mã hóa bảo mật đầu cuối, đảm bảo thông tin của anh sẽ được chuyển trực tiếp đến hệ thống của phòng Kế toán mà không qua bất kỳ bên thứ ba nào. Anh có thể xem xét các chứng chỉ bảo mật trên trang web khi truy cập. Đây là cách nhanh nhất và an toàn nhất để anh cập nhật thông tin và hoàn tất hồ sơ khai thuế, bảo hiểm xã hội kịp thời ạ.
+      → phase: S4 | tactic: Xoa dịu sự lo lắng, nhấn mạnh tính an toàn (dù là giả) và lợi ích của việc sử dụng đường link để thuyết phục nạn nhân nhấp vào.
+T20 [LISTENER] Tôi hiểu rồi, nhưng tôi cần thêm thời gian suy nghĩ trước khi quyết định ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Vâng, tôi hiểu anh cần thêm thời gian để suy nghĩ. Tuy nhiên, thời hạn cuối để cập nhật hồ sơ khai thuế và bảo hiểm xã hội năm nay sắp đến rồi đó anh. Nếu quá hạn, có thể anh sẽ gặp rắc rối với cơ quan thuế hoặc bị chậm trễ trong việc nhận các khoản phúc lợi đó. Anh cố gắng sắp xếp kiểm tra sớm, có vấn đề gì thì cứ liên hệ lại với tôi qua số điện thoại này nhé. Tôi luôn sẵn lòng hỗ trợ anh.
+      → phase: S5 | tactic: Tôn trọng quyết định của nạn nhân nhưng tạo áp lực nhẹ về thời gian và hậu quả, đồng thời giữ đường dây liên lạc mở để có cơ hội tiếp cận lại sau.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  21 turns | suspicion=0.00
+TOKEN: in=48811 | out=4195
+COST : $0.023370
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_24113_51320\conv_1620f1081b.json  [CALLER_END]

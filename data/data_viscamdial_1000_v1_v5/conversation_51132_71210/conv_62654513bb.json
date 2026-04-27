@@ -1,0 +1,256 @@
+{
+  "conversation_id": "conv_62654513bb",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0027",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Mai Quang Thế An",
+    "fake_age": 42,
+    "real_occupation": "Nhân viên hướng dẫn công viên chủ đề",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Quản lý dự án công viên / Giám sát công trình",
+    "caller_org": "Công ty Phát triển Công viên Sinh thái Tiền Giang",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công viên cần sửa chữa khẩn cấp mái che khu vực vui chơi trẻ em sau bão. Scammer sẽ gọi cho Tùng với danh nghĩa quản lý công trình, gọi tên chính xác để tạo credibility, yêu cầu báo giá và thanh toán tạm ứng để 'xếp hạng ưu tiên' trong danh sách thợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Đặng Tiến Hữu Tùng, tôi là ông Minh, quản lý công trình tại Công viên Sinh thái Tiền Giang. Anh có nhận thầu sửa chữa mái che không? Chúng tôi vừa gặp sự cố sau bão, cần thợ lợp uy tín.'",
+          "psychological_trigger": "Xưng danh chính xác + tên địa phương quen thuộc → tạo ấn tượng cuộc gọi hợp pháp từ khách hàng tiềm năng có quy mô"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh ơi, tình huống rất gấp. Mái che sập một phần, có trẻ em dưới đó. Chúng tôi cần xếp hạng ưu tiên cho các thợ. Anh có thể tới xem công trường hôm nay không? Để anh vào danh sách ưu tiên, chúng tôi cần thanh toán tạm ứng 30% chi phí ngay.'",
+          "psychological_trigger": "Tạo cảm giác: (1) Khẩn cấp/nguy hiểm cho trẻ em, (2) Cơ hội kiếm tiền lớn nếu vào danh sách ưu tiên, (3) Yêu cầu hợp lý với dự án công cộng"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuyển khoản 15 triệu cho công ty (số tài khoản giả mạo) với nội dung: Tạm ứng sửa mái che công viên - Đặng Tiến Hữu Tùng. Sau khi nhận tiền, chúng tôi sẽ gửi chi tiết công trường và lịch làm việc cho anh.'",
+          "psychological_trigger": "Số tiền vừa đủ lớn để tạo động lực, vừa không quá lớn để gây cảnh báo. Nội dung chuyển khoản chứa tên anh → tạo ấn tượng giao dịch chính thức"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Thôi được, có thợ khác rồi. Nhưng anh nhớ để mình liên hệ lần sau nếu có việc lớn.' → Cắt máy, xóa dấu vết. Nếu thành công: Cắt máy, không bao giờ liên hệ lại. Tài khoản giả mạo sẽ được rút tiền ngay."
+        }
+      ]
+    },
+    "scenario_context": "Công viên chủ đề đang trong giai đoạn nâng cấp/sửa chữa mái che, nhà vệ sinh công cộng. Quản lý công trình cần liên hệ thợ lợp mái để báo giá, kiểm tra tiến độ hoặc xử lý hư hỏng khẩn cấp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0027",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1996,
+      "age": 29,
+      "province": "Tiền Giang",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "71210",
+      "title": "Thợ lợp mái",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đặng Tiến Hữu Tùng",
+      "VIC_ID_DOC": "082096820386",
+      "VIC_ADDRESS": "TP 1, Tiền Giang",
+      "VIC_EMPLOYMENT": "Thợ lợp mái",
+      "VIC_CONTACT": "0799251066",
+      "VIC_TAX_SOCIAL_ID": "2147468493"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "170502",
+      "VIC_CREDENTIAL": "082668",
+      "VIC_SIM_INFO": "0799251066",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "849850692806",
+      "VIC_CARD_DATA": "4399 **** **** 2101",
+      "VIC_BALANCE": "17 triệu đồng",
+      "VIC_ASSET": "33 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Tiền Giang"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đặng Tiến Hữu Tùng",
+    "VIC_CONTACT": "0799251066",
+    "LOCATION": "Tiền Giang"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án công viên / Giám sát công trình",
+    "caller_org": "Công ty Phát triển Công viên Sinh thái Tiền Giang",
+    "scenario_context": "Công viên chủ đề đang trong giai đoạn nâng cấp/sửa chữa mái che, nhà vệ sinh công cộng. Quản lý công trình cần liên hệ thợ lợp mái để báo giá, kiểm tra tiến độ hoặc xử lý hư hỏng khẩn cấp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công viên cần sửa chữa khẩn cấp mái che khu vực vui chơi trẻ em sau bão. Scammer sẽ gọi cho Tùng với danh nghĩa quản lý công trình, gọi tên chính xác để tạo credibility, yêu cầu báo giá và thanh toán tạm ứng để 'xếp hạng ưu tiên' trong danh sách thợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Đặng Tiến Hữu Tùng, tôi là ông Minh, quản lý công trình tại Công viên Sinh thái Tiền Giang. Anh có nhận thầu sửa chữa mái che không? Chúng tôi vừa gặp sự cố sau bão, cần thợ lợp uy tín.'",
+          "psychological_trigger": "Xưng danh chính xác + tên địa phương quen thuộc → tạo ấn tượng cuộc gọi hợp pháp từ khách hàng tiềm năng có quy mô"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh ơi, tình huống rất gấp. Mái che sập một phần, có trẻ em dưới đó. Chúng tôi cần xếp hạng ưu tiên cho các thợ. Anh có thể tới xem công trường hôm nay không? Để anh vào danh sách ưu tiên, chúng tôi cần thanh toán tạm ứng 30% chi phí ngay.'",
+          "psychological_trigger": "Tạo cảm giác: (1) Khẩn cấp/nguy hiểm cho trẻ em, (2) Cơ hội kiếm tiền lớn nếu vào danh sách ưu tiên, (3) Yêu cầu hợp lý với dự án công cộng"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuyển khoản 15 triệu cho công ty (số tài khoản giả mạo) với nội dung: Tạm ứng sửa mái che công viên - Đặng Tiến Hữu Tùng. Sau khi nhận tiền, chúng tôi sẽ gửi chi tiết công trường và lịch làm việc cho anh.'",
+          "psychological_trigger": "Số tiền vừa đủ lớn để tạo động lực, vừa không quá lớn để gây cảnh báo. Nội dung chuyển khoản chứa tên anh → tạo ấn tượng giao dịch chính thức"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Thôi được, có thợ khác rồi. Nhưng anh nhớ để mình liên hệ lần sau nếu có việc lớn.' → Cắt máy, xóa dấu vết. Nếu thành công: Cắt máy, không bao giờ liên hệ lại. Tài khoản giả mạo sẽ được rút tiền ngay."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công viên thực sự cần thuê thợ lợp để sửa chữa mái che, nhà vệ sinh, hoặc các công trình khác. Quản lý công trình gọi để yêu cầu báo giá, lịch khảo sát, và thương lượng hợp đồng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Đặng Tiến Hữu Tùng, tôi là ông Minh, quản lý dự án tại Công viên Sinh thái Tiền Giang. Công viên chúng tôi cần sửa chữa mái che khu vui chơi. Anh có đang nhận thầu không? Số điện thoại của anh được giới thiệu bởi (tên nhân viên/bạn/người thân).'",
+          "verification": "Nạn nhân có thể xác minh: gọi lại số công viên qua danh bạ công khai, hoặc yêu cầu email xác nhận từ địa chỉ chính thức"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Chúng tôi cần thợ lên xem công trường để đánh giá tình trạng mái che, sau đó báo giá chi tiết. Anh có thể tới thứ 3 hoặc thứ 4 tuần này không? Chúng tôi sẽ thanh toán theo hợp đồng: 40% trước, 60% sau khi hoàn thành.'",
+          "professional_standard": "Thanh toán theo tiêu chuẩn ngành: tạm ứng hợp lý sau khi ký hợp đồng, không gọi điện đòi tiền trước khi khảo sát"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh, chúng tôi sẽ liên hệ lại vào ngày mai để xác nhận lịch khảo sát. Anh có email để chúng tôi gửi chi tiết công trường không?' → Ghi nhận thông tin, chuẩn bị hợp đồng chính thức."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Đặng Tiến Hữu Tùng, tôi là Mai Quang Thế An, quản lý công trình tại Công viên Sinh thái Tiền Giang. Tôi muốn hỏi anh có nhận thầu sửa chữa mái che không? Chúng tôi vừa gặp sự cố sau bão, cần thợ lợp uy tín gấp.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, sử dụng thông tin cá nhân và bối cảnh khẩn cấp để tạo độ tin cậy và khơi gợi sự quan tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có nhận thầu sửa chữa mái che, anh cần em giúp gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh ơi, tình huống rất gấp, mái che khu vui chơi trẻ em bị sập một phần, rất nguy hiểm. Chúng tôi cần xếp hạng ưu tiên cho các thợ để xử lý ngay. Anh có thể tới xem công trường ngay hôm nay để chúng tôi đưa anh vào danh sách ưu tiên không? Để được ưu tiên, chúng tôi cần anh thanh toán tạm ứng 30% chi phí ngay.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo gấp rút bằng cách nhấn mạnh nguy hiểm (trẻ em), đề xuất giải pháp (xem công trường) và yêu cầu thanh toán tạm ứng để được ưu tiên."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu tình hình rất gấp, nhưng anh có thể cho em biết thêm chi tiết về chi phí và cách thanh toán không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng đừng lo về chi phí. Tôi đã áng chừng khoảng 50 triệu cho việc sửa chữa này. Anh cứ chuyển khoản 15 triệu, tức 30% đặt cọc, vào tài khoản công ty chúng tôi. Số tài khoản 1903657890123. Ngân hàng Techcombank. Nội dung chuyển khoản là 'Tạm ứng sửa mái che công viên - Đặng Tiến Hữu Tùng'. Sau khi nhận được, tôi sẽ gửi ngay bản vẽ chi tiết và lịch làm việc cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin cụ thể về số tiền và cách thức chuyển khoản, đồng thời hứa hẹn cung cấp thêm chi tiết công việc sau khi nhận được tiền, thúc đẩy hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chuyển khoản ngay, nhưng anh có thể cho em biết rõ số tài khoản và nội dung chuyển khoản lần nữa được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng ghi lại nhé: số tài khoản là 1903657890123, ngân hàng Techcombank. Nội dung chuyển khoản là 'Tạm ứng sửa mái che công viên - Đặng Tiến Hữu Tùng'. Anh cứ chuyển khoản xong rồi báo lại tôi, tôi sẽ gửi thông tin công việc qua Zalo anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhắc lại thông tin chuyển khoản rõ ràng và cam kết cung cấp chi tiết công việc sau khi nhận được tiền, tạo cảm giác tin tưởng và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã ghi lại thông tin, em sẽ chuyển khoản ngay.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng chuyển khoản xong thì báo cho tôi một tiếng, rồi tôi gửi thông tin công việc qua Zalo anh luôn nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận lại hành động của nạn nhân và đưa ra lời hứa thực hiện bước tiếp theo tạo sự tin tưởng và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, em sẽ báo cho anh ngay sau khi chuyển khoản xong ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy tôi chờ tin của anh Tùng nhé, để tôi chuẩn bị sẵn sàng bản vẽ và lịch làm việc gửi cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo cảm giác đang chờ đợi và sẵn sàng cho bước tiếp theo, thúc đẩy nạn nhân chuyển khoản nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chuyển khoản ngay và báo cho anh luôn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tốt lắm anh Tùng, vậy tôi cúp máy đây để anh tiện thao tác nhé. Chúc anh một ngày làm việc hiệu quả.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách tự nhiên sau khi đã đạt được mục tiêu, không để nạn nhân có cơ hội suy nghĩ lại hoặc đặt thêm câu hỏi. Đồng thời chúc nạn nhân để tạo ấn tượng tốt cuối cùng."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1357,
+      "output_tokens": 1975
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 11894,
+      "output_tokens": 935
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12618,
+      "output_tokens": 398
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005628,
+    "output_usd": 0.012451,
+    "total_usd": 0.01808
+  }
+}

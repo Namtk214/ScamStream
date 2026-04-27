@@ -1,0 +1,59 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_13339446de]
+  Caller thật: Nhân viên bán hàng khác chưa được phân vào đâu (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Trưởng phòng Kinh doanh & Phát triển Bảo hiểm Nhân thọ @ Công ty Bảo hiểm Nhân thọ Phúc Lộc (Chi nhánh Vĩnh Long)
+  Listener: Nhà chiêm tinh, nhà tướng số và những người có liên quan đến tâm linh khác (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhân viên bán hàng bảo hiểm tự nhiên cần tiếp cận những người có thu nhập ổn định, địa vị xã hội cao (như nhà chiêm tinh, nhà tướng số có khách hàng giàu) để bán sản phẩm bảo hiểm nhân thọ. Đồng thời, những người làm dịch vụ tâm linh thường quan tâm bảo vệ tài chính & sức khỏe gia đình.
+  Pretext: Gọi điện giới thiệu chương trình bảo hiểm cao cấp dành riêng cho những chuyên gia dịch vụ tâm linh có thu nhập cao tại Vĩnh Long. Sử dụng tên 'Ngô Thanh Nhi' và số điện thoại để tạo ấn tượng đã có sơ bộ hồ sơ, giới thiệu gói bảo hiểm 'kỳ lạ' với lợi suất cao bất thường.
+  Listener traits: ['cẩn thận và cảnh giác', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Ngô Thanh Nhi, tôi là Lê Hồng Lan từ Công ty Bảo hiểm Nhân thọ Phúc Lộc chi nhánh Vĩnh Long. Chúng tôi vừa cập nhật danh sách khách hàng VIP tại Vĩnh Long và rất vinh dự khi có tên chị trong đó. Không biết chị có mấy phút để tôi giới thiệu về một chương trình bảo hiểm cao cấp, đặc biệt dành riêng cho các chuyên gia dịch vụ tâm linh như chị không ạ?
+      → phase: S1 | tactic: Tiếp cận và tạo uy tín bằng cách sử dụng thông tin cá nhân đã biết và giới thiệu gói bảo hiểm đặc biệt.
+T02 [LISTENER] Cảm ơn em đã gọi, nhưng tôi muốn hỏi em gọi từ số mấy ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ, tôi gọi cho chị từ số điện thoại 0270.388.9999 là số hotline của công ty chúng tôi tại Vĩnh Long đó chị. Số máy này có hiển thị trên màn hình của chị không ạ?
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin liên hệ chính thức và xác nhận.
+T04 [LISTENER] Số đó tôi không thấy, nhưng tôi vẫn còn chút nghi ngờ về chương trình bảo hiểm này, em có thể nói rõ hơn không?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, tôi rất hiểu sự cẩn trọng của chị. Để chị yên tâm, tôi xin phép trình bày chi tiết về gói bảo hiểm đặc biệt này. Đây là sản phẩm 'An Lạc Vĩnh Cửu' được thiết kế riêng cho những chuyên gia như chị, với mức lợi suất ổn định từ 8-10% mỗi năm, cao hơn nhiều so với các sản phẩm khác trên thị trường. Đặc biệt, nó còn bảo vệ chị trước các rủi ro sức khỏe bất ngờ hoặc tai nạn trong quá trình làm việc. Chỉ có 50 suất ưu đãi thôi chị ạ.
+      → phase: S2 | tactic: Xoa dịu nghi ngờ, khai thác tâm lý ham lợi và sợ hãi bằng cách nhấn mạnh lợi ích và sự khan hiếm của gói bảo hiểm, đồng thời đề cập đến rủi ro liên quan đến nghề nghiệp của nạn nhân.
+T06 [LISTENER] Nghe em nói về sản phẩm 'An Lạc Vĩnh Cửu' có vẻ hấp dẫn, nhưng tôi vẫn cần thêm thông tin cụ thể hơn về điều khoản và chi phí ạ.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ vâng, tôi rất vui khi chị quan tâm. Về điều khoản, gói 'An Lạc Vĩnh Cửu' có thời hạn hợp đồng 10 năm, chị có thể rút vốn linh hoạt sau 3 năm. Còn về chi phí, mức ký quỹ ban đầu tối thiểu là 15 triệu đồng. Khoản này sẽ được công ty chúng tôi quản lý và đầu tư vào các quỹ an toàn, đảm bảo mức lợi nhuận tôi vừa nêu. Đây là chương trình độc quyền, chỉ còn hiệu lực trong 3 ngày tới thôi ạ.
+      → phase: S2 | tactic: Cung cấp thêm chi tiết về điều khoản và chi phí theo yêu cầu của nạn nhân, đồng thời tạo cảm giác cấp bách về thời gian để thúc đẩy hành động.
+T08 [LISTENER] Em nói rõ thời hạn và mức ký quỹ thì tôi cũng thấy thú vị, nhưng tôi vẫn cần xác minh thêm thông tin từ công ty trước khi quyết định ạ.
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Dạ, tôi rất hiểu là chị cần thêm thời gian tìm hiểu. Tuy nhiên, như tôi đã chia sẻ, gói 'An Lạc Vĩnh Cửu' này là chương trình độc quyền, số lượng có hạn và chỉ còn 3 ngày nữa là kết thúc rồi ạ. Chị sẽ bỏ lỡ một cơ hội hiếm có để vừa bảo vệ sức khỏe, vừa gia tăng tài sản đó ạ.
+      → phase: S2 | tactic: Xoa dịu sự từ chối bằng cách đồng cảm, nhưng vẫn nhấn mạnh sự khan hiếm và thời hạn chót để tạo áp lực, thúc đẩy hành động.
+T11 [LISTENER] Em không thể cho chị số điện thoại của công ty để xác minh ạ?
+      → action: CONTINUE | suspicion: 2.40 | disclosed: []
+
+T12 [CALLER] Dạ, như ban đầu tôi có thông báo, tôi đang gọi cho chị từ số hotline 0270.388.9999 của Công ty Bảo hiểm Phúc Lộc chi nhánh Vĩnh Long đó chị. Số này hoàn toàn chính thức và có thể xác minh được. Nếu chị cần thêm bất kỳ thông tin nào để yên tâm, chị cứ hỏi nhé, tôi sẵn lòng giải đáp ạ.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách nhắc lại thông tin đã cung cấp và khẳng định tính chính xác, đồng thời tỏ ra sẵn sàng hỗ trợ để xây dựng niềm tin.
+T13 [LISTENER] Tôi rất cẩn thận với những thông tin và giao dịch như thế này, nên tôi vẫn không thấy yên tâm lắm, em có thể cho tôi biết thêm về công ty và các chứng chỉ của sản phẩm này không ạ?
+      → action: CONTINUE | suspicion: 4.90 | disclosed: []
+
+T14 [CALLER] Dạ, tôi hoàn toàn hiểu sự cẩn trọng của chị, đặc biệt là với các vấn đề tài chính quan trọng như thế này. Công ty Bảo hiểm Nhân thọ Phúc Lộc chúng tôi được cấp phép đầy đủ bởi Bộ Tài chính và hoạt động dưới sự giám sát của cục Quản lý, giám sát bảo hiểm. Chị có thể tìm thấy thông tin của chúng tôi trên website chính thức của Bộ Tài chính Việt Nam. Về sản phẩm 'An Lạc Vĩnh Cửu' này, nó đã được thẩm định và cấp phép bởi các cơ quan chuyên môn, đảm bảo tuân thủ mọi quy định pháp luật hiện hành. Nếu chị cần, tôi có thể gửi các tài liệu chứng nhận qua email cho chị sau cuộc gọi này ạ.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin về tính pháp lý và các chứng nhận của công ty và sản phẩm, đề nghị cung cấp thêm tài liệu để xây dựng niềm tin.
+T15 [LISTENER] Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn cảm thấy cần kiểm tra kỹ hơn trước khi đưa ra quyết định ạ.
+      → action: REFUSAL | suspicion: 9.90 | disclosed: []
+
+T16 [CALLER] Dạ, tôi rất hiểu là chị muốn kiểm tra kỹ càng. Tuy nhiên, thời gian để đăng ký gói 'An Lạc Vĩnh Cửu' chỉ còn rất ít. Nếu chị muốn xác nhận thông tin nhanh nhất, chị có thể gọi trực tiếp đến tổng đài quốc gia của Bộ Tài chính và hỏi về Công ty Bảo hiểm Nhân thọ Phúc Lộc chi nhánh Vĩnh Long của chúng tôi, họ sẽ xác nhận ngay ạ. Song, nếu bỏ lỡ cơ hội này, chị sẽ mất đi một quyền lợi đặc biệt đó ạ. Chị có muốn tôi hướng dẫn cách xác minh nhanh nhất không?
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách đề nghị hướng dẫn xác minh thông tin từ một nguồn chính thống, đồng thời tiếp tục tạo áp lực về thời gian và sự bỏ lỡ cơ hội.
+T17 [LISTENER] Em nói như vậy làm tôi cảm thấy không thoải mái, tôi cần thêm thời gian để suy nghĩ, không nên vội vàng như vậy ạ.
+      → action: REFUSAL | suspicion: 19.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  17 turns | suspicion=19.80
+TOKEN: in=37059 | out=3664
+COST : $0.019552
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_52490_51610\conv_13339446de.json  [SCAM_REFUSE]

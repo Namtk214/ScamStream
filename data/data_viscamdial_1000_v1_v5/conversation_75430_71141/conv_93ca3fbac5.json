@@ -1,0 +1,240 @@
+{
+  "conversation_id": "conv_93ca3fbac5",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0001",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lưu Khánh Như Nhung",
+    "fake_age": 36,
+    "real_occupation": "Thợ phân loại và kiểm tra sản phẩm (trừ thực phẩm và đồ uống)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Chất lượng / Kiểm tra viên Cấp cao - Bộ phận Kiểm định Vật liệu Xây dựng",
+    "caller_org": "Công ty Cổ phần Kiểm định Chất lượng Vật liệu Xây dựng Việt Nam (VAMQ)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa kiểm tra viên từ công ty kiểm định, thông báo rằng lô vật liệu bê tông cốt thép của công trình mà Nguyễn Thế Bình tham gia đã phát hiện khiếm khuyết tiêu chuẩn. Yêu cầu thanh toán phí xử lý/bồi thường để tránh tạm dừng công trình hoặc phạt hành chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với uy tín: 'Chào anh Nguyễn Thế Bình, tôi là Trần Minh Hùng, Quản lý Chất lượng từ VAMQ. Chúng tôi vừa kiểm định lô bê tông cốt thép tại công trình anh đang thi công. Có vấn đề cần thảo luận ngay.'",
+          "tactic": "Sử dụng tên đầy đủ (VIC_FULLNAME) để tạo ấn tượng có thông tin từ hệ thống chính thức"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Lô hàng lần này có độ cường độ thấp hơn tiêu chuẩn 15%. Nếu không xử lý trong 24 giờ, công trình sẽ bị tạm dừng, và anh sẽ phải chịu phạt từ 50-100 triệu từ chủ đầu tư.'",
+          "tactic": "Tạo sự cấp bách, gợi sợ hãi mất tiền lớn hơn"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để tránh tình trạng này, anh cần thanh toán phí xử lý và bồi thường 47 triệu đồng vào tài khoản của công ty VAMQ ngay hôm nay. Tôi sẽ gửi số tài khoản qua tin nhắn. Sau khi nhận tiền, chúng tôi sẽ cấp giấy chứng nhận tiêu chuẩn mới.'",
+          "tactic": "Sử dụng con số VIC_ASSET (47 triệu) để tạo sự trùng hợp đáng ngờ nhưng bị bỏ qua trong tâm lý hoảng loạn"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, tăng áp lực: 'Anh chắc chắn muốn công trình bị phạt à? Tôi có quyền báo cáo lên Sở Xây dựng. Quyết định là của anh.' Nếu thành công, yêu cầu im lặng: 'Đây là thủ tục nội bộ, anh không nên nói với ai để tránh ảnh hưởng đến danh tiếng công ty.'",
+          "tactic": "Tiếp tục gây áp lực hoặc yêu cầu bảo mật để ngăn chặn xác minh"
+        }
+      ]
+    },
+    "scenario_context": "Thợ phân loại/kiểm tra sản phẩm xây dựng cần liên hệ với thợ đổ bê tông để xác minh chất lượng vật liệu, kiểm tra tiêu chuẩn công trình, hoặc thông báo về lô hàng đã kiểm định. Đây là giao điểm tự nhiên trong chuỗi cung ứng xây dựng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0001",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "Hà Nội",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "71141",
+      "title": "Thợ đổ bê tông cốt thép (chung)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Thế Bình",
+      "VIC_ID_DOC": "001202010555",
+      "VIC_ADDRESS": "TP 3, Hà Nội",
+      "VIC_EMPLOYMENT": "Thợ đổ bê tông cốt thép (chung)",
+      "VIC_CONTACT": "0987932583",
+      "VIC_TAX_SOCIAL_ID": "9205748794"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "5012",
+      "VIC_CREDENTIAL": "835630",
+      "VIC_SIM_INFO": "0987932583",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "58947536260",
+      "VIC_CARD_DATA": "4711 **** **** 3781",
+      "VIC_BALANCE": "3 triệu đồng",
+      "VIC_ASSET": "47 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Thế Bình",
+    "VIC_CONTACT": "0987932583",
+    "VIC_ASSET": "47 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Chất lượng / Kiểm tra viên Cấp cao - Bộ phận Kiểm định Vật liệu Xây dựng",
+    "caller_org": "Công ty Cổ phần Kiểm định Chất lượng Vật liệu Xây dựng Việt Nam (VAMQ)",
+    "scenario_context": "Thợ phân loại/kiểm tra sản phẩm xây dựng cần liên hệ với thợ đổ bê tông để xác minh chất lượng vật liệu, kiểm tra tiêu chuẩn công trình, hoặc thông báo về lô hàng đã kiểm định. Đây là giao điểm tự nhiên trong chuỗi cung ứng xây dựng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa kiểm tra viên từ công ty kiểm định, thông báo rằng lô vật liệu bê tông cốt thép của công trình mà Nguyễn Thế Bình tham gia đã phát hiện khiếm khuyết tiêu chuẩn. Yêu cầu thanh toán phí xử lý/bồi thường để tránh tạm dừng công trình hoặc phạt hành chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với uy tín: 'Chào anh Nguyễn Thế Bình, tôi là Trần Minh Hùng, Quản lý Chất lượng từ VAMQ. Chúng tôi vừa kiểm định lô bê tông cốt thép tại công trình anh đang thi công. Có vấn đề cần thảo luận ngay.'",
+          "tactic": "Sử dụng tên đầy đủ (VIC_FULLNAME) để tạo ấn tượng có thông tin từ hệ thống chính thức"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Lô hàng lần này có độ cường độ thấp hơn tiêu chuẩn 15%. Nếu không xử lý trong 24 giờ, công trình sẽ bị tạm dừng, và anh sẽ phải chịu phạt từ 50-100 triệu từ chủ đầu tư.'",
+          "tactic": "Tạo sự cấp bách, gợi sợ hãi mất tiền lớn hơn"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để tránh tình trạng này, anh cần thanh toán phí xử lý và bồi thường 47 triệu đồng vào tài khoản của công ty VAMQ ngay hôm nay. Tôi sẽ gửi số tài khoản qua tin nhắn. Sau khi nhận tiền, chúng tôi sẽ cấp giấy chứng nhận tiêu chuẩn mới.'",
+          "tactic": "Sử dụng con số VIC_ASSET (47 triệu) để tạo sự trùng hợp đáng ngờ nhưng bị bỏ qua trong tâm lý hoảng loạn"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, tăng áp lực: 'Anh chắc chắn muốn công trình bị phạt à? Tôi có quyền báo cáo lên Sở Xây dựng. Quyết định là của anh.' Nếu thành công, yêu cầu im lặng: 'Đây là thủ tục nội bộ, anh không nên nói với ai để tránh ảnh hưởng đến danh tiếng công ty.'",
+          "tactic": "Tiếp tục gây áp lực hoặc yêu cầu bảo mật để ngăn chặn xác minh"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ bộ phận kiểm định chất lượng vật liệu xây dựng để thông báo kết quả kiểm định, yêu cầu xác nhận thông tin công trình, hoặc phối hợp kiểm tra tại hiện trường.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Nguyễn Thế Bình, tôi là Trần Minh Hùng từ VAMQ. Chúng tôi vừa nhận yêu cầu kiểm định lô bê tông cốt thép cho công trình của anh. Anh có thời gian để xác nhận thông tin không?'",
+          "tactic": "Xác nhận danh tính, không tạo cấp bách, cung cấp thông tin liên hệ công ty để nạn nhân có thể xác minh"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác nhận: tên công trình, địa chỉ, số lượng, ngày giao hàng. Kết quả kiểm định sẽ được gửi qua email chính thức trong 3-5 ngày làm việc.'",
+          "tactic": "Yêu cầu thông tin cụ thể, tuân theo quy trình, không yêu cầu tiền hoặc dữ liệu nhạy cảm"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh đã xác nhận. Nếu có bất kỳ câu hỏi nào, anh có thể gọi lại số công ty hoặc liên hệ qua email. Chúc công trình thành công.'",
+          "tactic": "Cung cấp các phương thức liên hệ chính thức, không yêu cầu bảo mật, kết thúc lịch sự"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Nguyễn Thế Bình, tôi là Lưu Khánh Như Nhung, Quản lý Chất lượng từ VAMQ. Chúng tôi vừa kiểm định lô bê tông cốt thép tại công trình anh đang thi công. Có vấn đề cần thảo luận ngay.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, chức danh từ công ty giả mạo và thông báo vấn đề khẩn cấp liên quan đến công trình của nạn nhân, sử dụng thông tin đã biết về nạn nhân để tạo niềm tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị Nhung, chị nói là có vấn đề gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình, lô bê tông cốt thép tại công trình của anh có độ cường độ thấp hơn tiêu chuẩn 15%. Nếu không xử lý trong 24 giờ, công trình sẽ bị tạm dừng, và anh sẽ phải chịu phạt từ 50-100 triệu đồng từ chủ đầu tư.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và nỗi sợ hãi về hậu quả pháp lý, tài chính để gây áp lực cho nạn nhân, nhấn mạnh thời hạn xử lý."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị Nhung, em không hiểu lắm về chuyện này, chị có thể giải thích rõ hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình, vấn đề rất rõ ràng là vật liệu không đạt chuẩn. Nếu không có giấy chứng nhận mới trong hôm nay, công trình của anh sẽ không được tiếp tục và chắc chắn sẽ bị phạt nặng. Để tránh điều đó, anh cần thanh toán phí xử lý và bồi thường 47 triệu đồng vào tài khoản của công ty VAMQ ngay hôm nay. Tôi sẽ gửi số tài khoản qua tin nhắn.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể để giải quyết vấn đề, đưa ra số tiền và hình thức thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị Nhung, nhưng em cần kiểm tra lại thông tin này đã, vì số tiền lớn quá ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình, tôi hiểu anh cần kiểm tra lại. Nhưng thời gian là vàng bạc. Mỗi phút trôi qua, rủi ro công trình bị đình chỉ càng cao. Anh muốn để công trình bị ngừng và chịu phạt hành chính lớn hơn nhiều lần con số 47 triệu này hay sao?",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách tăng áp lực, nhấn mạnh hậu quả tiêu cực nếu trì hoãn và so sánh với 'chi phí' mà nạn nhân cần trả để tránh hậu quả đó."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị Nhung, em hiểu nhưng em vẫn cần thời gian để kiểm tra lại mọi thứ, số tiền này không hề nhỏ ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình, việc anh chần chừ chỉ làm mọi chuyện tồi tệ hơn. Tôi có quyền báo cáo trực tiếp lên Sở Xây dựng về vi phạm tiêu chuẩn này. Khi đó, không chỉ bị phạt mà cả uy tín của anh và công ty anh cũng sẽ bị ảnh hưởng nghiêm trọng. Quyết định là của anh.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường áp lực bằng cách đưa ra lời đe dọa báo cáo lên cơ quan chức năng, nhấn mạnh hậu quả về pháp lý và uy tín để ép nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị Nhung, em vẫn cảm thấy không yên tâm lắm về thông tin này, có thể cho em thêm thời gian không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1417,
+      "output_tokens": 1967
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7508,
+      "output_tokens": 703
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10089,
+      "output_tokens": 356
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004432,
+    "output_usd": 0.011806,
+    "total_usd": 0.016238
+  }
+}

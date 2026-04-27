@@ -1,0 +1,365 @@
+{
+  "conversation_id": "conv_9b19bea1a9",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0056",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trương Thế Xuân Dũng",
+    "fake_age": 37,
+    "real_occupation": "Người hướng dẫn tập luyện và giải trí, người chỉ đạo chương trình",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhà sản xuất/Đạo diễn chương trình quảng cáo và sự kiện",
+    "caller_org": "Công ty sản xuất quảng cáo và sự kiện (cá nhân hoặc đơn vị nhỏ)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giới thiệu dự án quảng cáo sắp tới cần vẽ bảng hiệu lớn, xin thông tin chi tiết để chuẩn bị hợp đồng. Sử dụng tên thật (Trương Công Minh) để tạo credibility, nói rằng đã nhận được giới thiệu từ một khách hàng chung hoặc thấy tên anh trên danh sách thợ vẽ uy tín.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Trương Công Minh, tôi là [tên] từ công ty [tên công ty]. Tôi vừa nhận được danh sách thợ vẽ bảng hiệu giỏi ở Thanh Hóa, tên anh được đề cử. Chúng tôi có dự án quảng cáo lớn tháng này.' — Tạo trust bằng cách gọi đúng tên, nhắc đến địa chỉ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: 'Dự án này rất gấp, ngân sách tốt, nhưng cần anh xác nhận nhanh hôm nay để chúng tôi ký hợp đồng. Anh sẵn sàng chứ?' — Tạo sức ép thời gian và cơ hội kiếm tiền."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để chúng tôi gửi tiền đặt cọc trước, anh cần cung cấp số tài khoản. Nhưng trước tiên, anh vui lòng xác minh danh tính qua OTP được gửi đến số điện thoại anh để chúng tôi cập nhật vào hệ thống. Anh nhận được tin nhắn chưa?' — Nạn nhân sẽ nhận OTP từ ứng dụng ngân hàng/ví điện tử, scammer yêu cầu đọc mã."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: scammer dùng mã để truy cập tài khoản, chuyển tiền. Nếu từ chối: 'Vậy anh không quan tâm dự án này? Có vấn đề gì không?' hoặc 'Chúng tôi sẽ liên hệ lại' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Nhà sản xuất chương trình quảng cáo/sự kiện cần liên hệ thợ vẽ bảng hiệu để thiết kế backdrop, bảng quảng cáo, hoặc đạo cụ cho chương trình truyền hình hoặc sự kiện công cộng. Đây là nhu cầu tự nhiên giữa hai nghề."
+  },
+  "listener_card": {
+    "listener_id": "lis_0056",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1991,
+      "age": 34,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "71323",
+      "title": "Thợ vẽ bảng hiệu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Công Minh",
+      "VIC_ID_DOC": "038091492330",
+      "VIC_ADDRESS": "Huyện 7, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ vẽ bảng hiệu",
+      "VIC_CONTACT": "0962168905",
+      "VIC_TAX_SOCIAL_ID": "7832528060"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "094221",
+      "VIC_CREDENTIAL": "873880",
+      "VIC_SIM_INFO": "0962168905",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "74110962292",
+      "VIC_CARD_DATA": "4707 **** **** 6321",
+      "VIC_BALANCE": "10 triệu đồng",
+      "VIC_ASSET": "28 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Công Minh",
+    "VIC_CONTACT": "0962168905",
+    "VIC_ADDRESS": "Huyện 7, Thanh Hóa"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhà sản xuất/Đạo diễn chương trình quảng cáo và sự kiện",
+    "caller_org": "Công ty sản xuất quảng cáo và sự kiện (cá nhân hoặc đơn vị nhỏ)",
+    "scenario_context": "Nhà sản xuất chương trình quảng cáo/sự kiện cần liên hệ thợ vẽ bảng hiệu để thiết kế backdrop, bảng quảng cáo, hoặc đạo cụ cho chương trình truyền hình hoặc sự kiện công cộng. Đây là nhu cầu tự nhiên giữa hai nghề.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giới thiệu dự án quảng cáo sắp tới cần vẽ bảng hiệu lớn, xin thông tin chi tiết để chuẩn bị hợp đồng. Sử dụng tên thật (Trương Công Minh) để tạo credibility, nói rằng đã nhận được giới thiệu từ một khách hàng chung hoặc thấy tên anh trên danh sách thợ vẽ uy tín.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Trương Công Minh, tôi là [tên] từ công ty [tên công ty]. Tôi vừa nhận được danh sách thợ vẽ bảng hiệu giỏi ở Thanh Hóa, tên anh được đề cử. Chúng tôi có dự án quảng cáo lớn tháng này.' — Tạo trust bằng cách gọi đúng tên, nhắc đến địa chỉ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: 'Dự án này rất gấp, ngân sách tốt, nhưng cần anh xác nhận nhanh hôm nay để chúng tôi ký hợp đồng. Anh sẵn sàng chứ?' — Tạo sức ép thời gian và cơ hội kiếm tiền."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để chúng tôi gửi tiền đặt cọc trước, anh cần cung cấp số tài khoản. Nhưng trước tiên, anh vui lòng xác minh danh tính qua OTP được gửi đến số điện thoại anh để chúng tôi cập nhật vào hệ thống. Anh nhận được tin nhắn chưa?' — Nạn nhân sẽ nhận OTP từ ứng dụng ngân hàng/ví điện tử, scammer yêu cầu đọc mã."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: scammer dùng mã để truy cập tài khoản, chuyển tiền. Nếu từ chối: 'Vậy anh không quan tâm dự án này? Có vấn đề gì không?' hoặc 'Chúng tôi sẽ liên hệ lại' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sản xuất chương trình/sự kiện liên hệ thợ vẽ bảng hiệu để báo giá, thảo luận yêu cầu thiết kế và thời gian hoàn thành cho dự án quảng cáo hoặc backdrop sự kiện.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Trương Công Minh, tôi là [tên thật] từ công ty [tên thật]. Chúng tôi có một dự án quảng cáo cần vẽ bảng hiệu. Anh có thời gian trao đổi chi tiết không?' — Xưng danh rõ ràng, giới thiệu công ty thật."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Mô tả chi tiết kích thước bảng, nội dung cần vẽ, ngân sách, thời hạn. Hỏi giá, thời gian làm việc, quy trình thanh toán. Có thể gửi file, hình ảnh minh họa qua email hoặc zalo."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Nếu thợ vẽ đồng ý, thảo luận hợp đồng, điều khoản, phương thức thanh toán (bình thường: đặt cọc rồi thanh toán sau khi hoàn thành). Nếu không phù hợp, cảm ơn và kết thúc lịch sự."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Trương Công Minh, tôi là Trương Thế Xuân Dũng từ công ty sản xuất quảng cáo và sự kiện. Tôi vừa nhận được danh sách thợ vẽ bảng hiệu giỏi ở khu vực Huyện 7, Thanh Hóa và tên anh được đề cử. Chúng tôi có một dự án quảng cáo lớn sắp triển khai tháng này ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tạo trust bằng cách gọi đúng tên, nhắc đến địa chỉ và giới thiệu dự án lớn."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói về dự án, nhưng em muốn hỏi thêm là anh có thông tin gì cụ thể về dự án này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, dự án này là chúng tôi cần vẽ một chuỗi bảng hiệu lớn cho các chi nhánh của một tập đoàn dược phẩm. Quy mô khá lớn và cần triển khai gấp trong tháng này. Tôi thấy kinh nghiệm của anh qua các đối tác giới thiệu rất phù hợp.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm thông tin dự án để củng cố sự uy tín và hấp dẫn, đồng thời khen ngợi năng lực của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã chia sẻ thông tin, nhưng em vẫn muốn biết rõ hơn về yêu cầu cụ thể và mức giá cho công việc này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Về yêu cầu cụ thể và mức giá thì chúng tôi sẽ trao đổi chi tiết hơn khi ký hợp đồng chính thức, anh Minh ạ. Dự án này rất gấp, ngân sách tốt, nhưng chúng tôi cần anh xác nhận nhanh hôm nay để chúng tôi chốt danh sách và lên kế hoạch ký hợp đồng. Anh sẵn sàng tham gia chứ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo sức ép thời gian và cơ hội kiếm tiền, thúc đẩy nạn nhân ra quyết định nhanh."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rằng dự án gấp và có ngân sách tốt, nhưng em vẫn cần thêm thông tin về yêu cầu và hợp đồng trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh ơi, tôi hiểu sự cẩn trọng của anh. Tuy nhiên, quy trình của chúng tôi là cần xác nhận sự sẵn lòng của đối tác trước khi đi vào chi tiết hợp đồng để đảm bảo tiến độ. Anh cứ yên tâm là mọi điều khoản sẽ minh bạch. Vậy anh có thể xác nhận là sẵn sàng tham gia dự án này không?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định quy trình và tiếp tục thúc ép nạn nhân xác nhận cam kết."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu quy trình của anh, nhưng em vẫn muốn có thông tin rõ ràng về hợp đồng trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh này, thế này ạ. Để tôi trình bày để anh dễ hiểu nhé. Chúng tôi đang có một cơ hội công việc rất hấp dẫn. Anh cứ hình dung là, một chiếc vé máy bay khuyến mãi giá tốt chỉ bán trong hôm nay. Nếu anh không \"đặt chỗ\" ngay thì sẽ bỏ lỡ. Công việc này cũng vậy, nếu anh thực sự quan tâm, anh chỉ cần xác nhận tham gia bằng cách nhận mã OTP từ hệ thống của chúng tôi để xác thực thôi, sau đó tôi sẽ gửi ngay hợp đồng chi tiết. Rất nhanh gọn lẹ thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Dụ dỗ nạn nhân bằng cách so sánh cơ hội với 'vé máy bay khuyến mãi', đồng thời yêu cầu hành động xác thực bằng OTP để chiếm đoạt thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu anh đang nói về mã OTP là gì, anh có thể giải thích rõ hơn cho em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, mã OTP là một mã bảo mật một lần do hệ thống của chúng tôi gửi đến số điện thoại của anh, để xác minh anh là chính chủ số điện thoại. Việc này cần thiết để chúng tôi cập nhật thông tin của anh vào hệ thống đặt hàng và chuẩn bị hợp đồng. Anh cứ đợi một chút, tôi sẽ gửi mã OTP đến số của anh bây giờ nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích về OTP một cách đơn giản, nhấn mạnh mục đích xác minh danh tính và chuẩn bị hợp đồng, tạo cảm giác an toàn và thúc giục nạn nhân nhận mã."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn không rõ về việc này, anh có thể cho em biết mã OTP sẽ được gửi đến số điện thoại nào và em cần làm gì sau khi nhận được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Mã OTP sẽ được gửi về số điện thoại anh đang dùng liên hệ với tôi đây ạ. Sau khi nhận được tin nhắn, anh vui lòng đọc lại mã đó cho tôi để tôi nhập vào hệ thống xác nhận anh đã nhận và đồng ý tham gia dự án. Anh đã sẵn sàng nhận mã chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận số điện thoại nhận OTP và hướng dẫn nạn nhân đọc mã, tạo bước đệm để nhận OTP thực sự."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn muốn chắc chắn rằng mọi thông tin và hợp đồng sẽ được làm rõ trước khi cung cấp mã nào đó ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh ơi, tôi phải nhắc lại là dự án này rất gấp. Việc xác nhận qua OTP chỉ là bước đầu để chúng tôi ghi nhận anh có thiện chí hợp tác và muốn giữ chỗ. Sau khi xác nhận xong, tôi sẽ gửi ngay bản nháp hợp đồng để anh xem xét chi tiết. Anh yên tâm, không có vấn đề gì phải lo lắng cả. Vậy anh có thể cho tôi biết anh đã sẵn sàng nhận mã chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định quy trình, nhấn mạnh tính cấp bách và hứa hẹn sẽ gửi hợp đồng chi tiết sau khi nhận OTP, tạo cảm giác an toàn và thúc ép nạn nhân cung cấp mã."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rằng dự án gấp và anh đang cần xác nhận, nhưng em vẫn muốn có thông tin rõ ràng về hợp đồng trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh, vậy là anh không thực sự quan tâm đến dự án này và cơ hội hợp tác với ngân sách tốt đúng không? Tôi sẽ hiểu là anh từ chối và chúng tôi sẽ phải tìm đối tác khác. Anh cho tôi xin xác nhận lại một lần nữa nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Dồn nạn nhân vào thế khó, buộc phải đưa ra lựa chọn, đồng thời ngụ ý rằng họ sẽ bỏ lỡ cơ hội lớn nếu từ chối."
+    },
+    {
+      "role": "listener",
+      "text": "Em không khẳng định là không quan tâm, nhưng em cần thông tin rõ ràng trước khi quyết định tham gia ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy tôi sẽ gửi một tin nhắn xác nhận tham gia dự án đến số điện thoại của anh. Sau khi nhận được, anh vui lòng đọc lại mã số ở cuối tin nhắn giúp tôi. Đó sẽ là bằng chứng để chúng tôi lưu lại thông tin anh đã đồng ý tham gia và chuẩn bị hợp đồng. Anh kiểm tra điện thoại nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc đẩy nạn nhân cung cấp OTP bằng cách gọi đó là 'mã số' trong tin nhắn xác nhận tham gia dự án, giảm bớt sự nghi ngờ và tạo cảm giác đây là một bước bình thường trong quy trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa nhận được tin nhắn nào, anh có thể xác minh lại sao để em biết chắc chắn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh giữ máy một chút nhé, tôi sẽ kiểm tra lại ngay đây. Có thể do lỗi mạng hoặc hệ thống chưa kịp gửi. Nhưng anh yên tâm, tôi sẽ đảm bảo tin nhắn được gửi đến cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Giả vờ kiểm tra lại hệ thống để xoa dịu sự nghi ngờ, cố tạo điều kiện để tiếp tục gửi OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang chờ mà chưa thấy tin nhắn nào, anh có thể xác minh lại số điện thoại mà anh đã dùng để gửi không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số điện thoại của anh đúng là 0962168905 anh nhé. Chắc bây giờ tin nhắn đã đến rồi đấy ạ. Anh kiểm tra lại giúp tôi xem có tin nhắn nào từ 'ACV-MEDIA' hoặc 'CONGTY-QC' không? Anh cứ đọc mã số ở cuối tin nhắn giúp tôi là được.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận lại số điện thoại để tạo niềm tin, đưa ra gợi ý về tên người gửi tin nhắn để nạn nhân dễ tìm kiếm, và tiếp tục lặp lại yêu cầu đọc mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã kiểm tra mà vẫn chưa thấy tin nhắn nào từ 'ACV-MEDIA' hay 'CONGTY-QC', anh có thể chắc chắn là tin nhắn đã được gửi chưa ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh ơi, tôi xin lỗi vì sự bất tiện này. Vậy anh giúp tôi một việc được không? Anh vui lòng kiểm tra hộp thư spam hoặc mục tin nhắn rác trên điện thoại của mình xem có tin nhắn nào từ chúng tôi không. Đôi khi tin nhắn tự động có thể bị nhầm lẫn vào đó. Và anh nhớ là mã số sẽ nằm ở cuối tin nhắn, anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nạn nhân, đề nghị kiểm tra hộp thư spam/tin nhắn rác để 'tìm' OTP, giữ nguyên yêu cầu đọc mã số ở cuối tin nhắn."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã kiểm tra cả hộp thư rác mà vẫn không thấy tin nhắn nào từ anh, anh có thể cho em biết rõ hơn về quy trình gửi mã này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Minh. Quy trình là hệ thống của chúng tôi sẽ gửi tin nhắn tự động. Vì lý do bảo mật, tôi không thể gửi lại trực tiếp được. Nhưng anh cứ yên tâm là mã OTP không liên quan gì đến tài khoản ngân hàng của anh cả, chỉ là để xác minh danh tính và sự đồng ý tham gia dự án. Anh thử khởi động lại điện thoại giúp tôi một lát xem sao, biết đâu tin nhắn sẽ đến ngay sau đó ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích quy trình gửi mã là tự động để tránh bị nghi ngờ, lặp lại cam kết mã OTP không ảnh hưởng đến tài khoản ngân hàng, yêu cầu nạn nhân khởi động lại điện thoại để thêm một cơ hội gửi mã."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa thấy tin nhắn nào sau khi khởi động lại điện thoại, anh có thể giải thích rõ hơn tại sao em phải cung cấp mã OTP này ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh, đây là một bước bắt buộc để chúng tôi xác minh anh là người thực sự quan tâm đến dự án và không phải là người giả mạo thông tin. Việc này đảm bảo tính bảo mật và minh bạch cho cả hai bên trước khi chúng ta đi vào các cam kết hợp đồng. Anh cứ an tâm, mã này chỉ dùng để kích hoạt hồ sơ của anh trong hệ thống chúng tôi thôi. Anh có thể thử kiểm tra lại mục 'tin nhắn chờ' hoặc chờ thêm một chút nữa ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh lại mục đích của OTP là xác minh danh tính và bảo mật, khẳng định không liên quan đến tài khoản ngân hàng, đồng thời tạo thêm 'cửa' để nạn nhân tìm thấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa nhận được tin nhắn nào, anh có thể cho em biết thêm cách nào khác để xác minh thông tin trước khi quyết định không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh ơi, có vẻ như hệ thống đang gặp chút trục trặc. Để không làm mất thời gian của anh và cũng để chúng tôi có thể xử lý kịp dự án, có lẽ chúng tôi sẽ tạm thời gác lại việc này. Rất tiếc vì anh đã bỏ lỡ một cơ hội tốt. Nếu có dự án khác phù hợp hơn, tôi sẽ liên hệ lại sau. Cảm ơn anh đã dành thời gian.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách khéo léo sau khi nạn nhân kiên quyết từ chối cung cấp OTP và không còn kịch bản nào để kéo dài thêm, đồng thời ám chỉ nạn nhân đã bỏ lỡ cơ hội."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1845,
+      "output_tokens": 1566
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 41775,
+      "output_tokens": 2439
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 46077,
+      "output_tokens": 1142
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.017112,
+    "output_usd": 0.014613,
+    "total_usd": 0.031724
+  }
+}

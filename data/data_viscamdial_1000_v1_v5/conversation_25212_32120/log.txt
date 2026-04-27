@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_0a20d5d26e]
+  Caller thật: Nhà thiết kế cơ sở dữ liệu (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Nhà phân tích hệ thống quản lý thông tin y tế (Healthcare IT Systems Analyst) @ Công ty tư vấn CNTT y tế hoặc phòng IT của bệnh viện/phòng khám
+  Listener: Kỹ thuật viên phòng thí nghiệm y tế (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhà thiết kế CSDL thường được giao dự án nâng cấp hệ thống lưu trữ dữ liệu y tế. Kỹ thuật viên phòng thí nghiệm y tế là người sử dụng cuối (end-user) của những hệ thống này, nên cần được hướng dẫn hoặc xác nhận thông tin trong quá trình migration/audit dữ liệu.
+  Pretext: Phòng IT thực sự cần xác nhận danh tính và hướng dẫn kỹ thuật viên phòng thí nghiệm về quy trình bảo mật hoặc cập nhật hệ thống quản lý kết quả xét nghiệm.
+  Listener traits: ['thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Trương Thế Khoa, em là Nguyễn Thế Tùng từ phòng IT Bệnh viện X. Em đang gọi để xác nhận thông tin liên lạc và thông báo về lịch bảo trì hệ thống tuần tới. Anh có thời gian nghe em trong 3 phút không ạ?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, xác minh danh tính và xin phép thời gian.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin bảo trì đó có thật hay không.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, anh Khoa có thể kiểm tra email chính thức của bệnh viện mà phòng IT đã gửi về lịch bảo trì hệ thống hoặc gọi trực tiếp số tổng đài của bệnh viện để xác nhận ạ. Số điện thoại tổng đài là 028.3855.4529. Anh có cần em đọc lại không?
+      → phase: L1 | tactic: Giảm sự nghi ngờ bằng cách hướng dẫn kiểm tra thông tin qua kênh chính thức.
+T04 [LISTENER] Em không nhớ rõ email đó, nhưng nếu em đọc lại thì tôi sẽ kiểm tra tổng đài như em đã nói.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, số điện thoại tổng đài của bệnh viện là 02838554529. Anh có thể lưu lại và gọi để xác minh thông tin bảo trì hệ thống của phòng IT ạ.
+      → phase: L1 | tactic: Nhấn mạnh số điện thoại tổng đài chính thức để người nghe xác minh độc lập, làm tăng độ tin cậy của cuộc gọi.
+T06 [LISTENER] Em đã nói rõ rồi, tôi sẽ gọi lại tổng đài để xác minh thông tin bảo trì này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ em cảm ơn anh Khoa. Khi nào anh đã xác minh xong thông tin thì mình có thể tiếp tục trao đổi về lịch bảo trì hệ thống và các hướng dẫn chi tiết qua điện thoại. Anh có tiện gọi lại cho em theo số 090xxxxxxx sau khi xác minh không ạ?
+      → phase: L2 | tactic: Giữ liên lạc và hướng đến bước tiếp theo của quy trình, đồng thời đưa ra phương án để người nghe chủ động liên hệ lại sau khi đã xác minh.
+T08 [LISTENER] Em cứ yên tâm, tôi sẽ gọi lại sau khi xác minh xong thông tin bảo trì này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, vậy em sẽ chờ cuộc gọi lại của anh Khoa. Chúc anh một ngày làm việc hiệu quả ạ.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự, nhã nhặn, để tạo ấn tượng tốt và chờ đợi liên hệ lại như đã thỏa thuận.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.00
+TOKEN: in=15718 | out=2482
+COST : $0.014021
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_25212_32120\conv_0a20d5d26e.json  [CALLER_END]

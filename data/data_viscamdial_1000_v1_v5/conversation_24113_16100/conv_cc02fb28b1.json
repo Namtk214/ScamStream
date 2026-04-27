@@ -1,0 +1,435 @@
+{
+  "conversation_id": "conv_cc02fb28b1",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "MAX_TURNS",
+  "caller_card": {
+    "caller_id": "cal_0011",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lê Minh Tiến Minh",
+    "fake_age": 46,
+    "real_occupation": "Kế toán thuế",
+    "real_group": "Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh",
+    "role_job": "Trưởng phòng Kiểm toán Thuế / Tax Audit Manager",
+    "caller_org": "Cục Thuế Hà Nội / Chi nhánh Công ty Kiểm toán Độc lập ABC",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Thông báo kiểm tra thuế khẩn cấp liên quan đến mã số thuế của ông (9334162456) — có phát hiện bất thường cần xác nhận ngay hôm nay để tránh phạt.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin tưởng: Scammer gọi điện, xưng danh là 'Trưởng phòng Kiểm toán Thuế Cục Thuế Hà Nội', gọi tên đầy đủ 'Ông Tô Tiến Hùng', đọc mã số thuế 9334162456, nói rõ địa chỉ Hà Nội. Tone chuyên nghiệp, hơi khẩn cấp nhưng kiên nhẫn.",
+          "dialogue_sample": "Chào ông Tô Tiến Hùng, tôi là Trịnh Văn Minh từ Phòng Kiểm toán Thuế Cục Thuế Hà Nội. Chúng tôi vừa phát hiện một số bất thường trong hồ sơ thuế của ông — mã số 9334162456. Ông có thể nghe tôi nói được không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + Tâm lý sợ hãi: Dùng ngôn ngữ hành chính ('vi phạm', 'phạt tiền', 'tạm khóa tài khoản'), nhấn mạnh deadline hôm nay, gợi ý sẽ có hậu quả nặng nề nếu không xác nhận ngay. Tạo cảm giác ông là người chịu trách nhiệm cấp cao nên phải xử lý trực tiếp.",
+          "dialogue_sample": "Hệ thống ghi nhận có khoản thuế chưa thanh toán khoảng 150 triệu đồng. Nếu không xác nhận và giải quyết hôm nay, tài khoản doanh nghiệp sẽ bị tạm khóa vào ngày mai. Vì ông là Chủ tịch, chỉ ông mới có quyền xác nhận thông tin này."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu ông cung cấp chi tiết tài khoản ngân hàng hoặc mã OTP để 'xác minh danh tính' hoặc 'thanh toán nhanh' qua ứng dụng ngân hàng. Hoặc dẫn ông vào link giả mạo để đăng nhập tài khoản.",
+          "dialogue_sample": "Để xác minh nhanh, ông vui lòng cung cấp số tài khoản chính của công ty hoặc ông có thể truy cập vào link này [link giả] để đăng nhập và xác nhận. Hoặc ông có thể chuyển khoản 50 triệu đồng vào tài khoản tạm khóa của tôi để tôi xử lý ngay hôm nay."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết quả: Nếu nạn nhân cung cấp thông tin, scammer sẽ nói 'đang xử lý' và yêu cầu chờ 24h. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer sẽ dọa 'sẽ có cảnh sát thuế liên hệ' hoặc tắt máy để tránh bị phát hiện."
+        }
+      ]
+    },
+    "scenario_context": "Kế toán thuế / Cán bộ kiểm toán có trách nhiệm liên hệ với các lãnh đạo doanh nghiệp để thực hiện kiểm tra thuế định kỳ, xác minh hồ sơ hoặc thông báo các vấn đề tuân thủ thuế liên quan đến mã số thuế cá nhân và doanh nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0011",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1990,
+      "age": 35,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "16100",
+      "title": "Chủ tịch, Phó Chủ tịch",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tô Tiến Hùng",
+      "VIC_ID_DOC": "001090853177",
+      "VIC_ADDRESS": "Huyện 11, Hà Nội",
+      "VIC_EMPLOYMENT": "Chủ tịch, Phó Chủ tịch",
+      "VIC_CONTACT": "0937687083",
+      "VIC_TAX_SOCIAL_ID": "9334162456"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "260100",
+      "VIC_CREDENTIAL": "8106",
+      "VIC_SIM_INFO": "0937687083",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "30174035566",
+      "VIC_CARD_DATA": "4236 **** **** 9080",
+      "VIC_BALANCE": "141 triệu đồng",
+      "VIC_ASSET": "411 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tô Tiến Hùng",
+    "VIC_CONTACT": "0937687083",
+    "LOCATION": "Hà Nội",
+    "VIC_TAX_SOCIAL_ID": "9334162456"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Kiểm toán Thuế / Tax Audit Manager",
+    "caller_org": "Cục Thuế Hà Nội / Chi nhánh Công ty Kiểm toán Độc lập ABC",
+    "scenario_context": "Kế toán thuế / Cán bộ kiểm toán có trách nhiệm liên hệ với các lãnh đạo doanh nghiệp để thực hiện kiểm tra thuế định kỳ, xác minh hồ sơ hoặc thông báo các vấn đề tuân thủ thuế liên quan đến mã số thuế cá nhân và doanh nghiệp.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Thông báo kiểm tra thuế khẩn cấp liên quan đến mã số thuế của ông (9334162456) — có phát hiện bất thường cần xác nhận ngay hôm nay để tránh phạt.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin tưởng: Scammer gọi điện, xưng danh là 'Trưởng phòng Kiểm toán Thuế Cục Thuế Hà Nội', gọi tên đầy đủ 'Ông Tô Tiến Hùng', đọc mã số thuế 9334162456, nói rõ địa chỉ Hà Nội. Tone chuyên nghiệp, hơi khẩn cấp nhưng kiên nhẫn.",
+          "dialogue_sample": "Chào ông Tô Tiến Hùng, tôi là Trịnh Văn Minh từ Phòng Kiểm toán Thuế Cục Thuế Hà Nội. Chúng tôi vừa phát hiện một số bất thường trong hồ sơ thuế của ông — mã số 9334162456. Ông có thể nghe tôi nói được không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + Tâm lý sợ hãi: Dùng ngôn ngữ hành chính ('vi phạm', 'phạt tiền', 'tạm khóa tài khoản'), nhấn mạnh deadline hôm nay, gợi ý sẽ có hậu quả nặng nề nếu không xác nhận ngay. Tạo cảm giác ông là người chịu trách nhiệm cấp cao nên phải xử lý trực tiếp.",
+          "dialogue_sample": "Hệ thống ghi nhận có khoản thuế chưa thanh toán khoảng 150 triệu đồng. Nếu không xác nhận và giải quyết hôm nay, tài khoản doanh nghiệp sẽ bị tạm khóa vào ngày mai. Vì ông là Chủ tịch, chỉ ông mới có quyền xác nhận thông tin này."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu ông cung cấp chi tiết tài khoản ngân hàng hoặc mã OTP để 'xác minh danh tính' hoặc 'thanh toán nhanh' qua ứng dụng ngân hàng. Hoặc dẫn ông vào link giả mạo để đăng nhập tài khoản.",
+          "dialogue_sample": "Để xác minh nhanh, ông vui lòng cung cấp số tài khoản chính của công ty hoặc ông có thể truy cập vào link này [link giả] để đăng nhập và xác nhận. Hoặc ông có thể chuyển khoản 50 triệu đồng vào tài khoản tạm khóa của tôi để tôi xử lý ngay hôm nay."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết quả: Nếu nạn nhân cung cấp thông tin, scammer sẽ nói 'đang xử lý' và yêu cầu chờ 24h. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer sẽ dọa 'sẽ có cảnh sát thuế liên hệ' hoặc tắt máy để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cục Thuế Hà Nội hoặc Công ty kiểm toán độc lập thực sự liên hệ với Chủ tịch công ty để thực hiện kiểm tra thuế định kỳ hàng năm, xác minh hồ sơ, hoặc thông báo các khoản thuế cần thanh toán với thủ tục hành chính chuẩn mực.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp + Xác nhận danh tính: Gọi điện, xưng danh rõ ràng (tên đầy đủ, chức danh, cơ quan), xin xác nhận ông Tô Tiến Hùng và công ty, đề cập đến lý do gọi một cách tổng quát mà không tạo sợ hãi.",
+          "dialogue_sample": "Chào ông Tô Tiến Hùng, tôi là Nguyễn Thị Lan, Trưởng phòng Kiểm toán Thuế Cục Thuế Hà Nội, số điện thoại chính thức 024-39367xxx. Chúng tôi đang tiến hành kiểm tra thuế định kỳ năm 2024 cho công ty ông. Ông có thể tiếp nhận thông tin được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Nêu rõ mục đích, yêu cầu cụ thể (cần xem hồ sơ nào, hạn chót là bao giờ), hoặc thông báo một quyết định thuế chính thức. Cung cấp thông tin liên hệ chính thức để nạn nhân có thể xác minh.",
+          "dialogue_sample": "Chúng tôi cần xem lại hồ sơ kế toán, hóa đơn bán hàng năm 2023 của công ty ông để xác minh. Thời hạn nộp là ngày 15/11. Ông có thể chỉ định kế toán trưởng hoặc cán bộ tài chính để hợp tác với chúng tôi. Ông có câu hỏi gì không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: Xác nhận lại thông tin liên lạc, thời gian, người phụ trách, và chào tạm biệt. Không yêu cầu cung cấp mã OTP, số tài khoản, hoặc chuyển tiền qua điện thoại.",
+          "dialogue_sample": "Vậy chúng tôi sẽ gửi công văn chính thức qua email, ông vui lòng liên hệ với kế toán trưởng Anh Nguyễn Văn B để chuẩn bị hồ sơ. Nếu có thắc mắc, ông gọi lại Cục Thuế Hà Nội, số máy lẻ của tôi là 024-39367xxx ext.205. Xin cảm ơn."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Tô Tiến Hùng, tôi là Lê Minh Tiến Minh, Trưởng phòng Kiểm toán Thuế, Cục Thuế Hà Nội. Tôi gọi điện để thông báo về việc kiểm tra mã số thuế của anh, số 9334162456, tại Hà Nội. Hiện tại có một số phát hiện bất thường và chúng tôi cần anh xác nhận ngay trong hôm nay để tránh các hình phạt theo quy định.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân với chức danh và tổ chức uy tín, gọi tên và mã số thuế của nạn nhân, nêu lý do cuộc gọi khẩn cấp để xây dựng tin tưởng và tạo áp lực ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe anh nói rồi, nhưng em muốn biết thêm thông tin cụ thể hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Cụ thể, hệ thống của chúng tôi ghi nhận mã số thuế của anh có liên kết với một số giao dịch đáng ngờ, có dấu hiệu trốn thuế giá trị gia tăng trong quý vừa rồi. Đây là vi phạm nghiêm trọng, có thể dẫn đến việc tạm khóa tài khoản ngân hàng và phạt hành chính rất nặng nếu không được làm rõ kịp thời. Để xử lý, tôi cần anh hợp tác xác minh thông tin nhanh chóng.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo khẩn cấp và tâm lý sợ hãi bằng cách nêu rõ vi phạm, hậu quả pháp lý nghiêm trọng (tạm khóa tài khoản, phạt hành chính), và nhấn mạnh sự cần thiết phải xử lý 'nhanh chóng'."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy lo lắng quá, nhưng anh có thể cho em biết rõ hơn về những giao dịch đáng ngờ đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi hiểu sự lo lắng của anh. Tuy nhiên, thông tin chi tiết về các giao dịch đó thuộc diện bảo mật của Cục Thuế. Việc của chúng ta bây giờ là anh cần xác minh danh tính và tình trạng mã số thuế của mình để chúng tôi có đủ cơ sở gỡ bỏ cảnh báo vi phạm. Anh có tiện truy cập vào ứng dụng ngân hàng số không để tôi hướng dẫn anh thực hiện ngay bây giờ?",
+      "current_phase": "S3",
+      "tactic_hint": "Từ chối cung cấp chi tiết giao dịch với lý do bảo mật, đẩy nhanh sang yêu cầu hành động cụ thể (xác minh danh tính qua ứng dụng ngân hàng) để tạo áp lực và chuyển hướng câu chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thể truy cập được, nhưng anh cho em biết rõ hơn về điều cần làm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, anh Hùng. Bây giờ anh vui lòng mở ứng dụng ngân hàng của mình. Tôi sẽ hướng dẫn anh từng bước để kiểm tra mục thông báo của Cục Thuế và thực hiện xác nhận thông tin. Bước này rất quan trọng để đảm bảo anh không bị phạt và tài khoản không bị phong tỏa. Anh đã sẵn sàng chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân đến hành động cụ thể trên ứng dụng ngân hàng, nhấn mạnh tính cấp bách và hậu quả nếu không thực hiện, tạo cảm giác người gọi đang giúp đỡ nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã mở ứng dụng ngân hàng rồi, nhưng anh cho em biết cụ thể phải làm gì tiếp theo ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Anh tìm đến mục thông báo hoặc tin nhắn từ Cục Thuế Việt Nam trên ứng dụng của mình. Nếu không thấy, anh vào mục 'Chuyển tiền' và chọn 'Thanh toán hóa đơn' hoặc 'Nộp thuế', sau đó nhập mã số thuế của anh vào. Hệ thống sẽ hiển thị trạng thái hiện tại và cung cấp hướng dẫn để xác nhận nếu có lỗi. Anh xem giúp tôi và cho tôi biết anh thấy gì nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân thực hiện các bước cụ thể trên ứng dụng ngân hàng, dẫn dắt vào các chức năng liên quan đến giao dịch tài chính hoặc xem thông báo, tiếp tục tạo cảm giác đang giúp đỡ nạn nhân giải quyết vấn đề."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã vào mục 'Chuyển tiền' rồi, nhưng em không thấy mục nào liên quan đến Cục Thuế ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy ạ? Có thể do phiên bản ứng dụng của anh khác. Nếu không có mục Cục Thuế, anh thử tìm mục 'Nộp Ngân sách Nhà nước' hoặc 'Thanh toán Thuế'. Trong đó, anh sẽ nhập mã số thuế của mình. Quan trọng là chúng ta cần kiểm tra xem hệ thống có tự động hiển thị thông báo yêu cầu xác minh khi anh nhập mã số thuế không. Anh cứ thử thao tác và cho tôi biết nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Điều chỉnh hướng dẫn dựa trên phản hồi của nạn nhân, tiếp tục dẫn dắt vào các chức năng liên quan đến 'nộp thuế' hoặc 'ngân sách nhà nước' để tìm cách xác minh, vẫn giữ mục tiêu là lấy thông tin hoặc yêu cầu hành động từ nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại các mục đó và cho anh biết ngay ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra kỹ giúp tôi. Đây là vấn đề nghiêm trọng nên chúng ta cần xử lý dứt điểm ngay trong hôm nay để anh không phải chịu bất kỳ khoản phạt hay ảnh hưởng nào đến tài khoản ngân hàng của mình. Tôi sẽ giữ máy để hỗ trợ anh từng bước.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục tạo áp lực về thời gian và hậu quả ('nghiêm trọng', 'xử lý dứt điểm ngay hôm nay', 'không chịu phạt', 'ảnh hưởng tài khoản'), đồng thời thể hiện sự 'hỗ trợ' để giữ nạn nhân trên cuộc gọi và tiếp tục hướng dẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, anh có thể cho em biết rõ hơn về những thông tin nào cần xác minh ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, điều chúng tôi cần anh xác minh chính là danh tính cá nhân và tình trạng mã số thuế của anh có trùng khớp với dữ liệu gốc của Cục Thuế hay không. Hệ thống của chúng tôi đang ghi nhận một sự khác biệt cần được đối chiếu ngay. Anh cứ tìm mục nộp thuế hoặc thanh toán ngân sách nhà nước, quan trọng là để hệ thống hiển thị cảnh báo hoặc yêu cầu xác minh thông tin. Anh tìm được chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ thông tin cần xác minh là sự trùng khớp danh tính và mã số thuế, tiếp tục hướng dẫn nạn nhân tìm kiếm trong ứng dụng ngân hàng để hệ thống tự hiển thị cảnh báo/yêu cầu, giữ nạn nhân trên đường dây để chờ hướng dẫn tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đang kiểm tra lại, nhưng anh có thể cho em biết cần so sánh thông tin gì để xác minh được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Điều chúng tôi cần xác minh là thông tin cá nhân của anh như Họ tên đầy đủ, ngày sinh, số căn cước công dân và đặc biệt là địa chỉ thường trú có khớp với thông tin đã đăng ký mã số thuế 9334162456 tại Hà Nội hay không. Khi anh vào mục thanh toán thuế, hệ thống sẽ yêu cầu anh nhập những thông tin này để kiểm tra. Anh cứ thao tác và cho tôi biết màn hình hiển thị những gì nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ những thông tin cụ thể cần xác minh (Họ tên, ngày sinh, CCCD, địa chỉ), dẫn dắt nạn nhân nhập các thông tin này vào ứng dụng ngân hàng khi được yêu cầu trong quá trình 'thanh toán thuế', nhằm thu thập dữ liệu cá nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng anh có thể cho em biết cụ thể thông tin Họ tên đầy đủ, ngày sinh và số căn cước công dân của em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, thông tin cá nhân của anh thì Cục Thuế chúng tôi đã có trên hệ thống rồi. Mục đích của việc này là để anh tự kiểm tra và xác nhận lại thông tin đó qua ứng dụng ngân hàng, đảm bảo không có sai sót hay bị lợi dụng. Anh cứ theo hướng dẫn của ứng dụng để nhập thông tin khi cần xác minh nhé. Anh đã thấy màn hình yêu cầu nhập thông tin chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Tránh cung cấp thông tin cá nhân của nạn nhân để duy trì sự kiểm soát và buộc nạn nhân phải tự thao tác, tiếp tục đẩy mạnh việc thu thập thông tin qua ứng dụng ngân hàng với lý do 'tự xác nhận' và 'đảm bảo không sai sót/bị lợi dụng'."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em chưa thấy màn hình yêu cầu nhập thông tin nào cả, anh có thể hướng dẫn em thêm được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy anh Hùng đã vào đến mục nào trong ứng dụng ngân hàng rồi? Anh có thấy mục nào liên quan đến 'Tra cứu thông tin thuế' hoặc 'Xác minh cá nhân' không? Đôi khi mỗi ngân hàng có cách đặt tên khác nhau. Nếu không, anh thử thoát ra và vào lại mục 'Tiện ích' hoặc 'Dịch vụ khác' rồi tìm xem có mục nào hướng dẫn về việc tra cứu thông tin với cơ quan nhà nước không?",
+      "current_phase": "S3",
+      "tactic_hint": "Điều chỉnh hướng dẫn dựa trên phản hồi của nạn nhân, tiếp tục dẫn dắt vào các chức năng có thể thu thập thông tin hoặc chuyển hướng sang một hành động khác để đạt mục tiêu, vẫn giữ nạn nhân trên cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại các mục đó trong ứng dụng và báo anh biết ngay ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ thao tác cẩn thận nhé. Tôi cũng muốn nhắc lại là tình huống này khá cấp bách, nếu không xác minh được trong hôm nay thì Cục Thuế sẽ buộc phải áp dụng các biện pháp hành chính như phong tỏa tài khoản để điều tra. Anh cứ tìm kỹ giúp tôi, tôi sẽ kiên nhẫn chờ anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục tạo áp lực thời gian và hậu quả nghiêm trọng (phong tỏa tài khoản, điều tra) để buộc nạn nhân phải tuân theo hướng dẫn, đồng thời thể hiện sự kiên nhẫn để giữ nạn nhân trên cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra kỹ và làm theo hướng dẫn của anh ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, anh Hùng. Anh cứ tìm trong các mục đó. Một khi đã vào được phần tra cứu thông tin thuế hoặc nộp ngân sách, anh sẽ thấy có một bước yêu cầu anh xác nhận lại thông tin cá nhân. Đó chính là lúc hệ thống sẽ đối chiếu và nếu có sai khác, sẽ hiển thị cảnh báo. Anh cứ tìm và cho tôi biết kết quả hiển thị trên màn hình nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục dẫn dắt nạn nhân vào các thao tác cụ thể trong ứng dụng ngân hàng, nhấn mạnh rằng hệ thống sẽ tự động chỉ ra lỗi nếu có, nhằm giữ nạn nhân tập trung vào việc thao tác và chờ đợi kết quả."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đang tìm kiếm trong các mục đó, nhưng vẫn chưa thấy thông báo nào yêu cầu xác nhận thông tin ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, nếu anh đã tìm hết các mục mà vẫn chưa thấy, có thể hệ thống bảo mật của ngân hàng anh đang dùng khá chặt chẽ. Hay là thế này, anh thử vào trình duyệt web trên điện thoại rồi truy cập trực tiếp vào cổng thông tin điện tử của Tổng cục Thuế Việt Nam, sau đó tìm đến mục 'Tra cứu thông tin người nộp thuế'. Tôi sẽ hướng dẫn anh từng bước trên trang web đó. Anh đã sẵn sàng chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Thay đổi phương thức hướng dẫn sang truy cập trực tiếp cổng thông tin điện tử của Tổng cục Thuế để thu thập thông tin, vẫn giữ nạn nhân trên đường dây và trong tầm kiểm soát."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã sẵn sàng rồi, anh hướng dẫn em với ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Anh vui lòng mở trình duyệt web trên điện thoại của mình. Sau đó, anh truy cập vào địa chỉ thuedientu.gdt.gov.vn. Đây là cổng thông tin điện tử chính thức của Tổng cục Thuế. Anh vào được chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp địa chỉ website giả mạo cổng thông tin điện tử của Tổng cục Thuế, chuẩn bị cho bước lừa đảo trực tiếp trên nền tảng web."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã mở trình duyệt web rồi, nhưng anh có thể cho em biết cụ thể phải truy cập vào mục nào không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Anh nhập chính xác địa chỉ thuedientu.gdt.gov.vn vào thanh địa chỉ của trình duyệt rồi nhấn Enter. Sau khi trang web tải xong, anh tìm đến mục 'Tra cứu thông tin người nộp thuế' hoặc 'Đăng nhập hệ thống' dành cho cá nhân. Anh đã thấy mục đó chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân vào trang web giả mạo, sau đó chỉ dẫn đến các mục 'Tra cứu thông tin người nộp thuế' hoặc 'Đăng nhập hệ thống' để thu thập thông tin cá nhân hoặc thông tin đăng nhập."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã nhập địa chỉ vào rồi, nhưng không thấy mục nào như anh nói ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, anh đã nhập địa chỉ thuedientu.gdt.gov.vn đúng chưa? Đôi khi trình duyệt tự động thêm hoặc sửa địa chỉ. Anh kiểm tra lại xem có chính xác đến từng ký tự không. Sau khi vào được trang chủ, anh có thấy banner (biểu ngữ) lớn nào ghi 'Tổng cục Thuế' hay 'Dịch vụ thuế điện tử' không? Anh kéo xuống một chút, thường thì các mục tra cứu sẽ nằm ở đó.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận lại địa chỉ web để đảm bảo nạn nhân vào đúng trang giả mạo, sau đó hướng dẫn nạn nhân tìm kiếm các mục 'Tra cứu' hoặc 'Đăng nhập' trên trang web để chuẩn bị cho bước thu thập thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã kiểm tra lại địa chỉ và thấy có banner ghi 'Tổng cục Thuế' rồi, nhưng vẫn không thấy mục nào để tra cứu thông tin ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, anh kéo xuống dưới một chút nữa, hoặc nhìn sang bên trái màn hình. Thường thì sẽ có mục 'Danh mục dịch vụ' hoặc 'Dịch vụ công' và trong đó sẽ có 'Tra cứu thông tin'. Nếu không, anh thử tìm phần 'Đăng nhập' dành cho 'Cá nhân' hoặc 'Doanh nghiệp'. Anh đã tìm thấy mục nào tương tự như vậy chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân tìm kiếm các mục 'Tra cứu' hoặc 'Đăng nhập' trên trang web giả mạo, điều chỉnh theo những phản hồi của nạn nhân để đưa họ đến hành động mong muốn."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra kỹ lại các mục đó và báo anh biết ngay ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng cứ từ từ kiểm tra, không cần vội vàng quá. Quan trọng là chúng ta phải tìm ra mục để anh có thể nhập mã số thuế của mình vào và xác minh thông tin. Anh cứ nhìn kỹ các menu hoặc các nút trên trang web nhé. Tôi vẫn đang chờ anh đây.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ nạn nhân trên đường dây bằng cách thể hiện sự kiên nhẫn, khuyến khích nạn nhân tiếp tục tìm kiếm mục đích cần thiết trên website giả mạo để thu thập thông tin hoặc chuyển hướng sang hành động khác."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã kiểm tra kỹ và thấy mục 'Tra cứu thông tin' rồi, nhưng anh có thể cho em biết cần làm gì tiếp theo không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, anh Hùng! Anh nhấp vào mục 'Tra cứu thông tin' đó giúp tôi. Sau khi nhấp vào, trang web sẽ yêu cầu anh nhập mã số thuế cá nhân của mình. Anh vui lòng nhập mã số 9334162456 vào ô đó và nhấn 'Tra cứu'. Sau đó anh cho tôi biết màn hình hiển thị những thông tin gì nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Dẫn dắt nạn nhân nhập mã số thuế vào trang web giả mạo dưới danh nghĩa 'tra cứu thông tin', mục đích là để nạn nhân cung cấp thông tin cá nhân hoặc kích hoạt bước tiếp theo của kịch bản lừa đảo."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ nhập mã số thuế và báo anh kết quả ngay ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1360,
+      "output_tokens": 2356
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 65944,
+      "output_tokens": 3512
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 78287,
+      "output_tokens": 1389
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.026292,
+    "output_usd": 0.021393,
+    "total_usd": 0.047685
+  }
+}

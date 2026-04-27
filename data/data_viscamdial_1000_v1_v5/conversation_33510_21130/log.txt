@@ -1,0 +1,97 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_753a318d34]
+  Caller thật: Nhân viên hải quan của Chính phủ (Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước)
+  Caller đóng vai: Trưởng phòng Kiểm soát hàng hóa hóa chất - Cục Hải quan @ Cục Hải quan Việt Nam - Chi cục Hải quan Cần Thơ
+  Listener: Nhà hóa học (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhà hóa học có thể nhập khẩu/xuất khẩu hóa chất công nghiệp hoặc làm việc tại công ty có hoạt động liên quan. Hải quan cần xác minh thông tin kỹ thuật hoặc yêu cầu cấp giấy phép từ chuyên gia để thông quan hàng hóa.
+  Pretext: Cục Hải quan thực sự liên hệ để thông báo hàng hóa hóa chất cần giấy chứng nhận kỹ thuật từ chuyên gia hoặc xác minh thông tin kỹ thuật trước khi thông quan.
+  Listener traits: ['hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào anh Trần Đức Quang Đạt, em là Phạm Quang Vinh, Trưởng phòng Kiểm soát hàng hóa hóa chất - Cục Hải quan Việt Nam, thuộc Chi cục Hải quan Cần Thơ. Chúng em có một lô hàng hóa chất của công ty anh đang tại cảng, cần xác minh thông tin kỹ thuật để thông quan. Anh có thể trợ giúp em được không ạ?
+      → phase: L1 | tactic: Tiếp cận chính thức, giới thiệu vai trò và mục đích cuộc gọi.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin này có đúng không đã.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, anh cứ yên tâm ạ. Anh có thể gọi trực tiếp đến số tổng đài 1900 9299 của Tổng cục Hải quan hoặc truy cập trang web chính thức của Tổng cục Hải quan Việt Nam để xác minh thông tin về Chi cục Hải quan Cần Thơ và phòng kiểm soát hàng hóa hóa chất ạ. Sau khi xác minh, anh gọi lại cho em số này nhé. Em sẽ cung cấp mã tham chiếu lô hàng cho anh ạ.
+      → phase: L1 | tactic: Giảm nghi ngờ, hướng dẫn xác minh thông tin chính thức, tạo niềm tin.
+T04 [LISTENER] Em cảm ơn thông tin em đã nghe, nhưng tôi vẫn muốn xác nhận lại việc lô hàng này là của công ty nào và có thông tin gì cụ thể hơn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để em cung cấp thêm thông tin chi tiết ạ. Lô hàng này thuộc Công ty TNHH Hóa Chất Đạt Phát, là lô hàng số hiệu HQ-CC-2023-08-05-001, chứa các hóa chất công nghiệp như axit sulfuric và natri hydroxit. Chúng em cần anh xác nhận thành phần hóa học chính xác và mục đích sử dụng cụ thể của từng loại để đảm bảo tuân thủ quy định về hóa chất nguy hiểm ạ. Anh có thể gửi các giấy tờ này qua email chính thức của Chi cục hoặc đến trực tiếp Chi cục Hải quan Cần Thơ để ký các giấy tờ cần thiết ạ.
+      → phase: L2 | tactic: Cung cấp chi tiết lô hàng, yêu cầu thông tin kỹ thuật, và hướng dẫn cách thức cung cấp tài liệu.
+T06 [LISTENER] Em đã nghe thông tin về lô hàng, nhưng tôi muốn hỏi rõ hơn về công ty TNHH Hóa Chất Đạt Phát, em có thể cho tôi biết thêm một chút về họ không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ, Công ty TNHH Hóa Chất Đạt Phát là một trong những doanh nghiệp hoạt động lâu năm trong lĩnh vực nhập khẩu và phân phối hóa chất công nghiệp tại Việt Nam ạ. Họ có trụ sở chính ở Vĩnh Long. Lô hàng này được khai báo là nguyên liệu sản xuất cho ngành dệt may và xử lý nước. Hàng đang được lưu tại kho của Chi cục Hải quan Cần Thơ, ạ. Anh có muốn em cung cấp thêm thông tin về công ty hay về quy trình kiểm tra hóa chất không ạ?
+      → phase: L2 | tactic: Cung cấp thêm thông tin về công ty và lô hàng để xây dựng niềm tin và sự rõ ràng, đồng thời hỏi xem nạn nhân có muốn thêm thông tin quy trình nhằm thể hiện tính chuyên nghiệp và sẵn sàng hỗ trợ.
+T08 [LISTENER] Tôi muốn biết thêm về quy trình kiểm tra hóa chất và yêu cầu cần thiết để thông quan lô hàng này, em có thể chia sẻ không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, quy trình kiểm tra hóa chất thì bên em sẽ dựa trên các tiêu chuẩn do Bộ Công Thương và Bộ Y tế ban hành. Đối với lô hàng này, chúng em cần xác minh giấy chứng nhận phân tích (COA) của từng loại hóa chất, bảng dữ liệu an toàn hóa chất (MSDS) và giấy phép nhập khẩu hóa chất nếu có. Đặc biệt, chúng em cần anh xác nhận lại mục đích sử dụng hóa chất này có đúng với khai báo ban đầu hay không để tránh sai sót. Anh có thể gửi các tài liệu này qua email chính thức của Chi cục là hcqt.cantho@customs.gov.vn hoặc trực tiếp nộp tại quầy tiếp nhận hồ sơ số 3 tại Chi cục Hải quan Cần Thơ, địa chỉ số 145 đường 30 Tháng 4, phường Hưng Lợi, quận Ninh Kiều, TP Cần Thơ ạ.
+      → phase: L2 | tactic: Giải thích chi tiết quy trình kiểm tra hóa chất và các giấy tờ cần thiết, hướng dẫn cụ thể về cách thức nộp tài liệu để tạo sự thuận tiện và minh bạch.
+T10 [LISTENER] Em đã nghe em nói rõ về quy trình kiểm tra rồi, nhưng tôi vẫn muốn đảm bảo rằng mọi tài liệu tôi gửi sẽ được bảo mật và xử lý đúng cách ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ anh cứ yên tâm tuyệt đối ạ. Tất cả hồ sơ, tài liệu của anh khi gửi về Chi cục đều được bảo mật theo quy định của pháp luật và chỉ được sử dụng cho mục đích thông quan lô hàng này thôi ạ. Sau khi lô hàng được thông quan, các tài liệu sẽ được lưu trữ và quản lý theo đúng quy định của Nhà nước. Anh có thắc mắc gì khác về quy trình bảo mật không ạ?
+      → phase: L2 | tactic: Trấn an về vấn đề bảo mật thông tin, khẳng định tuân thủ quy định pháp luật và đặt câu hỏi mở để tiếp tục hỗ trợ.
+T12 [LISTENER] Tôi cảm ơn em đã giải thích rõ, nhưng tôi vẫn muốn hỏi thêm về việc xác nhận các thông tin cụ thể của lô hàng, em có thể cho tôi biết cách thức thực hiện không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ, anh muốn xác nhận thông tin cụ thể nào về lô hàng ạ? Em có thể cung cấp lại mã tham chiếu, tên công ty, loại hóa chất hoặc các yêu cầu về giấy tờ cần thiết. Anh cần em nhắc lại thông tin nào để anh tiện theo dõi và chuẩn bị tài liệu không ạ? Hoặc anh có muốn em gửi tóm tắt những thông tin này qua email chính thức của anh không ạ?
+      → phase: L2 | tactic: Tái khẳng định sự sẵn lòng cung cấp thông tin, đưa ra các lựa chọn cụ thể để nạn nhân có thể dễ dàng yêu cầu thông tin mong muốn, đồng thời đề xuất cách thức gửi thông tin tiện lợi.
+T14 [LISTENER] Tôi muốn xác nhận lại mã tham chiếu lô hàng và các giấy tờ cần thiết, em có thể nhắc lại cho tôi được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ vâng ạ. Mã tham chiếu của lô hàng là HQ-CC-2023-08-05-001. Về giấy tờ cần thiết, em xin nhắc lại là anh cần chuẩn bị: Giấy chứng nhận phân tích (COA) của từng loại hóa chất, bảng dữ liệu an toàn hóa chất (MSDS), và giấy phép nhập khẩu hóa chất (nếu có). Ngoài ra, quan trọng nhất là xác nhận lại mục đích sử dụng cụ thể của từng loại hóa chất trong lô hàng này ạ. Anh có cần em gửi tóm tắt các thông tin này qua email cho tiện theo dõi không ạ?
+      → phase: L2 | tactic: Nhắc lại mã tham chiếu và các giấy tờ cần thiết một cách rõ ràng, mạch lạc, đồng thời đề xuất gửi tóm tắt qua email để tăng tính tiện lợi và chuyên nghiệp.
+T16 [LISTENER] Em đã nghe em nói rõ về mã tham chiếu lô hàng và các giấy tờ cần thiết, nhưng tôi vẫn muốn kiểm tra lại thông tin về địa chỉ email để gửi tài liệu cho đúng ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ vâng ạ, địa chỉ email chính thức của Chi cục Hải quan Cần Thơ để anh gửi tài liệu là hcqt.cantho@customs.gov.vn. Anh lưu ý là viết không dấu và không có khoảng cách ạ. Nếu anh có bất kỳ khó khăn nào trong quá trình gửi, anh cứ liên hệ lại số điện thoại này để em hướng dẫn thêm nhé.
+      → phase: L2 | tactic: Cung cấp địa chỉ email cụ thể, hướng dẫn chi tiết cách viết và nhắc lại sự hỗ trợ nếu có vấn đề.
+T18 [LISTENER] Em đã nghe địa chỉ email rồi, nhưng tôi muốn kiểm tra lại số điện thoại để liên hệ nếu cần thiết ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ, anh cứ gọi lại số điện thoại em đang dùng để liên hệ với anh bây giờ ạ: 0328722867. Đây là số điện thoại công vụ cá nhân của em, Trưởng phòng Kiểm soát hàng hóa hóa chất. Anh có thể lưu lại để tiện liên hệ khi cần thiết ạ. Anh còn cần em hỗ trợ thông tin gì nữa không ạ?
+      → phase: L2 | tactic: Cung cấp số điện thoại liên hệ trực tiếp, xác nhận tính chính thức và sẵn sàng hỗ trợ thêm các thắc mắc khác.
+T20 [LISTENER] Tôi đã nghe em nói về số điện thoại rồi, nhưng tôi muốn chắc chắn một lần nữa rằng đây là số chính thức của Chi cục Hải quan Cần Thơ phải không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Dạ vâng, đây là số điện thoại công vụ cá nhân của em, thuộc Chi cục Hải quan Cần Thơ, dùng để liên hệ trực tiếp với các trường hợp liên quan đến hàng hóa hóa chất. Anh có thể lưu lại và gọi cho em bất cứ khi nào cần hỗ trợ thêm thông tin về lô hàng của mình ạ. Em cam kết chỉ sử dụng thông tin anh cung cấp cho mục đích thông quan hợp pháp thôi ạ.
+      → phase: L2 | tactic: Tái khẳng định tính chính thức của số điện thoại cá nhân trong phạm vi công việc, cam kết bảo mật thông tin và trấn an người nghe lần cuối.
+T22 [LISTENER] Em cảm ơn đã trả lời rõ ràng, nhưng tôi vẫn có một chút nghi ngờ về tính xác thực của cuộc gọi này, em có thể cho tôi biết thêm về quy trình xác minh thông tin không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T23 [CALLER] Dạ, nếu anh có bất kỳ nghi ngờ nào về tính xác thực của cuộc gọi này, anh vui lòng gác máy và gọi trực tiếp đến tổng đài 1900 9299 của Tổng cục Hải quan Việt Nam để xác minh thông tin về Chi cục Hải quan Cần Thơ và tên em, Phạm Quang Vinh. Hoặc anh có thể đến trực tiếp Chi cục Hải quan Cần Thơ tại địa chỉ em vừa cung cấp để kiểm tra ạ. Chúng em luôn khuyến khích anh xác minh thông tin để đảm bảo quyền lợi của mình ạ.
+      → phase: L2 | tactic: Hướng dẫn người nghe xác minh thông tin qua kênh chính thức để giảm nghi ngờ và tăng cường niềm tin.
+T24 [LISTENER] Tôi hiểu rồi, nhưng tôi vẫn muốn kiểm tra lại thông tin về tên và địa chỉ của Chi cục Hải quan Cần Thơ để chắc chắn ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T25 [CALLER] Dạ, em xin nhắc lại ạ. Em là Phạm Quang Vinh, Trưởng phòng Kiểm soát hàng hóa hóa chất. Chi cục Hải quan Cần Thơ có địa chỉ tại số 145 đường 30 Tháng 4, phường Hưng Lợi, quận Ninh Kiều, TP Cần Thơ. Anh có thể lên Google Maps tìm kiếm để xác minh thêm ạ. Anh cứ kiểm tra kỹ lưỡng để yên tâm nhất nhé.
+      → phase: L2 | tactic: Nhắc lại rõ ràng thông tin tên, chức danh và địa chỉ chi cục, khuyến khích người nghe tự xác minh để củng cố niềm tin và giảm bớt nghi ngờ.
+T26 [LISTENER] Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn muốn hỏi thêm về quy trình và thời gian xử lý các giấy tờ sau khi gửi đến Chi cục Hải quan Cần Thơ ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T27 [CALLER] Dạ, sau khi Chi cục nhận được đầy đủ các giấy tờ cần thiết và xác minh thông tin, quy trình xử lý để thông quan lô hàng của anh thường mất khoảng từ 3 đến 5 ngày làm việc. Trong thời gian đó, nếu có bất kỳ vấn đề phát sinh hoặc cần bổ sung thông tin gì, chúng em sẽ chủ động liên hệ lại với anh qua số điện thoại này hoặc qua email chính thức ạ.
+      → phase: L3 | tactic: Thông báo thời gian xử lý hồ sơ và quy trình tiếp theo, đồng thời khẳng định sẽ liên hệ lại nếu có vấn đề, hướng tới kết thúc cuộc gọi.
+T28 [LISTENER] Em cảm ơn thông tin về thời gian xử lý, nhưng tôi vẫn muốn hỏi thêm về cách thức và thời gian liên hệ lại nếu cần bổ sung thông tin ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T29 [CALLER] Dạ, nếu cần bổ sung thông tin, chúng em sẽ liên hệ trực tiếp đến số điện thoại anh đang sử dụng hoặc qua địa chỉ email chính thức mà anh đã cung cấp khi làm thủ tục khai báo. Thời gian liên hệ sẽ nằm trong giờ hành chính, từ 8h sáng đến 5h chiều các ngày làm việc ạ.
+      → phase: L3 | tactic: Làm rõ cách thức và thời gian liên hệ bổ sung thông tin, củng cố quy trình làm việc chuyên nghiệp trước khi kết thúc.
+T30 [LISTENER] Tôi đã hiểu rồi, nhưng tôi vẫn muốn chắc chắn mọi thứ trước khi tiến hành, em có thể nhắc lại cho tôi một lần nữa về thời gian làm việc của Chi cục Hải quan Cần Thơ không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T31 [CALLER] Dạ vâng, Chi cục Hải quan Cần Thơ làm việc vào giờ hành chính, từ 7 giờ 30 sáng đến 11 giờ 30 trưa và từ 1 giờ chiều đến 5 giờ chiều, từ thứ Hai đến thứ Sáu hàng tuần ạ. Anh có thể đến nộp hồ sơ hoặc liên hệ trong khung giờ này ạ. Em cảm ơn anh nhiều nhé.
+      → phase: L3 | tactic: Nhắc lại giờ làm việc và sau đó kết thúc cuộc gọi một cách lịch sự, đã hoàn thành mục đích.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  31 turns | suspicion=0.10
+TOKEN: in=94215 | out=5512
+COST : $0.032590
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_33510_21130\conv_753a318d34.json  [CALLER_END]

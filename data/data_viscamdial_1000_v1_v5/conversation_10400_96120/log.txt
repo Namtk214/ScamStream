@@ -1,0 +1,74 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_9865aa0e9a]
+  Caller thật: Bí thư, Phó Bí thư Đảng ủy cấp xã (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Trưởng phòng Quản lý Đô thị & Vệ sinh Công cộng - Sở Xây dựng (hoặc nâng cấp: Phó Chủ tịch UBND xã) @ Sở Xây dựng / UBND xã / Ban Quản lý Vệ sinh Đô thị
+  Listener: Người thu dọn, sắp xếp, phân loại rác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người thu dọn rác là đối tượng trực tiếp thuộc diện quản lý của cơ quan công quyền cấp xã/huyện. Lãnh đạo Đảng ủy hoặc Sở Xây dựng có lý do chính đáng gọi để kiểm tra, xác minh thông tin công nhân vệ sinh (hợp đồng, bảo hiểm, kỷ luật, hoặc thông báo chương trình đặc biệt).
+  Pretext: Xác minh thông tin cấp bảo hiểm xã hội & bảo hiểm y tế cho công nhân vệ sinh công cộng trong khuôn khổ chương trình hỗ trợ kinh tế từ Chính phủ. Scammer sẽ dùng tên thật + CCCD của nạn nhân để tạo độ tin cậy ban đầu, sau đó yêu cầu xác thực qua OTP ngân hàng hoặc chuyển khoản 'phí xác minh' để nhận hỗ trợ.
+  Listener traits: ['dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Alo, tôi là Đinh Hữu Khoa, Trưởng phòng Quản lý Đô thị và Vệ sinh Công cộng Sở Xây dựng đây ạ. Tôi muốn xác nhận thông tin với chị Trần Thanh Trang, số căn cước công dân 040184911018, có phải không ạ?
+      → phase: S1 | tactic: Xưng danh và dùng thông tin cá nhân để tạo lòng tin ban đầu.
+T02 [LISTENER] Vâng, tôi là Trần Thanh Trang, có chuyện gì không anh?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào chị Trang. Hiện tại, Sở chúng tôi đang rà soát và cấp bổ sung chính sách bảo hiểm xã hội, bảo hiểm y tế theo chương trình hỗ trợ kinh tế của Chính phủ cho các công nhân vệ sinh công cộng. Chúng tôi phát hiện hồ sơ của chị đang bị thiếu một số tài liệu quan trọng.
+      → phase: S2 | tactic: Giải thích lý do cuộc gọi và tạo tình huống khẩn cấp về việc thiếu tài liệu để nhận hỗ trợ.
+T04 [LISTENER] Ôi, anh nói vậy thì tôi lo quá, vậy tôi cần làm gì để bổ sung hồ sơ ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, chị yên tâm, chúng tôi gọi để hỗ trợ chị hoàn thiện thủ tục thôi. Nhưng hôm nay là hạn chót để nộp bổ sung đấy ạ. Nếu không hoàn thành trong hôm nay, chị sẽ mất quyền nhận khoản hỗ trợ 3 triệu đồng từ Chính phủ đấy ạ.
+      → phase: S2 | tactic: Nhấn mạnh tính khẩn cấp và lợi ích bị mất nếu không hành động để tạo áp lực cho nạn nhân.
+T06 [LISTENER] Ôi, 3 triệu đồng thì quan trọng quá, anh có thể cho tôi biết cần bổ sung tài liệu gì không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, do hồ sơ của chị có sự thiếu sót về mặt thông tin, nên để xác minh lại và đẩy nhanh tiến độ cho chị kịp nhận hỗ trợ, chúng tôi sẽ gửi một mã OTP về số điện thoại của chị. Chị nhận được mã rồi đọc lại cho tôi để chúng tôi hoàn tất thủ tục nhé.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể để xác minh thông tin, cụ thể là yêu cầu OTP.
+T08 [LISTENER] Cái mã OTP là gì anh, tôi không rõ lắm ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] OTP là mã xác thực dùng một lần để bảo vệ thông tin cá nhân của chị đấy ạ. Chị cứ yên tâm, đây là thủ tục bắt buộc để đảm bảo chỉ có chính chủ mới được nhận hỗ trợ thôi. Chị kiểm tra điện thoại xem có tin nhắn chưa ạ?
+      → phase: S3 | tactic: Giáo dục nạn nhân về OTP để giảm nghi ngờ và thúc đẩy hành động, đồng thời khẳng định tính bảo mật và cấp thiết.
+T10 [LISTENER] Tôi chưa thấy tin nhắn nào, anh có thể giải thích thêm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] À vâng, có thể do hệ thống đang hơi chậm một chút. Chị cứ giữ máy, tôi sẽ thử gửi lại mã OTP ngay bây giờ. Chị để ý tin nhắn đến nhé. Sau khi nhận được mã, chị vui lòng đọc lại giúp tôi để tôi cập nhật hồ sơ cho chị kịp thời.
+      → phase: S3 | tactic: Giữ nạn nhân trên điện thoại, trấn an và tiếp tục thúc đẩy việc nhận và đọc OTP.
+T12 [LISTENER] Tôi vẫn đang đợi đây, anh có thể gửi lại cho tôi nhanh không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Vâng, chị yên tâm, tôi đang thao tác gửi lại ạ. Chị kiểm tra điện thoại xem có tin nhắn từ ngân hàng hoặc một mã số gửi đến không nhé. Mã này chỉ có giá trị trong vài phút thôi, để đảm bảo kịp thời xử lý hồ sơ, chị nhận được thì đọc lại giúp tôi nhé.
+      → phase: S3 | tactic: Trấn an và tạo áp lực về thời gian, đồng thời hướng dẫn cụ thể nạn nhân tìm kiếm tin nhắn OTP và yêu cầu đọc lại ngay lập tức.
+T14 [LISTENER] Tôi vẫn chưa nhận được tin nhắn nào cả, anh có thể kiểm tra lại giúp tôi không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Chị Trang, chị kiểm tra lại giúp tôi xem có thể tin nhắn rơi vào mục spam hoặc tin nhắn quảng cáo không ạ? Đôi khi các nhà mạng sẽ lọc các tin nhắn mã xác thực. Chị xem kỹ giúp tôi nhé, mã này rất quan trọng để hoàn thành hồ sơ.
+      → phase: S3 | tactic: Hướng dẫn nạn nhân kiểm tra các thư mục tin nhắn khác, vẫn giữ áp lực về tầm quan trọng của OTP.
+T16 [LISTENER] Tôi kiểm tra rồi, không thấy tin nhắn nào hết, anh có cách nào khác không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] À vâng, để tôi kiểm tra lại trong hệ thống bên tôi liệu có lỗi gì không. Chị cứ giữ máy giúp tôi một chút nhé. Có thể do trục trặc kỹ thuật tạm thời, nhưng chị cứ yên tâm là chúng tôi sẽ hỗ trợ chị đến cùng để chị không mất quyền lợi.
+      → phase: S3 | tactic: Trấn an nạn nhân và tạo cảm giác bên mình đang cố gắng hỗ trợ, đồng thời giữ nạn nhân trên đường dây để tìm cách khác khai thác.
+T18 [LISTENER] Vâng, tôi sẽ giữ máy, nhưng anh cố gắng nhanh lên nhé vì tôi rất lo lắng cho khoản hỗ trợ này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Vâng, chị Trang cứ yên tâm. Tôi đã kiểm tra lại rồi, có vẻ như hệ thống đang gặp lỗi nhỏ trong việc gửi mã xác thực qua tin nhắn. Vậy thì để thuận tiện hơn và đảm bảo chị nhận được hỗ trợ kịp thời, chị có thể chuyển tạm một khoản phí xác minh 500 nghìn đồng vào tài khoản của Sở. Khoản phí này sẽ được hoàn lại ngay sau khi hồ sơ của chị được cập nhật, cộng với 3 triệu đồng hỗ trợ kia, tổng cộng là 3 triệu 500 nghìn đồng ạ.
+      → phase: S3 | tactic: Chuyển sang yêu cầu chuyển khoản tiền phí xác minh thay vì OTP, tận dụng sự lo lắng của nạn nhân về khoản hỗ trợ.
+T20 [LISTENER] Ôi, anh nói vậy thì tôi thấy không ổn lắm, tôi chỉ muốn nhận khoản hỗ trợ 3 triệu đồng thôi, không biết có cách nào khác không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Vâng, tôi hiểu sự lo lắng của chị. Nhưng đây là quy trình bắt buộc để đảm bảo tính minh bạch và tránh trục lợi chính sách. Số tiền 500 nghìn đồng này sẽ được hoàn lại ngay lập tức khi hệ thống ghi nhận hồ sơ của chị đã được xác minh thành công. Nếu không có khoản chuyển khoản này để xác nhận, hồ sơ của chị vẫn sẽ bị coi là chưa hoàn tất và nguy cơ mất trắng 3 triệu đồng hỗ trợ là rất cao đấy chị ạ.
+      → phase: S3 | tactic: Trấn an, nhấn mạnh tính bắt buộc của quy trình và tạo áp lực về hậu quả tài chính nếu không tuân thủ.
+T22 [LISTENER] Em hiểu, nhưng 500 nghìn đồng là số tiền cũng không nhỏ, liệu có cách nào khác không anh?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  22 turns | suspicion=0.00
+TOKEN: in=51633 | out=4626
+COST : $0.026200
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_10400_96120\conv_9865aa0e9a.json  [SCAM_REFUSE]

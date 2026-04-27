@@ -1,0 +1,214 @@
+{
+  "conversation_id": "conv_41faddc1cd",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0044",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lê Quang Thành",
+    "fake_age": 46,
+    "real_occupation": "Thợ vận hành máy đào hầm (kể cả thợ vận hành máy kích ống)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên an toàn lao động / Kiểm tra sức khỏe định kỳ từ công ty xây dựng",
+    "caller_org": "Công ty Xây dựng Hạ tầng Việt Nam (hoặc chi nhánh địa phương)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty xây dựng liên hệ để thông báo chương trình kiểm tra sức khỏe định kỳ hoặc mời huấn luyện viên thể thao tham gia hợp tác (cung cấp dịch vụ huấn luyện thể lực, tư vấn sức khỏe cho nhân viên).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Đây là phòng Nhân sự công ty Xây dựng Hạ tầng Việt Nam' + cung cấp số điện thoại chính thức của công ty. Xác nhận đúng người: 'Tôi cần tìm chị Dương Thu Nhi, phải không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giải thích rõ ràng mục đích gọi (ví dụ: 'Công ty đang tuyển huấn luyện viên thể thao để hỗ trợ chương trình thể lực cho nhân viên' hoặc 'Mời chị tham gia khám sức khỏe định kỳ vào ngày X tại địa chỉ Y'). Cung cấp thông tin chi tiết, không yêu cầu thông tin nhạy cảm qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu là hợp tác, sắp xếp cuộc họp trực tiếp hoặc gửi email chính thức. Nếu là thông báo, hẹn nạn nhân đến địa điểm cụ thể với giấy tờ chính thức. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    },
+    "scenario_context": "Thợ vận hành máy đào hầm làm việc tại các công trường xây dựng lớn, nơi thường có yêu cầu kiểm tra sức khỏe định kỳ cho công nhân. Huấn luyện viên thể thao có thể được liên hệ để cung cấp chứng chỉ sức khỏe hoặc tham gia chương trình kiểm tra y tế doanh nghiệp mở rộng cho nhân viên/gia đình của công ty xây dựng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0044",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1979,
+      "age": 46,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "34221",
+      "title": "Huấn luyện viên thể thao",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Thu Nhi",
+      "VIC_ID_DOC": "038179163743",
+      "VIC_ADDRESS": "Huyện 4, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Huấn luyện viên thể thao",
+      "VIC_CONTACT": "0822533296",
+      "VIC_TAX_SOCIAL_ID": "1532209026"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "079741",
+      "VIC_CREDENTIAL": "8267",
+      "VIC_SIM_INFO": "0822533296",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "4901457724199",
+      "VIC_CARD_DATA": "4229 **** **** 3525",
+      "VIC_BALANCE": "57 triệu đồng",
+      "VIC_ASSET": "244 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Thu Nhi",
+    "VIC_CONTACT": "0822533296",
+    "VIC_BANK_ACCOUNT": "4901457724199",
+    "VIC_TAX_SOCIAL_ID": "1532209026"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên an toàn lao động / Kiểm tra sức khỏe định kỳ từ công ty xây dựng",
+    "caller_org": "Công ty Xây dựng Hạ tầng Việt Nam (hoặc chi nhánh địa phương)",
+    "scenario_context": "Thợ vận hành máy đào hầm làm việc tại các công trường xây dựng lớn, nơi thường có yêu cầu kiểm tra sức khỏe định kỳ cho công nhân. Huấn luyện viên thể thao có thể được liên hệ để cung cấp chứng chỉ sức khỏe hoặc tham gia chương trình kiểm tra y tế doanh nghiệp mở rộng cho nhân viên/gia đình của công ty xây dựng.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi điện thay mặt phòng Nhân sự công ty xây dựng, thông báo rằng Dương Thu Nhi (sử dụng VIC_FULLNAME) được chọn tham gia chương trình 'Kiểm tra sức khỏe toàn diện + bảo hiểm sức khỏe nâng cao' cho nhân viên và gia đình. Yêu cầu cập nhật thông tin tài khoản ngân hàng để hoàn tất đăng ký và nhận hỗ trợ chi phí y tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Cô Hương từ phòng Nhân sự công ty' + nói rõ tên đầy đủ 'Dương Thu Nhi' + số điện thoại để tạo credibility cao. Nói rằng đây là cuộc gọi theo dõi từ chương trình phúc lợi công ty."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý urgency: 'Chị Nhi ơi, chương trình này chỉ còn hạn cho đến cuối tuần này. Nếu không cập nhật thông tin tài khoản ngân hàng ngay, chị sẽ mất cơ hội nhận bảo hiểm miễn phí trị giá 5 triệu đồng'. Tạo cảm giác mất lợi ích."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để chúng tôi xác nhận danh tính và chuyển tiền hỗ trợ, chị vui lòng cung cấp lại số tài khoản, mã số thuế/CMND để kiểm tra trong hệ thống'. Nếu có sẵn, dùng VIC_BANK_ACCOUNT và VIC_TAX_SOCIAL_ID để 'xác nhận lại' và yêu cầu OTP hoặc mã xác thực."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: 'Cảm ơn chị, đang xử lý...'. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Không sao, chị có thể gọi lại số này để xác nhận hoặc liên hệ phòng Nhân sự trực tiếp' (số điện thoại giả)."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xây dựng liên hệ để thông báo chương trình kiểm tra sức khỏe định kỳ hoặc mời huấn luyện viên thể thao tham gia hợp tác (cung cấp dịch vụ huấn luyện thể lực, tư vấn sức khỏe cho nhân viên).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Đây là phòng Nhân sự công ty Xây dựng Hạ tầng Việt Nam' + cung cấp số điện thoại chính thức của công ty. Xác nhận đúng người: 'Tôi cần tìm chị Dương Thu Nhi, phải không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Giải thích rõ ràng mục đích gọi (ví dụ: 'Công ty đang tuyển huấn luyện viên thể thao để hỗ trợ chương trình thể lực cho nhân viên' hoặc 'Mời chị tham gia khám sức khỏe định kỳ vào ngày X tại địa chỉ Y'). Cung cấp thông tin chi tiết, không yêu cầu thông tin nhạy cảm qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu là hợp tác, sắp xếp cuộc họp trực tiếp hoặc gửi email chính thức. Nếu là thông báo, hẹn nạn nhân đến địa điểm cụ thể với giấy tờ chính thức. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Đây là phòng Nhân sự công ty Xây dựng Hạ tầng Việt Nam. Tôi cần tìm chị Dương Thu Nhi, phải không ạ? Số điện thoại của công ty chúng tôi là 02838123456.",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh rõ ràng, cung cấp số điện thoại chính thức, xác nhận đúng người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Dương Thu Nhi, nhưng anh cần thông tin gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Nhi. Tôi là Lê Quang Thành, nhân viên phòng An toàn lao động thuộc Công ty Xây dựng Hạ tầng Việt Nam. Tôi gọi để thông báo về chương trình kiểm tra sức khỏe định kỳ năm nay dành cho các đối tác và nhân viên của công ty mình. Chúng tôi muốn mời chị tham gia vào ngày 15 tháng 10 tới tại Trung tâm Y tế dự phòng quận 1, địa chỉ 123 Nguyễn Thị Minh Khai.",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức, chức danh và giải thích rõ ràng mục đích cuộc gọi là mời khám sức khỏe định kỳ, cung cấp thông tin chi tiết về thời gian và địa điểm."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn anh Thành đã thông báo, nhưng tôi có cần phải chuẩn bị gì cho buổi kiểm tra sức khỏe này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Nhi không cần chuẩn bị gì đặc biệt ạ. Chỉ cần mang theo căn cước công dân khi đến, các thủ tục còn lại sẽ có nhân viên y tế hướng dẫn chi tiết tại chỗ. Chúng tôi cũng sẽ gửi xác nhận qua email của chị về thời gian và địa điểm cụ thể trong hôm nay.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thêm thông tin chi tiết về thủ tục tham gia khám sức khỏe để người nghe an tâm, đồng thời nhấn mạnh việc sẽ gửi thông tin chính thức qua email."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn anh đã chỉ rõ, tôi sẽ chuẩn bị căn cước công dân. Nhưng anh có thể cho tôi biết địa chỉ email của anh để tôi có thể xác nhận không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị có thể yên tâm. Địa chỉ email chính thức của phòng An toàn lao động công ty Hạ tầng Việt Nam là antoanlaodong@hathangvietnam.vn. Chị có thể gửi email xác nhận hoặc có bất kỳ thắc mắc nào khác đến địa chỉ này ạ. Chúng tôi cũng sẽ gửi email thông báo chi tiết đến chị trong vài giờ tới.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp địa chỉ email chính thức của công ty để nạn nhân có thể xác nhận và liên hệ, đồng thời khẳng định sẽ gửi thông tin chi tiết qua email, tạo sự tin tưởng và chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, cảm ơn anh Thành đã cung cấp thông tin, tôi sẽ kiểm tra email của mình để xem thông báo nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị kiểm tra email nhé. Nếu có bất kỳ vấn đề gì, chị cứ liên hệ lại theo số điện thoại đã gọi hoặc gửi email cho chúng tôi. Cảm ơn chị Nhi đã dành thời gian. Chúc chị một ngày làm việc hiệu quả!",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận hành động tiếp theo của người nghe, cung cấp kênh liên hệ nếu cần, và kết thúc cuộc gọi một cách chuyên nghiệp và tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1859,
+      "output_tokens": 1701
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6592,
+      "output_tokens": 714
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7601,
+      "output_tokens": 291
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004318,
+    "output_usd": 0.010465,
+    "total_usd": 0.014782
+  }
+}

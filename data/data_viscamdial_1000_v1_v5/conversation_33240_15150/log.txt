@@ -1,0 +1,117 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_adf51df1e3]
+  Caller thật: Nhân viên môi giới thương mại (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên phát triển kinh tế huyện / Chuyên viên hỗ trợ doanh nghiệp địa phương @ Trung tâm Xúc tiến Đầu tư và Phát triển Kinh tế Huyện
+  Listener: Ủy viên cấp huyện (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên môi giới thương mại thường phải báo cáo, cập nhật dự án, hợp tác với cấp ủy viên huyện về các sáng kiến kinh tế địa phương, chương trình hỗ trợ doanh nghiệp, hoặc xin ý kiến lãnh đạo về các khoản đầu tư công. Ủy viên huyện là người giám sát, phê duyệt các hoạt động kinh tế trên địa bàn.
+  Pretext: Nhân viên phát triển kinh tế huyện gọi để: (1) Thông báo về một chương trình hỗ trợ doanh nghiệp thực sự; (2) Xin ý kiến ủy viên huyện về một dự án PPP; (3) Yêu cầu xác nhận thông tin cho hồ sơ tham gia một quỹ hỗ trợ hợp pháp; (4) Mời tham gia hội nghị, tập huấn về phát triển kinh tế địa phương.
+  Listener traits: ['lo lắng hay bận tâm', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Dương Ngọc Hằng, tôi là Lưu Thị Vy, chuyên viên hỗ trợ doanh nghiệp của Trung tâm Xúc tiến Đầu tư và Phát triển Kinh tế Huyện. Số điện thoại của tôi là 0274-123456. Tôi gọi để thông báo về chương trình hỗ trợ các doanh nghiệp vừa và nhỏ trên địa bàn huyện ạ.
+      → phase: L1 | tactic: Giới thiệu bản thân, chức danh, tổ chức và mục đích cuộc gọi rõ ràng, cung cấp thông tin liên hệ chính thức.
+T02 [LISTENER] Em cảm ơn chị đã gọi, nhưng em muốn xác nhận thêm thông tin về chương trình hỗ trợ đó ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chị Hằng cứ yên tâm ạ. Chương trình này có tên chính thức là “Quỹ Hỗ trợ Phát triển Doanh nghiệp Nhỏ và Vừa Huyện năm 2024”, đã được UBND Huyện phê duyệt theo Quyết định số 123/QĐ-UBND ngày 15 tháng 03 năm 2024. Mục tiêu là hỗ trợ vốn vay ưu đãi và tư vấn miễn phí để các doanh nghiệp như bên chị có thể phục hồi và phát triển sau dịch bệnh ạ.
+      → phase: L2 | tactic: Mô tả chi tiết chương trình, tên chính thức, cơ quan phê duyệt, số quyết định, và mục tiêu cụ thể để tăng tính xác thực và minh bạch.
+T04 [LISTENER] Em đã hiểu hơn về chương trình, nhưng em vẫn muốn biết thêm về điều kiện tham gia và cách thức đăng ký ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, chị Hằng. Điều kiện tham gia rất đơn giản: doanh nghiệp có giấy phép kinh doanh hợp lệ trên địa bàn huyện, không có nợ xấu tại các tổ chức tín dụng, và có kế hoạch kinh doanh khả thi. Về cách thức đăng ký, chị có thể nộp hồ sơ trực tiếp tại trụ sở Trung tâm chúng tôi ở địa chỉ số 25, đường Hùng Vương, Huyện, hoặc gửi hồ sơ qua email chính thức của Trung tâm là hotro@kinhtehuyen.gov.vn. Chúng tôi KHÔNG yêu cầu bất kỳ khoản phí nào khi nộp hồ sơ hay duyệt hồ sơ, chị nhé.
+      → phase: L2 | tactic: Trình bày rõ ràng các điều kiện tham gia và quy trình đăng ký, nhấn mạnh không có bất kỳ khoản phí nào để tăng tính minh bạch và xây dựng lòng tin.
+T06 [LISTENER] Dạ, em cảm ơn chị đã cung cấp thông tin rõ ràng, nhưng em vẫn còn chút băn khoăn về việc nộp hồ sơ qua email thì có cần phải xác nhận bằng cách nào không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, nếu chị Hằng chọn nộp hồ sơ qua email, sau khi nhận được, chúng tôi sẽ gửi lại email xác nhận đã tiếp nhận hồ sơ trong vòng 24 giờ làm việc. Chị cũng có thể gọi lại số điện thoại 0274-123456 của Trung tâm để xác nhận tình trạng hồ sơ bất cứ lúc nào trong giờ hành chính ạ.
+      → phase: L2 | tactic: Làm rõ quy trình xác nhận hồ sơ khi nộp qua email và cung cấp cách thức để nạn nhân chủ động kiểm tra thông tin, tăng cường sự minh bạch và tin cậy.
+T08 [LISTENER] Cảm ơn chị đã giải thích rõ ràng, nhưng em vẫn muốn kiểm tra lại số điện thoại để chắc chắn ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, chị có thể gọi đến số này để xác nhận thông tin về Trung tâm và chương trình hỗ trợ. Chúng tôi luôn sẵn lòng hỗ trợ chị Hằng và các doanh nghiệp trên địa bàn huyện ạ.
+      → phase: L2 | tactic: Khuyến khích nạn nhân xác minh thông tin qua số điện thoại chính thức đã cung cấp, khẳng định sự minh bạch và sẵn sàng hỗ trợ.
+T10 [LISTENER] Em rất cẩn thận, nên có thể cho em xin lại số điện thoại chính xác của Trung tâm để em kiểm tra ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, số điện thoại chính thức của Trung tâm Xúc tiến Đầu tư và Phát triển Kinh tế Huyện là 0274-123456, chị Hằng nhé. Chị có thể gọi bất cứ lúc nào trong giờ hành chính để được giải đáp mọi thắc mắc ạ.
+      → phase: L2 | tactic: Nhắc lại số điện thoại chính thức một lần nữa, khuyến khích nạn nhân gọi lại để xác minh, tăng sự tin tưởng và minh bạch.
+T12 [LISTENER] Dạ, em cảm ơn chị đã nhắc lại số điện thoại, nhưng em vẫn muốn hỏi thêm thông tin về thời gian bắt đầu chương trình này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Vâng, chị Hằng. Chương trình “Quỹ Hỗ trợ Phát triển Doanh nghiệp Nhỏ và Vừa Huyện năm 2024” chính thức bắt đầu tiếp nhận hồ sơ từ ngày 01 tháng 04 năm 2024 và dự kiến kết thúc vào ngày 30 tháng 09 năm 2024. Chị cố gắng sắp xếp thời gian để nộp hồ sơ sớm nhất có thể để có cơ hội nhận được hỗ trợ ạ.
+      → phase: L2 | tactic: Cung cấp thông tin chi tiết về thời gian bắt đầu và kết thúc chương trình, khuyến khích nộp hồ sơ sớm mà không tạo áp lực.
+T14 [LISTENER] Em cảm ơn chị đã cung cấp thông tin cụ thể về thời gian, nhưng em muốn kiểm tra lại một lần nữa về quy trình nộp hồ sơ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Vâng, chị Hằng. Quy trình nộp hồ sơ rất đơn giản ạ. Chị có thể chọn một trong hai hình thức: nộp trực tiếp tại Trung tâm chúng tôi hoặc gửi qua email. Nếu nộp trực tiếp, chị mang hồ sơ đến địa chỉ số 25, đường Hùng Vương, trong giờ hành chính. Nếu gửi qua email, chị gửi các tài liệu cần thiết đến địa chỉ hotro@kinhtehuyen.gov.vn. Chúng tôi sẽ có phản hồi xác nhận sau khi nhận được hồ sơ của chị ạ.
+      → phase: L2 | tactic: Nhắc lại quy trình nộp hồ sơ một cách rõ ràng và chi tiết, nhấn mạnh hai hình thức nộp để nạn nhân dễ dàng lựa chọn và hiểu rõ các bước tiếp theo.
+T16 [LISTENER] Cảm ơn chị đã giải thích, nhưng em vẫn thấy chưa chắc chắn lắm về việc hồ sơ nộp qua email có an toàn không ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Chị Hằng cứ yên tâm ạ. Địa chỉ email hotro@kinhtehuyen.gov.vn là email chính thức của Trung tâm chúng tôi, được bảo mật theo quy định của nhà nước. Mọi thông tin chị gửi qua email đều được bảo mật tuyệt đối và chỉ được sử dụng cho mục đích thẩm định hồ sơ. Chúng tôi cũng khuyến nghị chị nên mã hóa các tài liệu nhạy cảm nếu có để đảm bảo an toàn tối đa ạ.
+      → phase: L2 | tactic: Làm rõ về tính bảo mật của việc nộp hồ sơ qua email, trấn an nạn nhân và đưa ra lời khuyên để tăng cường bảo mật thông tin cá nhân.
+T18 [LISTENER] Em cảm ơn chị đã giải thích kỹ, nhưng em vẫn cần xác nhận thêm một lần nữa về địa chỉ gửi hồ sơ để không bị nhầm lẫn ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Vâng, chị Hằng. Địa chỉ email chính thức để nộp hồ sơ là hotro@kinhtehuyen.gov.vn. Chị vui lòng kiểm tra kỹ trước khi gửi ạ. Hoặc nếu chị muốn nộp trực tiếp, địa chỉ Trung tâm là số 25, đường Hùng Vương, Huyện ạ.
+      → phase: L2 | tactic: Nhắc lại rõ ràng địa chỉ email và địa chỉ trực tiếp để nộp hồ sơ, đảm bảo nạn nhân có thông tin chính xác và không bị nhầm lẫn.
+T20 [LISTENER] Em đã ghi nhớ cả hai địa chỉ, cảm ơn chị đã nhắc lại, nhưng em vẫn lo lắng về việc hồ sơ có thể bị mất khi gửi qua email ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Chị Hằng cứ yên tâm ạ. Hệ thống email của Trung tâm chúng tôi được quản lý chặt chẽ và có tính năng lưu trữ, nên không có chuyện hồ sơ bị thất lạc đâu ạ. Sau khi gửi, nếu chị chưa nhận được email xác nhận trong vòng 24 giờ làm việc, chị có thể chủ động gọi lại số điện thoại 0274-123456 để chúng tôi kiểm tra lại giúp chị nhé.
+      → phase: L2 | tactic: Trấn an nạn nhân về nguy cơ mất hồ sơ khi gửi email, giải thích về tính năng lưu trữ và cung cấp phương án kiểm tra lại để tăng cường sự tin tưởng và an tâm.
+T22 [LISTENER] Chị giải thích rất rõ ràng, nhưng em vẫn muốn biết thêm về những tài liệu cụ thể cần chuẩn bị khi nộp hồ sơ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Vâng, chị Hằng. Để nộp hồ sơ, chị cần chuẩn bị các tài liệu cơ bản như: Giấy phép đăng ký kinh doanh (bản sao công chứng), báo cáo tài chính của 2 năm gần nhất, kế hoạch kinh doanh chi tiết cho năm tới và bản sao căn cước công dân của chủ doanh nghiệp. Chị có thể tham khảo chi tiết danh mục hồ sơ tại website chính thức của Trung tâm là kinhtehuyen.gov.vn hoặc đến trực tiếp Trung tâm để được hướng dẫn cụ thể hơn ạ.
+      → phase: L2 | tactic: Liệt kê các tài liệu cần thiết một cách rõ ràng và gợi ý các kênh để nạn nhân có thể tìm hiểu thêm thông tin chi tiết, tăng tính minh bạch và độ tin cậy.
+T24 [LISTENER] Dạ, em đã ghi nhớ các tài liệu cần chuẩn bị, nhưng em vẫn muốn hỏi thêm về thời gian để hoàn thành hồ sơ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T25 [CALLER] Vâng, chị Hằng. Thời gian để chuẩn bị và hoàn thành hồ sơ thì tùy thuộc vào mức độ sẵn có của các giấy tờ và kế hoạch kinh doanh của doanh nghiệp mình ạ. Tuy nhiên, chúng tôi khuyến khích chị nên chuẩn bị càng sớm càng tốt để có thể nộp hồ sơ trước thời hạn kết thúc chương trình vào ngày 30 tháng 09 năm 2024, tránh trường hợp cận ngày mà hồ sơ còn thiếu sót ạ.
+      → phase: L2 | tactic: Trả lời câu hỏi về thời gian hoàn thành hồ sơ, khuyến khích nộp sớm mà không gây áp lực, đồng thời nhắc lại thời hạn chương trình.
+T26 [LISTENER] Dạ, em cảm ơn chị đã cung cấp thông tin chi tiết, nhưng em vẫn lo lắng về việc liệu có cần phải chuẩn bị thêm bất kỳ giấy tờ nào khác không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T27 [CALLER] Các tài liệu tôi vừa nêu là những giấy tờ cơ bản và bắt buộc ạ. Tuy nhiên, nếu hồ sơ của chị được chọn vào vòng thẩm định chuyên sâu, có thể chúng tôi sẽ yêu cầu bổ sung thêm một số tài liệu khác tùy theo đặc thù ngành nghề và quy mô doanh nghiệp của chị. Tất cả các yêu cầu bổ sung đều sẽ được thông báo rõ ràng và minh bạch cho chị ạ.
+      → phase: L2 | tactic: Làm rõ về khả năng yêu cầu bổ sung tài liệu trong giai đoạn thẩm định chuyên sâu, cam kết thông báo rõ ràng, minh bạch, tránh gây bất ngờ cho nạn nhân.
+T28 [LISTENER] Em cảm ơn chị đã giải thích rõ ràng, nhưng em muốn biết thêm về khả năng được hỗ trợ sau khi nộp hồ sơ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T29 [CALLER] Vâng, chị Hằng. Sau khi nộp hồ sơ, Trung tâm sẽ tiến hành thẩm định và đánh giá dựa trên các tiêu chí minh bạch và công khai. Nếu hồ sơ của chị đáp ứng đủ điều kiện và được phê duyệt, khoản hỗ trợ sẽ được chuyển trực tiếp từ ngân sách của UBND Huyện vào tài khoản ngân hàng của doanh nghiệp chị. Tuyệt đối không có bất kỳ khoản trung gian hay yêu cầu chuyển phí nào ạ. Thời gian xử lý hồ sơ thường khoảng 15-30 ngày làm việc.
+      → phase: L2 | tactic: Mô tả quy trình xử lý hồ sơ sau khi nộp, cách thức giải ngân (trực tiếp từ UBND huyện), thời gian xử lý, và khẳng định không có phí trung gian, tăng cường tính minh bạch và an toàn cho nạn nhân.
+T30 [LISTENER] Em cảm ơn chị đã giải thích rõ ràng về quy trình hỗ trợ, nhưng em vẫn muốn biết thêm về cách kiểm tra tình trạng hồ sơ sau khi nộp ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T31 [CALLER] Vâng, chị Hằng có thể kiểm tra tình trạng hồ sơ của mình bằng cách truy cập vào mục "Tra cứu hồ sơ" trên website chính thức của Trung tâm là kinhtehuyen.gov.vn, sau đó nhập mã số hồ sơ đã được cấp khi chị nộp hồ sơ. Hoặc đơn giản hơn, chị có thể gọi trực tiếp đến số điện thoại 0274-123456 trong giờ hành chính để chúng tôi hỗ trợ kiểm tra ạ.
+      → phase: L2 | tactic: Cung cấp các kênh để nạn nhân có thể tự kiểm tra tình trạng hồ sơ một cách minh bạch (website, số điện thoại chính thức), tăng cường sự tin cậy.
+T32 [LISTENER] Em cảm ơn chị đã hướng dẫn cụ thể, nhưng em muốn hỏi thêm về mã số hồ sơ được cấp như thế nào ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T33 [CALLER] Vâng, chị Hằng. Nếu chị nộp hồ sơ trực tiếp tại Trung tâm, mã số hồ sơ sẽ được cán bộ tiếp nhận cấp ngay lập tức. Còn nếu chị nộp hồ sơ qua email, mã số hồ sơ sẽ được gửi về địa chỉ email của chị cùng với thư xác nhận tiếp nhận hồ sơ trong vòng 24 giờ làm việc ạ.
+      → phase: L2 | tactic: Giải thích rõ ràng cách thức nhận mã số hồ sơ tùy theo hình thức nộp, giúp nạn nhân an tâm và biết cách theo dõi.
+T34 [LISTENER] Em cảm ơn chị đã giải thích chi tiết, nhưng em vẫn thắc mắc rằng nếu em nộp hồ sơ qua email thì có cần lưu lại chứng từ gì không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T35 [CALLER] Vâng, chị Hằng nên lưu lại bản sao của tất cả các tài liệu đã gửi qua email, cũng như email xác nhận đã tiếp nhận hồ sơ từ Trung tâm chúng tôi. Đây sẽ là bằng chứng để chị đối chiếu và kiểm tra khi cần thiết ạ. Hơn nữa, những tài liệu này cũng sẽ hữu ích nếu chị cần bổ sung thông tin sau này đó ạ.
+      → phase: L2 | tactic: Khuyến nghị nạn nhân lưu giữ các chứng từ và email xác nhận khi nộp hồ sơ qua email, giải thích tầm quan trọng của việc này để truy cứu và bổ sung thông tin sau này, tăng tính minh bạch và đảm bảo quyền lợi cho nạn nhân.
+T36 [LISTENER] Dạ, em cảm ơn chị đã hướng dẫn rõ ràng, nhưng em vẫn cảm thấy cần thêm thông tin về cách liên hệ nếu có thắc mắc khác ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T37 [CALLER] Vâng, chị Hằng. Nếu có bất kỳ thắc mắc nào khác trong quá trình chuẩn bị hồ sơ hoặc sau khi nộp, chị cứ mạnh dạn gọi đến số điện thoại chính thức của Trung tâm Xúc tiến Đầu tư và Phát triển Kinh tế Huyện là 0274-123456 trong giờ hành chính. Hoặc nếu tiện hơn, chị có thể gửi email đến địa chỉ hotro@kinhtehuyen.gov.vn. Chúng tôi luôn sẵn lòng hỗ trợ và giải đáp mọi câu hỏi của chị để đảm bảo chị nhận được sự hỗ trợ tốt nhất ạ.
+      → phase: L3 | tactic: Cung cấp lại thông tin liên hệ chính thức (số điện thoại, email) để nạn nhân có thể dễ dàng liên lạc khi có thắc mắc, thể hiện sự sẵn lòng hỗ trợ và kết thúc cuộc gọi một cách tự nhiên.
+T38 [LISTENER] Dạ, em cảm ơn chị đã hỗ trợ và cung cấp thông tin chi tiết, em sẽ liên hệ lại nếu cần thêm ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T39 [CALLER] Vâng, vậy thì tốt quá ạ. Chị Hằng cứ liên hệ bất cứ lúc nào nếu có câu hỏi nhé. Chúc chị và doanh nghiệp của mình luôn phát triển. Chào chị ạ.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự, thân thiện sau khi nạn nhân đã khẳng định sẽ liên hệ lại nếu cần, không tạo áp lực hay sự khẩn cấp.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  39 turns | suspicion=0.00
+TOKEN: in=137988 | out=7367
+COST : $0.047453
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_33240_15150\conv_adf51df1e3.json  [CALLER_END]

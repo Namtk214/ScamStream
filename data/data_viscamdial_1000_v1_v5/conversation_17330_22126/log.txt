@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_4ab60c164e]
+  Caller thật: Bán hàng và tiếp thị (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Nhân viên bán hàng - Công ty cung cấp thiết bị y tế và sản phẩm dinh dưỡng cho trẻ em @ Công ty Cổ phần Thiết bị Y tế và Dinh dưỡng Trẻ em (VD: 'MediKids Vietnam')
+  Listener: Bác sỹ nhi khoa (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên bán hàng ngành y tế thường xuyên tiếp cận các bác sỹ chuyên khoa (đặc biệt là nhi khoa) để giới thiệu sản phẩm, thiết bị y tế mới, hoặc các chương trình hợp tác kinh doanh. Đây là điểm giao thoa tự nhiên giữa hai nghề.
+  Pretext: Cuộc gọi hợp lệ từ nhân viên bán hàng của công ty thiết bị y tế để giới thiệu sản phẩm mới, dịch vụ hỗ trợ cho phòng khám, hoặc mời bác sỹ tham gia hội thảo chuyên ngành.
+  Listener traits: ['lo lắng cho con cái']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào bác sỹ Nhung, tôi là Mai Bảo Liên từ công ty MediKids Vietnam. Tôi rất xin lỗi vì gọi bất ngờ. Tôi muốn giới thiệu dòng sản phẩm dinh dưỡng và thiết bị khám nhi khoa mới của chúng tôi. Chị có thời gian nghe qua trong 5 phút không ạ?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, xin phép để giới thiệu sản phẩm mới.
+T02 [LISTENER] Chị Liên, tôi rất bận với công việc khám chữa bệnh cho trẻ em, nhưng nếu có thông tin gì hữu ích thì chị cứ nói đi.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, cảm ơn chị Nhung đã tạo điều kiện. Chúng tôi vừa phát triển dòng sản phẩm dinh dưỡng bổ sung vi chất và thiết bị thăm khám chuyên sâu cho trẻ sơ sinh, giúp tối ưu hóa quá trình chẩn đoán và điều trị tại phòng khám của chị. Chị có quan tâm tìm hiểu thêm hoặc muốn chúng tôi gửi tài liệu chi tiết không ạ?
+      → phase: L2 | tactic: Giới thiệu nội dung công việc cụ thể, sản phẩm và lợi ích, hỏi ý kiến khách hàng.
+T04 [LISTENER] Chị Liên, tôi muốn biết thêm thông tin về sản phẩm này và nó có thể hỗ trợ công việc của tôi như thế nào.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, sản phẩm chủ lực của chúng tôi là dòng sữa công thức cao cấp chứa HMO và Lactoferrin, giúp tăng cường miễn dịch cho trẻ. Ngoài ra, chúng tôi có thiết bị siêu âm cầm tay chuyên dụng cho nhi khoa, cho phép chẩn đoán nhanh và chính xác hơn ngay tại phòng khám. Tôi có thể sắp xếp một buổi demo trực tiếp tại phòng khám của chị hoặc gửi tài liệu qua email để chị tham khảo chi tiết hơn ạ?
+      → phase: L2 | tactic: Cung cấp thông tin chi tiết hơn về sản phẩm, nêu bật lợi ích và đề xuất các bước tiếp theo như demo hoặc gửi tài liệu.
+T06 [LISTENER] Chị Liên, tôi rất quan tâm đến thiết bị siêu âm cầm tay đó, nhưng có vẻ như tôi cần thêm thời gian để xem xét và lấy ý kiến từ đồng nghiệp trước khi quyết định.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, tôi hoàn toàn hiểu ạ. Việc tham khảo ý kiến đồng nghiệp là rất cần thiết. Vậy tôi có thể gửi trước cho chị tài liệu chi tiết về thiết bị siêu âm cầm tay qua email hoặc tin nhắn để chị tiện nghiên cứu và trao đổi với các bác sỹ khác không ạ? Khi nào chị sắp xếp được thời gian, tôi sẽ liên hệ lại để đặt lịch demo.
+      → phase: L2 | tactic: Tôn trọng quyết định của khách hàng, đề xuất gửi tài liệu để khách hàng có thêm thông tin tham khảo và trao đổi với đồng nghiệp, giữ liên lạc cho các bước tiếp theo.
+T08 [LISTENER] Chị Liên, tôi có thể nhờ chị gửi cho tôi địa chỉ email để tôi nhận tài liệu chi tiết không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng chị Nhung, địa chỉ email của tôi là maibao.lien@medikids.vn ạ. Hoặc chị có thể cung cấp địa chỉ email của chị, tôi sẽ gửi tài liệu ngay lập tức.
+      → phase: L2 | tactic: Cung cấp thông tin liên hệ và đề nghị gửi tài liệu ngay lập tức để thuận tiện cho khách hàng.
+T10 [LISTENER] Tôi xin lỗi, nhưng chị không thể gửi thông tin nào cho chị được.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ, vậy thì chị nhận tài liệu qua tin nhắn SMS giúp tôi nhé. Sau khi xem xong, nếu có bất kỳ thắc mắc nào, chị cứ gọi lại cho tôi theo số điện thoại này hoặc qua email maibao.lien@medikids.vn ạ.
+      → phase: L2 | tactic: Đề xuất kênh gửi tài liệu thay thế khi khách hàng không muốn cung cấp email, đồng thời nhắc lại kênh liên hệ và thông tin liên hệ để hỗ trợ thêm.
+T12 [LISTENER] Tôi sẽ xem xét và liên hệ lại nếu cần thông tin thêm, cảm ơn chị Liên.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=0.00
+TOKEN: in=23057 | out=3110
+COST : $0.017026
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_17330_22126\conv_4ab60c164e.json  [SCAM_REFUSE]

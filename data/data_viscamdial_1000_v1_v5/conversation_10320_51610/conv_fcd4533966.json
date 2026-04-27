@@ -1,0 +1,226 @@
+{
+  "conversation_id": "conv_fcd4533966",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0096",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lưu Thanh Như Chi",
+    "fake_age": 43,
+    "real_occupation": "Bí thư, Phó Bí thư Đảng ủy ban, ngành cấp huyện",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cộng tác viên Văn hóa - Tôn giáo, Phòng Văn hóa - Thông tin huyện",
+    "caller_org": "Phòng Văn hóa - Thông tin, UBND Huyện 6, TP Hồ Chí Minh",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Phòng Văn hóa - Thông tin huyện liên lạc để cập nhật danh sách các hoạt động tâm linh hợp pháp, thông báo quy định quản lý, hoặc mời tham gia hội thảo, đào tạo về quy chuẩn hoạt động văn hóa - tôn giáo.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh/chị Đặng Tiến An, tôi là cộng tác viên Phòng Văn hóa - Thông tin Huyện 6. Chúng tôi đang cập nhật danh sách nhân sĩ tâm linh địa bàn. Bạn có đang hoạt động dịch vụ chiêm tinh, tướng số không?'",
+          "note": "Xác nhận danh tính đúng quy trình, không yêu cầu tiền hoặc thông tin nhạy cảm"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi muốn biết: bạn đang hoạt động ở địa chỉ nào, có bao nhiêu khách hàng, hoạt động tuân thủ quy định không? Mục đích là để hỗ trợ, không phải kiểm tra. Ngoài ra, huyện có kế hoạch tổ chức hội thảo về đạo đức nghề nghiệp cho nhân sĩ tâm linh, bạn có quan tâm không?'",
+          "note": "Trao đổi thông tin công khai, không yêu cầu hành động tài chính"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn bạn đã cung cấp thông tin. Chúng tôi sẽ liên lạc lại khi có chính sách mới hoặc sự kiện. Nếu bạn có câu hỏi, gọi trực tiếp đến Phòng Văn hóa theo số 028-XXXX-XXXX. Chúc bạn công tác tốt!'",
+          "note": "Chào tạm biệt chuyên nghiệp, cung cấp thông tin liên lạc chính thức"
+        }
+      ]
+    },
+    "scenario_context": "Người làm công tác văn hóa - tôn giáo huyện có trách nhiệm quản lý các hoạt động tâm linh, thầy bói, nhà chiêm tinh trong địa bàn và thường liên lạc để kiểm tra, lập danh sách hoặc thông báo chính sách. Đây là giao điểm tự nhiên giữa cơ quan hành chính và nhân sĩ tâm linh địa phương."
+  },
+  "listener_card": {
+    "listener_id": "lis_0096",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "51610",
+      "title": "Nhà chiêm tinh, nhà tướng số và những người có liên quan đến tâm linh khác",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đặng Tiến An",
+      "VIC_ID_DOC": "079201930750",
+      "VIC_ADDRESS": "Huyện 6, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Nhà chiêm tinh, nhà tướng số và những người có liên quan đến tâm linh khác",
+      "VIC_CONTACT": "0795245620",
+      "VIC_TAX_SOCIAL_ID": "4626430401"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "002603",
+      "VIC_CREDENTIAL": "1188",
+      "VIC_SIM_INFO": "0795245620",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "39982930446338",
+      "VIC_CARD_DATA": "4695 **** **** 7947",
+      "VIC_BALANCE": "36 triệu đồng",
+      "VIC_ASSET": "230 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đặng Tiến An",
+    "VIC_CONTACT": "0795245620",
+    "LOCATION": "TP Hồ Chí Minh",
+    "VIC_EMPLOYMENT": "Nhà chiêm tinh, nhà tướng số và những người có liên quan đến tâm linh khác",
+    "VIC_ADDRESS": "Huyện 6, TP Hồ Chí Minh"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cộng tác viên Văn hóa - Tôn giáo, Phòng Văn hóa - Thông tin huyện",
+    "caller_org": "Phòng Văn hóa - Thông tin, UBND Huyện 6, TP Hồ Chí Minh",
+    "scenario_context": "Người làm công tác văn hóa - tôn giáo huyện có trách nhiệm quản lý các hoạt động tâm linh, thầy bói, nhà chiêm tinh trong địa bàn và thường liên lạc để kiểm tra, lập danh sách hoặc thông báo chính sách. Đây là giao điểm tự nhiên giữa cơ quan hành chính và nhân sĩ tâm linh địa phương.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo về chương trình 'Hỗ trợ nhân sĩ tâm linh có nguy cơ cao' - phải nộp phí đăng ký hoặc phí xác minh để nhận hỗ trợ chính sách từ huyện. Dùng tên và địa chỉ nạn nhân để tạo tin cậy ngay từ đầu.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "LOCATION",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh/chị Đặng Tiến An, tôi là cộng tác viên Phòng Văn hóa Huyện 6. Chúng tôi đang lập danh sách những nhà chiêm tinh, nhà tướng số tại địa bàn để cấp phát hỗ trợ chính sách mới. Bạn ở khu vực Huyện 6 phải không?'",
+          "note": "Sử dụng VIC_FULLNAME + VIC_ADDRESS để xác nhận danh tính, tạo ảo tưởng đây là cuộc gọi chính thức từ chính quyền"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: 'Tuy nhiên, để được hưởng chính sách hỗ trợ 5 triệu đồng cho nhân sĩ tâm linh, bạn phải hoàn thành thủ tục xác minh online. Phí xác minh là 500 nghìn, nhưng sẽ được hoàn lại 100% khi chuyển khoản. Đây là quy định mới của huyện để chống lừa đảo.'",
+          "note": "Khai thác tâm lý tham lợi (hỗ trợ chính sách) + niềm tin vào cơ quan hành chính + áp lực thời gian"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Bạn chuyển 500 nghìn vào tài khoản này (cung cấp số tài khoản giả mạo). Sau khi xác minh, bạn sẽ nhận được 5 triệu hỗ trợ trong 24 giờ. Bạn có thể làm ngay không? Tôi sẽ giữ tên bạn trong danh sách.'",
+          "note": "Tạo cảm giác khẩn cấp + hỗ trợ trực tiếp từ cơ quan"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hỏi xác minh lại qua Phòng Văn hóa, scammer sẽ nói 'Phòng không công khai được danh sách này để bảo vệ quyền riêng tư, bạn chỉ cần chuyển tiền là được.' Nếu nạn nhân chuyển tiền, kết thúc cuộc gọi. Nếu từ chối, nói 'Vậy bạn sẽ mất cơ hội này, danh sách sẽ đóng trong 1 giờ nữa' rồi cắt máy.",
+          "note": "Xử lý từ chối bằng áp lực và cắt đứt liên lạc"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Phòng Văn hóa - Thông tin huyện liên lạc để cập nhật danh sách các hoạt động tâm linh hợp pháp, thông báo quy định quản lý, hoặc mời tham gia hội thảo, đào tạo về quy chuẩn hoạt động văn hóa - tôn giáo.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh/chị Đặng Tiến An, tôi là cộng tác viên Phòng Văn hóa - Thông tin Huyện 6. Chúng tôi đang cập nhật danh sách nhân sĩ tâm linh địa bàn. Bạn có đang hoạt động dịch vụ chiêm tinh, tướng số không?'",
+          "note": "Xác nhận danh tính đúng quy trình, không yêu cầu tiền hoặc thông tin nhạy cảm"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi muốn biết: bạn đang hoạt động ở địa chỉ nào, có bao nhiêu khách hàng, hoạt động tuân thủ quy định không? Mục đích là để hỗ trợ, không phải kiểm tra. Ngoài ra, huyện có kế hoạch tổ chức hội thảo về đạo đức nghề nghiệp cho nhân sĩ tâm linh, bạn có quan tâm không?'",
+          "note": "Trao đổi thông tin công khai, không yêu cầu hành động tài chính"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn bạn đã cung cấp thông tin. Chúng tôi sẽ liên lạc lại khi có chính sách mới hoặc sự kiện. Nếu bạn có câu hỏi, gọi trực tiếp đến Phòng Văn hóa theo số 028-XXXX-XXXX. Chúc bạn công tác tốt!'",
+          "note": "Chào tạm biệt chuyên nghiệp, cung cấp thông tin liên lạc chính thức"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Đặng Tiến An, tôi là Lưu Thanh Như Chi, cộng tác viên Phòng Văn hóa - Thông tin Huyện 6. Chúng tôi đang cập nhật danh sách nhân sĩ tâm linh địa bàn. Bạn có đang hoạt động dịch vụ chiêm tinh, tướng số không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và giới thiệu mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang hoạt động trong lĩnh vực chiêm tinh, chị có cần gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh. Chúng tôi muốn biết anh đang hoạt động ở địa chỉ nào, có bao nhiêu khách hàng, và hoạt động có tuân thủ quy định không. Mục đích là để hỗ trợ anh tốt hơn, chứ không phải kiểm tra. Ngoài ra, huyện có kế hoạch tổ chức hội thảo về đạo đức nghề nghiệp cho nhân sĩ tâm linh, anh có quan tâm không?",
+      "current_phase": "L2",
+      "tactic_hint": "Trao đổi nội dung cụ thể, nhấn mạnh mục đích hỗ trợ và mời tham gia sự kiện."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang hoạt động tại Huyện 6, chị có thể cho em biết thêm về hội thảo đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Về hội thảo, chúng tôi đang dự kiến tổ chức vào cuối tháng sau tại Trung tâm Văn hóa huyện. Nội dung sẽ xoay quanh các quy định mới về hoạt động tâm linh, các vấn đề về đạo đức nghề nghiệp và cách thức để phát triển bền vững trong lĩnh vực này. Anh sẽ được nghe chia sẻ từ các chuyên gia và cơ hội giao lưu với các đồng nghiệp. Nếu anh quan tâm, tôi sẽ ghi lại thông tin để gửi thư mời chi tiết sau nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thêm thông tin về hội thảo để khơi gợi sự quan tâm và thu thập thông tin liên hệ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em rất quan tâm đến hội thảo đó, chị ghi lại thông tin cho em nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời. Vậy để tôi ghi nhận thông tin đăng ký tham gia hội thảo của anh. Anh có thể xác nhận lại giúp tôi địa chỉ hoạt động cụ thể của mình để chúng tôi tiện việc gửi thư mời chính thức không?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận đăng ký tham gia hội thảo và tiếp tục thu thập thông tin địa chỉ."
+    },
+    {
+      "role": "listener",
+      "text": "Em hoạt động tại Huyện 6, huyện 6, TP Hồ Chí Minh, chị cần em cung cấp thêm thông tin gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Cảm ơn anh. Vậy là anh hoạt động tại Huyện 6, TP Hồ Chí Minh. Tôi đã ghi nhận lại thông tin tham gia hội thảo của anh. Chúng tôi sẽ liên lạc lại khi có chính sách mới hoặc sự kiện. Nếu anh có câu hỏi, anh có thể gọi trực tiếp đến Phòng Văn hóa theo số 028-XXXX-XXXX. Chúc anh công tác tốt!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi sau khi đã thu thập đủ thông tin và mời tham gia sự kiện, đồng thời cung cấp kênh liên hệ chính thức."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1951,
+      "output_tokens": 2064
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6551,
+      "output_tokens": 663
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7832,
+      "output_tokens": 275
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004436,
+    "output_usd": 0.012142,
+    "total_usd": 0.016578
+  }
+}

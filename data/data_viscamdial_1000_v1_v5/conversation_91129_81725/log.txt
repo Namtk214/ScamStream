@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_ec5c0f4d6c]
+  Caller thật: Người dọn dẹp ở các cơ sở khác (như trung tâm mua sắm, trường học, bệnh viện, những nơi thờ tự) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý dự án cung cấp vật liệu xây dựng & gỗ công nghiệp @ Công ty Cổ phần Vật Liệu Xây Dựng Long An (VLXD-LA)
+  Listener: Thợ phân loại gỗ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Người quản lý cơ sở vệ sinh (thực tế là người dọn dẹp) được nâng cấp thành Quản lý dự án để tiếp cận thợ phân loại gỗ tại các dự án xây dựng hoặc nhà máy chế biến gỗ. Đây là giao điểm tự nhiên: cơ sở vệ sinh cần cung cấp gỗ xây dựng, hoặc cần phân loại/kiểm tra chất lượng gỗ cho các công trình.
+  Pretext: Gọi để xác nhận thông tin tài khoản thanh toán dự án gỗ công nghiệp tại Long An. Scammer sử dụng tên thật của nạn nhân (Phạm Diễm Hà) để tạo credibility cao, giả vờ đã có sẵn hồ sơ từ dự án trước.
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào chị Phạm Diễm Hà, tôi là Nguyễn Công Đức Nam từ Công ty Cổ phần Vật liệu Xây dựng Long An. Chúng tôi có hồ sơ chị là thợ phân loại gỗ chuyên nghiệp tại Long An, phải không ạ? Tôi đang gọi để xác nhận lại thông tin tài khoản ngân hàng của chị cho dự án mới.
+      → phase: S1 | tactic: Giới thiệu bản thân và tổ chức, xác nhận danh tính nạn nhân với thông tin đã biết để tạo uy tín, sau đó đưa ra lý do chung chung để tạo cơ hội khai thác thông tin
+T02 [LISTENER] Em không nhớ là đã cung cấp thông tin tài khoản ngân hàng cho anh bao giờ, có thể anh cho em biết số điện thoại anh đang gọi không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T03 [CALLER] Vâng, số tôi đang gọi đây là 0938631946. Chị Hà yên tâm, đây là số điện thoại dùng để liên hệ công việc của công ty chúng tôi. Có thể là chị đã cung cấp thông tin qua bên quản lý dự án trước đây rồi, nên bên tôi mới có thông tin hồ sơ của chị. Tôi gọi để xác nhận lại thông tin tài khoản cho dự án mới để tiện việc thanh toán sớm cho chị thôi ạ.
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin được yêu cầu và giải thích hợp lý nguồn gốc thông tin của họ, nhấn mạnh lợi ích cho nạn nhân.
+T04 [LISTENER] Em chỉ muốn xác nhận rõ hơn về dự án mới đó anh nói, vì em không nhớ rõ thông tin của mình đã được cung cấp cho ai.
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T05 [CALLER] Dạ, dự án mới này là dự án cung cấp gỗ keo tràm cho nhà máy giấy ở Bến Lức đó chị. Bên tôi đang cần gấp thông tin để chốt danh sách thanh toán. Chị có thể xác nhận số tài khoản ngân hàng giúp tôi được không ạ?
+      → phase: S1 | tactic: Cung cấp thêm chi tiết về dự án để tăng cường niềm tin, đồng thời tạo cảm giác khẩn cấp để thúc đẩy nạn nhân cung cấp thông tin.
+T06 [LISTENER] Em vẫn chưa rõ về dự án này, anh có thể cho em biết thêm thông tin về công ty mình không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị có thể tìm hiểu thêm về Công ty Cổ phần Vật liệu Xây dựng Long An qua website chính thức của chúng tôi. Chúng tôi là đối tác lớn trong các dự án cung cấp vật liệu xây dựng và gỗ công nghiệp tại khu vực Long An. Hiện tại, tôi chỉ cần chị xác nhận lại số tài khoản để hoàn tất thủ tục thanh toán cho chị, chị có thể xác nhận giúp tôi chứ ạ?
+      → phase: S1 | tactic: Giới thiệu về công ty để tăng độ tin cậy, đồng thời nhắc lại yêu cầu xác nhận tài khoản một cách nhẹ nhàng nhưng kiên quyết, nhấn mạnh lợi ích thanh toán.
+T08 [LISTENER] Em vẫn cảm thấy không yên tâm, anh có thể cho em biết thêm thông tin cụ thể về dự án và công ty trước khi em quyết định cung cấp gì ạ?
+      → action: REFUSAL | suspicion: 1.80 | disclosed: []
+
+T09 [CALLER] Vâng, tôi hiểu. Có lẽ là do thông tin từ dự án trước không được cập nhật đầy đủ. Để tôi gửi cho chị một liên kết qua tin nhắn để chị có thể xem chi tiết dự án và công ty chúng tôi. Chị vào đó xem rồi làm theo hướng dẫn xác nhận thông tin giúp tôi nhé.
+      → phase: S4 | tactic: Khi nạn nhân từ chối cung cấp thông tin trực tiếp, chuyển sang chiến thuật lừa đảo qua liên kết (phishing) để thu thập thông tin hoặc cài đặt phần mềm độc hại.
+T10 [LISTENER] Em không muốn mở bất kỳ liên kết nào vì cảm thấy không yên tâm, mong anh thông cảm.
+      → action: REFUSAL | suspicion: 2.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=2.80
+TOKEN: in=19425 | out=3027
+COST : $0.016136
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_91129_81725\conv_ec5c0f4d6c.json  [SCAM_REFUSE]

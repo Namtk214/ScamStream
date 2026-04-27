@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_05b8229437]
+  Caller thật: Người viết tài liệu kỹ thuật (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên kỹ thuật / Chuyên viên tư vấn sơn công nghiệp @ Công ty tư vấn kỹ thuật sơn phủ & bảo vệ bề mặt
+  Listener: Thợ sơn (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người viết tài liệu kỹ thuật sơn phủ thường phải liên hệ trực tiếp với các thợ sơn thực tế để xác thực quy trình, thu thập feedback, hoặc thông báo cập nhật tiêu chuẩn kỹ thuật mới. Đây là giao điểm tự nhiên giữa hai nghề.
+  Pretext: Gọi với danh nghĩa nhân viên kỹ thuật, thông báo rằng khách hàng (sử dụng VIC_FULLNAME) được lựa chọn tham gia chương trình 'Kiểm định chất lượng sơn cao cấp' với hỗ trợ tài chính từ công ty, nhưng cần xác thực danh tính và tài khoản ngân hàng để chuyển tiền hỗ trợ.
+  Listener traits: ['nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, xin chào anh Lê Quang Gia Bình. Tôi là Lý Xuân Phong, từ bộ phận Kỹ thuật của Công ty Sơn Phủ Việt đây ạ. Tôi muốn xác nhận xem anh có phải là thợ sơn chuyên nghiệp không ạ?
+      → phase: S1 | tactic: Xưng danh, dùng thông tin nạn nhân để tạo trust và xác minh đối tượng.
+T02 [LISTENER] Em là thợ sơn, anh cần hỏi gì về nghề này ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] À vâng, rất vui được biết anh. Hiện tại, công ty chúng tôi đang triển khai một chương trình hỗ trợ đặc biệt dành cho các thợ sơn tự do có tay nghề cao như anh. Mỗi người tham gia sẽ được hỗ trợ từ 15 đến 20 triệu đồng để đầu tư dụng cụ và nâng cao kỹ năng. Đây là cơ hội rất tốt, nhưng chương trình này chỉ còn hiệu lực trong 3 ngày tới thôi ạ.
+      → phase: S2 | tactic: Giới thiệu chương trình hấp dẫn, tạo cảm giác khan hiếm thời gian và lợi ích tài chính.
+T04 [LISTENER] Nghe hấp dẫn quá anh ạ, nhưng em không chắc mình đủ điều kiện tham gia không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, để xác nhận anh có phải thợ sơn tự do chuyên nghiệp thực sự và không phải đối tượng lừa đảo lợi dụng chương trình này, công ty chúng tôi có một bước yêu cầu nhỏ là anh cần chuyển khoản 2 đến 3 triệu đồng vào tài khoản của công ty làm phí xác thực hồ sơ. Khoản này sẽ được hoàn trả đầy đủ cùng với số tiền hỗ trợ 15-20 triệu ngay sau khi hồ sơ của anh được duyệt, thường là trong vòng 24 giờ. Anh thấy sao ạ?
+      → phase: S3 | tactic: Yêu cầu chuyển tiền 'phí xác thực' với lời hứa hoàn trả và thêm tiền hỗ trợ, tạo vỏ bọc 'chống lừa đảo' để yêu cầu hành động.
+T06 [LISTENER] Em hiểu ý anh, nhưng em chưa từng nghe về quy trình này của công ty, anh có thể giải thích rõ hơn cho em được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, đây là quy định mới của chương trình năm nay, anh ạ. Để đảm bảo tính minh bạch và tránh các trường hợp trục lợi, công ty đã đưa ra yêu cầu về phí xác thực. Đây cũng là một cách để chúng tôi đánh giá mức độ cam kết của thợ sơn với nghề. Anh cứ yên tâm, công ty chúng tôi hoạt động uy tín và cam kết hoàn trả đầy đủ cùng tiền hỗ trợ. Anh có thể cung cấp số tài khoản để tôi hướng dẫn chuyển tiền xác thực không?
+      → phase: S3 | tactic: Xoa dịu nghi ngờ, giải thích cho quy trình bất thường bằng lý do 'minh bạch' và 'đánh giá cam kết', sau đó tiếp tục thúc đẩy hành động chuyển tiền.
+T08 [LISTENER] Em vẫn cảm thấy chưa thuyết phục lắm, vì sao công ty lại yêu cầu phí xác thực như vậy ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Anh Bình ạ, lý do chính là để sàng lọc. Anh cũng biết đấy, có rất nhiều người muốn lợi dụng các chương trình hỗ trợ như thế này. Khoản phí này giúp công ty đảm bảo rằng chỉ có những người thực sự tâm huyết và nghiêm túc với nghề mới tham gia. Nếu anh không tin tưởng, thì chương trình này có lẽ không phù hợp với anh. Anh có muốn tiếp tục không?
+      → phase: S3 | tactic: Tăng áp lực bằng cách gợi ý sẽ bỏ lỡ cơ hội, đồng thời nhấn mạnh lại lý do 'sàng lọc' để biện minh cho phí xác thực, thúc đẩy nạn nhân đưa ra quyết định.
+T10 [LISTENER] Em cũng hiểu điều đó, nhưng trong nghề của em, việc yêu cầu phí trước khi hỗ trợ là rất lạ, anh ạ, em cần thêm một chút thời gian để suy nghĩ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, tôi hiểu. Vậy nếu anh cần thêm thời gian, có lẽ chương trình này không phù hợp với anh rồi. Chúng tôi sẽ ưu tiên những người thực sự muốn nắm bắt cơ hội. Chào anh.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách khéo léo sau khi nạn nhân từ chối kiên quyết, tạo cảm giác 'tự anh bỏ lỡ cơ hội'.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=21930 | out=2975
+COST : $0.016299
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_26414_71311\conv_05b8229437.json  [CALLER_END]

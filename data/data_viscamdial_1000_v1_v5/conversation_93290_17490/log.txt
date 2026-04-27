@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_405b7ee308]
+  Caller thật: Lao động công nghiệp khác chưa được phân vào đâu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên bảo trì/kiểm tra thiết bị công nghiệp hoặc nhân viên kỹ thuật từ nhà cung cấp dịch vụ @ Công ty dịch vụ bảo trì kỹ thuật / cá nhân kỹ thuật viên tự do
+  Listener: Các đơn vị sản xuất và dịch vụ còn lại chưa được phân vào đâu (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: LEGIT | Path: LEGIT
+  Context: Người làm công nghiệp/kỹ thuật thường liên hệ với các đơn vị sản xuất/dịch vụ để báo cáo sự cố hệ thống, xác nhận thông tin khách hàng trong quá trình xử lý bảo hành, hoặc cập nhật thông tin tài khoản liên kết với dịch vụ.
+  Pretext: Nhân viên kỹ thuật/bảo trì từ công ty dịch vụ gọi để xác nhận thông tin khách hàng trong hồ sơ bảo hành, hoặc thông báo về cập nhật bảo mật định kỳ không liên quan đến yêu cầu tiền hoặc dữ liệu nhạy cảm.
+  Listener traits: ['dễ bị lừa bởi authority', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, chào chị Thảo. Tôi là Trương Tiến Sơn, nhân viên bảo trì của công ty cơ điện Vĩnh Phát. Tôi gọi để thông báo về lịch kiểm tra hệ thống định kỳ cho thiết bị của mình và cần xác nhận một số thông tin ạ. Chị có tiện nghe máy không?
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, xưng danh đầy đủ, nêu rõ lý do gọi và hỏi sự tiện lợi của khách hàng.
+T02 [LISTENER] Vâng, tôi nghe anh nói rồi, nhưng tôi muốn kiểm tra lại thông tin công ty của anh ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, chị có thể kiểm tra thông tin công ty chúng tôi trên website chính thức vinhphat.com. Tôi có thể đọc mã số doanh nghiệp hoặc số hotline của công ty để chị kiểm tra chéo được không ạ?
+      → phase: L1 | tactic: Trấn an sự nghi ngờ, cung cấp thông tin công khai để khách hàng xác minh.
+T04 [LISTENER] Cám ơn anh, nhưng tôi muốn nghe mã số doanh nghiệp trước ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Vâng, mã số doanh nghiệp của Công ty Cổ phần Cơ điện Vĩnh Phát là 0312015264. Chị có thể tra cứu trên cổng thông tin quốc gia ạ.
+      → phase: L1 | tactic: Cung cấp thông tin xác thực để khách hàng kiểm tra, giúp giảm sự nghi ngờ.
+T06 [LISTENER] Cảm ơn anh, nhưng tôi vẫn cảm thấy không yên tâm lắm, anh có thể cho tôi biết địa chỉ cụ thể của công ty được không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ, địa chỉ công ty chúng tôi là 135 Hùng Vương, Phường 2, Quận 5, Thành phố Hồ Chí Minh. Nếu chị vẫn còn băn khoăn, chị cứ gọi trực tiếp lên tổng đài của công ty theo số 1800-8198 để xác nhận thông tin lịch hẹn kiểm tra thiết bị của chị nhé. Tôi sẽ đợi cuộc gọi của chị ạ.
+      → phase: L1 | tactic: Cung cấp thêm thông tin xác thực và hướng dẫn khách hàng tự xác minh qua kênh chính thức để tạo sự tin tưởng và giảm nghi ngờ.
+T08 [LISTENER] Tôi sẽ kiểm tra lại thông tin rồi sẽ gọi lại cho anh sau ạ.
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Vâng, chị cứ kiểm tra ạ. Khi nào chị liên hệ lại mà muốn gặp trực tiếp tôi thì có thể đọc tên Trương Tiến Sơn nhé. Chào chị.
+      → phase: L1 | tactic: Tôn trọng quyết định của khách hàng, tạo cơ hội cho khách hàng xác minh và liên hệ lại, đồng thời cung cấp thông tin cá nhân để dễ dàng kết nối sau này.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=1.20
+TOKEN: in=16096 | out=2667
+COST : $0.014952
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_93290_17490\conv_405b7ee308.json  [CALLER_END]

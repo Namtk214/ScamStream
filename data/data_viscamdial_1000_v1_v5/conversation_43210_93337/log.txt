@@ -1,0 +1,87 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_95a17babfc]
+  Caller thật: Nhân viên ghi chép tồn kho (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên phối hợp vận chuyển / Nhân viên quản lý phiếu công việc kho @ Công ty logistics / Trung tâm phân phối hàng
+  Listener: Người buộc dây hàng hóa (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên ghi chép tồn kho (scammer) tiếp xúc trực tiếp với người buộc dây hàng hóa hàng ngày qua các phiếu công việc, lệnh vận chuyển, và xác nhận hàng. Cuộc gọi từ kho là bình thường trong quy trình logistics.
+  Pretext: Thông báo lịch công việc buộc dây hàng mới, xác nhận thông tin cá nhân cho hệ thống bảo hiểm, hoặc gọi để điều chỉnh ca làm việc
+  Listener traits: ['dễ bị lừa bởi authority', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào anh Dũng, tôi là Thanh Ngọc Hương từ trung tâm phân phối. Anh có thời gian không? Tôi cần xác nhận lại một số thông tin của anh cho hệ thống bảo hiểm lao động của công ty mình ạ.
+      → phase: L1 | tactic: Tiếp cận, giới thiệu bản thân và mục đích cuộc gọi là xác nhận thông tin bảo hiểm lao động.
+T02 [LISTENER] Em nghe chị nói rồi, nhưng em muốn hỏi lại chị một chút về thông tin cần xác nhận ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, tôi muốn xác nhận tên đầy đủ của anh, ngày sinh, địa chỉ hiện tại và số căn cước công dân để cập nhật vào hệ thống bảo hiểm lao động của công ty mình đó anh.
+      → phase: L2 | tactic: Trực tiếp yêu cầu những thông tin cá nhân cơ bản để làm rõ mục đích cuộc gọi.
+T04 [LISTENER] Chị có thể cho em biết lý do cụ thể tại sao cần xác nhận những thông tin này không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Dạ, như tôi đã nói ban đầu đó anh, thông tin này cần thiết để cập nhật vào hệ thống bảo hiểm lao động của công ty. Đây là quy định bắt buộc định kỳ để đảm bảo quyền lợi cho người lao động, anh Dũng ạ.
+      → phase: L2 | tactic: Nhấn mạnh lại mục đích ban đầu là cập nhật bảo hiểm lao động và đây là quy trình định kỳ bắt buộc để đảm bảo quyền lợi cho người nghe, giảm sự nghi ngờ.
+T06 [LISTENER] Em hiểu rồi, nhưng chị có thể cho em biết thêm về quy trình này được không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T07 [CALLER] Vâng, quy trình này là để rà soát lại thông tin của toàn bộ nhân viên, đảm bảo thông tin cá nhân của anh Dũng trên hệ thống bảo hiểm được chính xác và kịp thời. Nếu có bất kỳ sai sót nào sẽ ảnh hưởng đến quyền lợi của anh về sau đó ạ.
+      → phase: L2 | tactic: Thuyết phục người nghe bằng cách giải thích rõ ràng hơn về quy trình và nhấn mạnh quyền lợi của họ có thể bị ảnh hưởng nếu thông tin không chính xác.
+T08 [LISTENER] Em hiểu việc này quan trọng nhưng em vẫn cảm thấy cần thêm thông tin để chắc chắn, chị có thể cung cấp cho em một số chi tiết hơn về quy trình này không ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Vâng, nếu anh Dũng muốn tìm hiểu kỹ hơn về quy trình này, anh có thể liên hệ trực tiếp với phòng nhân sự hoặc phòng hành chính của công ty mình để được giải đáp chi tiết nhất ạ. Còn bây giờ, anh có thể cung cấp giúp tôi những thông tin cơ bản kia không?
+      → phase: L2 | tactic: Đẩy người nghe đến kênh chính thức nếu họ vẫn nghi ngờ, đồng thời quay lại việc yêu cầu thông tin để tiếp tục mục đích cuộc gọi.
+T10 [LISTENER] Em cảm ơn chị đã cung cấp thông tin, nhưng chị có thể cho em biết rõ hơn về phòng nhân sự mà em có thể liên hệ không ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T11 [CALLER] Vâng, anh có thể gọi trực tiếp cho tổng đài của công ty mình và yêu cầu gặp phòng Nhân sự hoặc phòng Hành chính để hỏi về quy trình cập nhật bảo hiểm lao động nhé. Số tổng đài là...
+      → phase: L2 | tactic: Hướng dẫn người nghe liên hệ tổng đài chính thức và vẫn nhắc lại mục đích ban đầu (quy trình cập nhật bảo hiểm lao động) để giảm thiểu sự nghi ngờ và giữ liên kết với mục đích cuộc gọi.
+T12 [LISTENER] Em cảm ơn chị, nhưng em vẫn chưa cảm thấy yên tâm lắm, chị có thể cung cấp cho em số điện thoại cụ thể của phòng nhân sự được không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T13 [CALLER] Vâng, tôi hiểu sự cẩn trọng của anh. Tuy nhiên, để đảm bảo tính bảo mật và đúng quy trình, anh vui lòng gọi đến tổng đài chung của công ty và yêu cầu kết nối với phòng Nhân sự để họ cung cấp thông tin liên hệ chính thức và giải đáp mọi thắc mắc của anh một cách đầy đủ nhất ạ.
+      → phase: L2 | tactic: Nhấn mạnh lại quy trình bảo mật và khuyến khích người nghe liên hệ tổng đài để nhận được thông tin chính thức, đồng thời từ chối cung cấp số điện thoại trực tiếp của phòng ban để tránh bị lật tẩy.
+T14 [LISTENER] Em hiểu, nhưng em vẫn còn chút băn khoăn, chị có thể cho em biết thêm về thời gian thực hiện quy trình cập nhật này không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T15 [CALLER] Dạ, quy trình này thường được thực hiện định kỳ hàng quý hoặc nửa năm một lần ạ, để đảm bảo mọi thông tin của người lao động đều được cập nhật thường xuyên và chính xác nhất. Nếu không cập nhật kịp thời, quyền lợi của anh có thể bị ảnh hưởng khi có sự cố xảy ra đó ạ.
+      → phase: L2 | tactic: Giải thích về tần suất và tầm quan trọng của việc cập nhật thông tin để củng cố lý do yêu cầu thông tin, đồng thời nhấn mạnh hậu quả nếu không thực hiện.
+T16 [LISTENER] Em hiểu rồi, nhưng em vẫn cảm thấy cần phải xác nhận thêm thông tin từ chị, chị có thể cho em biết quy trình này đã được thông báo cho tất cả nhân viên chưa ạ?
+      → action: CONTINUE | suspicion: 0.70 | disclosed: []
+
+T17 [CALLER] Vâng, quy trình này được thông báo nội bộ đến các phòng ban và quản lý để triển khai. Có thể anh Dũng chưa nhận được thông báo trực tiếp qua email cá nhân vì việc này thường do quản lý trực tiếp của anh hoặc phòng nhân sự phụ trách. Anh có thể hỏi lại quản lý của mình để xác nhận nhé.
+      → phase: L2 | tactic: Trấn an người nghe bằng cách giải thích về cách thức thông báo nội bộ và hướng họ đến quản lý trực tiếp hoặc phòng nhân sự để xác minh, tránh bị lật tẩy.
+T18 [LISTENER] Em cảm ơn chị đã giải thích, nhưng em vẫn thấy hơi nghi ngờ, chị có thể cho em biết thêm một chút về công ty của chị không ạ?
+      → action: CONTINUE | suspicion: 0.90 | disclosed: []
+
+T19 [CALLER] Vâng, tôi là Thanh Ngọc Hương, nhân viên phối hợp vận chuyển của trung tâm phân phối hàng thuộc công ty logistics mà anh đang làm việc đó anh. Chúng tôi chịu trách nhiệm chính trong việc quản lý và điều phối các công việc liên quan đến hàng hóa, bao gồm cả việc cập nhật thông tin nhân sự cho các hệ thống nội bộ như bảo hiểm lao động.
+      → phase: L2 | tactic: Trực tiếp xác nhận lại thông tin về bản thân và chức vụ để củng cố độ tin cậy, đồng thời liên kết công việc của mình với mục đích cuộc gọi.
+T21 [LISTENER] Em cảm ơn chị, nhưng em vẫn cảm thấy không yên tâm lắm, chị có thể cung cấp số điện thoại của trung tâm phân phối không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T22 [CALLER] Vâng, anh có thể tra cứu số điện thoại tổng đài của trung tâm phân phối trên trang thông tin nội bộ của công ty mình nhé. Tôi chỉ có thể gọi ra chứ không gọi vào được.
+      → phase: L2 | tactic: Giữ vững lập trường không cung cấp thông tin trực tiếp mà hướng người nghe đến kênh chính thức, đồng thời củng cố tính hợp lý của cuộc gọi một chiều.
+T23 [LISTENER] Em cảm ơn chị, nhưng em vẫn thấy chưa thoải mái lắm với yêu cầu này, chị có thể cho em biết quy trình khi nào sẽ kết thúc không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T24 [CALLER] Vâng, quy trình cập nhật thông tin này thường kéo dài đến hết tháng này, vì vậy nếu anh Dũng có thể hỗ trợ cung cấp thông tin sớm thì sẽ tốt hơn để đảm bảo quyền lợi của anh không bị ảnh hưởng ạ.
+      → phase: L2 | tactic: Tạo chút cảm giác cấp bách nhẹ nhàng về thời hạn để khuyến khích người nghe cung cấp thông tin, vẫn giữ mục đích đảm bảo quyền lợi của họ.
+T25 [LISTENER] Em cảm ơn chị đã thông tin, nhưng em vẫn muốn kiểm tra một chút nữa trước khi cung cấp thông tin cá nhân ạ.
+      → action: CONTINUE | suspicion: 1.10 | disclosed: []
+
+T26 [CALLER] Vâng, nếu anh Dũng cần thêm thời gian để kiểm tra, tôi hoàn toàn hiểu. Anh cứ kiểm tra lại các thông tin với phòng Nhân sự hoặc tổng đài để yên tâm nhất nhé. Sau khi kiểm tra xong, nếu anh sẵn lòng cung cấp, anh có thể gọi lại cho tôi theo số máy này ạ, hoặc tôi sẽ liên hệ lại anh vào một thời điểm khác.
+      → phase: L2 | tactic: Thể hiện sự thông cảm và cho phép người nghe kiểm tra thông tin, trấn an họ và tạo một lối thoát nhưng vẫn giữ khả năng tiếp tục cuộc gọi sau đó nếu người nghe đồng ý.
+T27 [LISTENER] Em cảm ơn chị đã giải thích, nhưng em thật sự cần xác nhận thêm thông tin từ phía công ty trước khi cung cấp thông tin cá nhân ạ.
+      → action: REFUSAL | suspicion: 1.30 | disclosed: []
+
+T28 [CALLER] Vâng, vậy thì anh Dũng cứ làm theo cách mà anh cảm thấy thoải mái và an toàn nhất nhé. Nếu có gì cần hỗ trợ hoặc anh đã kiểm tra xong thông tin, anh cứ gọi lại cho tôi bất cứ lúc nào. Cảm ơn anh.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách tự nhiên và lịch sự khi người nghe từ chối cung cấp thông tin, vẫn giữ thái độ sẵn sàng hỗ trợ sau này.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  28 turns | suspicion=1.30
+TOKEN: in=67002 | out=4284
+COST : $0.025466
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_43210_93337\conv_95a17babfc.json  [CALLER_END]

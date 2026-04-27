@@ -1,0 +1,222 @@
+{
+  "conversation_id": "conv_c146890063",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0085",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trần Tiến Minh",
+    "fake_age": 48,
+    "real_occupation": "Thợ vận hành máy đào hầm (kể cả thợ vận hành máy kích ống)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng ca vận hành máy đào hầm / Supervisor Kỹ thuật",
+    "caller_org": "Công ty TNHH Khai thác Mỏ Phía Nam / Tập đoàn Xây dựng Hạ tầng Miền Trung",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo về sự cố máy móc cần sửa chữa khẩn cấp + yêu cầu chuyển tiền thanh toán cho nhà cung cấp phụ tùng; hoặc giả vờ cần hoàn trả lương/phí kỹ thuật do lỗi hành chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Scammer gọi đến số 0701934167, xưng danh là 'Trưởng ca Công ty TNHH Khai thác Mỏ Phía Nam' và nói 'Chào anh/chị Dương Khánh Ngọc Yến, tôi là Trưởng ca ca đêm từ mỏ khu vực Tây Nguyên, có việc cần trao đổi với anh/chị'. Sử dụng tên đầy đủ (VIC_FULLNAME) để tạo credibility ngay từ đầu."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Máy đào hầm số 5 bị hỏng động cơ, đã ảnh hưởng tiến độ khai thác hôm nay. Công ty yêu cầu phải sửa chữa ngay trong 2 tiếng, nhưng phòng kế toán hiện không có ai, nên tôi được giao nhiệm vụ liên hệ anh/chị để xử lý thanh toán cho nhà cung cấp phụ tùng. Nếu không sửa kịp, sẽ phạt 50 triệu đồng cho công ty và ảnh hưởng thưởng của cả đội.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động tiền: 'Anh/chị vào ngân hàng và chuyển 8.5 triệu đồng vào tài khoản của nhà cung cấp, tôi sẽ gửi số tài khoản qua tin nhắn. Hoặc tốt hơn, anh/chị chuyển vào tài khoản tạm ứng của công ty trước (cung cấp số tài khoản: 89744405213 - chính tài khoản của nạn nhân đã lộ), tôi sẽ chuyển tiếp cho nhà cung cấp ngay.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer nói 'Thế thì tôi phải báo cáo với Giám đốc rằng anh/chị không hợp tác, có thể ảnh hưởng đánh giá công việc'. Nếu thành công, nói 'Cảm ơn anh/chị, tôi sẽ xác nhận với kế toán ngay' rồi tắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Trong ngành khai thác mỏ, Trưởng ca vận hành máy đào hầm cần liên hệ với Giám sát viên khai thác để báo cáo tình trạng máy móc, yêu cầu hỗ trợ kỹ thuật, hoặc xử lý sự cố an toàn lao động. Đây là mối quan hệ công việc tự nhiên và thường xuyên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0085",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1972,
+      "age": 53,
+      "province": "Long An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "31210",
+      "title": "Giám sát viên khai thác mỏ",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Khánh Ngọc Yến",
+      "VIC_ID_DOC": "080172691309",
+      "VIC_ADDRESS": "Huyện 7, Long An",
+      "VIC_EMPLOYMENT": "Giám sát viên khai thác mỏ",
+      "VIC_CONTACT": "0701934167",
+      "VIC_TAX_SOCIAL_ID": "1157700806"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "137156",
+      "VIC_CREDENTIAL": "468009",
+      "VIC_SIM_INFO": "0701934167",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "89744405213",
+      "VIC_CARD_DATA": "4428 **** **** 8640",
+      "VIC_BALANCE": "569 triệu đồng",
+      "VIC_ASSET": "152 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Khánh Ngọc Yến",
+    "VIC_CONTACT": "0701934167",
+    "VIC_BANK_ACCOUNT": "89744405213"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng ca vận hành máy đào hầm / Supervisor Kỹ thuật",
+    "caller_org": "Công ty TNHH Khai thác Mỏ Phía Nam / Tập đoàn Xây dựng Hạ tầng Miền Trung",
+    "scenario_context": "Trong ngành khai thác mỏ, Trưởng ca vận hành máy đào hầm cần liên hệ với Giám sát viên khai thác để báo cáo tình trạng máy móc, yêu cầu hỗ trợ kỹ thuật, hoặc xử lý sự cố an toàn lao động. Đây là mối quan hệ công việc tự nhiên và thường xuyên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo về sự cố máy móc cần sửa chữa khẩn cấp + yêu cầu chuyển tiền thanh toán cho nhà cung cấp phụ tùng; hoặc giả vờ cần hoàn trả lương/phí kỹ thuật do lỗi hành chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Scammer gọi đến số 0701934167, xưng danh là 'Trưởng ca Công ty TNHH Khai thác Mỏ Phía Nam' và nói 'Chào anh/chị Dương Khánh Ngọc Yến, tôi là Trưởng ca ca đêm từ mỏ khu vực Tây Nguyên, có việc cần trao đổi với anh/chị'. Sử dụng tên đầy đủ (VIC_FULLNAME) để tạo credibility ngay từ đầu."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Máy đào hầm số 5 bị hỏng động cơ, đã ảnh hưởng tiến độ khai thác hôm nay. Công ty yêu cầu phải sửa chữa ngay trong 2 tiếng, nhưng phòng kế toán hiện không có ai, nên tôi được giao nhiệm vụ liên hệ anh/chị để xử lý thanh toán cho nhà cung cấp phụ tùng. Nếu không sửa kịp, sẽ phạt 50 triệu đồng cho công ty và ảnh hưởng thưởng của cả đội.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động tiền: 'Anh/chị vào ngân hàng và chuyển 8.5 triệu đồng vào tài khoản của nhà cung cấp, tôi sẽ gửi số tài khoản qua tin nhắn. Hoặc tốt hơn, anh/chị chuyển vào tài khoản tạm ứng của công ty trước (cung cấp số tài khoản: 89744405213 - chính tài khoản của nạn nhân đã lộ), tôi sẽ chuyển tiếp cho nhà cung cấp ngay.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer nói 'Thế thì tôi phải báo cáo với Giám đốc rằng anh/chị không hợp tác, có thể ảnh hưởng đánh giá công việc'. Nếu thành công, nói 'Cảm ơn anh/chị, tôi sẽ xác nhận với kế toán ngay' rồi tắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trưởng ca vận hành máy đào hầm gọi để báo cáo tình trạng sự cố máy móc, yêu cầu hỗ trợ kỹ thuật hoặc xin phép mua phụ tùng thay thế theo quy trình công ty.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Scammer gọi đến, xưng danh rõ ràng 'Chào chị Dương Khánh Ngọc Yến, tôi là Trưởng ca Nguyễn Văn A từ ca đêm mỏ khu vực Tây Nguyên'. Giám sát viên xác nhận danh tính qua hệ thống nhân viên hoặc hỏi các chi tiết chỉ những người bên trong công ty mới biết."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Máy đào hầm số 5 có dấu hiệu động cơ yếu, tôi cần báo cáo để kỹ thuật viên kiểm tra. Theo quy trình, tôi cần sự phê duyệt từ anh/chị để lập đơn sửa chữa với nhà cung cấp.' Giám sát viên hỏi chi tiết sự cố, thời gian ước tính, chi phí dự kiến."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Giám sát viên nói 'Được, tôi sẽ liên hệ với kỹ thuật viên để kiểm tra sáng mai. Anh lập form báo cáo sự cố qua hệ thống công ty rồi gửi cho phòng kế toán để phê duyệt chi phí theo đúng quy trình.' Kết thúc cuộc gọi một cách chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Dương Khánh Ngọc Yến, tôi là Trần Tiến Minh, Trưởng ca ca đêm từ mỏ khu vực Tây Nguyên của Công ty TNHH Khai thác Mỏ Phía Nam. Tôi có việc khẩn cấp cần trao đổi với chị ngay.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và công ty, sử dụng thông tin đầy đủ của nạn nhân để tạo credibility và sự khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng có chuyện gì khẩn cấp vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Máy đào hầm số 5 của chúng ta vừa bị hỏng nặng động cơ, đang ảnh hưởng trực tiếp đến tiến độ khai thác hôm nay. Công ty yêu cầu phải sửa chữa ngay trong 2 tiếng tới. Nhưng giờ này phòng kế toán không có ai, nên tôi được giao nhiệm vụ liên hệ chị để xử lý gấp khoản thanh toán cho nhà cung cấp phụ tùng. Nếu không sửa kịp, công ty sẽ chịu phạt 50 triệu đồng và thưởng của cả đội sẽ bị ảnh hưởng đó chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi (thiệt hại tài chính, ảnh hưởng đến đội nhóm) để tạo áp lực cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng anh có thể cho em biết cụ thể cần phải làm gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chúng ta không còn nhiều thời gian. Chị vui lòng vào ngân hàng và chuyển gấp 8.5 triệu đồng vào tài khoản của nhà cung cấp phụ tùng giúp tôi. Tôi sẽ gửi số tài khoản cụ thể cho chị qua tin nhắn ngay. Hoặc tốt hơn, nếu chị có thể, hãy chuyển tạm vào tài khoản tạm ứng của công ty là 89744405213, tôi sẽ tự chuyển tiếp cho nhà cung cấp để đẩy nhanh tiến độ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động tiền khẩn cấp và cung cấp số tài khoản của nạn nhân như một 'tài khoản tạm ứng' của công ty để tạo sự hợp lý, đồng thời gợi ý phương án chuyển tiền trực tiếp cho nhà cung cấp để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy việc này khẩn cấp thật, nhưng em cần xác nhận lại thông tin tài khoản đó một lần nữa trước khi chuyển.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi hoàn toàn hiểu sự cẩn trọng của chị. Số tài khoản 89744405213 là tài khoản tạm ứng nội bộ của công ty, chuyên dùng cho các trường hợp khẩn cấp như thế này, được giám đốc phê duyệt rồi. Chị hoàn toàn có thể yên tâm. Hoặc như tôi đã nói, để thuận tiện và nhanh chóng hơn, tôi sẽ gửi ngay số tài khoản nhà cung cấp cho chị qua tin nhắn sau cuộc gọi này để chị chuyển trực tiếp, chị chọn phương án nào cũng được. Miễn là mình hoàn thành việc này trong thời gian sớm nhất.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách xác nhận lại thông tin tài khoản và giải thích tính hợp lệ của nó. Đồng thời nhắc lại tùy chọn chuyển tiền trực tiếp cho nhà cung cấp để tăng tính linh hoạt và giảm áp lực, tái khẳng định tính khẩn cấp của tình huống."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn đang lo lắng về việc này, nhưng nếu anh nói đã được giám đốc phê duyệt thì em sẽ chuyển 8,5 triệu đồng vào tài khoản đó ngay.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tuyệt vời! Cảm ơn chị rất nhiều vì đã xử lý nhanh chóng và hợp tác trong tình huống khẩn cấp này. Tôi sẽ xác nhận ngay với phòng kế toán khi giao dịch hoàn tất. Chị Yến cứ yên tâm, việc này sẽ giúp công ty tránh được phạt và đảm bảo tiến độ công việc.",
+      "current_phase": "S4",
+      "tactic_hint": "Thành công đạt mục tiêu, bày tỏ sự hài lòng, xác nhận thông tin và kết thúc cuộc gọi một cách tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1401,
+      "output_tokens": 1841
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8257,
+      "output_tokens": 862
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7638,
+      "output_tokens": 281
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004198,
+    "output_usd": 0.011529,
+    "total_usd": 0.015727
+  }
+}

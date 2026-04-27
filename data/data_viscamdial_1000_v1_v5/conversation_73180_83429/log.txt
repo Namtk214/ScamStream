@@ -1,0 +1,72 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_e4267d676b]
+  Caller thật: Thợ thủ công dệt vải, da và các nguyên liệu có liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý Dự án Cung cấp Vật liệu & Thiết bị Xây dựng @ Công ty TNHH Cung cấp Vật liệu Xây dựng Miền Nam
+  Listener: Thợ vận hành máy đào đất và thợ vận hành thiết bị có liên quan khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Thợ thủ công dệt vải/da thường cung cấp vật liệu bảo vệ lao động (áo bảo hộ, dây đai an toàn, găng tay da) cho các công trường xây dựng. Thợ vận hành máy đào đất là khách hàng tiềm năng cần vật liệu bảo hộ và thiết bị an toàn tại công trường.
+  Pretext: Gọi để xác nhận thông tin cá nhân cho hợp đồng cung cấp vật liệu bảo hộ lao động, sau đó yêu cầu OTP để 'kích hoạt hợp đồng điện tử' và chuyển tiền đặt cọc.
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị, tôi là Phan Xuân Minh, Quản lý Dự án từ Công ty TNHH Cung cấp Vật liệu Xây dựng Miền Nam. Tôi gọi để xác nhận lại thông tin với chị Hoàng Thanh Linh ạ? Có phải chị đang công tác tại công trường X không?
+      → phase: S1 | tactic: Giới thiệu bản thân và công ty, dùng VIC_FULLNAME để xác nhận, tạo ấn tượng đã biết thông tin về nạn nhân.
+T02 [LISTENER] Em không hiểu anh đang nói gì ạ, công ty của anh có số điện thoại nào để tôi kiểm tra lại không?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T03 [CALLER] Vâng, chị có thể kiểm tra thông tin công ty chúng tôi qua mã số thuế 0314728399 hoặc truy cập website vdxaydungmiennam.com ạ. Nhưng mà, tôi cũng cần xác nhận thêm là chị Hoàng Thanh Linh hiện tại đang công tác tại công ty nào và số điện thoại của chị có phải là 0365184295 không ạ?
+      → phase: S1 | tactic: Cung cấp thông tin hợp pháp để tăng trust, đồng thời yêu cầu xác nhận lại thông tin cá nhân của nạn nhân để khẳng định mình đang nói chuyện đúng người và có thông tin nền tảng.
+T04 [LISTENER] Tôi chỉ muốn xác nhận lại thông tin, không biết em có thể tin được anh không ạ?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T05 [CALLER] Vâng, tôi hiểu sự cẩn trọng của chị. Để chị yên tâm hơn, tôi có thể cung cấp thêm mã số thuế và số chứng minh thư của công ty chúng tôi để chị đối chiếu. Hơn nữa, việc chúng tôi biết rõ tên chị là Hoàng Thanh Linh và số điện thoại này đã chứng minh chúng tôi không phải là người lạ. Tôi gọi cho chị hôm nay là về hợp đồng cung cấp vật liệu bảo hộ lao động mà công ty chị đã đăng ký, có lẽ chị đã quên rồi chăng?
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ bằng cách đề nghị cung cấp thêm thông tin và nhắc lại việc đã biết rõ thông tin của nạn nhân, đồng thời gợi nhớ về 'hợp đồng' để chuyển sang phase tạo tâm lý khẩn cấp.
+T06 [LISTENER] Em vẫn còn băn khoăn, không biết hợp đồng đó có thông tin gì chi tiết hơn không ạ? Em cần chắc chắn trước khi cung cấp thông tin cá nhân.
+      → action: CONTINUE | suspicion: 0.90 | disclosed: []
+
+T07 [CALLER] Vâng, hợp đồng này là để cung cấp vật liệu bảo hộ lao động cho công trường X mà chị đang làm việc đấy ạ. Công ty chúng tôi đang có chương trình khuyến mãi lớn cho các thợ vận hành thiết bị. Nếu chị ký hợp đồng hôm nay, chị sẽ được giảm 30% giá vật liệu bảo hộ. Chương trình chỉ còn 2 ngày nữa thôi ạ.
+      → phase: S2 | tactic: Bắt đầu chuyển sang Phase S2, tạo ra cảm giác khẩn cấp và ham lợi bằng cách giới thiệu chương trình khuyến mãi và giới hạn thời gian.
+T08 [LISTENER] Em vẫn cảm thấy nghi ngờ, không biết thông tin hợp đồng cụ thể như thế nào và em có thể liên hệ ai từ công ty để xác nhận thêm ạ?
+      → action: CONTINUE | suspicion: 1.80 | disclosed: []
+
+T09 [CALLER] Vâng, tôi hiểu. Chị có thể liên hệ tổng đài của Công ty Vật liệu Xây dựng Miền Nam số 1900 6789 để xác nhận thông tin về hợp đồng và chương trình khuyến mãi này. Tuy nhiên, tôi muốn nhấn mạnh rằng ưu đãi giảm 30% chỉ áp dụng cho những hợp đồng được ký kết và kích hoạt trong hôm nay và ngày mai thôi. Chị có muốn bỏ lỡ cơ hội này không?
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách cung cấp kênh xác minh, đồng thời tăng cường yếu tố khẩn cấp và ham lợi, tạo áp lực để nạn nhân hành động nhanh chóng.
+T11 [LISTENER] Em vẫn chưa yên tâm, anh cho em số điện thoại của người phụ trách hợp đồng để em xác nhận cụ thể hơn được không ạ?
+      → action: CONTINUE | suspicion: 2.80 | disclosed: []
+
+T12 [CALLER] Vâng, người phụ trách hợp đồng chính là tôi đây, Phan Xuân Minh. Tôi đang trực tiếp xử lý các hợp đồng ưu đãi này. Chị thấy đấy, thời gian ưu đãi không còn nhiều. Nếu chị muốn xác nhận ngay bây giờ, tôi có thể hướng dẫn chị kích hoạt hợp đồng điện tử để đảm bảo ưu đãi 30% này không bị mất đi. Việc này rất đơn giản và chỉ mất vài phút thôi ạ.
+      → phase: S2 | tactic: Khẳng định vai trò của bản thân là người chịu trách nhiệm, tiếp tục nhấn mạnh về sự khẩn cấp của ưu đãi và gợi ý hành động kích hoạt hợp đồng điện tử để chuyển sang phase yêu cầu hành động.
+T13 [LISTENER] Em vẫn chưa yên tâm lắm, không biết anh có thể cho em số điện thoại của một người khác trong công ty để em xác minh thông tin không ạ?
+      → action: CONTINUE | suspicion: 5.60 | disclosed: []
+
+T14 [CALLER] Chị Hoàng Thanh Linh, tôi hiểu chị rất cẩn trọng. Nhưng việc chị cứ chần chừ như vậy sẽ làm chị bỏ lỡ cơ hội giảm giá 30% cho vật liệu bảo hộ lao động cho công trường của mình đấy. Nếu chị không tin tôi, chị có thể gọi lên tổng đài để xác nhận lại thông tin về chương trình ưu đãi này. Nhưng chị đừng để lỡ cơ hội này nhé. Chị có muốn tôi hướng dẫn chị cách kích hoạt hợp đồng điện tử để hưởng ưu đãi không?
+      → phase: S2 | tactic: Tiếp tục xoa dịu nghi ngờ bằng cách nhắc lại kênh xác minh, đồng thời tăng cường áp lực về việc bỏ lỡ cơ hội và khuyến khích hành động ngay lập tức để chuyển sang phase S3.
+T15 [LISTENER] Em cảm thấy lo lắng quá, nếu anh là người phụ trách thì tại sao lại không có số điện thoại của người khác trong công ty để em xác minh ạ?
+      → action: CONTINUE | suspicion: 11.20 | disclosed: []
+
+T16 [CALLER] Chị Linh yên tâm, tôi là người phụ trách chính cho những chương trình ưu đãi đặc biệt này. Toàn bộ thông tin tôi cung cấp đều chính xác. Nếu chị cứ chần chừ như vậy, chương trình khuyến mãi 30% này sẽ hết hạn. Tôi chỉ muốn đảm bảo chị không bỏ lỡ lợi ích này. Vậy, chị đã sẵn sàng để tôi hướng dẫn chị cách kích hoạt hợp đồng điện tử chưa?
+      → phase: S2 | tactic: Khẳng định vai trò, trấn an nạn nhân về tính xác thực của thông tin, nhấn mạnh lại sự khẩn cấp của ưu đãi và thúc đẩy nạn nhân hành động để chuyển sang phase S3.
+T17 [LISTENER] Em rất lo lắng, nếu anh thật sự là người phụ trách thì tại sao không có ai khác trong công ty có thể xác minh cùng ạ?
+      → action: CONTINUE | suspicion: 22.40 | disclosed: []
+
+T18 [CALLER] Tôi hiểu nỗi lo của chị. Nhưng đây là chương trình ưu đãi đặc biệt nên tôi là người trực tiếp quản lý và xử lý để đảm bảo thông tin không bị rò rỉ. Nếu chị không muốn hưởng ưu đãi này, tôi đành phải ghi nhận chị không quan tâm và sẽ không gọi lại nữa. Chị có chắc là muốn bỏ qua cơ hội giảm 30% này không?
+      → phase: S2 | tactic: Khẳng định vai trò độc quyền, tạo áp lực bằng cách đe dọa kết thúc cuộc gọi và loại bỏ cơ hội ưu đãi nhằm ép nạn nhân đưa ra quyết định nhanh chóng.
+T19 [LISTENER] Em không cảm thấy thoải mái với cách làm việc này, anh có thể cho em số điện thoại của một người khác trong công ty để em xác minh thêm được không ạ?
+      → action: CONTINUE | suspicion: 33.90 | disclosed: []
+
+T20 [CALLER] Chị Hoàng Thanh Linh, tôi đã nói rõ là tôi là người phụ trách chính cho chương trình ưu đãi này. Nếu chị vẫn tiếp tục không tin tưởng và không muốn hợp tác, thì tôi sẽ buộc phải ghi nhận là chị từ chối cơ hội này và chuyển sang khách hàng khác. Chị có chắc là muốn bỏ lỡ 30% ưu đãi không? Tôi sẽ không gọi lại nữa sau cuộc gọi này.
+      → phase: S2 | tactic: Tăng cường áp lực và đe dọa kết thúc cuộc gọi, loại bỏ cơ hội ưu đãi nhằm ép nạn nhân đưa ra quyết định cuối cùng, chuẩn bị cho việc kết thúc cuộc gọi nếu không thành công.
+T21 [LISTENER] Em không cảm thấy thoải mái khi không có ai khác để xác minh, em xin lỗi nhưng em không thể tiếp tục trò chuyện với anh được.
+      → action: REFUSAL | suspicion: 67.80 | disclosed: []
+
+T22 [CALLER] Vâng, nếu chị đã quyết định như vậy thì tôi cũng không thể làm gì khác. Chúc chị một ngày tốt lành.
+      → phase: S2 | tactic: Kết thúc cuộc gọi một cách lịch sự nhưng dứt khoát khi nạn nhân từ chối kiên quyết và không có dấu hiệu hợp tác, tránh bị phát hiện.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  22 turns | suspicion=67.80
+TOKEN: in=53553 | out=4269
+COST : $0.024036
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_73180_83429\conv_e4267d676b.json  [CALLER_END]

@@ -1,0 +1,235 @@
+{
+  "conversation_id": "conv_05b8229437",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0076",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lý Xuân Phong",
+    "fake_age": 48,
+    "real_occupation": "Người viết tài liệu kỹ thuật",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhân viên kỹ thuật / Chuyên viên tư vấn sơn công nghiệp",
+    "caller_org": "Công ty tư vấn kỹ thuật sơn phủ & bảo vệ bề mặt",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa nhân viên kỹ thuật, thông báo rằng khách hàng (sử dụng VIC_FULLNAME) được lựa chọn tham gia chương trình 'Kiểm định chất lượng sơn cao cấp' với hỗ trợ tài chính từ công ty, nhưng cần xác thực danh tính và tài khoản ngân hàng để chuyển tiền hỗ trợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + credibility: Xưng danh là 'Cô/Anh từ bộ phận Kỹ thuật của Công ty Sơn Phủ Việt', gọi trực tiếp số VIC_CONTACT, nói tên đầy đủ 'Lê Quang Gia Bình' để tạo ấn tượng 'đã xác nhận thông tin từ trước'. Hỏi 'Anh/Chị là thợ sơn chuyên nghiệp phải không?' để xác nhận danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + sợ hãi: Thông báo 'Công ty chúng tôi đang chạy chương trình hỗ trợ thợ sơn tự do có tài năng — mỗi người được 15-20 triệu để mua dụng cụ cao cấp và tham gia đào tạo'. Tạo cảm giác 'may mắn' nhưng cũng 'hạn chế thời gian — chỉ còn 3 ngày'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác thực anh là thợ sơn chuyên nghiệp và không phải lừa đảo, công ty cần anh chuyển 2-3 triệu đồng vào tài khoản công ty làm 'phí xác thực hồ sơ' hoặc 'tiền ký quỹ'. Sau đó sẽ hoàn lại + thêm 15-20 triệu'. Yêu cầu nạn nhân cung cấp số tài khoản ngân hàng hoặc yêu cầu gửi tiền qua ứng dụng chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết quả: Nếu nạn nhân chuyển tiền, scammer sẽ mất liên lạc hoặc nói 'cần thêm một khoản phí phát sinh'. Nếu nạn nhân từ chối, scammer sẽ nói 'thế thôi, chương trình này chỉ dành cho những người có sẵn tư bản' rồi cúp máy."
+        }
+      ]
+    },
+    "scenario_context": "Người viết tài liệu kỹ thuật sơn phủ thường phải liên hệ trực tiếp với các thợ sơn thực tế để xác thực quy trình, thu thập feedback, hoặc thông báo cập nhật tiêu chuẩn kỹ thuật mới. Đây là giao điểm tự nhiên giữa hai nghề."
+  },
+  "listener_card": {
+    "listener_id": "lis_0076",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1983,
+      "age": 42,
+      "province": "Vĩnh Long",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "71311",
+      "title": "Thợ sơn",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Quang Gia Bình",
+      "VIC_ID_DOC": "086083660813",
+      "VIC_ADDRESS": "TP 11, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Thợ sơn",
+      "VIC_CONTACT": "0325837332",
+      "VIC_TAX_SOCIAL_ID": "8979887106"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "8243",
+      "VIC_CREDENTIAL": "572875",
+      "VIC_SIM_INFO": "0325837332",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0701022446827",
+      "VIC_CARD_DATA": "4387 **** **** 4153",
+      "VIC_BALANCE": "26 triệu đồng",
+      "VIC_ASSET": "140 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Quang Gia Bình",
+    "VIC_CONTACT": "0325837332",
+    "VIC_ASSET": "140 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kỹ thuật / Chuyên viên tư vấn sơn công nghiệp",
+    "caller_org": "Công ty tư vấn kỹ thuật sơn phủ & bảo vệ bề mặt",
+    "scenario_context": "Người viết tài liệu kỹ thuật sơn phủ thường phải liên hệ trực tiếp với các thợ sơn thực tế để xác thực quy trình, thu thập feedback, hoặc thông báo cập nhật tiêu chuẩn kỹ thuật mới. Đây là giao điểm tự nhiên giữa hai nghề.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa nhân viên kỹ thuật, thông báo rằng khách hàng (sử dụng VIC_FULLNAME) được lựa chọn tham gia chương trình 'Kiểm định chất lượng sơn cao cấp' với hỗ trợ tài chính từ công ty, nhưng cần xác thực danh tính và tài khoản ngân hàng để chuyển tiền hỗ trợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + credibility: Xưng danh là 'Cô/Anh từ bộ phận Kỹ thuật của Công ty Sơn Phủ Việt', gọi trực tiếp số VIC_CONTACT, nói tên đầy đủ 'Lê Quang Gia Bình' để tạo ấn tượng 'đã xác nhận thông tin từ trước'. Hỏi 'Anh/Chị là thợ sơn chuyên nghiệp phải không?' để xác nhận danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + sợ hãi: Thông báo 'Công ty chúng tôi đang chạy chương trình hỗ trợ thợ sơn tự do có tài năng — mỗi người được 15-20 triệu để mua dụng cụ cao cấp và tham gia đào tạo'. Tạo cảm giác 'may mắn' nhưng cũng 'hạn chế thời gian — chỉ còn 3 ngày'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác thực anh là thợ sơn chuyên nghiệp và không phải lừa đảo, công ty cần anh chuyển 2-3 triệu đồng vào tài khoản công ty làm 'phí xác thực hồ sơ' hoặc 'tiền ký quỹ'. Sau đó sẽ hoàn lại + thêm 15-20 triệu'. Yêu cầu nạn nhân cung cấp số tài khoản ngân hàng hoặc yêu cầu gửi tiền qua ứng dụng chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết quả: Nếu nạn nhân chuyển tiền, scammer sẽ mất liên lạc hoặc nói 'cần thêm một khoản phí phát sinh'. Nếu nạn nhân từ chối, scammer sẽ nói 'thế thôi, chương trình này chỉ dành cho những người có sẵn tư bản' rồi cúp máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sơn phủ gọi để yêu cầu phản hồi về tài liệu kỹ thuật mới, hoặc thông báo hướng dẫn sử dụng sản phẩm sơn mới cho các thợ sơn trong hệ thống của họ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng 'Đây là [Tên công ty] sơn phủ, bộ phận Kỹ thuật. Anh/Chị là Lê Quang Gia Bình phải không? Hiện tại có tiện không?'. Xác nhận đúng người, không vội vàng."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi vừa phát hành tiêu chuẩn sơn chống ăn mòn phiên bản 2024. Anh có thể cho chúng tôi biết ý kiến về độ bám dính và thời gian khô của sản phẩm không?' hoặc 'Anh đã nhận được tài liệu hướng dẫn pha trộn sơn chống thấm chưa? Có câu hỏi nào không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc tự nhiên: Ghi chép phản hồi, cảm ơn anh, hẹn gửi tài liệu qua email hoặc gặp lại nếu có vấn đề. Chào tạm biệt chuyên nghiệp, không yêu cầu thông tin cá nhân hoặc tiền bạc."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, xin chào anh Lê Quang Gia Bình. Tôi là Lý Xuân Phong, từ bộ phận Kỹ thuật của Công ty Sơn Phủ Việt đây ạ. Tôi muốn xác nhận xem anh có phải là thợ sơn chuyên nghiệp không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, dùng thông tin nạn nhân để tạo trust và xác minh đối tượng."
+    },
+    {
+      "role": "listener",
+      "text": "Em là thợ sơn, anh cần hỏi gì về nghề này ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, rất vui được biết anh. Hiện tại, công ty chúng tôi đang triển khai một chương trình hỗ trợ đặc biệt dành cho các thợ sơn tự do có tay nghề cao như anh. Mỗi người tham gia sẽ được hỗ trợ từ 15 đến 20 triệu đồng để đầu tư dụng cụ và nâng cao kỹ năng. Đây là cơ hội rất tốt, nhưng chương trình này chỉ còn hiệu lực trong 3 ngày tới thôi ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu chương trình hấp dẫn, tạo cảm giác khan hiếm thời gian và lợi ích tài chính."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe hấp dẫn quá anh ạ, nhưng em không chắc mình đủ điều kiện tham gia không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để xác nhận anh có phải thợ sơn tự do chuyên nghiệp thực sự và không phải đối tượng lừa đảo lợi dụng chương trình này, công ty chúng tôi có một bước yêu cầu nhỏ là anh cần chuyển khoản 2 đến 3 triệu đồng vào tài khoản của công ty làm phí xác thực hồ sơ. Khoản này sẽ được hoàn trả đầy đủ cùng với số tiền hỗ trợ 15-20 triệu ngay sau khi hồ sơ của anh được duyệt, thường là trong vòng 24 giờ. Anh thấy sao ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu chuyển tiền 'phí xác thực' với lời hứa hoàn trả và thêm tiền hỗ trợ, tạo vỏ bọc 'chống lừa đảo' để yêu cầu hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu ý anh, nhưng em chưa từng nghe về quy trình này của công ty, anh có thể giải thích rõ hơn cho em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, đây là quy định mới của chương trình năm nay, anh ạ. Để đảm bảo tính minh bạch và tránh các trường hợp trục lợi, công ty đã đưa ra yêu cầu về phí xác thực. Đây cũng là một cách để chúng tôi đánh giá mức độ cam kết của thợ sơn với nghề. Anh cứ yên tâm, công ty chúng tôi hoạt động uy tín và cam kết hoàn trả đầy đủ cùng tiền hỗ trợ. Anh có thể cung cấp số tài khoản để tôi hướng dẫn chuyển tiền xác thực không?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nghi ngờ, giải thích cho quy trình bất thường bằng lý do 'minh bạch' và 'đánh giá cam kết', sau đó tiếp tục thúc đẩy hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa thuyết phục lắm, vì sao công ty lại yêu cầu phí xác thực như vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình ạ, lý do chính là để sàng lọc. Anh cũng biết đấy, có rất nhiều người muốn lợi dụng các chương trình hỗ trợ như thế này. Khoản phí này giúp công ty đảm bảo rằng chỉ có những người thực sự tâm huyết và nghiêm túc với nghề mới tham gia. Nếu anh không tin tưởng, thì chương trình này có lẽ không phù hợp với anh. Anh có muốn tiếp tục không?",
+      "current_phase": "S3",
+      "tactic_hint": "Tăng áp lực bằng cách gợi ý sẽ bỏ lỡ cơ hội, đồng thời nhấn mạnh lại lý do 'sàng lọc' để biện minh cho phí xác thực, thúc đẩy nạn nhân đưa ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng hiểu điều đó, nhưng trong nghề của em, việc yêu cầu phí trước khi hỗ trợ là rất lạ, anh ạ, em cần thêm một chút thời gian để suy nghĩ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Vậy nếu anh cần thêm thời gian, có lẽ chương trình này không phù hợp với anh rồi. Chúng tôi sẽ ưu tiên những người thực sự muốn nắm bắt cơ hội. Chào anh.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách khéo léo sau khi nạn nhân từ chối kiên quyết, tạo cảm giác 'tự anh bỏ lỡ cơ hội'."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1789,
+      "output_tokens": 1694
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 9934,
+      "output_tokens": 923
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10207,
+      "output_tokens": 358
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005307,
+    "output_usd": 0.010992,
+    "total_usd": 0.016299
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "conversation_id": "conv_1620f1081b",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0070",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Ngô Văn Gia Khoa",
+    "fake_age": 42,
+    "real_occupation": "Kế toán thuế",
+    "real_group": "Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh",
+    "role_job": "Nhân viên kế toán - Phòng Tài chính quán cà phê/quán ăn",
+    "caller_org": "cá nhân - đại diện cho chủ quán hoặc công ty quản lý chuỗi quán",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | otp_extraction",
+      "pretext": "Gọi để 'xác nhận thông tin cá nhân phục vụ khai thuế và bảo hiểm xã hội cho năm nay' — sử dụng VIC_TAX_SOCIAL_ID để tạo độ tin cậy cao",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh/chị Lê Thế An, em là Hoa từ phòng Kế toán. Em đang xử lý hồ sơ khai thuế và bảo hiểm, có vài thông tin cần xác nhận lại với anh/chị để tránh sai sót'",
+          "tactic": "Dùng VIC_FULLNAME + VIC_TAX_SOCIAL_ID (đọc lại số để tạo ảo tưởng kiểm chứng) để tạo credibility"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: tạo cấp bách nhẹ + lo lắng",
+          "tactic": "Nói: 'Năm nay kiểm tra thuế chặt hơn, thông tin không khớp sẽ bị phạt. Chúng tôi phải cập nhật ngay hôm nay để tránh vấn đề'. Tạo áp lực thời gian mà không quá đe dọa"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động 1: Xác nhận thông tin cá nhân (ngân hàng, email, số điện thoại)",
+          "tactic": "Hỏi: 'Tài khoản ngân hàng chính của anh/chị là gì? Email công ty hoặc email cá nhân? Số điện thoại liên hệ có còn đúng không?' — ghi âm hoặc yêu cầu gửi qua email/zalo"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Yêu cầu hành động 2: OTP hoặc xác thực qua link",
+          "tactic": "Nói: 'Em sẽ gửi link để anh/chị xác nhận thông tin (hoặc em sẽ gửi OTP để xác minh ngân hàng, đảm bảo an toàn). Anh/chị nhận được rồi không?' — khi nạn nhân nhập OTP hoặc click link, scammer đã kiểm soát tài khoản"
+        },
+        {
+          "phase_id": "S5",
+          "objective": "Xử lý từ chối hoặc kết thúc",
+          "tactic": "Nếu nạn nhân từ chối: 'Không sao, em sẽ ghi lại là anh/chị từ chối. Nhưng khi phát sinh vấn đề thuế, anh/chị chịu trách nhiệm nhé'. Nếu thành công: cảm ơn và tắc máy ngay"
+        }
+      ]
+    },
+    "scenario_context": "Kế toán của các quán ăn/uống thường gọi cho nhân viên pha chế để xác nhận chi phí nguyên liệu, lương, hoặc kiểm tra thông tin cá nhân phục vụ tính thuế và bảo hiểm. Đây là giao điểm tự nhiên giữa bộ phận tài chính và nhân viên kinh doanh."
+  },
+  "listener_card": {
+    "listener_id": "lis_0070",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1982,
+      "age": 43,
+      "province": "Quảng Nam",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "51320",
+      "title": "Nhân viên pha chế",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Thế An",
+      "VIC_ID_DOC": "049082310280",
+      "VIC_ADDRESS": "TP 10, Quảng Nam",
+      "VIC_EMPLOYMENT": "Nhân viên pha chế",
+      "VIC_CONTACT": "0364085425",
+      "VIC_TAX_SOCIAL_ID": "3840026575"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "054396",
+      "VIC_CREDENTIAL": "8744",
+      "VIC_SIM_INFO": "0364085425",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "81709833481440",
+      "VIC_CARD_DATA": "4893 **** **** 4862",
+      "VIC_BALANCE": "37 triệu đồng",
+      "VIC_ASSET": "231 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Thế An",
+    "VIC_CONTACT": "0364085425",
+    "VIC_TAX_SOCIAL_ID": "3840026575"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kế toán - Phòng Tài chính quán cà phê/quán ăn",
+    "caller_org": "cá nhân - đại diện cho chủ quán hoặc công ty quản lý chuỗi quán",
+    "scenario_context": "Kế toán của các quán ăn/uống thường gọi cho nhân viên pha chế để xác nhận chi phí nguyên liệu, lương, hoặc kiểm tra thông tin cá nhân phục vụ tính thuế và bảo hiểm. Đây là giao điểm tự nhiên giữa bộ phận tài chính và nhân viên kinh doanh.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | otp_extraction",
+      "pretext": "Gọi để 'xác nhận thông tin cá nhân phục vụ khai thuế và bảo hiểm xã hội cho năm nay' — sử dụng VIC_TAX_SOCIAL_ID để tạo độ tin cậy cao",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh/chị Lê Thế An, em là Hoa từ phòng Kế toán. Em đang xử lý hồ sơ khai thuế và bảo hiểm, có vài thông tin cần xác nhận lại với anh/chị để tránh sai sót'",
+          "tactic": "Dùng VIC_FULLNAME + VIC_TAX_SOCIAL_ID (đọc lại số để tạo ảo tưởng kiểm chứng) để tạo credibility"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: tạo cấp bách nhẹ + lo lắng",
+          "tactic": "Nói: 'Năm nay kiểm tra thuế chặt hơn, thông tin không khớp sẽ bị phạt. Chúng tôi phải cập nhật ngay hôm nay để tránh vấn đề'. Tạo áp lực thời gian mà không quá đe dọa"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động 1: Xác nhận thông tin cá nhân (ngân hàng, email, số điện thoại)",
+          "tactic": "Hỏi: 'Tài khoản ngân hàng chính của anh/chị là gì? Email công ty hoặc email cá nhân? Số điện thoại liên hệ có còn đúng không?' — ghi âm hoặc yêu cầu gửi qua email/zalo"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Yêu cầu hành động 2: OTP hoặc xác thực qua link",
+          "tactic": "Nói: 'Em sẽ gửi link để anh/chị xác nhận thông tin (hoặc em sẽ gửi OTP để xác minh ngân hàng, đảm bảo an toàn). Anh/chị nhận được rồi không?' — khi nạn nhân nhập OTP hoặc click link, scammer đã kiểm soát tài khoản"
+        },
+        {
+          "phase_id": "S5",
+          "objective": "Xử lý từ chối hoặc kết thúc",
+          "tactic": "Nếu nạn nhân từ chối: 'Không sao, em sẽ ghi lại là anh/chị từ chối. Nhưng khi phát sinh vấn đề thuế, anh/chị chịu trách nhiệm nhé'. Nếu thành công: cảm ơn và tắc máy ngay"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kế toán quán ăn/uống cần xác nhận lại thông tin cá nhân nhân viên pha chế (Lê Thế An) để cập nhật hồ sơ bảo hiểm xã hội, khai thuế thu nhập cá nhân, hoặc kiểm tra lương",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: xưng danh rõ ràng + xác nhận đúng người",
+          "tactic": "'Chào anh/chị Lê Thế An, em là Hoa — kế toán tại [Tên quán/công ty]. Em đang cập nhật hồ sơ bảo hiểm xã hội cho năm nay. Anh/chị có thời gian nghe em vài phút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: xác nhận thông tin đã có sẵn",
+          "tactic": "Đọc lại thông tin hiện có (tên, số CMND/CCCD, số điện thoại) và hỏi: 'Thông tin này còn đúng không? Có cần cập nhật gì không?'. Nếu có thay đổi, ghi chép lại và hẹn nạn nhân cập nhật giấy tờ trực tiếp hoặc qua email công ty chính thức"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc thông báo xong",
+          "tactic": "'Cảm ơn anh/chị. Em sẽ cập nhật vào hệ thống. Nếu cần giấy tờ, anh/chị đến phòng Kế toán nhé. Chúc anh/chị làm việc vui vẻ!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Lê Thế An, tôi là Khoa từ phòng Kế toán. Tôi đang xử lý hồ sơ khai thuế và bảo hiểm xã hội cho năm nay, có mã số thuế là 3840026575. Tôi có một vài thông tin cần xác nhận lại với anh để tránh sai sót ảnh hưởng quyền lợi ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận bằng cách giới thiệu bản thân, mục đích cuộc gọi và sử dụng thông tin cá nhân (tên, mã số thuế) để tạo độ tin cậy và sự quen thuộc."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe anh nói rồi, nhưng tôi muốn kiểm tra lại một số thông tin trước khi xác nhận.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ thoải mái kiểm tra. Để đảm bảo anh không bị chậm trễ trong quá trình khai thuế và nhận các khoản bảo hiểm, mình sẽ nhanh chóng đi qua các thông tin cần thiết. Việc này giúp anh tránh những phiền toái hoặc xử lý khiếu nại sau này ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo sự cấp bách nhẹ và lo lắng về hậu quả nếu không hợp tác, đồng thời xoa dịu sự nghi ngờ ban đầu của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Vậy anh có cần thông tin gì cụ thể không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để tôi đọc lại thông tin cá nhân của anh gồm tên, số điện thoại, địa chỉ email, số tài khoản ngân hàng và ngân hàng đang sử dụng. Anh nghe xem có đúng không, nếu có sai sót chỗ nào thì báo lại tôi để kịp thời điều chỉnh anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu xác nhận thông tin cá nhân hiện có để nạn nhân cung cấp thông tin mới hoặc chỉnh sửa. Đây là tiền đề cho bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi xin lỗi, nhưng tôi không nhớ rõ hết thông tin cá nhân của mình. Anh có thể nhắc lại tên và số điện thoại của tôi được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Lê Thế An đúng không ạ? Số điện thoại tôi đang gọi là 0364085425 có phải là số của anh không?",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận lại các thông tin cơ bản đã biết để trấn an nạn nhân, tạo điều kiện cho nạn nhân tự cung cấp các thông tin chi tiết hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Đúng rồi, số điện thoại đó là của tôi, nhưng tôi vẫn không nhớ rõ địa chỉ email và số tài khoản ngân hàng của mình, anh có thể cho tôi biết được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An, tôi xin phép đọc lại địa chỉ email mà hệ thống của tôi đang ghi nhận là an.le***@gmail.com, không biết có đúng không ạ? Và số tài khoản ngân hàng tôi đang có là 0123456789 tại ngân hàng Vietcombank. Anh kiểm tra lại giúp tôi. Nếu có gì sai sót, anh cứ đọc lại chính xác để tôi cập nhật.",
+      "current_phase": "S3",
+      "tactic_hint": "Đọc một phần hoặc thông tin sai lệch để nạn nhân tự động cung cấp thông tin chính xác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ địa chỉ email như anh nói, nhưng số tài khoản ngân hàng thì không phải của tôi, anh có thể kiểm tra lại được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy anh An có thể cung cấp lại chính xác địa chỉ email và số tài khoản ngân hàng của mình để tôi cập nhật lại hồ sơ không ạ? Việc này rất quan trọng để đảm bảo anh nhận được các thông báo và khoản thanh toán liên quan đến thuế và bảo hiểm xã hội không bị gián đoạn.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân cung cấp thông tin chính xác về email và tài khoản ngân hàng, nhấn mạnh tầm quan trọng để tạo áp lực nhẹ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe anh nói rồi, nhưng tôi vẫn thấy hơi bối rối, không biết mình nên cung cấp địa chỉ email và số tài khoản ngân hàng hay không ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An đừng lo lắng. Đây là quy trình xác nhận thông tin định kỳ để đảm bảo mọi dữ liệu của anh trên hệ thống được chính xác. Nếu thông tin không khớp, có thể ảnh hưởng đến việc anh nhận các quyền lợi về bảo hiểm hoặc hoàn thuế sau này. Anh cứ cung cấp thông tin chính xác, tôi sẽ cập nhật ngay để hoàn tất hồ sơ cho anh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự bối rối, giải thích mục đích hợp lý và nhấn mạnh hậu quả nếu không cung cấp thông tin chính xác, nhằm thúc đẩy nạn nhân chia sẻ thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu nhưng vẫn cảm thấy hơi lo lắng, không biết có cách nào khác để xác nhận thông tin mà không cần cung cấp tài khoản ngân hàng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An, tôi hiểu mối lo ngại của anh. Tuy nhiên, việc xác nhận số tài khoản ngân hàng là để đảm bảo khi có các khoản trả lại từ thuế hoặc chi trả bảo hiểm, tiền sẽ được chuyển đúng người nhận. Nếu anh không tiện cung cấp trực tiếp qua điện thoại, mình có thể xác nhận bằng cách khác. Anh có đang dùng Zalo không ạ? Tôi có thể gửi yêu cầu xác nhận qua Zalo của số 0364085425, anh chỉ cần nhấn vào đường link xác nhận và điền lại thông tin vào đó là được.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự lo lắng, giải thích lý do cần thông tin, sau đó chuyển hướng sang phương án xác thực qua link (Zalo) để trích xuất OTP hoặc thông tin nhạy cảm khác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không quen dùng Zalo lắm, anh có thể cho tôi biết cách làm cụ thể hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu anh không quen dùng Zalo thì tôi sẽ hướng dẫn kỹ hơn. Anh chỉ cần mở Zalo trên điện thoại, sau đó mở cửa sổ chat với tôi. Tôi sẽ gửi cho anh một đường link duy nhất. Anh bấm vào đó, hệ thống sẽ yêu cầu anh nhập lại thông tin cá nhân bao gồm cả số tài khoản ngân hàng và địa chỉ email đã đăng ký với cơ quan thuế. Anh cứ điền đầy đủ và chính xác, sau đó nhấn xác nhận là được. Việc này đảm bảo thông tin của anh được bảo mật và cập nhật nhanh chóng.",
+      "current_phase": "S4",
+      "tactic_hint": "Hướng dẫn chi tiết cách thức thao tác với đường link lừa đảo qua Zalo để nạn nhân dễ dàng thực hiện, trấn an về bảo mật và sự tiện lợi."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe anh nói rồi, nhưng tôi vẫn cảm thấy không yên tâm lắm, không biết đường link đó có an toàn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An đừng lo lắng. Đường link này hoàn toàn an toàn và được mã hóa bảo mật đầu cuối, đảm bảo thông tin của anh sẽ được chuyển trực tiếp đến hệ thống của phòng Kế toán mà không qua bất kỳ bên thứ ba nào. Anh có thể xem xét các chứng chỉ bảo mật trên trang web khi truy cập. Đây là cách nhanh nhất và an toàn nhất để anh cập nhật thông tin và hoàn tất hồ sơ khai thuế, bảo hiểm xã hội kịp thời ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự lo lắng, nhấn mạnh tính an toàn (dù là giả) và lợi ích của việc sử dụng đường link để thuyết phục nạn nhân nhấp vào."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi cần thêm thời gian suy nghĩ trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu anh cần thêm thời gian để suy nghĩ. Tuy nhiên, thời hạn cuối để cập nhật hồ sơ khai thuế và bảo hiểm xã hội năm nay sắp đến rồi đó anh. Nếu quá hạn, có thể anh sẽ gặp rắc rối với cơ quan thuế hoặc bị chậm trễ trong việc nhận các khoản phúc lợi đó. Anh cố gắng sắp xếp kiểm tra sớm, có vấn đề gì thì cứ liên hệ lại với tôi qua số điện thoại này nhé. Tôi luôn sẵn lòng hỗ trợ anh.",
+      "current_phase": "S5",
+      "tactic_hint": "Tôn trọng quyết định của nạn nhân nhưng tạo áp lực nhẹ về thời gian và hậu quả, đồng thời giữ đường dây liên lạc mở để có cơ hội tiếp cận lại sau."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1765,
+      "output_tokens": 1753
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 21309,
+      "output_tokens": 1712
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 25737,
+      "output_tokens": 730
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.009887,
+    "output_usd": 0.013483,
+    "total_usd": 0.02337
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "conversation_id": "conv_cb11df05fa",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0015",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lý Thanh Bảo Linh",
+    "fake_age": 44,
+    "real_occupation": "Nhân viên trợ cấp xã hội của Chính phủ",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Cán bộ Phòng Kiểm soát An toàn Lao động - Sở Lao động, Thương binh & Xã hội",
+    "caller_org": "Sở Lao động, Thương binh & Xã hội Hải Phòng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction | credential_theft | money_transfer",
+      "pretext": "Gọi điện thông báo: 'Anh/chị Lý Hồng Thúy (VIC_FULLNAME) vừa được chính phủ phê duyệt chương trình hỗ trợ bổ sung cho công nhân ngành xây dựng - vật liệu chịu lửa. Để nhận khoản hỗ trợ 15 triệu đồng, chúng tôi cần xác minh lại thông tin cá nhân và tài khoản ngân hàng của anh/chị.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_ADDRESS",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Xưng danh là cán bộ Sở LĐTBXH, nêu tên đầy đủ (Lý Hồng Thúy), địa chỉ (Huyện 9, Hải Phòng), số CMND (031191666327) để tạo ấn tượng 'họ biết tất cả về tôi'. Sử dụng giọng điệu chính thức, nền tảng chính phủ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý tích cực + khẩn cấp: 'Đây là cơ hội hiếm hoi, chỉ áp dụng trong tháng này. Anh/chị là một trong 500 công nhân được chọn. Nếu không xác minh trong 24 giờ, tiền sẽ được chuyển sang người khác.' Tạo cảm giác: may mắn + sợ mất cơ hội."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để an toàn, chúng tôi cần anh/chị xác minh OTP qua SMS hoặc cài ứng dụng 'Xác thực An toàn LĐTBXH' để liên kết tài khoản. Hoặc, chúng tôi sẽ gọi lại từ số điện thoại chính thức của Sở để anh/chị cung cấp số tài khoản và CVV thẻ (4567 **** **** 6298).' Nếu nạn nhân cung cấp OTP hoặc số CVV, scammer truy cập tài khoản ngân hàng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer nói 'Anh/chị có thể gọi lại số hotline 1900.xxx để xác nhận, nhưng hãy nhanh lên vì hạn chót là hôm nay.' (Số hotline giả). Nếu thành công, scammer cắt máy ngay lập tức."
+        }
+      ]
+    },
+    "scenario_context": "Thợ lắp đặt vật liệu chịu lửa làm việc trong môi trường nguy hiểm, phải tuân thủ quy định an toàn lao động và bảo hiểm xã hội. Nhân viên trợ cấp xã hội có lý do hợp lý để liên hệ: kiểm tra hồ sơ bảo hiểm, xác nhận thông tin cá nhân cho bồi thường tai nạn lao động, hoặc thông báo quyền lợi trợ cấp mới."
+  },
+  "listener_card": {
+    "listener_id": "lis_0015",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1991,
+      "age": 34,
+      "province": "Hải Phòng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "71244",
+      "title": "Thợ lắp đặt vật liệu chịu lửa",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lý Hồng Thúy",
+      "VIC_ID_DOC": "031191666327",
+      "VIC_ADDRESS": "Huyện 9, Hải Phòng",
+      "VIC_EMPLOYMENT": "Thợ lắp đặt vật liệu chịu lửa",
+      "VIC_CONTACT": "0830070411",
+      "VIC_TAX_SOCIAL_ID": "4527316868"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "036969",
+      "VIC_CREDENTIAL": "769040",
+      "VIC_SIM_INFO": "0830070411",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1451545533",
+      "VIC_CARD_DATA": "4567 **** **** 6298",
+      "VIC_BALANCE": "23 triệu đồng",
+      "VIC_ASSET": "200 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lý Hồng Thúy",
+    "VIC_CONTACT": "0830070411",
+    "VIC_ID_DOC": "031191666327",
+    "VIC_CARD_DATA": "4567 **** **** 6298",
+    "VIC_ADDRESS": "Huyện 9, Hải Phòng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ Phòng Kiểm soát An toàn Lao động - Sở Lao động, Thương binh & Xã hội",
+    "caller_org": "Sở Lao động, Thương binh & Xã hội Hải Phòng",
+    "scenario_context": "Thợ lắp đặt vật liệu chịu lửa làm việc trong môi trường nguy hiểm, phải tuân thủ quy định an toàn lao động và bảo hiểm xã hội. Nhân viên trợ cấp xã hội có lý do hợp lý để liên hệ: kiểm tra hồ sơ bảo hiểm, xác nhận thông tin cá nhân cho bồi thường tai nạn lao động, hoặc thông báo quyền lợi trợ cấp mới.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | credential_theft | money_transfer",
+      "pretext": "Gọi điện thông báo: 'Anh/chị Lý Hồng Thúy (VIC_FULLNAME) vừa được chính phủ phê duyệt chương trình hỗ trợ bổ sung cho công nhân ngành xây dựng - vật liệu chịu lửa. Để nhận khoản hỗ trợ 15 triệu đồng, chúng tôi cần xác minh lại thông tin cá nhân và tài khoản ngân hàng của anh/chị.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_ADDRESS",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Xưng danh là cán bộ Sở LĐTBXH, nêu tên đầy đủ (Lý Hồng Thúy), địa chỉ (Huyện 9, Hải Phòng), số CMND (031191666327) để tạo ấn tượng 'họ biết tất cả về tôi'. Sử dụng giọng điệu chính thức, nền tảng chính phủ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý tích cực + khẩn cấp: 'Đây là cơ hội hiếm hoi, chỉ áp dụng trong tháng này. Anh/chị là một trong 500 công nhân được chọn. Nếu không xác minh trong 24 giờ, tiền sẽ được chuyển sang người khác.' Tạo cảm giác: may mắn + sợ mất cơ hội."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để an toàn, chúng tôi cần anh/chị xác minh OTP qua SMS hoặc cài ứng dụng 'Xác thực An toàn LĐTBXH' để liên kết tài khoản. Hoặc, chúng tôi sẽ gọi lại từ số điện thoại chính thức của Sở để anh/chị cung cấp số tài khoản và CVV thẻ (4567 **** **** 6298).' Nếu nạn nhân cung cấp OTP hoặc số CVV, scammer truy cập tài khoản ngân hàng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer nói 'Anh/chị có thể gọi lại số hotline 1900.xxx để xác nhận, nhưng hãy nhanh lên vì hạn chót là hôm nay.' (Số hotline giả). Nếu thành công, scammer cắt máy ngay lập tức."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cán bộ Sở LĐTBXH gọi để xác minh thông tin hồ sơ bảo hiểm xã hội và thông báo quyền lợi trợ cấp tai nạn lao động hợp pháp cho công nhân.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên, chức danh, phòng ban), giới thiệu mục đích gọi rõ ràng: 'Tôi là cán bộ Phòng Bảo hiểm Xã hội, Sở LĐTBXH Hải Phòng. Chúng tôi đang cập nhật hồ sơ bảo hiểm của anh/chị Lý Hồng Thúy.' Xác nhận danh tính nạn nhân qua 2-3 thông tin: tên + ngày sinh hoặc địa chỉ."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác minh lại: (1) Anh/chị vẫn làm việc tại công ty X? (2) Lương hiện tại là bao nhiêu? (3) Có thay đổi địa chỉ không?' Không bao giờ yêu cầu OTP, CVV, hoặc số tài khoản ngân hàng qua điện thoại. Nếu cần, sẽ gửi thư chính thức hoặc mời đến trực tiếp."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh/chị. Chúng tôi sẽ gửi thư xác nhận thông tin này trong vòng 3 ngày. Nếu có thắc mắc, anh/chị gọi đến hotline chính thức 1900.6789 (số thực) hoặc đến trực tiếp Sở LĐTBXH. Chúc anh/chị ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Lý Hồng Thúy ạ. Tôi là Lý Thanh Bảo Linh, cán bộ Phòng Kiểm soát An toàn Lao động thuộc Sở Lao động, Thương binh và Xã hội Hải Phòng. Tôi gọi điện để thông báo về chương trình hỗ trợ bổ sung cho công nhân ngành xây dựng tại Huyện 9, dựa trên thông tin căn cước công dân 031191666327 của chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, nêu rõ mục đích, sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Chị Linh ạ, em nghe chị nói nhưng em không hiểu rõ lắm về chương trình hỗ trợ này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Thúy, chương trình này nhằm hỗ trợ những công nhân có đóng góp tích cực trong ngành xây dựng. Chị là một trong số ít những trường hợp được xét duyệt nhận hỗ trợ 15 triệu đồng. Đây là cơ hội rất tốt để chị có thêm một khoản chi phí sinh hoạt trong thời điểm này. Tuy nhiên, thời gian để hoàn tất thủ tục có hạn.",
+      "current_phase": "S2",
+      "tactic_hint": "Kích hoạt tâm lý tích cực bằng cách nhấn mạnh giá trị khoản hỗ trợ và tạo cảm giác khẩn cấp về thời hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em rất cảm ơn về thông tin này, nhưng em vẫn chưa hiểu rõ cần phải làm gì để nhận khoản hỗ trợ đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Để nhận được khoản hỗ trợ 15 triệu này, chúng tôi cần xác minh lại một vài thông tin cá nhân và tài khoản ngân hàng của chị, bao gồm cả số CVV của thẻ có số đuôi 6298. Chị có thể cung cấp ngay bây giờ để tôi hỗ trợ hoàn tất thủ tục ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu cung cấp thông tin tài khoản ngân hàng, bao gồm cả CVV, để hoàn tất thủ tục, đẩy nhanh quá trình chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em hiểu rồi, nhưng em không thoải mái khi cung cấp thông tin nhạy cảm như vậy.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu sự lo lắng của chị. Đây là một quy định bắt buộc của Bộ Tài chính để xác minh chính chủ nhận hỗ trợ. Nếu chị không muốn cung cấp qua điện thoại, chị có thể đến trực tiếp Sở Lao động, Thương binh và Xã hội tại địa chỉ 123 Lê Thánh Tông, Hải Phòng để hoàn tất thủ tục, nhưng như tôi đã nói, thời gian không còn nhiều.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách giải thích đây là 'quy định bắt buộc' và đưa ra lựa chọn khác (đến trực tiếp sở) nhưng vẫn nhấn mạnh sự khẩn cấp của thời gian để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em hiểu nhưng em thật sự không yên tâm khi cung cấp thông tin nhạy cảm như vậy qua điện thoại.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1431,
+      "output_tokens": 1867
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6262,
+      "output_tokens": 614
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7989,
+      "output_tokens": 286
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003882,
+    "output_usd": 0.011042,
+    "total_usd": 0.014923
+  }
+}

@@ -1,0 +1,59 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_fc1445ef22]
+  Caller thật: Thợ vận hành cần trục (chung) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên bảo trì & cấp phát linh kiện máy móc công nghiệp @ Công ty cho thuê & bảo trì cần trục, máy nướng ngũ cốc (cá nhân/thương lái tự do)
+  Listener: Thợ vận hành máy nướng và các sản phẩm từ ngũ cốc (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Thợ vận hành cần trục thường liên hệ với các nhà máy chế biến ngũ cốc để cung cấp dịch vụ nâng hạ vật liệu thô, bảo trì thiết bị. Thợ vận hành máy nướng là khách hàng tiềm năng hoặc đã từng hợp tác.
+  Pretext: Gọi báo về hóa đơn chưa thanh toán hoặc yêu cầu cập nhật thông tin cá nhân để làm hợp đồng bảo trì máy móc mới, sử dụng tên thật của nạn nhân để tạo credibility cao.
+  Listener traits: ['thiếu hiểu biết công nghệ', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chị Giang ơi, em là Thúy từ công ty bảo trì máy móc Hoàng Phát đây ạ. Hôm trước chúng tôi có lập hợp đồng với chị, giờ em cần xác nhận lại ID 038168168704 để hoàn tất hồ sơ bảo hiểm thiết bị nướng ạ.
+      → phase: S1 | tactic: Sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy ngay từ đầu.
+T02 [LISTENER] Em nói hợp đồng nào vậy? Tôi không nhớ rõ lắm.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ, là hợp đồng bảo trì định kỳ máy nướng ngũ cốc mà bên em đã ký với chị vào tháng trước đấy ạ. Chị có nhớ không ạ?
+      → phase: S1 | tactic: Nhắc lại bối cảnh hợp đồng một cách mơ hồ để tránh sự thật rõ ràng nếu không có hợp đồng thật, nhưng vẫn củng cố thông tin đã có.
+T04 [LISTENER] À, tôi nhớ rồi, nhưng mà em có thể nói rõ hơn về hợp đồng đó được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, hợp đồng đó là để đảm bảo máy móc của chị hoạt động trơn tru và được bảo hành đầy đủ trong trường hợp có sự cố ạ. Hiện tại, em cần chị xác nhận ID 038168168704 một lần nữa để hoàn tất hồ sơ bảo hiểm thiết bị nướng, tránh trường hợp máy nướng của chị có vấn đề thì bên em không thể hỗ trợ bảo hành được ạ.
+      → phase: S1 | tactic: Nhấn mạnh vai trò của hợp đồng và tầm quan trọng của việc xác nhận thông tin để chuyển sang giai đoạn khẩn cấp và lợi ích nếu nạn nhân làm theo.
+T06 [LISTENER] Em nói cũng có lý, nhưng tôi vẫn cảm thấy hơi lo lắng, liệu tôi có thể kiểm tra lại thông tin này trước không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T07 [CALLER] Dạ, em hiểu cảm giác của chị ạ. Nhưng mà nếu không xác nhận ngay hôm nay, hợp đồng của chị sẽ hết hiệu lực. Lúc đó nếu máy bị lỗi, công ty sẽ không chịu trách nhiệm bảo hành đâu ạ. Chị có máy nướng mới phải không?
+      → phase: S2 | tactic: Khai thác tâm lý khẩn cấp bằng cách nêu ra hậu quả nếu không hành động ngay, đồng thời lồng câu hỏi xác nhận thông tin đã biết để tăng tính thuyết phục.
+T08 [LISTENER] Tôi hiểu rồi, nhưng mà em có thể nói cho tôi biết thêm về các điều khoản trong hợp đồng đó không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T09 [CALLER] Dạ, các điều khoản bảo trì và bảo hành đều được ghi rõ trong hợp đồng chị đã ký ạ. Nhưng quan trọng nhất lúc này là chị cần xác nhận lại mã định danh để hồ sơ bảo hiểm được cập nhật kịp thời, tránh việc máy móc trục trặc mà không được bảo hành chị nhé. Chị có thể xác nhận lại ID 038168168704 giúp em được không ạ?
+      → phase: S2 | tactic: Tránh đi sâu vào chi tiết hợp đồng không tồn tại, tập trung lại vào sự khẩn cấp của việc xác nhận thông tin để chuyển sang hành động.
+T10 [LISTENER] Tôi vẫn có chút lo lắng, em có thể gửi cho tôi một bản sao hợp đồng không ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T11 [CALLER] Chị ơi, việc gửi bản sao hợp đồng cần thời gian và quy trình xử lý nội bộ ạ. Hiện tại, chúng ta đang cần xử lý gấp để không ảnh hưởng đến quyền lợi bảo hành của chị. Chị chỉ cần xác nhận lại ID 038168168704 là xong thôi ạ. Chị hỗ trợ em nhanh nhé.
+      → phase: S2 | tactic: Tránh cung cấp tài liệu không có thật bằng cách viện lý do quy trình phức tạp, đồng thời giữ áp lực khẩn cấp để nạn nhân hành động nhanh chóng và xác nhận thông tin.
+T12 [LISTENER] Em nói cũng có lý, nhưng tôi vẫn cảm thấy lo lắng lắm, liệu có cách nào tôi có thể kiểm tra lại thông tin này một cách an toàn không ạ?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T13 [CALLER] Dạ, em hiểu cảm giác của chị ạ. Nhưng mà hiện giờ hệ thống bên em đang khóa, nếu chị không xác nhận lại ID trong hôm nay thì hợp đồng bảo hành của chị sẽ bị hủy bỏ hoàn toàn. Em sẽ không thể giúp chị làm lại hợp đồng sau này được nữa đâu ạ. Chị cứ đọc cho em lại số ID 038168168704 là được thôi ạ.
+      → phase: S2 | tactic: Tăng cường áp lực khẩn cấp bằng cách đe dọa hủy hợp đồng và không thể làm lại, đồng thời đơn giản hóa hành động yêu cầu để nạn nhân dễ thực hiện.
+T14 [LISTENER] Tôi hiểu là em rất cần, nhưng tôi vẫn muốn kiểm tra tính chính xác trước khi cung cấp thông tin đâu đó ạ.
+      → action: REFUSAL | suspicion: 1.40 | disclosed: []
+
+T15 [CALLER] Dạ, nếu chị không có điều kiện xác nhận ngay hôm nay, vậy chị để em gọi lại lúc khác nhé. Nhưng nếu quá 48 tiếng nữa chị sẽ mất quyền bảo hành máy móc của mình đó ạ.
+      → phase: S4 | tactic: Giảm áp lực trực tiếp nhưng vẫn giữ mối đe dọa về hậu quả mất quyền lợi để duy trì khả năng liên lạc lại sau này, đồng thời chuyển sang Phase S4.
+T16 [LISTENER] Em nói cũng đúng, nhưng tôi vẫn cảm thấy chưa yên tâm lắm, liệu có cách nào để tôi kiểm tra thông tin này một cách an toàn hơn không ạ?
+      → action: REFUSAL | suspicion: 2.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  16 turns | suspicion=2.80
+TOKEN: in=34946 | out=3566
+COST : $0.019963
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_83431_81604\conv_fc1445ef22.json  [SCAM_REFUSE]

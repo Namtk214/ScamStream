@@ -1,0 +1,214 @@
+{
+  "conversation_id": "conv_6747acc90a",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0027",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Dương Đức Quân",
+    "fake_age": 38,
+    "real_occupation": "Thợ làm sạch cửa sổ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên quản lý tòa nhà / Quản lý cơ sở hạ tầng văn phòng",
+    "caller_org": "Công ty quản lý tòa nhà Tiền Giang",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên quản lý tòa nhà liên hệ để cập nhật thông tin liên lạc của nhân viên, thông báo về các công việc bảo trì hệ thống công nghệ tòa nhà, hoặc yêu cầu hỗ trợ kỹ thuật từ chuyên gia IT.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào anh/chị Phạm Như Giang, tôi là Minh từ phòng Quản lý tòa nhà. Tôi đang cập nhật hồ sơ nhân viên tại TP 11 và cần xác nhận lại thông tin liên lạc của anh/chị có còn chính xác không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi sắp nâng cấp hệ thống Wi-Fi và an ninh mạng tòa nhà. Vì anh/chị là nhà phát triển phần mềm, chúng tôi muốn hỏi xem có cần gì hỗ trợ đặc biệt cho phòng làm việc của anh/chị không? Hoặc anh/chị có thể giúp chúng tôi kiểm tra tính tương thích của hệ thống mới không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động và kết thúc: 'Cảm ơn anh/chị. Chúng tôi sẽ tiến hành nâng cấp vào tuần tới. Nếu có vấn đề gì, anh/chị vui lòng liên hệ với chúng tôi qua số [số tổng đài chính thức]. Chúc anh/chị một ngày tốt lành!'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà phát triển phần mềm thường làm việc trong các tòa nhà văn phòng hoặc công ty công nghệ. Nhân viên quản lý tòa nhà có lý do chính đáng để liên hệ các chuyên gia công nghệ về vấn đề hệ thống, bảo mật, hoặc cập nhật thông tin liên lạc cho hồ sơ nhân viên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0027",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1981,
+      "age": 44,
+      "province": "Tiền Giang",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "25120",
+      "title": "Nhà phát triển phần mềm",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Như Giang",
+      "VIC_ID_DOC": "082181277860",
+      "VIC_ADDRESS": "TP 11, Tiền Giang",
+      "VIC_EMPLOYMENT": "Nhà phát triển phần mềm",
+      "VIC_CONTACT": "0859586640",
+      "VIC_TAX_SOCIAL_ID": "6508344065"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "610919",
+      "VIC_CREDENTIAL": "827845",
+      "VIC_SIM_INFO": "0859586640",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "442505536241",
+      "VIC_CARD_DATA": "4312 **** **** 8141",
+      "VIC_BALANCE": "238 triệu đồng",
+      "VIC_ASSET": "3.4 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Tiền Giang"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Như Giang",
+    "VIC_CONTACT": "0859586640",
+    "VIC_CARD_DATA": "4312 **** **** 8141",
+    "VIC_BANK_ACCOUNT": "442505536241",
+    "VIC_ADDRESS": "TP 11, Tiền Giang"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý tòa nhà / Quản lý cơ sở hạ tầng văn phòng",
+    "caller_org": "Công ty quản lý tòa nhà Tiền Giang",
+    "scenario_context": "Nhà phát triển phần mềm thường làm việc trong các tòa nhà văn phòng hoặc công ty công nghệ. Nhân viên quản lý tòa nhà có lý do chính đáng để liên hệ các chuyên gia công nghệ về vấn đề hệ thống, bảo mật, hoặc cập nhật thông tin liên lạc cho hồ sơ nhân viên.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện với danh nghĩa nhân viên quản lý tòa nhà, thông báo rằng hệ thống bảo mật tòa nhà đã phát hiện bất thường trên tài khoản liên kết với địa chỉ của nạn nhân (TP 11, Tiền Giang). Sử dụng tên đầy đủ 'Phạm Như Giang' và số điện thoại để tạo độ tin cậy cao, sau đó yêu cầu xác minh danh tính qua OTP.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh/chị Phạm Như Giang, tôi là Minh từ phòng Quản lý tòa nhà. Chúng tôi vừa phát hiện hoạt động đăng nhập bất thường từ nước ngoài vào hệ thống bảo mật liên quan đến tài khoản của anh/chị tại địa chỉ TP 11, Tiền Giang. Chúng tôi cần xác minh lại danh tính để bảo vệ thông tin của anh/chị.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi: Nhấn mạnh tính khẩn cấp và rủi ro bảo mật. 'Nếu không xác minh ngay, tài khoản ngân hàng của anh/chị có thể bị khóa hoặc bị trộm cắp. Chúng tôi chỉ có 5 phút để hoàn tất quy trình này.' Tạo áp lực thời gian."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chúng tôi sẽ gửi một mã OTP (One-Time Password) đến số điện thoại của anh/chị. Vui lòng đọc mã đó cho tôi để tôi có thể xác minh trong hệ thống.' Sau khi nạn nhân cung cấp OTP, scammer sẽ sử dụng nó để truy cập tài khoản ngân hàng hoặc thực hiện chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, giả vờ bực dọc: 'Tôi hiểu anh/chị cảnh giác, nhưng đây là quy trình bắt buộc. Nếu không xác minh, tài khoản sẽ bị khóa trong 24 giờ.' Nếu thành công, cảm ơn nạn nhân và cúp máy ngay lập tức để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên quản lý tòa nhà liên hệ để cập nhật thông tin liên lạc của nhân viên, thông báo về các công việc bảo trì hệ thống công nghệ tòa nhà, hoặc yêu cầu hỗ trợ kỹ thuật từ chuyên gia IT.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào anh/chị Phạm Như Giang, tôi là Minh từ phòng Quản lý tòa nhà. Tôi đang cập nhật hồ sơ nhân viên tại TP 11 và cần xác nhận lại thông tin liên lạc của anh/chị có còn chính xác không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi sắp nâng cấp hệ thống Wi-Fi và an ninh mạng tòa nhà. Vì anh/chị là nhà phát triển phần mềm, chúng tôi muốn hỏi xem có cần gì hỗ trợ đặc biệt cho phòng làm việc của anh/chị không? Hoặc anh/chị có thể giúp chúng tôi kiểm tra tính tương thích của hệ thống mới không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động và kết thúc: 'Cảm ơn anh/chị. Chúng tôi sẽ tiến hành nâng cấp vào tuần tới. Nếu có vấn đề gì, anh/chị vui lòng liên hệ với chúng tôi qua số [số tổng đài chính thức]. Chúc anh/chị một ngày tốt lành!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào chị Phạm Như Giang, tôi là Dương Đức Quân từ phòng Quản lý tòa nhà. Tôi đang cập nhật hồ sơ nhân viên tại TP 11 và cần xác nhận lại thông tin liên lạc của chị có còn chính xác không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chính thức, giới thiệu bản thân và mục đích cuộc gọi để xác nhận thông tin liên lạc."
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi, nhưng em cần kiểm tra lại thông tin đó trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng chị cứ kiểm tra lại thông tin. Chị có thể cho tôi biết chị cần kiểm tra thông tin gì cụ thể không?",
+      "current_phase": "L1",
+      "tactic_hint": "Làm rõ thông tin người nghe cần kiểm tra để cung cấp hỗ trợ, giữ thái độ hợp tác và chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần xác nhận số điện thoại và địa chỉ của mình trước ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số điện thoại của chị hiện tại là 0859586640 và địa chỉ là TP 11, Tiền Giang. Chị xác nhận giúp tôi xem thông tin này đã chính xác chưa ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp thông tin đã biết để người nghe xác nhận, tiến tới hoàn thành mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em xác nhận số điện thoại là đúng, nhưng địa chỉ em cần kiểm tra lại xem có gì thay đổi không ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng chị cứ kiểm tra lại địa chỉ nhé. Chúng tôi sắp nâng cấp hệ thống Wi-Fi và an ninh mạng tòa nhà. Vì chị là nhà phát triển phần mềm, chúng tôi muốn hỏi xem có cần gì hỗ trợ đặc biệt cho phòng làm việc của chị không? Hoặc chị có thể giúp chúng tôi kiểm tra tính tương thích của hệ thống mới không?",
+      "current_phase": "L2",
+      "tactic_hint": "Chuyển sang nội dung công việc chính, đề xuất việc hỗ trợ kỹ thuật và nhờ người nghe kiểm tra tính tương thích của hệ thống mới."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn em đã đề xuất, nhưng em chưa rõ thông tin cụ thể về hệ thống mới nên em cần thời gian suy nghĩ thêm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ tìm hiểu thêm thông tin. Chúng tôi sẽ gửi chi tiết về hệ thống mới qua email để chị tiện theo dõi. Nếu có bất kỳ câu hỏi nào, chị cứ liên hệ lại nhé. Cảm ơn chị đã dành thời gian.",
+      "current_phase": "L3",
+      "tactic_hint": "Tạo điều kiện để người nghe tìm hiểu thông tin, đưa ra phương án kết nối sau và kết thúc cuộc gọi một cách lịch sự, tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1841,
+      "output_tokens": 1750
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6381,
+      "output_tokens": 582
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7173,
+      "output_tokens": 264
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004193,
+    "output_usd": 0.010363,
+    "total_usd": 0.014557
+  }
+}

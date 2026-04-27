@@ -1,0 +1,201 @@
+{
+  "conversation_id": "conv_d30d5c8eb0",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0028",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lê Khánh Thúy",
+    "fake_age": 44,
+    "real_occupation": "Nhân viên hướng dẫn du lịch khác (như di tích lịch sử, bảo tàng)",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên bảo trì - sửa chữa cơ sở vật chất tại bảo tàng/di tích",
+    "caller_org": "Bảo tàng Lịch sử Địa phương / Di tích Quốc gia",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Bảo tàng cần thuê thợ ống nước sửa chữa hệ thống cấp nước/xả nước định kỳ hoặc khắc phục sự cố. Liên hệ trực tiếp để thỏa thuận giá cả, lịch trình, và hợp đồng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Hồng Lan, tôi là Minh từ phòng Bảo trì Bảo tàng Lịch sử. Anh có thời gian không? Chúng tôi muốn tìm thợ ống nước uy tín để sửa chữa hệ thống cấp nước tại khu vực triển lãm.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Công việc dự kiến mất 1-2 ngày. Chúng tôi cần anh kiểm tra tình trạng ống nước, xác định lỗi, báo giá, rồi thực hiện sửa chữa. Anh có thể đến thứ Năm tuần sau không? Chi phí khoảng bao nhiêu?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: 'Tốt ạ. Tôi sẽ gửi email hợp đồng cho anh ký duyệt. Anh xác nhận lại địa chỉ và số điện thoại để tôi lên lịch chính xác. Cảm ơn anh, tạm biệt.'"
+        }
+      ]
+    },
+    "scenario_context": "Bảo tàng/di tích cần sửa chữa hệ thống ống nước, hệ thống vệ sinh hoặc xử lý sự cố rò rỉ. Nhân viên bảo trì liên hệ thợ ống nước uy tín để khắc phục sự cố khẩn cấp hoặc bảo dưỡng định kỳ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0028",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1975,
+      "age": 50,
+      "province": "Bình Dương",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "71260",
+      "title": "Thợ ống nước",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Hồng Lan",
+      "VIC_ID_DOC": "074175506596",
+      "VIC_ADDRESS": "TP 5, Bình Dương",
+      "VIC_EMPLOYMENT": "Thợ ống nước",
+      "VIC_CONTACT": "0703073469",
+      "VIC_TAX_SOCIAL_ID": "2282152480"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "267045",
+      "VIC_CREDENTIAL": "875871",
+      "VIC_SIM_INFO": "0703073469",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "36867066021431",
+      "VIC_CARD_DATA": "4918 **** **** 5135",
+      "VIC_BALANCE": "74 triệu đồng",
+      "VIC_ASSET": "167 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Hồng Lan",
+    "VIC_CONTACT": "0703073469",
+    "VIC_EMPLOYMENT": "Thợ ống nước",
+    "VIC_TAX_SOCIAL_ID": "2282152480"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bảo trì - sửa chữa cơ sở vật chất tại bảo tàng/di tích",
+    "caller_org": "Bảo tàng Lịch sử Địa phương / Di tích Quốc gia",
+    "scenario_context": "Bảo tàng/di tích cần sửa chữa hệ thống ống nước, hệ thống vệ sinh hoặc xử lý sự cố rò rỉ. Nhân viên bảo trì liên hệ thợ ống nước uy tín để khắc phục sự cố khẩn cấp hoặc bảo dưỡng định kỳ.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi tên Trương Hồng Lan + số CMND để giả vờ xác minh hợp đồng sửa chữa tại bảo tàng, sau đó yêu cầu xác nhận qua OTP để 'kích hoạt thanh toán ứng trước' hoặc 'bảo hiểm công nhân'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Hồng Lan, tôi là Minh từ phòng Bảo trì Bảo tàng Lịch sử. Hôm nay chúng tôi kiểm tra danh sách thợ ống nước uy tín, anh là 2282152480 đúng không? Chúng tôi muốn mời anh sửa hệ thống ống nước khu vực triển lãm.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Công việc này rất gấp, hôm nay phải xong. Bảo tàng sẽ trả công 3 triệu, nhưng trước tiên anh cần xác nhận hợp đồng qua hệ thống quản lý của chúng tôi. Tôi sẽ gửi link/mã OTP để anh kích hoạt.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vào link này hoặc nhập mã OTP mà tôi gửi để xác nhận thông tin cá nhân. Sau đó anh sẽ nhận được thông báo thanh toán ứng trước 500k để chuẩn bị dụng cụ.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu anh từ chối, scammer sẽ nói 'Anh không muốn công việc này à? Chúng tôi có nhiều thợ khác chờ đợi. Anh suy nghĩ lại nhé' — tạo tâm lý mất cơ hội. Nếu anh nhập OTP, scammer sẽ chiếm quyền kiểm soát tài khoản ngân hàng."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Bảo tàng cần thuê thợ ống nước sửa chữa hệ thống cấp nước/xả nước định kỳ hoặc khắc phục sự cố. Liên hệ trực tiếp để thỏa thuận giá cả, lịch trình, và hợp đồng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Hồng Lan, tôi là Minh từ phòng Bảo trì Bảo tàng Lịch sử. Anh có thời gian không? Chúng tôi muốn tìm thợ ống nước uy tín để sửa chữa hệ thống cấp nước tại khu vực triển lãm.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Công việc dự kiến mất 1-2 ngày. Chúng tôi cần anh kiểm tra tình trạng ống nước, xác định lỗi, báo giá, rồi thực hiện sửa chữa. Anh có thể đến thứ Năm tuần sau không? Chi phí khoảng bao nhiêu?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: 'Tốt ạ. Tôi sẽ gửi email hợp đồng cho anh ký duyệt. Anh xác nhận lại địa chỉ và số điện thoại để tôi lên lịch chính xác. Cảm ơn anh, tạm biệt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Hồng Lan, tôi là Thúy từ phòng Bảo trì Bảo tàng Lịch sử. Chị có thời gian không? Chúng tôi muốn tìm thợ ống nước uy tín để sửa chữa hệ thống cấp nước tại khu vực triển lãm.",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Chào em, tôi nghe em nói rồi, nhưng tôi muốn biết thêm thông tin về công việc này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm. Công việc dự kiến sẽ mất khoảng 1 đến 2 ngày. Chúng tôi cần chị kiểm tra tổng thể tình trạng đường ống nước, xác định các lỗi hư hỏng, sau đó báo giá cụ thể cho chúng tôi để tiến hành sửa chữa. Chị có thể đến bảo tàng vào thứ Năm tuần sau không ạ? Chị có thể ước tính chi phí khoảng bao nhiêu không?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp chi tiết công việc, thời gian dự kiến và hỏi về khả năng, chi phí của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi có thể đến vào thứ Năm tuần sau, nhưng tôi không rõ mình sẽ báo giá khoảng bao nhiêu được không? Em có thông tin gì cụ thể hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị đến thứ năm được là tốt quá rồi. Về chi phí thì để chị đến khảo sát thực tế rồi báo giá chi tiết giúp tôi nhé. Chị xem mình có thể đến vào khung giờ nào trong sáng thứ Năm được ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận lịch hẹn và khuyến khích người nghe đến khảo sát để báo giá chính xác, đồng thời hỏi về khung giờ cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi có thể đến vào khoảng 9 giờ sáng thứ Năm, em có thấy hợp lý không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "9 giờ sáng thứ Năm là rất hợp lý ạ. Vậy tôi chốt lịch chị đến bảo tàng vào 9 giờ sáng thứ Năm tuần sau nhé. Tôi sẽ gửi email hợp đồng công việc và xác nhận lịch hẹn cho chị ký duyệt. Chị vui lòng xác nhận lại địa chỉ email và số điện thoại của chị để tôi gửi thông tin chính xác ạ. Cảm ơn chị và hẹn gặp lại chị vào thứ Năm.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lại lịch hẹn, thống nhất thông tin và kết thúc cuộc gọi một cách tự nhiên sau khi hoàn thành mục đích."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1845,
+      "output_tokens": 1514
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4618,
+      "output_tokens": 525
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5545,
+      "output_tokens": 210
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.0036,
+    "output_usd": 0.009008,
+    "total_usd": 0.012609
+  }
+}

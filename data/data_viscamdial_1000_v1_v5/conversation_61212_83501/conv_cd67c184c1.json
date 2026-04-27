@@ -1,0 +1,175 @@
+{
+  "conversation_id": "conv_cd67c184c1",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0037",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Vũ Xuân Đức Bình",
+    "fake_age": 37,
+    "real_occupation": "Lao động chăn nuôi dê, cừu, hươu",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh/môi giới thương mại hàng hóa nông sản",
+    "caller_org": "cá nhân - thương lái tự do",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Thương lái nông sản thực sự cần thuê tàu vận chuyển hàng hóa đã được đặt hàng từ khách hàng, đàm phán giá cước và lịch trình giao hàng hợp pháp",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào anh Chi, tôi là Minh - thương lái dê ở Bình Thuận. Tôi được bạn Tuấn giới thiệu số điện thoại anh. Anh có làm vận chuyển hàng nông sản không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Tôi có 30 tấn dê cần chuyển từ Bình Thuận đi Sài Gòn vào thứ Tư tuần sau. Anh có sẵn tàu, giá cước bao nhiêu, thời gian vận chuyển mất bao lâu? Anh có thể giao hàng trực tiếp tại chợ Tây Đô không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Được, tôi sẽ gửi anh hợp đồng qua zalo, sau đó chúng ta gặp mặt hoặc ký kết trực tiếp. Anh cứ yên tâm, tôi là khách hàng cũ của công ty vận chuyển An Phát, bạn bè tôi sẽ giới thiệu.' (Có bằng chứng xác thực hoặc người giới thiệu chung)"
+        }
+      ]
+    },
+    "scenario_context": "Người lái tàu vận chuyển hàng hóa nông sản (dê, cừu, hươu) từ các trang trại đến cảng hoặc thị trường. Thương lái nông sản có nhu cầu tìm vận chuyển hoặc liên lạc với các chủ tàu để đàm phán giá cước, lịch trình vận chuyển."
+  },
+  "listener_card": {
+    "listener_id": "lis_0037",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1967,
+      "age": 58,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "83501",
+      "title": "Người lái tàu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Thùy Chi",
+      "VIC_ID_DOC": "060167146560",
+      "VIC_ADDRESS": "TP 11, Bình Thuận",
+      "VIC_EMPLOYMENT": "Người lái tàu",
+      "VIC_CONTACT": "0357623064",
+      "VIC_TAX_SOCIAL_ID": "7996415123"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "488349",
+      "VIC_CREDENTIAL": "800515",
+      "VIC_SIM_INFO": "0357623064",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "45048060861344",
+      "VIC_CARD_DATA": "4840 **** **** 6307",
+      "VIC_BALANCE": "28 triệu đồng",
+      "VIC_ASSET": "166 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Thùy Chi",
+    "VIC_CONTACT": "0357623064",
+    "VIC_ADDRESS": "TP 11, Bình Thuận",
+    "LOCATION": "Bình Thuận"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh/môi giới thương mại hàng hóa nông sản",
+    "caller_org": "cá nhân - thương lái tự do",
+    "scenario_context": "Người lái tàu vận chuyển hàng hóa nông sản (dê, cừu, hươu) từ các trang trại đến cảng hoặc thị trường. Thương lái nông sản có nhu cầu tìm vận chuyển hoặc liên lạc với các chủ tàu để đàm phán giá cước, lịch trình vận chuyển.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả là thương lái muốn thuê tàu vận chuyển đàn dê/cừu từ Bình Thuận đi Sài Gòn, nhưng yêu cầu nạn nhân chuyển tiền đặt cọc hoặc phí bảo hiểm vận chuyển qua tài khoản ngân hàng. Sử dụng tên và địa chỉ nạn nhân để tạo tin cậy rằng đã 'xác minh' thông tin.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: 'Chào anh Ngô Thùy Chi, tôi là Minh, là thương lái dê ở Bình Thuận. Tôi có đơn hàng lớn cần vận chuyển từ TP 11, Bình Thuận đi TP.HCM tuần này. Anh có sẵn tàu không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi nhuận: 'Đơn này rất lớn, 50 tấn, tiền công rất cao. Nhưng tôi cần xác nhận ngay hôm nay vì khách hàng ở TP.HCM sắp đóng cửa. Anh chỉ cần chuyển 2 triệu để đặt cọc, tôi sẽ trả 8 triệu tiền công, cộng thêm thưởng.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh chuyển 2 triệu vào tài khoản này [số tài khoản giả], tôi sẽ gửi hợp đồng và địa chỉ giao hàng. Anh cần làm mau, vì tôi còn đàm phán với 2 chủ tàu khác.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Được, tôi sẽ hỏi người khác. Nhưng anh nhớ khi nào rảnh thì gọi cho tôi lại nhé.' (Giữ cơ hội tiếp cận lại). Nếu thành công: Tắt máy, chặn số, chuyển tiền ra ngay."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thương lái nông sản thực sự cần thuê tàu vận chuyển hàng hóa đã được đặt hàng từ khách hàng, đàm phán giá cước và lịch trình giao hàng hợp pháp",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào anh Chi, tôi là Minh - thương lái dê ở Bình Thuận. Tôi được bạn Tuấn giới thiệu số điện thoại anh. Anh có làm vận chuyển hàng nông sản không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Tôi có 30 tấn dê cần chuyển từ Bình Thuận đi Sài Gòn vào thứ Tư tuần sau. Anh có sẵn tàu, giá cước bao nhiêu, thời gian vận chuyển mất bao lâu? Anh có thể giao hàng trực tiếp tại chợ Tây Đô không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Được, tôi sẽ gửi anh hợp đồng qua zalo, sau đó chúng ta gặp mặt hoặc ký kết trực tiếp. Anh cứ yên tâm, tôi là khách hàng cũ của công ty vận chuyển An Phát, bạn bè tôi sẽ giới thiệu.' (Có bằng chứng xác thực hoặc người giới thiệu chung)"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Chi, em là Bình - thương lái nông sản ở Bình Thuận. Em được bạn Tuấn giới thiệu số điện thoại chị. Chị có làm vận chuyển hàng nông sản không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận, xác nhận người nghe là nhà vận chuyển nông sản và giới thiệu người quen để tạo tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi không làm vận chuyển hàng nông sản đâu.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin lỗi nếu đã làm phiền chị ạ. Có lẽ bạn Tuấn đã nhầm số rồi. Em cảm ơn chị ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Chấp nhận thông tin người nghe cung cấp, xin lỗi và kết thúc cuộc gọi một cách lịch sự khi không đạt được mục đích."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1812,
+      "output_tokens": 1527
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 1931,
+      "output_tokens": 203
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 1654,
+      "output_tokens": 64
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002446,
+    "output_usd": 0.008181,
+    "total_usd": 0.010627
+  }
+}

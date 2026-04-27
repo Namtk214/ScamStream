@@ -1,0 +1,210 @@
+{
+  "conversation_id": "conv_6c6252da47",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0055",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Gia Nam",
+    "fake_age": 44,
+    "real_occupation": "Chủ tịch, Phó Chủ tịch Ủy ban nhân dân cấp xã",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cán bộ quản lý chợ / Thanh tra vệ sinh thực phẩm cấp xã",
+    "caller_org": "Ủy ban nhân dân xã / Phòng Quản lý thị trường xã",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cán bộ quản lý chợ gọi để cập nhật thông tin kinh doanh, thông báo chính sách mới, kiểm tra định kỳ, hoặc mời họp thông tin cho tiểu thương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: xưng danh rõ ràng với tên, chức vụ, cơ quan; xác nhận đúng người ('Anh Hoàng Quang Sơn phải không?'); giới thiệu mục đích gọi ngắn gọn",
+          "dialogue_sample": "Chào anh Sơn, đây là cán bộ Ủy ban xã, tên Trần Minh Đức, phòng quản lý chợ. Hôm nay tôi gọi để thông báo một số thay đổi về quản lý chợ. Anh có thể nghe được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: thông báo chính sách, quy định mới, yêu cầu cập nhật giấy tờ, hoặc mời họp thông tin; trả lời câu hỏi của nạn nhân; cung cấp thông tin liên hệ chính thức",
+          "dialogue_sample": "Từ tháng tới, Ủy ban xã sẽ áp dụng quy định mới về vệ sinh thực phẩm. Tôi sẽ gửi quy định chi tiết cho anh qua tin nhắn hoặc có thể anh ghé phòng Ủy ban để lấy bản in. Anh có thắc mắc gì không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc thông báo xong: xác nhận anh nhận được thông tin; cung cấp số điện thoại chính thức của cơ quan; chào tạm biệt lịch sự",
+          "dialogue_sample": "Vậy anh cố gắng cập nhật giấy tờ trước ngày 15 tháng tới nhé. Nếu anh có thắc mắc, gọi cho phòng Ủy ban theo số 0779000123 (số chính thức). Cảm ơn anh, chúc anh kinh doanh tốt!"
+        }
+      ]
+    },
+    "scenario_context": "Cán bộ quản lý chợ hoặc thanh tra vệ sinh thực phẩm cấp xã có trách nhiệm kiểm tra, quản lý các tiểu thương tại chợ địa phương. Người bán hàng tại chợ Bình Thuận là đối tượng tiếp xúc thường xuyên và tự nhiên với cán bộ này trong công việc hành chính, kiểm tra định kỳ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0055",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1971,
+      "age": 54,
+      "province": "Bình Thuận",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "52110",
+      "title": "Người bán hàng trong quầy hàng và tại chợ",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hoàng Quang Sơn",
+      "VIC_ID_DOC": "060071640464",
+      "VIC_ADDRESS": "TP 9, Bình Thuận",
+      "VIC_EMPLOYMENT": "Người bán hàng trong quầy hàng và tại chợ",
+      "VIC_CONTACT": "0779120971",
+      "VIC_TAX_SOCIAL_ID": "5659472639"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "619048",
+      "VIC_CREDENTIAL": "117570",
+      "VIC_SIM_INFO": "0779120971",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "21534977767839",
+      "VIC_CARD_DATA": "4850 **** **** 3633",
+      "VIC_BALANCE": "406 triệu đồng",
+      "VIC_ASSET": "54 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hoàng Quang Sơn",
+    "VIC_CONTACT": "0779120971",
+    "LOCATION": "Bình Thuận"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ quản lý chợ / Thanh tra vệ sinh thực phẩm cấp xã",
+    "caller_org": "Ủy ban nhân dân xã / Phòng Quản lý thị trường xã",
+    "scenario_context": "Cán bộ quản lý chợ hoặc thanh tra vệ sinh thực phẩm cấp xã có trách nhiệm kiểm tra, quản lý các tiểu thương tại chợ địa phương. Người bán hàng tại chợ Bình Thuận là đối tượng tiếp xúc thường xuyên và tự nhiên với cán bộ này trong công việc hành chính, kiểm tra định kỳ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo vi phạm về vệ sinh thực phẩm hoặc cập nhật thông tin kinh doanh; yêu cầu nộp phí xử phạt hoặc lệ phí quản lý chợ qua chuyển khoản để tránh phạt nặng hơn hoặc đóng cửa hàng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính cán bộ quản lý chợ; xưng danh là 'Cán bộ Ủy ban nhân dân xã' hoặc 'Thanh tra vệ sinh'; gọi tên 'Hoàng Quang Sơn' để tạo credibility; xác nhận là người bán hàng tại chợ Bình Thuận",
+          "dialogue_sample": "Chào anh Sơn, đây là cán bộ quản lý chợ Ủy ban xã. Chúng tôi vừa kiểm tra sơ đồ danh sách tiểu thương và ghi nhận anh là chủ quầy hàng tại chợ. Anh có thời gian nói chuyện không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: thông báo vi phạm vệ sinh hoặc thiếu giấy tờ; gợi ý phạt nặng, đóng cửa hàng, hoặc ghi vào danh sách 'kinh doanh không phép'; tạo cảm giác rủi ro cao nếu không xử lý ngay",
+          "dialogue_sample": "Anh Sơn ơi, qua kiểm tra hôm nay chúng tôi phát hiện hàng hóa của anh không đảm bảo tiêu chuẩn vệ sinh. Nếu không xử lý, chúng tôi sẽ phạt 5-10 triệu đồng và có thể tạm đóng cửa hàng. Nhưng nếu anh nộp lệ phí xử lý nhanh hôm nay, chúng tôi có thể giảm nhẹ."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: chuyển khoản tiền xử phạt/lệ phí vào tài khoản 'của cơ quan' (thực tế là tài khoản cá nhân scammer); cấp số tài khoản, ngân hàng; nhấn mạnh tính khẩn cấp ('trong 30 phút') hoặc đe dọa hậu quả",
+          "dialogue_sample": "Anh chuyển 3 triệu đồng vào tài khoản: 1234567890, Vietcombank, tên Hoàng Văn Tuấn (cán bộ Ủy ban xã) trong vòng 30 phút. Sau khi nhận tiền, chúng tôi sẽ cấp giấy xác nhận không vi phạm. Anh nhanh lên nhé!"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: nếu nạn nhân từ chối, tăng cường đe dọa ('sẽ phạt gấp đôi', 'sẽ báo công an'); nếu thành công, yêu cầu nạn nhân không nói cho ai để 'tránh rắc rối'; tắt máy ngay sau khi xác nhận chuyển tiền",
+          "dialogue_sample": "Nếu anh không chuyển tiền hôm nay, ngày mai chúng tôi sẽ phạt 10 triệu, còn phạt công an nữa. Anh đừng nói chuyện này cho ai, kẻo phức tạp. Anh chuyển tiền đi!"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cán bộ quản lý chợ gọi để cập nhật thông tin kinh doanh, thông báo chính sách mới, kiểm tra định kỳ, hoặc mời họp thông tin cho tiểu thương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: xưng danh rõ ràng với tên, chức vụ, cơ quan; xác nhận đúng người ('Anh Hoàng Quang Sơn phải không?'); giới thiệu mục đích gọi ngắn gọn",
+          "dialogue_sample": "Chào anh Sơn, đây là cán bộ Ủy ban xã, tên Trần Minh Đức, phòng quản lý chợ. Hôm nay tôi gọi để thông báo một số thay đổi về quản lý chợ. Anh có thể nghe được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: thông báo chính sách, quy định mới, yêu cầu cập nhật giấy tờ, hoặc mời họp thông tin; trả lời câu hỏi của nạn nhân; cung cấp thông tin liên hệ chính thức",
+          "dialogue_sample": "Từ tháng tới, Ủy ban xã sẽ áp dụng quy định mới về vệ sinh thực phẩm. Tôi sẽ gửi quy định chi tiết cho anh qua tin nhắn hoặc có thể anh ghé phòng Ủy ban để lấy bản in. Anh có thắc mắc gì không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc thông báo xong: xác nhận anh nhận được thông tin; cung cấp số điện thoại chính thức của cơ quan; chào tạm biệt lịch sự",
+          "dialogue_sample": "Vậy anh cố gắng cập nhật giấy tờ trước ngày 15 tháng tới nhé. Nếu anh có thắc mắc, gọi cho phòng Ủy ban theo số 0779000123 (số chính thức). Cảm ơn anh, chúc anh kinh doanh tốt!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em là Hồ Gia Nam, cán bộ quản lý chợ thuộc Phòng Quản lý thị trường xã mình đây ạ. Không biết có phải số máy của anh Hoàng Quang Sơn không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân, chức vụ, cơ quan và xác nhận đúng người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Hoàng Quang Sơn, nhưng em gọi tôi có việc gì vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em chào anh Sơn. Em gọi để thông báo về buổi họp phổ biến quy định mới về an toàn vệ sinh thực phẩm và phòng cháy chữa cháy cho các tiểu thương ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu mục đích cuộc gọi: thông báo họp phổ biến quy định mới."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi biết thời gian và địa điểm họp được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Buổi họp sẽ diễn ra vào lúc 9 giờ sáng ngày 05/06/2024 tại Hội trường Ủy ban nhân dân xã mình ạ. Em nhờ anh sắp xếp thời gian tham dự giúp em nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về buổi họp (thời gian, địa điểm) và kêu gọi người nghe tham dự."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi sẽ sắp xếp thời gian tham dự buổi họp, cảm ơn em đã thông báo.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn anh Sơn nhiều. Nếu anh cần thêm thông tin gì thì cứ liên hệ lại Phòng Quản lý thị trường theo số tổng đài 02623 854 999 giúp em ạ. Chúc anh một ngày tốt lành nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận đã cung cấp thông tin thành công, đưa ra kênh liên hệ chính thức và chào tạm biệt."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1846,
+      "output_tokens": 2195
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4109,
+      "output_tokens": 431
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5403,
+      "output_tokens": 189
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003478,
+    "output_usd": 0.012166,
+    "total_usd": 0.015644
+  }
+}

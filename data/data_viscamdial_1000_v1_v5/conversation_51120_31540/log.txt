@@ -1,0 +1,52 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_5a0fa87ee3]
+  Caller thật: Nhân viên phụ tàu xe (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên phòng vận hành - Công ty hàng không @ Công ty Hàng không Nội địa (đóng giả)
+  Listener: Kiểm soát viên không lưu (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên phụ tàu xe của hãng hàng không cần liên hệ kiểm soát viên không lưu để báo cáo sự cố an toàn, hoặc điều phối vận chuyển hành khách khác thường. Đây là mối liên kết tự nhiên trong cơ sở hạ tầng hàng không.
+  Pretext: Nhân viên vận hành hàng không liên hệ kiểm soát viên không lưu để điều phối các vấn đề liên quan đến an toàn chuyến bay, thời gian cất cánh, hoặc xác nhận thông tin hành khách cho báo cáo chính thức.
+  Listener traits: ['lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, em chào anh Khoa ạ. Em là Trương Hồng Bảo Hương, từ phòng Vận hành của Công ty Hàng không Nội địa. Anh Khoa có tiện nghe máy không ạ? Em xin xác nhận anh là anh Trần Gia Khoa đúng không ạ?
+      → phase: L1 | tactic: Xưng danh đầy đủ và xác nhận danh tính người nghe, hỏi thời gian tiện lợi.
+T02 [LISTENER] Vâng, tôi là Trần Gia Khoa, nhưng không biết có chuyện gì mà em gọi cho tôi ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, cảm ơn anh đã xác nhận. Hiện tại bên em đang có một số vấn đề cần điều phối liên quan đến lịch trình chuyến bay và báo cáo an toàn, nên em cần xác nhận một vài thông tin với anh để hoàn tất hồ sơ chính thức ạ.
+      → phase: L2 | tactic: Nói rõ mục đích gọi là điều phối lịch trình, báo cáo an toàn và hoàn tất hồ sơ chính thức, không yêu cầu thông tin nhạy cảm.
+T04 [LISTENER] Vậy em cần xác nhận thông tin gì từ tôi ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em xin phép xác nhận trước tiên là về mã số chuyến bay và thời gian dự kiến cất cánh của chuyến VN321A ngày 15 tháng 3, theo thông tin trên hệ thống thì là 10 giờ 30 sáng. Anh có thể xác nhận lại giúp em thông tin này không ạ?
+      → phase: L2 | tactic: Yêu cầu xác nhận thông tin cụ thể liên quan đến chuyến bay và thời gian cất cánh, không đòi hỏi thông tin nhạy cảm.
+T06 [LISTENER] Tôi xác nhận mã số chuyến bay VN321A và thời gian cất cánh vào lúc 10 giờ 30 sáng ạ.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ em cảm ơn anh Khoa đã xác nhận ạ. Tiếp theo, liên quan đến báo cáo an toàn, em cần xác nhận danh sách hành khách VIP trên chuyến bay này. Anh có thể giúp em xác nhận tên của những hành khách VIP có mặt không ạ?
+      → phase: L2 | tactic: Tiếp tục yêu cầu xác nhận thông tin cần thiết cho báo cáo an toàn (danh sách hành khách VIP), vẫn giữ nguyên tắc không đòi hỏi thông tin nhạy cảm.
+T08 [LISTENER] Tôi không nhớ rõ danh sách hành khách VIP lắm, em có thể cho tôi biết họ là ai không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, trên hệ thống của bên em hiện đang có thông tin về ông Nguyễn Văn A và bà Trần Thị B là hai hành khách VIP dự kiến trên chuyến VN321A. Anh Khoa vui lòng xác nhận lại xem thông tin này đã chính xác chưa ạ?
+      → phase: L2 | tactic: Cung cấp thông tin đã có để người nghe xác nhận, hỗ trợ họ hoàn thành yêu cầu một cách dễ dàng hơn mà không gây áp lực.
+T10 [LISTENER] Tôi xác nhận thông tin về ông Nguyễn Văn A và bà Trần Thị B là hai hành khách VIP dự kiến trên chuyến VN321A ạ.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ em cảm ơn anh Khoa rất nhiều vì đã xác nhận những thông tin quan trọng này. Em đã ghi nhận đầy đủ để bổ sung vào hồ sơ chính thức của chuyến bay. Sau cuộc gọi này, em sẽ gửi lại một email tổng hợp các thông tin đã trao đổi để anh tiện theo dõi. Anh có cần em hỗ trợ thêm thông tin gì khác không ạ?
+      → phase: L3 | tactic: Cảm ơn người nghe đã hợp tác, thông báo về việc gửi email tổng hợp và hỏi xem có cần hỗ trợ gì thêm trước khi kết thúc cuộc gọi.
+T12 [LISTENER] Em đã hỗ trợ tôi rất nhiều rồi, cảm ơn em. Nhưng tôi không cần thêm thông tin gì nữa ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ vâng, vậy em cảm ơn anh Khoa một lần nữa nhé. Nếu có bất kỳ vấn đề gì phát sinh, anh cứ liên hệ lại với phòng Vận hành bên em ạ. Chào anh Khoa.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự, cảm ơn người nghe và đưa ra gợi ý liên hệ lại nếu có vấn đề, trước khi chào tạm biệt.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  13 turns | suspicion=0.00
+TOKEN: in=23861 | out=3547
+COST : $0.019182
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_51120_31540\conv_5a0fa87ee3.json  [CALLER_END]

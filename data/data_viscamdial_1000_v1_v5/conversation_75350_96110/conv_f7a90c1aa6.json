@@ -1,0 +1,208 @@
+{
+  "conversation_id": "conv_f7a90c1aa6",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0065",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trương Thị Linh",
+    "fake_age": 44,
+    "real_occupation": "Thợ thuộc da sống, thợ nhuộm và thợ chuyên lột da, lông thú",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Bộ phận Thu mua Phụ liệu Tái chế - Công ty Xử lý Chất thải Công nghiệp",
+    "caller_org": "Công ty TNHH Tái chế Tài Nguyên Việt (Recycling Resources Vietnam Co., Ltd)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi để 'xác minh thông tin hợp tác' với danh nghĩa kiểm tra hồ sơ kế toán/thuế trước khi thanh toán hợp đồng bán phế liệu da; sử dụng số CMND + tên để tạo credibility rằng 'có sẵn dữ liệu'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là 'Thạc sĩ Lâm - Phó Trưởng phòng Tài chính' của Công ty Tái chế Tài Nguyên Việt. Nói: 'Anh Hoàng Công Hải (VIC_FULLNAME) phải không? Chúng tôi có hợp đồng bán phế liệu da với công ty anh. Để hoàn tất thanh toán, tôi cần xác minh lại số CMND: 7044273614 (VIC_TAX_SOCIAL_ID) có đúng không?'. Giọng tự tin, chuyên nghiệp."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh ơi, khoản thanh toán 45 triệu đã được phê duyệt nhưng hệ thống ngân hàng yêu cầu xác thực lại. Hôm nay là ngày cuối để chuyển tiền, nếu quá hạn sẽ phải hoãn sang tuần sau. Anh có thể giúp tôi xác minh thêm không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Để đẩy nhanh, anh vui lòng: (1) Cung cấp 3 chữ số cuối của thẻ (từ VIC_CARD_DATA: 3941); (2) Nhận OTP từ ngân hàng và đọc cho tôi để xác nhận giao dịch; hoặc (3) Tải ứng dụng \"Xác thực Ngân hàng Việt\" (link malware) để tự xác thực'. Tạo áp lực thời gian."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, nói 'Vậy tôi sẽ báo cáo hợp đồng bị hủy, anh sẽ không nhận được tiền'. Nếu thành công (lấy được OTP/dữ liệu), nói 'Cảm ơn anh, giao dịch đang xử lý, tôi sẽ gọi lại sau 2 giờ' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Thợ lột da/nhuộm cần bán phế liệu da, lông thú sau quá trình xử lý; người thu gom rác tái chế là đối tác tiềm năng để mua/trao đổi hoặc cùng cấp cho nhà máy xử lý. Cuộc gọi từ bên mua phế liệu là tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0065",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1973,
+      "age": 52,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "96110",
+      "title": "Người thu gom rác và tái chế",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hoàng Công Hải",
+      "VIC_ID_DOC": "049073641390",
+      "VIC_ADDRESS": "Quận 12, Quảng Nam",
+      "VIC_EMPLOYMENT": "Người thu gom rác và tái chế",
+      "VIC_CONTACT": "0901128744",
+      "VIC_TAX_SOCIAL_ID": "7044273614"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "418702",
+      "VIC_CREDENTIAL": "8712",
+      "VIC_SIM_INFO": "0901128744",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7061425186",
+      "VIC_CARD_DATA": "4423 **** **** 3941",
+      "VIC_BALANCE": "8 triệu đồng",
+      "VIC_ASSET": "52 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hoàng Công Hải",
+    "VIC_CONTACT": "0901128744",
+    "VIC_TAX_SOCIAL_ID": "7044273614",
+    "VIC_CARD_DATA": "4423 **** **** 3941",
+    "VIC_ID_DOC": "049073641390"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Bộ phận Thu mua Phụ liệu Tái chế - Công ty Xử lý Chất thải Công nghiệp",
+    "caller_org": "Công ty TNHH Tái chế Tài Nguyên Việt (Recycling Resources Vietnam Co., Ltd)",
+    "scenario_context": "Thợ lột da/nhuộm cần bán phế liệu da, lông thú sau quá trình xử lý; người thu gom rác tái chế là đối tác tiềm năng để mua/trao đổi hoặc cùng cấp cho nhà máy xử lý. Cuộc gọi từ bên mua phế liệu là tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi để 'xác minh thông tin hợp tác' với danh nghĩa kiểm tra hồ sơ kế toán/thuế trước khi thanh toán hợp đồng bán phế liệu da; sử dụng số CMND + tên để tạo credibility rằng 'có sẵn dữ liệu'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là 'Thạc sĩ Lâm - Phó Trưởng phòng Tài chính' của Công ty Tái chế Tài Nguyên Việt. Nói: 'Anh Hoàng Công Hải (VIC_FULLNAME) phải không? Chúng tôi có hợp đồng bán phế liệu da với công ty anh. Để hoàn tất thanh toán, tôi cần xác minh lại số CMND: 7044273614 (VIC_TAX_SOCIAL_ID) có đúng không?'. Giọng tự tin, chuyên nghiệp."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh ơi, khoản thanh toán 45 triệu đã được phê duyệt nhưng hệ thống ngân hàng yêu cầu xác thực lại. Hôm nay là ngày cuối để chuyển tiền, nếu quá hạn sẽ phải hoãn sang tuần sau. Anh có thể giúp tôi xác minh thêm không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Để đẩy nhanh, anh vui lòng: (1) Cung cấp 3 chữ số cuối của thẻ (từ VIC_CARD_DATA: 3941); (2) Nhận OTP từ ngân hàng và đọc cho tôi để xác nhận giao dịch; hoặc (3) Tải ứng dụng \"Xác thực Ngân hàng Việt\" (link malware) để tự xác thực'. Tạo áp lực thời gian."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, nói 'Vậy tôi sẽ báo cáo hợp đồng bị hủy, anh sẽ không nhận được tiền'. Nếu thành công (lấy được OTP/dữ liệu), nói 'Cảm ơn anh, giao dịch đang xử lý, tôi sẽ gọi lại sau 2 giờ' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty Tái chế Tài Nguyên Việt thực sự gọi để xác nhận thông tin hợp tác, thảo luận giá cả, lịch giao hàng phế liệu da/lông thú, hoặc thông báo thanh toán hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên phòng Tài chính của Công ty Tái chế Tài Nguyên Việt. Xác nhận: 'Tôi gọi để xác nhận thông tin liên hệ của anh Hoàng Công Hải trước khi xử lý thanh toán hợp đồng. Anh có phải người đại diện khoản thu gom phế liệu da không?' Chờ xác nhận."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận chi tiết: số lượng phế liệu, chất lượng, giá bán, hóa đơn VAT, tài khoản nhận tiền (yêu cầu anh cung cấp chủ động, không 'xác minh'). Nếu cần, đề xuất anh cập nhật thông tin trên hệ thống online của công ty."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác định ngày chuyển tiền, cách thức (chuyển khoản/séc), người liên hệ tiếp theo. Chào tạm biệt chuyên nghiệp: 'Cảm ơn anh, chúng tôi sẽ chuyển tiền trong 2-3 ngày làm việc. Nếu có thắc mắc, anh gọi hotline của công ty: 1800-XXXX'."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Hoàng Công Hải phải không ạ? Tôi là Thạc sĩ Lâm, Phó Trưởng phòng Tài chính bên Công ty Tái chế Tài Nguyên Việt. Chúng tôi gọi để xác minh lại thông tin hợp đồng bán phế liệu da với công ty anh. Anh xác nhận giúp tôi số CMND 7044273614 có đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, tự giới thiệu chức danh cao cấp, sử dụng thông tin cá nhân chính xác của nạn nhân để tạo độ tin cậy và chứng minh 'biết về bạn'."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi không nhớ rõ số CMND lắm, em có thể cho tôi biết thêm về hợp đồng đó được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng anh, đây là hợp đồng số BPL20230915, về việc thanh lý 5 tấn phế liệu da bò tồn kho từ quý trước, giao hàng tại kho Long Bình. Vì phòng kế toán đang rà soát hồ sơ để hoàn tất thanh toán khoản 45 triệu đồng cho anh, tôi chỉ cần anh xác nhận lại một lần nữa số CMND để đảm bảo không có sai sót trước khi chuyển tiền thôi ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm chi tiết hợp đồng để tăng cường độ tin cậy và tạo ngữ cảnh, đồng thời nhắc đến số tiền và việc chuẩn bị thanh toán để tạo sự hấp dẫn và tâm lý muốn hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói hợp đồng rõ quá, nhưng tôi vẫn thấy hơi lo lắng, không biết có phải thật không, để tôi kiểm tra lại thông tin đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ yên tâm, thông tin này chúng tôi lấy từ hồ sơ cũ của hợp đồng đã ký kết với công ty anh. Nếu có bất kỳ sai sót nào trong việc xác minh CMND, khoản thanh toán 45 triệu đồng cho lô hàng phế liệu da của anh sẽ bị trì hoãn đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách khẳng định nguồn gốc thông tin và chuyển sang khai thác tâm lý khẩn cấp bằng cách cảnh báo về việc trì hoãn thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng tôi vẫn cần thời gian để kiểm tra lại thông tin cho chắc chắn, không thể vội vàng được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1435,
+      "output_tokens": 1756
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4444,
+      "output_tokens": 472
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5722,
+      "output_tokens": 223
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003182,
+    "output_usd": 0.010094,
+    "total_usd": 0.013276
+  }
+}

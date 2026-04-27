@@ -1,0 +1,317 @@
+{
+  "conversation_id": "conv_ed65b01ba0",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0036",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lê Gia Hải",
+    "fake_age": 47,
+    "real_occupation": "Nhà chuyên môn điều tiết của Chính phủ khác chưa được phân vào đâu",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Cán bộ kiểm tra an toàn vệ sinh thực phẩm / Thanh tra ngành thực phẩm",
+    "caller_org": "Sở Y tế / Chi cục An toàn vệ sinh thực phẩm Bình Dương",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi thực tế từ cơ quan chuyên môn để thông báo kết quả kiểm tra định kỳ, hướng dẫn cải tiến, hoặc xác nhận thông tin cơ sở kinh doanh.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Bùi Hồng Hương, tôi là cán bộ Chi cục An toàn vệ sinh thực phẩm Bình Dương, số hiệu công chức [số]. Tôi đang gọi liên quan đến kiểm tra định kỳ cơ sở của chị.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung cụ thể: 'Chúng tôi cần xác nhận một số thông tin: địa chỉ cơ sở, số giấy phép kinh doanh, danh sách nguyên liệu hiện tại. Hoặc: Kết quả kiểm tra lần trước cho thấy cần cải tiến trong [lĩnh vực cụ thể], chúng tôi muốn hỗ trợ chị thực hiện.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc rõ ràng: 'Chúng tôi sẽ gửi văn bản chính thức qua email hoặc địa chỉ cơ sở trong 3 ngày. Nếu chị có câu hỏi, liên hệ qua số điện thoại Chi cục [số chính thức]. Cảm ơn chị, tạm biệt.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà chuyên môn điều tiết chính phủ trong lĩnh vực thực phẩm có nhiệm vụ liên hệ với các cơ sở sản xuất bánh mỳ để kiểm tra, cấp phép, hoặc xử lý vi phạm. Đây là điểm giao thoa tự nhiên giữa hai nghề."
+  },
+  "listener_card": {
+    "listener_id": "lis_0036",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1966,
+      "age": 59,
+      "province": "Bình Dương",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "75122",
+      "title": "Thợ làm bánh mỳ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Hồng Hương",
+      "VIC_ID_DOC": "074166333744",
+      "VIC_ADDRESS": "Quận 6, Bình Dương",
+      "VIC_EMPLOYMENT": "Thợ làm bánh mỳ",
+      "VIC_CONTACT": "0906810734",
+      "VIC_TAX_SOCIAL_ID": "1828713005"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4372",
+      "VIC_CREDENTIAL": "1446",
+      "VIC_SIM_INFO": "0906810734",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "6562445540684",
+      "VIC_CARD_DATA": "4709 **** **** 2783",
+      "VIC_BALANCE": "27 triệu đồng",
+      "VIC_ASSET": "207 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Hồng Hương",
+    "VIC_CONTACT": "0906810734",
+    "LOCATION": "Bình Dương",
+    "VIC_ASSET": "207 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ kiểm tra an toàn vệ sinh thực phẩm / Thanh tra ngành thực phẩm",
+    "caller_org": "Sở Y tế / Chi cục An toàn vệ sinh thực phẩm Bình Dương",
+    "scenario_context": "Nhà chuyên môn điều tiết chính phủ trong lĩnh vực thực phẩm có nhiệm vụ liên hệ với các cơ sở sản xuất bánh mỳ để kiểm tra, cấp phép, hoặc xử lý vi phạm. Đây là điểm giao thoa tự nhiên giữa hai nghề.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo vi phạm tiêu chuẩn vệ sinh hoặc chất lượng, yêu cầu nộp phạt hoặc 'tiền xử lý' để tránh đóng cửa cơ sở. Sử dụng tên đầy đủ + địa chỉ để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào chị Bùi Hồng Hương, tôi là cán bộ Chi cục An toàn vệ sinh thực phẩm Bình Dương. Chúng tôi vừa kiểm tra cơ sở bánh mỳ của chị tại [địa chỉ] và phát hiện một số vi phạm nghiêm trọng.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Nếu không xử lý ngay trong 24 giờ, chúng tôi sẽ phải ra quyết định đóng cửa cơ sở và phạt từ 50-100 triệu đồng. Tuy nhiên, nếu chị nộp tiền xử lý trước để chứng minh thiện chí, chúng tôi có thể giảm nhẹ hình phạt xuống còn 5-10 triệu.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cần chuyển khoản ngay vào tài khoản tạm ứng của Chi cục (số tài khoản: [số giả]) hoặc mua thẻ cào để nộp phạt. Sau đó, chúng tôi sẽ cấp giấy chứng nhận đã xử lý.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền, yêu cầu thêm 'phí hồ sơ' hoặc 'phí kiểm tra lại'. Nếu từ chối, dọa: 'Nếu chị không hợp tác, ngày mai chúng tôi sẽ có quyết định phạt chính thức và thông báo công khai.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế từ cơ quan chuyên môn để thông báo kết quả kiểm tra định kỳ, hướng dẫn cải tiến, hoặc xác nhận thông tin cơ sở kinh doanh.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Bùi Hồng Hương, tôi là cán bộ Chi cục An toàn vệ sinh thực phẩm Bình Dương, số hiệu công chức [số]. Tôi đang gọi liên quan đến kiểm tra định kỳ cơ sở của chị.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung cụ thể: 'Chúng tôi cần xác nhận một số thông tin: địa chỉ cơ sở, số giấy phép kinh doanh, danh sách nguyên liệu hiện tại. Hoặc: Kết quả kiểm tra lần trước cho thấy cần cải tiến trong [lĩnh vực cụ thể], chúng tôi muốn hỗ trợ chị thực hiện.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc rõ ràng: 'Chúng tôi sẽ gửi văn bản chính thức qua email hoặc địa chỉ cơ sở trong 3 ngày. Nếu chị có câu hỏi, liên hệ qua số điện thoại Chi cục [số chính thức]. Cảm ơn chị, tạm biệt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Bùi Hồng Hương, em là cán bộ Lê Gia Hải thuộc Chi cục An toàn vệ sinh thực phẩm Bình Dương, số hiệu công chức 2408. Em đang gọi liên quan đến kiểm tra định kỳ cơ sở của chị ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng em muốn kiểm tra lại một chút về việc này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, em hiểu ạ. Chị muốn kiểm tra lại thông tin về cuộc gọi hay về việc kiểm tra định kỳ của cơ sở mình ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận lại nhu cầu kiểm tra của khách hàng một cách lịch sự, nhã nhặn, giữ vững vai trò chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi muốn xác nhận thông tin về cuộc kiểm tra định kỳ này, vì tôi không nhớ rõ lắm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, như em đã thông báo, đây là cuộc gọi liên quan đến kế hoạch kiểm tra định kỳ hàng năm theo quy định của Chi cục. Cơ sở của chị nằm trong danh sách các cơ sở được kiểm tra đợt này. Chị có muốn em cung cấp thêm thông tin về quy trình kiểm tra không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Nhấn mạnh tính quy trình, minh bạch của cuộc kiểm tra để trấn an người nghe và tạo sự tin tưởng."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa rõ về quy trình kiểm tra này lắm, em muốn nghe thêm thông tin chi tiết để hiểu rõ hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Quy trình kiểm tra định kỳ thông thường sẽ bao gồm việc đánh giá điều kiện vệ sinh cơ sở, kiểm tra hồ sơ pháp lý, các giấy tờ liên quan đến nguồn gốc nguyên liệu và chất lượng sản phẩm. Sau đó, chúng em sẽ có buổi làm việc trực tiếp tại cơ sở để đối chiếu và ghi nhận. Chị có muốn em đi vào chi tiết hơn về các hạng mục cụ thể hay chuyển sang xác nhận thông tin cơ bản trước ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích quy trình kiểm tra một cách rõ ràng và chuyên nghiệp, sau đó hỏi ý kiến khách hàng để chuyển sang xác nhận thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn muốn nghe thêm về các hạng mục cụ thể trong quy trình kiểm tra đó, em thấy cần phải nắm rõ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để chị nắm rõ. Các hạng mục cụ thể sẽ bao gồm việc kiểm tra điều kiện chung của cơ sở như giấy phép kinh doanh, chứng nhận đủ điều kiện an toàn vệ sinh thực phẩm. Sau đó là kiểm tra hồ sơ nguồn gốc, xuất xứ nguyên liệu, quy trình bảo quản, chế biến, và cuối cùng là kiểm tra sức khỏe của người trực tiếp sản xuất. Ngoài ra còn có kiểm tra nhãn mác sản phẩm và việc lưu mẫu. Chị có câu hỏi nào về các hạng mục này không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Đi sâu vào chi tiết các hạng mục kiểm tra, giải thích rõ để khách hàng hiểu, đồng thời mời đặt câu hỏi để nắm bắt sự quan tâm của khách hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa rõ về phần kiểm tra sức khỏe của người trực tiếp sản xuất, em muốn hỏi thêm về điều đó ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Về phần kiểm tra sức khỏe người trực tiếp sản xuất thì chúng em sẽ yêu cầu cung cấp hồ sơ kiểm tra sức khỏe định kỳ của toàn bộ nhân viên có tiếp xúc trực tiếp với thực phẩm. Đảm bảo mọi người đều đủ điều kiện sức khỏe theo quy định của Bộ Y tế. Hồ sơ này cần thể hiện rõ đã được khám bệnh truyền nhiễm, bệnh ngoài da và các xét nghiệm cần thiết. Chị có cần em giải thích chi tiết hơn về các loại xét nghiệm không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Làm rõ chi tiết về hạng mục kiểm tra sức khỏe, nêu các yêu cầu cụ thể để người nghe hiểu rõ, đồng thời mời đặt câu hỏi để tiếp tục tương tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa rõ lắm về các loại xét nghiệm cần thiết, em muốn nghe thêm thông tin chi tiết về điều này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, các loại xét nghiệm cơ bản bao gồm xét nghiệm phân để tìm ký sinh trùng, xét nghiệm đờm để phát hiện bệnh lao phổi, và các xét nghiệm tìm mầm bệnh tả, lỵ, thương hàn nếu có yêu cầu từ cơ quan y tế địa phương. Chị có cần em giải thích thêm về ý nghĩa của từng xét nghiệm không ạ? Hoặc bây giờ mình chuyển sang xác nhận thông tin cơ bản của cơ sở để em hoàn tất hồ sơ kiểm tra nhé?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục cung cấp thông tin chi tiết theo yêu cầu, sau đó khéo léo chuyển hướng sang xác nhận thông tin cơ bản của cơ sở để hoàn thành mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn hỏi rõ hơn về ý nghĩa của từng xét nghiệm mà em vừa nghe, để hiểu thêm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Xét nghiệm phân giúp phát hiện các bệnh lây truyền qua đường tiêu hóa như tả, lỵ. Xét nghiệm đờm để sàng lọc nguy cơ mắc bệnh lao. Các xét nghiệm này đều nhằm đảm bảo người trực tiếp sản xuất thực phẩm không mang mầm bệnh có thể lây nhiễm cho người tiêu dùng. Bây giờ chị đã rõ hơn về phần kiểm tra sức khỏe rồi chứ ạ? Mình có thể chuyển sang xác nhận địa chỉ và số giấy phép kinh doanh của cơ sở mình được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục giải thích chi tiết ý nghĩa các xét nghiệm, sau đó thử chuyển hướng sang việc xác nhận thông tin cơ bản của cơ sở."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã hiểu phần kiểm tra sức khỏe rồi, nhưng em vẫn còn thắc mắc về địa chỉ và giấy phép kinh doanh của cơ sở, em muốn xác nhận lại ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, vậy thì chị cho em xin xác nhận lại địa chỉ chính xác của cơ sở mình là ở đâu và số giấy phép kinh doanh hiện tại là bao nhiêu được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Yêu cầu cung cấp thông tin cụ thể để xác minh danh tính và thông tin của cơ sở, chuyển sang bước trao đổi nội dung cụ thể mục tiêu."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ địa chỉ và số giấy phép kinh doanh của cơ sở mình là gì, em muốn nghe thêm từ cán bộ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, theo thông tin em có trên hệ thống, địa chỉ đăng ký của cơ sở mình là số 23, đường ĐT743, khu phố Bình Hòa, phường Lái Thiêu, thành phố Thuận An, tỉnh Bình Dương. Và số giấy phép kinh doanh là 460200xxxx. Chị vui lòng xác nhận lại giúp em xem thông tin này có chính xác không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin đã có để người nghe xác nhận, tạo điều kiện cho họ dễ dàng đối chiếu và cung cấp thông tin chính xác, đồng thời tránh việc yêu cầu họ cung cấp thông tin hoàn toàn mới."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn cán bộ đã cung cấp thông tin, nhưng em vẫn muốn kiểm tra kỹ hơn trước khi xác nhận ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, không sao ạ. Để chị thuận tiện kiểm tra, em có thể đọc lại chậm thông tin địa chỉ và số giấy phép kinh doanh một lần nữa không ạ? Hoặc chị có muốn em đợi một lát để chị kiểm tra và gọi lại cho em không?",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự kiên nhẫn và sẵn lòng hỗ trợ, cho phép người nghe có thời gian kiểm tra thông tin, tạo cảm giác an toàn và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn cán bộ, nhưng em vẫn cần một chút thời gian để kiểm tra lại thông tin cho chắc chắn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy chị kiểm tra thông tin giúp em nhé. Khi nào chị kiểm tra xong, chị có thể gọi lại cho em qua số điện thoại của Chi cục An toàn vệ sinh thực phẩm Bình Dương là [số chính thức của Chi cục] được không ạ? Hoặc em có thể gọi lại cho chị sau khoảng thời gian nào thì tiện cho chị ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cho phép người nghe có thời gian kiểm tra thông tin, chủ động đề xuất cách thức liên hệ tiếp theo để duy trì sự hợp tác và thể hiện tính chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ kiểm tra lại thông tin và gọi lại cho cán bộ sau ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy em chờ cuộc gọi lại từ chị nhé. Em cảm ơn chị đã hợp tác, tạm biệt chị ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, để người nghe chủ động liên hệ lại, thể hiện sự chuyên nghiệp và không gây áp lực."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1846,
+      "output_tokens": 1505
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 26668,
+      "output_tokens": 1842
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 32699,
+      "output_tokens": 834
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.012084,
+    "output_usd": 0.01263,
+    "total_usd": 0.024715
+  }
+}

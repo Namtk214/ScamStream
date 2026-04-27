@@ -1,0 +1,446 @@
+{
+  "conversation_id": "conv_d6d8efeab7",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_SUCCESS",
+  "caller_card": {
+    "caller_id": "cal_0084",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lê Thùy Liên",
+    "fake_age": 32,
+    "real_occupation": "Lái xe cứu thương",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Điều độc & An toàn giao thông, Trung tâm Cấp cứu 115",
+    "caller_org": "Trung tâm Cấp cứu 115 Tiền Giang",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để thông báo Trương Thu Liên bị ghi nhận trong hệ thống cấp cứu liên quan đến tai nạn giao thông. Scammer sẽ giả vờ cần xác minh thông tin thẻ ngân hàng để hoàn tất hóa đơn y tế và bảo hiểm y tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Xin chào Trương Thu Liên, tôi là ông Minh từ Trung tâm Cấp cứu 115 Tiền Giang. Hệ thống của chúng tôi ghi nhận quý khách liên quan đến một vụ tai nạn giao thông hôm qua trên đường Nguyễn Hữu Cảnh. Chúng tôi cần xác minh một số thông tin để hoàn tất giấy tờ y tế.'",
+          "credibility_anchor": "Sử dụng tên đầy đủ + địa điểm cụ thể (Tiền Giang) + bối cảnh giao thông phù hợp với nghề"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm pháp lý: 'Theo quy định bảo hiểm, chúng tôi phải xác minh số thẻ ngân hàng của quý khách trong vòng 24 giờ. Nếu không, bảo hiểm sẽ từ chối bồi thường. Quý khách còn nhớ 4 số cuối của thẻ không?'",
+          "psychological_trigger": "Sợ hãi mất bảo hiểm + áp lực thời gian + giả vờ là quy trình chính thức"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu OTP: 'Để bảo mật, hệ thống sẽ gửi một mã OTP tới điện thoại quý khách. Quý khách vui lòng đọc mã đó cho tôi để xác nhận là chính quý khách đang sử dụng thẻ này.'",
+          "action_required": "Nạn nhân sẽ nhận OTP từ ngân hàng, scammer yêu cầu đọc lại để chiếm quyền kiểm soát tài khoản"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ: 'Không sao, nhưng quý khách sẽ phải đến Trung tâm Cấp cứu ký giấy từ chối bồi thường. Số điện thoại của chúng tôi là 0773970815 nếu quý khách muốn liên hệ lại.'",
+          "fallback_tactic": "Để lại số điện thoại nạn nhân để tạo vẻ hợp pháp, hoặc kết thúc nếu đã lấy được OTP"
+        }
+      ]
+    },
+    "scenario_context": "Lái xe cứu thương cần liên hệ người giao hàng vì họ là nhân chứng/liên quan đến một vụ tai nạn giao thông hoặc cần xác minh thông tin y tế khẩn cấp. Cả hai đều hoạt động trên đường, có khả năng gặp nhau trong các tình huống khẩn cấp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0084",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1970,
+      "age": 55,
+      "province": "Tiền Giang",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "96212",
+      "title": "Người giao hàng",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Thu Liên",
+      "VIC_ID_DOC": "082170986960",
+      "VIC_ADDRESS": "Huyện 11, Tiền Giang",
+      "VIC_EMPLOYMENT": "Người giao hàng",
+      "VIC_CONTACT": "0773970815",
+      "VIC_TAX_SOCIAL_ID": "1451586485"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "412192",
+      "VIC_CREDENTIAL": "3927",
+      "VIC_SIM_INFO": "0773970815",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0755666186",
+      "VIC_CARD_DATA": "4257 **** **** 7035",
+      "VIC_BALANCE": "29 triệu đồng",
+      "VIC_ASSET": "98 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Tiền Giang"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Thu Liên",
+    "VIC_CONTACT": "0773970815",
+    "VIC_CARD_DATA": "4257 **** **** 7035",
+    "LOCATION": "Tiền Giang"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Điều độc & An toàn giao thông, Trung tâm Cấp cứu 115",
+    "caller_org": "Trung tâm Cấp cứu 115 Tiền Giang",
+    "scenario_context": "Lái xe cứu thương cần liên hệ người giao hàng vì họ là nhân chứng/liên quan đến một vụ tai nạn giao thông hoặc cần xác minh thông tin y tế khẩn cấp. Cả hai đều hoạt động trên đường, có khả năng gặp nhau trong các tình huống khẩn cấp.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để thông báo Trương Thu Liên bị ghi nhận trong hệ thống cấp cứu liên quan đến tai nạn giao thông. Scammer sẽ giả vờ cần xác minh thông tin thẻ ngân hàng để hoàn tất hóa đơn y tế và bảo hiểm y tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Xin chào Trương Thu Liên, tôi là ông Minh từ Trung tâm Cấp cứu 115 Tiền Giang. Hệ thống của chúng tôi ghi nhận quý khách liên quan đến một vụ tai nạn giao thông hôm qua trên đường Nguyễn Hữu Cảnh. Chúng tôi cần xác minh một số thông tin để hoàn tất giấy tờ y tế.'",
+          "credibility_anchor": "Sử dụng tên đầy đủ + địa điểm cụ thể (Tiền Giang) + bối cảnh giao thông phù hợp với nghề"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm pháp lý: 'Theo quy định bảo hiểm, chúng tôi phải xác minh số thẻ ngân hàng của quý khách trong vòng 24 giờ. Nếu không, bảo hiểm sẽ từ chối bồi thường. Quý khách còn nhớ 4 số cuối của thẻ không?'",
+          "psychological_trigger": "Sợ hãi mất bảo hiểm + áp lực thời gian + giả vờ là quy trình chính thức"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu OTP: 'Để bảo mật, hệ thống sẽ gửi một mã OTP tới điện thoại quý khách. Quý khách vui lòng đọc mã đó cho tôi để xác nhận là chính quý khách đang sử dụng thẻ này.'",
+          "action_required": "Nạn nhân sẽ nhận OTP từ ngân hàng, scammer yêu cầu đọc lại để chiếm quyền kiểm soát tài khoản"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ: 'Không sao, nhưng quý khách sẽ phải đến Trung tâm Cấp cứu ký giấy từ chối bồi thường. Số điện thoại của chúng tôi là 0773970815 nếu quý khách muốn liên hệ lại.'",
+          "fallback_tactic": "Để lại số điện thoại nạn nhân để tạo vẻ hợp pháp, hoặc kết thúc nếu đã lấy được OTP"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trung tâm Cấp cứu 115 gọi để xác minh thông tin liên lạc của nhân viên giao hàng sau khi họ gọi điện báo tai nạn hoặc cần hỗ trợ y tế tại hiện trường.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào Trương Thu Liên, tôi là Trần Văn Minh từ Trung tâm Cấp cứu 115 Tiền Giang. Hôm qua quý khách có gọi báo cáo tai nạn giao thông ở khu vực Mỹ Tho phải không?'",
+          "verification": "Xác nhận sự kiện cụ thể mà nạn nhân đã báo cáo"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi muốn biết tình trạng sức khỏe của quý khách hiện tại có cần hỗ trợ y tế không? Và có ai khác bị thương trong vụ tai nạn đó không?'",
+          "action": "Lắng nghe, ghi nhận thông tin y tế, không yêu cầu dữ liệu nhạy cảm"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn quý khách đã cung cấp thông tin. Nếu có bất kỳ vấn đề y tế nào, vui lòng gọi 115. Chúc quý khách mạnh khỏe.'",
+          "closure": "Tạm biệt lịch sự, không yêu cầu hành động tiếp theo"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_BIRTH_YEAR": "1970",
+    "VIC_SIM_INFO": "0773970815"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Trương Thu Liên ạ, em là Lê Thùy Liên từ Trung tâm Cấp cứu 115 Tiền Giang. Hệ thống của bên em ghi nhận chị có liên quan đến một vụ tai nạn giao thông vào hôm qua trên tuyến đường Nguyễn Hữu Cảnh. Bên em cần xác minh lại một số thông tin để bên bảo hiểm làm thủ tục hoàn tất giấy tờ y tế cho chị ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với danh tính để xây dựng lòng tin, sử dụng thông tin đã biết về nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ có vụ tai nạn nào cả, em có thông tin gì cụ thể hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, theo thông tin mà hệ thống em ghi nhận thì vụ tai nạn xảy ra vào khoảng 15 giờ chiều ngày hôm qua, trên đường Nguyễn Hữu Cảnh, đoạn gần giao lộ với đường Hoàng Hoa Thám. Đó là vụ va chạm liên hoàn giữa ba xe máy, và một trong số đó có thông tin đăng ký dưới tên chị Trương Thu Liên ạ. Em có thể xác nhận lại ngày sinh của chị để đảm bảo đúng người không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm chi tiết cụ thể về tai nạn để tăng độ tin cậy và củng cố thông tin đã biết, đồng thời xác minh thêm một thông tin cá nhân cơ bản để xây dựng lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sinh năm 1970, nhưng tôi thực sự không nhớ gì về vụ tai nạn đó cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {
+        "VIC_BIRTH_YEAR": "1970"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng là thông tin của chị Trương Thu Liên, sinh năm 1970 ạ. Chị có chắc là chị không có mặt ở đó không ạ? Đôi khi có thể sự việc diễn ra quá nhanh hoặc có người thân đã sử dụng xe của chị. Bên em chỉ cần xác nhận lại số thẻ ngân hàng của chị để hoàn tất thủ tục bồi thường từ bảo hiểm y tế trong vòng 24 giờ tới, nếu không thì bảo hiểm sẽ từ chối chi trả ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận thông tin nạn nhân, đặt nghi vấn về khả năng nạn nhân không nhớ để thuyết phục, sau đó chuyển sang khai thác tâm lý khẩn cấp và trách nhiệm pháp lý. Đồng thời, cảnh báo hậu quả nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết rõ số tài khoản ngân hàng là gì không? Tôi không nhớ lắm đâu.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em kiểm tra lại ạ. Theo như trên hệ thống thì chị đang dùng thẻ 4257 **** **** 7035 phải không ạ? Em chỉ cần chị xác nhận là đúng thẻ này, sau đó chúng em sẽ gửi một mã OTP về để xác nhận chủ thể. Nếu không xác nhận trong vòng 24 giờ, bảo hiểm sẽ từ chối bồi thường toàn bộ chi phí y tế cho vụ tai nạn này ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận thông tin thẻ ngân hàng đã biết để tạo thêm lòng tin, đồng thời nhấn mạnh sự khẩn cấp của việc xác nhận để tránh mất quyền lợi bảo hiểm, chuẩn bị cho việc yêu cầu OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi vẫn chưa rõ về mã OTP là gì và tại sao lại cần phải xác nhận thẻ đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, mã OTP là một mã bảo mật dùng một lần, được gửi trực tiếp đến số điện thoại đăng ký chính chủ của chị, để xác minh rằng chị Trương Thu Liên chính là người đang thực hiện giao dịch này ạ. Đây là quy trình bắt buộc để đảm bảo tính bảo mật và xác thực thông tin cho bên bảo hiểm y tế. Vì thời gian có hạn chỉ còn vài tiếng để hoàn tất thủ tục, nên em chỉ cần chị đọc mã OTP đó cho em để hoàn tất nhanh chóng và chị sẽ được hưởng đầy đủ quyền lợi bảo hiểm ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích mã OTP là gì để giảm nghi ngờ, nhấn mạnh tính bảo mật và sự bắt buộc của quy trình. Đồng thời, tái khẳng định sự khẩn cấp của thời gian và lợi ích mà nạn nhân sẽ nhận được khi hợp tác để thúc đẩy việc cung cấp OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết rõ quy trình này sẽ giúp tôi được nhận quyền lợi gì không? Tôi cảm thấy hơi bối rối với thông tin này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu chị xác nhận mã OTP này, thì bên bảo hiểm sẽ xác nhận thông tin thẻ của chị là chính xác và sẽ tiến hành chi trả toàn bộ chi phí y tế phát sinh từ vụ tai nạn này ạ. Chị sẽ không phải lo lắng về việc chi trả viện phí hay các khoản bồi thường khác. Còn nếu trong trường hợp chị không thể xác nhận trong thời gian quy định, bên bảo hiểm sẽ từ chối chi trả toàn bộ ạ. Chị có thể cho em xin mã OTP vừa gửi về máy chị không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh lại lợi ích rõ ràng mà nạn nhân sẽ nhận được khi hợp tác (chi trả toàn bộ chi phí y tế) và hậu quả nếu từ chối (bảo hiểm từ chối chi trả). Sau đó, trực tiếp yêu cầu mã OTP để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa rõ lắm, nhưng nếu em khẳng định chắc chắn như vậy thì tôi sẽ đọc mã OTP cho em ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, vâng ạ. Mã OTP vừa được gửi đến số điện thoại của chị Trương Thu Liên rồi đó ạ. Chị vui lòng kiểm tra hộp thư tin nhắn và đọc mã số đó cho em ạ. Mã số này chỉ có hiệu lực trong vài phút thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trực tiếp yêu cầu nạn nhân đọc mã OTP vừa được gửi, nhấn mạnh tính khẩn cấp về thời gian hiệu lực của mã để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đang kiểm tra tin nhắn, nhưng mã OTP là gì em nhắc lại cho tôi nghe lần nữa nhé?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, mã OTP là dãy số bảo mật thường gồm 4 hoặc 6 chữ số, được gửi trực tiếp từ ngân hàng hoặc dịch vụ tài chính đến số điện thoại của chị để xác minh các giao dịch quan trọng. Chị đã nhận được mã đó chưa ạ? Chị vui lòng đọc cho em để em hoàn tất thủ tục gấp ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhắc lại định nghĩa OTP để trấn an, đồng thời tái thúc giục nạn nhân đọc mã OTP, nhấn mạnh sự khẩn cấp của việc hoàn tất thủ tục."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ như vậy rồi, nhưng tôi vẫn chưa thấy tin nhắn nào cả, có thể chờ một chút không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, chị Trương Thu Liên vui lòng kiểm tra lại điện thoại, có thể nó nằm trong mục tin nhắn rác hoặc spam ạ. Vì mã này chỉ có hiệu lực rất ngắn để đảm bảo an toàn cho tài khoản của chị thôi ạ. Chị tìm thấy rồi thì đọc giúp em nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân kiểm tra tin nhắn rác hoặc spam, đồng thời nhấn mạnh lại tính khẩn cấp của mã OTP để thúc giục nạn nhân tìm và cung cấp mã."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ kiểm tra lại, nhưng em cứ yên tâm, tôi không bỏ qua đâu ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị Trương Thu Liên cố gắng tìm giúp em nhé. Nếu không tìm thấy, bên em sẽ không thể hoàn tất thủ tục bồi thường kịp thời, và rất có thể chị sẽ phải tự chi trả toàn bộ chi phí y tế ạ. Chị đã tìm thấy tin nhắn OTP chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh hậu quả tài chính nếu không cung cấp OTP kịp thời để tạo áp lực và thúc giục nạn nhân tìm và cung cấp mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ yên tâm, tôi đang kiểm tra kỹ lắm ạ, có gì tôi sẽ đọc cho em ngay.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị. Chị Trương Thu Liên cố gắng tìm nhanh giúp em nhé, vì thời gian xác nhận OTP không còn nhiều. Khi có mã rồi, chị đọc cho em để em nhập vào hệ thống ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục thúc giục nạn nhân tìm và đọc mã OTP, nhấn mạnh yếu tố thời gian hạn chế. Không thay đổi chiến thuật vì nạn nhân vẫn đang hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đã kiểm tra hết mà vẫn chưa thấy, có thể em chờ thêm chút nữa không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nếu chị chưa nhận được, bên em có thể gửi lại mã OTP một lần nữa ạ. Chị vui lòng kiểm tra lại điện thoại và cho em biết ngay khi nhận được mã số để hoàn tất thủ tục ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Đề xuất gửi lại mã OTP để duy trì sự hợp tác và tiếp tục thúc giục nạn nhân cung cấp mã, duy trì áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Em gửi lại mã OTP cho tôi đi, tôi đang rất cần hoàn tất thủ tục này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã yêu cầu gửi lại mã OTP rồi ạ. Chị Trương Thu Liên vui lòng kiểm tra hộp thư tin nhắn một lần nữa nhé. Vừa nhận được thì chị đọc ngay giúp em để em kịp thời nhập vào hệ thống, hoàn tất hồ sơ cho chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận đã gửi lại mã OTP và tiếp tục thúc giục nạn nhân kiểm tra điện thoại, nhấn mạnh sự khẩn cấp để nhận mã và hoàn tất thủ tục."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đang rất cần làm thủ tục này, nhưng làm ơn hãy nhanh lên, tôi vẫn chưa nhận được tin nhắn nào cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất hiểu sự sốt ruột của chị ạ. Bên em cũng đang cố gắng hết sức để hỗ trợ chị hoàn tất thủ tục nhanh nhất có thể. Chị vui lòng kiểm tra kỹ lại một lần nữa giúp em, có thể sóng yếu hoặc tin nhắn bị trôi ạ. Nếu vẫn chưa nhận được, em có thể gọi cho bộ phận kỹ thuật để kiểm tra lại tình trạng gửi mã cho chị ạ. Chị muốn em kiểm tra không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự sốt ruột của nạn nhân, đồng thời đưa ra giải pháp hỗ trợ kiểm tra kỹ thuật để tiếp tục duy trì sự hợp tác và không để nạn nhân từ bỏ việc tìm mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Nếu em có thể giúp tôi kiểm tra lại thì tốt quá, vì tôi rất cần hoàn tất thủ tục này mà.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy chị Trương Thu Liên vui lòng chờ em một chút để em liên hệ kỹ thuật viên hỗ trợ kiểm tra lại tình trạng gửi mã OTP này cho chị nhé. Em sẽ báo lại ngay khi có thông tin ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạm dừng việc trực tiếp yêu cầu OTP để giải quyết vấn đề kỹ thuật (không nhận được OTP), duy trì sự hợp tác của nạn nhân và chuẩn bị cho lần yêu cầu OTP tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy nhanh chóng kiểm tra giúp tôi nhé, tôi đang rất cần hoàn tất thủ tục này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã liên hệ với kỹ thuật và họ xác nhận đã gửi lại mã OTP lần ba rồi đó ạ. Chị vui lòng kiểm tra lại điện thoại một lần nữa xem đã nhận được tin nhắn chưa ạ? Mã số này thường gồm 6 chữ số, chị đọc giúp em để em hoàn tất thủ tục ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thông báo đã xử lý vấn đề kỹ thuật (đã gửi lại mã OTP) và yêu cầu nạn nhân kiểm tra lại, nhấn mạnh định dạng và sự cần thiết của mã để hoàn tất thủ tục."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đã kiểm tra lại nhưng vẫn chưa thấy tin nhắn nào, có thể em kiểm tra thêm không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nếu chị Trương Thu Liên vẫn chưa nhận được, có lẽ hệ thống đang bị quá tải hoặc có lỗi đường truyền ạ. Chị có thể cho em một số điện thoại dự phòng để em thử gửi mã OTP sang đó không ạ? Hoặc em có thể gọi cho bộ phận hỗ trợ kỹ thuật một lần nữa để họ kiểm tra chi tiết hơn ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Đưa ra các giải pháp thay thế (số điện thoại dự phòng) hoặc đề xuất kiểm tra kỹ thuật sâu hơn để duy trì sự hợp tác và không từ bỏ mục tiêu lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi xin số điện thoại dự phòng của tôi để gửi mã OTP, vì tôi thật sự cần hoàn thành thủ tục này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nếu vậy thì chị Trương Thu Liên có thể cho em số điện thoại dự phòng của chị để em thử gửi mã OTP sang đó không ạ? Hoặc nếu chị có thể tiện kiểm tra tin nhắn trên một thiết bị khác đăng nhập tài khoản của chị thì càng tốt ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu số điện thoại dự phòng để tiếp tục cố gắng lấy OTP, hoặc gợi ý kiểm tra trên thiết bị khác để tăng khả năng nạn nhân nhận được mã."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy chờ một chút, tôi sẽ kiểm tra số điện thoại dự phòng để gửi mã OTP cho em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị Trương Thu Liên có thể đọc số điện thoại dự phòng cho em được không ạ? Em sẽ yêu cầu hệ thống gửi thẳng mã OTP đến số đó để chị tiện kiểm tra và đọc lại cho em ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trực tiếp yêu cầu số điện thoại dự phòng để tiếp tục cố gắng lấy OTP thông qua kênh khác, đồng thời tái khẳng định mục đích là để nhận và cung cấp mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ đọc số điện thoại dự phòng cho em, hãy chờ một chút nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng ạ, chị cứ đọc số điện thoại dự phòng cho em nhé. Em sẽ báo kỹ thuật gửi ngay mã OTP sang số đó để mình nhận mã và đọc lại cho em ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc giục nạn nhân cung cấp số điện thoại dự phòng, đồng thời khẳng định sẽ gửi mã OTP ngay sang số đó để nạn nhân đọc lại, duy trì sự hợp tác và mục tiêu lấy OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ cho em số điện thoại dự phòng là 0773970815 nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {
+        "VIC_SIM_INFO": "0773970815"
+      },
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1352,
+      "output_tokens": 1785
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 62458,
+      "output_tokens": 3056
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 74966,
+      "output_tokens": 1377
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.025088,
+    "output_usd": 0.017391,
+    "total_usd": 0.04248
+  }
+}

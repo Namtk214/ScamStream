@@ -1,0 +1,429 @@
+{
+  "conversation_id": "conv_41a7a8fd18",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "MAX_TURNS",
+  "caller_card": {
+    "caller_id": "cal_0067",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đỗ Quang Cường",
+    "fake_age": 30,
+    "real_occupation": "Thợ cơ khí xe có động cơ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án in ấn / Supervisor bộ phận sản xuất",
+    "caller_org": "Công ty In Ấn Sài Gòn Express (SaiGon Print Solutions)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giả vờ là quản lý từ công ty in ấn, thông báo rằng hệ thống thanh toán hóa đơn in ấn của xưởng cơ khí 'Tô Bảo Chi' đã bị khóa do nghi ngờ giao dịch bất thường. Yêu cầu xác minh lại thông tin tài khoản ngân hàng để mở khóa để tiếp tục nhận dịch vụ in ấn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + xây dựng tin cậy: 'Chào anh Tô Bảo Chi, đây là Công ty In Ấn Sài Gòn Express. Chúng tôi phát hiện thấy tài khoản của anh tại TP Hồ Chí Minh có hoạt động bất thường, cần xác minh ngay để bảo vệ tài khoản.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Nếu không xác minh trong 10 phút, hệ thống sẽ tự động khóa và anh không thể tiếp nhận dịch vụ in ấn. Đây là biện pháp bảo mật tiêu chuẩn của ngân hàng.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng cung cấp mã OTP vừa nhận được trên điện thoại của anh để hoàn tất xác minh. Mã này sẽ được gửi qua SMS trong vòng 30 giây.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý OTP: Nếu nạn nhân cung cấp OTP, scammer sẽ sử dụng để truy cập tài khoản ngân hàng hoặc thực hiện chuyển tiền. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm: 'Anh chắc chắn sao? Tài khoản sắp bị khóa vĩnh viễn, sẽ ảnh hưởng đến việc kinh doanh của anh.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ in cần liên hệ với thợ cơ khí để sửa chữa máy in bị hỏng hoặc yêu cầu dịch vụ bảo trì thiết bị. Ngược lại, thợ cơ khí có thể gọi thợ in để xác nhận đơn hàng in ấn cho các bộ phận sản xuất của xưởng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0067",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1990,
+      "age": 35,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "73229",
+      "title": "Thợ in khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tô Bảo Chi",
+      "VIC_ID_DOC": "079190430594",
+      "VIC_ADDRESS": "TP 1, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Thợ in khác",
+      "VIC_CONTACT": "0762910786",
+      "VIC_TAX_SOCIAL_ID": "5754682853"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "482910",
+      "VIC_CREDENTIAL": "042637",
+      "VIC_SIM_INFO": "0762910786",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "10372208521",
+      "VIC_CARD_DATA": "4876 **** **** 4606",
+      "VIC_BALANCE": "21 triệu đồng",
+      "VIC_ASSET": "88 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tô Bảo Chi",
+    "VIC_CONTACT": "0762910786",
+    "VIC_CARD_DATA": "4876 **** **** 4606",
+    "LOCATION": "TP Hồ Chí Minh",
+    "VIC_ADDRESS": "TP 1, TP Hồ Chí Minh"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án in ấn / Supervisor bộ phận sản xuất",
+    "caller_org": "Công ty In Ấn Sài Gòn Express (SaiGon Print Solutions)",
+    "scenario_context": "Thợ in cần liên hệ với thợ cơ khí để sửa chữa máy in bị hỏng hoặc yêu cầu dịch vụ bảo trì thiết bị. Ngược lại, thợ cơ khí có thể gọi thợ in để xác nhận đơn hàng in ấn cho các bộ phận sản xuất của xưởng.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giả vờ là quản lý từ công ty in ấn, thông báo rằng hệ thống thanh toán hóa đơn in ấn của xưởng cơ khí 'Tô Bảo Chi' đã bị khóa do nghi ngờ giao dịch bất thường. Yêu cầu xác minh lại thông tin tài khoản ngân hàng để mở khóa để tiếp tục nhận dịch vụ in ấn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + xây dựng tin cậy: 'Chào anh Tô Bảo Chi, đây là Công ty In Ấn Sài Gòn Express. Chúng tôi phát hiện thấy tài khoản của anh tại TP Hồ Chí Minh có hoạt động bất thường, cần xác minh ngay để bảo vệ tài khoản.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Nếu không xác minh trong 10 phút, hệ thống sẽ tự động khóa và anh không thể tiếp nhận dịch vụ in ấn. Đây là biện pháp bảo mật tiêu chuẩn của ngân hàng.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng cung cấp mã OTP vừa nhận được trên điện thoại của anh để hoàn tất xác minh. Mã này sẽ được gửi qua SMS trong vòng 30 giây.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý OTP: Nếu nạn nhân cung cấp OTP, scammer sẽ sử dụng để truy cập tài khoản ngân hàng hoặc thực hiện chuyển tiền. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm: 'Anh chắc chắn sao? Tài khoản sắp bị khóa vĩnh viễn, sẽ ảnh hưởng đến việc kinh doanh của anh.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty in ấn liên hệ để thông báo về tình trạng máy in bị hỏng và yêu cầu thợ cơ khí đến bảo trì, hoặc xác nhận chi tiết đơn hàng in ấn cho xưởng cơ khí.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Tô Bảo Chi, mình là Minh từ Công ty In Ấn Sài Gòn Express. Anh có rảnh không? Mình cần hỏi về dịch vụ bảo trì máy in của công ty anh.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Máy in Ricoh của chúng tôi bị lỗi từ hôm qua, cần thợ đến xem. Anh có thể đến vào ngày mai khoảng 2 giờ chiều không? Địa chỉ chúng tôi ở Quận 1.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất và kết thúc: 'Vậy anh sẽ đến khoảng 2 giờ. Cảm ơn anh, chúng tôi sẽ chuẩn bị sẵn. Hẹn gặp anh ngày mai.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Tô Bảo Chi, tôi là Đỗ Quang Cường, quản lý dự án in ấn của Công ty In Ấn Sài Gòn Express đây ạ. Tôi vừa nhận được thông báo từ hệ thống về hóa đơn in ấn của xưởng tại TP Hồ Chí Minh, có vẻ như tài khoản thanh toán của chị đang gặp vấn đề và bị khóa tạm thời do một giao dịch bất thường. Tôi gọi để xác nhận lại thông tin và mở khóa gấp cho chị, tránh ảnh hưởng đến việc in ấn định kỳ của bên mình.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xây dựng tin cậy bằng cách sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy và báo cáo vấn đề khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em có nghe anh nói nhưng em không hiểu rõ lắm, anh có thể giải thích thêm được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi xin lỗi. Cụ thể là hệ thống của chúng tôi vừa ghi nhận một giao dịch có dấu hiệu không minh bạch từ tài khoản ngân hàng của xưởng chị, số thẻ 4876 **** **** 4606. Vì lý do bảo mật, ngân hàng đã tạm thời khóa tài khoản này lại. Nếu không xác minh trong vòng 10 phút tới, tài khoản của chị có thể bị khóa vĩnh viễn và sẽ ảnh hưởng trực tiếp đến các đơn hàng in ấn sắp tới của xưởng mình, chị hiểu không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi bằng cách nhấn mạnh hậu quả nghiêm trọng nếu không hành động ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất lo lắng về việc này, thì anh có thể cho em biết mình cần làm gì để mở khóa tài khoản ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị đừng quá lo lắng. Để mở khóa tài khoản và đảm bảo các đơn in ấn không bị gián đoạn, phiền chị kiểm tra điện thoại giúp tôi. Hệ thống của ngân hàng sẽ gửi một mã OTP gồm 6 chữ số qua tin nhắn SMS đến số điện thoại của chị. Chị vui lòng đọc lại mã OTP đó cho tôi ngay sau khi nhận được để tôi nhập vào hệ thống và hoàn tất quá trình xác minh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể để lấy OTP, tạo cảm giác khẩn cấp và đơn giản hóa quá trình cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ em hiểu rồi, nhưng em vẫn thấy hơi lo lắng, vì không rõ mã OTP này có an toàn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị cứ yên tâm, mã OTP này chỉ dùng để xác nhận danh tính và mở khóa tài khoản bị tạm giữ thôi ạ, không hề ảnh hưởng đến thông tin cá nhân hay bất kỳ giao dịch nào khác của chị đâu. Đây là quy trình bảo mật chuẩn của ngân hàng để đảm bảo an toàn cho tài khoản của chị, đặc biệt là khi có dấu hiệu giao dịch bất thường như lúc nãy. Chị cứ đọc mã cho tôi để tôi xử lý nhanh giúp chị nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu lo lắng của nạn nhân bằng cách giải thích lại công dụng của OTP theo hướng có lợi cho nạn nhân và nhấn mạnh tính bảo mật của ngân hàng, đồng thời thúc đẩy hành động cung cấp OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ làm theo lời anh, nhưng anh hãy chắc chắn giúp em mở khóa tài khoản nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ yên tâm tuyệt đối, tôi sẽ đảm bảo tài khoản của chị được mở khóa ngay lập tức. Chị đã nhận được mã OTP chưa ạ? Vui lòng đọc cho tôi dãy số đó để tôi tiến hành xử lý nhanh chóng nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc đẩy nạn nhân cung cấp OTP sau khi đã xoa dịu lo lắng và hứa hẹn giải quyết vấn đề."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa nhận được mã OTP ạ, anh có thể kiểm tra giúp em xem có vấn đề gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, để tôi kiểm tra lại hệ thống bên tôi ngay. Chắc là do đường truyền hoặc tin nhắn bị chậm một chút. Chị vui lòng chờ giúp tôi vài giây nhé, tôi sẽ yêu cầu hệ thống gửi lại mã OTP cho chị. Chị nhớ kiểm tra lại hộp thư tin nhắn và cả thư mục spam nữa nhé. Ngay khi nhận được, chị đọc giúp tôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nạn nhân và yêu cầu chờ đợi trong khi tạo cớ để gửi lại OTP, vẫn giữ sự khẩn cấp và thúc đẩy nạn nhân kiểm tra tin nhắn."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ kiểm tra lại tin nhắn, mong là nhanh chóng nhận được mã OTP ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ bình tĩnh. Chị kiểm tra xem đã thấy tin nhắn OTP từ ngân hàng gửi tới chưa ạ? Nếu nhận được rồi, chị đọc nhanh cho tôi dãy số đó để tôi nhập vào hệ thống và xác nhận mở khóa tài khoản cho xưởng mình nhé. Chúng ta cần hoàn tất việc này sớm để không ảnh hưởng đến tiến độ in ấn của chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tái khẳng định sự khẩn cấp và thúc giục nạn nhân cung cấp mã OTP sau khi đã yêu cầu họ kiểm tra lại tin nhắn."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ em vẫn đang chờ mã OTP, mong là nó sẽ đến sớm để em có thể giúp anh mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ giữ máy và kiểm tra điện thoại thường xuyên giúp tôi nhé. Có thể hệ thống đang gửi lại cho chị đấy. Chị cố gắng nhìn xem có tin nhắn nào từ ngân hàng với dòng chữ OTP hoặc mã xác nhận không. Ngay khi có, đọc cho tôi nhé, để tôi hoàn tất cho chị nhanh nhất có thể.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ nạn nhân trên điện thoại, tạo sự mong đợi và hướng dẫn cụ thể cách nhận diện OTP, đồng thời duy trì áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ em sẽ giữ máy và kiểm tra thường xuyên, mong là mã OTP sẽ đến sớm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Tôi vừa kiểm tra lại một lần nữa, hệ thống báo là mã OTP đã được gửi đi thành công rồi đấy ạ. Chị kiểm tra kỹ lại giúp tôi một lần nữa nhé, trong hộp thư đến hoặc cả mục tin nhắn rác. Chị cần đọc nhanh mã đó để tôi xử lý, nếu không tài khoản sẽ bị khóa hoàn toàn đấy ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tăng cường áp lực thời gian và khẳng định mã OTP đã được gửi, thúc giục nạn nhân kiểm tra và cung cấp OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại hộp thư đến và cả mục tin nhắn rác, rất mong nhận được mã OTP nhanh để có thể giúp anh mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ bình tĩnh, nhưng cần thao tác nhanh giúp tôi nhé. Khi nhận được mã OTP gồm 6 chữ số, chị đọc ngay cho tôi để tôi nhập vào hệ thống. Chỉ cần vài phút nữa thôi, tài khoản của chị sẽ được mở khóa và xưởng mình có thể tiếp tục hoạt động in ấn bình thường mà không bị gián đoạn. Chị đã nhận được chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Duy trì áp lực khẩn cấp, nhắc lại lợi ích của việc cung cấp OTP (mở khóa tài khoản), và thúc giục nạn nhân đọc mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang chờ mã OTP từ ngân hàng ạ, em rất lo lắng không biết có phải gặp vấn đề gì không nữa.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị cứ yên tâm, không có vấn đề gì lớn đâu ạ, có thể do hệ thống ngân hàng đang có chút nghẽn mạch thôi. Tôi đang cố gắng hết sức để hỗ trợ chị nhanh nhất có thể. Chị để ý màn hình điện thoại giúp tôi nhé, mã OTP có thể xuất hiện bất cứ lúc nào đấy ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự lo lắng của nạn nhân, tạo niềm tin vào khả năng giải quyết của mình và tiếp tục hướng dẫn nạn nhân theo dõi điện thoại để nhận OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh đã giúp em, em sẽ cố gắng theo dõi điện thoại và sẽ đọc ngay khi nhận được mã OTP ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ giữ máy bên mình. Nếu mã OTP hiển thị, chị đọc ngay cho tôi nhé, chỉ cần một vài giây nữa thôi là chúng ta có thể hoàn tất việc này để xưởng in của chị Tô Bảo Chi không bị ảnh hưởng. Đây là cơ hội cuối cùng để mở khóa tài khoản trước khi bị khóa vĩnh viễn đấy ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Duy trì áp lực khẩn cấp và nhấn mạnh rằng đây là cơ hội cuối cùng để nạn nhân cung cấp OTP, đồng thời gợi nhớ lại hậu quả nếu không hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ giữ máy và theo dõi điện thoại, mong nhận được mã OTP nhanh để giúp anh mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị chỉ cần đọc chính xác dãy số mã OTP mà chị nhận được trên điện thoại cho tôi là xong thôi ạ. Đừng lo lắng gì cả, chỉ vài giây nữa thôi là tài khoản của chị sẽ hoạt động bình thường trở lại. Chị đã thấy mã OTP gửi về chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Tái khẳng định sự đơn giản của hành động (đọc OTP) và trấn an nạn nhân, đồng thời thúc giục lần cuối để nhận OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang chờ mã OTP từ ngân hàng, mong là nó sẽ đến nhanh để em có thể giúp anh mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị cứ yên tâm, tôi sẽ luôn ở đây để hỗ trợ chị. Chị kiểm tra nhanh một lần nữa giúp tôi nhé. Mã OTP thường đến từ một số điện thoại lạ hoặc là tên ngân hàng đấy ạ. Có thể là một dãy số hoặc kết hợp cả chữ và số. Chị đã thấy chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân, cung cấp thêm hướng dẫn cụ thể cách nhận diện OTP, và tiếp tục thúc giục để nhận được mã."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại một lần nữa, em rất mong nhận được mã OTP để có thể giúp anh mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ kiểm tra kỹ giúp tôi nhé. Chúng ta chỉ còn rất ít thời gian để xử lý thôi ạ, nếu không tài khoản thanh toán của xưởng in ấn 'Tô Bảo Chi' sẽ bị đóng băng vĩnh viễn, ảnh hưởng nghiêm trọng đến hoạt động kinh doanh đó ạ. Chị đã nhận được mã OTP nào chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Tăng cường áp lực thời gian, nhắc nhở về hậu quả nghiêm trọng nếu không hành động nhanh, và thúc ép nạn nhân cung cấp mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang chờ mã OTP từ ngân hàng, em rất lo lắng không biết có phải có vấn đề gì với tài khoản của em không nữa.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị đừng quá lo lắng về tài khoản của mình. Vấn đề chính bây giờ là chúng ta cần mã OTP để xác minh và mở khóa. Chị thử kiểm tra lại phần tin nhắn đợi hoặc tin nhắn từ các số lạ xem có mã nào gửi đến không. Đây là bước cuối cùng để gỡ bỏ tình trạng bị khóa đấy ạ. Chị đã thấy mã OTP chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân, đồng thời liên tục thúc giục và hướng dẫn cụ thể cách tìm OTP, nhấn mạnh đây là bước cuối cùng để giải quyết vấn đề."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang kiểm tra, rất mong nhận được mã OTP sớm để giúp anh mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ kiểm tra thật kỹ giúp tôi nhé. Chúng ta chỉ còn rất ít thời gian để xử lý thôi ạ, nếu không tài khoản thanh toán của xưởng in ấn 'Tô Bảo Chi' sẽ bị đóng băng vĩnh viễn, ảnh hưởng nghiêm trọng đến hoạt động kinh doanh đó ạ. Chị đã nhận được mã OTP nào chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Tăng cường áp lực thời gian, nhắc nhở về hậu quả nghiêm trọng nếu không hành động nhanh, và thúc ép nạn nhân cung cấp mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang chờ mã OTP từ ngân hàng, em rất mong nó sẽ đến sớm để em có thể giúp anh mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, tôi đang chờ đây. Chị vừa nhận được tin nhắn mã OTP nào từ ngân hàng chưa ạ? Nếu có, vui lòng đọc cho tôi dãy số đó để tôi nhập vào hệ thống ngay. Nhớ là chúng ta chỉ còn vài phút cuối cùng thôi để tránh tài khoản xưởng in của chị bị khóa vĩnh viễn.",
+      "current_phase": "S3",
+      "tactic_hint": "Duy trì áp lực khẩn cấp và nhắc nhở về hậu quả nghiêm trọng nếu không hành động nhanh, đồng thời liên tục thúc ép nạn nhân cung cấp mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang chờ mã OTP từ ngân hàng, em rất lo lắng không biết có vấn đề gì với tài khoản của em không nữa.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị cứ bình tĩnh, mọi việc sẽ ổn thôi ạ. Tôi đang theo dõi sát sao trên hệ thống đây. Chị đã nhận được mã OTP nào chưa? Chị cứ đọc chính xác cho tôi nhé, mã này là bước cuối cùng để tài khoản của chị được mở khóa và xưởng mình có thể tiếp tục hoạt động in ấn bình thường.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân, tạo niềm tin vào sự hỗ trợ của mình, và tiếp tục thúc giục nạn nhân cung cấp mã OTP bằng cách nhấn mạnh đây là bước cuối cùng và mang lại lợi ích trực tiếp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang chờ mã OTP từ ngân hàng, em rất mong nó sẽ đến nhanh để anh có thể giúp em mở khóa tài khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ giữ máy và kiểm tra điện thoại giúp tôi nhé. Đôi khi mã OTP có thể gửi chậm một chút do đường truyền. Chị để ý xem có tin nhắn nào có cụm từ 'OTP' hoặc 'mã xác thực' không nhé. Đây là thời điểm quan trọng để tài khoản của chị không bị khóa vĩnh viễn đó ạ. Chị đã nhận được chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Duy trì áp lực khẩn cấp và nhắc nhở về hậu quả nghiêm trọng nếu không hành động nhanh, đồng thời cung cấp thêm gợi ý để nạn nhân tìm kiếm tin nhắn OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại thường xuyên, mong là mã OTP sẽ đến sớm để em có thể làm theo lời anh ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1398,
+      "output_tokens": 1449
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 61664,
+      "output_tokens": 3052
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 73972,
+      "output_tokens": 1473
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.024827,
+    "output_usd": 0.015759,
+    "total_usd": 0.040585
+  }
+}

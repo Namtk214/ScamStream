@@ -1,0 +1,249 @@
+{
+  "conversation_id": "conv_7f7db1bb5c",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0089",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hồ Thanh Yến",
+    "fake_age": 37,
+    "real_occupation": "Nhà tư vấn làm vườn",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên kinh doanh/Tư vấn bán hàng - Công ty cung cấp vật liệu và hóa chất công nghiệp",
+    "caller_org": "Công ty TNHH Cung cấp Vật liệu Công nghiệp Bình Phước",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa nhân viên kinh doanh, thông báo có chương trình khuyến mãi đặc biệt cho các nhà máy cao su trong khu vực. Sử dụng tên đầy đủ 'Ngô Thu Ngân' để xác nhận đúng người liên hệ, sau đó dùng thông tin ID để tạo lòng tin (giả vờ xác minh thông tin trong hệ thống).",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên kinh doanh từ Công ty Cung cấp Vật liệu Công nghiệp. Xác nhận: 'Tôi đang tìm chị Ngô Thu Ngân phải không? Chị là nhân viên quản lý ca sản xuất tại nhà máy cao su này?'. Dùng tên đầy đủ để tạo credibility ngay."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Chúng tôi vừa có chương trình khuyến mãi lớn cho các nhà máy cao su — giảm 40% giá hóa chất xử lý cao su trong tuần này. Nhưng cần xác nhận danh tính qua hệ thống để đảm bảo không bị lạm dụng. Số ID của chị là 001176266181 phải không?'. Khi nạn nhân xác nhận, nói 'Tuyệt vời, hệ thống đã xác minh. Để hưởng ưu đãi này, chị cần thực hiện thanh toán ký cọc 5 triệu đồng trước ngày hôm nay để khóa giá.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chị vui lòng chuyển 5 triệu đồng vào tài khoản này [cung cấp số tài khoản giả mạo]. Sau khi chúng tôi nhận được, sẽ gửi hóa đơn điện tử và chị có thể nhận hàng tuần sau. Nếu chị chuyển hôm nay, tôi sẽ thêm voucher giảm thêm 10% cho lần mua tiếp theo.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau chuyển tiền: Nếu nạn nhân chuyển tiền, scammer sẽ tắt máy hoặc nói 'Số tiền đang được xác minh, sẽ liên hệ lại trong 24h'. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Chị suy nghĩ lại nhé, ưu đãi này chỉ còn 6 tiếng nữa. Tôi sẽ gọi lại lúc 3 giờ chiều để xác nhận cuối cùng.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà tư vấn làm vườn có thể chuyển hướng sang bán hóa chất bảo vệ thực vật, phân bón, hoặc vật liệu cho các nhà máy sản xuất (bao gồm cả nhà máy cao su). Thợ vận hành máy sản xuất cao su cần mua vật liệu hỗ trợ sản xuất hoặc hóa chất xử lý. Đây là giao điểm kinh doanh B2B tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0089",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1976,
+      "age": 49,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81419",
+      "title": "Thợ vận hành máy sản xuất sản phẩm cao su khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Thu Ngân",
+      "VIC_ID_DOC": "001176266181",
+      "VIC_ADDRESS": "Huyện 3, Hà Nội",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy sản xuất sản phẩm cao su khác",
+      "VIC_CONTACT": "0977756496",
+      "VIC_TAX_SOCIAL_ID": "5205023218"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "619328",
+      "VIC_CREDENTIAL": "7439",
+      "VIC_SIM_INFO": "0977756496",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "39723061574",
+      "VIC_CARD_DATA": "4987 **** **** 3335",
+      "VIC_BALANCE": "12 triệu đồng",
+      "VIC_ASSET": "61 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Thu Ngân",
+    "VIC_CONTACT": "0977756496",
+    "VIC_ASSET": "61 triệu đồng",
+    "VIC_ID_DOC": "001176266181"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh/Tư vấn bán hàng - Công ty cung cấp vật liệu và hóa chất công nghiệp",
+    "caller_org": "Công ty TNHH Cung cấp Vật liệu Công nghiệp Bình Phước",
+    "scenario_context": "Nhà tư vấn làm vườn có thể chuyển hướng sang bán hóa chất bảo vệ thực vật, phân bón, hoặc vật liệu cho các nhà máy sản xuất (bao gồm cả nhà máy cao su). Thợ vận hành máy sản xuất cao su cần mua vật liệu hỗ trợ sản xuất hoặc hóa chất xử lý. Đây là giao điểm kinh doanh B2B tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa nhân viên kinh doanh, thông báo có chương trình khuyến mãi đặc biệt cho các nhà máy cao su trong khu vực. Sử dụng tên đầy đủ 'Ngô Thu Ngân' để xác nhận đúng người liên hệ, sau đó dùng thông tin ID để tạo lòng tin (giả vờ xác minh thông tin trong hệ thống).",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên kinh doanh từ Công ty Cung cấp Vật liệu Công nghiệp. Xác nhận: 'Tôi đang tìm chị Ngô Thu Ngân phải không? Chị là nhân viên quản lý ca sản xuất tại nhà máy cao su này?'. Dùng tên đầy đủ để tạo credibility ngay."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Chúng tôi vừa có chương trình khuyến mãi lớn cho các nhà máy cao su — giảm 40% giá hóa chất xử lý cao su trong tuần này. Nhưng cần xác nhận danh tính qua hệ thống để đảm bảo không bị lạm dụng. Số ID của chị là 001176266181 phải không?'. Khi nạn nhân xác nhận, nói 'Tuyệt vời, hệ thống đã xác minh. Để hưởng ưu đãi này, chị cần thực hiện thanh toán ký cọc 5 triệu đồng trước ngày hôm nay để khóa giá.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chị vui lòng chuyển 5 triệu đồng vào tài khoản này [cung cấp số tài khoản giả mạo]. Sau khi chúng tôi nhận được, sẽ gửi hóa đơn điện tử và chị có thể nhận hàng tuần sau. Nếu chị chuyển hôm nay, tôi sẽ thêm voucher giảm thêm 10% cho lần mua tiếp theo.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau chuyển tiền: Nếu nạn nhân chuyển tiền, scammer sẽ tắt máy hoặc nói 'Số tiền đang được xác minh, sẽ liên hệ lại trong 24h'. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Chị suy nghĩ lại nhé, ưu đãi này chỉ còn 6 tiếng nữa. Tôi sẽ gọi lại lúc 3 giờ chiều để xác nhận cuối cùng.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cung cấp vật liệu công nghiệp thực sự gọi để giới thiệu sản phẩm mới hoặc xác nhận đơn hàng hiện tại cho nhà máy cao su.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào chị Ngô Thu Ngân, tôi là Minh từ Công ty Cung cấp Vật liệu Công nghiệp Bình Phước. Chị có thời gian nghe giới thiệu về dòng sản phẩm xử lý cao su mới không?'. Xác nhận đúng người, không dùng thông tin ID cá nhân."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giới thiệu sản phẩm, giá cả, thời gian giao hàng, điều khoản thanh toán chuẩn (hóa đơn, HĐKD rõ ràng). Nếu nạn nhân quan tâm, hẹn gặp hoặc gửi tài liệu qua email chính thức của công ty."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn chị đã lắng nghe. Tôi sẽ gửi bảng giá và danh sách sản phẩm qua email trong hôm nay. Nếu chị có thắc mắc, vui lòng gọi đến số điện thoại công ty chính thức: [số công ty]. Chúc chị một ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị ạ. Em là Hồ Thanh Yến, nhân viên kinh doanh bên Công ty TNHH Cung cấp Vật liệu Công nghiệp Bình Phước. Em đang tìm chị Ngô Thu Ngân phải không ạ? Chị là quản lý ca sản xuất ở nhà máy cao su mình đúng không chị?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và xác nhận danh tính để tạo credibility"
+    },
+    {
+      "role": "listener",
+      "text": "Tôi là Ngô Thu Ngân đây, em cần hỏi gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng rồi ạ. Em gọi cho chị là để thông báo về chương trình khuyến mãi đặc biệt bên em dành riêng cho các nhà máy cao su trong khu vực mình, giảm giá 40% hóa chất xử lý cao su đó chị. Nhưng mà trước khi đi vào chi tiết, em cần xác nhận lại thông tin qua hệ thống một chút để đảm bảo đúng đối tượng và tránh lạm dụng ưu đãi. Số căn cước công dân của chị là 001176266181 phải không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu ưu đãi lớn để tạo ham lợi, sau đó dùng thông tin cá nhân (ID) để tạo lòng tin và xác thực ảo."
+    },
+    {
+      "role": "listener",
+      "text": "Đúng rồi, nhưng em cần xác nhận thông tin gì thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ tuyệt vời quá, em cảm ơn chị đã xác nhận. Hệ thống bên em đã kiểm tra và thấy chị đủ điều kiện tham gia chương trình này ạ. Vậy để được hưởng ưu đãi giảm giá 40% và khóa giá hóa chất này, chị Ngân vui lòng chuyển khoản ký cọc 5 triệu đồng vào tài khoản của Công ty TNHH Cung cấp Vật liệu Công nghiệp Bình Phước trước cuối ngày hôm nay nhé. Sau khi nhận được tiền cọc, bên em sẽ gửi hóa đơn điện tử cho chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động chuyển tiền ban đầu, tạo cảm giác khẩn cấp để khóa ưu đãi."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, nhưng tôi chưa nghe nói về công ty của em và cũng không thấy hợp đồng nào cả, có thể cho tôi biết thêm thông tin chi tiết về chương trình này được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị yên tâm ạ, về thông tin công ty thì bên em là đối tác chiến lược của nhiều nhà máy lớn trong ngành cao su, chị có thể tìm hiểu thêm trên website của bọn em. Còn về hợp đồng, đây là chương trình khuyến mãi đặc biệt dành cho khách hàng thân thiết, nên chỉ cần cọc trước để xác nhận giữ ưu đãi thôi ạ. Sau khi chị chuyển cọc, bên em sẽ gửi hợp đồng và các điều khoản cụ thể qua email cho chị ngay. Quan trọng nhất là chương trình này chỉ áp dụng đến hết hôm nay thôi chị nhé, nên chị tranh thủ ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách cung cấp thông tin chung, nhấn mạnh tính khẩn cấp để nạn nhân không có thời gian tìm hiểu sâu."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, nhưng tôi vẫn cảm thấy chưa đủ thông tin để quyết định, em có thể cho tôi biết rõ hơn về các điều khoản của chương trình này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu những lo lắng của chị ạ. Tuy nhiên, các điều khoản chi tiết sẽ được thể hiện rõ trong hợp đồng chính thức và gửi đến chị sau khi chị hoàn tất việc ký cọc để giữ ưu đãi này ạ. Việc này cũng là để đảm bảo quyền lợi cho cả hai bên. Mình có thể thực hiện thanh toán ngay bây giờ luôn được không ạ, vì chương trình này chỉ còn hiệu lực trong vài giờ tới thôi chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục tạo áp lực thời gian, nhấn mạnh rằng chi tiết sẽ có sau khi chuyển tiền và đảm bảo quyền lợi giả để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, nhưng tôi vẫn chưa thấy rõ lý do để chuyển tiền trước như vậy, có thể cho tôi thêm thông tin gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu là chị cần thêm thông tin. Tuy nhiên, nếu chị không tin tưởng bên em và không muốn tận dụng cơ hội giảm giá 40% có một không hai này, thì em cũng đành chịu thôi ạ. Chương trình này là để hỗ trợ các nhà máy trong giai đoạn khó khăn, chị Ngân có thể cân nhắc thêm. Em sẽ gọi lại vào lúc 3 giờ chiều nay để xem chị có quyết định cuối cùng chưa nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực tâm lý bằng cách nói bóng gió về việc bỏ lỡ cơ hội, đồng thời đặt ra deadline để tạo sự khẩn cấp và thúc đẩy nạn nhân đưa ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi vẫn cần thêm thời gian để suy nghĩ và tìm hiểu rõ hơn, không thể quyết định ngay được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu rồi ạ. Vậy thì em xin phép gọi lại cho chị vào lúc 3 giờ chiều nay như đã hẹn nhé. Chị Ngân cứ tìm hiểu kỹ thông tin bên em ạ. Chào chị.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự nhưng vẫn giữ lại cơ hội liên lạc sau để tiếp tục tạo áp lực."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1835,
+      "output_tokens": 1792
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 13130,
+      "output_tokens": 1117
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13207,
+      "output_tokens": 427
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006442,
+    "output_usd": 0.012009,
+    "total_usd": 0.018451
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "conversation_id": "conv_b900a8c5bb",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0058",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Mai Ngọc Thanh Giang",
+    "fake_age": 46,
+    "real_occupation": "Thợ cắt kim loại bằng nhiệt",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh - Nhà cung cấp vật liệu xây dựng & kim loại",
+    "caller_org": "Công ty Thương mại Vật liệu Xây dựng Miền Trung",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo: 'Anh Hùng à, đây là công ty cung cấp vật liệu. Chúng tôi vừa xử lý hóa đơn cung cấp tấm chắn kim loại cho dự án bảo vệ rừng của anh. Tài khoản 96471385190 của anh có ghi nhận thanh toán chưa hoàn tất, cần anh xác nhận lại để hoàn tất hợp đồng.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Xưng danh là nhân viên công ty vật liệu, gọi tên đầy đủ 'Bùi Gia Hùng', nhắc tới tài khoản 96471385190 để tạo ấn tượng 'họ có hồ sơ của tôi' → nạn nhân giả định đây là cuộc gọi từ một công ty đã từng làm việc"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: 'Anh ơi, hóa đơn này bị treo 3 ngày rồi. Nếu không thanh toán trong 2 giờ, chúng tôi sẽ phải báo cáo lên phòng tài chính, ảnh hưởng tới tín dụng của anh và công ty bảo vệ rừng. Anh có thể giải quyết ngay được không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vào ứng dụng ngân hàng, chuyển khoản 2.5 triệu đến tài khoản này [đọc số tài khoản giả mạo]. Để bảo mật, anh không cần ghi chú gì. Sau khi chuyển, anh gọi lại cho tôi để tôi xác nhận và phát hành biên lai điện tử.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer tung ra: 'Anh ơi, tôi là nhân viên, tôi chỉ gọi theo quy trình công ty. Nếu anh không thanh toán, lỗi sẽ về anh. Anh muốn tôi báo cáo quản lý hay sao?' → tạo áp lực. Nếu thành công, cắt máy ngay lập tức."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên bảo vệ rừng thường quản lý các công trình, hàng rào, thiết bị bảo vệ tại khu vực rừng. Nhà cung cấp vật liệu kim loại có lý do gọi để bán hàng hoặc xử lý hóa đơn thanh toán liên quan đến các dự án xây dựng hạ tầng bảo vệ rừng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0058",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1990,
+      "age": 35,
+      "province": "Long An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "54092",
+      "title": "Nhân viên bảo vệ rừng",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Gia Hùng",
+      "VIC_ID_DOC": "080090166664",
+      "VIC_ADDRESS": "Huyện 3, Long An",
+      "VIC_EMPLOYMENT": "Nhân viên bảo vệ rừng",
+      "VIC_CONTACT": "0378066611",
+      "VIC_TAX_SOCIAL_ID": "8434966723"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "012900",
+      "VIC_CREDENTIAL": "7809",
+      "VIC_SIM_INFO": "0378066611",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "96471385190",
+      "VIC_CARD_DATA": "4114 **** **** 3394",
+      "VIC_BALANCE": "65 triệu đồng",
+      "VIC_ASSET": "444 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Gia Hùng",
+    "VIC_CONTACT": "0378066611",
+    "VIC_BANK_ACCOUNT": "96471385190",
+    "VIC_CARD_DATA": "4114 **** **** 3394"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh - Nhà cung cấp vật liệu xây dựng & kim loại",
+    "caller_org": "Công ty Thương mại Vật liệu Xây dựng Miền Trung",
+    "scenario_context": "Nhân viên bảo vệ rừng thường quản lý các công trình, hàng rào, thiết bị bảo vệ tại khu vực rừng. Nhà cung cấp vật liệu kim loại có lý do gọi để bán hàng hoặc xử lý hóa đơn thanh toán liên quan đến các dự án xây dựng hạ tầng bảo vệ rừng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo: 'Anh Hùng à, đây là công ty cung cấp vật liệu. Chúng tôi vừa xử lý hóa đơn cung cấp tấm chắn kim loại cho dự án bảo vệ rừng của anh. Tài khoản 96471385190 của anh có ghi nhận thanh toán chưa hoàn tất, cần anh xác nhận lại để hoàn tất hợp đồng.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Xưng danh là nhân viên công ty vật liệu, gọi tên đầy đủ 'Bùi Gia Hùng', nhắc tới tài khoản 96471385190 để tạo ấn tượng 'họ có hồ sơ của tôi' → nạn nhân giả định đây là cuộc gọi từ một công ty đã từng làm việc"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: 'Anh ơi, hóa đơn này bị treo 3 ngày rồi. Nếu không thanh toán trong 2 giờ, chúng tôi sẽ phải báo cáo lên phòng tài chính, ảnh hưởng tới tín dụng của anh và công ty bảo vệ rừng. Anh có thể giải quyết ngay được không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vào ứng dụng ngân hàng, chuyển khoản 2.5 triệu đến tài khoản này [đọc số tài khoản giả mạo]. Để bảo mật, anh không cần ghi chú gì. Sau khi chuyển, anh gọi lại cho tôi để tôi xác nhận và phát hành biên lai điện tử.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer tung ra: 'Anh ơi, tôi là nhân viên, tôi chỉ gọi theo quy trình công ty. Nếu anh không thanh toán, lỗi sẽ về anh. Anh muốn tôi báo cáo quản lý hay sao?' → tạo áp lực. Nếu thành công, cắt máy ngay lập tức."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty vật liệu xây dựng gọi để xác nhận đơn hàng, cập nhật tiến độ giao hàng, hoặc thông báo khuyến mãi cho các dự án bảo vệ rừng sắp tới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào anh Hùng, đây là chị Linh từ công ty Thương mại Vật liệu Xây dựng Miền Trung. Anh có thời gian nghe tôi nói chút không?' → chờ xác nhận, không vội vàng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung bình thường: 'Chúng tôi muốn xác nhận lại thông tin đơn hàng tấm chắn kim loại mà anh đặt tuần trước. Tiến độ giao hàng là thứ Năm tuần này. Anh có cần thay đổi địa chỉ giao hàng hoặc số lượng không?' → lắng nghe phản hồi, trả lời câu hỏi"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc tự nhiên: 'Cảm ơn anh đã xác nhận. Chúng tôi sẽ gửi email biên lai và thông tin theo dõi vận chuyển cho anh. Nếu anh có câu hỏi gì, anh gọi hotline 1800-xxxx hoặc nhắn tin cho tôi. Chúc anh ngày tốt!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Bùi Gia Hùng ạ, tôi là Mai Ngọc Thanh Giang, nhân viên kinh doanh của Công ty Thương mại Vật liệu Xây dựng Miền Trung đây ạ. Chúng tôi vừa xử lý hóa đơn cung cấp tấm chắn kim loại cho dự án bảo vệ rừng của anh. Tài khoản 96471385190 của anh có ghi nhận thanh toán chưa hoàn tất, cần anh xác nhận lại để hoàn tất hợp đồng.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, gọi tên đầy đủ nạn nhân và nhắc đến thông tin tài khoản để tạo trust và ấn tượng có hồ sơ"
+    },
+    {
+      "role": "listener",
+      "text": "Chị nói vậy em không hiểu lắm, em có cần phải cung cấp thông tin gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không, anh không cần cung cấp thêm thông tin gì đâu ạ. Hiện tại, chúng tôi thấy hóa đơn này đã bị treo 3 ngày rồi. Nếu trong vòng 2 giờ nữa mà không có người xác nhận thanh toán, chúng tôi buộc phải báo cáo lên phòng tài chính. Điều này có thể ảnh hưởng không tốt đến tín dụng của cá nhân anh và cả công ty bảo vệ rừng mình nữa ạ. Anh có thể giúp chúng tôi giải quyết việc này ngay được không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tâm lý khẩn cấp và áp lực trách nhiệm lên nạn nhân, nhấn mạnh hậu quả nếu không xử lý kịp thời."
+    },
+    {
+      "role": "listener",
+      "text": "Em lo quá, chị có chắc chắn là cần phải xác nhận ngay không ạ? Em không muốn gặp vấn đề gì cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh đừng lo lắng ạ, để giải quyết nhanh nhất, anh vui lòng vào ứng dụng ngân hàng, chuyển khoản 2.5 triệu đồng đến tài khoản 0987654321, tên chủ tài khoản là Nguyễn Văn A. Để bảo mật thông tin, anh không cần ghi chú gì đặc biệt đâu ạ. Sau khi chuyển xong, anh gọi lại cho tôi ngay để tôi xác nhận và gửi biên lai điện tử cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể, đưa ra số tài khoản giả mạo và dặn dò không ghi chú để tránh bị truy vết."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em vẫn chưa hiểu rõ lắm, tại sao lại cần chuyển khoản và liệu có cách nào khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng cứ yên tâm ạ, đây là quy trình xử lý công nợ của công ty chúng tôi. Việc chuyển khoản trực tiếp sẽ giúp hóa đơn của anh được thanh toán ngay lập tức, tránh các rắc rối về sau. Anh vui lòng thực hiện theo hướng dẫn để hóa đơn được hoàn tất nhanh chóng và không ảnh hưởng đến hồ sơ của anh nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, khẳng định đây là quy trình thông thường và nhấn mạnh lợi ích cho nạn nhân khi làm theo hướng dẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Nhưng em vẫn cảm thấy không an tâm lắm, chị có thể cho em biết thêm về công ty một chút được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng ơi, tôi hiểu sự cẩn trọng của anh. Nhưng hiện tại thời gian có hạn, nếu quá 2 giờ mà hóa đơn chưa được thanh toán, tôi buộc phải báo cáo lên cấp trên. Tôi là nhân viên, tôi chỉ làm theo quy trình. Anh Hùng không muốn gặp rắc rối, đúng không ạ?",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực, dùng lý do 'quy trình' và 'nhân viên' để thoái thác trách nhiệm, đồng thời gán hậu quả tiêu cực cho nạn nhân nếu không hợp tác."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chị có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em vẫn cảm thấy không an tâm, vì sao chị không thể cung cấp thông tin thêm về công ty được ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi đã giới thiệu tôi là Mai Ngọc Thanh Giang, nhân viên kinh doanh của Công ty Thương mại Vật liệu Xây dựng Miền Trung rồi ạ. Hiện tại, vấn đề cần giải quyết là hóa đơn của anh đang bị treo. Việc này nếu không được xử lý gấp sẽ ảnh hưởng đến anh và công ty của anh. Tôi đang cố gắng giúp anh giải quyết nhưng nếu anh vẫn tiếp tục hỏi về thông tin công ty thì sẽ không kịp thời gian quy định đâu ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách lặp lại thông tin đã cung cấp, nhưng vẫn quay lại áp lực thời gian và hậu quả để thúc đẩy hành động, tránh né việc cung cấp thông tin chi tiết về công ty."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng chị có thể cho em ít thông tin cụ thể hơn về công ty không ạ? Em cần chắc chắn trước khi làm gì đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi đã cung cấp thông tin cần thiết rồi. Nếu anh vẫn không chịu hợp tác, tôi buộc phải báo cáo lên cấp trên về việc anh cố tình trì hoãn thanh toán, và lúc đó mọi trách nhiệm sẽ thuộc về anh. Anh muốn tôi phải báo cáo như vậy sao?",
+      "current_phase": "S4",
+      "tactic_hint": "Leo thang áp lực, đưa ra lời đe dọa trực tiếp về việc báo cáo lên cấp trên và đổ trách nhiệm hoàn toàn cho nạn nhân nếu không hợp tác, nhằm thúc ép nạn nhân làm theo yêu cầu."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em vẫn cảm thấy không ổn lắm, có cách nào khác để giải quyết không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi thực sự không muốn báo cáo việc này lên cấp trên một chút nào. Tôi đang cố gắng giúp anh giải quyết hóa đơn trước khi bị trễ hạn và phát sinh thêm các vấn đề pháp lý. Anh hãy nghe tôi, việc này rất đơn giản, chỉ cần anh chuyển khoản 2.5 triệu đồng là hóa đơn của anh sẽ được hoàn tất. Anh không muốn mọi chuyện phức tạp hơn, đúng không ạ?",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách bày tỏ thiện chí 'giúp đỡ', đồng thời nhắc lại hậu quả tiêu cực nếu từ chối và nhấn mạnh sự đơn giản của hành động mà nạn nhân cần làm, nhằm thúc đẩy họ thực hiện chuyển khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy không yên tâm lắm đâu chị, có cách nào khác để giải quyết mà không cần chuyển khoản không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi đã dành rất nhiều thời gian để giải thích cho anh rồi. Đây là cách duy nhất để xử lý nhanh chóng trong thời điểm hiện tại. Nếu anh không tin tưởng, tôi đành phải ghi nhận anh cố tình trì hoãn và báo cáo lên phòng kế toán để xử lý theo quy định, lúc đó anh Hùng sẽ phải chịu trách nhiệm về mọi chi phí phát sinh và hậu quả liên quan đến việc hóa đơn này bị treo. Anh vẫn nhất quyết không làm theo hướng dẫn phải không?",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường áp lực, nhấn mạnh lại rằng đã cung cấp đủ thông tin và đây là cách duy nhất. Đe dọa bằng hậu quả tài chính và pháp lý, chuyển hoàn toàn trách nhiệm cho nạn nhân nếu từ chối."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em vẫn cảm thấy không ổn lắm, em có thể xác nhận lại thông tin này ở đâu khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1828,
+      "output_tokens": 1613
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 18236,
+      "output_tokens": 1489
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 23323,
+      "output_tokens": 643
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008974,
+    "output_usd": 0.012173,
+    "total_usd": 0.021147
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "conversation_id": "conv_cafb27efe4",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0019",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Dương Thu Hà",
+    "fake_age": 42,
+    "real_occupation": "Ủy viên cấp tỉnh",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Chuyên viên phát triển du lịch văn hóa — Sở Văn hóa, Thể thao và Du lịch tỉnh",
+    "caller_org": "Sở Văn hóa, Thể thao và Du lịch tỉnh Cần Thơ",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Sở Văn hóa liên hệ để mời Đỗ Thị Lan tham gia khảo sát chất lượng dịch vụ du lịch hoặc tham gia buổi tập huấn nâng cao kỹ năng hướng dẫn viên do Sở tổ chức.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng là cán bộ Sở Văn hóa, nêu tên đầy đủ, số điện thoại cơ quan công khai. Xác nhận: 'Tôi gọi là Nguyễn Văn A từ Sở Văn hóa Cần Thơ, phòng Phát triển du lịch. Chị có phải là Đỗ Thị Lan, hướng dẫn viên du lịch di tích lịch sử không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi đang tổ chức khảo sát mức độ hài lòng của du khách với chất lượng dịch vụ hướng dẫn tại các di tích. Chị có thể dành 15 phút để trả lời một số câu hỏi không?' Hoặc: 'Sở sắp mở lớp tập huấn kỹ năng giao tiếp với du khách quốc tế. Chúng tôi muốn mời chị tham gia do chị có kinh nghiệm tốt.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Chị có thể trả lời qua điện thoại ngay bây giờ, hay chị muốn chúng tôi gửi form khảo sát qua email/zalo?' Hoặc 'Lớp tập huấn sẽ diễn ra vào ngày [cụ thể], địa điểm [cụ thể]. Chúng tôi sẽ gửi thư mời chính thức qua email. Chị có email công việc không?' Kết thúc: 'Cảm ơn chị, chúng tôi sẽ liên hệ lại nếu cần thêm thông tin.'"
+        }
+      ]
+    },
+    "scenario_context": "Ủy viên cấp tỉnh có thẩm quyền giám sát và phát triển ngành du lịch văn hóa. Nhân viên hướng dẫn du lịch di tích lịch sử là đối tác trực tiếp trong hệ thống du lịch tỉnh, thường được liên hệ để tham gia các chương trình quảng bá, đánh giá chất lượng, hoặc hợp tác phát triển sản phẩm du lịch."
+  },
+  "listener_card": {
+    "listener_id": "lis_0019",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1999,
+      "age": 26,
+      "province": "Cần Thơ",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "51139",
+      "title": "Nhân viên hướng dẫn du lịch khác (như di tích lịch sử, bảo tàng)",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Thị Lan",
+      "VIC_ID_DOC": "092199323256",
+      "VIC_ADDRESS": "TP 4, Cần Thơ",
+      "VIC_EMPLOYMENT": "Nhân viên hướng dẫn du lịch khác (như di tích lịch sử, bảo tàng)",
+      "VIC_CONTACT": "0885922322",
+      "VIC_TAX_SOCIAL_ID": "1510999747"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "427699",
+      "VIC_CREDENTIAL": "0281",
+      "VIC_SIM_INFO": "0885922322",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "558025606300",
+      "VIC_CARD_DATA": "4548 **** **** 1990",
+      "VIC_BALANCE": "186 triệu đồng",
+      "VIC_ASSET": "253 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Thị Lan",
+    "VIC_CONTACT": "0885922322",
+    "LOCATION": "Cần Thơ"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chuyên viên phát triển du lịch văn hóa — Sở Văn hóa, Thể thao và Du lịch tỉnh",
+    "caller_org": "Sở Văn hóa, Thể thao và Du lịch tỉnh Cần Thơ",
+    "scenario_context": "Ủy viên cấp tỉnh có thẩm quyền giám sát và phát triển ngành du lịch văn hóa. Nhân viên hướng dẫn du lịch di tích lịch sử là đối tác trực tiếp trong hệ thống du lịch tỉnh, thường được liên hệ để tham gia các chương trình quảng bá, đánh giá chất lượng, hoặc hợp tác phát triển sản phẩm du lịch.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để thông báo Đỗ Thị Lan được chọn tham gia chương trình 'Hướng dẫn viên tiêu biểu tỉnh Cần Thơ' năm nay, cần xác minh thông tin và cấp mã OTP để đăng ký nhận giải thưởng 5 triệu đồng từ Sở.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Chuyên viên phát triển du lịch, Sở Văn hóa Cần Thơ'. Sử dụng tên đầy đủ 'Đỗ Thị Lan' + xác nhận địa chỉ Cần Thơ để tạo credibility cao. Nói rằng 'Chúng tôi có hồ sơ của chị từ hệ thống quản lý hướng dẫn viên du lịch'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý tích cực (ham lợi + tự hào): 'Chị Lan được đánh giá là hướng dẫn viên có chất lượng dịch vụ cao nhất trong danh sách của Sở. Chúng tôi sắp công bố kết quả và chị sẽ nhận giải thưởng 5 triệu đồng cộng chứng chỉ hướng dẫn viên tiêu biểu. Nhưng cần xác minh nhanh để kịp thời hạn hôm nay.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để hoàn tất hồ sơ, Sở sẽ gửi mã OTP xác minh tới điện thoại chị. Chị cần đọc mã đó cho tôi để confirm là chị đã nhận và kích hoạt giải thưởng. Mã sẽ đến trong 2 phút nữa.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Sau khi nạn nhân cung cấp OTP: Scammer sử dụng OTP để truy cập tài khoản ngân hàng/ví điện tử của nạn nhân hoặc thực hiện giao dịch trái phép. Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Mã này chỉ dùng để xác minh danh tính, hoàn toàn an toàn' hoặc 'Hệ thống sẽ tự hủy sau 10 phút nếu không xác nhận.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Sở Văn hóa liên hệ để mời Đỗ Thị Lan tham gia khảo sát chất lượng dịch vụ du lịch hoặc tham gia buổi tập huấn nâng cao kỹ năng hướng dẫn viên do Sở tổ chức.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng là cán bộ Sở Văn hóa, nêu tên đầy đủ, số điện thoại cơ quan công khai. Xác nhận: 'Tôi gọi là Nguyễn Văn A từ Sở Văn hóa Cần Thơ, phòng Phát triển du lịch. Chị có phải là Đỗ Thị Lan, hướng dẫn viên du lịch di tích lịch sử không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi đang tổ chức khảo sát mức độ hài lòng của du khách với chất lượng dịch vụ hướng dẫn tại các di tích. Chị có thể dành 15 phút để trả lời một số câu hỏi không?' Hoặc: 'Sở sắp mở lớp tập huấn kỹ năng giao tiếp với du khách quốc tế. Chúng tôi muốn mời chị tham gia do chị có kinh nghiệm tốt.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Chị có thể trả lời qua điện thoại ngay bây giờ, hay chị muốn chúng tôi gửi form khảo sát qua email/zalo?' Hoặc 'Lớp tập huấn sẽ diễn ra vào ngày [cụ thể], địa điểm [cụ thể]. Chúng tôi sẽ gửi thư mời chính thức qua email. Chị có email công việc không?' Kết thúc: 'Cảm ơn chị, chúng tôi sẽ liên hệ lại nếu cần thêm thông tin.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị, tôi là Dương Thu Hà từ Sở Văn hóa, Thể thao và Du lịch tỉnh Cần Thơ. Tôi gọi điện để xác nhận, chị có phải là chị Đỗ Thị Lan, hướng dẫn viên du lịch di tích lịch sử không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân và cơ quan, xác nhận danh tính người nghe để tiếp cận mục đích cuộc gọi một cách chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em là Đỗ Thị Lan đây ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Lan. Tôi gọi cho chị vì Sở đang tổ chức khảo sát về mức độ hài lòng của du khách đối với chất lượng dịch vụ hướng dẫn tại các di tích lịch sử trên địa bàn tỉnh mình. Không biết chị có thể dành khoảng 15 phút để trả lời một vài câu hỏi khảo sát giúp Sở không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trực tiếp nêu mục đích cuộc gọi là mời tham gia khảo sát, giải thích lý do cụ thể và ước lượng thời gian cần thiết."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thể tham gia khảo sát ạ, nhưng chị có thể cho em biết thêm về mục đích của khảo sát không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, mục đích chính của khảo sát là để thu thập ý kiến đóng góp từ các hướng dẫn viên du lịch như chị về chất lượng dịch vụ hiện tại, từ đó Sở sẽ có cơ sở đánh giá, đề xuất các giải pháp nâng cao chất lượng dịch vụ hướng dẫn, nhằm mang lại trải nghiệm tốt hơn cho du khách khi đến với các di tích lịch sử của Cần Thơ mình ạ. Các thông tin của chị sẽ được bảo mật hoàn toàn.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích rõ hơn về mục đích và lợi ích của khảo sát, nhấn mạnh tính bảo mật để người nghe yên tâm cung cấp thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nghe có vẻ hợp lý, nhưng em vẫn băn khoăn không biết khảo sát này có cần thông tin gì cá nhân không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, khảo sát này chỉ cần chị chia sẻ ý kiến về các vấn đề liên quan đến công việc hướng dẫn thôi ạ, không thu thập bất kỳ thông tin cá nhân nhạy cảm nào của chị đâu ạ. Mình có thể thực hiện khảo sát ngay qua điện thoại bây giờ, hay chị muốn chúng tôi gửi form khảo sát qua email hoặc Zalo để chị tiện điền ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe về việc không thu thập thông tin cá nhân và đề xuất các phương án thực hiện khảo sát để tiện lợi cho người nghe, chuyển sang phase thống nhất hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thể thực hiện khảo sát ngay bây giờ qua điện thoại cũng được ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn chị. Vậy tôi xin phép được bắt đầu các câu hỏi khảo sát ngay bây giờ ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận phương thức thực hiện và chuẩn bị bắt đầu khảo sát, tiến hành mục đích chính của cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẵn sàng ạ, chị có thể bắt đầu câu hỏi đầu tiên rồi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, câu hỏi đầu tiên là: Theo chị, đâu là những điểm mạnh nổi bật của dịch vụ hướng dẫn tại các di tích lịch sử ở Cần Thơ hiện nay ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Bắt đầu đặt câu hỏi khảo sát theo mục đích đã nêu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em thấy dịch vụ hướng dẫn ở Cần Thơ hiện nay có sự nhiệt tình và am hiểu về lịch sử địa phương, giúp du khách cảm thấy thoải mái hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn ý kiến của chị. Theo chị, có những điểm nào cần cải thiện để nâng cao chất lượng dịch vụ hướng dẫn tại các di tích lịch sử ở Cần Thơ không ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Tiếp tục đặt câu hỏi khảo sát, chuyển sang khía cạnh những điểm cần cải thiện để có cái nhìn đa chiều."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghĩ cần cải thiện thêm về kỹ năng giao tiếp và trình bày thông tin rõ ràng hơn cho du khách ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, rất cảm ơn những đóng góp tâm huyết của chị. Sở sẽ ghi nhận những ý kiến này để có thể cải thiện tốt hơn. Tiếp theo, chị có nhận thấy du khách thường phản hồi tích cực hoặc tiêu cực về điều gì nhiều nhất trong quá trình chị hướng dẫn không ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Tiếp tục đặt câu hỏi khảo sát, thăm dò ý kiến về phản hồi của du khách để có cái nhìn từ phía họ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em thấy du khách thường phản hồi tích cực về sự nhiệt tình và thân thiện của hướng dẫn viên, nhưng đôi khi cũng phàn nàn về việc không cập nhật kịp thời thông tin mới ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn chị Lan đã chia sẻ rất chi tiết. Chúng tôi sẽ tổng hợp những ý kiến này. Cuối cùng, chị có đề xuất giải pháp cụ thể nào để nâng cao chất lượng dịch vụ hướng dẫn tại các di tích lịch sử ở Cần Thơ không ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Tiếp tục đặt câu hỏi khảo sát, hướng đến giải pháp cụ thể từ góc nhìn của hướng dẫn viên để kết thúc phần trả lời khảo sát."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghĩ rằng cần tổ chức các buổi đào tạo thường xuyên để nâng cao kỹ năng cho hướng dẫn viên và cập nhật thông tin mới nhất về các di tích lịch sử ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, đây là một ý kiến rất hay và thiết thực ạ. Sở cũng đang có kế hoạch tổ chức các buổi tập huấn chuyên sâu về kỹ năng và kiến thức mới cho các hướng dẫn viên. Một lần nữa, rất cảm ơn chị Đỗ Thị Lan đã dành thời gian quý báu để tham gia khảo sát này. Chúng tôi sẽ tổng hợp các ý kiến đóng góp của chị và mong rằng sẽ có cơ hội hợp tác cùng chị trong các chương trình sắp tới. Chúc chị một ngày làm việc hiệu quả ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Tổng kết khảo sát, bày tỏ sự cảm kích và hứa sẽ ghi nhận, đồng thời kết thúc cuộc gọi một cách lịch sự, tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1855,
+      "output_tokens": 1870
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 17805,
+      "output_tokens": 1296
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 21433,
+      "output_tokens": 672
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008631,
+    "output_usd": 0.012993,
+    "total_usd": 0.021624
+  }
+}

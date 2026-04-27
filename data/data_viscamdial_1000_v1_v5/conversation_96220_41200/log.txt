@@ -1,0 +1,59 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_af3469d9c7]
+  Caller thật: Người làm công việc lặt vặt (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Trưởng phòng Quản lý tài sản & Bảo trì - Công ty Quản lý Bất động sản @ Công ty TNHH Quản lý Tài sản Việt Nam (VPRM)
+  Listener: Thư ký (tổng hợp) (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người làm công việc lặt vặt thường được gọi bởi phòng quản lý tài sản để báo cáo công việc sửa chữa, bảo trì hoặc xác nhận thông tin nhân viên. Thư ký tổng hợp là người tiếp nhận, sắp xếp và xác minh thông tin từ các bên liên quan trước khi chuyển cho lãnh đạo.
+  Pretext: Xác nhận thông tin nhân viên và tài khoản ngân hàng để thanh toán công việc sửa chữa tại văn phòng công ty. Scammer sẽ gọi tên nạn nhân (Phan Công Minh Quân) và đề cập đến số CCCD để tạo uy tín, sau đó yêu cầu xác nhận tài khoản và OTP 'để chuyển tiền thù lao'.
+  Listener traits: ['hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Phan Công Minh Quân, đây là Đinh Như Bảo Ngân, Trưởng phòng Quản lý Tài sản Công ty TNHH Quản lý Tài sản Việt Nam (VPRM). Chúng tôi có hồ sơ ghi nhận anh là đối tác sửa chữa cấp 2 với số CCCD 074095208103. Tôi cần xác nhận thông tin để hoàn tất thanh toán công việc tháng này cho anh.
+      → phase: S1 | tactic: Tiếp cận và xây dựng độ tin cậy bằng cách sử dụng thông tin cá nhân của nạn nhân.
+T02 [LISTENER] Chị có thể cho em biết thêm về công việc mà em đã thực hiện để em xác nhận thông tin được không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Anh Quân này, các công việc sửa chữa điện nước nhỏ lẻ tại các văn phòng chi nhánh của VPRM trong quý vừa rồi, bao gồm cả sửa chữa máy lạnh văn phòng VPRM chi nhánh Quận 1 và thay thế linh kiện máy phát điện tại chi nhánh Quận 7. Anh có nhớ không ạ?
+      → phase: S1 | tactic: Cung cấp thông tin cụ thể nhưng chung chung để xác nhận lại thông tin, duy trì sự tin cậy.
+T04 [LISTENER] Em không nhớ rõ về công việc ở chi nhánh Quận 1 và Quận 7 lắm, chị có thể cho em biết thêm về thời gian thực hiện không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Anh Quân nè, tôi hiểu đôi khi anh bận rộn nên có thể quên một số chi tiết. Nhưng vì bên tôi đã đối chiếu hồ sơ và xác nhận chính xác các công việc anh đã làm, nên anh cứ yên tâm. Bây giờ, tôi cần anh cung cấp số tài khoản ngân hàng để tôi có thể chuyển khoản thanh toán 185 triệu đồng từ các hợp đồng quý này cho anh. Anh biết đấy, công ty vừa nâng lương cho các đối tác, và số tiền của anh cũng khá đáng kể.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ, tái khẳng định độ tin cậy và chuyển sang khai thác tâm lý khẩn cấp và lợi ích để thúc đẩy nạn nhân cung cấp thông tin tài khoản.
+T06 [LISTENER] Chị có thể cho em biết số tài khoản ngân hàng mà chị đang có trong hồ sơ của em không ạ, để em kiểm tra lại cho chắc chắn?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Anh Quân nè, tôi rất tiếc nhưng quy trình của công ty là tôi không được phép tiết lộ thông tin tài khoản ngân hàng của đối tác ra ngoài, kể cả cho chính đối tác vì lý do bảo mật. Anh cứ cung cấp thông tin tài khoản hiện tại của anh, và chúng tôi sẽ đối chiếu lại trên hệ thống. Nếu có sai sót, chúng tôi sẽ báo anh ngay. Rất mong anh thông cảm và hợp tác.
+      → phase: S2 | tactic: Từ chối khéo léo yêu cầu tiết lộ thông tin tài khoản để duy trì kịch bản và thúc đẩy nạn nhân cung cấp thông tin mới. Vẫn trong giai đoạn khai thác tâm lý khẩn cấp và lợi ích.
+T08 [LISTENER] Em hiểu rồi, nhưng chị có thể cho em biết lý do nào khiến quy trình lại như vậy không ạ, để em có thể yên tâm khi cung cấp thông tin của mình?
+      → action: CONTINUE | suspicion: 0.70 | disclosed: []
+
+T09 [CALLER] Anh Quân nè, tôi xin giải thích rõ hơn, quy trình này được đặt ra để bảo vệ thông tin cá nhân của tất cả các đối tác, đảm bảo không ai có thể giả mạo để lấy cắp thông tin tài khoản của anh. Việc anh cung cấp tài khoản là để chúng tôi cập nhật vào hệ thống mới, và sau đó kế toán sẽ gửi một mã OTP xác nhận đến số điện thoại của anh để đảm bảo đúng người nhận. Đây là bước xác minh an toàn cuối cùng trước khi chuyển tiền, anh cứ yên tâm. Anh vui lòng cho tôi thông tin tài khoản ngân hàng của anh để tôi có thể tiến hành ngay bây giờ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ bằng cách giải thích quy trình bảo mật, nhấn mạnh sự an toàn và chuyển sang yêu cầu hành động trực tiếp (cung cấp số tài khoản và OTP).
+T10 [LISTENER] Chị có thể cho em biết thêm về quy trình xác minh OTP mà chị nói không ạ, để em có thể hiểu rõ hơn trước khi cung cấp thông tin tài khoản?
+      → action: CONTINUE | suspicion: 1.10 | disclosed: []
+
+T11 [CALLER] Anh Quân nè, quá trình xác minh OTP rất đơn giản. Khi anh cung cấp số tài khoản, hệ thống của chúng tôi sẽ gửi một tin nhắn chứa mã OTP đến số điện thoại mà anh đã đăng ký với ngân hàng. Anh đọc mã OTP đó cho tôi để kế toán hoàn tất việc xác nhận thông tin tài khoản và thực hiện lệnh chuyển khoản. Đây là bước bắt buộc để đảm bảo khoản tiền 185 triệu đồng được chuyển đúng người nhận, và chỉ mình anh mới có thể nhận được mã OTP này. Anh cứ yên tâm, quy trình này rất bảo mật và đã được áp dụng cho tất cả các đối tác của công ty. Anh vui lòng cung cấp số tài khoản để tôi có thể gửi cho kế toán làm việc ngay, tránh bị chậm trễ nha.
+      → phase: S3 | tactic: Làm rõ quy trình OTP, nhấn mạnh sự bảo mật và tính cấp thiết để nạn nhân cảm thấy yên tâm và hợp tác cung cấp thông tin.
+T12 [LISTENER] Chị có thể cho em biết thêm về việc công ty áp dụng quy trình này từ bao giờ không ạ, để em hiểu rõ hơn trước khi quyết định cung cấp thông tin tài khoản?
+      → action: CONTINUE | suspicion: 1.60 | disclosed: []
+
+T13 [CALLER] Anh Quân nè, quy trình bảo mật qua OTP này đã được công ty áp dụng từ đầu năm nay để tăng cường bảo mật cho tất cả các giao dịch thanh toán, đặc biệt là với các đối tác lâu năm có giá trị hợp đồng lớn như anh. Tôi chia sẻ để anh thấy rằng công ty luôn ưu tiên sự an toàn cho tài sản của đối tác. Anh cứ cung cấp thông tin tài khoản cho tôi để tôi còn kịp hoàn tất hồ sơ chuyển khoản cho anh trước Tết nhé.
+      → phase: S3 | tactic: Giảm thiểu sự nghi ngờ bằng cách cung cấp thông tin về thời gian áp dụng quy trình, đồng thời tái khẳng định tính cấp bách của giao dịch để thúc đẩy nạn nhân hành động.
+T14 [LISTENER] Chị có thể cho em biết rõ hơn về lý do mà công ty lại chậm trễ trong việc thanh toán trước đây không ạ, để em có thể hiểu rõ hơn tình hình ạ?
+      → action: CONTINUE | suspicion: 2.20 | disclosed: []
+
+T15 [CALLER] Anh Quân nè, tôi nghĩ chúng ta đang hơi lan man rồi. Lý do chậm trễ trong quá khứ là do hệ thống cũ còn nhiều bất cập, nhưng bây giờ đã được cải thiện với quy trình mới này. Quan trọng là hiện tại, tôi đang giúp anh hoàn tất việc thanh toán 185 triệu đồng công nợ quý này. Nếu anh không cung cấp thông tin tài khoản và mã OTP ngay, thì việc chuyển tiền sẽ bị hoãn sang tháng sau. Anh có muốn nhận tiền sớm hay đợi thêm một tháng nữa không?
+      → phase: S3 | tactic: Thúc ép nạn nhân bằng cách cảnh báo về hậu quả của việc trì hoãn (mất tiền hoặc chậm trễ), chuyển sang tâm lý khẩn cấp và lợi ích để đẩy nhanh quá trình. Đồng thời, cố gắng giới hạn các câu hỏi ngoài lề.
+T16 [LISTENER] Em hiểu ý chị, nhưng điều đó khiến em hơi lo lắng, chị có thể cho em biết thêm về việc công ty sẽ đảm bảo thông tin cá nhân của em được bảo mật như thế nào không ạ?
+      → action: CONTINUE | suspicion: 2.90 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  16 turns | suspicion=2.90
+TOKEN: in=36927 | out=3787
+COST : $0.019929
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_96220_41200\conv_af3469d9c7.json  [SCAM_EXPOSE]

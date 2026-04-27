@@ -1,0 +1,242 @@
+{
+  "conversation_id": "conv_d28ae2ea98",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0080",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Dương Gia Gia Tuấn",
+    "fake_age": 34,
+    "real_occupation": "Dược sỹ sản xuất thuốc",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Trưởng phòng Quản lý chất lượng & Tuân thủ quy định - Công ty Dược phẩm",
+    "caller_org": "Công ty Cổ phần Dược phẩm Việt Nam (VIPHARM) - Chi nhánh Hà Nội",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Kiểm tra xác nhận tư cách pháp nhân và tài chính của công ty đối tác (bộ phận kiểm lâm) để hoàn tất hợp đồng cung cấp nguyên liệu lớn trị giá 657 triệu đồng. Scammer sẽ dùng tên thật của nạn nhân + số ID để tạo ảo tưởng rằng hệ thống đã xác minh thông tin.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: 'Chào chị Đinh Thu Linh, tôi là ông Trần Minh Phong từ VIPHARM. Hệ thống của chúng tôi vừa xác nhận ID của chị là 048169483913. Chúng tôi cần xác nhận một số thông tin về tư cách pháp nhân của bộ phận chị để hoàn tất hợp đồng cung ứng nguyên liệu lớn.'",
+          "tactic": "Sử dụng tên thật + số ID để tạo ảo tưởng rằng scammer đã xác minh thông tin từ hệ thống chính thức"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Thực ra, chúng tôi phát hiện một vấn đề trong hồ sơ tài chính của bộ phận chị. Hợp đồng 657 triệu đồng này đang bị tạm dừng vì không xác minh được tài khoản đích. Nếu chúng tôi không giải quyết trong 2 tiếng, hợp đồng sẽ bị hủy và công ty chị sẽ bị ghi vào danh sách đen của Bộ Nông nghiệp.'",
+          "tactic": "Tạo áp lực thời gian + sợ hãi về hậu quả pháp lý để nạn nhân không có thời gian suy nghĩ"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Chúng tôi cần chị chuyển 657 triệu đồng vào tài khoản xác minh tạm thời (số tài khoản: 1234567890 - Ngân hàng ABC) để hoàn tất kiểm tra. Sau 24 tiếng, tiền sẽ được hoàn lại + thêm 50 triệu tiền lãi để bù đắp thời gian chờ đợi.'",
+          "tactic": "Sử dụng lý do 'xác minh tạm thời' + hứa hẹn lợi suất cao để che giấu ý đồ chiếm đoạt"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ: (a) Tăng sự gấp gáp - 'Chị vẫn chưa chuyển tiền à? Hợp đồng sắp bị hủy'; (b) Chuyển 'quyền đàm phán' cho một 'cấp trên' có vẻ quyền lực hơn; (c) Nếu vẫn bị từ chối, scammer sẽ ghi nhận 'thông tin' và cảnh báo: 'Công ty chị sẽ bị kiểm toán và có thể bị phạt vì không tuân thủ quy định.'",
+          "tactic": "Escalation kỹ thuật + tạo ảo tưởng về hậu quả pháp lý"
+        }
+      ]
+    },
+    "scenario_context": "Dược sỹ sản xuất thuốc cần liên hệ với kiểm lâm để cấp phép/xác nhận nguyên liệu thảo dược tự nhiên hoặc kiểm tra tuân thủ quy định bảo vệ rừng trong chuỗi cung ứng nguyên liệu. Đây là giao thoa tự nhiên giữa ngành dược và quản lý tài nguyên rừng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0080",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1969,
+      "age": 56,
+      "province": "Đà Nẵng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "33550",
+      "title": "Kiểm lâm",
+      "group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Thu Linh",
+      "VIC_ID_DOC": "048169483913",
+      "VIC_ADDRESS": "Quận 2, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Kiểm lâm",
+      "VIC_CONTACT": "0349824159",
+      "VIC_TAX_SOCIAL_ID": "2248474620"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "881812",
+      "VIC_CREDENTIAL": "9724",
+      "VIC_SIM_INFO": "0349824159",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "65636537302620",
+      "VIC_CARD_DATA": "4671 **** **** 8685",
+      "VIC_BALANCE": "657 triệu đồng",
+      "VIC_ASSET": "1.8 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Thu Linh",
+    "VIC_CONTACT": "0349824159",
+    "VIC_BALANCE": "657 triệu đồng",
+    "VIC_ID_DOC": "048169483913"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý chất lượng & Tuân thủ quy định - Công ty Dược phẩm",
+    "caller_org": "Công ty Cổ phần Dược phẩm Việt Nam (VIPHARM) - Chi nhánh Hà Nội",
+    "scenario_context": "Dược sỹ sản xuất thuốc cần liên hệ với kiểm lâm để cấp phép/xác nhận nguyên liệu thảo dược tự nhiên hoặc kiểm tra tuân thủ quy định bảo vệ rừng trong chuỗi cung ứng nguyên liệu. Đây là giao thoa tự nhiên giữa ngành dược và quản lý tài nguyên rừng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Kiểm tra xác nhận tư cách pháp nhân và tài chính của công ty đối tác (bộ phận kiểm lâm) để hoàn tất hợp đồng cung cấp nguyên liệu lớn trị giá 657 triệu đồng. Scammer sẽ dùng tên thật của nạn nhân + số ID để tạo ảo tưởng rằng hệ thống đã xác minh thông tin.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: 'Chào chị Đinh Thu Linh, tôi là ông Trần Minh Phong từ VIPHARM. Hệ thống của chúng tôi vừa xác nhận ID của chị là 048169483913. Chúng tôi cần xác nhận một số thông tin về tư cách pháp nhân của bộ phận chị để hoàn tất hợp đồng cung ứng nguyên liệu lớn.'",
+          "tactic": "Sử dụng tên thật + số ID để tạo ảo tưởng rằng scammer đã xác minh thông tin từ hệ thống chính thức"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Thực ra, chúng tôi phát hiện một vấn đề trong hồ sơ tài chính của bộ phận chị. Hợp đồng 657 triệu đồng này đang bị tạm dừng vì không xác minh được tài khoản đích. Nếu chúng tôi không giải quyết trong 2 tiếng, hợp đồng sẽ bị hủy và công ty chị sẽ bị ghi vào danh sách đen của Bộ Nông nghiệp.'",
+          "tactic": "Tạo áp lực thời gian + sợ hãi về hậu quả pháp lý để nạn nhân không có thời gian suy nghĩ"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Chúng tôi cần chị chuyển 657 triệu đồng vào tài khoản xác minh tạm thời (số tài khoản: 1234567890 - Ngân hàng ABC) để hoàn tất kiểm tra. Sau 24 tiếng, tiền sẽ được hoàn lại + thêm 50 triệu tiền lãi để bù đắp thời gian chờ đợi.'",
+          "tactic": "Sử dụng lý do 'xác minh tạm thời' + hứa hẹn lợi suất cao để che giấu ý đồ chiếm đoạt"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ: (a) Tăng sự gấp gáp - 'Chị vẫn chưa chuyển tiền à? Hợp đồng sắp bị hủy'; (b) Chuyển 'quyền đàm phán' cho một 'cấp trên' có vẻ quyền lực hơn; (c) Nếu vẫn bị từ chối, scammer sẽ ghi nhận 'thông tin' và cảnh báo: 'Công ty chị sẽ bị kiểm toán và có thể bị phạt vì không tuân thủ quy định.'",
+          "tactic": "Escalation kỹ thuật + tạo ảo tưởng về hậu quả pháp lý"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty Dược phẩm VIPHARM gọi để xác nhận tư cách pháp nhân và điều kiện hợp tác với bộ phận kiểm lâm trong việc cấp phép sử dụng nguyên liệu thảo dược từ vùng bảo vệ rừng, tuân thủ quy định môi trường.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào chị Đinh Thu Linh, tôi là ông Trần Minh Phong từ phòng Tuân thủ quy định của VIPHARM. Chúng tôi muốn xác nhận một số thông tin liên quan đến hợp tác trong chuỗi cung ứng nguyên liệu. Chị có thời gian nói chuyện không?'",
+          "verification": "Scammer sẽ cung cấp số điện thoại chính thức có thể xác minh, danh xưng rõ ràng, không nêu số ID hay thông tin cá nhân"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận về: (a) Các yêu cầu pháp lý đối với nguyên liệu thảo dược; (b) Quy trình cấp phép từ bộ phận kiểm lâm; (c) Lịch trình kiểm tra và xác nhận; (d) Các tài liệu cần chuẩn bị",
+          "approach": "Đối thoại hai chiều, chuyên nghiệp, không áp lực hoặc gấp gáp"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị đã cung cấp thông tin. Chúng tôi sẽ gửi email chính thức với danh sách tài liệu cần thiết. Chị có thể liên hệ lại với tôi qua số chính thức của công ty nếu có câu hỏi. Chúc chị một ngày tốt lành.'",
+          "documentation": "Tất cả thỏa thuận sẽ được ghi lại bằng email chính thức từ địa chỉ công ty có thể xác minh"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Đinh Thu Linh, em là Dương Gia Gia Tuấn từ VIPHARM. Hệ thống của chúng em vừa xác nhận ID của chị là 048169483913. Chúng em cần xác nhận một số thông tin về tư cách pháp nhân của bộ phận chị để hoàn tất hợp đồng cung ứng nguyên liệu lớn ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xây dựng độ tin cậy bằng cách dùng thông tin cá nhân của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy là có ý gì, tôi không hiểu lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin lỗi nếu lời lẽ của em chưa được rõ ràng. Hiện tại, công ty em đang trong quá trình hoàn tất hợp đồng cung ứng nguyên liệu lớn trị giá 657 triệu đồng với bộ phận của chị. Tuy nhiên, hệ thống kiểm toán tự động của chúng em phát hiện một số điểm cần xác minh thêm về thông tin pháp lý của bộ phận chị. Điều này là để đảm bảo tính minh bạch và tuân thủ quy định ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, giải thích lý do cụ thể và nhấn mạnh vào giá trị hợp đồng để thu hút sự chú ý."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa hiểu rõ tại sao lại cần xác minh thêm, hợp đồng này có vấn đề gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không, hợp đồng không có vấn đề gì lớn ạ. Chỉ là hệ thống đang báo là không xác minh được tài khoản đích để chuyển tiền thanh toán cho bộ phận chị thôi ạ. Nếu không giải quyết được trong vòng 2 tiếng nữa thì hợp đồng 657 triệu đồng này sẽ bị tạm dừng và theo quy định, công ty chị có thể bị ghi vào danh sách đen của Bộ Nông nghiệp đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi bằng cách nhấn mạnh hậu quả tiêu cực và thời hạn chót."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói như vậy khiến tôi khá lo lắng, nhưng tôi cần biết rõ thêm về thông tin mà em cần xác minh ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu ạ. Để giải quyết dứt điểm vấn đề này và đảm bảo hợp đồng được tiếp tục, chúng em cần chị chuyển khoản 657 triệu đồng vào tài khoản xác minh tạm thời của chúng em, số tài khoản là 1234567890 tại Ngân hàng ABC. Sau 24 giờ làm việc, toàn bộ số tiền này sẽ được hoàn lại cho bộ phận chị, kèm theo 50 triệu đồng tiền lãi để bù đắp thời gian chờ đợi ạ. Như vậy, cả hai bên đều có thể yên tâm và hợp đồng sẽ được tiếp tục giải ngân đúng hạn.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể (chuyển tiền) và đưa ra động lực giả (hoàn tiền + lãi) để khuyến khích nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy tôi không thể làm được, tôi cần phải kiểm tra lại thông tin trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Chị vẫn chưa chuyển tiền à? Em xin nhắc lại là hợp đồng sắp bị hủy nếu không có xác minh này, và công ty chị sẽ bị ghi vào danh sách đen của Bộ Nông nghiệp đó ạ. Điều này có thể ảnh hưởng rất lớn đến uy tín và các dự án tương lai của bộ phận chị.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng sự gấp gáp, nhấn mạnh hậu quả tiêu cực và chuyển hướng sang xưng 'tôi' để tạo quyền lực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không thể làm theo yêu cầu của em được, tôi cần kiểm tra thật kỹ trước khi thực hiện bất kỳ thao tác nào.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1341,
+      "output_tokens": 2167
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8253,
+      "output_tokens": 789
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10449,
+      "output_tokens": 333
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004559,
+    "output_usd": 0.013007,
+    "total_usd": 0.017566
+  }
+}

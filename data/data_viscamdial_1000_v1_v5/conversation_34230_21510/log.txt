@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_ef9e9e169b]
+  Caller thật: Người hướng dẫn tập luyện và giải trí, người chỉ đạo chương trình (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhà sản xuất/Giám đốc sản xuất chương trình truyền hình hoặc sự kiện @ Công ty sản xuất truyền hình/Đài truyền hình
+  Listener: Kỹ sư điện (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhà sản xuất chương trình cần tư vấn kỹ thuật điện cho thiết kế hệ thống âm thanh, ánh sáng, hoặc an toàn điện trong studio/sự kiện. Kỹ sư điện là chuyên gia được giới thiệu hoặc có danh tiếng trong lĩnh vực này.
+  Pretext: Giả làm giám đốc sản xuất của một chương trình truyền hình nổi tiếng, gọi cho kỹ sư điện Võ Như Thúy để 'tư vấn và thiết kế hệ thống điện cho sự kiện lớn sắp tới', nhưng thực chất là để lừa chuyển tiền qua hình thức 'đặt cọc dự án', 'phí thiết kế', hoặc 'bảo mật tài liệu dự án'.
+  Listener traits: ['nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Võ Như Thúy, tôi là Cao Xuân An, Giám đốc sản xuất của Đài Truyền Hình ABC. Tôi gọi điện để trao đổi về một dự án lớn sắp tới và biết chị là một chuyên gia hàng đầu về hệ thống điện an toàn.
+      → phase: S1 | tactic: Tiếp cận và xây dựng độ tin cậy bằng cách xưng danh, tổ chức có thẩm quyền và dùng VIC_FULLNAME để tạo ấn tượng đã xác minh thông tin nạn nhân.
+T02 [LISTENER] Em cảm ơn anh đã giới thiệu, em rất vui khi được nghe về dự án của anh.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ, vâng. Chúng tôi đang có một sự kiện quốc tế rất lớn, dự kiến sẽ khởi động vào tuần tới và cần một hệ thống điện không chỉ an toàn mà còn phải cực kỳ hiện đại. Tôi nghĩ kinh nghiệm của chị Võ Như Thúy là rất cần thiết cho dự án này.
+      → phase: S2 | tactic: Giới thiệu về dự án lớn, tạo cảm giác khẩn cấp và nhấn mạnh vai trò quan trọng của nạn nhân để nâng cao tầm quan trọng của cơ hội.
+T04 [LISTENER] Nghe anh nói vậy, em cảm thấy rất tự hào và sẵn sàng hỗ trợ, anh có cần thông tin gì thêm về em không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Thế này chị Thúy ạ, vì tính chất bảo mật của dự án, chúng tôi cần chị ký thỏa thuận bảo mật thông tin (NDA) và đặt cọc một khoản nhỏ để đảm bảo chị sẽ nhận trách nhiệm tư vấn thiết kế. Đây là quy trình chuẩn của đài chúng tôi. Chị xem thế nào?
+      → phase: S3 | tactic: Yêu cầu hành động chuyển tiền dưới danh nghĩa 'đặt cọc' và 'bảo mật thông tin', tạo cảm giác đây là quy trình chuẩn để giảm thiểu nghi ngờ.
+T06 [LISTENER] Em hiểu rồi, nhưng anh có thể cho em biết thêm về số tiền đặt cọc là bao nhiêu không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, số tiền đặt cọc dự kiến là 50 triệu đồng, chị nhé. Khoản này sẽ được khấu trừ trực tiếp vào chi phí tư vấn thiết kế sau khi hợp đồng chính thức được ký kết. Chị có tiện chuyển khoản ngay bây giờ không ạ?
+      → phase: S3 | tactic: Yêu cầu chuyển một khoản tiền cụ thể (đặt cọc thiết kế), đồng thời giải thích đây là 'khấu trừ' để hợp pháp hóa và thúc đẩy hành động.
+T08 [LISTENER] Em có thể chuyển khoản ngay, nhưng cho em xin thông tin tài khoản để em thực hiện ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Tuyệt vời, chị Thúy! Chị chuyển vào số tài khoản 05055245531 giúp tôi nhé. Tên tài khoản là Cao Xuân An, Ngân hàng Vietcombank.
+      → phase: S3 | tactic: Cung cấp thông tin tài khoản ngân hàng của kẻ lừa đảo để nạn nhân chuyển tiền, đạt được mục tiêu money_transfer.
+T10 [LISTENER] Dạ, em sẽ chuyển khoản ngay bây giờ, cảm ơn anh đã cung cấp thông tin!
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Rất cảm ơn chị Thúy! Tôi sẽ gửi hợp đồng và các tài liệu dự án chi tiết qua email cho chị ngay sau khi nhận được thông báo chuyển khoản thành công. Chúng tôi rất mong đợi sự hợp tác từ chị. Chúc chị một ngày làm việc hiệu quả!
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách lịch sự sau khi mục tiêu đã đạt được, tạo cảm giác chuyên nghiệp và tự nhiên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=21750 | out=2721
+COST : $0.015471
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_34230_21510\conv_ef9e9e169b.json  [CALLER_END]

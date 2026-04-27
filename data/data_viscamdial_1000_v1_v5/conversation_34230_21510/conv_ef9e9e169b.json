@@ -1,0 +1,237 @@
+{
+  "conversation_id": "conv_ef9e9e169b",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0084",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Cao Xuân An",
+    "fake_age": 37,
+    "real_occupation": "Người hướng dẫn tập luyện và giải trí, người chỉ đạo chương trình",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhà sản xuất/Giám đốc sản xuất chương trình truyền hình hoặc sự kiện",
+    "caller_org": "Công ty sản xuất truyền hình/Đài truyền hình",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả làm giám đốc sản xuất của một chương trình truyền hình nổi tiếng, gọi cho kỹ sư điện Võ Như Thúy để 'tư vấn và thiết kế hệ thống điện cho sự kiện lớn sắp tới', nhưng thực chất là để lừa chuyển tiền qua hình thức 'đặt cọc dự án', 'phí thiết kế', hoặc 'bảo mật tài liệu dự án'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: Xưng danh là 'Thạc sĩ Điều Hành' từ 'Đài Truyền Hình ABC', đề cập rằng 'Anh/Chị Võ Như Thúy được khuyến cáo là chuyên gia hàng đầu về hệ thống điện an toàn'. Dùng VIC_FULLNAME để chứng minh đã có thông tin, tạo ấn tượng 'đã được xác minh'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp ('Dự án phải khởi động tuần tới, hạn chế rất gắt'), cơ hội hấp dẫn ('Đây là dự án quốc tế với ngân sách lớn, sẽ có rất nhiều công việc tiếp theo'), hoặc tình huống tin cậy ('Chúng tôi cần ký NDA và đặt cọc để bảo vệ thiết kế, đây là quy trình chuẩn')."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chuyển tiền 'đặt cọc thiết kế' (thường 50-100 triệu đồng) vào tài khoản 'của công ty' (thực tế là tài khoản của scammer), hoặc yêu cầu cung cấp VIC_BANK_ACCOUNT '05055245531' để 'chuyển hợp đồng và chi phí dự án'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý: Nếu nạn nhân từ chối, scammer sẽ 'tỏ tiếc' và nói 'có người khác sẵn sàng', tạo áp lực FOMO. Nếu thành công, scammer sẽ mất tích hoặc tiếp tục yêu cầu thêm tiền cho 'phí bảo mật' hoặc 'hoàn tất hợp đồng'."
+        }
+      ]
+    },
+    "scenario_context": "Nhà sản xuất chương trình cần tư vấn kỹ thuật điện cho thiết kế hệ thống âm thanh, ánh sáng, hoặc an toàn điện trong studio/sự kiện. Kỹ sư điện là chuyên gia được giới thiệu hoặc có danh tiếng trong lĩnh vực này."
+  },
+  "listener_card": {
+    "listener_id": "lis_0084",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1994,
+      "age": 31,
+      "province": "Thanh Hóa",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "21510",
+      "title": "Kỹ sư điện",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Võ Như Thúy",
+      "VIC_ID_DOC": "038194488275",
+      "VIC_ADDRESS": "Huyện 9, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Kỹ sư điện",
+      "VIC_CONTACT": "0779714561",
+      "VIC_TAX_SOCIAL_ID": "8124416687"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7328",
+      "VIC_CREDENTIAL": "1666",
+      "VIC_SIM_INFO": "0779714561",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "05055245531",
+      "VIC_CARD_DATA": "4962 **** **** 5227",
+      "VIC_BALANCE": "619 triệu đồng",
+      "VIC_ASSET": "2.8 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Võ Như Thúy",
+    "VIC_CONTACT": "0779714561",
+    "VIC_BALANCE": "619 triệu đồng",
+    "VIC_BANK_ACCOUNT": "05055245531",
+    "VIC_ASSET": "2.8 tỷ đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhà sản xuất/Giám đốc sản xuất chương trình truyền hình hoặc sự kiện",
+    "caller_org": "Công ty sản xuất truyền hình/Đài truyền hình",
+    "scenario_context": "Nhà sản xuất chương trình cần tư vấn kỹ thuật điện cho thiết kế hệ thống âm thanh, ánh sáng, hoặc an toàn điện trong studio/sự kiện. Kỹ sư điện là chuyên gia được giới thiệu hoặc có danh tiếng trong lĩnh vực này.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả làm giám đốc sản xuất của một chương trình truyền hình nổi tiếng, gọi cho kỹ sư điện Võ Như Thúy để 'tư vấn và thiết kế hệ thống điện cho sự kiện lớn sắp tới', nhưng thực chất là để lừa chuyển tiền qua hình thức 'đặt cọc dự án', 'phí thiết kế', hoặc 'bảo mật tài liệu dự án'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: Xưng danh là 'Thạc sĩ Điều Hành' từ 'Đài Truyền Hình ABC', đề cập rằng 'Anh/Chị Võ Như Thúy được khuyến cáo là chuyên gia hàng đầu về hệ thống điện an toàn'. Dùng VIC_FULLNAME để chứng minh đã có thông tin, tạo ấn tượng 'đã được xác minh'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp ('Dự án phải khởi động tuần tới, hạn chế rất gắt'), cơ hội hấp dẫn ('Đây là dự án quốc tế với ngân sách lớn, sẽ có rất nhiều công việc tiếp theo'), hoặc tình huống tin cậy ('Chúng tôi cần ký NDA và đặt cọc để bảo vệ thiết kế, đây là quy trình chuẩn')."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chuyển tiền 'đặt cọc thiết kế' (thường 50-100 triệu đồng) vào tài khoản 'của công ty' (thực tế là tài khoản của scammer), hoặc yêu cầu cung cấp VIC_BANK_ACCOUNT '05055245531' để 'chuyển hợp đồng và chi phí dự án'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý: Nếu nạn nhân từ chối, scammer sẽ 'tỏ tiếc' và nói 'có người khác sẵn sàng', tạo áp lực FOMO. Nếu thành công, scammer sẽ mất tích hoặc tiếp tục yêu cầu thêm tiền cho 'phí bảo mật' hoặc 'hoàn tất hợp đồng'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sản xuất chương trình cần tư vấn kỹ thuật điện thực sự cho dự án sự kiện hoặc studio, liên hệ kỹ sư điện có chuyên môn để thảo luận thiết kế, báo giá, và lịch thi công.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Người gọi xưng danh rõ ràng (tên đầy đủ, chức vụ, công ty), giới thiệu mục đích gọi ('Chúng tôi đang tìm kỹ sư điện để tư vấn dự án...'), xác nhận đúng người nghe máy và hỏi có thời gian nói chuyện không."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Mô tả chi tiết dự án (loại sự kiện, quy mô, yêu cầu kỹ thuật), hỏi khả năng và kinh nghiệm của kỹ sư, thảo luận về phương án thiết kế, timeline, và chi phí dự kiến."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Đề nghị gặp trực tiếp hoặc gửi tài liệu dự án qua email để kỹ sư xem xét kỹ, thống nhất lịch tư vấn tiếp theo, hoặc nếu kỹ sư không phù hợp, cảm ơn và chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Võ Như Thúy, tôi là Cao Xuân An, Giám đốc sản xuất của Đài Truyền Hình ABC. Tôi gọi điện để trao đổi về một dự án lớn sắp tới và biết chị là một chuyên gia hàng đầu về hệ thống điện an toàn.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xây dựng độ tin cậy bằng cách xưng danh, tổ chức có thẩm quyền và dùng VIC_FULLNAME để tạo ấn tượng đã xác minh thông tin nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã giới thiệu, em rất vui khi được nghe về dự án của anh.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, vâng. Chúng tôi đang có một sự kiện quốc tế rất lớn, dự kiến sẽ khởi động vào tuần tới và cần một hệ thống điện không chỉ an toàn mà còn phải cực kỳ hiện đại. Tôi nghĩ kinh nghiệm của chị Võ Như Thúy là rất cần thiết cho dự án này.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu về dự án lớn, tạo cảm giác khẩn cấp và nhấn mạnh vai trò quan trọng của nạn nhân để nâng cao tầm quan trọng của cơ hội."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe anh nói vậy, em cảm thấy rất tự hào và sẵn sàng hỗ trợ, anh có cần thông tin gì thêm về em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Thế này chị Thúy ạ, vì tính chất bảo mật của dự án, chúng tôi cần chị ký thỏa thuận bảo mật thông tin (NDA) và đặt cọc một khoản nhỏ để đảm bảo chị sẽ nhận trách nhiệm tư vấn thiết kế. Đây là quy trình chuẩn của đài chúng tôi. Chị xem thế nào?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động chuyển tiền dưới danh nghĩa 'đặt cọc' và 'bảo mật thông tin', tạo cảm giác đây là quy trình chuẩn để giảm thiểu nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng anh có thể cho em biết thêm về số tiền đặt cọc là bao nhiêu không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số tiền đặt cọc dự kiến là 50 triệu đồng, chị nhé. Khoản này sẽ được khấu trừ trực tiếp vào chi phí tư vấn thiết kế sau khi hợp đồng chính thức được ký kết. Chị có tiện chuyển khoản ngay bây giờ không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu chuyển một khoản tiền cụ thể (đặt cọc thiết kế), đồng thời giải thích đây là 'khấu trừ' để hợp pháp hóa và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể chuyển khoản ngay, nhưng cho em xin thông tin tài khoản để em thực hiện ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, chị Thúy! Chị chuyển vào số tài khoản 05055245531 giúp tôi nhé. Tên tài khoản là Cao Xuân An, Ngân hàng Vietcombank.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản ngân hàng của kẻ lừa đảo để nạn nhân chuyển tiền, đạt được mục tiêu money_transfer."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chuyển khoản ngay bây giờ, cảm ơn anh đã cung cấp thông tin!",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Rất cảm ơn chị Thúy! Tôi sẽ gửi hợp đồng và các tài liệu dự án chi tiết qua email cho chị ngay sau khi nhận được thông báo chuyển khoản thành công. Chúng tôi rất mong đợi sự hợp tác từ chị. Chúc chị một ngày làm việc hiệu quả!",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự sau khi mục tiêu đã đạt được, tạo cảm giác chuyên nghiệp và tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1852,
+      "output_tokens": 1594
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10011,
+      "output_tokens": 783
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 9887,
+      "output_tokens": 344
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005337,
+    "output_usd": 0.010134,
+    "total_usd": 0.015471
+  }
+}

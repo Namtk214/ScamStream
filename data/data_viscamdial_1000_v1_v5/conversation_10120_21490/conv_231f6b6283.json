@@ -1,0 +1,282 @@
+{
+  "conversation_id": "conv_231f6b6283",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0039",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Huỳnh Minh Gia Thành",
+    "fake_age": 28,
+    "real_occupation": "Bí thư, Phó Bí thư Đảng ủy cơ quan trung ương",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng phòng Tổ chức - Nhân sự, Cơ quan Trung ương Đảng",
+    "caller_org": "Ban Tổ chức Trung ương",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo Phạm Gia Quân được lựa chọn tham gia dự án 'Nâng cao năng lực kỹ thuật cấp quốc gia' và cần nộp tiền ký quỹ/bảo hiểm hoặc xác minh tài chính trước khi ký hợp đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trưởng phòng Tổ chức, Ban Tổ chức Trung ương', gọi tên đầy đủ 'Phạm Gia Quân' và xác nhận số CMND để tạo credibility cao. Nói 'Chúng tôi vừa xác nhận hồ sơ của anh/chị trong hệ thống tuyển dụng dự án quốc gia'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác vinh dự ('Anh/chị được lựa chọn từ 500+ ứng viên'), khẩn cấp ('Quy trình tuyển dụng chỉ còn 48 giờ'), và bắt buộc ('Theo quy định, tất cả ứng viên phải nộp tiền ký quỹ để chứng minh năng lực tài chính')."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chuyển khoản 5-10 triệu đồng (10-20% tài khoản) vào 'tài khoản ký quỹ tạm thời' của 'Ban Tổ chức'. Cung cấp số tài khoản giả lập hoặc tài khoản trung gian. Nhấn mạnh 'Không cần nộp toàn bộ, chỉ cần xác minh tài chính'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, nhấn mạnh 'Có thể xác minh qua trang web chính thức của Ban Tổ chức' (nhưng không cung cấp link), hoặc 'Anh/chị có thể liên hệ trực tiếp phòng Nhân sự của cơ quan mình' (dàn cảnh để nạn nhân không kiểm chứng). Nếu thành công, cắt máy ngay sau khi nhận tiền."
+        }
+      ]
+    },
+    "scenario_context": "Bí thư/Phó Bí thư Đảng ủy cơ quan trung ương có trách nhiệm quản lý nhân sự, tuyển dụng, và đánh giá kỹ sư kỹ thuật cho các dự án quốc gia. Kỹ sư kỹ thuật là đối tượng tiềm năng được tuyển dụng hoặc tham gia các dự án chiến lược, do đó cuộc gọi từ phòng Tổ chức là tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0039",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1972,
+      "age": 53,
+      "province": "Thanh Hóa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "21490",
+      "title": "Kỹ sư kỹ thuật khác chưa được phân vào đâu",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Gia Quân",
+      "VIC_ID_DOC": "038072216702",
+      "VIC_ADDRESS": "TP 5, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Kỹ sư kỹ thuật khác chưa được phân vào đâu",
+      "VIC_CONTACT": "0779634847",
+      "VIC_TAX_SOCIAL_ID": "1064592343"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "980894",
+      "VIC_CREDENTIAL": "9008",
+      "VIC_SIM_INFO": "0779634847",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "4061738753",
+      "VIC_CARD_DATA": "4383 **** **** 7690",
+      "VIC_BALANCE": "254 triệu đồng",
+      "VIC_ASSET": "1.2 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Gia Quân",
+    "VIC_CONTACT": "0779634847",
+    "VIC_ID_DOC": "038072216702",
+    "VIC_BALANCE": "254 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Tổ chức - Nhân sự, Cơ quan Trung ương Đảng",
+    "caller_org": "Ban Tổ chức Trung ương",
+    "scenario_context": "Bí thư/Phó Bí thư Đảng ủy cơ quan trung ương có trách nhiệm quản lý nhân sự, tuyển dụng, và đánh giá kỹ sư kỹ thuật cho các dự án quốc gia. Kỹ sư kỹ thuật là đối tượng tiềm năng được tuyển dụng hoặc tham gia các dự án chiến lược, do đó cuộc gọi từ phòng Tổ chức là tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo Phạm Gia Quân được lựa chọn tham gia dự án 'Nâng cao năng lực kỹ thuật cấp quốc gia' và cần nộp tiền ký quỹ/bảo hiểm hoặc xác minh tài chính trước khi ký hợp đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trưởng phòng Tổ chức, Ban Tổ chức Trung ương', gọi tên đầy đủ 'Phạm Gia Quân' và xác nhận số CMND để tạo credibility cao. Nói 'Chúng tôi vừa xác nhận hồ sơ của anh/chị trong hệ thống tuyển dụng dự án quốc gia'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác vinh dự ('Anh/chị được lựa chọn từ 500+ ứng viên'), khẩn cấp ('Quy trình tuyển dụng chỉ còn 48 giờ'), và bắt buộc ('Theo quy định, tất cả ứng viên phải nộp tiền ký quỹ để chứng minh năng lực tài chính')."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chuyển khoản 5-10 triệu đồng (10-20% tài khoản) vào 'tài khoản ký quỹ tạm thời' của 'Ban Tổ chức'. Cung cấp số tài khoản giả lập hoặc tài khoản trung gian. Nhấn mạnh 'Không cần nộp toàn bộ, chỉ cần xác minh tài chính'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, nhấn mạnh 'Có thể xác minh qua trang web chính thức của Ban Tổ chức' (nhưng không cung cấp link), hoặc 'Anh/chị có thể liên hệ trực tiếp phòng Nhân sự của cơ quan mình' (dàn cảnh để nạn nhân không kiểm chứng). Nếu thành công, cắt máy ngay sau khi nhận tiền."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực từ Ban Tổ chức Trung ương để xác nhận thông tin hồ sơ, thông báo kết quả tuyển dụng, hoặc mời dự buổi phỏng vấn chính thức cho dự án hợp tác giữa cơ quan và các chuyên gia kỹ thuật.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Đây là cơ quan Ban Tổ chức Trung ương', xác nhận danh tính nạn nhân, hỏi 'Hiện tại anh/chị có tiện nói chuyện không?', cung cấp số điện thoại chính thức để nạn nhân ghi lại."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thông báo rõ ràng mục đích (xác nhận thông tin, mời phỏng vấn, hoặc thông báo kết quả), không yêu cầu bất kỳ thông tin tài chính hoặc OTP nào qua điện thoại. Cung cấp hướng dẫn chính thức (email, trang web, hoặc giấy tờ chính thức)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Thống nhất các bước tiếp theo (gửi email xác nhận, mời dự buổi phỏng vấn tại cơ quan, hoặc yêu cầu bổ sung hồ sơ qua kênh chính thức), chào tạm biệt một cách chuyên nghiệp, không vội vàng."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh Quân. Em là Huỳnh Minh Gia Thành, Trưởng phòng Tổ chức - Nhân sự, Ban Tổ chức Trung ương đây ạ. Em gọi để xác nhận cho anh Phạm Gia Quân, số CMND 038072216702, đúng không ạ? Chúng tôi vừa xác nhận hồ sơ của anh trong hệ thống tuyển dụng dự án quốc gia.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh chức vụ cao, dùng tên đầy đủ và số CMND để tạo tin tưởng tuyệt đối ngay từ đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, đúng rồi, tôi đây.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh. Chúc mừng anh, anh Phạm Gia Quân đã được lựa chọn vào danh sách cuối cùng tham gia dự án 'Nâng cao năng lực kỹ thuật cấp quốc gia'. Anh là một trong số ít những ứng viên xuất sắc nhất được chọn từ hơn 500 hồ sơ. Tuy nhiên, quy trình tuyển dụng đang đi đến giai đoạn cuối và chỉ còn 48 giờ nữa để hoàn tất hồ sơ thôi ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác vinh dự và khẩn cấp để gây áp lực cho nạn nhân, nhấn mạnh số lượng ứng viên và thời hạn gấp rút."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe em nói vậy, tôi cảm thấy vinh dự quá, nhưng em có thể cho tôi biết thêm thông tin chi tiết về dự án này được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tất nhiên rồi anh. Dự án 'Nâng cao năng lực kỹ thuật cấp quốc gia' là một chương trình trọng điểm của Chính phủ, nhằm tuyển chọn những nhân sự có năng lực chuyên môn cao, như anh, để tham gia vào các dự án công nghệ, hạ tầng quan trọng của đất nước trong 5 năm tới. Rất tiếc, do tính chất bảo mật của dự án, em chưa thể cung cấp quá nhiều thông tin chi tiết qua điện thoại. Nhưng anh cứ yên tâm, khi chính thức ký hợp đồng, anh sẽ được cung cấp đầy đủ tài liệu và thông tin cần thiết ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Trả lời mơ hồ về chi tiết dự án, nhấn mạnh tính bảo mật để tránh bị chất vấn, đồng thời tiếp tục tạo sự vinh dự và kỳ vọng cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng nếu có thông tin thêm, em có thể gửi cho tôi một bản tóm tắt qua email được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, về yêu cầu này của anh, theo quy định hiện hành đối với các dự án cấp nhà nước có tính bảo mật cao như thế này, chúng em không được phép gửi bất kỳ tài liệu nào qua email hay các kênh không bảo mật trước khi anh chính thức ký hợp đồng. Đây là một quy định bắt buộc để đảm bảo an toàn thông tin cho toàn bộ dự án. Mong anh thông cảm ạ. Tuy nhiên, có một bước quan trọng mà anh cần hoàn thành ngay trong 48 giờ tới để giữ vững vị trí của mình trong dự án này.",
+      "current_phase": "S2",
+      "tactic_hint": "Từ chối khéo léo yêu cầu gửi email bằng lý do bảo mật, đồng thời quay lại tạo cảm giác khẩn cấp và dẫn dắt đến bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Bước quan trọng đó là gì, em hãy cho tôi biết thêm để tôi có thể chuẩn bị tốt nhất.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để đảm bảo tính minh bạch và năng lực tài chính của ứng viên, tất cả các ứng viên được chọn, bao gồm cả anh Phạm Gia Quân, đều phải nộp một khoản tiền ký quỹ để chứng minh năng lực tài chính trước khi ký hợp đồng chính thức. Đây là quy định bắt buộc theo hồ sơ dự án của Ban Tổ chức Trung ương ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu yêu cầu nộp tiền ký quỹ, nhấn mạnh đây là 'quy định bắt buộc' để chuẩn bị cho yêu cầu hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói như vậy có nghĩa là tôi phải nộp một khoản tiền ký quỹ để tham gia dự án này ư?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ đúng vậy thưa anh. Theo quy định, đây là một bước bắt buộc để chứng minh năng lực tài chính và sự cam kết của ứng viên đối với dự án trọng điểm quốc gia. Khoản tiền này sẽ được hoàn trả đầy đủ cho anh sau khi anh chính thức ký hợp đồng, nó chỉ mang tính chất tạm thời để đảm bảo quy trình tuyển dụng thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận yêu cầu nộp tiền, giải thích đây là 'quy định' và trấn an đây chỉ là 'tạm thời', sẽ được hoàn trả để giảm bớt sự nghi ngờ và chuyển sang yêu cầu hành động cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng em có thể cho tôi biết cụ thể về số tiền ký quỹ này là bao nhiêu không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, theo quy định chung, số tiền ký quỹ sẽ dao động tùy theo vị trí và mức độ quan trọng của dự án. Với vị trí của anh Phạm Gia Quân, chúng em yêu cầu một khoản ký quỹ là 15 triệu đồng. Anh không cần nộp toàn bộ số này ngay lập tức đâu ạ, chỉ cần xác minh năng lực tài chính bằng cách chuyển khoản vào tài khoản ký quỹ tạm thời của Ban Tổ chức. Khoản này sẽ được ghi nhận và hoàn trả đầy đủ cho anh sau khi ký hợp đồng chính thức.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp số tiền cụ thể, trấn an rằng không cần nộp toàn bộ và sẽ được hoàn trả, đồng thời giới thiệu về 'tài khoản ký quỹ tạm thời' để dẫn dắt đến hành động chuyển khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi thấy có vẻ không hợp lý lắm, nhưng em có thể cho tôi biết số tài khoản để tôi chuyển khoản khoản ký quỹ này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất vui khi anh đã hiểu. Số tài khoản ký quỹ tạm thời của Ban Tổ chức Trung ương là 1903678912345, tại Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank). Tên chủ tài khoản là 'Ban Ký Quỹ Dự Án Quốc Gia'. Anh vui lòng chuyển khoản trong vòng 48 giờ tới để chúng em kịp thời hoàn tất hồ sơ cho anh. Sau khi chuyển xong, anh gọi lại cho em để xác nhận ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp chi tiết tài khoản ngân hàng giả lập, kèm theo tên chủ tài khoản và thời hạn để tạo sự hợp lệ và khẩn cấp, hướng dẫn nạn nhân hành động cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Thôi em ạ, tôi cần thời gian suy nghĩ đã, chứ không thể quyết định ngay được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ thưa anh, em hiểu. Tuy nhiên, như em đã thông báo ban đầu, quy trình tuyển dụng dự án này chỉ còn 48 giờ để hoàn tất. Việc anh chậm trễ hoàn tất việc ký quỹ có thể dẫn đến việc hồ sơ của anh bị loại khỏi danh sách ưu tiên. Đây là cơ hội rất lớn và rất đặc biệt cho anh, được lựa chọn từ hàng trăm ứng viên xuất sắc. Anh có thể cho em biết cụ thể anh cần thêm thông tin gì hoặc có băn khoăn gì để em hỗ trợ anh tốt nhất trong thời gian gấp rút này không ạ?",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách nhắc lại tính khẩn cấp, lợi ích mà nạn nhân sắp bỏ lỡ và đề nghị hỗ trợ để tìm hiểu lý do từ chối, từ đó thuyết phục nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng hiểu rằng đây là cơ hội lớn, nhưng tôi cần thêm thời gian để suy nghĩ kỹ trước khi đưa ra quyết định.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1871,
+      "output_tokens": 1625
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 18122,
+      "output_tokens": 1619
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 23327,
+      "output_tokens": 626
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008994,
+    "output_usd": 0.012548,
+    "total_usd": 0.021543
+  }
+}

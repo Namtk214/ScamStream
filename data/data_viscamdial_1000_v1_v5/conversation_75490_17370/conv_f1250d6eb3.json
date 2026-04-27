@@ -1,0 +1,227 @@
+{
+  "conversation_id": "conv_f1250d6eb3",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0031",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Vũ Xuân Minh",
+    "fake_age": 41,
+    "real_occupation": "Thợ thủ công và các thợ khác chưa được phân vào đâu",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Kỹ sư/Chuyên gia tư vấn cải tiến quy trình sản xuất",
+    "caller_org": "Công ty tư vấn tối ưu hóa sản xuất độc lập",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Một chuyên gia tư vấn thực sự gọi để thảo luận về việc áp dụng quy trình kiểm soát chất lượng mới hoặc công nghệ sản xuất vào dây chuyền R&D của công ty.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào chị Khánh Hương, tôi là Minh từ Công ty Tư vấn Quy trình Sản xuất. Tôi được giới thiệu bởi phòng Kỹ thuật của các công ty trong ngành. Chị có 15 phút để thảo luận về một giải pháp tối ưu hóa chi phí sản xuất không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về các thách thách hiện tại trong quy trình R&D, đề xuất cải tiến cụ thể, lịch trình thử nghiệm, hoặc mời chị tham gia cuộc họp demo sản phẩm mới."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Thống nhất lịch họp tiếp theo, gửi tài liệu qua email công ty, hoặc sắp xếp site visit. Cảm ơn chị, chào tạm biệt."
+        }
+      ]
+    },
+    "scenario_context": "Các công ty R&D thường hợp tác với các nhà cung cấp, thợ thủ công, và chuyên gia tư vấn để phát triển nguyên mẫu, kiểm thử công nghệ mới, hoặc tối ưu hóa quy trình. Cuộc gọi từ một chuyên gia tư vấn sản xuất đến trưởng phòng R&D là hoàn toàn tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0031",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1998,
+      "age": 27,
+      "province": "Hải Phòng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "17370",
+      "title": "Nghiên cứu và phát triển",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Diễm Khánh Hương",
+      "VIC_ID_DOC": "031198071275",
+      "VIC_ADDRESS": "Huyện 3, Hải Phòng",
+      "VIC_EMPLOYMENT": "Nghiên cứu và phát triển",
+      "VIC_CONTACT": "0884855128",
+      "VIC_TAX_SOCIAL_ID": "9434926443"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "2132",
+      "VIC_CREDENTIAL": "7307",
+      "VIC_SIM_INFO": "0884855128",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0332447941",
+      "VIC_CARD_DATA": "4695 **** **** 8722",
+      "VIC_BALANCE": "231 triệu đồng",
+      "VIC_ASSET": "381 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Diễm Khánh Hương",
+    "VIC_CONTACT": "0884855128",
+    "VIC_CARD_DATA": "4695 **** **** 8722",
+    "VIC_TAX_SOCIAL_ID": "9434926443",
+    "VIC_BALANCE": "231 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư/Chuyên gia tư vấn cải tiến quy trình sản xuất",
+    "caller_org": "Công ty tư vấn tối ưu hóa sản xuất độc lập",
+    "scenario_context": "Các công ty R&D thường hợp tác với các nhà cung cấp, thợ thủ công, và chuyên gia tư vấn để phát triển nguyên mẫu, kiểm thử công nghệ mới, hoặc tối ưu hóa quy trình. Cuộc gọi từ một chuyên gia tư vấn sản xuất đến trưởng phòng R&D là hoàn toàn tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giả làm chuyên gia tư vấn, nói rằng công ty đang triển khai dự án 'Nâng cấp hệ thống quản lý tài chính cho các công ty R&D' và cần xác thực thông tin cá nhân của các trưởng phòng để cập nhật dữ liệu trong hệ thống mới. Dùng VIC_FULLNAME và VIC_TAX_SOCIAL_ID để tạo ấn tượng đã có sẵn thông tin, từ đó yêu cầu xác thực qua OTP.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là 'Anh Minh, chuyên gia tư vấn từ Công ty Tối ưu Hóa Quy trình Việt Nam'. Nói rằng 'Chúng tôi đang hỗ trợ Cục Quản lý Tài chính Doanh nghiệp cập nhật hệ thống an toàn ngân hàng cho các lãnh đạo R&D. Tôi đang gọi để xác nhận thông tin của chị Nguyễn Diễm Khánh Hương, mã số thuế 9434926443'. Dùng chính tên và mã số để lập tức tạo tin cậy."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: Nói 'Hệ thống của chị hiện chưa được cập nhật, có rủi ro bị khóa tài khoản trong 24 giờ tới nếu không xác thực. Đây là quy trình bắt buộc từ Ngân hàng Nhà nước'. Tạo áp lực thời gian + sợ hãi mất tiền."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chúng tôi sẽ gửi mã OTP đến điện thoại của chị (0884855128). Chị vui lòng đọc mã đó cho tôi để hoàn tất xác thực. Đây là bước cuối cùng'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi lấy OTP: Nếu nạn nhân cung cấp OTP, scammer sử dụng để truy cập tài khoản ngân hàng, thực hiện chuyển tiền hoặc rút tiền từ số dư 231 triệu đồng. Nếu nạn nhân từ chối, nói 'Vậy chị sẽ liên hệ trực tiếp với Ngân hàng để xác thực thủ công' rồi cúp máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Một chuyên gia tư vấn thực sự gọi để thảo luận về việc áp dụng quy trình kiểm soát chất lượng mới hoặc công nghệ sản xuất vào dây chuyền R&D của công ty.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào chị Khánh Hương, tôi là Minh từ Công ty Tư vấn Quy trình Sản xuất. Tôi được giới thiệu bởi phòng Kỹ thuật của các công ty trong ngành. Chị có 15 phút để thảo luận về một giải pháp tối ưu hóa chi phí sản xuất không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về các thách thách hiện tại trong quy trình R&D, đề xuất cải tiến cụ thể, lịch trình thử nghiệm, hoặc mời chị tham gia cuộc họp demo sản phẩm mới."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Thống nhất lịch họp tiếp theo, gửi tài liệu qua email công ty, hoặc sắp xếp site visit. Cảm ơn chị, chào tạm biệt."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào chị Khánh Hương, tôi là Minh từ Công ty Tư vấn Quy trình Sản xuất. Tôi được giới thiệu bởi phòng Kỹ thuật của nhiều công ty trong ngành. Chị có khoảng 15 phút để thảo luận về giải pháp tối ưu hóa chi phí sản xuất, đặc biệt là trong quy trình R&D của bên mình không?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân và mục đích cuộc gọi một cách chuyên nghiệp, đề xuất thời gian ngắn gọn để thảo luận."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ anh gọi từ số mấy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi đang gọi từ số 0989xxxxxx. Chị có tiện nghe máy không ạ? Như tôi đã giới thiệu, tôi là Minh, chuyên về tư vấn tối ưu hóa quy trình sản xuất.",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận số điện thoại và nhắc lại giới thiệu bản thân để xây dựng lòng tin, sau đó nhắc lại mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa rõ về công ty và dịch vụ mà anh đang nói, có thể cho em biết thêm thông tin không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Công ty của chúng tôi chuyên tư vấn các giải pháp nâng cao hiệu quả và giảm chi phí sản xuất cho các đơn vị R&D. Đặc biệt, chúng tôi có nhiều kinh nghiệm trong việc áp dụng công nghệ mới để tối ưu hóa quy trình. Không biết bên chị hiện tại đang gặp những thách thức nào trong quy trình R&D?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết hơn về công ty và dịch vụ, sau đó chuyển sang trao đổi nội dung cụ thể để khuyến khích sự tham gia của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa đủ thông tin, anh có thể gửi cho em một số tài liệu cụ thể về dịch vụ của công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi hoàn toàn có thể gửi tài liệu chi tiết qua email cho chị. Chị có thể vui lòng cung cấp địa chỉ email công ty của chị để tôi gửi thông tin và sắp xếp một cuộc họp giới thiệu chuyên sâu hơn nếu chị quan tâm không?",
+      "current_phase": "L2",
+      "tactic_hint": "Đáp ứng yêu cầu của người nghe bằng cách đề nghị gửi tài liệu, đồng thời yêu cầu email công ty để tiến tới việc sắp xếp một cuộc họp chi tiết hơn, duy trì luồng hội thoại."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa thấy đồng ý cho anh gửi email vì cảm thấy còn thiếu thông tin, anh có thể cho em biết thêm về những dự án cụ thể mà công ty đã thực hiện không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Gần đây nhất, chúng tôi đã hợp tác với một công ty sản xuất thiết bị y tế để tối ưu hóa quy trình kiểm tra chất lượng sản phẩm R&D của họ, giúp giảm thiểu 20% thời gian phát triển sản phẩm. Một dự án khác là với một công ty điện tử, nơi chúng tôi áp dụng công nghệ tự động hóa để tăng năng suất thử nghiệm lên 30%. Chị Hương có thể chia sẻ một chút về những mục tiêu hoặc vấn đề mà bên chị đang quan tâm nhất trong R&D không?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp các ví dụ cụ thể về dự án đã thực hiện để tạo thêm niềm tin và sự thuyết phục, sau đó khuyến khích người nghe chia sẻ về nhu cầu của họ."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy những dự án đó rất ấn tượng, nhưng em vẫn cảm thấy không đủ an tâm để chia sẻ thông tin cụ thể với anh được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu. Với những thông tin chị vừa chia sẻ, tôi nhận thấy có thể chị đang khá bận rộn và chưa tiện thảo luận sâu. Vậy, tôi xin phép gửi cho chị một tài liệu tổng quan về các giải pháp và case study của chúng tôi qua email. Khi nào có thời gian, chị có thể xem qua và nếu có bất kỳ câu hỏi nào, chị cứ liên hệ lại cho tôi bất cứ lúc nào qua số điện thoại này. Chúc chị một ngày làm việc hiệu quả.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng sự từ chối chia sẻ thông tin, đề nghị gửi tài liệu tổng quan và kết thúc cuộc gọi một cách lịch sự, để lại cơ hội liên hệ sau."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1869,
+      "output_tokens": 1625
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8166,
+      "output_tokens": 908
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 9894,
+      "output_tokens": 362
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004986,
+    "output_usd": 0.010612,
+    "total_usd": 0.015599
+  }
+}

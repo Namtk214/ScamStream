@@ -1,0 +1,67 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_cafb27efe4]
+  Caller thật: Ủy viên cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Chuyên viên phát triển du lịch văn hóa — Sở Văn hóa, Thể thao và Du lịch tỉnh @ Sở Văn hóa, Thể thao và Du lịch tỉnh Cần Thơ
+  Listener: Nhân viên hướng dẫn du lịch khác (như di tích lịch sử, bảo tàng) (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: LEGIT | Path: LEGIT
+  Context: Ủy viên cấp tỉnh có thẩm quyền giám sát và phát triển ngành du lịch văn hóa. Nhân viên hướng dẫn du lịch di tích lịch sử là đối tác trực tiếp trong hệ thống du lịch tỉnh, thường được liên hệ để tham gia các chương trình quảng bá, đánh giá chất lượng, hoặc hợp tác phát triển sản phẩm du lịch.
+  Pretext: Sở Văn hóa liên hệ để mời Đỗ Thị Lan tham gia khảo sát chất lượng dịch vụ du lịch hoặc tham gia buổi tập huấn nâng cao kỹ năng hướng dẫn viên do Sở tổ chức.
+  Listener traits: ['ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị, tôi là Dương Thu Hà từ Sở Văn hóa, Thể thao và Du lịch tỉnh Cần Thơ. Tôi gọi điện để xác nhận, chị có phải là chị Đỗ Thị Lan, hướng dẫn viên du lịch di tích lịch sử không ạ?
+      → phase: L1 | tactic: Giới thiệu bản thân và cơ quan, xác nhận danh tính người nghe để tiếp cận mục đích cuộc gọi một cách chính thức.
+T02 [LISTENER] Dạ, em là Đỗ Thị Lan đây ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chào chị Lan. Tôi gọi cho chị vì Sở đang tổ chức khảo sát về mức độ hài lòng của du khách đối với chất lượng dịch vụ hướng dẫn tại các di tích lịch sử trên địa bàn tỉnh mình. Không biết chị có thể dành khoảng 15 phút để trả lời một vài câu hỏi khảo sát giúp Sở không ạ?
+      → phase: L2 | tactic: Trực tiếp nêu mục đích cuộc gọi là mời tham gia khảo sát, giải thích lý do cụ thể và ước lượng thời gian cần thiết.
+T04 [LISTENER] Dạ, em có thể tham gia khảo sát ạ, nhưng chị có thể cho em biết thêm về mục đích của khảo sát không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, mục đích chính của khảo sát là để thu thập ý kiến đóng góp từ các hướng dẫn viên du lịch như chị về chất lượng dịch vụ hiện tại, từ đó Sở sẽ có cơ sở đánh giá, đề xuất các giải pháp nâng cao chất lượng dịch vụ hướng dẫn, nhằm mang lại trải nghiệm tốt hơn cho du khách khi đến với các di tích lịch sử của Cần Thơ mình ạ. Các thông tin của chị sẽ được bảo mật hoàn toàn.
+      → phase: L2 | tactic: Giải thích rõ hơn về mục đích và lợi ích của khảo sát, nhấn mạnh tính bảo mật để người nghe yên tâm cung cấp thông tin.
+T06 [LISTENER] Dạ, nghe có vẻ hợp lý, nhưng em vẫn băn khoăn không biết khảo sát này có cần thông tin gì cá nhân không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ, khảo sát này chỉ cần chị chia sẻ ý kiến về các vấn đề liên quan đến công việc hướng dẫn thôi ạ, không thu thập bất kỳ thông tin cá nhân nhạy cảm nào của chị đâu ạ. Mình có thể thực hiện khảo sát ngay qua điện thoại bây giờ, hay chị muốn chúng tôi gửi form khảo sát qua email hoặc Zalo để chị tiện điền ạ?
+      → phase: L3 | tactic: Trấn an người nghe về việc không thu thập thông tin cá nhân và đề xuất các phương án thực hiện khảo sát để tiện lợi cho người nghe, chuyển sang phase thống nhất hành động.
+T08 [LISTENER] Dạ, em có thể thực hiện khảo sát ngay bây giờ qua điện thoại cũng được ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, cảm ơn chị. Vậy tôi xin phép được bắt đầu các câu hỏi khảo sát ngay bây giờ ạ.
+      → phase: L3 | tactic: Xác nhận phương thức thực hiện và chuẩn bị bắt đầu khảo sát, tiến hành mục đích chính của cuộc gọi.
+T10 [LISTENER] Dạ, em sẵn sàng ạ, chị có thể bắt đầu câu hỏi đầu tiên rồi ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ vâng, câu hỏi đầu tiên là: Theo chị, đâu là những điểm mạnh nổi bật của dịch vụ hướng dẫn tại các di tích lịch sử ở Cần Thơ hiện nay ạ?
+      → phase: L3 | tactic: Bắt đầu đặt câu hỏi khảo sát theo mục đích đã nêu.
+T12 [LISTENER] Dạ, em thấy dịch vụ hướng dẫn ở Cần Thơ hiện nay có sự nhiệt tình và am hiểu về lịch sử địa phương, giúp du khách cảm thấy thoải mái hơn ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ vâng, cảm ơn ý kiến của chị. Theo chị, có những điểm nào cần cải thiện để nâng cao chất lượng dịch vụ hướng dẫn tại các di tích lịch sử ở Cần Thơ không ạ?
+      → phase: L3 | tactic: Tiếp tục đặt câu hỏi khảo sát, chuyển sang khía cạnh những điểm cần cải thiện để có cái nhìn đa chiều.
+T14 [LISTENER] Dạ, em nghĩ cần cải thiện thêm về kỹ năng giao tiếp và trình bày thông tin rõ ràng hơn cho du khách ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ, rất cảm ơn những đóng góp tâm huyết của chị. Sở sẽ ghi nhận những ý kiến này để có thể cải thiện tốt hơn. Tiếp theo, chị có nhận thấy du khách thường phản hồi tích cực hoặc tiêu cực về điều gì nhiều nhất trong quá trình chị hướng dẫn không ạ?
+      → phase: L3 | tactic: Tiếp tục đặt câu hỏi khảo sát, thăm dò ý kiến về phản hồi của du khách để có cái nhìn từ phía họ.
+T16 [LISTENER] Dạ, em thấy du khách thường phản hồi tích cực về sự nhiệt tình và thân thiện của hướng dẫn viên, nhưng đôi khi cũng phàn nàn về việc không cập nhật kịp thời thông tin mới ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ vâng, cảm ơn chị Lan đã chia sẻ rất chi tiết. Chúng tôi sẽ tổng hợp những ý kiến này. Cuối cùng, chị có đề xuất giải pháp cụ thể nào để nâng cao chất lượng dịch vụ hướng dẫn tại các di tích lịch sử ở Cần Thơ không ạ?
+      → phase: L3 | tactic: Tiếp tục đặt câu hỏi khảo sát, hướng đến giải pháp cụ thể từ góc nhìn của hướng dẫn viên để kết thúc phần trả lời khảo sát.
+T18 [LISTENER] Dạ, em nghĩ rằng cần tổ chức các buổi đào tạo thường xuyên để nâng cao kỹ năng cho hướng dẫn viên và cập nhật thông tin mới nhất về các di tích lịch sử ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ, đây là một ý kiến rất hay và thiết thực ạ. Sở cũng đang có kế hoạch tổ chức các buổi tập huấn chuyên sâu về kỹ năng và kiến thức mới cho các hướng dẫn viên. Một lần nữa, rất cảm ơn chị Đỗ Thị Lan đã dành thời gian quý báu để tham gia khảo sát này. Chúng tôi sẽ tổng hợp các ý kiến đóng góp của chị và mong rằng sẽ có cơ hội hợp tác cùng chị trong các chương trình sắp tới. Chúc chị một ngày làm việc hiệu quả ạ.
+      → phase: L3 | tactic: Tổng kết khảo sát, bày tỏ sự cảm kích và hứa sẽ ghi nhận, đồng thời kết thúc cuộc gọi một cách lịch sự, tự nhiên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  19 turns | suspicion=0.00
+TOKEN: in=41093 | out=3838
+COST : $0.021624
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_15140_51139\conv_cafb27efe4.json  [CALLER_END]

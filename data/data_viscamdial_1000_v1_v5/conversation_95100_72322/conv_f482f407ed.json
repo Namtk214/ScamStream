@@ -1,0 +1,231 @@
+{
+  "conversation_id": "conv_f482f407ed",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0087",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Mai Minh Bình",
+    "fake_age": 37,
+    "real_occupation": "Lao động trên đường phố và lao động có liên quan",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Giám sát an toàn hàng không - Cục Hàng không Dân dụng Việt Nam",
+    "caller_org": "Phòng Kiểm tra An toàn Kỹ thuật - Cục Hàng không Dân dụng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo kiểm tra an toàn định kỳ động cơ máy bay tại khu vực Bình Thuận. Scammer sử dụng tên đầy đủ của nạn nhân (Vũ Thùy Hồng Giang) để xác nhận danh tính, tạo ảo tưởng cuộc gọi hợp lệ từ cơ quan chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận: 'Chào anh Vũ Thùy Hồng Giang, đây là Phòng Kiểm tra An toàn Kỹ thuật. Chúng tôi có hồ sơ anh ở Bình Thuận. Anh có thể xác nhận số điện thoại 0917470860 không?' — Dùng tên + địa chỉ + SĐT để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + Sợ hãi: 'Trong đợt kiểm tra vừa rồi, chúng tôi phát hiện một số lỗi an toàn trên hồ sơ bảo dưỡng động cơ của anh. Nếu không khắc phục trong 24 giờ, máy bay sẽ bị dừng hoạt động và anh sẽ bị phạt hành chính.' — Tạo áp lực thời gian + hậu quả nặng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xử lý nhanh, anh cần thanh toán phí xử lý sự cố và cập nhật hồ sơ: 2.5 triệu đồng. Anh vui lòng chuyển khoản ngay vào tài khoản công vụ [số tài khoản giả] hoặc mua thẻ cào để chứng thực.' — Yêu cầu chuyển tiền với lý do hợp lý trong ngành."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ dọa sẽ báo cáo với cơ quan quản lý. Nếu thành công, scammer sẽ cắt máy hoặc yêu cầu không nói chuyện này với ai khác 'vì là quy trình bảo mật'."
+        }
+      ]
+    },
+    "scenario_context": "Thợ sửa chữa động cơ máy bay cần tiếp nhận thông báo từ cơ quan quản lý về kiểm tra định kỳ, lịch bảo dưỡng, hoặc sự cố liên quan đến máy bay. Lao động trên đường phố có thể giả danh nhân viên cơ quan có thẩm quyền để gọi kiểm tra."
+  },
+  "listener_card": {
+    "listener_id": "lis_0087",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "72322",
+      "title": "Thợ sửa chữa động cơ máy bay",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Thùy Hồng Giang",
+      "VIC_ID_DOC": "060301202865",
+      "VIC_ADDRESS": "Quận 8, Bình Thuận",
+      "VIC_EMPLOYMENT": "Thợ sửa chữa động cơ máy bay",
+      "VIC_CONTACT": "0917470860",
+      "VIC_TAX_SOCIAL_ID": "3268215402"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "908471",
+      "VIC_CREDENTIAL": "203043",
+      "VIC_SIM_INFO": "0917470860",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "599283616881",
+      "VIC_CARD_DATA": "4459 **** **** 2299",
+      "VIC_BALANCE": "32 triệu đồng",
+      "VIC_ASSET": "202 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Thùy Hồng Giang",
+    "VIC_CONTACT": "0917470860",
+    "VIC_BALANCE": "32 triệu đồng",
+    "VIC_ASSET": "202 triệu đồng",
+    "LOCATION": "Bình Thuận"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám sát an toàn hàng không - Cục Hàng không Dân dụng Việt Nam",
+    "caller_org": "Phòng Kiểm tra An toàn Kỹ thuật - Cục Hàng không Dân dụng",
+    "scenario_context": "Thợ sửa chữa động cơ máy bay cần tiếp nhận thông báo từ cơ quan quản lý về kiểm tra định kỳ, lịch bảo dưỡng, hoặc sự cố liên quan đến máy bay. Lao động trên đường phố có thể giả danh nhân viên cơ quan có thẩm quyền để gọi kiểm tra.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo kiểm tra an toàn định kỳ động cơ máy bay tại khu vực Bình Thuận. Scammer sử dụng tên đầy đủ của nạn nhân (Vũ Thùy Hồng Giang) để xác nhận danh tính, tạo ảo tưởng cuộc gọi hợp lệ từ cơ quan chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận: 'Chào anh Vũ Thùy Hồng Giang, đây là Phòng Kiểm tra An toàn Kỹ thuật. Chúng tôi có hồ sơ anh ở Bình Thuận. Anh có thể xác nhận số điện thoại 0917470860 không?' — Dùng tên + địa chỉ + SĐT để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp + Sợ hãi: 'Trong đợt kiểm tra vừa rồi, chúng tôi phát hiện một số lỗi an toàn trên hồ sơ bảo dưỡng động cơ của anh. Nếu không khắc phục trong 24 giờ, máy bay sẽ bị dừng hoạt động và anh sẽ bị phạt hành chính.' — Tạo áp lực thời gian + hậu quả nặng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xử lý nhanh, anh cần thanh toán phí xử lý sự cố và cập nhật hồ sơ: 2.5 triệu đồng. Anh vui lòng chuyển khoản ngay vào tài khoản công vụ [số tài khoản giả] hoặc mua thẻ cào để chứng thực.' — Yêu cầu chuyển tiền với lý do hợp lý trong ngành."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ dọa sẽ báo cáo với cơ quan quản lý. Nếu thành công, scammer sẽ cắt máy hoặc yêu cầu không nói chuyện này với ai khác 'vì là quy trình bảo mật'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cục Hàng không Dân dụng thực sự gọi để thông báo kiểm tra an toàn định kỳ, yêu cầu cập nhật hồ sơ bảo dưỡng, hoặc xác nhận thông tin liên hệ của nhân viên kỹ thuật.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào, đây là Phòng Kiểm tra An toàn Kỹ thuật, Cục Hàng không Dân dụng Việt Nam. Tôi là [Họ tên nhân viên], mã nhân viên [XXXX]. Tôi đang gọi để xác nhận thông tin liên hệ của anh Vũ Thùy Hồng Giang. Anh có thời gian trò chuyện một chút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo lịch kiểm tra định kỳ, yêu cầu cập nhật tài liệu bảo dưỡng, hoặc xác nhận địa chỉ làm việc hiện tại. Tất cả thông tin được ghi chép rõ ràng và sẽ gửi email xác nhận chính thức."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc hợp lý: 'Cảm ơn anh đã xác nhận thông tin. Chúng tôi sẽ gửi thư chính thức về lịch kiểm tra trong 2-3 ngày. Nếu có câu hỏi, anh gọi lại số đường dây nóng [số công khai]. Chào anh.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Vũ Thùy Hồng Giang, tôi là Mai Minh Bình từ Phòng Kiểm tra An toàn Kỹ thuật của Cục Hàng không Dân dụng. Chúng tôi có hồ sơ của chị ở khu vực Bình Thuận và cần xác nhận số điện thoại 0917470860 này có phải của chị không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xác nhận thông tin nạn nhân để tạo độ tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng em muốn kiểm tra lại thông tin này có đúng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Là thế này chị Giang ạ, hồ sơ của chị về bảo dưỡng động cơ máy bay tại khu vực Bình Thuận đang hiển thị một số lỗi an toàn nghiêm trọng. Chúng tôi đã tiến hành kiểm tra định kỳ và phát hiện ra việc này. Nếu chị không khắc phục trong vòng 24 giờ tới, máy bay sẽ bị đình chỉ hoạt động và chị sẽ phải chịu một khoản phạt hành chính rất lớn đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tình huống khẩn cấp và đe dọa hậu quả nghiêm trọng để nạn nhân lo sợ và hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất lo lắng với những gì anh nói, nhưng em cũng muốn xem xét kỹ lưỡng trước khi hành động ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu nỗi lo của chị. Tuy nhiên, tình hình rất cấp bách. Để tránh những hậu quả đáng tiếc và đảm bảo máy bay của chị có thể tiếp tục hoạt động, chị cần thanh toán phí xử lý sự cố và cập nhật hồ sơ là 2.5 triệu đồng. Chị vui lòng chuyển khoản ngay vào tài khoản công vụ của Cục Hàng không Dân dụng đã được công bố trên website chính thức để chúng tôi bắt đầu quy trình hỗ trợ pháp lý sớm nhất.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu thực hiện hành động cụ thể (chuyển tiền) dưới danh nghĩa 'phí xử lý sự cố' và cung cấp kênh thanh toán để tạo sự gấp gáp và hợp lệ."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói 2.5 triệu đồng, nhưng em cần xác nhận tài khoản đó là của cơ quan nào trước khi chuyển tiền ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tất nhiên rồi chị. Tài khoản này là của Phòng Kiểm tra An toàn Kỹ thuật, Cục Hàng không Dân dụng Việt Nam. Số tài khoản là 1022718386, tại ngân hàng VietinBank. Chị có cần tôi đọc lại không ạ? Chị cứ kiểm tra kỹ, nhưng xin chị lưu ý về thời hạn 24 giờ. Nếu quá thời hạn này, chúng tôi rất tiếc phải báo cáo lên cấp trên để tiến hành các biện pháp chế tài.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản giả mạo để nạn nhân tin tưởng chuyển tiền, đồng thời nhắc lại và nhấn mạnh mối đe dọa về thời hạn để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất cảm ơn anh đã cung cấp thông tin này, nhưng em vẫn cần thời gian để xác minh và không thể chuyển tiền ngay lúc này ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Chị Giang, xin lỗi nhưng tôi không thể cho chị thêm thời gian được. Đây là quy trình bắt buộc và đã có thông báo rõ ràng. Nếu chị không hợp tác và hoàn tất thủ tục trong hôm nay, chúng tôi buộc phải đình chỉ hoạt động máy bay của chị và chuyển hồ sơ sang cơ quan điều tra để xử lý theo quy định của pháp luật. Tôi tin là chị không muốn mọi việc đi xa đến mức đó đâu.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường đe dọa pháp lý và hậu quả nghiêm trọng để nạn nhân sợ hãi và tuân thủ. Nhấn mạnh việc không còn lựa chọn."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy anh nói rất nghiêm trọng, nhưng em vẫn cần kiểm tra lại mọi thứ trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1413,
+      "output_tokens": 1623
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7769,
+      "output_tokens": 814
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10284,
+      "output_tokens": 356
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004509,
+    "output_usd": 0.010364,
+    "total_usd": 0.014873
+  }
+}

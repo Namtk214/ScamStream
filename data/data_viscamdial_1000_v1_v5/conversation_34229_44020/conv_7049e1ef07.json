@@ -1,0 +1,292 @@
+{
+  "conversation_id": "conv_7049e1ef07",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0057",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trương Thu Thu Giang",
+    "fake_age": 48,
+    "real_occupation": "Huấn luyện viên, nhân viên hướng dẫn thể thao và làm việc trong lĩnh vực thể thao khác",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Quản lý Dự án Thể thao & Logistics / Trưởng phòng Vận hành Sự kiện Thể thao",
+    "caller_org": "Công ty Cổ phần Tổ chức Sự kiện Thể thao Việt Nam (VSEO) / Ban Tổ chức Giải Marathon Quốc tế",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Giả vờ là quản lý dự án từ công ty tổ chức giải thể thao, gọi để 'xác nhận thông tin và địa chỉ gửi tài liệu tham dự giải chạy Marathon sắp tới' — sử dụng tên đầy đủ của nạn nhân (Bùi Tiến Hải) để tạo credibility cao, sau đó dẫn dắt nạn nhân cung cấp thêm dữ liệu nhạy cảm.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng lòng tin: Scammer gọi, xưng danh là 'Anh Minh, Quản lý Dự án từ VSEO', nói: 'Chào anh Bùi Tiến Hải, chúng tôi đang xử lý danh sách vận động viên đăng ký giải Marathon lần này. Chúng tôi cần xác nhận địa chỉ gửi bib và hướng dẫn tham dự cho anh. Anh có nhận được email đăng ký chưa?' — Tên gọi đúng + số điện thoại đúng tạo tin cậy tức thì."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý & Tạo tình huống khẩn cấp: Scammer tiếp tục: 'Anh ơi, hệ thống của chúng tôi bị lỗi, không thể trích xuất đầy đủ dữ liệu. Để đảm bảo bib được gửi đúng hạn, chúng tôi cần anh xác nhận lại mã số định danh và thẻ thanh toán liên kết — để chúng tôi khóa tài khoản tạm thời, tránh trường hợp ai đó đăng ký giả mạo anh.' [Tạo sợ hãi + cấp bách]"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Scammer yêu cầu nạn nhân: (1) Đọc từng chữ số mã ID (VIC_ID_DOC: 074086153368), (2) Cung cấp 3 chữ số cuối thẻ tín dụng để 'xác minh', (3) Gửi OTP sẽ nhận qua SMS để 'khóa tài khoản', (4) Nếu nạn nhân cung cấp OTP, scammer dùng nó để truy cập tài khoản ngân hàng/ví điện tử hoặc thực hiện giao dịch chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối / Kết thúc: Nếu nạn nhân từ chối cung cấp thông tin, scammer nói: 'Không sao, anh chỉ cần kiểm tra email sau 2 giờ, chúng tôi sẽ gửi link xác nhận lại. Nếu anh không xác nhận trong 24h, đăng ký sẽ bị hủy.' [Tạo áp lực thêm]. Nếu thành công, scammer cúp máy ngay để tránh bị phát hiện."
+        }
+      ]
+    },
+    "scenario_context": "Công ty tổ chức sự kiện thể thao cần phối hợp với bộ phận vận chuyển thư/tài liệu để gửi bib số, hướng dẫn tham gia, hoặc xác nhận đăng ký cho các vận động viên. Nhân viên vận chuyển thư là điểm tiếp xúc tự nhiên để xử lý khối lượng thư tài liệu lớn."
+  },
+  "listener_card": {
+    "listener_id": "lis_0057",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1986,
+      "age": 39,
+      "province": "Bình Dương",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "44020",
+      "title": "Nhân viên phân loại và vận chuyển thư",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Tiến Hải",
+      "VIC_ID_DOC": "074086153368",
+      "VIC_ADDRESS": "Quận 4, Bình Dương",
+      "VIC_EMPLOYMENT": "Nhân viên phân loại và vận chuyển thư",
+      "VIC_CONTACT": "0814048737",
+      "VIC_TAX_SOCIAL_ID": "7239511263"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9571",
+      "VIC_CREDENTIAL": "7200",
+      "VIC_SIM_INFO": "0814048737",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3254590609",
+      "VIC_CARD_DATA": "4470 **** **** 6057",
+      "VIC_BALANCE": "65 triệu đồng",
+      "VIC_ASSET": "186 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Tiến Hải",
+    "VIC_CONTACT": "0814048737",
+    "VIC_TAX_SOCIAL_ID": "7239511263",
+    "VIC_CARD_DATA": "4470 **** **** 6057",
+    "VIC_ID_DOC": "074086153368"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Dự án Thể thao & Logistics / Trưởng phòng Vận hành Sự kiện Thể thao",
+    "caller_org": "Công ty Cổ phần Tổ chức Sự kiện Thể thao Việt Nam (VSEO) / Ban Tổ chức Giải Marathon Quốc tế",
+    "scenario_context": "Công ty tổ chức sự kiện thể thao cần phối hợp với bộ phận vận chuyển thư/tài liệu để gửi bib số, hướng dẫn tham gia, hoặc xác nhận đăng ký cho các vận động viên. Nhân viên vận chuyển thư là điểm tiếp xúc tự nhiên để xử lý khối lượng thư tài liệu lớn.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Giả vờ là quản lý dự án từ công ty tổ chức giải thể thao, gọi để 'xác nhận thông tin và địa chỉ gửi tài liệu tham dự giải chạy Marathon sắp tới' — sử dụng tên đầy đủ của nạn nhân (Bùi Tiến Hải) để tạo credibility cao, sau đó dẫn dắt nạn nhân cung cấp thêm dữ liệu nhạy cảm.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng lòng tin: Scammer gọi, xưng danh là 'Anh Minh, Quản lý Dự án từ VSEO', nói: 'Chào anh Bùi Tiến Hải, chúng tôi đang xử lý danh sách vận động viên đăng ký giải Marathon lần này. Chúng tôi cần xác nhận địa chỉ gửi bib và hướng dẫn tham dự cho anh. Anh có nhận được email đăng ký chưa?' — Tên gọi đúng + số điện thoại đúng tạo tin cậy tức thì."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý & Tạo tình huống khẩn cấp: Scammer tiếp tục: 'Anh ơi, hệ thống của chúng tôi bị lỗi, không thể trích xuất đầy đủ dữ liệu. Để đảm bảo bib được gửi đúng hạn, chúng tôi cần anh xác nhận lại mã số định danh và thẻ thanh toán liên kết — để chúng tôi khóa tài khoản tạm thời, tránh trường hợp ai đó đăng ký giả mạo anh.' [Tạo sợ hãi + cấp bách]"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Scammer yêu cầu nạn nhân: (1) Đọc từng chữ số mã ID (VIC_ID_DOC: 074086153368), (2) Cung cấp 3 chữ số cuối thẻ tín dụng để 'xác minh', (3) Gửi OTP sẽ nhận qua SMS để 'khóa tài khoản', (4) Nếu nạn nhân cung cấp OTP, scammer dùng nó để truy cập tài khoản ngân hàng/ví điện tử hoặc thực hiện giao dịch chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối / Kết thúc: Nếu nạn nhân từ chối cung cấp thông tin, scammer nói: 'Không sao, anh chỉ cần kiểm tra email sau 2 giờ, chúng tôi sẽ gửi link xác nhận lại. Nếu anh không xác nhận trong 24h, đăng ký sẽ bị hủy.' [Tạo áp lực thêm]. Nếu thành công, scammer cúp máy ngay để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty tổ chức giải thể thao gọi để xác nhận thông tin và phối hợp vận chuyển tài liệu tham dự (bib, hướng dẫn) cho vận động viên đã đăng ký.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & Xác nhận: Người gọi từ VSEO xưng danh (tên + chức vụ rõ ràng), nói: 'Chào anh Bùi Tiến Hải, tôi là Anh Minh, Quản lý Dự án tại VSEO. Chúng tôi đang chuẩn bị gửi tài liệu tham dự giải Marathon cho các vận động viên. Anh có phải là người liên hệ chính của địa chỉ [đọc địa chỉ nếu có] không ạ?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Người gọi hỏi: 'Chúng tôi cần xác nhận địa chỉ gửi hàng, ngày tham dự dự kiến, và liệu anh có yêu cầu đặc biệt nào không (ví dụ: gửi vào giờ cụ thể, gửi nhiều bộ bib, v.v.)?' Nạn nhân cung cấp thông tin công khai, không nhạy cảm."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động & Kết thúc: Người gọi nói: 'Vậy chúng tôi sẽ gửi tài liệu qua đơn vị vận chuyển trong 3 ngày tới. Anh sẽ nhận email xác nhận với mã tracking. Nếu có vấn đề gì, anh gọi lại cho chúng tôi theo số [số công ty chính thức]. Cảm ơn anh, chúc anh thi tốt!' — Kết thúc bình thường, chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Bùi Tiến Hải, tôi là Trương Thu Thu Giang, Quản lý Dự án từ Công ty Cổ phần Tổ chức Sự kiện Thể thao Việt Nam, tôi gọi để xác nhận thông tin và địa chỉ gửi tài liệu tham dự giải chạy Marathon sắp tới. Anh đã nhận được email đăng ký của mình chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Scammer giới thiệu bản thân, tổ chức, mục đích cuộc gọi và sử dụng tên đầy đủ của nạn nhân để tạo độ tin cậy ban đầu, hỏi về email đăng ký để tiếp tục dẫn dắt."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhớ đã đăng ký tham gia giải chạy nào cả, chị có thể cho em biết số điện thoại hoặc email của chị để em kiểm tra lại được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hải ơi, tôi hiểu sự nhầm lẫn này. Hệ thống bên tôi hiển thị anh đã đăng ký thành công với số điện thoại 0814048737 và đây là số tôi đang gọi cho anh đây ạ. Tên đăng ký là Bùi Tiến Hải với mã định danh 074086153368. Anh có thể kiểm tra lại tin nhắn hoặc email từ VSEO đã gửi cho anh vào ngày 15 tháng 3 không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định thông tin đã biết về nạn nhân, cung cấp thêm thông tin chi tiết về đăng ký để củng cố niềm tin và hướng dẫn nạn nhân kiểm tra lại."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn còn thấy nghi ngờ, chị có thể cho em biết địa chỉ email mà VSEO đã gửi cho em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ email gửi đi là từ 'noreply@vseo.vn' với tiêu đề 'Xác nhận Đăng ký Tham dự Giải Marathon Quốc tế 2024'. Anh có thể tìm trong hộp thư đến hoặc thư mục spam nhé. Anh Hải làm ơn kiểm tra giúp tôi ngay bây giờ được không ạ? Chúng tôi cần xác nhận sớm để kịp gửi tài liệu cho anh.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp tục cung cấp thông tin cụ thể để củng cố niềm tin, tạo áp lực nhẹ nhàng để nạn nhân hành động ngay lập tức, tránh để nạn nhân có thời gian suy nghĩ thêm."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ kiểm tra lại email, nhưng chị vui lòng cho em biết thêm thông tin về giải chạy này để em yên tâm hơn nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hải đừng quá lo lắng, đây là giải Marathon Quốc tế thường niên lớn nhất của VSEO, thu hút hàng ngàn vận động viên trong và ngoài nước. Chúng tôi có truyền hình trực tiếp và các nhà tài trợ lớn như Vietcombank và Vinamilk. Tôi cam đoan mọi thông tin của anh luôn được bảo mật tuyệt đối. Anh cứ kiểm tra email đi ạ, tôi sẽ đợi. Hoặc anh có thể vào thẳng website chính thức của chúng tôi tại VSEO.vn để kiểm tra phần danh sách vận động viên.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách cung cấp thêm thông tin đáng tin cậy về giải chạy và tổ chức, đề xuất kiểm tra trên website chính thức để củng cố niềm tin và tạo cảm giác minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa thấy có thông tin gì trong email cả, chị có thể cho em biết thêm về địa chỉ trang web mà chị vừa nhắc đến không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ trang web của chúng tôi là VSEO.vn, anh có thể vào đó để kiểm tra các thông tin chi tiết về giải chạy và danh sách vận động viên. Tôi cần anh kiểm tra xem có đúng là anh đã đăng ký chưa, chúng ta cần hoàn thành bước xác nhận này để tôi có thể hỗ trợ anh hoàn tất thủ tục.",
+      "current_phase": "S1",
+      "tactic_hint": "Tái khẳng định địa chỉ website đã cung cấp, hướng dẫn nạn nhân kiểm tra thông tin đăng ký để tiếp tục củng cố lòng tin và dẫn dắt nạn nhân vào bước tiếp theo của kịch bản, đồng thời tạo cảm giác cần hoàn tất thủ tục."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn rất nghi ngờ, chị có thể cho em biết rõ hơn về nội dung giải chạy này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hải ơi, tôi hiểu sự lo lắng của anh. Nhưng hiện tại, chúng ta cần tập trung vào việc xác nhận lại thông tin đăng ký của anh để đảm bảo anh nhận được kit tham dự đúng hạn. Hệ thống của chúng tôi đang gặp sự cố kỹ thuật, không thể trích xuất đầy đủ dữ liệu. Để đảm bảo bib và tài liệu của anh được gửi đúng hẹn, chúng tôi cần anh xác nhận lại một vài thông tin trên thẻ thanh toán liên kết với tài khoản đăng ký để tôi có thể khóa tài khoản tạm thời, tránh trường hợp ai đó đăng ký giả mạo anh. Anh có thể đọc giúp tôi 3 số cuối trên thẻ thanh toán 4470 **** **** 6057 được không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Bỏ qua nghi ngờ của nạn nhân về nội dung giải chạy, chuyển sang tạo tình huống khẩn cấp và sợ hãi (lỗi hệ thống, giả mạo) để buộc nạn nhân cung cấp thông tin thẻ thanh toán, đồng thời sử dụng thông tin thẻ đã biết để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thể cung cấp thông tin thẻ thanh toán được, chị vui lòng xác nhận lại thông tin đăng ký mà không cần đến thông tin đó ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 2.9
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hải ơi, tôi hiểu sự việc này rất nhạy cảm. Nhưng đây là quy trình bắt buộc để bảo vệ quyền lợi của anh, tránh trường hợp bị lạm dụng hoặc gian lận. Nếu không xác nhận ngay, hệ thống sẽ tự động hủy đăng ký của anh trong vòng 24 giờ tới và anh sẽ không thể tham gia giải chạy. Anh vui lòng đọc giúp tôi mã số định danh 074086153368 và 3 số cuối trên thẻ thanh toán để tôi khóa tài khoản tạm thời cho anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nhạy cảm, nhấn mạnh tính 'bắt buộc' của quy trình để bảo vệ nạn nhân, tạo áp lực thời gian (tự động hủy nếu không xác nhận) và quay lại yêu cầu thông tin nhạy cảm đã bị từ chối trước đó."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chị có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết số điện thoại đường dây nóng của VSEO không ạ, em muốn xác nhận thông tin trực tiếp?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 5.8
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hải ơi, tôi hiểu anh muốn có thêm thông tin. Số điện thoại đường dây nóng chính thức của VSEO là 1900 1234. Tuy nhiên, đường dây này đang quá tải do lượng cuộc gọi lớn về giải chạy. Tôi cam đoan mọi thông tin tôi yêu cầu là để bảo vệ tài khoản của anh khỏi gian lận. Nếu anh không xác nhận ngay, hệ thống sẽ tự động hủy đăng ký của anh trong vòng 24 giờ tới và anh sẽ không thể tham gia giải chạy. Anh vui lòng đọc giúp tôi mã số định danh 074086153368 và 3 số cuối trên thẻ thanh toán để tôi khóa tài khoản tạm thời cho anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp số điện thoại đường dây nóng nhưng đồng thời đưa ra lý do khách quan để ngăn nạn nhân gọi (đường dây quá tải), sau đó tái khẳng định tính cấp bách và mục đích 'bảo vệ' nạn nhân, đồng thời lặp lại yêu cầu cung cấp thông tin nhạy cảm dưới áp lực hủy đăng ký."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã rất nghi ngờ về việc này rồi, chị không thể ép em cung cấp thông tin thẻ thanh toán được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 12.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hải ơi, tôi hoàn toàn hiểu sự nghi ngờ của anh. Thật ra, việc xác nhận các thông tin này chỉ mất vài phút, nhưng nó đảm bảo anh không bị mất suất tham gia giải chạy mà anh đã đăng ký. Nếu anh không muốn cung cấp thông tin qua điện thoại, không sao cả. Anh chỉ cần kiểm tra email sau 2 giờ nữa, chúng tôi sẽ gửi link xác nhận lại. Nhưng xin lưu ý, nếu anh không xác nhận trong vòng 24 giờ tới, đăng ký của anh sẽ bị hủy tự động và anh sẽ mất cơ hội tham gia giải đấy ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Chuyển sang xử lý từ chối, xoa dịu nạn nhân, cung cấp một lựa chọn khác nhưng vẫn giữ áp lực thời gian để nạn nhân phải hành động, tránh làm nạn nhân hoàn toàn thoát khỏi tình huống."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng chị vẫn không thể ép em cung cấp thông tin thẻ thanh toán được, em cần tìm hiểu rõ hơn về giải chạy này trước đã ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 13.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1464,
+      "output_tokens": 2037
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 20875,
+      "output_tokens": 1807
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 24206,
+      "output_tokens": 674
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00927,
+    "output_usd": 0.015107,
+    "total_usd": 0.024377
+  }
+}

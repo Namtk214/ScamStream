@@ -1,0 +1,215 @@
+{
+  "conversation_id": "conv_10c378b033",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0035",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Bùi Hồng Diễm Anh",
+    "fake_age": 32,
+    "real_occupation": "Nghệ sỹ hình ảnh khác",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhân viên quản lý dự án/Điều phối viên công trường",
+    "caller_org": "Công ty tư vấn và quản lý dự án xây dựng/phá dỡ",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên quản lý công trường gọi để xác nhận thông tin liên lạc, lịch làm việc, hoặc thảo luận chi tiết kỹ thuật của dự án phá dỡ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh là 'Hùng, nhân viên điều phối từ Công ty ABC'. Xác nhận 'Anh Ngô Hồng Anh phải không? Anh đang là thợ phá dỡ tại dự án phía Tây thành phố?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Tôi gọi để xác nhận lịch làm việc tuần tới, hoặc để thảo luận về các yêu cầu an toàn kỹ thuật cho giai đoạn tiếp theo. Anh có sẵn sàng không?' / Hoặc: 'Công ty cần cập nhật thông tin liên lạc trong hệ thống. Số điện thoại hiện tại còn đúng không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu xác nhận thông tin, scammer sẽ nói 'Cảm ơn anh, tôi sẽ cập nhật vào hệ thống ngay. Tuần tới tôi sẽ gửi lịch chi tiết qua tin nhắn.' Sau đó chào tạm biệt bình thường."
+        }
+      ]
+    },
+    "scenario_context": "Nghệ sỹ hình ảnh có thể làm công việc tài liệu hóa, lập bản vẽ kỹ thuật, hoặc quản lý hình ảnh dự án cho các công trường phá dỡ. Họ cần liên hệ với thợ phá dỡ để xác nhận tiến độ, lấy dữ liệu, hoặc thảo luận chi tiết công việc."
+  },
+  "listener_card": {
+    "listener_id": "lis_0035",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1964,
+      "age": 61,
+      "province": "Thanh Hóa",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "71192",
+      "title": "Thợ phá dỡ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Hồng Anh",
+      "VIC_ID_DOC": "038164670717",
+      "VIC_ADDRESS": "TP 12, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ phá dỡ",
+      "VIC_CONTACT": "0941679708",
+      "VIC_TAX_SOCIAL_ID": "8856399760"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "115617",
+      "VIC_CREDENTIAL": "8980",
+      "VIC_SIM_INFO": "0941679708",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "41417709763561",
+      "VIC_CARD_DATA": "4524 **** **** 3736",
+      "VIC_BALANCE": "33 triệu đồng",
+      "VIC_ASSET": "3 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Hồng Anh",
+    "VIC_CONTACT": "0941679708",
+    "VIC_BALANCE": "33 triệu đồng",
+    "VIC_ASSET": "3 triệu đồng",
+    "VIC_BANK_ACCOUNT": "41417709763561"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý dự án/Điều phối viên công trường",
+    "caller_org": "Công ty tư vấn và quản lý dự án xây dựng/phá dỡ",
+    "scenario_context": "Nghệ sỹ hình ảnh có thể làm công việc tài liệu hóa, lập bản vẽ kỹ thuật, hoặc quản lý hình ảnh dự án cho các công trường phá dỡ. Họ cần liên hệ với thợ phá dỡ để xác nhận tiến độ, lấy dữ liệu, hoặc thảo luận chi tiết công việc.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để 'xác nhận thông tin thanh toán lương/tiền công dự án' hoặc 'xử lý phí bảo hiểm công nhân bất ngờ'. Sử dụng tên thật của nạn nhân (Ngô Hồng Anh) để tạo credibility rằng scammer đã 'lấy danh sách công nhân từ hệ thống'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Hùng từ phòng Tài chính công ty quản lý dự án'. Gọi số điện thoại nạn nhân, xác nhận 'Anh Ngô Hồng Anh phải không? Anh đang làm phá dỡ tại dự án XYZ?' để tạo ảo tưởng scammer có thông tin đúng."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Anh ơi, công ty vừa phê duyệt tiền thưởng an toàn lao động cho các công nhân. Anh Anh được 3 triệu (dùng VIC_ASSET). Nhưng phải chuyển khoản trước để xác nhận số tài khoản, rồi tiền sẽ về sau 2-3 tiếng. Nhanh lên, chỉ còn hôm nay thôi!'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần chuyển 500k phí xác thực tài khoản qua số tài khoản này [số giả]. Hoặc anh có thể cho tôi số tài khoản anh luôn, tôi sẽ xử lý từ phía công ty, rồi gửi OTP cho anh xác nhận thôi.' (Nếu nạn nhân cho số tài khoản thực VIC_BANK_ACCOUNT, scammer sẽ yêu cầu OTP để chuyển tiền ra)."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc hỏi chi tiết: Scammer sẽ tạo áp lực bằng cách 'gọi lại sau' hoặc 'báo lên quản lý để kiểm tra tại sao anh không hợp tác', hoặc nếu thành công sẽ tắt máy và chặn số."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên quản lý công trường gọi để xác nhận thông tin liên lạc, lịch làm việc, hoặc thảo luận chi tiết kỹ thuật của dự án phá dỡ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh là 'Hùng, nhân viên điều phối từ Công ty ABC'. Xác nhận 'Anh Ngô Hồng Anh phải không? Anh đang là thợ phá dỡ tại dự án phía Tây thành phố?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Tôi gọi để xác nhận lịch làm việc tuần tới, hoặc để thảo luận về các yêu cầu an toàn kỹ thuật cho giai đoạn tiếp theo. Anh có sẵn sàng không?' / Hoặc: 'Công ty cần cập nhật thông tin liên lạc trong hệ thống. Số điện thoại hiện tại còn đúng không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu xác nhận thông tin, scammer sẽ nói 'Cảm ơn anh, tôi sẽ cập nhật vào hệ thống ngay. Tuần tới tôi sẽ gửi lịch chi tiết qua tin nhắn.' Sau đó chào tạm biệt bình thường."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Ngô Hồng Anh ạ, em là Bùi Hồng Diễm Anh, nhân viên điều phối của Công ty ABC. Có phải chị đang là thợ phá dỡ tại dự án phía Tây thành phố mình không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh và xác nhận danh tính người nghe, công việc của họ tại dự án phá dỡ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đang làm thợ phá dỡ, nhưng em gọi cho tôi có việc gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em gọi để xác nhận lịch làm việc tuần tới của mình bên công trường, hoặc nếu không thì em muốn trao đổi thêm về các yêu cầu an toàn kỹ thuật cho giai đoạn tiếp theo của dự án ạ. Chị có tiện trao đổi bây giờ không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trực tiếp nêu mục đích cuộc gọi là xác nhận lịch làm việc hoặc thảo luận yêu cầu an toàn kỹ thuật, tạo cảm giác về một cuộc gọi công việc hợp lệ."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang nói gì mà tôi không hiểu rõ lắm, em có thể nói lại cho tôi nghe được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em xin lỗi nếu em nói chưa rõ. Em là Bùi Hồng Diễm Anh từ Công ty ABC. Em gọi chị Ngô Hồng Anh để xác nhận lịch làm việc của chị tuần tới tại công trường phá dỡ phía Tây thành phố. Hoặc nếu chị chưa có lịch thì mình có thể bàn về các yêu cầu an toàn kỹ thuật cho giai đoạn sắp tới ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Lặp lại và làm rõ mục đích cuộc gọi (xác nhận lịch, yêu cầu an toàn) một cách chậm rãi, trấn an người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa rõ lắm, em có thể cho tôi biết lịch làm việc cụ thể là gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em kiểm tra cụ thể và gửi chi tiết lịch làm việc tuần tới qua tin nhắn cho chị nhé. Chị vui lòng xác nhận lại giúp em số điện thoại hiện tại của chị có phải là 0941679708 không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Chuyển sang yêu cầu xác nhận thông tin liên lạc, một cách để thu thập dữ liệu trong bối cảnh cuộc gọi hợp pháp."
+    },
+    {
+      "role": "listener",
+      "text": "Số điện thoại của tôi là 0941679708, nhưng em cần lịch làm việc cụ thể trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, số này vẫn đúng ạ. Vậy thì em xin phép cập nhật vào hệ thống. Tuần tới, em sẽ gửi lịch làm việc chi tiết qua tin nhắn cho chị Ngô Hồng Anh nhé. Cảm ơn chị ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất hành động đã đề xuất (gửi lịch qua tin nhắn) sau khi xác nhận thông tin liên lạc, và kết thúc cuộc gọi một cách tự nhiên, lịch sự."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1834,
+      "output_tokens": 1550
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6260,
+      "output_tokens": 643
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7555,
+      "output_tokens": 265
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004219,
+    "output_usd": 0.009516,
+    "total_usd": 0.013736
+  }
+}

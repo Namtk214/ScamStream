@@ -1,0 +1,245 @@
+{
+  "conversation_id": "conv_c9f843ea9b",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0024",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Ngô Như Lan",
+    "fake_age": 40,
+    "real_occupation": "Nhân viên điều khiển máy quay phim",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên Tài chính - Kế toán (phòng sản xuất phim/studio)",
+    "caller_org": "Studio Sản xuất Quốc Tế Việt Nam (SVIP Media)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả nhân viên tài chính studio, nói rằng công ty đang thực hiện dự án phim lớn và cần kiểm toán độc lập xác nhận các khoản chi phí thiết bị quay phim. Sử dụng tên thật của nạn nhân (Lê Tiến An) để tạo ấn tượng đã có thông tin sẵn từ hệ thống, rồi yêu cầu xác minh qua chuyển khoản thử nghiệm.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: 'Chào anh/chị Lê Tiến An, tôi là Trần Minh từ phòng Tài chính SVIP Media. Hệ thống của chúng tôi ghi nhận anh là kiểm toán độc lập được đề cử cho dự án lớn. Anh có thời gian không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (Khẩn cấp + Lợi ích): 'Dự án này quy mô lớn, hơn 1.8 tỷ đồng chi phí sản xuất. Để đảm bảo minh bạch tài chính, công ty cần anh xác nhận qua hệ thống ngân hàng trước. Deadline hôm nay vì phải báo cáo cho nhà đầu tư nước ngoài.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh vui lòng chuyển khoản 50 triệu đồng (tiền xác nhận) vào tài khoản công ty: [số tài khoản giả] với nội dung: Kiểm toán dự án SVIP. Sau 24h sẽ hoàn lại cộng thêm 10% hoa hồng tư vấn.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết thúc hoặc từ chối: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Thế thì anh không quan tâm đến cơ hội hợp tác lâu dài với studio quốc tế sao? Chúng tôi cần quyết định trong vòng 1 tiếng.' Nếu thành công, sẽ chặn số điện thoại sau khi tiền chuyển."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên tài chính của studio sản xuất cần liên hệ với kiểm toán độc lập để xin tư vấn về quy trình kiểm soát chi phí sản xuất hoặc yêu cầu xác nhận dữ liệu tài chính trước kỳ kiểm toán định kỳ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0024",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1994,
+      "age": 31,
+      "province": "Long An",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "24112",
+      "title": "Kiểm toán",
+      "group": "Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Tiến An",
+      "VIC_ID_DOC": "080094754412",
+      "VIC_ADDRESS": "Huyện 4, Long An",
+      "VIC_EMPLOYMENT": "Kiểm toán",
+      "VIC_CONTACT": "0770197225",
+      "VIC_TAX_SOCIAL_ID": "2456771321"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4103",
+      "VIC_CREDENTIAL": "1469",
+      "VIC_SIM_INFO": "0770197225",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "32976638167",
+      "VIC_CARD_DATA": "4825 **** **** 1898",
+      "VIC_BALANCE": "216 triệu đồng",
+      "VIC_ASSET": "1.8 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Tiến An",
+    "VIC_CONTACT": "0770197225",
+    "VIC_ASSET": "1.8 tỷ đồng",
+    "VIC_EMPLOYMENT": "Kiểm toán",
+    "LOCATION": "Long An"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Tài chính - Kế toán (phòng sản xuất phim/studio)",
+    "caller_org": "Studio Sản xuất Quốc Tế Việt Nam (SVIP Media)",
+    "scenario_context": "Nhân viên tài chính của studio sản xuất cần liên hệ với kiểm toán độc lập để xin tư vấn về quy trình kiểm soát chi phí sản xuất hoặc yêu cầu xác nhận dữ liệu tài chính trước kỳ kiểm toán định kỳ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả nhân viên tài chính studio, nói rằng công ty đang thực hiện dự án phim lớn và cần kiểm toán độc lập xác nhận các khoản chi phí thiết bị quay phim. Sử dụng tên thật của nạn nhân (Lê Tiến An) để tạo ấn tượng đã có thông tin sẵn từ hệ thống, rồi yêu cầu xác minh qua chuyển khoản thử nghiệm.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: 'Chào anh/chị Lê Tiến An, tôi là Trần Minh từ phòng Tài chính SVIP Media. Hệ thống của chúng tôi ghi nhận anh là kiểm toán độc lập được đề cử cho dự án lớn. Anh có thời gian không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (Khẩn cấp + Lợi ích): 'Dự án này quy mô lớn, hơn 1.8 tỷ đồng chi phí sản xuất. Để đảm bảo minh bạch tài chính, công ty cần anh xác nhận qua hệ thống ngân hàng trước. Deadline hôm nay vì phải báo cáo cho nhà đầu tư nước ngoài.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh vui lòng chuyển khoản 50 triệu đồng (tiền xác nhận) vào tài khoản công ty: [số tài khoản giả] với nội dung: Kiểm toán dự án SVIP. Sau 24h sẽ hoàn lại cộng thêm 10% hoa hồng tư vấn.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết thúc hoặc từ chối: Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Thế thì anh không quan tâm đến cơ hội hợp tác lâu dài với studio quốc tế sao? Chúng tôi cần quyết định trong vòng 1 tiếng.' Nếu thành công, sẽ chặn số điện thoại sau khi tiền chuyển."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Studio sản xuất phim cần tư vấn kiểm toán độc lập về quy trình kiểm soát chi phí dự án sản xuất lớn, hoặc xác nhận các chứng từ tài chính trước kỳ kiểm toán định kỳ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào anh/chị Lê Tiến An, tôi là Trần Minh từ phòng Tài chính SVIP Media. Công ty chúng tôi được giới thiệu với anh qua [tên người giới thiệu hoặc công ty tư vấn]. Anh có 10 phút để trao đổi về dự án kiểm toán không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi đang thực hiện dự án sản xuất phim với tổng chi phí khoảng 1.8 tỷ đồng. Cần anh tư vấn về quy trình kiểm soát nội bộ và có thể yêu cầu xác nhận một số chứng từ. Anh có thể nhận việc này không? Phí tư vấn bao nhiêu?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Được ạ. Anh gửi email danh sách tài liệu cần kiểm toán cho anh. Chúng tôi sẽ làm việc với anh qua email hoặc gặp mặt tại văn phòng. Cảm ơn anh.' — Kết thúc cuộc gọi bình thường, tiếp tục qua email chính thức."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Lê Tiến An, tôi là Ngô Như Lan từ phòng Tài chính SVIP Media. Hệ thống của chúng tôi ghi nhận anh là một kiểm toán viên độc lập được đề cử cho dự án phim lớn sắp tới. Anh có thời gian trao đổi ngắn gọn không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức, chức danh, sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy và nêu lý do cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Chị gọi từ số mấy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số máy bàn công ty của tôi là 028.730.88888, tôi gọi cho anh từ số này. Anh có thể kiểm tra danh bạ SVIP Media để xác nhận. Anh An, lý do chính gọi cho anh là để gấp rút hoàn thiện quy trình kiểm toán cho dự án phim quy mô 1.8 tỷ đồng.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ về số điện thoại bằng cách cung cấp thông tin công ty, sau đó nhanh chóng chuyển sang phase S2 bằng cách nhấn mạnh tính cấp bách của dự án và số tiền lớn để gây ấn tượng."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, em hiểu rồi, nhưng em vẫn muốn kiểm tra thêm thông tin về dự án này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh An, vì đây là dự án lớn với nhà đầu tư nước ngoài, các thủ tục phải rất chặt chẽ. Để tiện cho việc kiểm tra và xác minh, công ty cần anh chủ động thực hiện một giao dịch xác nhận qua hệ thống ngân hàng. Đây là bước bắt buộc để ghi nhận thông tin của anh vào hệ thống thanh toán của dự án. Sau đó, công ty sẽ gửi toàn bộ tài liệu dự án để anh xem xét chi tiết.",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh tầm quan trọng của dự án và nhà đầu tư nước ngoài để tạo áp lực, đồng thời giới thiệu bước 'giao dịch xác nhận' như một thủ tục bắt buộc để chuẩn bị cho yêu cầu chuyển tiền ở S3. Hứa hẹn cung cấp thông tin sau khi thực hiện giao dịch để làm giảm sự nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ bước giao dịch xác nhận này lắm, chị có thể giải thích cụ thể hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ hình dung thế này, để hệ thống của chúng tôi xác nhận anh là kiểm toán viên chính thức của dự án 1.8 tỷ này, chúng tôi cần anh thực hiện một giao dịch thử nghiệm. Đây là hình thức chuyển khoản nội bộ giữa anh và công ty, sau đó chúng tôi sẽ hoàn trả lại trong vòng 24 giờ cùng với 10% hoa hồng tư vấn. Điều này giúp hệ thống cập nhật thông tin của anh một cách minh bạch và nhanh chóng nhất.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích chi tiết về 'giao dịch xác nhận' dưới dạng chuyển khoản thử nghiệm, nhấn mạnh tính 'nội bộ' và 'hoàn trả' kèm hoa hồng để giảm lo ngại và chuẩn bị đưa ra yêu cầu chuyển tiền cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa hoàn toàn yên tâm với cách thức này, chị có thể cho em thêm thông tin về bảo mật của giao dịch không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Anh An, anh cứ yên tâm. Đây là quy trình chuẩn của các dự án lớn có vốn đầu tư nước ngoài. Khoản tiền này chỉ là để kích hoạt tài khoản của anh trên hệ thống của chúng tôi và là bằng chứng cam kết hợp tác. Công ty chúng tôi là SVIP Media, một studio lớn, sẽ không vì khoản tiền nhỏ này mà làm mất uy tín. Anh có thể chuyển khoản 50 triệu đồng vào tài khoản của công ty chúng tôi: [số tài khoản giả định] với nội dung 'Kiểm toán dự án SVIP'. Sau đó, tôi sẽ gửi ngay hợp đồng và tài liệu dự án chi tiết cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về bảo mật bằng cách khẳng định đây là quy trình chuẩn và nhấn mạnh uy tín công ty. Tiếp tục đưa ra yêu cầu chuyển khoản cụ thể với số tiền, số tài khoản và nội dung rõ ràng, kèm lời hứa cung cấp tài liệu sau giao dịch để củng cố lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy vẫn chưa rõ ràng lắm về quy trình này, chị có thể cho em biết thêm về việc bảo vệ thông tin của mình không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh An, vì thời gian gấp rút để kịp báo cáo cho nhà đầu tư hôm nay, nên nếu anh không thể thực hiện giao dịch xác nhận này ngay, chúng tôi e rằng sẽ phải tìm kiếm kiểm toán viên khác. Cơ hội hợp tác lâu dài với một studio quốc tế như SVIP Media là rất lớn, anh có chắc là muốn bỏ lỡ không?",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực về thời gian và cơ hội hợp tác để thúc đẩy hành động, gợi ý rằng nếu không hành động sẽ mất đi cơ hội lớn. Chuyển sang chiến thuật tạo áp lực để nạn nhân nhanh chóng đưa ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần thêm thời gian để suy nghĩ, chị không thể ép em được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 2.4
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1805,
+      "output_tokens": 1569
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10058,
+      "output_tokens": 1101
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13517,
+      "output_tokens": 403
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005844,
+    "output_usd": 0.010839,
+    "total_usd": 0.016683
+  }
+}

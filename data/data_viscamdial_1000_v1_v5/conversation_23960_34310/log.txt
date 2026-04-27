@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_dca466fbd5]
+  Caller thật: Giáo viên công nghệ thông tin (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Trưởng phòng Công nghệ thông tin & Đổi mới số hóa @ Công ty Cổ phần Du lịch và Sự kiện Mekong Delta
+  Listener: Nhiếp ảnh gia (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Công ty du lịch/sự kiện cần thuê dịch vụ chụp ảnh chuyên nghiệp cho chiến dịch quảng bá. Trưởng phòng CNTT liên hệ trực tiếp với nhiếp ảnh gia để thảo luận về yêu cầu kỹ thuật (chất lượng ảnh, định dạng file, bản quyền số) và xác nhận thông tin hợp đồng.
+  Pretext: Công ty đang tuyển dụng nhiếp ảnh gia cho dự án quảng bá du lịch Cần Thơ. Scammer sẽ xưng danh là Trưởng phòng CNTT của công ty, gọi để 'xác nhận hồ sơ và thông tin tài khoản nhận lương' trước khi ký hợp đồng chính thức. Sử dụng tên và số điện thoại nạn nhân để tạo tin cậy rằng 'hồ sơ đã được xác minh'.
+  Listener traits: ['sĩ diện không muốn thua kém', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, em chào anh Mai Hữu Xuân Vinh ạ. Em là Hồ Hữu Thành, Trưởng phòng Công nghệ thông tin của Công ty Cổ phần Du lịch và Sự kiện Mekong Delta đây ạ. Bên em vừa nhận được hồ sơ của anh từ website tuyển dụng, và không biết là anh Vinh có còn hứng thú với vị trí nhiếp ảnh gia cho dự án quảng bá du lịch Cần Thơ của công ty mình không ạ?
+      → phase: S1 | tactic: Giới thiệu bản thân và công ty, dùng tên đầy đủ nạn nhân và địa điểm cụ thể để tạo dựng sự tin cậy.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi không nhớ đã gửi hồ sơ nào cả.
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T03 [CALLER] Dạ, anh Vinh đừng lo lắng ạ. Có thể là do quá trình gửi hồ sơ qua bên thứ ba nên anh chưa nhớ ra thôi. Bên em đã xem xét rất kỹ portfolio của anh và đánh giá rất cao năng lực của anh, đặc biệt là các tác phẩm về phong cảnh Cần Thơ. Em gọi để xác nhận lại thông tin và trao đổi về quy trình làm việc cho dự án gấp rút này.
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ, tái khẳng định rằng nạn nhân đã ứng tuyển và công ty đã xem xét hồ sơ, nhấn mạnh năng lực của nạn nhân để tạo niềm tin và sự tự tin, đồng thời gợi ý về tính cấp bách của dự án.
+T04 [LISTENER] Em có thông tin gì cụ thể hơn về dự án này không? Tôi muốn tìm hiểu rõ hơn trước khi quyết định.
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T05 [CALLER] Dạ, anh Vinh cứ yên tâm, dự án này là để quảng bá du lịch Cần Thơ mình, cụ thể là các điểm đến nổi bật như Chợ nổi Cái Răng, Thiền viện Trúc Lâm Phương Nam và Vườn cò Bằng Lăng. Thời gian thực hiện rất gấp, cần bắt đầu ngay tuần tới để kịp mùa du lịch cao điểm sắp tới. Phía công ty rất hài lòng với portfolio của anh và tin rằng anh sẽ là lựa chọn phù hợp nhất cho dự án này. Để tiến hành nhanh chóng, bên em cần anh chuyển khoản đặt cọc 5 triệu đồng để khóa hợp đồng, sau đó công ty sẽ chuyển 15 triệu tiền tạm ứng dự án ngay vào ngày hôm sau.
+      → phase: S2 | tactic: Cung cấp chi tiết dự án để tạo tin cậy, đồng thời thúc đẩy nạn nhân chuyển sang phase yêu cầu tài chính bằng cách nhấn mạnh tính cấp bách và cơ hội hấp dẫn.
+T06 [LISTENER] Em nói về sự cấp bách và yêu cầu đặt cọc, nhưng tôi cần thêm thời gian để suy nghĩ và kiểm tra lại thông tin trước đã.
+      → action: REFUSAL | suspicion: 1.00 | disclosed: []
+
+T07 [CALLER] Dạ, anh Vinh cứ kiểm tra kỹ ạ. Tuy nhiên, nếu quyết định tham gia, anh cố gắng phản hồi sớm giúp em vì dự án đang rất gấp. Anh có thể tìm hiểu thêm về Công ty Cổ phần Du lịch và Sự kiện Mekong Delta trên mạng hoặc gọi trực tiếp đến số hotline của công ty để xác nhận thông tin tuyển dụng, anh nhé. Em sẽ gọi lại sau nếu chưa thấy phản hồi từ phía anh.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách cho thêm thời gian, đồng thời khéo léo định hướng nạn nhân đến các kênh thông tin giả mạo hoặc đồng phạm để xác minh.
+T08 [LISTENER] Tôi cảm ơn em đã gọi, nhưng tôi không thấy hợp lý khi phải đặt cọc trước như vậy.
+      → action: REFUSAL | suspicion: 2.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=2.00
+TOKEN: in=15797 | out=3102
+COST : $0.016288
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_23960_34310\conv_dca466fbd5.json  [SCAM_REFUSE]

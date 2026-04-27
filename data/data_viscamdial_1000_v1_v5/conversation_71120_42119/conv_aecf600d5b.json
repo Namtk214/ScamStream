@@ -1,0 +1,246 @@
+{
+  "conversation_id": "conv_aecf600d5b",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0016",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hồ Thùy Thảo",
+    "fake_age": 27,
+    "real_occupation": "Thợ nề và các thợ có liên quan",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án xây dựng / Giám sát công trình",
+    "caller_org": "Công ty Xây dựng và Thi công Minh Phát",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện giả là Quản lý dự án của công ty xây dựng, nói rằng cần xác nhận thanh toán hóa đơn công trình cho địa chỉ tại Quận 3, Đồng Nai (dùng VIC_ADDRESS để tạo độ tin cậy). Sau đó yêu cầu nạn nhân xác nhận thông tin cá nhân hoặc thực hiện xác thực qua OTP vì 'hệ thống tài chính gặp lỗi'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Hùng, Quản lý dự án Công ty Xây dựng Minh Phát', nói 'Em Tùng ơi, mình đang liên hệ về khoản thanh toán công trình tại địa chỉ Quận 3, Đồng Nai. Hệ thống của chúng tôi có vấn đề, bạn có thể giúp xác nhận không?' — dùng VIC_FULLNAME + VIC_ADDRESS để tạo credibility cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh đang bị deadline, nếu không xác nhận trong 30 phút thì hợp đồng sẽ bị hủy, ảnh hưởng đến bonus tháng này của cả hai chúng ta'. Tạo cảm giác sợ hãi + áp lực thời gian"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Em vào app ngân hàng, vào mục xác thực tài khoản, sau đó em sẽ nhận được mã OTP. Em đọc mã đó cho anh nghe để anh input vào hệ thống'. Hoặc 'Em vào link này để xác nhận: [link giả mạo]'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: Scammer sử dụng để truy cập tài khoản ngân hàng hoặc ví điện tử. Nếu nạn nhân từ chối: Scammer nói 'Không sao, anh sẽ gọi trực tiếp công ty em' để tạo vẻ hợp pháp, sau đó cắt máy"
+        }
+      ]
+    },
+    "scenario_context": "Quản lý công trình cần liên hệ nhân viên giao dịch ngân hàng/cửa hàng để xác nhận thanh toán hợp đồng, hoặc để yêu cầu hỗ trợ giải quyết vấn đề tài chính liên quan đến dự án. Đây là giao điểm tự nhiên trong các giao dịch B2B hoặc thanh toán công trình."
+  },
+  "listener_card": {
+    "listener_id": "lis_0016",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1980,
+      "age": 45,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "42119",
+      "title": "Nhân viên giao dịch và thu ngân khác",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Gia Tùng",
+      "VIC_ID_DOC": "075080489802",
+      "VIC_ADDRESS": "Quận 3, Đồng Nai",
+      "VIC_EMPLOYMENT": "Nhân viên giao dịch và thu ngân khác",
+      "VIC_CONTACT": "0983460659",
+      "VIC_TAX_SOCIAL_ID": "9679780908"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "730634",
+      "VIC_CREDENTIAL": "578804",
+      "VIC_SIM_INFO": "0983460659",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "951588562223",
+      "VIC_CARD_DATA": "4263 **** **** 7078",
+      "VIC_BALANCE": "71 triệu đồng",
+      "VIC_ASSET": "598 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Gia Tùng",
+    "VIC_CONTACT": "0983460659",
+    "VIC_ADDRESS": "Quận 3, Đồng Nai"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án xây dựng / Giám sát công trình",
+    "caller_org": "Công ty Xây dựng và Thi công Minh Phát",
+    "scenario_context": "Quản lý công trình cần liên hệ nhân viên giao dịch ngân hàng/cửa hàng để xác nhận thanh toán hợp đồng, hoặc để yêu cầu hỗ trợ giải quyết vấn đề tài chính liên quan đến dự án. Đây là giao điểm tự nhiên trong các giao dịch B2B hoặc thanh toán công trình.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện giả là Quản lý dự án của công ty xây dựng, nói rằng cần xác nhận thanh toán hóa đơn công trình cho địa chỉ tại Quận 3, Đồng Nai (dùng VIC_ADDRESS để tạo độ tin cậy). Sau đó yêu cầu nạn nhân xác nhận thông tin cá nhân hoặc thực hiện xác thực qua OTP vì 'hệ thống tài chính gặp lỗi'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Hùng, Quản lý dự án Công ty Xây dựng Minh Phát', nói 'Em Tùng ơi, mình đang liên hệ về khoản thanh toán công trình tại địa chỉ Quận 3, Đồng Nai. Hệ thống của chúng tôi có vấn đề, bạn có thể giúp xác nhận không?' — dùng VIC_FULLNAME + VIC_ADDRESS để tạo credibility cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh đang bị deadline, nếu không xác nhận trong 30 phút thì hợp đồng sẽ bị hủy, ảnh hưởng đến bonus tháng này của cả hai chúng ta'. Tạo cảm giác sợ hãi + áp lực thời gian"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Em vào app ngân hàng, vào mục xác thực tài khoản, sau đó em sẽ nhận được mã OTP. Em đọc mã đó cho anh nghe để anh input vào hệ thống'. Hoặc 'Em vào link này để xác nhận: [link giả mạo]'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: Scammer sử dụng để truy cập tài khoản ngân hàng hoặc ví điện tử. Nếu nạn nhân từ chối: Scammer nói 'Không sao, anh sẽ gọi trực tiếp công ty em' để tạo vẻ hợp pháp, sau đó cắt máy"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Quản lý công trình xây dựng thực sự cần liên hệ nhân viên giao dịch để xác nhận chi tiết thanh toán hợp đồng, hoặc thông báo về những thay đổi trong lịch thanh toán dự án",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Xin chào, mình là Hùng, Quản lý dự án từ Công ty Xây dựng Minh Phát. Mình muốn xác nhận một số thông tin về thanh toán công trình tại địa chỉ của bạn ở Quận 3, Đồng Nai'. Yêu cầu xác nhận danh tính nạn nhân qua câu hỏi kiểm chứng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về số tiền, kỳ thanh toán, ngân hàng nhận, hoặc cung cấp số tài khoản chính thức của công ty (có thể xác minh được). Không bao giờ yêu cầu OTP, mật khẩu hay link xác thực"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Tóm tắt lại những điều đã thống nhất (số tiền, ngày thanh toán, tài khoản nhận), cung cấp số điện thoại chính thức công ty để nạn nhân có thể gọi lại xác minh, chào tạm biệt chuyên nghiệp"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_CONTACT": "0983460659"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Tùng ạ, em là Thảo Quản lý dự án bên Công ty Xây dựng Minh Phát đây ạ. Em gọi cho mình để xác nhận lại về khoản thanh toán công trình tại địa chỉ Quận 3, Đồng Nai. Hệ thống bên em đang gặp lỗi một chút, không biết anh có thể hỗ trợ em xác nhận thông tin được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, giới thiệu mục đích cuộc gọi và sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi cần biết rõ hơn về thông tin em cần xác nhận.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên em đang có chút trục trặc về phần mềm kế toán, em cần anh xác nhận lại thông tin chủ thanh toán và mã số hợp đồng công trình ở Quận 3, Đồng Nai có đúng là của mình không ạ? Để em đối chiếu lại với dữ liệu hiện tại ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Làm rõ thông tin cần xác nhận, dùng địa chỉ đã biết để tăng thêm tin cậy, chuẩn bị cho bước xác thực sau này."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết mã số hợp đồng đó là gì không, tôi không nhớ rõ lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, mã số hợp đồng bên em ghi nhận là MP-DN-2023-Q3-005. Anh Tùng có thể xác nhận giúp em đây là đúng mã hợp đồng bên mình không ạ? Và tiện thể, anh có đang dùng số điện thoại 0983460659 này là số chính chủ để liên lạc không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp chi tiết mã hợp đồng giả mạo để tạo độ tin cậy và đồng thời xác minh số điện thoại nạn nhân đang sử dụng."
+    },
+    {
+      "role": "listener",
+      "text": "Mã hợp đồng em nói tôi không nhớ rõ, nhưng số điện thoại này là của tôi.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_CONTACT": "0983460659"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh. Vì hệ thống bên em đang gặp lỗi nên việc xác nhận qua tổng đài sẽ mất nhiều thời gian. Anh vui lòng vào mục xác thực tài khoản trên ứng dụng ngân hàng của mình, hệ thống sẽ gửi một mã OTP về để xác nhận thông tin anh nhé. Anh đọc giúp em mã đó để em nhập vào hệ thống ạ. Nếu không xác nhận kịp thời hạn trong 30 phút, hợp đồng sẽ bị hủy đó ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo áp lực thời gian và sự khẩn cấp bằng cách nói về deadline 30 phút và nguy cơ hủy hợp đồng, đồng thời hướng dẫn nạn nhân tạo OTP để 'xác nhận'."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi không rõ cái mã OTP mà em nói là gì, em có thể giải thích cho tôi thêm được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ cái mã OTP đó là mã xác thực giao dịch hoặc thông tin tài khoản ngân hàng của anh đó ạ. Vì hệ thống bên em đang bị lỗi, không thể tự động đối chiếu thông tin được nên cần mã này để xác nhận anh là chủ tài khoản giao dịch. Nếu không xác nhận kịp trong 30 phút nữa thì hợp đồng sẽ bị hủy, ảnh hưởng đến cả bonus tháng này của cả hai chúng ta đó anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích về OTP để giảm nghi ngờ, đồng thời tăng áp lực thời gian và tâm lý khẩn cấp bằng cách nhắc đến 'ảnh hưởng đến bonus tháng này của cả hai chúng ta' để nạn nhân cảm thấy có trách nhiệm và hợp tác hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi cần chắc chắn rằng đây là thông tin an toàn trước khi làm theo yêu cầu của em.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh cứ yên tâm ạ, đây chỉ là mã xác thực thông tin thôi chứ không phải em yêu cầu anh chuyển tiền hay cung cấp mật khẩu gì cả. Mã này chỉ giúp hệ thống bên em nhận diện đúng người xác nhận để không bị hủy hợp đồng. Anh cứ vào app ngân hàng rồi làm theo hướng dẫn là được ạ. Anh giúp em một chút nha, em cũng đang bị sếp réo liên tục đây ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách khẳng định không đòi chuyển tiền hay mật khẩu; nhấn mạnh lợi ích chung và trách nhiệm cá nhân để khuyến khích hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy thì tôi cũng muốn giúp, nhưng tôi vẫn cảm thấy chưa yên tâm lắm đâu.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1365,
+      "output_tokens": 1536
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 9644,
+      "output_tokens": 950
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12571,
+      "output_tokens": 413
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005179,
+    "output_usd": 0.010303,
+    "total_usd": 0.015482
+  }
+}

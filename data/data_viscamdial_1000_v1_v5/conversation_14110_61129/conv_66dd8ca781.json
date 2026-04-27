@@ -1,0 +1,237 @@
+{
+  "conversation_id": "conv_66dd8ca781",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0084",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đỗ Ngọc Thu Vy",
+    "fake_age": 30,
+    "real_occupation": "Chủ tịch, Phó Chủ tịch và Thường trực Hội đồng nhân dân cấp tỉnh",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cán bộ quản lý chương trình phát triển nông nghiệp bền vững / Chuyên viên hỗ trợ nông dân cấp tỉnh",
+    "caller_org": "Sở Nông nghiệp và Phát triển Nông thôn tỉnh / Ban Quản lý Quỹ Hỗ trợ Nông dân",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo Mai Thanh Bảo Giang được chọn tham gia chương trình hỗ trợ vốn kinh doanh cây bụi/cây thân gỗ từ Chính phủ, hoặc được cấp bảo hiểm nông nghiệp, nhưng cần xác minh danh tính và hoàn tất thủ tục thanh toán lệ phí/ký quỹ trước để nhận tiền hỗ trợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + xây dựng credibility: Xưng danh là cán bộ Sở NN&PTNT, gọi từ số điện thoại chính thức (hoặc giả mạo). Xác nhận đầy đủ: 'Chị Mai Thanh Bảo Giang, số CMND 2693179519 phải không? Chúng tôi đang xử lý hồ sơ hỗ trợ vốn trồng cây bụi năm nay của chị.' → Nạn nhân nghe quen thuộc, thỏa mãn."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + may mắn. 'Chị được chọn từ danh sách nông dân ưu tiên, nhưng hạn nộp hồ sơ chỉ còn hôm nay. Nếu chị muốn nhận khoản hỗ trợ 50 triệu đồng, cần xác nhận ngay.' → Nạn nhân cảm thấy vừa may mắn vừa vội vàng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để hoàn tất thủ tục, chị cần chuyển khoản lệ phí xác minh danh tính 2 triệu đồng vào tài khoản của Ban Quản lý (scammer cung cấp số tài khoản giả). Tiền sẽ được hoàn lại khi chị nhận được hỗ trợ chính.' → Nạn nhân, có 79 triệu, dễ bị thuyết phục vì số tiền tương đối nhỏ so với 'lợi ích' được hứa."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer tăng áp lực: 'Chị không tin Chính phủ sao? Các nông dân khác đã chuyển rồi, chỉ còn chị thôi.' Nếu thành công, scammer yêu cầu chuyển thêm hoặc giả vờ xảy ra lỗi kỹ thuật để chiếm 'phí xử lý lỗi'."
+        }
+      ]
+    },
+    "scenario_context": "Cán bộ cấp tỉnh chủ trì các chương trình hỗ trợ nông dân, cấp vốn, bảo hiểm nông nghiệp, hoặc kiểm tra khoảng đất trồng cây bụi/cây thân gỗ. Nông dân là đối tượng tiếp xúc trực tiếp và tự nhiên của họ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0084",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Hải Phòng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "61129",
+      "title": "Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Mai Thanh Bảo Giang",
+      "VIC_ID_DOC": "031301453202",
+      "VIC_ADDRESS": "Huyện 8, Hải Phòng",
+      "VIC_EMPLOYMENT": "Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác",
+      "VIC_CONTACT": "0850573109",
+      "VIC_TAX_SOCIAL_ID": "2693179519"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4072",
+      "VIC_CREDENTIAL": "344391",
+      "VIC_SIM_INFO": "0850573109",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1573803305",
+      "VIC_CARD_DATA": "4354 **** **** 1808",
+      "VIC_BALANCE": "79 triệu đồng",
+      "VIC_ASSET": "10 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Mai Thanh Bảo Giang",
+    "VIC_CONTACT": "0850573109",
+    "VIC_TAX_SOCIAL_ID": "2693179519",
+    "VIC_BALANCE": "79 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ quản lý chương trình phát triển nông nghiệp bền vững / Chuyên viên hỗ trợ nông dân cấp tỉnh",
+    "caller_org": "Sở Nông nghiệp và Phát triển Nông thôn tỉnh / Ban Quản lý Quỹ Hỗ trợ Nông dân",
+    "scenario_context": "Cán bộ cấp tỉnh chủ trì các chương trình hỗ trợ nông dân, cấp vốn, bảo hiểm nông nghiệp, hoặc kiểm tra khoảng đất trồng cây bụi/cây thân gỗ. Nông dân là đối tượng tiếp xúc trực tiếp và tự nhiên của họ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo Mai Thanh Bảo Giang được chọn tham gia chương trình hỗ trợ vốn kinh doanh cây bụi/cây thân gỗ từ Chính phủ, hoặc được cấp bảo hiểm nông nghiệp, nhưng cần xác minh danh tính và hoàn tất thủ tục thanh toán lệ phí/ký quỹ trước để nhận tiền hỗ trợ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + xây dựng credibility: Xưng danh là cán bộ Sở NN&PTNT, gọi từ số điện thoại chính thức (hoặc giả mạo). Xác nhận đầy đủ: 'Chị Mai Thanh Bảo Giang, số CMND 2693179519 phải không? Chúng tôi đang xử lý hồ sơ hỗ trợ vốn trồng cây bụi năm nay của chị.' → Nạn nhân nghe quen thuộc, thỏa mãn."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + may mắn. 'Chị được chọn từ danh sách nông dân ưu tiên, nhưng hạn nộp hồ sơ chỉ còn hôm nay. Nếu chị muốn nhận khoản hỗ trợ 50 triệu đồng, cần xác nhận ngay.' → Nạn nhân cảm thấy vừa may mắn vừa vội vàng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để hoàn tất thủ tục, chị cần chuyển khoản lệ phí xác minh danh tính 2 triệu đồng vào tài khoản của Ban Quản lý (scammer cung cấp số tài khoản giả). Tiền sẽ được hoàn lại khi chị nhận được hỗ trợ chính.' → Nạn nhân, có 79 triệu, dễ bị thuyết phục vì số tiền tương đối nhỏ so với 'lợi ích' được hứa."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer tăng áp lực: 'Chị không tin Chính phủ sao? Các nông dân khác đã chuyển rồi, chỉ còn chị thôi.' Nếu thành công, scammer yêu cầu chuyển thêm hoặc giả vờ xảy ra lỗi kỹ thuật để chiếm 'phí xử lý lỗi'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cán bộ Sở NN&PTNT thực sự gọi để xác minh danh sách nông dân tham gia chương trình hỗ trợ, hoặc thông báo kết quả cấp vốn, hoặc lịch kiểm tra ruộng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên, chức vụ, cơ quan), xác nhận danh tính nạn nhân qua thông tin công khai (tên, địa chỉ, loại cây trồng). 'Tôi là [Tên], cán bộ Sở NN&PTNT. Tôi gọi để xác minh thông tin chị Mai Thanh Bảo Giang, xã [Tên xã], trồng cây bụi/cây thân gỗ. Chị có thời gian nói chuyện không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Nếu mục đích là hỗ trợ, cán bộ giải thích rõ chương trình, điều kiện, quy trình không cần tiền mặt. Nếu mục đích là kiểm tra, hẹn lịch thực tế. 'Chương trình năm nay hỗ trợ 70% vốn vay, không cần ký quỹ. Chị nộp hồ sơ tại Phòng Nông nghiệp, chúng tôi sẽ xử lý trong 15 ngày.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc tự nhiên: Cán bộ cung cấp thông tin liên hệ chính thức, ghi chú lại, chào tạm biệt. 'Cảm ơn chị. Nếu chị có thắc mắc, gọi Phòng Nông nghiệp số [số điện thoại công khai]. Chúc chị thành công.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Mai Thanh Bảo Giang, tôi là Đỗ Ngọc Thu Vy, cán bộ Sở Nông nghiệp và Phát triển Nông thôn tỉnh. Số CMND của chị là 2693179519 đúng không ạ? Chúng tôi gọi để thông báo chị đã được lựa chọn tham gia chương trình hỗ trợ vốn trồng cây bụi năm nay.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, xác nhận thông tin nạn nhân để xây dựng niềm tin và tạo sự quen thuộc."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, em nghe chị nói rồi, nhưng em chưa rõ lắm về chương trình hỗ trợ này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chương trình này nhằm hỗ trợ các hộ nông dân phát triển kinh tế, đặc biệt là trong việc trồng và chăm sóc cây bụi. Chị đã được chọn từ danh sách nông dân ưu tiên của tỉnh. Tuy nhiên, thời hạn nộp hồ sơ để xác nhận nhận hỗ trợ chỉ còn duy nhất hôm nay thôi, chị ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích vắn tắt chương trình, nhấn mạnh sự may mắn (được chọn) và tạo cảm giác khẩn cấp về thời hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng có cần phải làm gì thêm không chị?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Để hoàn tất thủ tục nhận gói hỗ trợ 50 triệu đồng này, chị cần chuyển khoản một khoản lệ phí xác minh danh tính 2 triệu đồng vào tài khoản của Ban Quản lý. Khoản tiền này sẽ được hoàn lại ngay khi chị nhận được hỗ trợ chính thức.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể (chuyển tiền) để 'hoàn tất thủ tục', hứa hoàn lại để giảm sự nghi ngờ và làm nhỏ số tiền so với lợi ích hứa hẹn."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em không chắc lắm về việc chuyển khoản như vậy, liệu có an toàn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị cứ yên tâm, đây là thủ tục bắt buộc để đảm bảo đúng đối tượng nhận hỗ trợ và tránh trường hợp trục lợi chính sách. Số tài khoản Ban Quản lý chúng tôi đều là chính thống và đã được Sở Nông nghiệp và Phát triển nông thôn phê duyệt.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, nhấn mạnh tính hợp pháp của quy trình và tài khoản để củng cố niềm tin và thuyết phục nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng nghe nói về việc xác minh danh tính, nhưng em vẫn hơi lo lắng một chút, chị có thể cho em biết thêm thông tin về tài khoản chuyển khoản không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị có thể yên tâm. Thông tin về số tài khoản sẽ được chúng tôi cung cấp trực tiếp qua tin nhắn sau cuộc gọi này để đảm bảo tính bảo mật. Chị kiểm tra tin nhắn và thực hiện theo hướng dẫn nhé, nhớ là chỉ còn hôm nay thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Giả vờ tăng cường bảo mật bằng cách gửi số tài khoản qua tin nhắn, đồng thời tái khẳng định sự khẩn cấp để thúc đẩy nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng chị, em sẽ chờ tin nhắn của chị và thực hiện ngay ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Rất tốt ạ. Chị cứ làm theo hướng dẫn trong tin nhắn nhé. Nếu có vấn đề gì, chị có thể gọi lại cho tôi theo số máy này. Chúc chị sớm nhận được khoản hỗ trợ.",
+      "current_phase": "S3",
+      "tactic_hint": "Kết thúc cuộc gọi sau khi nạn nhân đồng ý chuyển tiền, tạo cảm giác hỗ trợ và chuyên nghiệp, nhưng vẫn ngụ ý sự cấp bách để nạn nhân hành động nhanh chóng."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1937,
+      "output_tokens": 1878
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10024,
+      "output_tokens": 792
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10705,
+      "output_tokens": 345
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005548,
+    "output_usd": 0.011577,
+    "total_usd": 0.017125
+  }
+}

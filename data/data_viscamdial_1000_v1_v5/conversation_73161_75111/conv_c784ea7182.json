@@ -1,0 +1,186 @@
+{
+  "conversation_id": "conv_c784ea7182",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0074",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Huỳnh Minh Gia Quân",
+    "fake_age": 44,
+    "real_occupation": "Thợ khắc thủy tinh/thợ khắc axit",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên Kiểm soát Chất lượng Vệ sinh An toàn Thực phẩm (HACCP Inspector)",
+    "caller_org": "Phòng Kiểm soát Vệ sinh An toàn Thực phẩm - Chi cục Quản lý Thị trường Thành phố",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cơ quan quản lý thực phẩm thực hiện kiểm tra định kỳ HACCP hoặc xác nhận cập nhật giấy phép kinh doanh giết mổ",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào Đỗ Thị Lan, tôi là ông/bà [tên thật] từ Phòng KSVS An toàn Thực phẩm - Chi cục Quản lý Thị trường [tên thành phố]. Chúng tôi gọi để xác nhận thông tin giấy phép giết mổ của bạn. Có phải bạn là chủ cơ sở giết mổ tại [địa chỉ cụ thể]?'",
+          "verification": "Cung cấp số điện thoại đơn vị chính thức để nạn nhân gọi lại xác nhận"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi cần xác nhận: (1) Cơ sở của bạn có tuân thủ quy trình vệ sinh HACCP không? (2) Giấy phép giết mổ còn hiệu lực đến khi nào? (3) Có cần cập nhật hồ sơ không?' — Hỏi những câu hỏi cụ thể, không yêu cầu thông tin nhạy cảm qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết luận: 'Cảm ơn bạn đã xác nhận. Chúng tôi sẽ gửi giấy thông báo hoặc yêu cầu cập nhật qua đường bưu điện. Nếu có thắc mắc, vui lòng liên hệ [số điện thoại chính thức] hoặc đến trực tiếp Phòng KSVS. Chúc bạn ngày tốt lành.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ khắc axit có kỹ năng xử lý hóa chất, có thể được thuê để khắc/đánh dấu truy xuất nguồn gốc thịt. Cơ quan quản lý thực phẩm gọi cho thợ giết mổ để kiểm tra định kỳ hoặc xác minh hồ sơ vệ sinh."
+  },
+  "listener_card": {
+    "listener_id": "lis_0074",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1995,
+      "age": 30,
+      "province": "Tiền Giang",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "75111",
+      "title": "Thợ giết mổ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Thị Lan",
+      "VIC_ID_DOC": "082195283946",
+      "VIC_ADDRESS": "Huyện 5, Tiền Giang",
+      "VIC_EMPLOYMENT": "Thợ giết mổ",
+      "VIC_CONTACT": "0799948480",
+      "VIC_TAX_SOCIAL_ID": "7386696224"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "6224",
+      "VIC_CREDENTIAL": "685828",
+      "VIC_SIM_INFO": "0799948480",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "40108174848510",
+      "VIC_CARD_DATA": "4923 **** **** 9562",
+      "VIC_BALANCE": "32 triệu đồng",
+      "VIC_ASSET": "25 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Tiền Giang"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Thị Lan",
+    "VIC_CONTACT": "0799948480",
+    "VIC_ID_DOC": "082195283946"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Kiểm soát Chất lượng Vệ sinh An toàn Thực phẩm (HACCP Inspector)",
+    "caller_org": "Phòng Kiểm soát Vệ sinh An toàn Thực phẩm - Chi cục Quản lý Thị trường Thành phố",
+    "scenario_context": "Thợ khắc axit có kỹ năng xử lý hóa chất, có thể được thuê để khắc/đánh dấu truy xuất nguồn gốc thịt. Cơ quan quản lý thực phẩm gọi cho thợ giết mổ để kiểm tra định kỳ hoặc xác minh hồ sơ vệ sinh.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi để 'xác nhận thông tin cấp phép giết mổ' và 'cập nhật hệ thống quản lý vệ sinh' — sử dụng tên thật của nạn nhân và ID để tạo uy tín cơ quan nhà nước",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào Đỗ Thị Lan, tôi là ông Minh từ Phòng KSVS An toàn Thực phẩm. Chúng tôi đang cập nhật hồ sơ giấy phép giết mổ. Tôi thấy ID 082195283946 của bạn trong hệ thống, phải xác nhận lại thông tin để tránh bị tạm dừng hoạt động.'",
+          "tactic": "Authority + Personalization (dùng tên, ID thật) + Urgency (tránh bị tạm dừng)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: 'Hiện nay chúng tôi phát hiện một số cơ sở giết mổ không tuân thủ quy định. Nếu không cập nhật đúng hạn, giấy phép sẽ bị thu hồi trong 48 giờ. Bạn cần phải xác nhận ngay để tránh phạt.'",
+          "tactic": "Sợ hãi + Khẩn cấp (deadline 48h) + Hậu quả kinh tế"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để hoàn tất, tôi cần bạn cung cấp: (1) Mã PIN ngân hàng hoặc OTP để xác thực danh tính trong hệ thống. (2) Chuyển khoản phí cập nhật hồ sơ 500.000 đồng vào tài khoản Kho bạc Nhà nước (scammer cung cấp số tài khoản giả). Hoặc (3) Tải app xác thực để kết nối với hệ thống quản lý của chúng tôi.'",
+          "tactic": "Credential theft (OTP/PIN) + Money transfer + Malware installation (fake app)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer nói: 'Nếu không tuân thủ, chúng tôi sẽ gửi công an đến kiểm tra cơ sở của bạn. Bạn có muốn tiếp tục hay từ chối?' (tăng áp lực). Nếu thành công, scammer cắt máy ngay để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan quản lý thực phẩm thực hiện kiểm tra định kỳ HACCP hoặc xác nhận cập nhật giấy phép kinh doanh giết mổ",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào Đỗ Thị Lan, tôi là ông/bà [tên thật] từ Phòng KSVS An toàn Thực phẩm - Chi cục Quản lý Thị trường [tên thành phố]. Chúng tôi gọi để xác nhận thông tin giấy phép giết mổ của bạn. Có phải bạn là chủ cơ sở giết mổ tại [địa chỉ cụ thể]?'",
+          "verification": "Cung cấp số điện thoại đơn vị chính thức để nạn nhân gọi lại xác nhận"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi cần xác nhận: (1) Cơ sở của bạn có tuân thủ quy trình vệ sinh HACCP không? (2) Giấy phép giết mổ còn hiệu lực đến khi nào? (3) Có cần cập nhật hồ sơ không?' — Hỏi những câu hỏi cụ thể, không yêu cầu thông tin nhạy cảm qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết luận: 'Cảm ơn bạn đã xác nhận. Chúng tôi sẽ gửi giấy thông báo hoặc yêu cầu cập nhật qua đường bưu điện. Nếu có thắc mắc, vui lòng liên hệ [số điện thoại chính thức] hoặc đến trực tiếp Phòng KSVS. Chúc bạn ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Đỗ Thị Lan, tôi là Huỳnh Minh Gia Quân từ Phòng Kiểm soát Vệ sinh An toàn Thực phẩm - Chi cục Quản lý Thị trường Thành phố. Chúng tôi gọi để xác nhận thông tin giấy phép giết mổ của chị. Có phải chị là chủ cơ sở giết mổ tại 28B Trần Phú, Phường 1, Thành phố Vũng Tàu không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận, giới thiệu bản thân và mục đích cuộc gọi, xác nhận thông tin cơ sở"
+    },
+    {
+      "role": "listener",
+      "text": "Em không phải chủ cơ sở giết mổ nào ở Vũng Tàu cả.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy ạ? Chị Đỗ Thị Lan có thể xác nhận lại giúp tôi số căn cước công dân của chị là 082195283946 không? Chúng tôi có nhận được thông báo từ hệ thống về một giấy phép giết mổ đăng ký dưới tên và số căn cước này.",
+      "current_phase": "L1",
+      "tactic_hint": "Xác minh lại thông tin người nghe để tránh nhầm lẫn, nhưng vẫn giữ nguyên mục đích ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu anh đang nói gì ạ, em không phải là người đăng ký giấy phép giết mổ nào hết.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1363,
+      "output_tokens": 1792
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 2058,
+      "output_tokens": 272
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 3546,
+      "output_tokens": 134
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002306,
+    "output_usd": 0.00972,
+    "total_usd": 0.012027
+  }
+}

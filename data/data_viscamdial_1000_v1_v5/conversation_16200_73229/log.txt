@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_39bebfd1a3]
+  Caller thật: Chủ tịch, Phó Chủ tịch (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Giám đốc Công ty In ấn / Chủ tịch Hội Thợ In địa phương @ Công ty In ấn Phát Tiến hoặc Hiệp hội Thợ In TP.HCM
+  Listener: Thợ in khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Giám đốc/Chủ tịch ngành in ấn gọi cho thợ in khác để thảo luận về hợp tác dự án, tuyển dụng, hoặc vấn đề liên quan đến ngành. Đây là giao điểm tự nhiên trong cộng đồng thợ in.
+  Pretext: Giám đốc công ty in ấn lớn gọi để nói rằng công ty đang kiểm toán hồ sơ nhân sự và cần xác nhận thông tin cá nhân của Phạm Hữu Tiến Hùng (dùng tên đầy đủ từ vũ khí) để cập nhật hệ thống quản lý ngành. Sau đó sẽ yêu cầu xác thực qua OTP để 'hoàn tất hồ sơ điện tử'.
+  Listener traits: ['lo lắng cho con cái', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Phạm Hữu Tiến Hùng phải không ạ? Em là Phan Gia Hữu Dũng, Giám đốc Công ty In ấn Phát Tiến đây ạ.
+      → phase: S1 | tactic: Xưng danh và dùng tên đầy đủ nạn nhân để tạo доверие.
+T02 [LISTENER] Dạ, tôi nghe em gọi, nhưng em có thể cho tôi biết rõ hơn về công ty của em không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, công ty Phát Tiến bên em chuyên về in ấn bao bì và các ấn phẩm quảng cáo lớn trên toàn quốc ạ. Hiện tại bên em đang tiến hành kiểm toán hồ sơ nhân sự theo quy định mới của ngành, và em thấy anh Phạm Hữu Tiến Hùng là thợ in đã đăng ký với mã số 6763236659, đúng không ạ?
+      → phase: S2 | tactic: Xác định rõ vai trò công ty, sau đó chuyển sang tạo cấp bách bằng cách nhắc đến kiểm toán và dùng mã số thuế/căn cước để tạo áp lực, đồng thời xác nhận lại thông tin nạn nhân để tăng tính xác thực.
+T04 [LISTENER] Dạ, đúng rồi nhưng em cho tôi biết việc kiểm toán này có ảnh hưởng gì đến tôi không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, việc kiểm toán này rất quan trọng đó anh. Theo thông báo mới nhất của Bộ Công Thương, nếu mình không xác nhận lại thông tin hồ sơ trong hôm nay, tài khoản doanh nhân của mình trên hệ thống quản lý ngành sẽ bị tạm khóa, có thể ảnh hưởng đến các giao dịch in ấn và hồ sơ tín dụng của mình đó ạ.
+      → phase: S2 | tactic: Tạo cấp bách và sợ hãi mất tư cách/tài khoản doanh nhân bằng cách nhắc đến hậu quả từ Bộ Công Thương, nhấn mạnh sự khẩn cấp và tầm quan trọng của việc xác nhận.
+T06 [LISTENER] Vậy em có thông tin gì cụ thể mà tôi cần xác nhận không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ đúng rồi anh, bây giờ để hoàn tất quy trình cập nhật hồ sơ điện tử và tránh việc tài khoản của mình bị khóa, anh vui lòng vào ứng dụng quản lý hồ sơ ngành hoặc app ngân hàng đã liên kết, mình sẽ nhận được một mã OTP xác thực. Anh đọc giúp em mã đó để em hoàn tất xác thực trên hệ thống ạ.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể để lấy OTP, vẫn giữ giọng điệu cấp bách và nhắc lại hậu quả để thúc đẩy nạn nhân làm theo.
+T08 [LISTENER] Em nói rõ hơn về mã OTP là gì được không ạ? Tôi không quen sử dụng ứng dụng ngân hàng lắm.
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T09 [CALLER] Dạ cái mã OTP này là một dãy số bảo mật được ngân hàng hoặc hệ thống quản lý hồ sơ ngành gửi về điện thoại của mình để xác nhận đây chính là anh đang thực hiện thao tác đó ạ. Đây là bước bắt buộc để cập nhật hồ sơ điện tử theo quy định mới, nếu không có mã này thì hồ sơ của anh sẽ không được cập nhật và tài khoản sẽ bị khóa tạm thời trong 24h tới đó ạ.
+      → phase: S3 | tactic: Giải thích về OTP một cách cơ bản, nhấn mạnh đây là bước bắt buộc theo quy định mới, đồng thời lặp lại mối đe dọa về việc tài khoản bị khóa để gia tăng áp lực và thúc đẩy nạn nhân cung cấp mã.
+T11 [LISTENER] Tôi muốn kiểm tra lại thông tin của em trước đã, có thể cho tôi số điện thoại đường dây nóng chính thức không ạ?
+      → action: CONTINUE | suspicion: 2.00 | disclosed: []
+
+T12 [CALLER] Dạ hiện tại thì do công ty đang trong quá trình kiểm toán khẩn cấp nên bên em chưa công bố số hotline chính thức anh ạ. Anh cứ yên tâm là em đang gọi từ số hotline nội bộ của ban kiểm toán nên mình xác nhận nhanh giúp em để tránh trường hợp tài khoản của mình bị khóa tạm thời, ảnh hưởng đến công việc anh nhé.
+      → phase: S3 | tactic: Tránh né yêu cầu cung cấp đường dây nóng chính thức bằng lý do kiểm toán khẩn cấp, đồng thời tái khẳng định tính xác thực của cuộc gọi và lặp lại mối đe dọa về việc khóa tài khoản để thúc ép nạn nhân hành động.
+T13 [LISTENER] Tôi cảm thấy khá nghi ngờ, nếu công ty thật sự làm ăn uy tín thì tại sao lại không có số hotline để tôi kiểm tra ạ?
+      → action: CONTINUE | suspicion: 4.00 | disclosed: []
+
+T14 [CALLER] Dạ em hiểu sự e ngại của anh, nhưng như em đã trình bày, đây là một cuộc gọi khẩn cấp từ ban kiểm toán nội bộ của công ty trong thời gian công ty đang rà soát lại toàn bộ hồ sơ. Em cam đoan là mọi thông tin anh xác nhận đều sẽ được bảo mật tuyệt đối và chỉ dùng để cập nhật đúng hồ sơ của anh lên hệ thống ngành thôi ạ. Nếu không xác nhận ngay lúc này thì việc bị khóa tài khoản là chắc chắn xảy ra đó anh.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ bằng cách trấn an về tính bảo mật và mục đích của thông tin, nhưng vẫn duy trì áp lực bằng cách nhắc lại hậu quả về việc tài khoản bị khóa nếu không hành động ngay lập tức.
+T15 [LISTENER] Em cứ khẳng định là thông tin của tôi sẽ được bảo mật, nhưng tôi vẫn cảm thấy không yên tâm, đợi em có số hotline thì tôi mới xác nhận được.
+      → action: REFUSAL | suspicion: 8.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  15 turns | suspicion=8.00
+TOKEN: in=29898 | out=3037
+COST : $0.016811
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_16200_73229\conv_39bebfd1a3.json  [SCAM_EXPOSE]

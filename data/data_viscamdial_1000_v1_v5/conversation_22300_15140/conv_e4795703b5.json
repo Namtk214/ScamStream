@@ -1,0 +1,202 @@
+{
+  "conversation_id": "conv_e4795703b5",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0089",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Công Xuân Hùng",
+    "fake_age": 30,
+    "real_occupation": "Nhà chuyên môn về y học cổ truyền và hỗ trợ",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Giám đốc Trung tâm Y học Cổ truyền & Phòng chống Bệnh tật Cộng đồng (giả vờ nâng cấp từ nhà chuyên môn lên cấp quản lý)",
+    "caller_org": "Trung tâm Y học Cổ truyền & Sức khỏe Cộng đồng TP.HCM (Bộ Y tế)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Trung tâm Y học Cổ truyền TP.HCM (đơn vị thực tế của Bộ Y tế) gọi để mời Ủy viên cấp tỉnh tham gia hội thảo chính sách y tế hoặc xin ý kiến về dự án phòng chống bệnh mãn tính trong cộng đồng",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào bà Trương Diễm Như Trang, tôi là TS. Nguyễn Văn Hùng từ Trung tâm Y học Cổ truyền TP.HCM. Bà có thể nghe tôi được không?' — xác nhận người nghe máy qua thông tin cơ bản"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc rõ ràng: 'Chúng tôi đang chuẩn bị hội thảo về tích hợp y học cổ truyền vào chính sách sức khỏe cộng đồng, và rất mong được tư vấn từ các Ủy viên cấp tỉnh. Bà có thể tham gia cuộc họp online vào ngày 15/2 lúc 14h không?' — không đề cập đến thanh toán hay thông tin cá nhân nhạy cảm"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn bà đã đồng ý. Chúng tôi sẽ gửi thư mời chính thức qua email công vụ của bà. Nếu bà có câu hỏi, xin liên hệ qua đường dây nóng: 028-xxxx-xxxx. Xin cảm ơn bà!'"
+        }
+      ]
+    },
+    "scenario_context": "Ủy viên cấp tỉnh thường được liên hệ bởi các đơn vị y tế công lập để phê duyệt chính sách sức khỏe, dự án phòng chống dịch bệnh, hoặc tham gia các cuộc họp hợp tác giữa ngành y tế và chính quyền địa phương. Điểm giao thoa tự nhiên: dự án quốc gia về y học cổ truyền hoặc chương trình khám sàng lọc sức khỏe cho cán bộ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0089",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "15140",
+      "title": "Ủy viên cấp tỉnh",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Diễm Như Trang",
+      "VIC_ID_DOC": "079300128773",
+      "VIC_ADDRESS": "Huyện 2, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Ủy viên cấp tỉnh",
+      "VIC_CONTACT": "0968225628",
+      "VIC_TAX_SOCIAL_ID": "7023265548"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "681126",
+      "VIC_CREDENTIAL": "1541",
+      "VIC_SIM_INFO": "0968225628",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "558968258754",
+      "VIC_CARD_DATA": "4592 **** **** 8175",
+      "VIC_BALANCE": "1.6 tỷ đồng",
+      "VIC_ASSET": "728 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Diễm Như Trang",
+    "VIC_CONTACT": "0968225628",
+    "LOCATION": "TP Hồ Chí Minh",
+    "VIC_CARD_DATA": "4592 **** **** 8175"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Trung tâm Y học Cổ truyền & Phòng chống Bệnh tật Cộng đồng (giả vờ nâng cấp từ nhà chuyên môn lên cấp quản lý)",
+    "caller_org": "Trung tâm Y học Cổ truyền & Sức khỏe Cộng đồng TP.HCM (Bộ Y tế)",
+    "scenario_context": "Ủy viên cấp tỉnh thường được liên hệ bởi các đơn vị y tế công lập để phê duyệt chính sách sức khỏe, dự án phòng chống dịch bệnh, hoặc tham gia các cuộc họp hợp tác giữa ngành y tế và chính quyền địa phương. Điểm giao thoa tự nhiên: dự án quốc gia về y học cổ truyền hoặc chương trình khám sàng lọc sức khỏe cho cán bộ.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Gọi để thông báo bà Trương Diễm Như Trang đã được chọn tham gia chương trình khám sức khỏe định kỳ miễn phí cho cán bộ lãnh đạo (do TP.HCM tài trợ), nhưng cần xác nhận thông tin và thanh toán phí đăng ký bảo hiểm y tế bổ sung 'để bảo vệ quyền lợi'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính tin cậy: 'Xin chào bà Trương Diễm Như Trang, tôi là TS. Nguyễn Văn Hùng, Giám đốc Trung tâm Y học Cổ truyền TP.HCM. Chúng tôi có hồ sơ bà là Ủy viên cấp tỉnh tại TP.HCM, đúng không?' — dùng tên đầy đủ + vị trí để tạo credibility ngay"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý KHẨN CẤP + DANH DỰ: 'Bà được chọn vào nhóm 50 cán bộ lãnh đạo cho chương trình khám sức khỏe toàn diện miễn phí (trị giá 15 triệu/người). Tuy nhiên, để đảm bảo quyền lợi bảo hiểm, bà cần hoàn tất thanh toán phí đăng ký 2.5 triệu ngay hôm nay. Đây là chính sách mới từ Bộ Y tế, hạn chót là 5 giờ chiều hôm nay'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bà vui lòng cung cấp số thẻ tín dụng để chúng tôi quét thanh toán. Hoặc bà có thể chuyển khoản vào tài khoản của Trung tâm' — sau đó yêu cầu OTP hoặc CVV để 'xác nhận giao dịch an toàn'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu bị từ chối: 'Bà chắc chắn không? Vậy bà sẽ bị loại khỏi danh sách, và cơ hội này chỉ có 1 lần. Để bảo vệ danh dự của bà, tôi có thể chuyển khoản từ tài khoản công để bà thanh toán sau'. Nếu thành công: 'Cảm ơn bà, chúng tôi sẽ gửi giấy chứng nhận và lịch khám trong 24 giờ. Bà sẽ nhận được tin nhắn xác nhận từ hệ thống'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trung tâm Y học Cổ truyền TP.HCM (đơn vị thực tế của Bộ Y tế) gọi để mời Ủy viên cấp tỉnh tham gia hội thảo chính sách y tế hoặc xin ý kiến về dự án phòng chống bệnh mãn tính trong cộng đồng",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào bà Trương Diễm Như Trang, tôi là TS. Nguyễn Văn Hùng từ Trung tâm Y học Cổ truyền TP.HCM. Bà có thể nghe tôi được không?' — xác nhận người nghe máy qua thông tin cơ bản"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc rõ ràng: 'Chúng tôi đang chuẩn bị hội thảo về tích hợp y học cổ truyền vào chính sách sức khỏe cộng đồng, và rất mong được tư vấn từ các Ủy viên cấp tỉnh. Bà có thể tham gia cuộc họp online vào ngày 15/2 lúc 14h không?' — không đề cập đến thanh toán hay thông tin cá nhân nhạy cảm"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn bà đã đồng ý. Chúng tôi sẽ gửi thư mời chính thức qua email công vụ của bà. Nếu bà có câu hỏi, xin liên hệ qua đường dây nóng: 028-xxxx-xxxx. Xin cảm ơn bà!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào chị Trương Diễm Như Trang, tôi là Hồ Công Xuân Hùng từ Trung tâm Y học Cổ truyền & Sức khỏe Cộng đồng TP.HCM. Chị có thể nghe tôi được không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, xác nhận đúng người nghe máy theo thông tin cơ bản."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe anh ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị. Chúng tôi đang chuẩn bị hội thảo về tích hợp y học cổ truyền vào chính sách sức khỏe cộng đồng và rất mong được lắng nghe ý kiến từ các chuyên gia như chị. Chị có thể tham gia cuộc họp online vào ngày 15 tháng 2 lúc 14 giờ được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trao đổi nội dung công việc rõ ràng, không đề cập đến thanh toán hay thông tin cá nhân nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cũng rất quan tâm đến các vấn đề này, nhưng em cần xem lịch trước đã ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy chị có thể xem lịch và phản hồi lại cho chúng tôi qua email công vụ đã đăng ký được không ạ? Chúng tôi sẽ gửi thư mời chi tiết đến địa chỉ đó.",
+      "current_phase": "L2",
+      "tactic_hint": "Giữ nội dung chuyên nghiệp, không gây áp lực, gợi ý xác nhận qua kênh chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã hiểu rồi, em sẽ xem lịch và trả lời anh qua email sau ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị sắp xếp được thì rất tốt. Chúng tôi sẽ chờ email phản hồi của chị. Nếu có bất kỳ thắc mắc nào, chị có thể liên hệ tổng đài của Trung tâm qua số 028-xxxx-xxxx. Xin cảm ơn chị!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi chuyên nghiệp sau khi đạt được mục đích, cung cấp kênh liên hệ chính thức."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1388,
+      "output_tokens": 1906
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4767,
+      "output_tokens": 445
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5411,
+      "output_tokens": 187
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003153,
+    "output_usd": 0.010755,
+    "total_usd": 0.013908
+  }
+}

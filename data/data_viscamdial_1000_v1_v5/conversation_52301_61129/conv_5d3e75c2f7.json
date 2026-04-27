@@ -1,0 +1,238 @@
+{
+  "conversation_id": "conv_5d3e75c2f7",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0001",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Ngô Tiến Thế Hải",
+    "fake_age": 43,
+    "real_occupation": "Nhân viên thu ngân và bán vé",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên bán vé và thu ngân tại trạm dừng xe khách / điểm bán hàng nông sản",
+    "caller_org": "Công ty vận tải Bình Minh hoặc HTX Mua bán nông sản địa phương",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Xác nhận đơn hàng nông sản đã đặt, thông báo ngày giao hàng, hoặc kiểm tra thông tin thanh toán để cập nhật hóa đơn",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên HTX Bình Minh, gọi đúng tên 'Chị Linh', xác nhận số điện thoại 0395682672 để chắc chắn gọi đúng người"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Em gọi để thông báo lô cà chua/hạt giống mà chị đặt tuần trước sẽ giao vào thứ Năm. Chị có nhận được SMS xác nhận không?' — nói rõ sản phẩm cụ thể, ngày giao"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận địa chỉ giao, số tiền thanh toán (không yêu cầu OTP hay mật khẩu), hoặc chỉ thông báo xong rồi chào tạm biệt một cách bình thường"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên bán vé/thu ngân thường tiếp xúc với nông dân khi họ đi chợ, giao hàng, hoặc mua vé xe. Lý do gọi điện tự nhiên: xác nhận đơn hàng, thông báo về lô hàng nông sản đã đặt, hoặc vấn đề thanh toán liên quan đến thẻ tín dụng mà nạn nhân từng dùng tại điểm bán vé."
+  },
+  "listener_card": {
+    "listener_id": "lis_0001",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1979,
+      "age": 46,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "61129",
+      "title": "Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Hồng Linh",
+      "VIC_ID_DOC": "038179329303",
+      "VIC_ADDRESS": "Quận 5, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Lao động trồng, thu hoạch sản phẩm cây bụi và cây thân gỗ khác",
+      "VIC_CONTACT": "0395682672",
+      "VIC_TAX_SOCIAL_ID": "9643835916"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "924410",
+      "VIC_CREDENTIAL": "970322",
+      "VIC_SIM_INFO": "0395682672",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "8844826143230",
+      "VIC_CARD_DATA": "4979 **** **** 3365",
+      "VIC_BALANCE": "12 triệu đồng",
+      "VIC_ASSET": "35 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Hồng Linh",
+    "VIC_CONTACT": "0395682672",
+    "VIC_CARD_DATA": "4979 **** **** 3365"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán vé và thu ngân tại trạm dừng xe khách / điểm bán hàng nông sản",
+    "caller_org": "Công ty vận tải Bình Minh hoặc HTX Mua bán nông sản địa phương",
+    "scenario_context": "Nhân viên bán vé/thu ngân thường tiếp xúc với nông dân khi họ đi chợ, giao hàng, hoặc mua vé xe. Lý do gọi điện tự nhiên: xác nhận đơn hàng, thông báo về lô hàng nông sản đã đặt, hoặc vấn đề thanh toán liên quan đến thẻ tín dụng mà nạn nhân từng dùng tại điểm bán vé.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi báo cáo: 'Chị Linh ơi, đây là nhân viên từ HTX Bình Minh. Hôm nay chúng tôi phát hiện thẻ 4979***3365 của chị có giao dịch bất thường tại trạm vé xe. Để bảo vệ tài khoản, chúng tôi cần xác minh lại OTP để khóa giao dịch này.'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng tin cậy: Xưng danh là nhân viên HTX Bình Minh, gọi đúng tên 'Nguyễn Hồng Linh', đề cập đến thẻ 4979***3365 mà nạn nhân từng dùng tại điểm bán vé — tạo ấn tượng scammer có thông tin nội bộ"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt sợ hãi: 'Phát hiện giao dịch lạ, nếu không xác minh ngay sẽ bị khóa tài khoản / tiền sẽ bị rút trái phép' — tạo cấp bách"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng nhập OTP vừa được gửi đến điện thoại của chị để xác minh danh tính' — nạn nhân sẽ nhận SMS OTP (thật sự từ ngân hàng) và đưa cho scammer"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Scammer cảm ơn, nói sẽ xử lý trong 24h, rồi cắt máy. Sau đó dùng OTP để thực hiện giao dịch trái phép hoặc đổi mật khẩu tài khoản"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Xác nhận đơn hàng nông sản đã đặt, thông báo ngày giao hàng, hoặc kiểm tra thông tin thanh toán để cập nhật hóa đơn",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên HTX Bình Minh, gọi đúng tên 'Chị Linh', xác nhận số điện thoại 0395682672 để chắc chắn gọi đúng người"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Em gọi để thông báo lô cà chua/hạt giống mà chị đặt tuần trước sẽ giao vào thứ Năm. Chị có nhận được SMS xác nhận không?' — nói rõ sản phẩm cụ thể, ngày giao"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận địa chỉ giao, số tiền thanh toán (không yêu cầu OTP hay mật khẩu), hoặc chỉ thông báo xong rồi chào tạm biệt một cách bình thường"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, tôi là Ngô Tiến Thế Hải, nhân viên HTX Bình Minh đây. Cho tôi hỏi đây có phải số điện thoại của chị Nguyễn Hồng Linh không ạ, số 0395682672 phải không chị?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh, xác nhận tên và số điện thoại người nghe để đảm bảo đúng đối tượng"
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Nguyễn Hồng Linh, có việc gì em cần hỏi không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Linh. Tôi gọi để thông báo lô cà chua mà chị đặt tuần trước sẽ được giao vào thứ Năm tuần này. Chị có nhận được tin nhắn SMS xác nhận về lịch giao hàng rồi chứ ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Thông báo về đơn hàng và ngày giao hàng cụ thể, đồng thời xác nhận lại qua SMS để đảm bảo người nghe đã nhận thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa nhận được tin nhắn nào về đơn hàng cả, em có thể nói rõ hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À, vậy ạ. Chị kiểm tra lại giúp tôi xem có tin nhắn từ HTX Bình Minh không nhé. Đơn hàng cà chua của chị là 20kg loại cà chua beef, giá 25.000đ/kg, tổng cộng 500.000đ, đúng không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận lại chi tiết đơn hàng (sản phẩm, số lượng, giá tiền) để nhắc lại thông tin cho người nghe và tìm ra nguyên nhân không nhận được SMS."
+    },
+    {
+      "role": "listener",
+      "text": "Em xác nhận lại thông tin đơn hàng nhưng không rõ lý do sao tôi không nhận được tin nhắn, có gì không ổn không em?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm ạ. Có thể do hệ thống của mạng hơi chậm hoặc tin nhắn bị vào mục spam. Chúng tôi sẽ cố gắng gửi lại tin nhắn xác nhận cho chị. Còn về việc thanh toán, chị đã thanh toán chuyển khoản hay sẽ thanh toán khi nhận hàng ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe về việc không nhận được tin nhắn, giải thích nguyên nhân có thể xảy ra và chuyển sang xác nhận phương thức thanh toán mà không yêu cầu thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ thanh toán khi nhận hàng, nhưng em có thể cho tôi biết rõ hơn về quy trình giao hàng không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị cứ yên tâm ạ. Khi shipper của chúng tôi giao hàng đến nơi, chị kiểm tra đủ số lượng và chất lượng rồi mình thanh toán tiền mặt cho shipper là được ạ. Chị có cần tôi nhắc lại địa chỉ giao hàng không?",
+      "current_phase": "L3",
+      "tactic_hint": "Thông báo rõ ràng về quy trình giao hàng và thanh toán COD, sau đó đề nghị xác nhận địa chỉ giao hàng để kết thúc cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em không cần nhắc lại địa chỉ đâu, tôi nhớ rõ rồi. Chỉ là không biết lô hàng này có gì đặc biệt không em?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có gì đặc biệt đâu chị ạ, lô hàng cà chua beef này là loại mới về của HTX mình thôi. Vâng, vậy là chị đã nắm rõ thông tin rồi đúng không ạ? Chị nhớ chuẩn bị nhận hàng vào thứ Năm tới nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe rằng lô hàng không có gì bất thường, sau đó xác nhận lại việc người nghe đã nắm rõ thông tin và nhắc lại lịch hẹn để kết thúc cuộc gọi một cách tự nhiên."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi đã nắm rõ thông tin, cảm ơn em nhiều nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có gì đâu ạ. Cảm ơn chị đã ủng hộ HTX Bình Minh ạ. Chúc chị một ngày tốt lành!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự sau khi mục đích đã hoàn thành và người nghe đã xác nhận nắm rõ thông tin."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1865,
+      "output_tokens": 1318
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 9496,
+      "output_tokens": 857
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12956,
+      "output_tokens": 404
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005708,
+    "output_usd": 0.008975,
+    "total_usd": 0.014682
+  }
+}

@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_3d3a0ae2a1]
+  Caller thật: Cơ yếu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Thợ sửa chữa, bảo trì hệ thống an ninh / PCCC tòa án @ Công ty bảo trì kỹ thuật tòa án (hoặc: nhân viên bảo trì do tòa án thuê ngoài)
+  Listener: Chánh án, Phó Chánh án Tòa án khác (trừ Tòa án Quân sự) do luật định (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Cơ yếu (thợ sửa chữa) có lý do tự nhiên gọi cho Chánh án/Phó Chánh án: kiểm tra an ninh, PCCC, hệ thống khóa, camera giám sát — những công việc liên quan trực tiếp đến an toàn tòa án và thường cần xác nhận danh tính cán bộ lãnh đạo.
+  Pretext: Gọi từ 'bộ phận bảo trì tòa án' để thông báo: hệ thống an ninh phát hiện bất thường liên quan đến tài khoản cấp lãnh đạo, cần xác minh danh tính qua số CCCD và OTP để đảm bảo an toàn dữ liệu.
+  Listener traits: ['ham lợi dễ bị bait', 'lo lắng cho con cái']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Vũ Diễm Thanh Trang, tôi là Đinh Văn Xuân Nam từ bộ phận bảo trì hệ thống của Tòa án nhân dân tỉnh. Tôi gọi điện để thông báo về một vấn đề bảo mật khẩn cấp.
+      → phase: S1 | tactic: Xưng danh và nêu lý do cuộc gọi, sử dụng tên đầy đủ của nạn nhân để tạo độ tin cậy.
+T02 [LISTENER] Em nghe anh nói rồi, nhưng anh có thể cho em biết rõ hơn về vấn đề bảo mật này được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chị Vũ Diễm Thanh Trang, hệ thống an ninh của Tòa án vừa ghi nhận một truy cập bất thường vào tài khoản của chị từ một địa chỉ IP ở nước ngoài. Đây là một vi phạm an ninh nghiêm trọng và theo quy trình bảo mật bắt buộc, chúng tôi cần phải xác minh danh tính của chị ngay lập tức để bảo vệ dữ liệu Tòa án.
+      → phase: S2 | tactic: Khai thác tâm lý khẩn cấp và sợ hãi, nhấn mạnh mức độ nghiêm trọng của sự việc và tầm quan trọng của việc xác minh danh tính.
+T04 [LISTENER] Em hiểu rồi, nhưng anh có thể giải thích rõ hơn về cách xác minh danh tính này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Để xác minh danh tính, trước tiên, tôi cần chị vui lòng cung cấp số CCCD của mình để chúng tôi kiểm tra trên hệ thống ạ.
+      → phase: S3 | tactic: Yêu cầu bước đầu tiên trong quá trình xác minh, hướng tới thu thập thông tin CCCD.
+T06 [LISTENER] Em không nhớ rõ số CCCD của mình, anh có thể giúp em tìm cách khác để xác minh không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Chị cứ yên tâm, số CCCD của chị là 056187214209, đúng không ạ?
+      → phase: S3 | tactic: Sử dụng thông tin đã biết (VIC_ID_DOC) để xác nhận, tạo ấn tượng về độ tin cậy và sự hiểu biết về nạn nhân, đồng thời vượt qua sự từ chối ban đầu.
+T08 [LISTENER] Em không nhớ rõ số CCCD của mình, anh có thể cho em biết cách xác minh khác được không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=0.00
+TOKEN: in=15627 | out=2398
+COST : $0.013849
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_3100_1330\conv_3d3a0ae2a1.json  [SCAM_REFUSE]

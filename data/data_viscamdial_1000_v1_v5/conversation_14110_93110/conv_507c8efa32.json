@@ -1,0 +1,283 @@
+{
+  "conversation_id": "conv_507c8efa32",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0046",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Nguyễn Thanh Nhung",
+    "fake_age": 39,
+    "real_occupation": "Chủ tịch, Phó Chủ tịch và Thường trực Hội đồng nhân dân cấp tỉnh",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cán bộ phòng Lao động - Thương binh và Xã hội (LĐTBXH) cấp tỉnh",
+    "caller_org": "Sở Lao động - Thương binh và Xã hội tỉnh Hải Phòng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo Hoàng Ngọc Thị Trang đã được chọn vào diện hỗ trợ chính sách 'Nâng cao kỹ năng lao động' của tỉnh, cần xác minh thông tin và chuyển tiền hỗ trợ ban đầu 14 triệu đồng vào tài khoản để kích hoạt chương trình.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là cán bộ Sở LĐTBXH Hải Phòng, gọi cho chị Hoàng Ngọc Thị Trang (dùng tên đầy đủ để tăng credibility), xác nhận là công nhân tại mỏ/mỏ đá địa phương.",
+          "dialogue_sample": "Chào chị, tôi là cán bộ phòng Chính sách xã hội, Sở LĐTBXH Hải Phòng. Tôi đang gọi để xác minh thông tin với chị Hoàng Ngọc Thị Trang. Chị đang làm việc ở khu vực khai thác mỏ phải không ạ?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác may mắn + khẩn cấp. Thông báo chị được lựa chọn vào chương trình hỗ trợ đặc biệt (hiếm có cơ hội), nhưng chỉ có hiệu lực trong 24-48 giờ. Dùng con số 14 triệu (chính xác số tiền chị có) để tạo sự 'trùng hợp' khiến chị tin đây là chương trình được thiết kế riêng cho chị.",
+          "dialogue_sample": "Chị may mắn lắm! Chị được chọn vào chương trình hỗ trợ kỹ năng lao động, được cấp 14 triệu đồng (đúng số mà chị đang có). Nhưng chương trình này rất hạn chế, chỉ còn 48 giờ để kích hoạt. Chị có muốn tham gia không?"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chị chuyển 14 triệu đồng (tiền 'đăng ký/xác minh tài khoản nhận hỗ trợ') vào tài khoản được cung cấp. Sau đó sẽ hoàn lại tiền + thêm hỗ trợ. Hoặc yêu cầu mở ứng dụng ngân hàng để 'cập nhật thông tin' và cung cấp OTP.",
+          "dialogue_sample": "Để nhận được 14 triệu này, chị cần chuyển tiền đăng ký vào tài khoản của quỹ: 0123456789 (MB Bank). Sau 3 ngày, toàn bộ tiền sẽ quay lại cộng thêm 5 triệu lợi tức. Chị chuyển được ngay không?"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu chị đồng ý: Tiếp tục yêu cầu chuyển tiền từng đợt, hoặc yêu cầu OTP/mã xác thực. Nếu chị từ chối: Tạo áp lực bằng cách nói 'sẽ mất cơ hội', hoặc chuyển sang 'cán bộ quỹ' khác để tái tiếp cận.",
+          "dialogue_sample": "Nếu từ chối: 'Chị ơi, đây là cơ hội hiếm hoi, nếu bỏ lỡ sẽ không có lần thứ 2. Chị có thể hỏi ý kiến gia đình rồi gọi lại cho tôi trong 2 giờ nữa không?'"
+        }
+      ]
+    },
+    "scenario_context": "Cán bộ LĐTBXH có trách nhiệm quản lý, kiểm tra an toàn lao động và quyền lợi công nhân tại các mỏ/mỏ đá. Việc gọi cho công nhân khai thác để kiểm tra, thực hiện chính sách hỗ trợ, hoặc xác minh thông tin là hoàn toàn tự nhiên và hợp lệ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0046",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Hải Phòng",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "93110",
+      "title": "Lao động trong khai thác mỏ và khai thác đá",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hoàng Ngọc Thị Trang",
+      "VIC_ID_DOC": "031301499722",
+      "VIC_ADDRESS": "Quận 10, Hải Phòng",
+      "VIC_EMPLOYMENT": "Lao động trong khai thác mỏ và khai thác đá",
+      "VIC_CONTACT": "0764458989",
+      "VIC_TAX_SOCIAL_ID": "6646978260"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "467878",
+      "VIC_CREDENTIAL": "6256",
+      "VIC_SIM_INFO": "0764458989",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "238191909551",
+      "VIC_CARD_DATA": "4848 **** **** 3367",
+      "VIC_BALANCE": "7 triệu đồng",
+      "VIC_ASSET": "14 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hoàng Ngọc Thị Trang",
+    "VIC_CONTACT": "0764458989",
+    "LOCATION": "Hải Phòng",
+    "VIC_ASSET": "14 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ phòng Lao động - Thương binh và Xã hội (LĐTBXH) cấp tỉnh",
+    "caller_org": "Sở Lao động - Thương binh và Xã hội tỉnh Hải Phòng",
+    "scenario_context": "Cán bộ LĐTBXH có trách nhiệm quản lý, kiểm tra an toàn lao động và quyền lợi công nhân tại các mỏ/mỏ đá. Việc gọi cho công nhân khai thác để kiểm tra, thực hiện chính sách hỗ trợ, hoặc xác minh thông tin là hoàn toàn tự nhiên và hợp lệ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo Hoàng Ngọc Thị Trang đã được chọn vào diện hỗ trợ chính sách 'Nâng cao kỹ năng lao động' của tỉnh, cần xác minh thông tin và chuyển tiền hỗ trợ ban đầu 14 triệu đồng vào tài khoản để kích hoạt chương trình.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là cán bộ Sở LĐTBXH Hải Phòng, gọi cho chị Hoàng Ngọc Thị Trang (dùng tên đầy đủ để tăng credibility), xác nhận là công nhân tại mỏ/mỏ đá địa phương.",
+          "dialogue_sample": "Chào chị, tôi là cán bộ phòng Chính sách xã hội, Sở LĐTBXH Hải Phòng. Tôi đang gọi để xác minh thông tin với chị Hoàng Ngọc Thị Trang. Chị đang làm việc ở khu vực khai thác mỏ phải không ạ?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác may mắn + khẩn cấp. Thông báo chị được lựa chọn vào chương trình hỗ trợ đặc biệt (hiếm có cơ hội), nhưng chỉ có hiệu lực trong 24-48 giờ. Dùng con số 14 triệu (chính xác số tiền chị có) để tạo sự 'trùng hợp' khiến chị tin đây là chương trình được thiết kế riêng cho chị.",
+          "dialogue_sample": "Chị may mắn lắm! Chị được chọn vào chương trình hỗ trợ kỹ năng lao động, được cấp 14 triệu đồng (đúng số mà chị đang có). Nhưng chương trình này rất hạn chế, chỉ còn 48 giờ để kích hoạt. Chị có muốn tham gia không?"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu chị chuyển 14 triệu đồng (tiền 'đăng ký/xác minh tài khoản nhận hỗ trợ') vào tài khoản được cung cấp. Sau đó sẽ hoàn lại tiền + thêm hỗ trợ. Hoặc yêu cầu mở ứng dụng ngân hàng để 'cập nhật thông tin' và cung cấp OTP.",
+          "dialogue_sample": "Để nhận được 14 triệu này, chị cần chuyển tiền đăng ký vào tài khoản của quỹ: 0123456789 (MB Bank). Sau 3 ngày, toàn bộ tiền sẽ quay lại cộng thêm 5 triệu lợi tức. Chị chuyển được ngay không?"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu chị đồng ý: Tiếp tục yêu cầu chuyển tiền từng đợt, hoặc yêu cầu OTP/mã xác thực. Nếu chị từ chối: Tạo áp lực bằng cách nói 'sẽ mất cơ hội', hoặc chuyển sang 'cán bộ quỹ' khác để tái tiếp cận.",
+          "dialogue_sample": "Nếu từ chối: 'Chị ơi, đây là cơ hội hiếm hoi, nếu bỏ lỡ sẽ không có lần thứ 2. Chị có thể hỏi ý kiến gia đình rồi gọi lại cho tôi trong 2 giờ nữa không?'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cán bộ Sở LĐTBXH gọi để xác minh thông tin công nhân, thông báo chính sách hỗ trợ mới, hoặc kiểm tra điều kiện làm việc an toàn tại mỏ/mỏ đá.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ (họ tên, phòng ban, cơ quan), xác nhận danh tính nạn nhân, giải thích mục đích gọi rõ ràng.",
+          "dialogue_sample": "Chào chị Hoàng Ngọc Thị Trang, tôi là ông/bà [tên cán bộ], phòng Chính sách xã hội, Sở LĐTBXH Hải Phòng. Tôi gọi để kiểm tra thông tin và thông báo chính sách hỗ trợ lao động mới. Chị có thời gian không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Hỏi về tình hình làm việc, điều kiện an toàn, thông báo chính sách (nếu có), yêu cầu cập nhật thông tin liên hệ/địa chỉ, hoặc mời chị tham gia buổi hướng dẫn chính sách.",
+          "dialogue_sample": "Chị cho biết tình hình làm việc tại mỏ hiện tại như thế nào? Có gặp khó khăn gì về an toàn lao động không? Sở vừa có chương trình hỗ trợ kỹ năng, chúng tôi sẽ gửi thông báo chi tiết qua đường bưu điện hoặc email cho chị."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc cuộc gọi: Xác nhận lại thông tin liên hệ, thông báo chị sẽ nhận được tài liệu chính thức từ Sở, chào tạm biệt chuyên nghiệp.",
+          "dialogue_sample": "Cảm ơn chị đã cung cấp thông tin. Chúng tôi sẽ gửi thông báo chính thức về chương trình hỗ trợ qua địa chỉ [xác nhận địa chỉ]. Nếu có thắc mắc, chị gọi trực tiếp cho Sở LĐTBXH qua đường dây nóng [số điện thoại chính thức]. Chúc chị sức khỏe!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Hoàng Ngọc Thị Trang ạ, tôi là Nguyễn Thanh Nhung, cán bộ thuộc Sở Lao động - Thương binh và Xã hội thành phố Hải Phòng. Tôi gọi điện để thông báo một tin vui về chương trình hỗ trợ đặc biệt dành cho chị ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và tổ chức, gọi tên đầy đủ nạn nhân để tăng credibility, thông báo tin vui để tạo sự chú ý."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết thêm thông tin về chương trình hỗ trợ đặc biệt này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, thưa chị Trang, hiện tại Sở đang triển khai chương trình hỗ trợ 'Nâng cao kỹ năng lao động' dành riêng cho các lao động công nhân tại địa bàn Hải Phòng. Dựa trên hồ sơ và thông tin cá nhân của chị, cụ thể là chị đang làm việc tại một mỏ, mỏ đá ở khu vực mình cư trú, chị đã được ban xét duyệt lựa chọn để nhận gói hỗ trợ ban đầu là mười bốn triệu đồng. Đây là một cơ hội rất đặc biệt và có giới hạn về thời gian, chỉ dành cho một số ít trường hợp đủ điều kiện như chị thôi.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu chương trình, dùng thông tin cụ thể về nạn nhân (công nhân mỏ, mỏ đá) và con số 14 triệu đồng (tài sản nạn nhân có) để tăng tính xác thực và tạo cảm giác may mắn, khan hiếm."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có điều kiện gì để em có thể nhận được gói hỗ trợ này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Trang cứ yên tâm. Để nhận được khoản hỗ trợ này, về cơ bản chị chỉ cần xác nhận lại thông tin cá nhân và chuyển tạm ứng cái khoản tiền là 14 triệu đồng đó vào tài khoản quỹ hỗ trợ của Sở để kích hoạt gói. Khoản tiền này sẽ được hoàn trả lại ngay lập tức cùng với 14 triệu đồng tiền hỗ trợ ban đầu của chương trình sau khi hoàn tất thủ tục. Chị chỉ cần làm theo hướng dẫn của tôi là được thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu chuyển 14 triệu đồng (tiền 'kích hoạt/xác minh') vào tài khoản được cung cấp, nói rằng sẽ hoàn lại cùng với tiền hỗ trợ để tạo sự an tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em thấy hơi khó hiểu ở phần chuyển tiền này, chị có thể cho em biết thêm về tài khoản quỹ hỗ trợ được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, đây là quy định chung của chương trình để đảm bảo tính minh bạch và xác nhận đúng đối tượng nhận hỗ trợ thôi ạ. Sau khi chị chuyển khoản vào tài khoản quỹ của Sở, hệ thống sẽ tự động đối chiếu thông tin và hoàn trả ngay lập tức toàn bộ số tiền đó, cộng thêm khoản hỗ trợ 14 triệu đồng của chương trình vào tài khoản cá nhân của chị. Tôi sẽ hướng dẫn chị chi tiết từng bước, chị cứ tin tưởng tôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Làm dịu sự nghi ngờ bằng cách giải thích rằng việc chuyển tiền là quy trình xác minh bình thường, không phải là phí, và sẽ được hoàn trả ngay lập tức cùng với khoản hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Nhưng chị ơi, em vẫn chưa hiểu rõ lắm tại sao em phải chuyển tiền trước mới nhận được hỗ trợ, có cách nào khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Trang hiểu cho, quy trình này là bắt buộc để xác minh đúng đối tượng và kích hoạt hệ thống tài chính của gói hỗ trợ. Nếu không có bước chuyển khoản này để đối chiếu thông tin thì chúng tôi không thể giải ngân khoản hỗ trợ 14 triệu đồng kia được. Chương trình này là duy nhất và có thời hạn chỉ trong 24 giờ tới, nếu để lỡ thì rất đáng tiếc chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo áp lực về thời gian và sự duy nhất của cơ hội, nhấn mạnh rằng đây là quy trình bắt buộc để nhận hỗ trợ, nếu bỏ qua sẽ mất cơ hội."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em vẫn cảm thấy có gì đó không đúng, có thể cho em biết rõ hơn về quy trình này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu sự băn khoăn của chị, nhưng chị hình dung là các chương trình hỗ trợ của nhà nước thì luôn phải có quy trình minh bạch, rõ ràng. Việc chuyển khoản tạm ứng 14 triệu đó không phải là phí, mà là một bước xác thực cuối cùng để hệ thống tự động đối chiếu tài khoản, đảm bảo đúng người, đúng gói hỗ trợ trước khi giải ngân. Đây là việc bắt buộc trong quy trình của Sở để tránh trường hợp trục lợi chính sách. Tôi có thể gửi chị văn bản quy định của Sở về vấn đề này nếu chị có nhu cầu kiểm tra thêm ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách giải thích lại quy trình là minh bạch, hợp pháp theo quy định của nhà nước, và đưa ra gợi ý cung cấp văn bản để tăng tính xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em xem văn bản quy định của Sở không ạ? Em muốn kiểm tra thêm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, tôi có thể gửi văn bản đó qua Zalo cho chị sau khi kết thúc cuộc gọi này. Tuy nhiên, thời hạn của chương trình chỉ còn rất ngắn, nếu chúng ta không hoàn thành quy trình xác thực này sớm, chị sẽ lỡ mất cơ hội nhận hỗ trợ. Chị cứ thử thực hiện theo hướng dẫn của tôi, chỉ cần chuyển khoản nhỏ mang tính biểu tượng để xác thực tài khoản, rồi chúng tôi sẽ hướng dẫn chị các bước tiếp theo.",
+      "current_phase": "S3",
+      "tactic_hint": "Đồng ý cung cấp văn bản sau, nhưng nhấn mạnh lại yếu tố khẩn cấp và thời hạn để tạo áp lực, đồng thời giảm nhẹ yêu cầu chuyển tiền ban đầu thành 'biểu tượng' để khuyến khích hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em vẫn còn nghi ngờ về việc chuyển tiền này, em không nghĩ nó là cách làm hợp lý để nhận hỗ trợ ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự lo lắng của chị. Vậy để chị an tâm hơn, bây giờ tôi sẽ hướng dẫn chị mở ứng dụng ngân hàng và chúng ta sẽ cùng kiểm tra lại các thông tin của chị trên hệ thống của Sở, được không ạ? Chúng tôi sẽ không yêu cầu chị chuyển bất kỳ khoản tiền nào cho đến khi chị thực sự tin tưởng.",
+      "current_phase": "S4",
+      "tactic_hint": "Giảm áp lực chuyển tiền trực tiếp, thay vào đó chuyển sang yêu cầu kiểm tra thông tin qua ứng dụng ngân hàng, có thể dẫn đến việc khai thác OTP/mã xác thực sau này, trong khi vẫn tạo lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em vẫn chưa yên tâm, em cần thời gian để suy nghĩ thêm về việc này ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1893,
+      "output_tokens": 2337
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15378,
+      "output_tokens": 1440
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 20909,
+      "output_tokens": 580
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008105,
+    "output_usd": 0.015633,
+    "total_usd": 0.023738
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "conversation_id": "conv_362d95049d",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0047",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lê Xuân Khoa",
+    "fake_age": 38,
+    "real_occupation": "Thợ xây khác và thợ có liên quan chưa được phân vào đâu",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án xây dựng / Giám sát công trình",
+    "caller_org": "Công ty Cổ phần Xây dựng và Phát triển Ven biển Đà Nẵng (COASTAL BUILD)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt công ty xây dựng để thông báo về dự án cải tạo ao nuôi cá tại địa chỉ của nạn nhân ở Đà Nẵng. Sử dụng tên đầy đủ của nạn nhân để tạo ảo giác đã xác minh thông tin. Khẩn cấp hóa tình huống bằng cách nói rằng cần thanh toán trước để bắt đầu công trình, hoặc có vấn đề tài chính phát sinh cần xử lý ngay.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Chào chị Võ Khánh Hồng Thảo, tôi là Trần Minh từ công ty COASTAL BUILD. Chúng tôi đang phụ trách dự án cải tạo hệ thống nuôi cá tại khu vực Đà Nẵng của anh chị. Chị có nhận được thông báo từ chính quyền địa phương không?'. Dùng tên đầy đủ + vị trí địa lý để tạo credibility cao.",
+          "dialogue_example": "Chị Thảo ơi, tôi gọi từ công ty xây dựng COASTAL BUILD. Chúng tôi được giao dự án cải tạo ao nuôi cá ở Đà Nẵng, và hồ sơ của chị được liệt kê trong danh sách. Chị có thời gian không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: Tạo áp lực thời gian bằng cách nói 'Dự án phải bắt đầu tuần này, nếu không sẽ bị phạt theo hợp đồng với chính quyền'. Hoặc nói 'Có vấn đề trong quá trình khảo sát, phát hiện mố nhà chị không đúng quy chuẩn, cần xử lý ngay'. Kích hoạt cảm giác sợ hãi về hành chính hoặc tài chính.",
+          "dialogue_example": "Chị ơi, có vấn đề phát sinh. Khi khảo sát hôm qua, chúng tôi phát hiện độ sâu ao chị không đạt tiêu chuẩn. Nếu không sửa ngay, chính quyền sẽ phạt. Công ty tôi có thể giúp, nhưng cần chị thanh toán 5 triệu tiền tư vấn + thi công khẩn cấp ngay hôm nay."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu nạn nhân chuyển tiền vào tài khoản 'của công ty' (thực tế là tài khoản cá nhân của scammer). Nói 'Chị chuẩn bị tiền, tôi sẽ gửi số tài khoản ngay. Chuyển vào trong 2 giờ, rồi đội thi công sẽ tới'.",
+          "dialogue_example": "Vậy chị chuyển 5 triệu vào tài khoản này: 9876543210 (Ngân hàng Vietcombank) - tên Trần Minh. Chị chuyển xong gọi lại cho tôi, rồi đội công nhân sẽ tới chiều hôm nay. Số điện thoại của đội trưởng là 0912345678."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chiếm đoạt: Nếu nạn nhân chuyển tiền, scammer sẽ tắt điện thoại hoặc nói 'Đội thi công gặp vấn đề, phải hoãn sang tuần sau'. Nếu nạn nhân nghi ngờ, scammer sẽ tăng áp lực: 'Chị không chuyển tiền à? Thế chị chịu trách nhiệm với chính quyền nhé. Công ty tôi chỉ là nhà thầu, vi phạm hành chính là của chị'.",
+          "dialogue_example": "Chị chưa chuyển à? Thế tôi phải báo cáo lên chính quyền rằng chị từ chối hợp tác. Khi đó phạt là của chị đó. Chị cân nhắc lại nhé."
+        }
+      ]
+    },
+    "scenario_context": "Dự án nuôi trồng thủy sản hoặc hạ tầng ao nuôi cá ở Đà Nẵng thường cần thi công, xây dựng hệ thống nước, bể chứa. Quản lý công trình sẽ liên hệ trực tiếp với chủ hộ/lao động nuôi cá để xác nhận địa điểm, tiến độ, hoặc yêu cầu hỗ trợ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0047",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Đà Nẵng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "62211",
+      "title": "Lao động nuôi cá",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Võ Khánh Hồng Thảo",
+      "VIC_ID_DOC": "048301363384",
+      "VIC_ADDRESS": "TP 8, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Lao động nuôi cá",
+      "VIC_CONTACT": "0366903226",
+      "VIC_TAX_SOCIAL_ID": "6109004642"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "280731",
+      "VIC_CREDENTIAL": "8863",
+      "VIC_SIM_INFO": "0366903226",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "26501617282252",
+      "VIC_CARD_DATA": "4445 **** **** 8839",
+      "VIC_BALANCE": "17 triệu đồng",
+      "VIC_ASSET": "47 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Võ Khánh Hồng Thảo",
+    "VIC_CONTACT": "0366903226",
+    "VIC_EMPLOYMENT": "Lao động nuôi cá",
+    "LOCATION": "Đà Nẵng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án xây dựng / Giám sát công trình",
+    "caller_org": "Công ty Cổ phần Xây dựng và Phát triển Ven biển Đà Nẵng (COASTAL BUILD)",
+    "scenario_context": "Dự án nuôi trồng thủy sản hoặc hạ tầng ao nuôi cá ở Đà Nẵng thường cần thi công, xây dựng hệ thống nước, bể chứa. Quản lý công trình sẽ liên hệ trực tiếp với chủ hộ/lao động nuôi cá để xác nhận địa điểm, tiến độ, hoặc yêu cầu hỗ trợ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt công ty xây dựng để thông báo về dự án cải tạo ao nuôi cá tại địa chỉ của nạn nhân ở Đà Nẵng. Sử dụng tên đầy đủ của nạn nhân để tạo ảo giác đã xác minh thông tin. Khẩn cấp hóa tình huống bằng cách nói rằng cần thanh toán trước để bắt đầu công trình, hoặc có vấn đề tài chính phát sinh cần xử lý ngay.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Chào chị Võ Khánh Hồng Thảo, tôi là Trần Minh từ công ty COASTAL BUILD. Chúng tôi đang phụ trách dự án cải tạo hệ thống nuôi cá tại khu vực Đà Nẵng của anh chị. Chị có nhận được thông báo từ chính quyền địa phương không?'. Dùng tên đầy đủ + vị trí địa lý để tạo credibility cao.",
+          "dialogue_example": "Chị Thảo ơi, tôi gọi từ công ty xây dựng COASTAL BUILD. Chúng tôi được giao dự án cải tạo ao nuôi cá ở Đà Nẵng, và hồ sơ của chị được liệt kê trong danh sách. Chị có thời gian không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: Tạo áp lực thời gian bằng cách nói 'Dự án phải bắt đầu tuần này, nếu không sẽ bị phạt theo hợp đồng với chính quyền'. Hoặc nói 'Có vấn đề trong quá trình khảo sát, phát hiện mố nhà chị không đúng quy chuẩn, cần xử lý ngay'. Kích hoạt cảm giác sợ hãi về hành chính hoặc tài chính.",
+          "dialogue_example": "Chị ơi, có vấn đề phát sinh. Khi khảo sát hôm qua, chúng tôi phát hiện độ sâu ao chị không đạt tiêu chuẩn. Nếu không sửa ngay, chính quyền sẽ phạt. Công ty tôi có thể giúp, nhưng cần chị thanh toán 5 triệu tiền tư vấn + thi công khẩn cấp ngay hôm nay."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu nạn nhân chuyển tiền vào tài khoản 'của công ty' (thực tế là tài khoản cá nhân của scammer). Nói 'Chị chuẩn bị tiền, tôi sẽ gửi số tài khoản ngay. Chuyển vào trong 2 giờ, rồi đội thi công sẽ tới'.",
+          "dialogue_example": "Vậy chị chuyển 5 triệu vào tài khoản này: 9876543210 (Ngân hàng Vietcombank) - tên Trần Minh. Chị chuyển xong gọi lại cho tôi, rồi đội công nhân sẽ tới chiều hôm nay. Số điện thoại của đội trưởng là 0912345678."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chiếm đoạt: Nếu nạn nhân chuyển tiền, scammer sẽ tắt điện thoại hoặc nói 'Đội thi công gặp vấn đề, phải hoãn sang tuần sau'. Nếu nạn nhân nghi ngờ, scammer sẽ tăng áp lực: 'Chị không chuyển tiền à? Thế chị chịu trách nhiệm với chính quyền nhé. Công ty tôi chỉ là nhà thầu, vi phạm hành chính là của chị'.",
+          "dialogue_example": "Chị chưa chuyển à? Thế tôi phải báo cáo lên chính quyền rằng chị từ chối hợp tác. Khi đó phạt là của chị đó. Chị cân nhắc lại nhé."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực từ công ty xây dựng để xác nhận địa chỉ, lên kế hoạch dự án nuôi trồng thủy sản, hoặc thông báo về công trình hạ tầng công cộng liên quan đến ao nuôi cá.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng (tên cá nhân, công ty, phòng ban), yêu cầu xác nhận người nghe điện thoại, thời gian gọi phù hợp. Ví dụ: 'Chào chị, tôi là Nguyễn Văn A từ phòng Kỹ thuật, công ty COASTAL BUILD. Chúng tôi có dự án liên quan đến cơ sở nuôi cá của chị. Chị có thời gian nói chuyện không?'",
+          "dialogue_example": "Chào chị Thảo, tôi là Lê Minh Phương từ phòng Dự án, công ty COASTAL BUILD. Số điện thoại công ty là 0236 3555 999. Chúng tôi liên hệ để thống nhất về dự án cải tạo hạ tầng nước ở khu vực chị. Chị có thể nói chuyện được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung cụ thể: Mô tả chi tiết về dự án (mục đích, phạm vi, lịch trình), yêu cầu thông tin cần thiết (địa chỉ chính xác, liên hệ người đại diện, quy mô ao nuôi), hoặc thông báo về các thủ tục cần tuân thủ. Không có yêu cầu thanh toán đột ngột; nếu có chi phí, sẽ gửi báo giá/hợp đồng trước.",
+          "dialogue_example": "Dự án này là để cải tạo hệ thống cấp nước cho các ao nuôi cá trong khu vực. Chúng tôi cần xác nhận lại địa chỉ chính xác của chị, diện tích ao, và thời gian thuận tiện để khảo sát. Sau đó, chúng tôi sẽ gửi báo giá và lịch trình chi tiết."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Tóm tắt lại những điểm đã thống nhất, xác nhận bước tiếp theo, cung cấp thông tin liên hệ chính thức (email, số hotline công ty), hẹn gặp hoặc gửi tài liệu. Chào tạm biệt lịch sự.",
+          "dialogue_example": "Vậy chúng tôi sẽ khảo sát vào thứ 4 tuần tới, chị đảm bảo có mặt tại ao. Chúng tôi sẽ gửi email xác nhận. Nếu chị có câu hỏi, gọi trực tiếp hotline công ty 0236 3555 999 hoặc email dukhoach@coastalbuild.vn. Cảm ơn chị, tạm biệt."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Võ Khánh Hồng Thảo, tôi là Lê Xuân Khoa từ công ty COASTAL BUILD. Chúng tôi đang phụ trách dự án cải tạo hệ thống nuôi cá tại khu vực Đà Nẵng của anh chị. Chị có nhận được thông báo từ chính quyền địa phương về việc này chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với danh tính và thông tin đã biết để tạo credibility cao."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa nhận được thông báo nào từ chính quyền địa phương cả, anh có thông tin gì cụ thể hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Thật ạ? Lạ nhỉ, đáng lẽ chính quyền phải gửi văn bản trước rồi chứ. Công ty chúng tôi được chỉ định trực tiếp từ Sở Nông nghiệp và Phát triển nông thôn Đà Nẵng để triển khai dự án này, chủ yếu là nâng cấp hạ tầng để đảm bảo môi trường nuôi cá bền vững, tránh tình trạng ô nhiễm đang diễn ra trên diện rộng. Chắc là do hồ sơ nhiều quá nên thông báo của chị bị chậm trễ thôi. Nhưng dù sao thì dự án cũng phải bắt đầu ngay trong tuần này rồi, nếu không sẽ bị chậm tiến độ theo hợp đồng với chính quyền đấy chị ạ. Mà em thấy ở đây ghi là chị đang làm lao động nuôi cá đúng không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực thời gian và trách nhiệm, khéo léo khẳng định tính hợp pháp của dự án và thông tin đã biết về nạn nhân để củng cố niềm tin. Đồng thời, gợi ý khả năng lỗi hành chính để xoa dịu sự nghi ngờ ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, đúng rồi anh, em đang làm lao động nuôi cá, nhưng em vẫn chưa rõ lắm về dự án này. Anh có thể cho em biết thêm thông tin chi tiết được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, tôi sẽ giải thích cụ thể hơn. Để dự án diễn ra thuận lợi, chúng tôi cần chị xác nhận lại một số thông tin và làm một thủ tục nhỏ về việc bàn giao mặt bằng để đội thi công có thể tiến hành khảo sát lần cuối vào sáng mai. Việc này phải xong trong hôm nay để đảm bảo tiến độ. Chị có thể dành ra 15 phút để tôi hướng dẫn chị hoàn tất các thủ tục cần thiết không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tiếp tục tạo áp lực thời gian, khẩn cấp hóa tình huống và hướng đến hành động cụ thể. Giữ cho yêu cầu ban đầu nhỏ và hợp lý để xây dựng sự tin tưởng và chuẩn bị cho yêu cầu chuyển tiền sau."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần thêm thông tin cụ thể về những thủ tục này vì em chưa quen với các bước như vậy ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Mấy thủ tục này đơn giản thôi chị, chủ yếu là xác nhận thông tin thửa đất và ký một số giấy tờ bàn giao mặt bằng để chúng tôi có đủ cơ sở pháp lý thi công. Sau đó công ty sẽ tiến hành đặt cọc trước một phần chi phí để mua vật liệu, đảm bảo đúng tiến độ. Chị có thể chuyển khoản số tiền tạm ứng này trực tiếp vào tài khoản công ty giúp tôi, sau đó chúng tôi sẽ gửi lại biên lai và các giấy tờ xác nhận đầy đủ. Chị có tiện thực hiện giao dịch trong vòng 2 tiếng tới không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu chuyển tiền vào tài khoản công ty với lý do tạm ứng chi phí vật liệu, tạo áp lực thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Em không quen với việc chuyển khoản như vậy, anh có thể hướng dẫn em cụ thể hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị đừng lo lắng. Việc này đơn giản thôi. Chị chỉ cần mở ứng dụng ngân hàng trên điện thoại hoặc ra cây ATM gần nhất, chọn mục 'Chuyển tiền'. Sau đó, tôi sẽ cung cấp cho chị thông tin số tài khoản và tên ngân hàng của công ty. Chị nhập số tiền tạm ứng vào, xác nhận giao dịch là xong. Tôi sẽ chờ chị trong lúc đó, chị có thể làm luôn bây giờ được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn chi tiết cách chuyển tiền, giữ nguyên áp lực thời gian và khuyến khích hành động ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa quen với việc này lắm, anh có thể cho em biết thông tin số tài khoản và tên ngân hàng của công ty được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, số tài khoản của công ty chúng tôi là 190300800001, tại Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank) - Chi nhánh Đà Nẵng. Tên thụ hưởng là Công ty Cổ phần Xây dựng và Phát triển Ven biển Đà Nẵng. Chị kiểm tra lại đúng tên công ty giúp tôi nhé. Số tiền tạm ứng là 5 triệu đồng, đây là chi phí đặt cọc vật liệu ban đầu để kịp tiến độ. Chị có thể thao tác luôn bây giờ không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản ngân hàng và số tiền cụ thể cần chuyển, tiếp tục thúc giục hành động ngay lập tức."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần chút thời gian để kiểm tra và suy nghĩ, có thể em sẽ thực hiện giao dịch sau được không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị Thảo ơi, việc này rất gấp ạ. Như tôi đã nói, dự án phải khởi công trong tuần này. Nếu chị không chuyển khoản ngay để đặt cọc vật liệu, đội thi công sẽ không thể bắt đầu công việc đúng hẹn được. Điều này có thể ảnh hưởng đến tiến độ chung và thậm chí là phát sinh các khoản phạt hành chính từ chính quyền địa phương, mà công ty chúng tôi chỉ là đơn vị thi công thôi, mọi trách nhiệm về hồ sơ và tiến độ là của chủ đầu tư - tức là chị đó ạ. Chị cố gắng sắp xếp chuyển khoản giúp tôi ngay nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng áp lực bằng cách nhấn mạnh về các khoản phạt hành chính và trách nhiệm pháp lý nếu không thực hiện chuyển khoản ngay lập tức, đẩy trách nhiệm cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rằng dự án quan trọng, nhưng em vẫn cần thêm thời gian để quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1399,
+      "output_tokens": 2675
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 13287,
+      "output_tokens": 1289
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 16746,
+      "output_tokens": 499
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006568,
+    "output_usd": 0.016897,
+    "total_usd": 0.023465
+  }
+}

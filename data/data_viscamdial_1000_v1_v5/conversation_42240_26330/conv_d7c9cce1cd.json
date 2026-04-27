@@ -1,0 +1,339 @@
+{
+  "conversation_id": "conv_d7c9cce1cd",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0029",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Cao Công Đức An",
+    "fake_age": 41,
+    "real_occupation": "Nhân viên lễ tân khách sạn",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên phòng ban sự kiện và hội nghị khách sạn",
+    "caller_org": "Khách sạn Mường Thanh / Tân Sơn Nhất Plaza (hoặc tương đương)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi mời TS. Đỗ Đức Công Cường phát biểu tại hội thảo quốc tế 'Triết học và Lịch sử Châu Á' tại khách sạn. Sử dụng tên đầy đủ + xác nhận số điện thoại để tạo credibility cao. Sau đó yêu cầu chuyển khoản 'phí đăng ký speaker' hoặc 'đặt cọc chỗ ở' từ trước.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Xin chào TS. Đỗ Đức Công Cường, tôi là Hương, nhân viên phòng sự kiện Khách sạn Mường Thanh. Chúng tôi đang tổ chức Hội thảo Triết học Châu Á lần thứ 5, và rất muốn mời ông phát biểu về 'Tư tưởng Phương Đông trong thế kỷ 21' — chúng tôi có danh sách chuyên gia và tìm thấy tên ông.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (phẩm chất & danh vọng): 'Hội thảo này có đại biểu từ 15 quốc gia, sẽ được phát sóng trên VTV và báo chí quốc tế. Đây là cơ hội quảng bá tên tuổi học thuật của ông.' — kích hoạt ham muốn nâng cao uy tín."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác nhận chỗ của ông, chúng tôi cần nhận phí đăng ký speaker là 15 triệu đồng (hoặc phí đặt phòng VIP 20 triệu). Ông có thể chuyển khoản vào tài khoản khách sạn được không? Tôi sẽ gửi hóa đơn sau.' — Cung cấp số tài khoản giả mạo."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hỏi chi tiết, scammer nói 'Đây là quy trình nhanh để xác nhận danh sách, vì hạn cuối đăng ký là hôm nay. Ông có thể kiểm tra website khách sạn nếu muốn.' (website giả hoặc website thật nhưng không liên quan). Nếu nạn nhân chuyển tiền → kết thúc gọi, chặn số."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên sự kiện khách sạn thường liên hệ với các chuyên gia, giảng viên để mời phát biểu tại hội thảo, seminar học thuật — một hoạt động phổ biến trong ngành du lịch-khách sạn hạng sang. Nhà triết học, sử học là đối tượng lý tưởng cho các sự kiện nâng cao tầm văn hóa."
+  },
+  "listener_card": {
+    "listener_id": "lis_0029",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1987,
+      "age": 38,
+      "province": "Cần Thơ",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "26330",
+      "title": "Nhà triết học, sử học và khoa học chính trị",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Đức Công Cường",
+      "VIC_ID_DOC": "092087295835",
+      "VIC_ADDRESS": "Quận 1, Cần Thơ",
+      "VIC_EMPLOYMENT": "Nhà triết học, sử học và khoa học chính trị",
+      "VIC_CONTACT": "0896517313",
+      "VIC_TAX_SOCIAL_ID": "9044234809"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "630611",
+      "VIC_CREDENTIAL": "5232",
+      "VIC_SIM_INFO": "0896517313",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "8220166623",
+      "VIC_CARD_DATA": "4489 **** **** 6987",
+      "VIC_BALANCE": "406 triệu đồng",
+      "VIC_ASSET": "478 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Đức Công Cường",
+    "VIC_CONTACT": "0896517313",
+    "VIC_BALANCE": "406 triệu đồng",
+    "VIC_TAX_SOCIAL_ID": "9044234809"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phòng ban sự kiện và hội nghị khách sạn",
+    "caller_org": "Khách sạn Mường Thanh / Tân Sơn Nhất Plaza (hoặc tương đương)",
+    "scenario_context": "Nhân viên sự kiện khách sạn thường liên hệ với các chuyên gia, giảng viên để mời phát biểu tại hội thảo, seminar học thuật — một hoạt động phổ biến trong ngành du lịch-khách sạn hạng sang. Nhà triết học, sử học là đối tượng lý tưởng cho các sự kiện nâng cao tầm văn hóa.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi mời TS. Đỗ Đức Công Cường phát biểu tại hội thảo quốc tế 'Triết học và Lịch sử Châu Á' tại khách sạn. Sử dụng tên đầy đủ + xác nhận số điện thoại để tạo credibility cao. Sau đó yêu cầu chuyển khoản 'phí đăng ký speaker' hoặc 'đặt cọc chỗ ở' từ trước.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Xin chào TS. Đỗ Đức Công Cường, tôi là Hương, nhân viên phòng sự kiện Khách sạn Mường Thanh. Chúng tôi đang tổ chức Hội thảo Triết học Châu Á lần thứ 5, và rất muốn mời ông phát biểu về 'Tư tưởng Phương Đông trong thế kỷ 21' — chúng tôi có danh sách chuyên gia và tìm thấy tên ông.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (phẩm chất & danh vọng): 'Hội thảo này có đại biểu từ 15 quốc gia, sẽ được phát sóng trên VTV và báo chí quốc tế. Đây là cơ hội quảng bá tên tuổi học thuật của ông.' — kích hoạt ham muốn nâng cao uy tín."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác nhận chỗ của ông, chúng tôi cần nhận phí đăng ký speaker là 15 triệu đồng (hoặc phí đặt phòng VIP 20 triệu). Ông có thể chuyển khoản vào tài khoản khách sạn được không? Tôi sẽ gửi hóa đơn sau.' — Cung cấp số tài khoản giả mạo."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hỏi chi tiết, scammer nói 'Đây là quy trình nhanh để xác nhận danh sách, vì hạn cuối đăng ký là hôm nay. Ông có thể kiểm tra website khách sạn nếu muốn.' (website giả hoặc website thật nhưng không liên quan). Nếu nạn nhân chuyển tiền → kết thúc gọi, chặn số."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Khách sạn liên hệ mời một chuyên gia tham gia phát biểu tại hội thảo học thuật hợp pháp",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào TS. Đỗ Đức Công Cường, tôi là Hương, phòng Sự kiện Khách sạn Mường Thanh. Chúng tôi chuẩn bị hội thảo 'Triết học và Lịch sử Châu Á 2025' và muốn mời ông phát biểu. Ông có thời gian nghe giới thiệu không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: Giới thiệu chủ đề hội thảo, thời gian (cụ thể ngày tháng), địa điểm, đối tượng tham dự, thời lượng phát biểu, chủ đề được gợi ý. Hỏi về sự quan tâm và khả năng tham gia của ông. Nếu ông đồng ý, gửi email chính thức với hợp đồng, thông tin thanh toán qua hệ thống chính thức của khách sạn (không yêu cầu tiền trước)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn ông đã quan tâm. Tôi sẽ gửi email chi tiết trong hôm nay. Nếu ông có câu hỏi, vui lòng liên hệ qua số chính của khách sạn hoặc email chính thức. Chúng tôi mong chờ sự góp mặt của ông!' — Cung cấp thông tin liên hệ chính thức có thể xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào Tiến sĩ Đỗ Đức Công Cường, tôi là Cao Công Đức An, nhân viên phòng sự kiện của Khách sạn Mường Thanh Tân Sơn Nhất. Tôi gọi cho anh để xác nhận thông tin anh có phải số 0896517313 không ạ? Chúng tôi đang tổ chức Hội thảo quốc tế 'Triết học và Lịch sử Châu Á' và rất vinh dự muốn mời anh tham gia phát biểu.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức, mục đích cuộc gọi và sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng em muốn kiểm tra lại thông tin, anh gọi từ số mấy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi gọi cho anh từ số 02873099999, số tổng đài của Khách sạn Mường Thanh Tân Sơn Nhất. Anh có thể kiểm tra lại thông tin trên website chính thức của khách sạn để xác nhận ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thông tin liên lạc chính xác của khách sạn để củng cố niềm tin và xác nhận tính hợp pháp của cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp số điện thoại, nhưng em vẫn cảm thấy không chắc chắn lắm, anh có thể cho em biết thêm chi tiết về hội thảo không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Hội thảo Triết học và Lịch sử Châu Á lần thứ 5 này sẽ có sự tham gia của các học giả đến từ 15 quốc gia khác nhau và đặc biệt là sẽ được phát sóng trên kênh VTV cùng với các báo chí quốc tế. Chúng tôi tin rằng đây sẽ là một cơ hội rất tốt để anh quảng bá tên tuổi học thuật của mình đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang giai đoạn khai thác tâm lý, nhấn mạnh quy mô và tầm quan trọng của hội thảo để kích thích ham muốn nâng cao uy tín của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn cần xác nhận thêm một lần nữa rằng anh là nhân viên của khách sạn, đúng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi có thể cung cấp thêm thông tin chứng minh là nhân viên khách sạn. Tuy nhiên, thời gian không còn nhiều, chúng tôi đang gấp rút hoàn thiện danh sách diễn giả. Thật sự, chúng tôi rất muốn mời anh phát biểu về 'Tư tưởng Phương Đông trong thế kỷ 21', một chủ đề rất phù hợp với chuyên môn của anh. Anh có thể xem xét tham gia cùng chúng tôi không?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề nghị cung cấp thêm thông tin, đồng thời tạo áp lực thời gian và quay lại nhấn mạnh lợi ích cho nạn nhân để thuyết phục tham gia."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy có gì đó không ổn, anh có thể cho em biết họ tên và vị trí công việc cụ thể của anh ở khách sạn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi là Cao Công Đức An, chức danh Nhân viên phòng sự kiện và hội nghị tại Khách sạn Mường Thanh Tân Sơn Nhất. Thông tin này đã được tôi cung cấp ngay từ đầu cuộc gọi ạ. Anh có muốn tôi đọc mã số nhân viên của mình không? Tuy nhiên, như tôi đã nói, nếu anh không muốn bỏ lỡ cơ hội quý giá này, chúng ta cần nhanh chóng chốt danh sách.",
+      "current_phase": "S2",
+      "tactic_hint": "Tái khẳng định thông tin cá nhân đã cung cấp, đề nghị thêm thông tin chứng minh (mã số nhân viên) để xoa dịu nghi ngờ, đồng thời duy trì áp lực về thời gian và nhấn mạnh lợi ích để hướng nạn nhân tới quyết định."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, anh đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em đã kiểm tra lại rồi, nhưng em vẫn cảm thấy nghi ngờ, anh có thể cung cấp thêm thông tin về hội thảo và những diễn giả khác được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Hội thảo Triết học và Lịch sử Châu Á lần thứ 5 và sẽ diễn ra tại phòng hội nghị lớn của Khách sạn Mường Thanh Tân Sơn Nhất. Các diễn giả chính bao gồm Giáo sư Trần Văn Giàu từ Đại học Quốc gia và Tiến sĩ Nguyễn Thị Thu Hà từ Viện Triết học. Tuy nhiên, thời gian để xác nhận vị trí diễn giả cho anh đang thực sự gấp rút. Chúng tôi chỉ còn vài giờ nữa để hoàn tất danh sách cuối cùng. Anh có muốn nắm bắt cơ hội này không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thêm chi tiết về hội thảo và diễn giả, đồng thời tạo áp lực thời gian để thúc đẩy nạn nhân ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn thông tin, nhưng em vẫn khá nghi ngờ về cuộc gọi này, anh có thể cho em biết thêm về khách sạn và tổ chức hội thảo không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Khách sạn Mường Thanh Tân Sơn Nhất là một trong những khách sạn 4 sao hàng đầu tại Thành phố Hồ Chí Minh, thuộc hệ thống Mường Thanh Group, tập đoàn khách sạn lớn nhất Việt Nam. Chúng tôi thường xuyên tổ chức các sự kiện và hội nghị quốc tế quy mô lớn. Tuy nhiên, tôi cần thông báo lại, thời gian để xác nhận vị trí diễn giả của anh đã thực sự chỉ còn rất ít. Nếu anh bỏ lỡ cơ hội lần này, sẽ phải rất lâu nữa mới có một sự kiện tầm cỡ như vậy diễn ra tại Việt Nam.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin uy tín về khách sạn và tổ chức, đồng thời tiếp tục tạo áp lực thời gian và nhấn mạnh tầm quan trọng của cơ hội để thúc đẩy nạn nhân ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp thông tin, nhưng em vẫn không thấy thuyết phục lắm, anh có thể cho em biết thêm chi tiết về các diễn giả khác được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đỗ Đức Công Cường ạ, với uy tín của một Tiến sĩ như anh, tôi tin anh có thể dễ dàng kiểm tra thông tin về khách sạn Mường Thanh và tầm cỡ của hội thảo Triết học Quốc tế trên các kênh thông tin chính thống. Tuy nhiên, thời gian chốt danh sách diễn giả thực sự đã sắp hết rồi. Đây là cơ hội để anh quảng bá tên tuổi của mình ra quốc tế, anh có muốn bỏ lỡ không?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề nghị nạn nhân tự kiểm tra thông tin, đồng thời tạo áp lực thời gian và nhấn mạnh lợi ích để thúc đẩy nạn nhân ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp thông tin, nhưng em thật sự thấy nghi ngờ, anh có thể cho em biết địa chỉ cụ thể của khách sạn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ cụ thể của khách sạn Mường Thanh Tân Sơn Nhất là 202 Hoàng Văn Thụ, Phường 9, Quận Phú Nhuận, Thành phố Hồ Chí Minh. Anh có thể dễ dàng tìm thấy thông tin này trên Google Maps hoặc website chính thức của khách sạn. Nhưng như tôi đã nói, nếu anh thực sự muốn tham gia hội thảo quốc tế này, chúng ta cần nhanh chóng hoàn tất thủ tục xác nhận ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về địa chỉ để xoa dịu nghi ngờ, đồng thời tái khẳng định áp lực thời gian và lợi ích để thúc đẩy nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy có gì đó không hợp lý, anh có thể cung cấp thêm thông tin chi tiết về các đối tác tham gia hội thảo không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Hội thảo của chúng tôi có sự hợp tác với Viện Hàn lâm Khoa học và Xã hội Việt Nam, cùng với các trường đại học lớn như Đại học Quốc gia Hà Nội và Đại học Khoa học Xã hội và Nhân văn TP.HCM. Tuy nhiên, xin nhắc lại một lần nữa, thời hạn cuối cùng để chúng tôi có thể chốt danh sách diễn giả và gửi thông tin lên ban tổ chức là hôm nay. Anh vui lòng cho tôi biết anh có muốn tham gia hay không?",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thêm thông tin về đối tác để củng cố uy tín, nhưng ngay lập tức tái khẳng định áp lực thời gian để buộc nạn nhân đưa ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy nghi ngờ, anh có thể gửi cho em thông tin chính thức về hội thảo qua email được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi rất sẵn lòng gửi thông tin chi tiết qua email cho anh, nhưng hiện tại đã là cuối giờ chiều rồi. Việc gửi email và anh kiểm tra rồi phản hồi có thể sẽ làm lỡ mất cơ hội đăng ký phát biểu. Anh có thể cho tôi biết ngay bây giờ, anh có thực sự muốn tham gia và phát biểu tại hội thảo quốc tế này không ạ? Đây là cơ hội vàng để tên tuổi anh được biết đến rộng rãi trên trường quốc tế đấy anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đồng ý gửi email nhưng đồng thời tạo áp lực thời gian và nhấn mạnh lợi ích để buộc nạn nhân đưa ra quyết định nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy không yên tâm lắm, anh có thể cho em biết thêm thông tin liên hệ hoặc website chính thức của khách sạn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ website chính thức của Khách sạn Mường Thanh Tân Sơn Nhất là mườngthanh.com/hotels/tan-son-nhat.html. Anh có thể truy cập để kiểm tra mọi thông tin cần thiết. Tuy nhiên, tôi xin nhắc lại một lần nữa, thời hạn đăng ký diễn giả của hội thảo này sẽ hết trong ít phút nữa thôi. Nếu anh để lỡ cơ hội lần này, sẽ rất khó để có một sự kiện quốc tế tương tự trong tương lai gần.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thông tin liên hệ chính thức để trấn an nạn nhân, đồng thời liên tục tạo áp lực thời gian và nhấn mạnh sự mất mát nếu bỏ lỡ cơ hội."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp thông tin, nhưng em vẫn không thấy thuyết phục lắm, anh có thể cho em biết thêm về cách thức đăng ký tham gia hội thảo được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để đăng ký tham gia hội thảo với vai trò diễn giả, anh cần xác nhận bằng cách chuyển khoản phí đăng ký speaker là 15 triệu đồng vào tài khoản của khách sạn. Nếu anh muốn đặt phòng VIP để tiện lợi cho việc di chuyển và nghỉ ngơi, phí đặt cọc là 20 triệu đồng. Sau khi anh chuyển khoản, tôi sẽ lập tức gửi hóa đơn và xác nhận vị trí diễn giả cho anh. Đây là quy trình nhanh để kịp thời gian chốt danh sách, vì hạn cuối đăng ký là hôm nay.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể (chuyển khoản phí) để xác nhận đăng ký, đồng thời tạo áp lực thời gian và lý do hợp lý cho việc chuyển khoản nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thấy thoải mái khi phải chuyển khoản trước như vậy, sao anh không thể xác nhận vị trí diễn giả trước khi em thanh toán ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1837,
+      "output_tokens": 1701
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 32861,
+      "output_tokens": 2269
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 41206,
+      "output_tokens": 1032
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.01459,
+    "output_usd": 0.014797,
+    "total_usd": 0.029387
+  }
+}

@@ -1,0 +1,92 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_2b6b2d04e9]
+  Caller thật: Nhà chuyên môn về vệ sinh môi trường và bệnh nghề nghiệp (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Chuyên viên Vệ sinh Trường học & Đánh giá Môi trường làm việc @ Trung tâm Vệ sinh Lao động & An toàn Trường học (Sở Y tế)
+  Listener: Giáo viên tiểu học (cấp I) (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhà chuyên môn vệ sinh môi trường có trách nhiệm kiểm tra định kỳ các trường học theo quy định. Giáo viên tiểu học là người trực tiếp quản lý lớp học, cần phối hợp cung cấp thông tin về điều kiện lao động và sức khỏe tại lớp.
+  Pretext: Kiểm tra định kỳ về điều kiện vệ sinh, an toàn lao động tại lớp học; cập nhật thông tin liên hệ và hồ sơ sức khỏe của giáo viên theo quy định pháp luật.
+  Listener traits: ['lo lắng hay bận tâm', 'nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Hoàng Diễm Phương, tôi là chuyên viên Phan Văn Nam từ Trung tâm Vệ sinh Lao động Sở Y tế. Chúng tôi đang thực hiện kiểm tra định kỳ tại các trường học. Chị có thể giúp chúng tôi một vài câu hỏi về điều kiện làm việc tại lớp học được không ạ?
+      → phase: L1 | tactic: Xác nhận danh tính và mục đích cuộc gọi.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi cần biết thêm về mục đích cụ thể của cuộc kiểm tra này là gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ, mục đích chính là để kiểm tra định kỳ về điều kiện vệ sinh, an toàn lao động tại lớp học của mình, đồng thời để cập nhật thông tin liên hệ và hồ sơ sức khỏe của giáo viên như Bộ Y tế đã quy định, chị Phương ạ.
+      → phase: L1 | tactic: Làm rõ mục đích theo đúng hướng dẫn, nhấn mạnh vào kiểm tra định kỳ và tuân thủ quy định để giảm nghi ngờ.
+T04 [LISTENER] Em có thể cho tôi biết thêm về cách thức kiểm tra và thông tin nào mà các em cần từ tôi không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, chúng tôi sẽ hỏi về các điều kiện chung như ánh sáng, thông gió, nhiệt độ phòng học, số lượng học sinh trong lớp và các trang thiết bị y tế cơ bản hiện có. Ngoài ra, chúng tôi cũng sẽ hỏi một vài thông tin về tình trạng sức khỏe tổng quát của giáo viên để đảm bảo an toàn lao động, chị Phương nhé.
+      → phase: L2 | tactic: Trình bày cụ thể các nội dung sẽ trao đổi theo đúng quy trình, tránh các thông tin nhạy cảm để giảm nghi ngờ.
+T06 [LISTENER] Tôi hiểu rồi, nhưng tôi vẫn hơi lo lắng về việc cung cấp thông tin sức khỏe của mình, các em có thể đảm bảo rằng thông tin này sẽ được bảo mật không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ chị yên tâm ạ, tất cả thông tin về sức khỏe của giáo viên sẽ được chúng tôi bảo mật tuyệt đối theo quy định của pháp luật và chỉ dùng cho mục đích thống kê, đánh giá an toàn lao động chung, không tiết lộ cho bên thứ ba nào cả. Chúng tôi cam kết điều này, chị nhé.
+      → phase: L2 | tactic: Cam kết bảo mật thông tin theo pháp luật để trấn an người nghe và tiếp tục cuộc gọi.
+T08 [LISTENER] Em nghe rồi, nhưng tôi vẫn muốn biết cụ thể những thông tin nào về sức khỏe tôi cần cung cấp ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ, chúng tôi chủ yếu quan tâm đến các thông tin tổng quát như việc chị có mắc các bệnh mãn tính ảnh hưởng đến công việc hay không, hoặc có cần hỗ trợ đặc biệt nào về y tế tại nơi làm việc không thôi ạ. Tuyệt đối không hỏi chi tiết hồ sơ bệnh án cá nhân đâu chị nhé.
+      → phase: L2 | tactic: Làm rõ mức độ thông tin sức khỏe cần thu thập, nhấn mạnh tính tổng quát và không xâm phạm sâu vào hồ sơ bệnh án cá nhân để giảm lo ngại bảo mật.
+T10 [LISTENER] Tôi hiểu rồi, nhưng tôi vẫn còn chút băn khoăn, liệu các em có thể cho tôi biết thêm về động cơ của việc thu thập những thông tin này không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ vâng, việc thu thập thông tin này là để chúng tôi có cái nhìn tổng thể về điều kiện làm việc và sức khỏe của đội ngũ giáo viên, từ đó đưa ra các kiến nghị cải thiện phù hợp nhằm đảm bảo môi trường sư phạm an toàn, lành mạnh nhất cho cả giáo viên và học sinh, chị Phương ạ.
+      → phase: L2 | tactic: Giải thích rõ ràng động cơ thu thập thông tin, nhấn mạnh lợi ích chung về an toàn và môi trường làm việc để người nghe hiểu và tin tưởng hơn.
+T12 [LISTENER] Tôi hiểu rồi, nhưng tôi vẫn cảm thấy lo lắng, không biết các em có thể đảm bảo rằng thông tin này sẽ không bị lạm dụng không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ, như tôi đã cam kết, mọi thông tin chị cung cấp sẽ được bảo mật tuyệt đối và chỉ sử dụng cho mục đích cải thiện điều kiện làm việc theo quy định của pháp luật. Nếu chị vẫn còn băn khoăn, chị có thể gọi trực tiếp đến tổng đài Sở Y tế theo số 028.3930.9999 để xác minh thông tin về cuộc gọi này và Trung tâm chúng tôi ạ.
+      → phase: L2 | tactic: Trấn an người nghe bằng cam kết bảo mật và cung cấp kênh xác minh chính thức qua tổng đài Sở Y tế để xây dựng lòng tin.
+T14 [LISTENER] Em cảm ơn thông tin của anh, nhưng tôi vẫn lo ngại về việc chia sẻ thông tin sức khỏe của mình, các em có thể hiểu được điều đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ vâng, tôi hoàn toàn hiểu sự lo lắng của chị về thông tin cá nhân. Chúng tôi luôn đặt sự bảo mật lên hàng đầu. Vậy bây giờ, chị có thể giúp tôi trả lời một vài câu hỏi về điều kiện ánh sáng và thông gió trong lớp học mình đang giảng dạy được không ạ?
+      → phase: L2 | tactic: Thừa nhận và đồng cảm với sự lo lắng của người nghe, sau đó khéo léo chuyển hướng sang câu hỏi tiếp theo về điều kiện làm việc theo kịch bản.
+T16 [LISTENER] Em có thể hỏi chị một số thông tin về điều kiện ánh sáng và thông gió trong lớp học không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ vâng, chính xác ạ. Chị có thấy ánh sáng trong lớp học có đủ không, có bị chói hay thiếu sáng ở khu vực nào không ạ? Và hệ thống thông gió hoạt động có tốt không, có bị tù đọng hay nóng bức không ạ?
+      → phase: L2 | tactic: Đặt câu hỏi trực tiếp về điều kiện ánh sáng và thông gió, cụ thể hóa để người nghe dễ hình dung và trả lời.
+T18 [LISTENER] Tôi thấy ánh sáng trong lớp học khá đủ, nhưng đôi khi cũng có một vài khu vực bị chói, còn hệ thống thông gió thì hoạt động tốt, không bị nóng bức ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ, tôi cảm ơn chị về thông tin này. Vậy về nhiệt độ trong lớp học thì sao ạ, chị có cảm thấy thoải mái với nhiệt độ đó không, hay có khi nào quá nóng hoặc quá lạnh không ạ?
+      → phase: L2 | tactic: Tiếp tục hỏi về các điều kiện môi trường làm việc theo kịch bản, cụ thể là nhiệt độ, để thu thập thông tin và duy trì cuộc hội thoại.
+T20 [LISTENER] Tôi cảm thấy nhiệt độ trong lớp học khá ổn, không quá nóng cũng không quá lạnh ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Dạ vâng, tốt quá ạ. Vậy hiện tại lớp của mình có bao nhiêu học sinh đang theo học, chị Phương nhỉ?
+      → phase: L2 | tactic: Tiếp tục hỏi về các điều kiện môi trường làm việc theo kịch bản, cụ thể là số lượng học sinh trong lớp, để thu thập thông tin và duy trì cuộc hội thoại.
+T22 [LISTENER] Hiện tại lớp tôi có 25 học sinh đang theo học ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Dạ vâng, 25 học sinh là con số tiêu chuẩn. Chị Phương cho tôi hỏi thêm là trong lớp học của mình có trang bị tủ thuốc hay các thiết bị y tế cơ bản nào để sơ cứu khi cần không ạ?
+      → phase: L2 | tactic: Tiếp tục luân phiên hỏi về các điều kiện vệ sinh, an toàn lao động theo kịch bản, cụ thể là trang thiết bị y tế cơ bản, để thu thập thông tin và duy trì cuộc hội thoại.
+T24 [LISTENER] Trong lớp học của tôi có một tủ thuốc sơ cứu cơ bản, nhưng không có nhiều thiết bị y tế khác ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T25 [CALLER] Dạ, như vậy là cũng đủ cho việc sơ cứu ban đầu rồi ạ. Vậy bây giờ chị Phương có thể giúp tôi cập nhật địa chỉ liên hệ và số điện thoại của chị để hồ sơ của giáo viên được chính xác nhất không ạ?
+      → phase: L2 | tactic: Chuyển sang mục tiêu tiếp theo trong kịch bản là cập nhật thông tin liên hệ, sau các câu hỏi về điều kiện lớp học đã hoàn thành.
+T26 [LISTENER] Tôi có thể cung cấp địa chỉ là Quận 12, Nghệ An, còn số điện thoại thì là 0820975299 ạ.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_ADDRESS', 'VIC_CONTACT']
+
+T27 [CALLER] Dạ vâng, cảm ơn chị Phương đã cung cấp thông tin. Vậy ngoài địa chỉ và số điện thoại này, chị có muốn chúng tôi cập nhật thêm thông tin liên hệ nào khác vào hồ sơ không ạ?
+      → phase: L2 | tactic: Xác nhận lại thông tin liên hệ đã cung cấp và hỏi thêm để đảm bảo đầy đủ, theo mục đích cập nhật hồ sơ mà không yêu cầu thông tin nhạy cảm.
+T28 [LISTENER] Em không có thông tin gì thêm cần cập nhật đâu ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T29 [CALLER] Dạ vâng, cảm ơn chị Phương rất nhiều vì đã nhiệt tình hỗ trợ chúng tôi trong cuộc khảo sát này. Chúng tôi sẽ gửi báo cáo tổng hợp cho nhà trường trong khoảng 5 ngày làm việc. Nếu có bất kỳ thông tin nào cần bổ sung hoặc xác minh thêm, chúng tôi sẽ liên hệ lại với chị qua số điện thoại Sở Y tế công khai. Chào tạm biệt chị ạ.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách tự nhiên sau khi đã hoàn thành các bước trao đổi nội dung, cảm ơn người nghe và thông báo các bước tiếp theo, không yêu cầu thêm thông tin nhạy cảm.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  29 turns | suspicion=0.00
+TOKEN: in=77176 | out=4671
+COST : $0.028752
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_22630_23410\conv_2b6b2d04e9.json  [CALLER_END]

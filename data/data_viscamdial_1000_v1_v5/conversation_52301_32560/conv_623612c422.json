@@ -1,0 +1,305 @@
+{
+  "conversation_id": "conv_623612c422",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0061",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lý Xuân Minh",
+    "fake_age": 38,
+    "real_occupation": "Nhân viên thu ngân và bán vé",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Trưởng phòng Dịch vụ Khách hàng - Bệnh viện/Cơ sở Y tế",
+    "caller_org": "Bệnh viện Đa khoa Trung ương hoặc Trung tâm Y tế Quận/Huyện",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện giả danh Trưởng phòng Dịch vụ Khách hàng, thông báo rằng hệ thống lương/bảo hiểm của Phạm Diễm Trang bị lỗi và cần xác minh lại thông tin cá nhân để tránh mất quyền lợi. Sử dụng tên đầy đủ và số điện thoại để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Trưởng phòng Dịch vụ Khách hàng từ Bệnh viện X. Gọi trực tiếp số 0396754842, xác nhận 'Chị Phạm Diễm Trang phải không? Chị đang làm nhân viên trợ giúp y tế tại bệnh viện chúng tôi?' để tạo ấn tượng đã xác minh sẵn.",
+          "dialogue": "Chào chị Trang! Tôi là ông Minh từ phòng Dịch vụ Khách hàng. Hệ thống lương và bảo hiểm của chị vừa bị phát hiện bất thường. Chúng tôi cần xác minh ngay để đảm bảo quyền lợi của chị."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo sợ hãi bằng cách nói rằng nếu không xác minh trong 24 giờ, bảo hiểm y tế sẽ bị tạm dừng. Nhân viên y tế sẽ rất lo lắng vì công việc liên quan đến sức khỏe của bệnh nhân.",
+          "dialogue": "Chị ơi, nếu không xác minh ngay, hệ thống sẽ khóa bảo hiểm của chị, lúc đó chị không thể làm việc được. Tôi đang cố giúp chị tránh tình huống này. Cần chị cung cấp một số thông tin để xác minh."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu nạn nhân cung cấp mã OTP được gửi vào điện thoại để 'xác minh danh tính'. Scammer sẽ nói rằng OTP sẽ được gửi qua SMS hoặc ứng dụng ngân hàng.",
+          "dialogue": "Vừa rồi chúng tôi gửi mã xác minh (OTP) vào điện thoại của chị. Chị vui lòng đọc mã đó cho tôi để hoàn tất quá trình xác minh. Đó là bước bắt buộc cuối cùng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân cung cấp OTP, scammer sẽ sử dụng nó để truy cập tài khoản ngân hàng. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực bằng cách đe dọa khóa tài khoản hoặc yêu cầu chị liên hệ lại trong 1 giờ.",
+          "dialogue": "Cảm ơn chị. Hệ thống đã xác minh thành công. Tài khoản của chị sẽ được bình thường hóa trong vòng 2 giờ. Nếu còn vấn đề, chị liên hệ lại cho tôi nhé."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên thu ngân/bán vé tại các cơ sở y tế thường phải liên hệ với bộ phận Dịch vụ Khách hàng hoặc Quản lý nhân sự để xác nhận thông tin nhân viên, kiểm tra lương, bảo hiểm, hoặc xử lý các vấn đề hành chính. Ngược lại, bộ phận quản lý có thể gọi nhân viên trợ giúp y tế để xác minh thông tin, yêu cầu cập nhật hồ sơ, hoặc thông báo về chính sách mới."
+  },
+  "listener_card": {
+    "listener_id": "lis_0061",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Nghệ An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "32560",
+      "title": "Nhân viên trợ giúp y tế",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Diễm Trang",
+      "VIC_ID_DOC": "040301032986",
+      "VIC_ADDRESS": "TP 2, Nghệ An",
+      "VIC_EMPLOYMENT": "Nhân viên trợ giúp y tế",
+      "VIC_CONTACT": "0396754842",
+      "VIC_TAX_SOCIAL_ID": "9465786780"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4934",
+      "VIC_CREDENTIAL": "3397",
+      "VIC_SIM_INFO": "0396754842",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "9376497056",
+      "VIC_CARD_DATA": "4187 **** **** 9331",
+      "VIC_BALANCE": "610 triệu đồng",
+      "VIC_ASSET": "2.3 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Diễm Trang",
+    "VIC_CONTACT": "0396754842",
+    "VIC_EMPLOYMENT": "Nhân viên trợ giúp y tế"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Dịch vụ Khách hàng - Bệnh viện/Cơ sở Y tế",
+    "caller_org": "Bệnh viện Đa khoa Trung ương hoặc Trung tâm Y tế Quận/Huyện",
+    "scenario_context": "Nhân viên thu ngân/bán vé tại các cơ sở y tế thường phải liên hệ với bộ phận Dịch vụ Khách hàng hoặc Quản lý nhân sự để xác nhận thông tin nhân viên, kiểm tra lương, bảo hiểm, hoặc xử lý các vấn đề hành chính. Ngược lại, bộ phận quản lý có thể gọi nhân viên trợ giúp y tế để xác minh thông tin, yêu cầu cập nhật hồ sơ, hoặc thông báo về chính sách mới.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện giả danh Trưởng phòng Dịch vụ Khách hàng, thông báo rằng hệ thống lương/bảo hiểm của Phạm Diễm Trang bị lỗi và cần xác minh lại thông tin cá nhân để tránh mất quyền lợi. Sử dụng tên đầy đủ và số điện thoại để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Trưởng phòng Dịch vụ Khách hàng từ Bệnh viện X. Gọi trực tiếp số 0396754842, xác nhận 'Chị Phạm Diễm Trang phải không? Chị đang làm nhân viên trợ giúp y tế tại bệnh viện chúng tôi?' để tạo ấn tượng đã xác minh sẵn.",
+          "dialogue": "Chào chị Trang! Tôi là ông Minh từ phòng Dịch vụ Khách hàng. Hệ thống lương và bảo hiểm của chị vừa bị phát hiện bất thường. Chúng tôi cần xác minh ngay để đảm bảo quyền lợi của chị."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo sợ hãi bằng cách nói rằng nếu không xác minh trong 24 giờ, bảo hiểm y tế sẽ bị tạm dừng. Nhân viên y tế sẽ rất lo lắng vì công việc liên quan đến sức khỏe của bệnh nhân.",
+          "dialogue": "Chị ơi, nếu không xác minh ngay, hệ thống sẽ khóa bảo hiểm của chị, lúc đó chị không thể làm việc được. Tôi đang cố giúp chị tránh tình huống này. Cần chị cung cấp một số thông tin để xác minh."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu nạn nhân cung cấp mã OTP được gửi vào điện thoại để 'xác minh danh tính'. Scammer sẽ nói rằng OTP sẽ được gửi qua SMS hoặc ứng dụng ngân hàng.",
+          "dialogue": "Vừa rồi chúng tôi gửi mã xác minh (OTP) vào điện thoại của chị. Chị vui lòng đọc mã đó cho tôi để hoàn tất quá trình xác minh. Đó là bước bắt buộc cuối cùng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân cung cấp OTP, scammer sẽ sử dụng nó để truy cập tài khoản ngân hàng. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực bằng cách đe dọa khóa tài khoản hoặc yêu cầu chị liên hệ lại trong 1 giờ.",
+          "dialogue": "Cảm ơn chị. Hệ thống đã xác minh thành công. Tài khoản của chị sẽ được bình thường hóa trong vòng 2 giờ. Nếu còn vấn đề, chị liên hệ lại cho tôi nhé."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Bộ phòng Dịch vụ Khách hàng/Nhân sự của bệnh viện gọi để xác minh thông tin hồ sơ, cập nhật dữ liệu bảo hiểm, hoặc thông báo về chính sách/quyền lợi mới cho nhân viên.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng từ phòng ban cụ thể, xác nhận đúng người bằng cách hỏi tên đầy đủ, chức vụ và thời gian làm việc. Cung cấp số điện thoại bộ phòng để nạn nhân có thể xác minh lại.",
+          "dialogue": "Chào chị Phạm Diễm Trang! Tôi là Nguyễn Văn A từ phòng Dịch vụ Khách hàng bệnh viện. Số điện thoại bộ phòng là 02838 XXXXX. Chị có thể ghi lại để xác minh. Tôi gọi để cập nhật một số thông tin hồ sơ."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích rõ lý do gọi (cập nhật bảo hiểm, xác minh địa chỉ, thông báo quyền lợi mới, v.v.). Chỉ yêu cầu những thông tin cần thiết và không nhạy cảm (không yêu cầu mật khẩu, OTP, hoặc số tài khoản ngân hàng).",
+          "dialogue": "Chúng tôi đang cập nhật dữ liệu bảo hiểm y tế cho năm tới. Chị có thể xác nhận lại địa chỉ hiện tại và người thân liên hệ khẩn cấp không? Hoặc chị có thể cập nhật trực tiếp trên hệ thống nhân sự của bệnh viện."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Cảm ơn nạn nhân, cung cấp thông tin liên hệ để nạn nhân có thể xác minh hoặc liên hệ lại nếu có câu hỏi. Không yêu cầu hành động khẩn cấp hoặc nhạy cảm.",
+          "dialogue": "Cảm ơn chị đã cung cấp thông tin. Chúng tôi sẽ cập nhật vào hệ thống trong 3 ngày làm việc. Nếu chị có thắc mắc, vui lòng liên hệ phòng Dịch vụ Khách hàng qua email hoặc số điện thoại chính. Chúc chị làm việc tốt!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, xin chào chị Phạm Diễm Trang phải không ạ? Số di động 0396754842 tôi liên hệ có đúng là của chị không? Tôi là Lý Xuân Minh, Trưởng phòng Dịch vụ Khách hàng của Bệnh viện Đa khoa Trung ương đây. Chị có phải là nhân viên trợ giúp y tế đang làm việc tại bệnh viện chúng tôi không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu, xác nhận thông tin nạn nhân để tạo độ tin cậy cao."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, đúng rồi anh, em là Phạm Diễm Trang, nhân viên trợ giúp y tế.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn chị đã xác nhận. Chị Trang này, tôi gọi điện để thông báo là hệ thống lương và bảo hiểm của bệnh viện đang gặp một số lỗi kỹ thuật, và thông tin của chị Phạm Diễm Trang đang bị báo cáo là chưa được cập nhật đầy đủ. Nếu không xác minh lại trong vòng 24 giờ tới, rất có thể bảo hiểm y tế của chị sẽ bị tạm dừng đó ạ. Điều này sẽ ảnh hưởng trực tiếp đến quyền lợi của chị trong công việc.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo ra tình huống khẩn cấp và đe dọa mất quyền lợi (bảo hiểm y tế bị tạm dừng) để gây áp lực và khiến nạn nhân lo lắng, chuẩn bị cho bước yêu cầu xác minh thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói vậy thì có vẻ nghiêm trọng quá, anh có thể cho em biết cần phải làm gì để xác minh không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để đảm bảo quyền lợi và tránh gián đoạn dịch vụ, tôi cần chị xác minh lại một số thông tin cá nhân trên hệ thống. Hệ thống sẽ gửi một mã OTP qua tin nhắn đến số điện thoại này hoặc qua ứng dụng ngân hàng liên kết của chị. Chị vui lòng đọc lại mã OTP đó cho tôi để tôi nhập vào hệ thống xác minh nhanh nhất có thể nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân cung cấp mã OTP để 'xác minh danh tính', với lý do khẩn cấp và lợi ích của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Anh ơi, nhưng em không hiểu mã OTP là gì ạ, anh có thể giải thích rõ hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À, mã OTP là một dãy số hoặc chữ cái ngẫu nhiên mà hệ thống bảo mật của ngân hàng hoặc nhà mạng sẽ gửi về điện thoại của chị để xác minh chính xác chị là chủ tài khoản. Đây là bước bắt buộc để tôi có thể cập nhật thông tin và kích hoạt lại quyền lợi bảo hiểm y tế cho chị ngay lập tức. Chị cứ yên tâm, đây chỉ là một mã xác nhận thôi chị nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích mã OTP một cách đơn giản, trấn an nạn nhân về tính bảo mật và cấp thiết của việc cung cấp OTP để bảo vệ quyền lợi."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết mã OTP có được gửi đến không nữa, nếu có thì em sẽ đọc cho anh, nhưng anh chắc chắn đây là quy trình của bệnh viện chứ ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chắc chắn rồi chị Trang. Đây là quy trình bắt buộc để đảm bảo tính bảo mật và cập nhật chính xác nhất thông tin của nhân viên. Tôi là Trưởng phòng Dịch vụ Khách hàng, làm việc trực tiếp tại bệnh viện mình, và tôi đang giúp chị giải quyết vấn đề này. Nếu không phải quy trình chính thống, tôi đã không liên hệ với thông tin chi tiết về chị như vậy đâu ạ. Chị cứ xem điện thoại xem đã có tin nhắn OTP chưa nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân bằng cách khẳng định lại uy tín và chức danh của mình, nhắc lại thông tin chi tiết đã có về nạn nhân để tăng độ tin cậy, đồng thời thúc giục nạn nhân kiểm tra điện thoại để nhận OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn đang kiểm tra điện thoại nhưng chưa thấy có tin nhắn nào, anh có thể đợi em một chút được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ bình tĩnh xem. Nếu không thấy tin nhắn SMS, có thể mã OTP sẽ được gửi qua ứng dụng ngân hàng hoặc các ứng dụng bảo mật khác mà chị đã cài đặt trên điện thoại. Chị kiểm tra giúp tôi cả các ứng dụng đó nữa nhé. Chúng ta cần hoàn tất việc này sớm để tránh ảnh hưởng đến bảo hiểm y tế của chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Giục giã nạn nhân kiểm tra các kênh khác (ứng dụng ngân hàng) để tìm OTP, duy trì áp lực về thời gian và quyền lợi bị ảnh hưởng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đang kiểm tra lại cả ứng dụng ngân hàng nữa, nhưng vẫn chưa thấy mã OTP nào cả, anh có thể hướng dẫn thêm cho em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Ồ, vậy chị kiểm tra xem trong phần thông báo của ứng dụng ngân hàng đó, hoặc trong phần lịch sử giao dịch gần đây có tin nhắn nào không? Một số ngân hàng sẽ hiển thị OTP ở đó. Nếu vẫn chưa có, tôi sẽ hướng dẫn chị một cách khác để kiểm tra ngay lập tức.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục hướng dẫn nạn nhân tìm OTP ở các vị trí khác trong ứng dụng ngân hàng, thể hiện sự kiên nhẫn và sẵn lòng hỗ trợ để đạt được mục tiêu."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã kiểm tra hết cả rồi nhưng vẫn không thấy mã OTP, anh có chắc là không có cách nào khác để em xác minh không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu vậy thì để tôi hướng dẫn chị cách này. Chị có thể vào phần cài đặt của điện thoại, kiểm tra xem có chặn tin nhắn từ các số lạ hoặc từ ngân hàng không? Hoặc chị thử khởi động lại điện thoại xem sao. Đôi khi chỉ là lỗi đường truyền tạm thời thôi ạ. Chị cứ thử làm theo hướng dẫn của tôi nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân xử lý các vấn đề kỹ thuật có thể khiến OTP không hiển thị, nhằm kéo dài thời gian và giữ nạn nhân ở lại cuộc gọi, tiếp tục tìm kiếm OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ thử làm theo hướng dẫn của anh, nhưng nếu vẫn không nhận được thì em phải làm sao nữa ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ thử làm theo hướng dẫn của tôi trước đã. Nếu sau khi khởi động lại điện thoại mà vẫn không nhận được mã OTP, vậy thì chị vui lòng cung cấp cho tôi 4 số cuối của thẻ căn cước công dân hoặc số tài khoản ngân hàng mà chị đang dùng để nhận lương tại bệnh viện. Đây là cách thứ hai để tôi có thể đối chiếu thông tin và cập nhật hệ thống cho chị thủ công, tránh trường hợp bảo hiểm bị tạm dừng.",
+      "current_phase": "S3",
+      "tactic_hint": "Đưa ra phương án thay thế nếu OTP không đến (4 số cuối CCCD/STK ngân hàng) để duy trì khả năng thu thập thông tin cá nhân quan trọng, đồng thời nhắc lại sự khẩn cấp của việc bảo hiểm bị tạm dừng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói vậy nhưng em không thể cung cấp thông tin nhạy cảm được, anh có thể giúp em kiểm tra lại quy trình không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị Trang, tôi hoàn toàn hiểu sự cẩn trọng của chị. Tuy nhiên, đây là hai cách duy nhất để tôi có thể giúp chị xác minh thông tin ngay lập tức. Nếu chị không cung cấp được OTP hoặc các thông tin cá nhân cơ bản để đối chiếu, rất tiếc là tôi không thể can thiệp và hệ thống sẽ tự động tạm dừng quyền lợi bảo hiểm y tế của chị trong vòng 24 giờ tới. Điều này là quy định chung của bệnh viện để đảm bảo tính chính xác của dữ liệu nhân sự.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực mạnh mẽ hơn bằng cách khẳng định đây là các lựa chọn duy nhất và nhắc lại mối đe dọa về việc mất quyền lợi nếu không hợp tác, chuyển sang giai đoạn xử lý từ chối."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu nhưng em thực sự lo lắng và không muốn cung cấp thông tin nhạy cảm như vậy, anh có cách nào khác không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1346,
+      "output_tokens": 2357
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 20579,
+      "output_tokens": 1674
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 26076,
+      "output_tokens": 734
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.009373,
+    "output_usd": 0.01641,
+    "total_usd": 0.025784
+  }
+}

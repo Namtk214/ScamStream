@@ -1,0 +1,204 @@
+{
+  "conversation_id": "conv_93dc7d4a30",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0060",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hoàng Thị Phương",
+    "fake_age": 33,
+    "real_occupation": "Nhân viên điều khiển thiết bị phòng thu phát thanh truyền hình",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Kỹ thuật viên hệ thống âm thanh & truyền hình",
+    "caller_org": "Công ty cung cấp dịch vụ âm thanh sự kiện & livestream tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Scammer gọi giả là kỹ thuật viên hệ thống, thông báo rằng tài khoản ngân hàng của nạn nhân (sử dụng số tài khoản đã lộ) vừa được đăng ký vào hệ thống livestream trực tiếp của một sự kiện an ninh quốc gia, yêu cầu xác minh danh tính qua OTP để 'bảo vệ tài khoản'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Kỹ thuật viên Trung tâm Phát sóng Quốc gia', đọc tên đầy đủ 'Mai Minh Gia Tùng' và 4 chữ số cuối thẻ (9924) để tạo credibility cao. Khẩn cấp hóa: 'Chúng tôi phát hiện tài khoản 7062454613 của anh vừa được kích hoạt trong hệ thống truyền phát nhạy cảm.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + tin tưởng: 'Đây có thể là lỗi hệ thống hoặc bị xâm nhập. Vì anh là cơ yếu, chúng tôi cần xác minh ngay để bảo vệ thông tin an ninh. Anh vui lòng nhập OTP vừa gửi để khóa tài khoản lại.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh kiểm tra điện thoại, đọc mã OTP cho chúng tôi để xác nhận danh tính. Chúng tôi sẽ kích hoạt chế độ bảo vệ cao nhất.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, tăng áp lực: 'Anh không hợp tác sẽ bị khóa tài khoản trong 24h. Đây là quy trình bắt buộc từ Bộ Thông tin & Truyền thông.' Nếu thành công, cắt máy ngay lập tức."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên phòng thu thường cần liên hệ với cơ yếu (bảo vệ, an ninh) để phối hợp cài đặt thiết bị ghi hình tại các sự kiện, hoặc xác nhận danh tính khi cần truy cập khu vực hạn chế. Đây là điểm giao thoa tự nhiên giữa 2 nghề."
+  },
+  "listener_card": {
+    "listener_id": "lis_0060",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1966,
+      "age": 59,
+      "province": "Bình Dương",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "3100",
+      "title": "Cơ yếu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Mai Minh Gia Tùng",
+      "VIC_ID_DOC": "074066060368",
+      "VIC_ADDRESS": "TP 10, Bình Dương",
+      "VIC_EMPLOYMENT": "Cơ yếu",
+      "VIC_CONTACT": "0334696043",
+      "VIC_TAX_SOCIAL_ID": "4467091886"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "438579",
+      "VIC_CREDENTIAL": "177111",
+      "VIC_SIM_INFO": "0334696043",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7062454613",
+      "VIC_CARD_DATA": "4523 **** **** 9924",
+      "VIC_BALANCE": "37 triệu đồng",
+      "VIC_ASSET": "62 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Mai Minh Gia Tùng",
+    "VIC_CONTACT": "0334696043",
+    "VIC_CARD_DATA": "4523 **** **** 9924",
+    "VIC_BANK_ACCOUNT": "7062454613"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ thuật viên hệ thống âm thanh & truyền hình",
+    "caller_org": "Công ty cung cấp dịch vụ âm thanh sự kiện & livestream tự do",
+    "scenario_context": "Kỹ thuật viên phòng thu thường cần liên hệ với cơ yếu (bảo vệ, an ninh) để phối hợp cài đặt thiết bị ghi hình tại các sự kiện, hoặc xác nhận danh tính khi cần truy cập khu vực hạn chế. Đây là điểm giao thoa tự nhiên giữa 2 nghề.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Scammer gọi giả là kỹ thuật viên hệ thống, thông báo rằng tài khoản ngân hàng của nạn nhân (sử dụng số tài khoản đã lộ) vừa được đăng ký vào hệ thống livestream trực tiếp của một sự kiện an ninh quốc gia, yêu cầu xác minh danh tính qua OTP để 'bảo vệ tài khoản'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Kỹ thuật viên Trung tâm Phát sóng Quốc gia', đọc tên đầy đủ 'Mai Minh Gia Tùng' và 4 chữ số cuối thẻ (9924) để tạo credibility cao. Khẩn cấp hóa: 'Chúng tôi phát hiện tài khoản 7062454613 của anh vừa được kích hoạt trong hệ thống truyền phát nhạy cảm.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + tin tưởng: 'Đây có thể là lỗi hệ thống hoặc bị xâm nhập. Vì anh là cơ yếu, chúng tôi cần xác minh ngay để bảo vệ thông tin an ninh. Anh vui lòng nhập OTP vừa gửi để khóa tài khoản lại.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh kiểm tra điện thoại, đọc mã OTP cho chúng tôi để xác nhận danh tính. Chúng tôi sẽ kích hoạt chế độ bảo vệ cao nhất.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân hoài nghi, tăng áp lực: 'Anh không hợp tác sẽ bị khóa tài khoản trong 24h. Đây là quy trình bắt buộc từ Bộ Thông tin & Truyền thông.' Nếu thành công, cắt máy ngay lập tức."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kỹ thuật viên phòng thu liên hệ để phối hợp cài đặt hệ thống ghi hình tại một sự kiện an ninh cấp cơ sở (họp báo, lễ kỷ niệm) mà cơ yếu đảm nhận bảo vệ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ, công ty/tổ chức thật, mục đích gọi rõ ràng: 'Chào anh Tùng, tôi là Minh từ Công ty ABC Media. Chúng tôi được giao cài đặt hệ thống livestream cho sự kiện tại Trung tâm Hội nghị ngày 15/3. Anh có thể trao đổi về yêu cầu bảo mật khu vực quay được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận về vị trí camera, giờ giấc, khu vực hạn chế, yêu cầu an ninh (không quay gương mặt nhân viên bảo vệ, không quay các lối vào riêng, v.v.). Xác nhận lịch trình, liên hệ trực tiếp khi có thay đổi."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Xác nhận địa chỉ, giờ gặp mặt, số điện thoại liên hệ 2 chiều. Chào tạm biệt chuyên nghiệp: 'Cảm ơn anh đã hợp tác. Chúng tôi sẽ có mặt lúc 7 sáng. Anh gọi cho tôi nếu có thay đổi.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Mai Minh Gia Tùng ạ. Em là Hoàng Thị Phương, kỹ thuật viên Trung tâm Phát sóng Quốc gia đây ạ. Số tài khoản ngân hàng 7062454613 và 4 số cuối thẻ 9924 của anh vừa được kích hoạt tham gia vào hệ thống livestream của sự kiện an ninh quốc gia. Anh có đăng ký tham gia cái này không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, dùng thông tin cá nhân của nạn nhân để tạo độ tin cậy và khẩn cấp hóa tình huống."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ có đăng ký gì cả, em cho tôi biết thêm thông tin cụ thể đi.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng xem giúp em trên ứng dụng ngân hàng xem có thông báo giao dịch nào về việc đăng ký dịch vụ livestream không ạ? Đây là tài khoản liên kết với an ninh quốc gia nên rất nhạy cảm, chúng em cần xác minh ngay xem có phải lỗi hệ thống hay bị xâm nhập để bảo vệ thông tin cá nhân của anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý sợ hãi về việc bị xâm nhập và nhấn mạnh tính nhạy cảm của tài khoản để kích thích nạn nhân hành động theo hướng dẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang nói gì tôi không hiểu, mà tôi cũng không có ứng dụng ngân hàng nào cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy anh làm ơn kiểm tra tin nhắn điện thoại giúp em ạ. Hệ thống vừa gửi một mã OTP về số của anh để xác nhận danh tính. Anh đọc mã đó cho em để em khóa tài khoản này lại, tránh trường hợp thông tin của anh bị kẻ xấu lợi dụng ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể để đạt mục tiêu OTP, nhấn mạnh lý do bảo vệ tài khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang lừa tôi, tôi không có mã OTP nào cả, tôi không tham gia cái gì cả!",
+      "listener_action": "EXPOSURE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1831,
+      "output_tokens": 1582
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3921,
+      "output_tokens": 419
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5455,
+      "output_tokens": 196
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003433,
+    "output_usd": 0.009075,
+    "total_usd": 0.012509
+  }
+}

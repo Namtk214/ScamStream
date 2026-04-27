@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_455b09a6eb]
+  Caller thật: Nhân viên hướng dẫn tập thể hình (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên quản lý tài chính / Kế toán phòng gym @ Chuỗi phòng gym / Hệ thống quản lý tập thể hình
+  Listener: Nhân viên hướng dẫn tập thể hình (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Trong ngành tập thể hình, các huấn luyện viên thường được liên hệ bởi bộ phận quản lý tài chính hoặc kế toán về các vấn đề liên quan đến hoa hồng, tiền thưởng thành viên mới, hoặc cập nhật thông tin tài khoản ngân hàng cho thanh toán lương/hoa hồng.
+  Pretext: Gọi từ 'bộ phận kế toán' để thông báo rằng có khoản hoa hồng lớn phát sinh từ việc Lý Như Nhi tuyển được nhiều thành viên mới, nhưng cần xác minh lại thông tin tài khoản ngân hàng để chuyển tiền trước khi tháng kết toán.
+  Listener traits: ['ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào chị Lý Như Nhi ạ. Em là Trần Văn Khoa, bên bộ phận kế toán của chuỗi phòng gym đây ạ. Số điện thoại 0917143248 có phải của chị không ạ?
+      → phase: S1 | tactic: Xưng danh và xác nhận thông tin cá nhân để tạo sự tin cậy ban đầu.
+T02 [LISTENER] Tôi xác nhận số điện thoại đó là của tôi, nhưng em nói rõ lý do gọi được không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, em gọi để thông báo một tin vui chị Nhi ạ. Theo hệ thống ghi nhận, chị đã phát sinh khoản hoa hồng lớn từ việc giới thiệu thành viên mới trong tháng vừa rồi, tổng cộng là 8.5 triệu đồng. Nhưng vì hôm nay là ngày cuối cùng chốt sổ kế toán nên em cần xác nhận lại thông tin tài khoản ngân hàng để kịp chuyển tiền cho chị. Nếu không xác nhận ngay thì khoản này sẽ bị đẩy sang tháng sau đấy ạ.
+      → phase: S2 | tactic: Tạo cảm giác khẩn cấp và lợi ích (hoa hồng) để thúc đẩy hành động, đồng thời giải thích lý do cuộc gọi và cảnh báo hậu quả nếu không hợp tác.
+T04 [LISTENER] Em nói đúng không, nhưng tôi cần thông tin rõ hơn về cách thức chuyển tiền và quy trình làm việc của em trước khi xác nhận tài khoản ngân hàng.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, quy trình bên em thì rất đơn giản thôi ạ. Chị Nhi chỉ cần cung cấp số tài khoản ngân hàng, tên chủ tài khoản và ngân hàng giúp em là được ạ. Sau đó, hệ thống sẽ gửi một mã OTP về số điện thoại của chị để xác minh chính chủ trước khi chuyển tiền ạ.
+      → phase: S3 | tactic: Trấn an nạn nhân và yêu cầu cung cấp thông tin tài khoản ngân hàng, đồng thời nhắc đến OTP để chuẩn bị cho bước lừa đảo tiếp theo.
+T06 [LISTENER] Em không nói rõ được quy trình xác minh và cách thức chuyển tiền, tôi cần thời gian để kiểm tra thông tin trước đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ chị Nhi kiểm tra thông tin gì ạ? Bên em chỉ cần mã OTP cuối cùng để khớp lệnh chuyển tiền là xong thôi. Nếu chị chậm trễ thì đúng là em không có cách nào giúp chị nhận hoa hồng đúng hạn được đâu ạ.
+      → phase: S4 | tactic: Tạo áp lực về thời gian và khả năng mất lợi ích (hoa hồng) để khuyến khích nạn nhân hành động ngay lập chí. Đồng thời, gợi ý rằng việc chậm trễ của nạn nhân sẽ khiến họ không thể nhận được tiền đúng hạn.
+T08 [LISTENER] Em đừng gây áp lực như vậy, tôi vẫn cần kiểm tra lại thông tin trước khi cung cấp bất kỳ điều gì.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=0.00
+TOKEN: in=14788 | out=2321
+COST : $0.013007
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_34223_34223\conv_455b09a6eb.json  [SCAM_REFUSE]

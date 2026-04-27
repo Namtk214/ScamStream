@@ -1,0 +1,232 @@
+{
+  "conversation_id": "conv_6da86be623",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0049",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lưu Thùy Vy",
+    "fake_age": 30,
+    "real_occupation": "Thợ hoàn thiện đồ gỗ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên bán hàng / tư vấn nội thất gỗ cao cấp",
+    "caller_org": "cá nhân / thương lái tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện tưởng như để tư vấn bán đồ gỗ cao cấp cho phòng khám/nhà riêng, nhưng thực chất là lừa tiền qua chuyển khoản hoặc yêu cầu thanh toán trước. Sử dụng tên đầy đủ của nạn nhân để tạo ấn tượng đã có thông tin khách hàng, kết hợp với số điện thoại để khẳng định tính xác thực.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: 'Chào bác sỹ Nguyễn Văn Đức Khoa, tôi là Minh từ dự án nội thất cao cấp. Tôi có số điện thoại của bác từ danh sách khách hàng VIP trong khu vực. Hiện tôi đang có dự án gỗ quý hiếm từ Đông Nam Á, rất phù hợp với không gian làm việc chuyên nghiệp của bác.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý + Tạo khẩn cấp: 'Dự án này chỉ còn 3 bộ với giá ưu đãi đặc biệt (khoảng 150-200 triệu), nhưng đóng hàng tuần này. Bác có quan tâm không? Tôi có thể gửi hình ảnh và báo giá chi tiết. Bác sỹ như bác thường rất nhanh quyết định vì có điều kiện kinh tế tốt.'\"  (gợi ý rằng bác có 446 triệu tài sản, khả năng chi trả cao)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động + Chuyển tiền: 'Để giữ chỗ, bác cần thanh toán trước 30-50% (45-100 triệu). Tôi sẽ gửi số tài khoản để bác chuyển khoản. Sau khi nhận tiền, tôi sẽ gửi hợp đồng và lịch giao hàng. Bác có thể chuyển từ ngân hàng hoặc ứng dụng ngân hàng số của mình.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi lấy tiền: Nếu nạn nhân chuyển khoản, scammer sẽ tắt máy, chặn số, hoặc tiếp tục lấy thêm tiền với lý do 'phí vận chuyển', 'phí lắp đặt', 'phí bảo hiểm'. Nếu nạn nhân từ chối, scammer sẽ giảm giá hoặc đe dọa 'hết chỗ' để tạo áp lực."
+        }
+      ]
+    },
+    "scenario_context": "Thợ hoàn thiện đồ gỗ có thể tiếp xúc với khách hàng giàu có (bác sỹ, doanh nhân) để tư vấn và bán các sản phẩm nội thất, đồ gỗ mỹ nghệ cao cấp cho căn nhà, phòng khám hoặc văn phòng. Đây là điểm giao thoa tự nhiên: bác sỹ đa khoa thường có thu nhập cao và nhu cầu về không gian làm việc chuyên nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0049",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1992,
+      "age": 33,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "22110",
+      "title": "Bác sỹ đa khoa",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Văn Đức Khoa",
+      "VIC_ID_DOC": "001092063663",
+      "VIC_ADDRESS": "Quận 5, Hà Nội",
+      "VIC_EMPLOYMENT": "Bác sỹ đa khoa",
+      "VIC_CONTACT": "0382355655",
+      "VIC_TAX_SOCIAL_ID": "4873422603"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7225",
+      "VIC_CREDENTIAL": "3908",
+      "VIC_SIM_INFO": "0382355655",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "837099636633",
+      "VIC_CARD_DATA": "4495 **** **** 7802",
+      "VIC_BALANCE": "139 triệu đồng",
+      "VIC_ASSET": "446 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Văn Đức Khoa",
+    "VIC_CONTACT": "0382355655",
+    "VIC_CARD_DATA": "4495 **** **** 7802",
+    "VIC_BANK_ACCOUNT": "837099636633",
+    "VIC_ASSET": "446 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán hàng / tư vấn nội thất gỗ cao cấp",
+    "caller_org": "cá nhân / thương lái tự do",
+    "scenario_context": "Thợ hoàn thiện đồ gỗ có thể tiếp xúc với khách hàng giàu có (bác sỹ, doanh nhân) để tư vấn và bán các sản phẩm nội thất, đồ gỗ mỹ nghệ cao cấp cho căn nhà, phòng khám hoặc văn phòng. Đây là điểm giao thoa tự nhiên: bác sỹ đa khoa thường có thu nhập cao và nhu cầu về không gian làm việc chuyên nghiệp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện tưởng như để tư vấn bán đồ gỗ cao cấp cho phòng khám/nhà riêng, nhưng thực chất là lừa tiền qua chuyển khoản hoặc yêu cầu thanh toán trước. Sử dụng tên đầy đủ của nạn nhân để tạo ấn tượng đã có thông tin khách hàng, kết hợp với số điện thoại để khẳng định tính xác thực.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: 'Chào bác sỹ Nguyễn Văn Đức Khoa, tôi là Minh từ dự án nội thất cao cấp. Tôi có số điện thoại của bác từ danh sách khách hàng VIP trong khu vực. Hiện tôi đang có dự án gỗ quý hiếm từ Đông Nam Á, rất phù hợp với không gian làm việc chuyên nghiệp của bác.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý + Tạo khẩn cấp: 'Dự án này chỉ còn 3 bộ với giá ưu đãi đặc biệt (khoảng 150-200 triệu), nhưng đóng hàng tuần này. Bác có quan tâm không? Tôi có thể gửi hình ảnh và báo giá chi tiết. Bác sỹ như bác thường rất nhanh quyết định vì có điều kiện kinh tế tốt.'\"  (gợi ý rằng bác có 446 triệu tài sản, khả năng chi trả cao)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động + Chuyển tiền: 'Để giữ chỗ, bác cần thanh toán trước 30-50% (45-100 triệu). Tôi sẽ gửi số tài khoản để bác chuyển khoản. Sau khi nhận tiền, tôi sẽ gửi hợp đồng và lịch giao hàng. Bác có thể chuyển từ ngân hàng hoặc ứng dụng ngân hàng số của mình.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi lấy tiền: Nếu nạn nhân chuyển khoản, scammer sẽ tắt máy, chặn số, hoặc tiếp tục lấy thêm tiền với lý do 'phí vận chuyển', 'phí lắp đặt', 'phí bảo hiểm'. Nếu nạn nhân từ chối, scammer sẽ giảm giá hoặc đe dọa 'hết chỗ' để tạo áp lực."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thợ hoàn thiện đồ gỗ (hoặc nhân viên bán hàng thực sự) gọi để tư vấn và bán sản phẩm nội thất, đồ gỗ chất lượng cao cho phòng khám hoặc nhà riêng của bác sỹ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào bác sỹ Khoa, tôi là Minh từ Xưởng mộc Hùng Phát. Tôi có được số điện thoại của bác từ một khách hàng chung. Tôi muốn giới thiệu dịch vụ thiết kế nội thất gỗ cao cấp cho phòng khám hoặc không gian cá nhân. Bác có thời gian nghe giới thiệu không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi chuyên làm các sản phẩm gỗ tự nhiên, tủ tài liệu, bàn làm việc, kệ trưng bày. Bác có nhu cầu nào không? Tôi có thể gửi danh sách sản phẩm, giá cả và lịch tư vấn tại chỗ. Bác muốn tư vấn lúc nào?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: 'Vậy tôi sẽ gửi thông tin chi tiết qua email hoặc zalo của bác. Nếu bác quan tâm, tôi có thể đến tư vấn miễn phí vào tuần tới. Cảm ơn bác và hẹn gặp lại.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Nguyễn Văn Đức Khoa, tôi là Vy từ dự án nội thất cao cấp. Tôi có số điện thoại của anh từ danh sách khách hàng VIP trong khu vực. Hiện tôi đang có dự án gỗ quý hiếm từ Đông Nam Á, rất phù hợp với không gian làm việc chuyên nghiệp của anh.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tạo trust bằng cách sử dụng thông tin cá nhân của nạn nhân (tên, số điện thoại) và gợi ý về danh sách VIP."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn thông tin của anh, nhưng em chưa nghe về dự án này, anh có thể cho em biết thêm chi tiết không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, dự án này bên tôi sắp hoàn thiện và chỉ còn lại 3 bộ với giá ưu đãi đặc biệt là 150 đến 200 triệu, nhưng sẽ đóng hàng trong tuần này thôi ạ. Anh có quan tâm không? Tôi có thể gửi hình ảnh và báo giá chi tiết, những bác sĩ như anh thường rất nhanh quyết định vì có điều kiện kinh tế tốt mà.",
+      "current_phase": "S2",
+      "tactic_hint": "Bắt đầu khai thác tâm lý để tạo sự khẩn cấp và gợi ý về việc nạn nhân có khả năng chi trả cao."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng thấy giá khá cao, nhưng nếu thực sự là gỗ quý hiếm thì chắc sẽ đẹp lắm, em mong anh có thể gửi thêm hình ảnh cho em xem được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng anh, tôi đã chuẩn bị sẵn một số hình ảnh và báo giá chi tiết, tôi sẽ gửi qua Zalo cho anh ngay bây giờ. Anh check Zalo giúp tôi nhé.",
+      "current_phase": "S2",
+      "tactic_hint": "Đáp ứng yêu cầu của nạn nhân để duy trì sự tin cậy và tiếp tục dẫn dắt cuộc hội thoại."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ kiểm tra Zalo ngay, cảm ơn anh đã gửi thông tin nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh xem qua hình ảnh và báo giá chi tiết tôi vừa gửi. Nếu anh thấy ưng ý bộ nào, mình có thể tiến hành đặt cọc giữ chỗ luôn để không bỏ lỡ cơ hội. Hiện tại, chúng tôi chỉ còn vài suất ưu đãi này thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Sau khi gửi thông tin, chuyển sang phase yêu cầu hành động (đặt cọc) và tạo áp lực về thời gian/số lượng giới hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy thông tin rất hấp dẫn, nhưng em cần thêm thời gian để suy nghĩ trước khi quyết định đặt cọc, em mong anh thông cảm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Khoa ơi, tôi hiểu anh cần thời gian suy nghĩ, nhưng như tôi đã nói, dự án này đang rất hot và chỉ còn 3 bộ duy nhất. Cơ hội ưu đãi với mức giá này sẽ không còn nữa nếu anh không quyết định sớm. Để giữ chỗ, anh chỉ cần thanh toán trước 30-50% thôi ạ. Tôi sẽ gửi số tài khoản để anh chuyển khoản.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo áp lực khẩn cấp cho nạn nhân bằng cách nhấn mạnh số lượng có hạn và thời gian ưu đãi sắp hết, đồng thời đưa ra yêu cầu hành động cụ thể là chuyển khoản đặt cọc."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em vẫn muốn suy nghĩ thêm trước khi đưa ra quyết định, mong anh thông cảm cho em.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1833,
+      "output_tokens": 1796
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8014,
+      "output_tokens": 683
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10361,
+      "output_tokens": 362
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00499,
+    "output_usd": 0.010905,
+    "total_usd": 0.015895
+  }
+}

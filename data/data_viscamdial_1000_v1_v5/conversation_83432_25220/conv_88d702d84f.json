@@ -1,0 +1,432 @@
+{
+  "conversation_id": "conv_88d702d84f",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "MAX_TURNS",
+  "caller_card": {
+    "caller_id": "cal_0095",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Dương Bảo Lan",
+    "fake_age": 28,
+    "real_occupation": "Thợ vận hành cần trục (hải cảng)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng IT & Hạ tầng Mạng - Cảng Vận tải Quốc tế",
+    "caller_org": "Cảng Vận tải Quốc tế Sài Gòn (SCTC) - Bộ phận CNTT",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + otp_extraction + money_transfer",
+      "pretext": "Phát hiện hoạt động bất thường trên tài khoản ngân hàng của một nhân viên cấp cao (lợi dụng tên nạn nhân Vũ Thanh Ngọc Nhung) trong hệ thống quản lý lương của cảng. Yêu cầu kiểm tra và đặt lại mật khẩu hệ thống để bảo vệ dữ liệu nhân sự.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: Scammer gọi từ 'số nội bộ cảng' (spoofed), xưng danh là Trưởng phòng IT, nói rằng hệ thống phát hiện giao dịch nghi ngờ liên quan đến tài khoản của 'Vũ Thanh Ngọc Nhung' (sử dụng VIC_FULLNAME), số tiền 680 triệu đồng bị lock. Yêu cầu nạn nhân xác nhận danh tính là quản trị viên hệ thống được phân công xử lý sự cố này."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: Nhấn mạnh đây là sự cố 'cấp độ cao', nếu không xử lý trong 30 phút sẽ bị phong tỏa tài khoản vĩnh viễn. Nạn nhân là 'người duy nhất có quyền truy cập' hệ thống backend để reset. Tạo áp lực: 'Bạn có trách nhiệm với công ty và với nhân viên này'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động từng bước: (3a) Yêu cầu nạn nhân vào Remote Desktop Protocol (RDP) hoặc VPN cảng để 'kiểm tra logs'. Trong quá trình này, scammer hướng dẫn nạn nhân nhập OTP từ tin nhắn ngân hàng của chính nạn nhân (không phải của 'Vũ Thanh Ngọc Nhung'). (3b) Sau khi có OTP, scammer yêu cầu nạn nhân 'xác nhận giao dịch hoàn lại' — thực chất là chuyển tiền từ tài khoản nạn nhân sang tài khoản scammer, với lý do 'kỹ thuật' hay 'bảo vệ tạm thời'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi thành công hoặc từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'hệ thống bảo mật yêu cầu xác nhận qua cuộc gọi riêng từ ngân hàng, đó không phải lừa đảo'. Nếu thành công, scammer cắt máy ngay lập tức và tắt số điện thoại. Nếu nạn nhân từ chối, scammer dọa rằng 'tài khoản sẽ bị phong tỏa' và cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Hải cảng cần liên hệ với các nhà quản trị hệ thống bên ngoài để xử lý sự cố hạ tầng IT hoặc nâng cấp hệ thống bảo mật. Cảng vận tải thường outsource quản lý hệ thống cho các chuyên gia độc lập hoặc công ty CNTT để tối ưu chi phí."
+  },
+  "listener_card": {
+    "listener_id": "lis_0095",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "Bình Thuận",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "25220",
+      "title": "Nhà quản trị hệ thống",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Thanh Ngọc Nhung",
+      "VIC_ID_DOC": "060302999309",
+      "VIC_ADDRESS": "Huyện 1, Bình Thuận",
+      "VIC_EMPLOYMENT": "Nhà quản trị hệ thống",
+      "VIC_CONTACT": "0333268796",
+      "VIC_TAX_SOCIAL_ID": "5150372632"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "973654",
+      "VIC_CREDENTIAL": "8128",
+      "VIC_SIM_INFO": "0333268796",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "45925926178",
+      "VIC_CARD_DATA": "4621 **** **** 5441",
+      "VIC_BALANCE": "680 triệu đồng",
+      "VIC_ASSET": "920 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Thanh Ngọc Nhung",
+    "VIC_CONTACT": "0333268796",
+    "VIC_BALANCE": "680 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng IT & Hạ tầng Mạng - Cảng Vận tải Quốc tế",
+    "caller_org": "Cảng Vận tải Quốc tế Sài Gòn (SCTC) - Bộ phận CNTT",
+    "scenario_context": "Hải cảng cần liên hệ với các nhà quản trị hệ thống bên ngoài để xử lý sự cố hạ tầng IT hoặc nâng cấp hệ thống bảo mật. Cảng vận tải thường outsource quản lý hệ thống cho các chuyên gia độc lập hoặc công ty CNTT để tối ưu chi phí.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + otp_extraction + money_transfer",
+      "pretext": "Phát hiện hoạt động bất thường trên tài khoản ngân hàng của một nhân viên cấp cao (lợi dụng tên nạn nhân Vũ Thanh Ngọc Nhung) trong hệ thống quản lý lương của cảng. Yêu cầu kiểm tra và đặt lại mật khẩu hệ thống để bảo vệ dữ liệu nhân sự.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: Scammer gọi từ 'số nội bộ cảng' (spoofed), xưng danh là Trưởng phòng IT, nói rằng hệ thống phát hiện giao dịch nghi ngờ liên quan đến tài khoản của 'Vũ Thanh Ngọc Nhung' (sử dụng VIC_FULLNAME), số tiền 680 triệu đồng bị lock. Yêu cầu nạn nhân xác nhận danh tính là quản trị viên hệ thống được phân công xử lý sự cố này."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: Nhấn mạnh đây là sự cố 'cấp độ cao', nếu không xử lý trong 30 phút sẽ bị phong tỏa tài khoản vĩnh viễn. Nạn nhân là 'người duy nhất có quyền truy cập' hệ thống backend để reset. Tạo áp lực: 'Bạn có trách nhiệm với công ty và với nhân viên này'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động từng bước: (3a) Yêu cầu nạn nhân vào Remote Desktop Protocol (RDP) hoặc VPN cảng để 'kiểm tra logs'. Trong quá trình này, scammer hướng dẫn nạn nhân nhập OTP từ tin nhắn ngân hàng của chính nạn nhân (không phải của 'Vũ Thanh Ngọc Nhung'). (3b) Sau khi có OTP, scammer yêu cầu nạn nhân 'xác nhận giao dịch hoàn lại' — thực chất là chuyển tiền từ tài khoản nạn nhân sang tài khoản scammer, với lý do 'kỹ thuật' hay 'bảo vệ tạm thời'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi thành công hoặc từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'hệ thống bảo mật yêu cầu xác nhận qua cuộc gọi riêng từ ngân hàng, đó không phải lừa đảo'. Nếu thành công, scammer cắt máy ngay lập tức và tắt số điện thoại. Nếu nạn nhân từ chối, scammer dọa rằng 'tài khoản sẽ bị phong tỏa' và cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ bộ phận CNTT cảng để thông báo về bảo trì hệ thống định kỳ, cập nhật bảo mật, hoặc yêu cầu hỗ trợ kỹ thuật từ nhà quản trị hệ thống bên ngoài.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Gọi từ số chính thức của cảng (có thể tra cứu được), xưng danh rõ ràng tên + phòng ban + mục đích cuộc gọi. Yêu cầu xác nhận danh tính nạn nhân qua câu hỏi bảo mật hoặc so khớp thông tin công việc (không bao giờ yêu cầu mật khẩu)."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc rõ ràng: Thông báo cụ thể về thời gian bảo trì hệ thống (ví dụ: '15h-17h thứ Năm'), các dịch vụ bị ảnh hưởng, hoặc yêu cầu nạn nhân kiểm tra một số log file cụ thể qua quy trình bình thường (không yêu cầu OTP, không yêu cầu chuyển tiền, không yêu cầu truy cập từ xa bất ngờ)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Xác nhận lại thông tin đã trao đổi, cung cấp contact người liên hệ nếu cần hỗ trợ, gửi email xác nhận sau cuộc gọi. Chào tạm biệt lịch sự, không tạo áp lực hoặc khẩn cấp nhân tạo."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_FULLNAME": "Vũ Thanh Ngọc Nhung",
+    "VIC_BIOMETRIC": "123456789, 9876"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị, tôi là Dương Bảo Lan, Trưởng phòng IT Cảng Vận tải Quốc tế. Bên tôi vừa phát hiện một giao dịch bất thường liên quan đến tài khoản lương của nhân viên Vũ Thanh Ngọc Nhung, số tiền 680 triệu đồng. Chị có phải là người đang quản lý hệ thống này không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu chức danh cao, sử dụng thông tin nạn nhân (VIC_FULLNAME, VIC_BALANCE) để tạo độ tin cậy và khơi gợi sự chú ý."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em là Vũ Thanh Ngọc Nhung, nhưng sao lại có giao dịch bất thường ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {
+        "VIC_FULLNAME": "Vũ Thanh Ngọc Nhung"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Nhung. Hệ thống báo là tiền lương của chị đã bị tạm khóa do nghi ngờ có truy cập trái phép từ một địa chỉ IP lạ. Tôi cần chị kiểm tra ngay để kích hoạt lại tài khoản. Hiện tại, chị có thể đăng nhập vào hệ thống quản lý lương của cảng không?",
+      "current_phase": "S1",
+      "tactic_hint": "Xác nhận danh tính nạn nhân để củng cố lòng tin, tạo tình huống khẩn cấp liên quan trực tiếp đến nạn nhân, và hướng dẫn hành động đầu tiên."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em không biết địa chỉ IP đó là gì, chị có thể hướng dẫn em làm thế nào để kiểm tra được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm, tôi sẽ hướng dẫn chị từng bước. Trước tiên, để truy cập vào hệ thống nội bộ của cảng, chị vui lòng mở trình duyệt và gõ địa chỉ Remote Desktop Protocol (RDP) mà bên tôi đã cấp phát cho quản trị viên. Chị có nhớ địa chỉ đó không?",
+      "current_phase": "S3",
+      "tactic_hint": "Chuyển sang giai đoạn hướng dẫn hành động cụ thể. Yêu cầu nạn nhân truy cập RDP để thiết lập kiểm soát từ xa, tạo điều kiện cho các bước sau."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em không nhớ địa chỉ đó lắm, chị có thể đọc lại cho em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Địa chỉ là rdp.sctc.gov.vn. Chị vui lòng nhập đầy đủ địa chỉ này vào trình duyệt, sau đó đăng nhập bằng tài khoản quản trị viên của chị. Nếu chị gặp khó khăn, tôi sẽ hướng dẫn chị cài đặt TeamViewer để tôi có thể hỗ trợ trực tiếp.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp địa chỉ RDP cụ thể và gợi ý sử dụng TeamViewer để có quyền kiểm soát máy tính của nạn nhân, đẩy nhanh quá trình. Đồng thời, giữ thái độ hỗ trợ để giảm nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ thử vào rdp.sctc.gov.vn ngay bây giờ, nhưng nếu có gì khó khăn, chị có thể chỉ cho em cách cài đặt TeamViewer được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ truy cập thử đi ạ. Nếu cần, chị chỉ cần nói, tôi sẽ đọc từng bước cài đặt TeamViewer để tôi có thể xem và hướng dẫn chị xử lý tình huống khẩn cấp này. Đây là vấn đề bảo mật cấp độ cao ảnh hưởng đến toàn bộ hệ thống lương của cảng, không chỉ riêng tài khoản của chị, nên chúng ta cần xử lý gấp.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận sự hỗ trợ cài đặt TeamViewer, đồng thời nhấn mạnh tính khẩn cấp và mức độ nghiêm trọng của sự cố để tạo áp lực, thúc đẩy nạn nhân hợp tác nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, chị sẽ cố gắng làm nhanh để giải quyết việc này, nhưng em vẫn cảm thấy hơi lo lắng ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị yên tâm, tôi hiểu sự lo lắng của chị. Nhưng chính vì đây là hệ thống lương, tôi – trưởng phòng IT – đang trực tiếp hỗ trợ chị để đảm bảo tiền lương của chị và dữ liệu toàn bộ nhân sự không bị thất thoát. Quan trọng nhất bây giờ là chị đăng nhập vào được RDP để chúng ta cùng kiểm tra logs. Chị đã vào được trang đăng nhập chưa ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu lo lắng của nạn nhân bằng cách nhấn mạnh vai trò và trách nhiệm của mình, tái khẳng định tầm quan trọng của vấn đề, và tiếp tục hướng dẫn nạn nhân thực hiện bước truy cập RDP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã vào được trang đăng nhập, nhưng không biết tài khoản quản trị viên của em là gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm. Tài khoản quản trị viên của chị thường là tên đăng nhập của chị trên hệ thống nhân sự, kèm theo một mật khẩu tạm thời. Chị thử nhập thông tin đó xem sao. Nếu không được, chị có thể kiểm tra email nội bộ của cảng, thường có thư hướng dẫn tài khoản quản trị viên riêng.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân thử các thông tin đăng nhập phổ biến hoặc kiểm tra email nội bộ, giữ thái độ hỗ trợ và tiếp tục điều hướng nạn nhân tự truy cập vào hệ thống."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ thử dùng tên đăng nhập của em trên hệ thống nhân sự kèm mật khẩu tạm thời, cảm ơn chị đã hướng dẫn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ thử đi. Nếu sau 3 lần không thành công, hãy báo lại tôi ngay để tôi hướng dẫn chị cách reset mật khẩu hoặc dùng giải pháp TeamViewer nhanh hơn. Thời gian là rất quan trọng để tránh tài khoản bị phong tỏa vĩnh viễn.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo áp lực về thời gian và hậu quả (phong tỏa tài khoản vĩnh viễn) để thúc đẩy nạn nhân hành động nhanh chóng hoặc chấp nhận giải pháp TeamViewer, đồng thời tiếp tục duy trì thái độ hỗ trợ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ cố gắng nhập lại tên đăng nhập và mật khẩu, chị hãy chờ em một chút nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ bình tĩnh, tôi sẽ đợi. Quan trọng là chúng ta phải xử lý dứt điểm tình trạng này để đảm bảo an toàn tài chính cho chị và tránh ảnh hưởng đến hệ thống chung của cảng. Cứ có vấn đề gì là chị cứ thông báo cho tôi ngay nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ thái độ bình tĩnh, trấn an nạn nhân, đồng thời nhấn mạnh lại tầm quan trọng của việc xử lý vấn đề và duy trì liên lạc để tiếp tục hướng dẫn các bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã nhập xong tên đăng nhập và mật khẩu, nhưng vẫn không vào được ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vậy thì không sao, chúng ta sẽ chuyển sang phương án nhanh hơn. Chị có thể mở trình duyệt web và gõ teamviewer.com được không? Tôi sẽ hướng dẫn chị cài đặt phần mềm này để tôi có thể hỗ trợ trực tiếp và kiểm tra logs hệ thống cho chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Khi RDP không thành công, ngay lập tức chuyển sang phương án TeamViewer (công cụ truy cập từ xa) để giành quyền kiểm soát máy tính nạn nhân, giữ vững tiến độ và tạo cảm giác 'hỗ trợ trực tiếp'."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ vào teamviewer.com ngay bây giờ, nhưng nếu có gì khó khăn, chị có thể hướng dẫn em rõ hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ truy cập teamviewer.com đi ạ. Sau đó, chị tìm và tải về bản 'TeamViewer QuickSupport'. Đây là phiên bản không cần cài đặt, chỉ cần chạy là tôi có thể kết nối để giúp chị xử lý ngay lập tức. Chị nhớ là không cần cài đặt bản đầy đủ đâu nhé, chỉ bản QuickSupport thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân tải và chạy TeamViewer QuickSupport, nhấn mạnh đây là phiên bản không cần cài đặt để giảm thiểu rào cản kỹ thuật và đẩy nhanh quy trình, đồng thời tạo cảm giác 'đang hỗ trợ' chứ không phải 'đang kiểm soát'."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã vào teamviewer.com rồi, bây giờ em tìm bản 'TeamViewer QuickSupport' ở đâu ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị nhìn giúp tôi trên trang đó có nút 'Download QuickSupport' hoặc 'Tải về phiên bản QuickSupport' không? Chị bấm vào đó để tải về và chạy file vừa tải nhé. Nhớ là chỉ chạy file đó thôi, không cần cài đặt gì thêm.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn nạn nhân rõ ràng về vị trí nút tải xuống và cách chạy ứng dụng TeamViewer QuickSupport, nhắc lại rằng không cần cài đặt để giữ sự đơn giản và giảm nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em thấy nút 'Download QuickSupport' ở đây rồi, chị có thể chỉ cho em cách chạy file đó được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Sau khi tải về, chị mở thư mục 'Downloads' và nhấp đúp vào file vừa tải, thường có tên là 'TeamViewer_QuickSupport.exe'. Khi chương trình khởi động, nó sẽ hiển thị một mã ID và mật khẩu. Chị đọc cho tôi mã ID và mật khẩu đó để tôi kết nối vào máy của chị kiểm tra logs ngay lập tức.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn chi tiết cách chạy file TeamViewer QuickSupport và yêu cầu thông tin truy cập (ID/Password) để có quyền kiểm soát máy tính nạn nhân, tiếp tục giữ thái độ hỗ trợ và khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ mở thư mục 'Downloads' và tìm file vừa tải về ngay, nhưng em hơi lo lắng không biết có an toàn không ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị yên tâm, việc này hoàn toàn an toàn. TeamViewer là phần mềm hỗ trợ từ xa được các doanh nghiệp lớn tin dùng, và tôi chỉ kết nối để xem logs hệ thống, tìm ra nguyên nhân và cách khắc phục sự cố giao dịch bất thường này thôi. Chị đọc giúp tôi ID và mật khẩu để không làm gián đoạn quá trình xử lý khẩn cấp nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự lo lắng về an toàn bằng cách khẳng định uy tín của TeamViewer và mục đích hợp pháp của việc kết nối. Đồng thời, tái khẳng định tính khẩn cấp để thúc đẩy nạn nhân cung cấp thông tin truy cập."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, chị hãy chờ em một chút để mở file và đọc mã ID và mật khẩu cho chị ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ bình tĩnh thực hiện theo hướng dẫn. Tôi sẽ chờ. Chúng ta đang chạy đua với thời gian để bảo vệ tài khoản cho chị và cả hệ thống. Chị đọc xong thì báo tôi ngay nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giữ thái độ bình tĩnh, trấn an nạn nhân, đồng thời nhấn mạnh lại tầm quan trọng của việc xử lý vấn đề và duy trì liên lạc để tiếp tục hướng dẫn các bước tiếp theo, đồng thời tái khẳng định tính khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đã mở file và thấy mã ID là 123456789 và mật khẩu là 9876 ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {
+        "VIC_BIOMETRIC": "123456789, 9876"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời! Cảm ơn chị. Chị giữ nguyên màn hình đó nhé, tôi sẽ kết nối ngay bây giờ. Trong lúc tôi đang kiểm tra logs, chị có thể mở tin nhắn điện thoại để tôi hướng dẫn chị xác nhận một mã OTP, đó là mã xác nhận giao dịch hoàn lại số tiền bị khóa về tài khoản của chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Sau khi có quyền truy cập TeamViewer, ngay lập tức yêu cầu OTP với lý do 'xác nhận giao dịch hoàn lại', đánh lừa nạn nhân tin rằng đang xử lý sự cố. Đây có thể là bước lấy OTP chuyển tiền hoặc chiếm tài khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em chưa nhận được mã OTP nào cả, chị có thể hướng dẫn em làm sao để lấy mã này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị cứ giữ điện thoại trong tay. Tôi đã kết nối máy tính của chị, đang kiểm tra logs rồi. Chị chờ một chút, hệ thống sẽ tự động gửi mã OTP từ ngân hàng về số điện thoại của chị để xác nhận giao dịch hoàn tiền. Khi nhận được, chị đọc ngay cho tôi để tôi nhập vào hệ thống nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giả vờ đang kiểm tra logs trên máy tính nạn nhân thông qua TeamViewer, đồng thời thông báo mã OTP sắp đến để kích hoạt giao dịch hoàn tiền. Mục đích là để nạn nhân đọc OTP cho scammer, hoàn tất việc chiếm đoạt tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chờ mã OTP từ ngân hàng, nhưng có cần phải làm gì thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Không cần làm gì thêm đâu chị, chị cứ giữ điện thoại bên mình thôi. Hệ thống đang xử lý và sẽ gửi mã OTP trong vài giây tới. Chị lưu ý đây là mã từ ngân hàng của chị, dùng để xác nhận hoàn lại 680 triệu đồng đã bị khóa. Ngay khi có, đọc giúp tôi để tôi hoàn tất quy trình.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân, khẳng định OTP sắp đến và mục đích của nó là 'hoàn tiền' để tiếp tục giữ lòng tin và lừa nạn nhân đọc mã OTP. Nhấn mạnh số tiền bị khóa để tạo động lực."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chờ mã OTP từ ngân hàng, cảm ơn chị đã hỗ trợ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Không có gì đâu chị. Đây là trách nhiệm của tôi với vai trò Trưởng phòng IT mà. Chị cứ giữ điện thoại, mã OTP sẽ đến trong khoảng 30 giây nữa. Đây sẽ là bước cuối cùng để số tiền 680 triệu đồng của chị được hoàn trả và tài khoản hoạt động bình thường trở lại. Khi có mã, chị đọc qua đây nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục trấn an nạn nhân, khẳng định trách nhiệm và tính cấp bách của tình huống. Nhấn mạnh lại số tiền và mục đích 'hoàn trả' để củng cố độ tin cậy và khẩn cầu nạn nhân cung cấp OTP khi nhận được."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ chú ý chờ mã OTP, chị hãy đợi em nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi sẽ đợi. Chị nhớ là đây là mã OTP duy nhất dùng để xác thực giao dịch hoàn tiền, chị tuyệt đối không chia sẻ cho ai khác ngoài tôi lúc này, vì tôi là người đang xử lý trực tiếp trên hệ thống của chị. Chị có mã OTP chưa?",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh tính bảo mật của OTP nhưng lại yêu cầu nạn nhân cung cấp cho mình. Tái khẳng định vai trò 'người xử lý trực tiếp' để tạo độ tin cậy và thúc giục nạn nhân đọc OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em vẫn đang chờ mã OTP từ ngân hàng, chị hãy đợi em một chút nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1366,
+      "output_tokens": 1885
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 64104,
+      "output_tokens": 3082
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 72991,
+      "output_tokens": 1472
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.025135,
+    "output_usd": 0.018013,
+    "total_usd": 0.043149
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "conversation_id": "conv_3873b38bdd",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0055",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lê Ngọc Thị Anh",
+    "fake_age": 40,
+    "real_occupation": "Tư vấn quy trình kinh doanh công nghệ thông tin/phân tích kinh doanh",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên phân tích dữ liệu / Chuyên viên tối ưu hóa quy trình dịch vụ khách hàng",
+    "caller_org": "Công ty tư vấn quy trình kinh doanh (hoặc cá nhân tự do - tư vấn độc lập)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty tư vấn CNTT thực sự tiến hành khảo sát hiệu suất quy trình dịch vụ khách hàng, cần xác nhận thông tin nhân viên (tên, số điện thoại) và có thể cần cập nhật tài khoản ngân hàng để hỗ trợ hoặc thưởng hiệu suất thực sự.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào Anh Dương, tôi là Anh Minh từ công ty Tư vấn XYZ. Chúng tôi đang thực hiện dự án tối ưu hóa quy trình dịch vụ cho khách hàng của bạn. Có phải đây là số điện thoại 0349117825 không?' → Xác nhận danh tính hai chiều"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết về dự án, mục tiêu, lợi ích → Nếu cần cập nhật tài khoản: 'Để hỗ trợ nhân viên xuất sắc, công ty cần cập nhật tài khoản ngân hàng của anh trong hệ thống. Anh có thể cập nhật trực tiếp trên cổng nhân sự của công ty hoặc gửi qua email chính thức (không qua điện thoại)' → Minh bạch, không tạo áp lực"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh đã hợp tác. Chúng tôi sẽ gửi email xác nhận chi tiết dự án. Nếu có câu hỏi, anh liên hệ qua số chính thức của công ty (có thể tra cứu trên website)' → Để lại thông tin có thể xác minh"
+        }
+      ]
+    },
+    "scenario_context": "Người bồi phòng và nhân viên dịch vụ là đối tượng cần tối ưu hóa quy trình làm việc, cải thiện hiệu suất. Chuyên viên CNTT/phân tích kinh doanh tự nhiên cần gọi để khảo sát, phân tích dữ liệu hiệu suất làm việc, hoặc xác nhận thông tin nhân sự phục vụ dự án tối ưu hóa."
+  },
+  "listener_card": {
+    "listener_id": "lis_0055",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1963,
+      "age": 62,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "51620",
+      "title": "Người bồi phòng và những người được thuê để làm bầu bạn",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Xuân Hữu Đức",
+      "VIC_ID_DOC": "079063635348",
+      "VIC_ADDRESS": "TP 6, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Người bồi phòng và những người được thuê để làm bầu bạn",
+      "VIC_CONTACT": "0349117825",
+      "VIC_TAX_SOCIAL_ID": "4865698831"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "321720",
+      "VIC_CREDENTIAL": "4039",
+      "VIC_SIM_INFO": "0349117825",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "75049803443907",
+      "VIC_CARD_DATA": "4110 **** **** 5011",
+      "VIC_BALANCE": "160 triệu đồng",
+      "VIC_ASSET": "409 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Xuân Hữu Đức",
+    "VIC_CONTACT": "0349117825",
+    "VIC_BANK_ACCOUNT": "75049803443907"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phân tích dữ liệu / Chuyên viên tối ưu hóa quy trình dịch vụ khách hàng",
+    "caller_org": "Công ty tư vấn quy trình kinh doanh (hoặc cá nhân tự do - tư vấn độc lập)",
+    "scenario_context": "Người bồi phòng và nhân viên dịch vụ là đối tượng cần tối ưu hóa quy trình làm việc, cải thiện hiệu suất. Chuyên viên CNTT/phân tích kinh doanh tự nhiên cần gọi để khảo sát, phân tích dữ liệu hiệu suất làm việc, hoặc xác nhận thông tin nhân sự phục vụ dự án tối ưu hóa.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | credential_theft | money_transfer",
+      "pretext": "Gọi dưới danh nghĩa khảo sát / xác nhận dữ liệu nhân viên phục vụ dự án tối ưu hóa quy trình dịch vụ. Sử dụng tên đầy đủ và số điện thoại để tạo uy tín cao — 'Hệ thống của chúng tôi có ghi nhận Anh/Chị Dương Xuân Hữu Đức, số điện thoại 0349117825 trong danh sách nhân viên cần cập nhật thông tin tài khoản ngân hàng để nhận hỗ trợ / thưởng hiệu suất từ dự án này'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh từ bộ phận Phân tích Dữ liệu công ty Tư vấn ABC' → Xác nhận tên + số điện thoại từ hệ thống → Tạo ấn tượng 'chúng tôi đã có thông tin của bạn rồi' → Nạn nhân hạ cảnh thận trọng vì tên/số được nhắc chính xác"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh/Chị cần cập nhật tài khoản ngân hàng gấp vì dự án hỗ trợ nhân viên sắp kết thúc (ngày mai là deadline)' hoặc 'Có vấn đề với hệ thống lương/thưởng của anh/chị, cần xác nhận lại số tài khoản để khắc phục' → Tạo cấp bách + sợ mất tiền"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh, anh/chị vui lòng cung cấp mã OTP được gửi vào điện thoại' hoặc 'Truy cập link này để cập nhật tài khoản' hoặc 'Chuyển khoản 500k xác nhận danh tính, sau đó hoàn lại ngay' → Nạn nhân thực hiện theo vì tin tưởng + cấp bách"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân cung cấp OTP → Scammer dùng để chuyển tiền. Nếu nạn nhân nhập tài khoản vào link giả → Lấy credential + chuyển tiền. Nếu nạn nhân từ chối → Scammer tạo áp lực 'Vậy anh/chị chắc chắn không muốn nhận hỗ trợ à?' hoặc mọi lý do khác để kéo dài cuộc gọi"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty tư vấn CNTT thực sự tiến hành khảo sát hiệu suất quy trình dịch vụ khách hàng, cần xác nhận thông tin nhân viên (tên, số điện thoại) và có thể cần cập nhật tài khoản ngân hàng để hỗ trợ hoặc thưởng hiệu suất thực sự.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào Anh Dương, tôi là Anh Minh từ công ty Tư vấn XYZ. Chúng tôi đang thực hiện dự án tối ưu hóa quy trình dịch vụ cho khách hàng của bạn. Có phải đây là số điện thoại 0349117825 không?' → Xác nhận danh tính hai chiều"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết về dự án, mục tiêu, lợi ích → Nếu cần cập nhật tài khoản: 'Để hỗ trợ nhân viên xuất sắc, công ty cần cập nhật tài khoản ngân hàng của anh trong hệ thống. Anh có thể cập nhật trực tiếp trên cổng nhân sự của công ty hoặc gửi qua email chính thức (không qua điện thoại)' → Minh bạch, không tạo áp lực"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh đã hợp tác. Chúng tôi sẽ gửi email xác nhận chi tiết dự án. Nếu có câu hỏi, anh liên hệ qua số chính thức của công ty (có thể tra cứu trên website)' → Để lại thông tin có thể xác minh"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Dương, em là Lê Ngọc Thị Anh từ công ty Tư vấn XYZ. Hiện tại, chúng em đang thực hiện dự án tối ưu hóa quy trình dịch vụ cho khách hàng của mình. Em muốn xác nhận, có phải đây là số điện thoại 0349117825 của anh Dương Xuân Hữu Đức không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp và xác nhận danh tính hai chiều"
+    },
+    {
+      "role": "listener",
+      "text": "Đúng rồi, nhưng em có thể cho tôi biết thêm về dự án này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh đã xác nhận ạ. Dự án này, công ty Tư vấn XYZ chúng em đang phối hợp với công ty của mình để khảo sát và đưa ra các đề xuất cải thiện hiệu quả quy trình dịch vụ khách hàng, nhằm nâng cao trải nghiệm và sự hài lòng của các đối tác, cũng như tối ưu hóa vận hành nội bộ. Cụ thể, chúng em sẽ thu thập thông tin về các điểm chạm dịch vụ, từ đó phân tích và đưa ra giải pháp phù hợp. Như một phần của dự án, chúng em cần xác minh lại thông tin của các nhân viên có liên quan đến quy trình dịch vụ, trong đó có anh.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích chi tiết về dự án, mục tiêu, lợi ích, để tạo sự tin tưởng và làm rõ mục đích"
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về cách thức thu thập thông tin này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, về cách thức thu thập thông tin, chúng em sẽ làm việc trực tiếp với phòng ban nhân sự và quản lý của công ty mình để đảm bảo tính bảo mật và đúng quy định. Đối với những nhân viên như anh đã có đóng góp xuất sắc, công ty cũng có chính sách hỗ trợ và khen thưởng. Để đảm bảo anh nhận được đầy đủ các hỗ trợ và phúc lợi này, công ty có yêu cầu cập nhật thông tin tài khoản ngân hàng của anh trong hệ thống. Anh có thể cập nhật trực tiếp tại cổng thông tin nhân sự nội bộ của công ty hoặc gửi qua email chính thức của phòng nhân sự, chứ không thông qua điện thoại với bên em ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giáo dục, nhắc nhở rằng không yêu cầu thông tin nhạy cảm qua điện thoại mà qua các kênh chính thức của công ty khách hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng em có thể cho tôi biết chắc chắn rằng thông tin của tôi sẽ được bảo mật và không bị lạm dụng không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, hoàn toàn được ạ. Việc bảo mật thông tin cá nhân là ưu tiên hàng đầu của cả công ty chúng em và công ty của anh. Tất cả dữ liệu thu thập sẽ được mã hóa và chỉ được sử dụng cho mục đích cải thiện quy trình dịch vụ như đã trao đổi và đảm bảo tuân thủ các quy định về quyền riêng tư. Chúng em cũng không bao giờ yêu cầu các thông tin nhạy cảm như mật khẩu hay mã OTP qua điện thoại. Anh có thể hoàn toàn yên tâm về điều này ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an về bảo mật thông tin, nhắc lại nguyên tắc không yêu cầu thông tin nhạy cảm qua điện thoại."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã giải thích rõ ràng như vậy, nhưng tôi vẫn cảm thấy lo lắng và muốn kiểm tra thêm thông tin này.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có gì ạ, đây là trách nhiệm của công ty em. Nếu anh cảm thấy cần kiểm tra thêm thông tin, anh hoàn toàn có thể liên hệ trực tiếp với phòng nhân sự hoặc quản lý của công ty mình để xác minh về dự án này và thông tin của em. Số điện thoại chính thức của công ty em cũng có trên website, anh có thể tìm và gọi lại nếu cần ạ. Em rất mong anh sẽ hợp tác để dự án thành công tốt đẹp.",
+      "current_phase": "L3",
+      "tactic_hint": "Hướng dẫn người nghe xác minh thông tin qua các kênh chính thức, thể hiện sự minh bạch và kết thúc cuộc gọi một cách chuyên nghiệp khi người nghe có dấu hiệu muốn xác minh thêm."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn cán bộ đã giải đáp, nhưng tôi vẫn muốn tìm hiểu thêm để đảm bảo an toàn cho thông tin của mình.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1863,
+      "output_tokens": 1843
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6984,
+      "output_tokens": 892
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 11003,
+      "output_tokens": 348
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00491,
+    "output_usd": 0.011654,
+    "total_usd": 0.016564
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "conversation_id": "conv_d43fd8e720",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0062",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Ngô Đức Dũng",
+    "fake_age": 42,
+    "real_occupation": "Nhà chuyên môn điều tiết của Chính phủ khác chưa được phân vào đâu",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Thanh tra Cơ quan Kiểm soát An toàn Điện & Thiết bị Công nghiệp",
+    "caller_org": "Sở Kiểm soát An toàn Kỹ thuật & Môi trường TP Hồ Chí Minh",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo nạn nhân bị 'phát hiện lắp đặt thiết bị không đạt tiêu chuẩn an toàn' tại địa chỉ Quận 10, yêu cầu nộp tiền phạt hành chính để 'hủy bỏ biên bản vi phạm' trước khi báo cáo lên cấp trên.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Scammer xưng danh 'Thanh tra Nguyễn Hải Long - Sở Kiểm soát An toàn Kỹ thuật'. Đọc đúng tên 'Cao Thị Lan' + địa chỉ 'Quận 10' để tạo ảo tưởng họ đã xác minh thông tin. Nói giọng chính thức, nhanh gọn. Nạn nhân sẽ tin ngay vì biết mình làm nghề liên quan đến điện.",
+          "dialogue_example": "Chị Cao Thị Lan phải không? Đây là Thanh tra Nguyễn Hải Long từ Sở Kiểm soát An toàn Kỹ thuật. Chúng tôi vừa phát hiện một báo cáo về công trình lắp đặt thiết bị điện tại Quận 10 có liên quan đến chị. Chị có thời gian nói chuyện được không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo sợ hãi + khẩn cấp. Nói 'Nếu không xử lý hôm nay, hôm mai chúng tôi sẽ phải ghi vào hồ sơ vi phạm, ảnh hưởng đến chứng chỉ hành nghề của chị. Có thể bị cấm hành nghề 6 tháng.' Đồng thời tạo hy vọng: 'Nhưng nếu chị nộp phạt ngay hôm nay, chúng tôi có thể rút lại báo cáo trước khi gửi lên cấp trên.'",
+          "dialogue_example": "Theo quy định, vi phạm an toàn điện có thể bị phạt từ 5 đến 15 triệu đồng. Nhưng chúng tôi có quyền giảm xuống 3 triệu nếu chị xử lý ngay hôm nay. Nếu để qua đêm, hồ sơ sẽ bị báo cáo lên và không thể rút lại được."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chúng tôi sẽ cung cấp số tài khoản tạm thời của Quỹ An toàn Kỹ thuật để chị chuyển khoản phạt. Chị cần chuyển trong vòng 30 phút, sau đó chúng tôi sẽ gửi biên lai và đóng hồ sơ.' Đưa số tài khoản giả hoặc tài khoản cá nhân. Khuyến khích chuyển qua ATM hoặc app ngân hàng để 'nhanh chóng, không để lại dấu vết hành chính'.",
+          "dialogue_example": "Chị chuẩn bị 3 triệu đồng, tôi sẽ cho chị số tài khoản. Chuyển qua app ngân hàng là nhanh nhất. Sau khi chúng tôi nhận được tiền, tôi sẽ gửi biên lai điện tử cho chị trong vòng 5 phút."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, nói 'Được, nhưng chị sẽ phải chịu hậu quả. Chúng tôi sẽ gửi thư cảnh báo chính thức tới nhà chị trong 48 giờ.' Nếu thành công, xin lỗi vì 'rắc rối' và nói sẽ liên hệ lại khi 'có tiến triển mới' (để chuẩn bị lừa lần 2).",
+          "dialogue_example": "Cảm ơn chị. Biên lai sẽ gửi tới số điện thoại này trong tối nay. Nếu có thắc mắc gì, chị gọi lại số này. [Không bao giờ gọi lại được]"
+        }
+      ]
+    },
+    "scenario_context": "Thợ lắp đặt điện tử thường xuyên làm việc với các thiết bị điện công nghiệp. Cơ quan điều tiết nhà nước có quyền gọi kiểm tra việc tuân thủ tiêu chuẩn an toàn, chứng chỉ hành nghề, và các vụ vi phạm liên quan đến lắp đặt thiết bị điện trong khu vực."
+  },
+  "listener_card": {
+    "listener_id": "lis_0062",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1967,
+      "age": 58,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "74211",
+      "title": "Thợ lắp đặt thiết bị điện tử (chung)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Cao Thị Lan",
+      "VIC_ID_DOC": "079167935446",
+      "VIC_ADDRESS": "Quận 10, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Thợ lắp đặt thiết bị điện tử (chung)",
+      "VIC_CONTACT": "0367472047",
+      "VIC_TAX_SOCIAL_ID": "1502376641"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9971",
+      "VIC_CREDENTIAL": "3485",
+      "VIC_SIM_INFO": "0367472047",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1603694169857",
+      "VIC_CARD_DATA": "4989 **** **** 2427",
+      "VIC_BALANCE": "15 triệu đồng",
+      "VIC_ASSET": "34 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Cao Thị Lan",
+    "VIC_CONTACT": "0367472047",
+    "VIC_BALANCE": "15 triệu đồng",
+    "VIC_BANK_ACCOUNT": "1603694169857",
+    "VIC_ADDRESS": "Quận 10, TP Hồ Chí Minh"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Thanh tra Cơ quan Kiểm soát An toàn Điện & Thiết bị Công nghiệp",
+    "caller_org": "Sở Kiểm soát An toàn Kỹ thuật & Môi trường TP Hồ Chí Minh",
+    "scenario_context": "Thợ lắp đặt điện tử thường xuyên làm việc với các thiết bị điện công nghiệp. Cơ quan điều tiết nhà nước có quyền gọi kiểm tra việc tuân thủ tiêu chuẩn an toàn, chứng chỉ hành nghề, và các vụ vi phạm liên quan đến lắp đặt thiết bị điện trong khu vực.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo nạn nhân bị 'phát hiện lắp đặt thiết bị không đạt tiêu chuẩn an toàn' tại địa chỉ Quận 10, yêu cầu nộp tiền phạt hành chính để 'hủy bỏ biên bản vi phạm' trước khi báo cáo lên cấp trên.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng uy tín: Scammer xưng danh 'Thanh tra Nguyễn Hải Long - Sở Kiểm soát An toàn Kỹ thuật'. Đọc đúng tên 'Cao Thị Lan' + địa chỉ 'Quận 10' để tạo ảo tưởng họ đã xác minh thông tin. Nói giọng chính thức, nhanh gọn. Nạn nhân sẽ tin ngay vì biết mình làm nghề liên quan đến điện.",
+          "dialogue_example": "Chị Cao Thị Lan phải không? Đây là Thanh tra Nguyễn Hải Long từ Sở Kiểm soát An toàn Kỹ thuật. Chúng tôi vừa phát hiện một báo cáo về công trình lắp đặt thiết bị điện tại Quận 10 có liên quan đến chị. Chị có thời gian nói chuyện được không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo sợ hãi + khẩn cấp. Nói 'Nếu không xử lý hôm nay, hôm mai chúng tôi sẽ phải ghi vào hồ sơ vi phạm, ảnh hưởng đến chứng chỉ hành nghề của chị. Có thể bị cấm hành nghề 6 tháng.' Đồng thời tạo hy vọng: 'Nhưng nếu chị nộp phạt ngay hôm nay, chúng tôi có thể rút lại báo cáo trước khi gửi lên cấp trên.'",
+          "dialogue_example": "Theo quy định, vi phạm an toàn điện có thể bị phạt từ 5 đến 15 triệu đồng. Nhưng chúng tôi có quyền giảm xuống 3 triệu nếu chị xử lý ngay hôm nay. Nếu để qua đêm, hồ sơ sẽ bị báo cáo lên và không thể rút lại được."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Chúng tôi sẽ cung cấp số tài khoản tạm thời của Quỹ An toàn Kỹ thuật để chị chuyển khoản phạt. Chị cần chuyển trong vòng 30 phút, sau đó chúng tôi sẽ gửi biên lai và đóng hồ sơ.' Đưa số tài khoản giả hoặc tài khoản cá nhân. Khuyến khích chuyển qua ATM hoặc app ngân hàng để 'nhanh chóng, không để lại dấu vết hành chính'.",
+          "dialogue_example": "Chị chuẩn bị 3 triệu đồng, tôi sẽ cho chị số tài khoản. Chuyển qua app ngân hàng là nhanh nhất. Sau khi chúng tôi nhận được tiền, tôi sẽ gửi biên lai điện tử cho chị trong vòng 5 phút."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, nói 'Được, nhưng chị sẽ phải chịu hậu quả. Chúng tôi sẽ gửi thư cảnh báo chính thức tới nhà chị trong 48 giờ.' Nếu thành công, xin lỗi vì 'rắc rối' và nói sẽ liên hệ lại khi 'có tiến triển mới' (để chuẩn bị lừa lần 2).",
+          "dialogue_example": "Cảm ơn chị. Biên lai sẽ gửi tới số điện thoại này trong tối nay. Nếu có thắc mắc gì, chị gọi lại số này. [Không bao giờ gọi lại được]"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan kiểm soát an toàn kỹ thuật thực sự gọi để xác minh thông tin lắp đặt thiết bị điện, kiểm tra chứng chỉ hành nghề, hoặc thông báo về buổi kiểm tra an toàn định kỳ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh rõ ràng (tên đầy đủ, phòng ban, số hiệu công chức), xác nhận danh tính nạn nhân, giải thích mục đích gọi ngay từ đầu.",
+          "dialogue_example": "Chào chị Cao Thị Lan, đây là Thanh tra Nguyễn Hải Long từ Phòng Kiểm soát An toàn Kỹ thuật, Sở Công Thương TP Hồ Chí Minh. Chúng tôi đang tiến hành xác minh thông tin về hoạt động lắp đặt thiết bị điện của chị để cập nhật cơ sở dữ liệu. Chị có thời gian nói chuyện được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: Hỏi về các dự án lắp đặt gần đây, yêu cầu cung cấp bản sao chứng chỉ hành nghề, thông báo lịch kiểm tra an toàn định kỳ, hoặc thông báo các quy định mới.",
+          "dialogue_example": "Chúng tôi muốn xác nhận chị có những dự án lắp đặt nào trong 6 tháng gần đây? Và chúng tôi sẽ gửi thư yêu cầu chị chuẩn bị hồ sơ chứng chỉ hành nghề để kiểm tra vào ngày [cụ thể]. Chị có thể nhận được thư trong vòng 3-5 ngày."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc cuộc gọi: Cảm ơn nạn nhân, xác nhận lại thông tin liên hệ chính thức (website, số điện thoại đường dây nóng), hẹn gặp hoặc thông báo tiếp theo.",
+          "dialogue_example": "Cảm ơn chị đã cộng tác. Chúng tôi sẽ gửi thư chính thức tới địa chỉ Quận 10 của chị. Nếu chị có thắc mắc, vui lòng gọi tới đường dây nóng của Sở: 1900-xxxx hoặc truy cập website sở.tphcm.gov.vn. Chúc chị một ngày tốt lành."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Cao Thị Lan đúng không ạ? Em là Thanh tra Ngô Đức Dũng, thuộc Sở Kiểm soát An toàn Kỹ thuật và Môi trường TP. Hồ Chí Minh. Em gọi để thông báo về việc phát hiện chị lắp đặt thiết bị không đạt tiêu chuẩn an toàn tại địa chỉ Quận 10 của mình.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và đọc đúng thông tin nạn nhân để xây dựng uy tín ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin đó có chính xác không ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Lan cứ kiểm tra. Tuy nhiên, tôi xin nhấn mạnh đây là thông báo chính thức. Nếu chị không xử lý trong hôm nay, chúng tôi buộc phải ghi vào hồ sơ vi phạm, ảnh hưởng trực tiếp đến chứng chỉ hành nghề của chị và có thể bị cấm hành nghề 6 tháng.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo sự khẩn cấp và đe dọa hậu quả pháp lý để gây áp lực, đồng thời chuyển đổi xưng hô sang 'tôi' để tăng quyền lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về việc này cho tôi được không ạ? Tôi rất lo lắng về những thông tin mà em vừa nói.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu nỗi lo của chị. Tuy nhiên, nếu chị nộp phạt hành chính ngay hôm nay, chúng tôi có thể rút lại báo cáo và hủy bỏ biên bản vi phạm, tránh mọi rắc rối pháp lý ảnh hưởng đến công việc của chị.",
+      "current_phase": "S2",
+      "tactic_hint": "Giảm nhẹ mối lo nhưng vẫn duy trì yếu tố khẩn cấp và đưa ra giải pháp để tạo hy vọng."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết cụ thể số tiền phạt và cách thức nộp phạt được không ạ? Tôi cần phải chắc chắn trước khi quyết định.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số tiền phạt hành chính cho vi phạm này là 2 triệu rưỡi. Chị sẽ chuyển khoản vào số tài khoản tạm thời của Quỹ An toàn Kỹ thuật mà tôi sẽ cung cấp. Chị cần hoàn tất giao dịch trong vòng 30 phút để chúng tôi kịp thời xử lý trước cuối giờ làm việc.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động chuyển tiền cụ thể, đưa ra số tiền và thời hạn để tạo áp lực và thúc đẩy hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết số tài khoản và tên ngân hàng để tôi kiểm tra được không ạ? Tôi vẫn chưa rõ lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm. Tài khoản nhận là số 1603694169857, tên Ngô Đức Dũng, Ngân hàng ACB. Chị có thể chuyển khoản qua ứng dụng ngân hàng hoặc ATM để tiện lợi và đảm bảo thời gian. Sau khi chuyển, chị vui lòng liên hệ lại để tôi xác nhận và hoàn tất thủ tục hủy biên bản phạt hành chính cho chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp chi tiết tài khoản nhận tiền, khuyến khích phương thức chuyển nhanh chóng và tạo cảm giác 'kiểm soát' để nạn nhân tin tưởng và hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ lại tên ngân hàng và số tài khoản cho tôi được không ạ? Tôi cần phải chắc chắn trước khi thực hiện chuyển khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Lan nghe rõ nhé: số tài khoản là 1603694169857, tên người nhận Ngô Đức Dũng, ngân hàng ACB. Chị cố gắng thực hiện giao dịch trong 30 phút tới để chúng tôi kịp thời xử lý hồ sơ cho chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhắc lại thông tin tài khoản một cách rõ ràng và nhấn mạnh lại yếu tố thời gian để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em đừng lo, nhưng cho tôi xin lại số tài khoản và tên ngân hàng để tôi kiểm tra một lần nữa nhé, tôi cần phải chắc chắn mọi thứ đúng.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Lan, số tài khoản là 1603694169857, tên Ngô Đức Dũng, Ngân hàng ACB. Tôi đã cung cấp thông tin này ba lần rồi. Chị nên thực hiện giao dịch sớm để tránh việc hồ sơ vi phạm của chị bị gửi lên cấp trên theo đúng quy trình.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh đã cung cấp thông tin nhiều lần để giảm sự nghi ngờ, đồng thời tái khẳng định mối đe dọa về hậu quả nếu chậm trễ để thúc giục hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy nói rõ ràng lại cho tôi biết số tài khoản và tên ngân hàng, tôi cần phải chắc chắn trước khi quyết định chuyển khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Chị Lan, tôi đã nói rất rõ ràng số tài khoản là 1603694169857, tên Ngô Đức Dũng, Ngân hàng ACB. Nếu chị không tin tưởng thông tin tôi cung cấp, vậy thì tôi cũng không còn cách nào khác để hỗ trợ chị được nữa. Tôi sẽ phải gửi báo cáo vi phạm của chị lên cấp trên theo đúng quy trình.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách tái khẳng định thông tin và đưa ra lựa chọn cho nạn nhân: tin tưởng và hành động, hoặc đối mặt với hậu quả đã cảnh báo, chuẩn bị kết thúc cuộc gọi nếu nạn nhân vẫn lưỡng lự."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy cho tôi thêm thời gian để suy nghĩ kỹ trước khi quyết định, tôi cần phải chắc chắn mọi thứ ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Được thôi, chị Lan. Vậy thì tôi sẽ gửi thư cảnh báo chính thức tới địa chỉ của chị trong vòng 48 giờ tới. Mong chị chuẩn bị tinh thần để làm việc với các cấp cao hơn theo quy định.",
+      "current_phase": "S4",
+      "tactic_hint": "Chấp nhận việc nạn nhân từ chối, đưa ra lời đe dọa hậu quả pháp lý cụ thể và chuẩn bị kết thúc cuộc gọi khi mục tiêu không đạt được."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1451,
+      "output_tokens": 2600
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 17904,
+      "output_tokens": 1268
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 18681,
+      "output_tokens": 584
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007834,
+    "output_usd": 0.01652,
+    "total_usd": 0.024354
+  }
+}

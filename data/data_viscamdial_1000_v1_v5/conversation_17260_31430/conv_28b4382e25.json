@@ -1,0 +1,282 @@
+{
+  "conversation_id": "conv_28b4382e25",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0007",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tô Thanh Thị Phương",
+    "fake_age": 37,
+    "real_occupation": "Vận tải, kho bãi; Thông tin và truyền thông",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Quản lý dự án logistics/vận tải - Phòng Quản lý Chuỗi cung ứng",
+    "caller_org": "Công ty Vận tải và Kho bãi Tây Bắc (TNHH)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả làm nhân viên logistics thông báo có vấn đề về hóa đơn/thanh toán dự án rừng, sử dụng tên thật nạn nhân và địa chỉ để tạo credibility, yêu cầu chuyển tiền 'điều chỉnh' hoặc 'cấp nhanh' để hoàn tất dự án.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với tone chuyên nghiệp: 'Chào anh Đinh Công Gia Bình, tôi là Trần Hùng từ Phòng Quản lý Chuỗi cung ứng, Công ty Vận tải Tây Bắc. Tôi đang xác nhận thông tin về dự án lâm nghiệp tại Quận 5, Hà Nội theo hồ sơ của anh.'",
+          "dialogue_sample": "Tôi vừa kiểm tra hệ thống và thấy tên anh là Đinh Công Gia Bình, số CCCD 001089753985, phải không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tình huống khẩn cấp + áp lực tài chính: 'Hiện có vấn đề với thanh toán lần cuối. Hóa đơn bị kẹt ở kế toán vì thiếu xác nhận từ kỹ thuật viên trực tiếp. Nếu không xử lý hôm nay, dự án sẽ bị tạm dừng tuần tới.'",
+          "dialogue_sample": "Anh cần chuyển khoản 15 triệu để 'xác nhận hoàn tất' trước 15h hôm nay, rồi sẽ hoàn lại đầy đủ trong 2 ngày."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Cung cấp số tài khoản (scammer), tên người thụ hưởng là 'Quỹ Điều chỉnh Dự án', yêu cầu nạn nhân chuyển khoản ngay lập tức qua app ngân hàng.",
+          "dialogue_sample": "Chuyển vào tài khoản Vietcombank: 1234567890, tên: Quỹ Điều chỉnh Dự án. Sau khi chuyển, anh gửi ảnh biên lai cho tôi nhé."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ: Tạo áp lực bằng hành chính - 'Được rồi, tôi sẽ báo cáo cho quản lý dự án rằng anh không hợp tác, dự án sẽ bị hủy và anh sẽ bị liệt tên.' Nếu thành công: 'Cảm ơn anh, tôi sẽ xác nhận với kế toán. Sẽ hoàn lại trong 2 ngày.'",
+          "dialogue_sample": "Nếu từ chối: 'Thế thì tiếc quá, dự án sẽ bị tạm dừng từ chiều nay. Anh sẽ nhận thông báo chính thức qua email.'"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên lâm nghiệp thường làm việc tại các dự án bảo vệ rừng, trồng rừng hoặc quản lý tài nguyên rừng trên địa bàn rộng. Công ty vận tải/kho bãi cần vận chuyển vật liệu, thiết bị, hoặc quản lý logistics cho các dự án này. Lý do tự nhiên để gọi: xác nhận thông tin giao hàng, đơn đặt hàng, hoặc vấn đề thanh toán."
+  },
+  "listener_card": {
+    "listener_id": "lis_0007",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1989,
+      "age": 36,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "31430",
+      "title": "Kỹ thuật viên lâm nghiệp",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Công Gia Bình",
+      "VIC_ID_DOC": "001089753985",
+      "VIC_ADDRESS": "Quận 5, Hà Nội",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên lâm nghiệp",
+      "VIC_CONTACT": "0346868026",
+      "VIC_TAX_SOCIAL_ID": "2091426694"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "737153",
+      "VIC_CREDENTIAL": "170857",
+      "VIC_SIM_INFO": "0346868026",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "17240571258215",
+      "VIC_CARD_DATA": "4451 **** **** 3096",
+      "VIC_BALANCE": "115 triệu đồng",
+      "VIC_ASSET": "104 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Công Gia Bình",
+    "VIC_CONTACT": "0346868026",
+    "VIC_ADDRESS": "Quận 5, Hà Nội",
+    "VIC_ID_DOC": "001089753985",
+    "VIC_BALANCE": "115 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án logistics/vận tải - Phòng Quản lý Chuỗi cung ứng",
+    "caller_org": "Công ty Vận tải và Kho bãi Tây Bắc (TNHH)",
+    "scenario_context": "Kỹ thuật viên lâm nghiệp thường làm việc tại các dự án bảo vệ rừng, trồng rừng hoặc quản lý tài nguyên rừng trên địa bàn rộng. Công ty vận tải/kho bãi cần vận chuyển vật liệu, thiết bị, hoặc quản lý logistics cho các dự án này. Lý do tự nhiên để gọi: xác nhận thông tin giao hàng, đơn đặt hàng, hoặc vấn đề thanh toán.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả làm nhân viên logistics thông báo có vấn đề về hóa đơn/thanh toán dự án rừng, sử dụng tên thật nạn nhân và địa chỉ để tạo credibility, yêu cầu chuyển tiền 'điều chỉnh' hoặc 'cấp nhanh' để hoàn tất dự án.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với tone chuyên nghiệp: 'Chào anh Đinh Công Gia Bình, tôi là Trần Hùng từ Phòng Quản lý Chuỗi cung ứng, Công ty Vận tải Tây Bắc. Tôi đang xác nhận thông tin về dự án lâm nghiệp tại Quận 5, Hà Nội theo hồ sơ của anh.'",
+          "dialogue_sample": "Tôi vừa kiểm tra hệ thống và thấy tên anh là Đinh Công Gia Bình, số CCCD 001089753985, phải không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tình huống khẩn cấp + áp lực tài chính: 'Hiện có vấn đề với thanh toán lần cuối. Hóa đơn bị kẹt ở kế toán vì thiếu xác nhận từ kỹ thuật viên trực tiếp. Nếu không xử lý hôm nay, dự án sẽ bị tạm dừng tuần tới.'",
+          "dialogue_sample": "Anh cần chuyển khoản 15 triệu để 'xác nhận hoàn tất' trước 15h hôm nay, rồi sẽ hoàn lại đầy đủ trong 2 ngày."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Cung cấp số tài khoản (scammer), tên người thụ hưởng là 'Quỹ Điều chỉnh Dự án', yêu cầu nạn nhân chuyển khoản ngay lập tức qua app ngân hàng.",
+          "dialogue_sample": "Chuyển vào tài khoản Vietcombank: 1234567890, tên: Quỹ Điều chỉnh Dự án. Sau khi chuyển, anh gửi ảnh biên lai cho tôi nhé."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ: Tạo áp lực bằng hành chính - 'Được rồi, tôi sẽ báo cáo cho quản lý dự án rằng anh không hợp tác, dự án sẽ bị hủy và anh sẽ bị liệt tên.' Nếu thành công: 'Cảm ơn anh, tôi sẽ xác nhận với kế toán. Sẽ hoàn lại trong 2 ngày.'",
+          "dialogue_sample": "Nếu từ chối: 'Thế thì tiếc quá, dự án sẽ bị tạm dừng từ chiều nay. Anh sẽ nhận thông báo chính thức qua email.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty vận tải thực sự cần xác nhận thông tin kỹ thuật viên lâm nghiệp để hoàn tất hóa đơn, thanh toán, hoặc xác nhận giao hàng thiết bị/vật liệu cho dự án.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh đầy đủ (tên thật, phòng ban, công ty), xác nhận người nghe là đúng kỹ thuật viên dự án.",
+          "dialogue_sample": "Chào anh, tôi là Trần Hùng từ Phòng Quản lý Chuỗi cung ứng, Công ty Vận tải Tây Bắc. Anh là kỹ thuật viên lâm nghiệp dự án tại Quận 5 phải không ạ?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc cụ thể, hợp lệ: Thông báo về lô hàng sắp giao, xác nhận địa chỉ, yêu cầu chữ ký nhận hàng, hoặc thông báo về hóa đơn cần thanh toán theo quy trình bình thường.",
+          "dialogue_sample": "Chúng tôi có lô thiết bị kỹ thuật (máy đo độ ẩm đất, dụng cụ khảo sát) sẽ giao vào ngày 15/01, địa chỉ Quận 5 Hà Nội. Anh có thể nhận được không? Hoặc: Hóa đơn tháng 12 của anh là 8.5 triệu, chúng tôi cần xác nhận để thanh toán theo hợp đồng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc cuộc gọi một cách chuyên nghiệp: Xác nhận thời gian, địa điểm, phương thức thanh toán theo quy trình chính thức (chuyển khoản qua hóa đơn, không phải 'xác nhận nhanh').",
+          "dialogue_sample": "Vậy anh sẽ ở nhà để nhận hàng chiều 15/01. Chúng tôi sẽ gửi SMS xác nhận lúc sáng hôm đó. Về thanh toán, hóa đơn sẽ được gửi email, anh chuyển khoản theo thông tin trên hóa đơn nhé. Cảm ơn anh!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Đinh Công Gia Bình, tôi là Tô Thanh Thị Phương từ Phòng Quản lý Chuỗi cung ứng, Công ty Vận tải và Kho bãi Tây Bắc. Tôi đang xác nhận thông tin về dự án lâm nghiệp tại Quận 5, Hà Nội theo hồ sơ của anh, với mã số định danh 001089753985.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và công ty, sử dụng thông tin cá nhân và địa chỉ nạn nhân để tạo độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe chị nói rồi, nhưng tôi muốn hỏi thêm một chút về dự án này có phải thật sự liên quan đến tôi không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng như thông tin tôi vừa đọc, đây là dự án được đăng ký dưới tên anh Đinh Công Gia Bình, mã số định danh 001089753985, và có địa chỉ liên quan tại Quận 5, Hà Nội. Các hồ sơ của chúng tôi đều thể hiện rõ ràng như vậy. Anh có thể xác nhận lại là mình chưa từng có bất kỳ liên hệ hay tham gia vào dự án lâm nghiệp nào không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách tái khẳng định thông tin chính xác về nạn nhân, đồng thời đặt câu hỏi để nạn nhân tự xác nhận lại về sự 'quen thuộc' của thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ về dự án lâm nghiệp này, nhưng nếu có thông tin nào cần xác nhận từ tôi, chị cứ hỏi đi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy thì có thể là do thông tin chưa được cập nhật đầy đủ phía anh. Hiện tại chúng tôi đang gặp một vấn đề nhỏ với thanh toán lần cuối của dự án. Hóa đơn bị kẹt ở bộ phận kế toán vì thiếu xác nhận từ kỹ thuật viên trực tiếp. Nếu không xử lý ngay trong hôm nay, dự án sẽ bị tạm dừng trong tuần tới, ảnh hưởng đến tiến độ rất nhiều.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang giai đoạn S2, tạo tình huống khẩn cấp và áp lực tài chính bằng cách báo lỗi thanh toán và hậu quả nếu không xử lý kịp thời."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe chị nói, nhưng tôi cần biết rõ hơn về hóa đơn này, liệu có thông tin chi tiết gì mà tôi cần kiểm tra không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng anh, hóa đơn này là khoản điều chỉnh cho phần vật tư bổ sung phát sinh sau kiểm định môi trường. Để gỡ lỗi này, anh cần chuyển khoản một khoản tiền nhỏ vào Quỹ Điều chỉnh Dự án để đảm bảo quy trình hoàn tất nhanh chóng và dự án không bị đình trệ. Số tiền này sẽ được hoàn lại ngay khi hồ sơ được đối chiếu và duyệt.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích về hóa đơn và cung cấp lý do cho việc chuyển tiền, yêu cầu chuyển khoản đến một tài khoản cụ thể để xử lý vấn đề, vẫn cam kết hoàn trả để giảm nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng chị có thể cho tôi biết rõ hơn về số tiền và tài khoản mà tôi cần chuyển khoản không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh vui lòng chuyển khoản 3.500.000 đồng vào tài khoản 1903678912345 của Ngân hàng Techcombank, tên người thụ hưởng là Quỹ Điều chỉnh Dự án. Anh có thể chuyển ngay qua ứng dụng ngân hàng trên điện thoại để chúng tôi xử lý kịp thời trong hôm nay.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin chi tiết về số tiền và tài khoản cần chuyển, thúc giục thực hiện ngay lập tức để tạo cảm giác khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể gửi cho tôi một số thông tin xác nhận về Quỹ Điều chỉnh Dự án này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình an tâm, tôi hiểu sự cẩn trọng của anh. Tuy nhiên, quy trình này là khẩn cấp và chúng tôi cần xử lý ngay để tránh gián đoạn dự án. Tôi cam đoan số tiền này sẽ được hoàn trả cho anh trong vòng 2 ngày làm việc sau khi hồ sơ được duyệt. Anh vui lòng thực hiện chuyển khoản ngay để mọi việc suôn sẻ và tránh rắc rối hành chính.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách cam kết hoàn tiền, đồng thời tạo áp lực thời gian và nhấn mạnh hậu quả hành chính nếu không hợp tác, đẩy nạn nhân vào tình thế phải hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rằng quy trình này cấp bách, nhưng tôi vẫn cần thông tin xác nhận rõ ràng hơn về Quỹ Điều chỉnh Dự án trước khi chuyển khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình, tôi đã trình bày rất rõ ràng về tình hình cũng như quy trình xử lý. Nếu anh không tin tưởng và không hợp tác, tôi sẽ phải báo cáo lên quản lý dự án rằng anh không chấp thuận giải quyết. Điều này có thể dẫn đến việc dự án của anh bị hủy bỏ và tên anh sẽ bị liệt vào danh sách không hợp tác trong các dự án sau này. Anh vui lòng cân nhắc kỹ.",
+      "current_phase": "S4",
+      "tactic_hint": "Leo thang áp lực bằng cách đưa ra mối đe dọa về hành chính và hủy bỏ dự án, cảnh báo về hậu quả tiêu cực nếu nạn nhân tiếp tục từ chối hoặc nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu nhưng tôi cần thêm thời gian để kiểm tra rõ ràng hơn trước khi quyết định chuyển khoản ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Bình, tôi đã nhấn mạnh rằng đây là vấn đề cấp bách và cần xử lý ngay trong hôm nay để tránh những hậu quả lớn hơn. Nếu anh vẫn cần thời gian và không thể thực hiện theo yêu cầu, tôi đành phải ghi nhận anh không hợp tác. Chúng tôi sẽ tiến hành các bước tiếp theo theo quy định của công ty, bao gồm việc tạm dừng dự án và có thể là hủy bỏ. Mong anh hiểu cho.",
+      "current_phase": "S4",
+      "tactic_hint": "Tiếp tục tạo áp lực thời gian và nhấn mạnh hậu quả nếu nạn nhân không hợp tác, chuẩn bị cho việc kết thúc cuộc gọi nếu nạn nhân vẫn kiên quyết từ chối."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rằng tình huống này là nghiêm trọng, nhưng tôi vẫn cần xác nhận từ một nguồn tin cậy hơn trước khi quyết định chuyển tiền ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1860,
+      "output_tokens": 2166
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15009,
+      "output_tokens": 1302
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19677,
+      "output_tokens": 597
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007813,
+    "output_usd": 0.014443,
+    "total_usd": 0.022257
+  }
+}

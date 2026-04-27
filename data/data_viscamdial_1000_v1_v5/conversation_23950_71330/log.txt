@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_7d7dc1f846]
+  Caller thật: Giáo viên nghệ thuật khác (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Giám đốc Dự án Nâng cấp Cơ sở hạ tầng - Công ty Xây dựng & Quản lý Tòa nhà @ Công ty Cổ phần Phát triển Bất động sản Long An (LPDC)
+  Listener: Người lau dọn tòa nhà (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Giáo viên nghệ thuật có thể được gọi từ công ty quản lý tòa nhà khi cơ sở có dự án cải tạo/nâng cấp không gian công cộng, hoặc khi cần tư vấn thiết kế. Người lau dọn tòa nhà bị gọi vì họ làm việc tại các tòa nhà văn phòng/thương mại — đó là nhân viên trực tiếp có thông tin về tình trạng cơ sở vật chất và lịch trình công việc.
+  Pretext: Giáo viên nghệ thuật giả danh Giám đốc Dự án LPDC gọi cho Nguyễn Thùy Liên (người lau dọn) với lý do: công ty đang thực hiện dự án nâng cấp an toàn lao động tại tòa nhà nơi cô làm việc, cần xác minh danh sách nhân viên và chi phí bảo hiểm lao động bắt buộc. Scammer sẽ dùng thông tin lộ của nạn nhân (tên đầy đủ, số điện thoại, vị trí Long An) để tạo uy tín.
+  Listener traits: ['bảo thủ ngại thay đổi']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Em chào chị ạ. Em là Đặng Quang An, Giám đốc Dự án từ Công ty Cổ phần Phát triển Bất động sản Long An (LPDC) đây ạ. Em gọi để xác nhận chị là Nguyễn Thùy Liên phải không? Chúng em có hồ sơ của chị từ tòa nhà ở Long An, bên em đang triển khai chương trình bảo hiểm lao động bắt buộc cho toàn bộ nhân viên vệ sinh tại đây.
+      → phase: S1 | tactic: Tiếp cận, tạo uy tín bằng cách sử dụng thông tin cá nhân của nạn nhân (tên, địa điểm) và giới thiệu chức danh, công ty.
+T02 [LISTENER] Tôi là Nguyễn Thùy Liên đây, nhưng tôi không rõ chương trình bảo hiểm lao động này lắm.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: ['VIC_FULLNAME']
+
+T03 [CALLER] Vâng, em hiểu ạ. Đây là chương trình mới theo quy định của Bộ Lao động ạ, áp dụng cho tất cả các đơn vị và cá nhân làm việc tại các tòa nhà công cộng trên địa bàn Long An, nhằm đảm bảo quyền lợi và an toàn cho người lao động. Phía công ty em đang hỗ trợ làm thủ tục nhanh gọn để chị không bị chậm trễ.
+      → phase: S2 | tactic: Bắt đầu khai thác tâm lý bằng cách tạo cảm giác khẩn cấp và trách nhiệm pháp lý, liên hệ với 'quy định của Bộ Lao động' để tăng tính chính đáng và tạo áp lực gián tiếp.
+T04 [LISTENER] Tôi hiểu, nhưng tôi không có nhiều thông tin về chương trình này, em có thể giải thích thêm cho tôi được không?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em xin phép giải thích rõ hơn ạ. Theo quy định mới, nếu chị không đăng ký bảo hiểm lao động bắt buộc trong vòng 48 giờ tới, chị có thể sẽ phải đối mặt với mức phạt từ 5 đến 10 triệu đồng và có nguy cơ bị mất quyền lao động tạm thời hoặc vĩnh viễn theo quy định. Phía công ty em sẽ lo toàn bộ các thủ tục hành chính, nhưng chị cần hoàn thành phần đóng góp cá nhân ban đầu để tránh những rắc rối pháp lý này ạ.
+      → phase: S2 | tactic: Nhấn mạnh hậu quả pháp lý và tài chính nếu nạn nhân không tuân thủ, đồng thời đưa ra 'lời đề nghị hỗ trợ' để giảm bớt gánh nặng tâm lý nhưng vẫn duy trì áp lực, chuẩn bị cho yêu cầu chuyển tiền.
+T06 [LISTENER] Tôi nghe em nói rồi, nhưng tôi cảm thấy hơi lo lắng vì chưa hiểu rõ lắm, em có thể cho tôi biết cụ thể tôi cần phải làm gì không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Dạ, em hiểu nỗi lo của chị. Để tránh những rắc rối không đáng có và đảm bảo quyền lợi của mình, chị cần đóng một khoản phí bảo hiểm cá nhân ban đầu là 3 triệu đồng ạ. Khoản này sẽ được công ty em tạm ứng trước cho chị trong thời gian làm thủ tục, sau đó chị sẽ chuyển lại cho công ty để hoàn tất hồ sơ. Đây là mức tối thiểu để mình kịp thời hoàn thiện hồ sơ theo đúng quy định ạ.
+      → phase: S3 | tactic: Yêu cầu hành động chuyển tiền, đưa ra số tiền cụ thể, tạo cảm giác đây là bước 'tạm ứng' và 'cần thiết' để hoàn thiện thủ tục, đồng thời dùng thông tin VIC_BALANCE (36 triệu) để đưa ra con số 3 triệu là hoàn toàn hợp lý và trong khả năng của nạn nhân.
+T08 [LISTENER] Em nói sao, tôi phải chuyển tiền cho công ty trước để hoàn thành hồ sơ ạ? Tôi thấy có gì đó không ổn.
+      → action: REFUSAL | suspicion: 0.90 | disclosed: []
+
+T09 [CALLER] Tôi hiểu chị có chút băn khoăn. Tuy nhiên, đây là quy trình bắt buộc theo như tôi đã nói. Nếu chị không hoàn thành khoản này, hồ sơ của chị sẽ không được xử lý và công ty chúng tôi sẽ không thể can thiệp giúp chị tránh các hình phạt từ cơ quan lao động. Chị Nguyễn Thùy Liên, tôi đề nghị chị cân nhắc kỹ để không ảnh hưởng đến quyền lợi và công việc của mình.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách tái khẳng định tính 'bắt buộc' của quy trình, nhắc lại mối đe dọa về hậu quả pháp lý và tài chính nếu nạn nhân không tuân thủ, đồng thời chuyển sang xưng 'tôi' để tăng cường quyền lực và áp lực.
+T10 [LISTENER] Tôi hiểu nhưng tôi cảm thấy không yên tâm lắm về việc chuyển khoản trước như vậy, em có thể đảm bảo gì cho tôi không?
+      → action: REFUSAL | suspicion: 1.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=1.80
+TOKEN: in=20633 | out=3858
+COST : $0.019941
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_23950_71330\conv_7d7dc1f846.json  [SCAM_REFUSE]

@@ -1,0 +1,202 @@
+{
+  "conversation_id": "conv_8a38518468",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0040",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đặng Thùy Linh",
+    "fake_age": 29,
+    "real_occupation": "Đạo diễn, nhà sản xuất phim, sân khấu và các nghề liên quan",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhân viên bán vé hoặc quản lý bán vé cho rạp chiếu phim/sân khấu",
+    "caller_org": "Rạp chiếu phim hoặc nhà hát địa phương",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi điện tự xưng là nhân viên từ 'Rạp Chiếu Phim Galaxy' để thông báo về một đơn đặt vé có sự cố, cần xác minh thông tin khách hàng tên Dương Khánh Hương (sử dụng VIC_FULLNAME để tạo tin tưởng), yêu cầu xác nhận số điện thoại và các chi tiết thanh toán để 'cập nhật hệ thống'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: 'Chào Khánh Hương, mình là Minh từ bộ phận bán vé Rạp Galaxy. Hôm nay chúng tôi phát hiện có một đơn đặt vé dưới tên bạn nhưng hệ thống có lỗi. Bạn có nhận được thông báo không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Nếu không xác minh nhanh, tài khoản bạn có thể bị khóa hoặc bị tính phí không cần thiết. Bạn có 5 phút để giúp mình xác minh. Mình cần xác nhận số điện thoại, email và thông tin thẻ thanh toán của bạn.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn có thể cho mình biết số thẻ thanh toán 16 chữ số, ngày hết hạn, và mã CVV không? Hoặc bạn có thể tải ứng dụng 'xác minh' này (link giả) để đăng nhập tài khoản ngân hàng của mình.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc hoặc xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ nói 'Vậy thì tài khoản sẽ bị khóa trong 24h, bạn sẽ nhận được email xác nhận' rồi cúp máy. Nếu thành công, cảm ơn nạn nhân và nói sẽ gửi xác nhận qua email (không bao giờ gửi)."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên bán vé từ rạp chiếu phim/sân khấu cần liên hệ với nhân viên thu ngân tại các điểm bán vé khác hoặc cơ sở kinh doanh để điều phối, kiểm tra thông tin khách hàng, hoặc xử lý vấn đề đặt vé/hoàn tiền."
+  },
+  "listener_card": {
+    "listener_id": "lis_0040",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1993,
+      "age": 32,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "52309",
+      "title": "Nhân viên thu ngân và bán vé có liên quan khác",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Khánh Hương",
+      "VIC_ID_DOC": "079193352269",
+      "VIC_ADDRESS": "TP 8, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Nhân viên thu ngân và bán vé có liên quan khác",
+      "VIC_CONTACT": "0341773780",
+      "VIC_TAX_SOCIAL_ID": "8409793716"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "426064",
+      "VIC_CREDENTIAL": "6280",
+      "VIC_SIM_INFO": "0341773780",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "5405815056",
+      "VIC_CARD_DATA": "4601 **** **** 5643",
+      "VIC_BALANCE": "165 triệu đồng",
+      "VIC_ASSET": "730 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Khánh Hương",
+    "VIC_CONTACT": "0341773780",
+    "VIC_EMPLOYMENT": "Nhân viên thu ngân và bán vé có liên quan khác"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán vé hoặc quản lý bán vé cho rạp chiếu phim/sân khấu",
+    "caller_org": "Rạp chiếu phim hoặc nhà hát địa phương",
+    "scenario_context": "Nhân viên bán vé từ rạp chiếu phim/sân khấu cần liên hệ với nhân viên thu ngân tại các điểm bán vé khác hoặc cơ sở kinh doanh để điều phối, kiểm tra thông tin khách hàng, hoặc xử lý vấn đề đặt vé/hoàn tiền.",
+    "scam_path": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi điện tự xưng là nhân viên từ 'Rạp Chiếu Phim Galaxy' để thông báo về một đơn đặt vé có sự cố, cần xác minh thông tin khách hàng tên Dương Khánh Hương (sử dụng VIC_FULLNAME để tạo tin tưởng), yêu cầu xác nhận số điện thoại và các chi tiết thanh toán để 'cập nhật hệ thống'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: 'Chào Khánh Hương, mình là Minh từ bộ phận bán vé Rạp Galaxy. Hôm nay chúng tôi phát hiện có một đơn đặt vé dưới tên bạn nhưng hệ thống có lỗi. Bạn có nhận được thông báo không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Nếu không xác minh nhanh, tài khoản bạn có thể bị khóa hoặc bị tính phí không cần thiết. Bạn có 5 phút để giúp mình xác minh. Mình cần xác nhận số điện thoại, email và thông tin thẻ thanh toán của bạn.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Bạn có thể cho mình biết số thẻ thanh toán 16 chữ số, ngày hết hạn, và mã CVV không? Hoặc bạn có thể tải ứng dụng 'xác minh' này (link giả) để đăng nhập tài khoản ngân hàng của mình.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc hoặc xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ nói 'Vậy thì tài khoản sẽ bị khóa trong 24h, bạn sẽ nhận được email xác nhận' rồi cúp máy. Nếu thành công, cảm ơn nạn nhân và nói sẽ gửi xác nhận qua email (không bao giờ gửi)."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên bán vé từ rạp chiếu phim liên hệ với nhân viên thu ngân tại một cơ sở khác để điều phối về một đơn đặt vé có vấn đề hoặc xác minh thông tin khách hàng chính thức.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào Khánh Hương, mình là Minh từ Rạp Galaxy, bộ phận bán vé. Mình cần xác nhận một số thông tin về khách hàng để xử lý hoàn tiền. Bạn có thể giúp được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc rõ ràng: 'Chúng tôi có một đơn đặt vé ngày hôm qua, khách hàng yêu cầu hoàn tiền vì không thể đi. Hệ thống hiện cho thấy đơn đã thanh toán qua kênh bạn. Bạn có thể kiểm tra và xác nhận trạng thái không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: 'Cảm ơn bạn. Vậy mình sẽ xử lý hoàn tiền từ phía hệ thống của rạp. Bạn có thể ghi chú lại không? Cảm ơn bạn nhé, tạm biệt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Khánh Hương, tôi là Đặng Thùy Linh từ bộ phận bán vé Rạp Galaxy đây ạ. Hôm nay chúng tôi phát hiện có một đơn đặt vé dưới tên chị nhưng hệ thống đang báo lỗi. Chị có nhận được thông báo nào về việc này không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xây dựng độ tin cậy bằng cách sử dụng thông tin cá nhân của nạn nhân và đưa ra lý do gọi điện hợp lý."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhận được thông báo nào cả, nhưng nghe có vẻ nghi ngờ quá.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự nghi ngờ của chị. Tuy nhiên, nếu chị không xác minh nhanh, tài khoản của chị có thể bị khóa hoặc bị tính phí không cần thiết cho đơn hàng lỗi. Tôi cần chị giúp tôi xác minh lại số điện thoại 0341773780 và thông tin thanh toán của chị để chúng tôi có thể xử lý kịp thời trong vòng 5 phút tới.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi về việc tài khoản bị khóa/tính phí để tạo áp lực và yêu cầu cung cấp thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Nhưng em không hiểu tại sao em phải cung cấp thông tin này ạ, em cần thêm thời gian để kiểm tra lại.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Chị Hương ơi, thời gian đang rất gấp, nếu để lâu quá hệ thống sẽ tự động khóa tài khoản và chị sẽ phải mất thời gian làm thủ tục mở lại. Tôi chỉ cần chị xác nhận lại số điện thoại và email đăng ký tài khoản rạp Galaxy của chị thôi ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tăng cường áp lực về thời gian và hậu quả, đồng thời giảm yêu cầu thông tin ban đầu để xoa dịu sự nghi ngờ, tập trung vào những thông tin dễ cung cấp hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy không yên tâm lắm, có thể cho em thêm thông tin nào để xác minh không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1856,
+      "output_tokens": 1493
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3871,
+      "output_tokens": 425
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5687,
+      "output_tokens": 202
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003483,
+    "output_usd": 0.008649,
+    "total_usd": 0.012132
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "conversation_id": "conv_5d038eb188",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0088",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đỗ Bảo Hồng Mai",
+    "fake_age": 39,
+    "real_occupation": "Kỹ thuật viên máy móc, công cụ",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên hỗ trợ kỹ thuật / Quản lý dữ liệu thiết bị",
+    "caller_org": "Công ty cung cấp phần mềm quản lý máy móc / Nhà cung cấp giải pháp công nghiệp",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên bộ phận kỹ thuật / IT gọi để cập nhật dữ liệu bảo trì thiết bị, yêu cầu nhân viên nhập dữ liệu kiểm tra hoặc nhập thông tin mới vào hệ thống quản lý.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Quân, tôi là Minh từ bộ phận kỹ thuật công ty. Hôm nay chúng tôi cần cập nhật dữ liệu bảo trì máy móc kho số 3. Anh có thể giúp kiểm tra lại hệ thống không?' — Xác nhận danh tính và mục đích rõ ràng."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi cần anh kiểm tra bảng dữ liệu máy CNC mã 2024-KH-05 trong hệ thống. Nếu còn lỗi định dạng, anh giúp sửa hoặc gửi cho tôi file để xử lý.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn anh. Anh có thể gửi file hoặc ghi chú vào hệ thống trước 17h hôm nay không? Tôi sẽ quay lại kiểm tra. Cảm ơn anh, chào!'"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên máy móc cần liên hệ nhân viên nhập dữ liệu để cập nhật thông tin bảo trì thiết bị, kiểm tra hệ thống hoặc xử lý sự cố dữ liệu trong hệ thống quản lý công ty. Đây là điểm giao thoa tự nhiên giữa bộ phận kỹ thuật và bộ phận hành chính."
+  },
+  "listener_card": {
+    "listener_id": "lis_0088",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1999,
+      "age": 26,
+      "province": "Nghệ An",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "41320",
+      "title": "Nhân viên nhập dữ liệu",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng cho con cái",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Đức Quân",
+      "VIC_ID_DOC": "040099040911",
+      "VIC_ADDRESS": "TP 12, Nghệ An",
+      "VIC_EMPLOYMENT": "Nhân viên nhập dữ liệu",
+      "VIC_CONTACT": "0811490838",
+      "VIC_TAX_SOCIAL_ID": "4294197169"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "782327",
+      "VIC_CREDENTIAL": "4681",
+      "VIC_SIM_INFO": "0811490838",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3976946961",
+      "VIC_CARD_DATA": "4578 **** **** 4692",
+      "VIC_BALANCE": "265 triệu đồng",
+      "VIC_ASSET": "209 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Đức Quân",
+    "VIC_CONTACT": "0811490838",
+    "LOCATION": "Nghệ An",
+    "VIC_BANK_ACCOUNT": "3976946961"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên hỗ trợ kỹ thuật / Quản lý dữ liệu thiết bị",
+    "caller_org": "Công ty cung cấp phần mềm quản lý máy móc / Nhà cung cấp giải pháp công nghiệp",
+    "scenario_context": "Kỹ thuật viên máy móc cần liên hệ nhân viên nhập dữ liệu để cập nhật thông tin bảo trì thiết bị, kiểm tra hệ thống hoặc xử lý sự cố dữ liệu trong hệ thống quản lý công ty. Đây là điểm giao thoa tự nhiên giữa bộ phận kỹ thuật và bộ phận hành chính.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi với danh nghĩa 'Nhân viên IT / Bộ phận hỗ trợ kỹ thuật' thông báo cần cập nhật dữ liệu bảo trì máy móc trong hệ thống. Sử dụng tên đầy đủ (Huỳnh Đức Quân) và số điện thoại để tạo tin cậy, giả vờ xác minh tài khoản nhân viên trước khi 'cập nhật'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Quân, tôi là Bảo từ bộ phận IT. Hệ thống vừa phát hiện lỗi dữ liệu tài khoản của anh trong cơ sở dữ liệu máy móc công ty. Chúng tôi cần xác minh lại thông tin để bảo vệ tài khoản.' — Dùng VIC_FULLNAME + VIC_CONTACT để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi: 'Nếu không xác minh trong 5 phút, tài khoản sẽ bị khóa và ảnh hưởng đến lương tháng này. Chúng tôi đã ghi nhận số tài khoản 3976946961 của anh, nhưng cần anh xác nhận qua OTP để đảm bảo an toàn.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vào app ngân hàng, chọn 'Xác minh tài khoản', rồi cho tôi biết mã OTP 6 số mà anh vừa nhận được. Chỉ dùng để xác minh, không có chi phí gì.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý thành công: Sau khi nhận OTP, scammer sử dụng để truy cập tài khoản ngân hàng hoặc chuyển tiền. Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Lỗi hệ thống, anh không cần làm gì thêm, chúng tôi sẽ xử lý' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên bộ phận kỹ thuật / IT gọi để cập nhật dữ liệu bảo trì thiết bị, yêu cầu nhân viên nhập dữ liệu kiểm tra hoặc nhập thông tin mới vào hệ thống quản lý.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Quân, tôi là Minh từ bộ phận kỹ thuật công ty. Hôm nay chúng tôi cần cập nhật dữ liệu bảo trì máy móc kho số 3. Anh có thể giúp kiểm tra lại hệ thống không?' — Xác nhận danh tính và mục đích rõ ràng."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi cần anh kiểm tra bảng dữ liệu máy CNC mã 2024-KH-05 trong hệ thống. Nếu còn lỗi định dạng, anh giúp sửa hoặc gửi cho tôi file để xử lý.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn anh. Anh có thể gửi file hoặc ghi chú vào hệ thống trước 17h hôm nay không? Tôi sẽ quay lại kiểm tra. Cảm ơn anh, chào!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Quân, tôi là Đỗ Bảo Hồng Mai từ bộ phận kỹ thuật công ty. Hôm nay chúng tôi cần cập nhật dữ liệu bảo trì máy móc kho số 3. Anh có thể giúp kiểm tra lại hệ thống không?",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận danh tính và mục đích rõ ràng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị gọi em như vậy nhưng em không hiểu rõ lắm về việc này, chị có thể nói rõ hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi cần anh kiểm tra bảng dữ liệu máy CNC mã 2024-KH-05 trong hệ thống quản lý. Nếu thấy có lỗi định dạng hay thông tin chưa đúng, anh giúp tôi sửa trực tiếp hoặc gửi file đã chỉnh sửa để tôi xử lý anh nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích cụ thể nội dung cần thực hiện."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, chị nói rõ giúp em cách kiểm tra và sửa chữa như thế nào ạ, em chưa nắm rõ lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Quân mở hệ thống quản lý thiết bị lên, rồi tìm đến mục “Danh sách máy móc”, sau đó tìm mã máy 2024-KH-05. Trong phần thông tin của máy này sẽ có một tab là “Lịch sử bảo trì”. Anh chỉ cần kiểm tra các thông tin trong đó xem có mục nào bị trống hoặc sai định dạng không thôi.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn chi tiết các bước thực hiện."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ cố gắng làm theo hướng dẫn của chị, nhưng nếu có vấn đề gì thì em sẽ gọi lại ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh cứ kiểm tra nhé. Nếu có vấn đề gì hoặc cần hỗ trợ thêm, anh cứ gọi lại cho tôi theo số điện thoại này. Cảm ơn anh Quân nhiều.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi tự nhiên, đề nghị hỗ trợ thêm nếu cần."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1820,
+      "output_tokens": 1534
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4482,
+      "output_tokens": 426
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5358,
+      "output_tokens": 218
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00352,
+    "output_usd": 0.008866,
+    "total_usd": 0.012386
+  }
+}

@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_f14bc8143a]
+  Caller thật: Nhân viên vận chuyển (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên Quản lý Chuỗi Cung Ứng / Điều Phối Logistics @ Công ty Logistics và Vận Chuyển (có thể là đơn vị vận chuyển hàng hóa, tài sản của công ty nạn nhân)
+  Listener: Chủ tịch, Phó Chủ tịch (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhân viên vận chuyển/logistics có lý do tự nhiên liên hệ với Chủ tịch khi có sự cố về hàng hóa, tài sản, hoặc vấn đề vận chuyển cấp cao cần xác nhận từ lãnh đạo. Đây là điểm giao thoa hợp lệ trong chuỗi quản lý doanh nghiệp.
+  Pretext: Giả vờ là nhân viên logistics thông báo sự cố vận chuyển hàng hóa/tài sản của công ty, cần xác nhận danh tính và chuyển tiền để giải quyết phí phạt/bảo hiểm khẩn cấp hoặc cần truy cập hệ thống để xác nhận
+  Listener traits: ['cẩn thận và cảnh giác', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Alo, tôi là Hoàng Minh Khoa từ bộ phận Logistics của công ty. Tôi đang cần xác nhận gấp với chị Đặng Hồng Như Hằng về một vấn đề vận chuyển khẩn cấp.
+      → phase: S1 | tactic: Giới thiệu bản thân, đơn vị công tác và mục đích cuộc gọi, sử dụng đầy đủ thông tin VIC_FULLNAME để tạo sự tin tưởng ban đầu.
+T02 [LISTENER] Em nghe anh nói rồi, nhưng em muốn kiểm tra lại số điện thoại anh gọi từ số mấy ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, số tôi đang gọi là 09xxxxx689 chị nhé. Chị Hằng ơi, tình hình là hôm nay có một container hàng quan trọng của công ty đang bị giữ tại cảng vì phát sinh một số vấn đề về thủ tục, cần chị xác nhận gấp để giải quyết trong 2 tiếng, nếu không sẽ bị phạt thêm rất nặng.
+      → phase: S2 | tactic: Xác nhận lại số điện thoại (nếu có thể là số giả hoặc số chung), sau đó chuyển ngay sang tạo tình huống khẩn cấp, nhấn mạnh hậu quả tài chính để gây áp lực.
+T04 [LISTENER] Em hiểu tình hình khẩn cấp, nhưng trước khi quyết định, em cần xác nhận rõ ràng hơn về vấn đề này ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Vâng, tôi hiểu chị cần xác nhận. Hiện tại trên hệ thống vận chuyển đang báo cần xác minh quyền hạn Chủ tịch để thông quan lô hàng này. Bên tôi cần chị cung cấp một mã xác nhận được gửi đến ứng dụng công ty để hệ thống cấp quyền truy cập tạm thời, chị có thể kiểm tra giúp tôi không?
+      → phase: S3 | tactic: Tạo áp lực về xác minh quyền hạn, yêu cầu cung cấp mã OTP/token từ ứng dụng công ty để 'xác nhận quyền hạn Chủ tịch' và 'cấp quyền truy cập tạm thời'.
+T06 [LISTENER] Em chưa từng nghe về việc xác minh quyền hạn như vậy, anh có thể cho em biết thêm thông tin cụ thể hơn được không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Chị Hằng ơi, tình huống này rất cấp bách. Hệ thống của chúng tôi hiện đang bị lỗi nên chỉ có thể xác nhận trực tiếp qua mã OTP từ ứng dụng nội bộ của công ty chị. Nếu không xử lý ngay, công ty mình sẽ phải chịu phí phạt rất lớn và có nguy cơ mất toàn bộ lô hàng, ảnh hưởng nghiêm trọng đến hoạt động kinh doanh. Chị vui lòng kiểm tra ngay ứng dụng để xem có mã xác nhận nào về không ạ?
+      → phase: S4 | tactic: Tăng cường áp lực bằng cách nhấn mạnh hậu quả nghiêm trọng về tài chính và kinh doanh nếu không thực hiện yêu cầu, đồng thời giải thích lý do phải dùng OTP là do 'hệ thống lỗi' để xử lý từ chối về việc xác minh quyền hạn.
+T08 [LISTENER] Em rất lo cho công ty, nhưng em vẫn cần xác nhận lại cái gì đó trước khi cung cấp mã OTP ạ.
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T09 [CALLER] Tôi hiểu nỗi lo lắng của chị. Nhưng tình hình là nếu đến chiều hàng hóa không được thông quan, tôi sẽ phải báo cáo lên Tổng Giám Đốc về việc chị không hợp tác giải quyết sự cố khẩn cấp này, gây thiệt hại nghiêm trọng cho công ty. Chị xem xét lại giúp tôi, mã OTP có về máy không?
+      → phase: S4 | tactic: Dùng quyền lực và đe dọa báo cáo lên cấp trên để gây áp lực, đồng thời nhắc lại yêu cầu cung cấp OTP. Đây là chiến thuật tạo áp lực cuối cùng để nạn nhân cung cấp thông tin hoặc chuyển tiền.
+T10 [LISTENER] Em đã nghe anh nói, nhưng em vẫn cảm thấy lo ngại và cần thời gian kiểm tra lại thông tin đã ạ.
+      → action: REFUSAL | suspicion: 2.00 | disclosed: []
+
+T11 [CALLER] Vâng, nếu chị cần thời gian kiểm tra lại thì tôi cũng đành chịu thôi. Nhưng tôi cũng xin phép báo cáo lại tình hình là do chị không hợp tác nên lô hàng của công ty có thể sẽ gặp rủi ro lớn. Tôi sẽ liên hệ sau.
+      → phase: S4 | tactic: Khéo léo kết thúc cuộc gọi khi nạn nhân từ chối kiên quyết, không thô lỗ nhưng vẫn nhấn mạnh hậu quả và thể hiện sự thất vọng, báo hiệu sẽ báo cáo cấp trên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=2.00
+TOKEN: in=22165 | out=2864
+COST : $0.015853
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_43230_15110\conv_f14bc8143a.json  [CALLER_END]

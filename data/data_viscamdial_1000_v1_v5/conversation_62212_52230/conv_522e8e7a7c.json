@@ -1,0 +1,225 @@
+{
+  "conversation_id": "conv_522e8e7a7c",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_SUCCESS",
+  "caller_card": {
+    "caller_id": "cal_0016",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đỗ Đức Tùng",
+    "fake_age": 48,
+    "real_occupation": "Lao động nuôi tôm",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh/bán hàng thủy sản",
+    "caller_org": "Công ty/HTX xuất khẩu thủy sản hoặc thương lái tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + otp_extraction",
+      "pretext": "Gọi điện thoại khách hàng Tô Hồng Linh để xác minh thông tin tài khoản bán hàng do phát hiện hoạt động bất thường trên nền tảng, hoặc thông báo cần cập nhật thông tin thanh toán cho đơn hàng lớn sắp tới.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Scammer xưng danh là 'Nhân viên hỗ trợ kinh doanh từ nền tảng bán hàng' hoặc 'Nhân viên xác minh tài khoản'. Dùng tên đầy đủ 'Tô Hồng Linh' + số điện thoại để xác nhận đúng người, tạo ấn tượng họ đã có dữ liệu hệ thống. Nói rằng phát hiện hoạt động lạ hoặc cần xác minh bảo mật tài khoản."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: Nhấn mạnh rằng nếu không xác minh ngay, tài khoản sẽ bị khóa, hoặc có kẻ xấu đang cố truy cập. Tạo áp lực thời gian ('chỉ còn 10 phút', 'cần xác minh ngay lập tức'). Nhân viên bán hàng sẽ lo lắng vì việc khóa tài khoản ảnh hưởng trực tiếp đến doanh thu."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu nạn nhân cung cấp mã OTP được gửi tới điện thoại hoặc email, hoặc yêu cầu đăng nhập vào 'link xác minh' giả mạo (phishing). Có thể yêu cầu cập nhật thông tin thẻ tín dụng (4843 **** **** 1242) hoặc mã bảo mật."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi thành công hoặc từ chối: Nếu thành công, scammer cảm ơn và chấm dứt cuộc gọi, sau đó dùng OTP/thông tin để truy cập tài khoản hoặc thực hiện giao dịch trái phép. Nếu nạn nhân từ chối, scammer có thể đe dọa khóa tài khoản hoặc nói sẽ liên hệ lại sau, tạo cảm giác vẫn có nguy hiểm."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên bán hàng thủy sản thường liên hệ với nhân viên trợ giúp bán hàng tại các sàn thương mại điện tử, cửa hàng online hoặc nền tảng bán lẻ để đàm phán đặt hàng, hỗ trợ khách hàng hoặc giải quyết tranh chấp đơn hàng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0016",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1973,
+      "age": 52,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "52230",
+      "title": "Nhân viên trợ giúp bán hàng",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tô Hồng Linh",
+      "VIC_ID_DOC": "001173214538",
+      "VIC_ADDRESS": "Quận 4, Hà Nội",
+      "VIC_EMPLOYMENT": "Nhân viên trợ giúp bán hàng",
+      "VIC_CONTACT": "0995610236",
+      "VIC_TAX_SOCIAL_ID": "7323094392"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4113",
+      "VIC_CREDENTIAL": "894397",
+      "VIC_SIM_INFO": "0995610236",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7909751523",
+      "VIC_CARD_DATA": "4843 **** **** 1242",
+      "VIC_BALANCE": "60 triệu đồng",
+      "VIC_ASSET": "430 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tô Hồng Linh",
+    "VIC_CONTACT": "0995610236",
+    "VIC_EMPLOYMENT": "Nhân viên trợ giúp bán hàng",
+    "VIC_TAX_SOCIAL_ID": "7323094392",
+    "VIC_CARD_DATA": "4843 **** **** 1242"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh/bán hàng thủy sản",
+    "caller_org": "Công ty/HTX xuất khẩu thủy sản hoặc thương lái tự do",
+    "scenario_context": "Nhân viên bán hàng thủy sản thường liên hệ với nhân viên trợ giúp bán hàng tại các sàn thương mại điện tử, cửa hàng online hoặc nền tảng bán lẻ để đàm phán đặt hàng, hỗ trợ khách hàng hoặc giải quyết tranh chấp đơn hàng.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + otp_extraction",
+      "pretext": "Gọi điện thoại khách hàng Tô Hồng Linh để xác minh thông tin tài khoản bán hàng do phát hiện hoạt động bất thường trên nền tảng, hoặc thông báo cần cập nhật thông tin thanh toán cho đơn hàng lớn sắp tới.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Scammer xưng danh là 'Nhân viên hỗ trợ kinh doanh từ nền tảng bán hàng' hoặc 'Nhân viên xác minh tài khoản'. Dùng tên đầy đủ 'Tô Hồng Linh' + số điện thoại để xác nhận đúng người, tạo ấn tượng họ đã có dữ liệu hệ thống. Nói rằng phát hiện hoạt động lạ hoặc cần xác minh bảo mật tài khoản."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: Nhấn mạnh rằng nếu không xác minh ngay, tài khoản sẽ bị khóa, hoặc có kẻ xấu đang cố truy cập. Tạo áp lực thời gian ('chỉ còn 10 phút', 'cần xác minh ngay lập tức'). Nhân viên bán hàng sẽ lo lắng vì việc khóa tài khoản ảnh hưởng trực tiếp đến doanh thu."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu nạn nhân cung cấp mã OTP được gửi tới điện thoại hoặc email, hoặc yêu cầu đăng nhập vào 'link xác minh' giả mạo (phishing). Có thể yêu cầu cập nhật thông tin thẻ tín dụng (4843 **** **** 1242) hoặc mã bảo mật."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi thành công hoặc từ chối: Nếu thành công, scammer cảm ơn và chấm dứt cuộc gọi, sau đó dùng OTP/thông tin để truy cập tài khoản hoặc thực hiện giao dịch trái phép. Nếu nạn nhân từ chối, scammer có thể đe dọa khóa tài khoản hoặc nói sẽ liên hệ lại sau, tạo cảm giác vẫn có nguy hiểm."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên kinh doanh thủy sản gọi để thảo luận về đơn hàng, điều kiện bán hàng, hoặc hỗ trợ giải quyết vấn đề liên quan đến sản phẩm/dịch vụ trên nền tảng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng ('Tôi là [Tên], nhân viên kinh doanh từ [Công ty/HTX X]'), xác nhận đúng người qua tên hoặc số điện thoại, giới thiệu mục đích gọi ngắn gọn (VD: 'Tôi gọi để thảo luận về đơn hàng tôm sú tuần tới')."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thảo luận chi tiết về số lượng, giá cả, chất lượng, thời gian giao hàng, hoặc giải quyết vấn đề khiếu nại nếu có. Hỏi ý kiến nạn nhân về nhu cầu hoặc điều chỉnh đơn hàng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Tóm tắt những gì đã thống nhất (số lượng, giá, hạn chót), xác nhận sẽ gửi hóa đơn qua email hoặc hệ thống, chào tạm biệt một cách lịch sự. Không yêu cầu thông tin nhạy cảm hay OTP."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_OTP": "4113"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Tô Hồng Linh, tôi là Đỗ Đức Tùng, nhân viên hỗ trợ kinh doanh từ nền tảng bán hàng. Tôi gọi điện để thông báo về hoạt động bất thường trên tài khoản bán hàng của chị, số điện thoại đăng ký là 0995610236, chị có phải là nhân viên trợ giúp bán hàng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, xác nhận thông tin cơ bản của nạn nhân bằng dữ liệu đã có để xây dựng niềm tin ban đầu, tạo bối cảnh khẩn cấp về 'hoạt động bất thường'."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Tô Hồng Linh, nhưng em có thể cho tôi biết cụ thể hơn về hoạt động bất thường đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Linh. Hệ thống của chúng tôi vừa ghi nhận một số giao dịch lạ và nguy cơ rò rỉ thông tin đăng nhập từ tài khoản của chị. Nếu không xử lý kịp thời trong vòng 20 phút tới, tài khoản bán hàng của chị có thể bị khóa tạm thời để đảm bảo an toàn. Điều này sẽ ảnh hưởng trực tiếp đến các đơn hàng và doanh thu hiện tại của chị, đặc biệt là với vai trò nhân viên trợ giúp bán hàng.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi. Nhấn mạnh hậu quả nếu không hành động ngay (khóa tài khoản, ảnh hưởng doanh thu). Đưa ra thời hạn (20 phút) để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy lo quá, vậy em phải làm gì để bảo vệ tài khoản của mình ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị đừng quá lo lắng. Để bảo vệ tài khoản và đảm bảo các giao dịch không bị gián đoạn, chúng tôi cần chị xác minh một mã OTP vừa được gửi đến số điện thoại 0995610236. Đây là bước cuối cùng để hệ thống xác nhận chính chủ và khôi phục lại trạng thái an toàn cho tài khoản của chị.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân cung cấp mã OTP để xác minh, tạo cảm giác đây là bước 'phục hồi' và 'bảo vệ' tài khoản, chứ không phải đánh cắp thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, mã OTP em có là gì ạ? Em sẽ nhanh chóng gửi cho em để bảo vệ tài khoản.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị vui lòng đọc giúp tôi dãy số OTP vừa được gửi đến số điện thoại của chị để tôi tiến hành xác nhận và khắc phục lỗi ngay ạ. Mã này chỉ có hiệu lực trong vài phút thôi, chị nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Trực tiếp yêu cầu cung cấp mã OTP, nhấn mạnh tính khẩn cấp của mã OTP để nạn nhân không có thời gian suy nghĩ."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, mã OTP của tôi là 4113, em đọc cho cán bộ nhé.",
+      "listener_action": "FULL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_OTP": "4113"
+      },
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1850,
+      "output_tokens": 1681
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6129,
+      "output_tokens": 623
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8042,
+      "output_tokens": 282
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004282,
+    "output_usd": 0.010132,
+    "total_usd": 0.014414
+  }
+}

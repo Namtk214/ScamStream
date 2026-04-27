@@ -1,0 +1,222 @@
+{
+  "conversation_id": "conv_f253dd4e04",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0071",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Vũ Minh Quang Quân",
+    "fake_age": 39,
+    "real_occupation": "Thư ký hành chính và điều hành",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Trưởng phòng Nhân sự & Hành chính",
+    "caller_org": "Công ty Cổ phần Hóa chất Công nghiệp Việt Nam (VNCHEM)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo rằng nạn nhân đã được chọn tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao' của công ty, yêu cầu nộp phí đăng ký để nhận chứng chỉ quốc tế, từ đó giải thích cần kiểm tra tài khoản ngân hàng để trừ phí. Scammer sẽ dùng tên đầy đủ 'Lý Bảo Lan' để xác nhận danh tính, tạo ảo tưởng công ty đã có hồ sơ chi tiết.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh - Trưởng phòng Nhân sự công ty VNCHEM'. Gọi tên đầy đủ 'Lý Bảo Lan' để tạo credibility, nói rằng hệ thống công ty đã xác nhận số điện thoại 0843506378 của chị, minh chứng là đã có hồ sơ lao động."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: Thông báo rằng chị vừa được lựa chọn tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao' (gói cao cấp dành cho những nhân viên xuất sắc), nhưng chỉ còn 48 giờ để đăng ký. Nếu không đăng ký, sẽ mất cơ hội và có thể bị xem là không tuân thủ quy định an toàn lao động của công ty."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Scammer yêu cầu chị cần nộp phí đăng ký 2.8 triệu đồng (dùng số 34 triệu tổng tài sản để tính toán hợp lý - khoảng 8% tài sản). Scammer sẽ hướng dẫn chị chuyển khoản vào tài khoản 'công ty' (thực chất là tài khoản của scammer) hoặc yêu cầu chị cung cấp mã OTP từ ngân hàng để 'hệ thống công ty tự động trừ phí'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu chị nghi ngờ, scammer sẽ nói 'Chị có thể xác nhận lại qua đường dây nóng công ty' (cung cấp số fake), hoặc nếu chị đã chuyển tiền, sẽ nói 'Tiền sẽ hoàn lại trong 3-5 ngày làm việc' rồi mất liên lạc."
+        }
+      ]
+    },
+    "scenario_context": "Công ty sản xuất hóa chất tẩy trắng cần liên hệ với các thợ vận hành máy tẩy trắng tại các nhà máy/xưởng để thực hiện kiểm tra an toàn lao động định kỳ, cấp chứng chỉ hoặc thông báo về chương trình đào tạo bắt buộc."
+  },
+  "listener_card": {
+    "listener_id": "lis_0071",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1996,
+      "age": 29,
+      "province": "Quảng Nam",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "81541",
+      "title": "Thợ vận hành máy tẩy trắng",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lý Bảo Lan",
+      "VIC_ID_DOC": "049196197620",
+      "VIC_ADDRESS": "Quận 11, Quảng Nam",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy tẩy trắng",
+      "VIC_CONTACT": "0843506378",
+      "VIC_TAX_SOCIAL_ID": "8532378374"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "771245",
+      "VIC_CREDENTIAL": "3894",
+      "VIC_SIM_INFO": "0843506378",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "61186928508411",
+      "VIC_CARD_DATA": "4154 **** **** 3733",
+      "VIC_BALANCE": "6 triệu đồng",
+      "VIC_ASSET": "34 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lý Bảo Lan",
+    "VIC_CONTACT": "0843506378",
+    "VIC_ASSET": "34 triệu đồng",
+    "VIC_BALANCE": "6 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Nhân sự & Hành chính",
+    "caller_org": "Công ty Cổ phần Hóa chất Công nghiệp Việt Nam (VNCHEM)",
+    "scenario_context": "Công ty sản xuất hóa chất tẩy trắng cần liên hệ với các thợ vận hành máy tẩy trắng tại các nhà máy/xưởng để thực hiện kiểm tra an toàn lao động định kỳ, cấp chứng chỉ hoặc thông báo về chương trình đào tạo bắt buộc.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo rằng nạn nhân đã được chọn tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao' của công ty, yêu cầu nộp phí đăng ký để nhận chứng chỉ quốc tế, từ đó giải thích cần kiểm tra tài khoản ngân hàng để trừ phí. Scammer sẽ dùng tên đầy đủ 'Lý Bảo Lan' để xác nhận danh tính, tạo ảo tưởng công ty đã có hồ sơ chi tiết.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh - Trưởng phòng Nhân sự công ty VNCHEM'. Gọi tên đầy đủ 'Lý Bảo Lan' để tạo credibility, nói rằng hệ thống công ty đã xác nhận số điện thoại 0843506378 của chị, minh chứng là đã có hồ sơ lao động."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: Thông báo rằng chị vừa được lựa chọn tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao' (gói cao cấp dành cho những nhân viên xuất sắc), nhưng chỉ còn 48 giờ để đăng ký. Nếu không đăng ký, sẽ mất cơ hội và có thể bị xem là không tuân thủ quy định an toàn lao động của công ty."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Scammer yêu cầu chị cần nộp phí đăng ký 2.8 triệu đồng (dùng số 34 triệu tổng tài sản để tính toán hợp lý - khoảng 8% tài sản). Scammer sẽ hướng dẫn chị chuyển khoản vào tài khoản 'công ty' (thực chất là tài khoản của scammer) hoặc yêu cầu chị cung cấp mã OTP từ ngân hàng để 'hệ thống công ty tự động trừ phí'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu chị nghi ngờ, scammer sẽ nói 'Chị có thể xác nhận lại qua đường dây nóng công ty' (cung cấp số fake), hoặc nếu chị đã chuyển tiền, sẽ nói 'Tiền sẽ hoàn lại trong 3-5 ngày làm việc' rồi mất liên lạc."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty VNCHEM thực sự gọi để thông báo về chương trình đào tạo an toàn lao động bắt buộc hàng năm, xác nhận thông tin cá nhân, hoặc cập nhật hồ sơ bảo hiểm lao động.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên phòng Nhân sự công ty VNCHEM, xác nhận đúng người bằng cách hỏi 'Đây có phải chị Lý Bảo Lan, thợ vận hành máy tẩy trắng tại xưởi X không?' và đợi xác nhận trước khi tiếp tục."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo về khóa đào tạo an toàn lao động định kỳ (miễn phí, do công ty tổ chức), hoặc xác nhận lại thông tin hồ sơ (địa chỉ, số điện thoại, tên người thân) để cập nhật vào hệ thống bảo hiểm. Không yêu cầu chuyển tiền hay cung cấp mã OTP."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Hẹn chị tham dự khóa đào tạo vào ngày cụ thể, hoặc yêu cầu chị ký xác nhận thông tin qua email/giấy tờ. Kết thúc cuộc gọi một cách bình thường, chào tạm biệt."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Lý Bảo Lan. Tôi là Vũ Minh Quang Quân, Trưởng phòng Nhân sự & Hành chính của Công ty Cổ phần Hóa chất Công nghiệp Việt Nam, VNCHEM. Tôi gọi từ số 0843506378 của chị để thông báo một tin rất quan trọng liên quan đến quyền lợi của chị tại công ty.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, dùng tên đầy đủ và số điện thoại của nạn nhân để tạo độ tin cậy và chứng minh đã có thông tin cá nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, anh có thể cho em biết tin gì quan trọng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, thưa chị Lý Bảo Lan. Chị vừa được ban lãnh đạo công ty lựa chọn tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao' của VNCHEM. Đây là một gói bảo hiểm cao cấp, dành riêng cho những nhân viên có thành tích xuất sắc như chị. Tuy nhiên, thời gian để chị đăng ký chỉ còn trong vòng 48 giờ tới, nếu không, cơ hội này sẽ bị bỏ lỡ và có thể ảnh hưởng đến đánh giá tuân thủ quy định an toàn lao động của chị tại công ty.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu về chương trình, nhấn mạnh đây là một đặc quyền dành cho người xuất sắc để kích thích lòng tự trọng, đồng thời tạo cảm giác khan hiếm và khẩn cấp về thời gian để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất vui vì được lựa chọn, nhưng em không biết làm thế nào để đăng ký, anh có thể hướng dẫn em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Lý Bảo Lan yên tâm. Để hoàn tất việc đăng ký tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao', chị cần nộp một khoản phí hành chính là 2.8 triệu đồng. Khoản phí này sẽ giúp chị nhận được chứng chỉ quốc tế, nâng cao profile nghề nghiệp. Hiện tại, để thuận tiện, tôi sẽ hướng dẫn chị thanh toán qua tài khoản công ty, hoặc nếu chị muốn, tôi có thể hỗ trợ để hệ thống của chúng tôi tự động trừ phí trực tiếp từ tài khoản ngân hàng của chị. Chị muốn chọn phương án nào ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể là nộp phí, đưa ra hai lựa chọn (chuyển khoản hoặc cho phép tự động trừ phí) để tạo cảm giác linh hoạt và thuận tiện cho nạn nhân, đồng thời bước đầu hướng đến mục tiêu money_transfer."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết chuyển khoản như thế nào, còn tự động trừ thì không an toàn lắm, anh có thể giúp em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự lo lắng của chị. Vậy để tiện nhất cho chị, tôi sẽ gửi số tài khoản của công ty cho chị qua tin nhắn sau cuộc gọi này, chị có thể chuyển khoản 2.8 triệu đồng vào đó. Sau khi nhận được phí, chúng tôi sẽ hoàn tất thủ tục đăng ký và gửi chứng chỉ quốc tế về địa chỉ của chị trong vòng 3 đến 5 ngày làm việc. Chị vui lòng xác nhận lại là chị sẽ chuyển khoản và không cần chúng tôi hỗ trợ trừ phí tự động nhé?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu mối lo ngại của nạn nhân về việc chuyển khoản hoặc trừ tiền tự động, sau đó kiên quyết đưa ra một lựa chọn thanh toán an toàn hơn (chuyển khoản thủ công) để đạt được mục tiêu money_transfer."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ chuyển khoản 2.8 triệu đồng vào số tài khoản mà anh gửi cho em, nhưng anh nhớ gửi cho em nhanh nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, chị Lý Bảo Lan! Tôi sẽ gửi ngay số tài khoản công ty vào số điện thoại 0843506378 của chị. Chị nhớ kiểm tra tin nhắn và hoàn tất chuyển khoản sớm để không bị lỡ thời hạn 48 giờ nhé. Cảm ơn chị đã hợp tác!",
+      "current_phase": "S4",
+      "tactic_hint": "Xác nhận thành công việc nạn nhân đồng ý chuyển tiền, cung cấp thông tin cần thiết và nhắc lại yếu tố khẩn cấp để thúc đẩy hành động, đồng thời kết thúc cuộc gọi một cách tự nhiên sau khi đã đạt được mục tiêu."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1384,
+      "output_tokens": 1673
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8301,
+      "output_tokens": 930
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8204,
+      "output_tokens": 285
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004275,
+    "output_usd": 0.010861,
+    "total_usd": 0.015136
+  }
+}

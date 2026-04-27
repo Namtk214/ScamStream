@@ -1,0 +1,218 @@
+{
+  "conversation_id": "conv_21c1b7792c",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0080",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Phan Thế Văn Khoa",
+    "fake_age": 25,
+    "real_occupation": "Nhà vật lý học và thiên văn học",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Kỹ sư phần mềm nhúng / Chuyên gia tích hợp hệ thống điều khiển thiên văn",
+    "caller_org": "Viện Vật lý và Thiên văn học (VAST) / Công ty cung cấp giải pháp công nghệ",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Scammer xưng danh là kỹ sư dự án từ VAST, nói rằng họ đang thực hiện dự án nâng cấp hệ thống điều khiển cho kính viễn vọng quốc gia. Họ gọi để 'xác nhận thông tin kỹ sư điện tử có kinh nghiệm' và đề cập rằng Cao Gia Xuân Tuấn được đề cử tham gia dự án này với mức phí tư vấn/hợp tác 50-100 triệu đồng (gần với tài sản nạn nhân 339 triệu). Tạo sự khẩn cấp bằng cách nói rằng deadline nộp hồ sơ tài chính là hôm nay.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận danh tính: Scammer gọi, xưng danh là 'Thạc sĩ Trần Minh Hải, kỹ sư dự án từ VAST'. Nói tên đầy đủ 'Cao Gia Xuân Tuấn' để tạo credibility. Hỏi: 'Anh là kỹ sư điện tử chuyên về hệ thống điều khiển phải không? Chúng tôi có hồ sơ của anh từ cơ sở dữ liệu chuyên gia'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý + Tạo khẩn cấp: Nói rằng VAST đang triển khai dự án nâng cấp thiết bị khoa học, cần tuyển dụng tư vấn độc lập. Mức phí 80 triệu đồng cho giai đoạn đầu. Tạo sợ hãi: 'Chúng tôi phải nộp danh sách nhân sự trong hôm nay, nếu anh không confirm ngay sẽ mất cơ hội'. Hoặc: 'Để tham gia dự án, anh cần chứng minh khả năng tài chính bằng cách chuyển 10 triệu đồng tiền đặt cọc, sau đó sẽ hoàn lại khi ký hợp đồng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Scammer cung cấp số tài khoản (của đồng phạm) với tên giả 'Quỹ Dự án VAST' hoặc 'Công ty Tư vấn Khoa học'. Nói: 'Anh chuyển tiền vào tài khoản này, chúng tôi sẽ xử lý hồ sơ và gửi hợp đồng chính thức về email anh trong 24h'. Yêu cầu không nói với ai vì đây là quy trình nội bộ bảo mật."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết quả: Nếu nạn nhân chuyển tiền, scammer tắt máy hoặc nói 'đang xử lý, sẽ gọi lại'. Nếu nạn nhân từ chối, scammer nói 'không sao, có nhiều ứng viên khác' rồi cắt máy, tránh để lại dấu vết."
+        }
+      ]
+    },
+    "scenario_context": "Nhà vật lý học và thiên văn học cần gọi cho kỹ sư điện tử để hợp tác phát triển hệ thống điều khiển tự động cho thiết bị quan sát (kính viễn vọng, camera CCD), hoặc tích hợp cảm biến điện tử vào dự án nghiên cứu khoa học."
+  },
+  "listener_card": {
+    "listener_id": "lis_0080",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1991,
+      "age": 34,
+      "province": "Thanh Hóa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "21520",
+      "title": "Kỹ sư điện tử",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Cao Gia Xuân Tuấn",
+      "VIC_ID_DOC": "038091356211",
+      "VIC_ADDRESS": "TP 11, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Kỹ sư điện tử",
+      "VIC_CONTACT": "0892108413",
+      "VIC_TAX_SOCIAL_ID": "2671813350"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7974",
+      "VIC_CREDENTIAL": "388183",
+      "VIC_SIM_INFO": "0892108413",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "704717392774",
+      "VIC_CARD_DATA": "4645 **** **** 3782",
+      "VIC_BALANCE": "101 triệu đồng",
+      "VIC_ASSET": "339 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Cao Gia Xuân Tuấn",
+    "VIC_CONTACT": "0892108413",
+    "VIC_ASSET": "339 triệu đồng",
+    "VIC_EMPLOYMENT": "Kỹ sư điện tử"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư phần mềm nhúng / Chuyên gia tích hợp hệ thống điều khiển thiên văn",
+    "caller_org": "Viện Vật lý và Thiên văn học (VAST) / Công ty cung cấp giải pháp công nghệ",
+    "scenario_context": "Nhà vật lý học và thiên văn học cần gọi cho kỹ sư điện tử để hợp tác phát triển hệ thống điều khiển tự động cho thiết bị quan sát (kính viễn vọng, camera CCD), hoặc tích hợp cảm biến điện tử vào dự án nghiên cứu khoa học.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Scammer xưng danh là kỹ sư dự án từ VAST, nói rằng họ đang thực hiện dự án nâng cấp hệ thống điều khiển cho kính viễn vọng quốc gia. Họ gọi để 'xác nhận thông tin kỹ sư điện tử có kinh nghiệm' và đề cập rằng Cao Gia Xuân Tuấn được đề cử tham gia dự án này với mức phí tư vấn/hợp tác 50-100 triệu đồng (gần với tài sản nạn nhân 339 triệu). Tạo sự khẩn cấp bằng cách nói rằng deadline nộp hồ sơ tài chính là hôm nay.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận danh tính: Scammer gọi, xưng danh là 'Thạc sĩ Trần Minh Hải, kỹ sư dự án từ VAST'. Nói tên đầy đủ 'Cao Gia Xuân Tuấn' để tạo credibility. Hỏi: 'Anh là kỹ sư điện tử chuyên về hệ thống điều khiển phải không? Chúng tôi có hồ sơ của anh từ cơ sở dữ liệu chuyên gia'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý + Tạo khẩn cấp: Nói rằng VAST đang triển khai dự án nâng cấp thiết bị khoa học, cần tuyển dụng tư vấn độc lập. Mức phí 80 triệu đồng cho giai đoạn đầu. Tạo sợ hãi: 'Chúng tôi phải nộp danh sách nhân sự trong hôm nay, nếu anh không confirm ngay sẽ mất cơ hội'. Hoặc: 'Để tham gia dự án, anh cần chứng minh khả năng tài chính bằng cách chuyển 10 triệu đồng tiền đặt cọc, sau đó sẽ hoàn lại khi ký hợp đồng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Scammer cung cấp số tài khoản (của đồng phạm) với tên giả 'Quỹ Dự án VAST' hoặc 'Công ty Tư vấn Khoa học'. Nói: 'Anh chuyển tiền vào tài khoản này, chúng tôi sẽ xử lý hồ sơ và gửi hợp đồng chính thức về email anh trong 24h'. Yêu cầu không nói với ai vì đây là quy trình nội bộ bảo mật."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết quả: Nếu nạn nhân chuyển tiền, scammer tắt máy hoặc nói 'đang xử lý, sẽ gọi lại'. Nếu nạn nhân từ chối, scammer nói 'không sao, có nhiều ứng viên khác' rồi cắt máy, tránh để lại dấu vết."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Viện Vật lý và Thiên văn học tìm kiếm kỹ sư điện tử độc lập để tư vấn thiết kế hệ thống điều khiển tự động cho kính viễn vọng hoặc tích hợp cảm biến. Cuộc gọi để xác nhận sự quan tâm, thảo luận yêu cầu kỹ thuật, và chuẩn bị ký hợp đồng hợp pháp với quy trình thanh toán rõ ràng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Người gọi xưng danh là 'Thạc sĩ Trần Minh Hải, kỹ sư dự án từ Viện Vật lý và Thiên văn học'. Xác nhận: 'Tôi đang cần tư vấn kỹ sư điện tử có kinh nghiệm. Bạn là Cao Gia Xuân Tuấn phải không? Tôi có thông tin liên hệ của bạn từ cơ sở dữ liệu chuyên gia của Viện'."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết dự án, yêu cầu kỹ thuật, phạm vi công việc, mức phí dự kiến (80 triệu cho toàn dự án hoặc 8-10 triệu/tháng nếu hợp tác dài hạn). Thảo luận về timeline, deliverables. Nếu nạn nhân quan tâm, cung cấp email chính thức của Viện để gửi hợp đồng, hoặc lên lịch cuộc họp video để xác nhận danh tính qua công ty."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Nếu cả hai đồng ý, thống nhất các bước tiếp theo (gửi hợp đồng, xác nhận quy trình thanh toán qua chuyển khoản chính thức của Viện). Nếu chưa sẵn sàng, nói 'không vấn đề, anh suy nghĩ rồi liên hệ lại'. Chào tạm biệt chuyên nghiệp, cung cấp số điện thoại chính thức của Viện để nạn nhân có thể xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh ạ, em là Phan Thế Văn Khoa, kỹ sư dự án bên Viện Vật lý và Thiên văn học VAST đây ạ. Em gọi để xác nhận thông tin anh Cao Gia Xuân Tuấn là kỹ sư điện tử chuyên về hệ thống điều khiển phải không ạ? Bên em có hồ sơ của anh từ cơ sở dữ liệu chuyên gia.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức, chức danh và dùng đầy đủ tên, chức danh của nạn nhân để tạo uy tín và trust."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ đúng rồi, tôi là Cao Gia Xuân Tuấn đây, em có cần xác nhận thêm thông tin gì không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng là anh Tuấn rồi ạ. Như đã trao đổi, hiện tại Viện em đang triển khai dự án nâng cấp hệ thống điều khiển cho Kính viễn vọng quốc gia. Chúng em đang gấp rút tìm kiếm các chuyên gia tư vấn độc lập để hỗ trợ dự án. Hồ sơ của anh đã được đề xuất và hội đồng đánh giá rất cao kinh nghiệm của anh trong lĩnh vực này. Mức phí tư vấn dự kiến cho giai đoạn đầu là 80 triệu đồng. Em xin phép hỏi luôn là anh Tuấn có quan tâm đến cơ hội hợp tác này không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Bắt đầu chuyển sang Phase 2: Khai thác tâm lý và tạo sự khẩn cấp bằng cách giới thiệu về dự án, đề cập đến mức phí hấp dẫn và hỏi về sự quan tâm của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe có vẻ hấp dẫn quá, nhưng tôi cần thêm thông tin về dự án và cách thức hợp tác thì mới dám quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em chia sẻ thêm. Do tính chất dự án là cấp bách và có tính bảo mật cao, mọi thông tin chi tiết sẽ được gửi qua email sau khi anh xác nhận tham gia. Tuy nhiên, em có thể nói sơ bộ là dự án sẽ kéo dài 6 tháng, và mức phí 80 triệu là cho giai đoạn 3 tháng đầu tiên. Anh cho em hỏi là anh có thể sắp xếp thời gian được không? Vì bên em cần chốt danh sách nhân sự trong hôm nay để nộp cho ban quản lý dự án ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo sự khẩn cấp bằng cách đẩy nhanh deadline và gợi ý về việc 'bỏ lỡ cơ hội' nếu không phản hồi nhanh chóng, đồng thời khẳng định lại các thông tin hấp dẫn đã đưa ra."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi cần thêm thời gian để suy nghĩ và kiểm tra thông tin trước khi quyết định tham gia ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Tuy nhiên, như em đã nói, thời gian nộp hồ sơ tài chính cho dự án là rất gấp, hạn chót là cuối giờ chiều nay. Nếu anh không xác nhận tham gia ngay, rất tiếc là bên em sẽ phải chuyển cơ hội này cho ứng viên khác. Đây thực sự là một cơ hội tốt để anh có thể đóng góp vào một dự án khoa học quốc gia và nhận được mức thu nhập hấp dẫn. Anh có thể cân nhắc lại và cho em xin thông tin quyết định trong vòng 30 phút tới không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tăng cường yếu tố khẩn cấp và áp lực về thời gian, đồng thời nhấn mạnh lợi ích và 'mất mát' nếu nạn nhân không hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói nghe hấp dẫn quá, nhưng tôi vẫn cần thời gian để suy nghĩ thêm đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1794,
+      "output_tokens": 2090
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6476,
+      "output_tokens": 748
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8436,
+      "output_tokens": 282
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004355,
+    "output_usd": 0.012489,
+    "total_usd": 0.016844
+  }
+}

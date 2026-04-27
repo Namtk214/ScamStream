@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_fe58a14a8b]
+  Caller thật: Kỹ thuật viên máy tự động (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Trưởng phòng Kỹ thuật & Bảo trì - Công ty cung cấp giải pháp tự động hóa @ Công ty TNHH Kỹ thuật Tự động Á Châu (Automation Tech Asia)
+  Listener: Thợ vận hành máy hoàn thiện, tráng, mạ kim loại (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Kỹ thuật viên máy tự động gọi cho thợ vận hành máy hoàn thiện/mạ kim loại để kiểm tra tình trạng máy, cập nhật hệ thống điều khiển, hoặc xử lý sự cố kỹ thuật tại nhà máy/xưởng. Đây là mối quan hệ tự nhiên giữa nhà cung cấp giải pháp và người vận hành máy tại phía khách hàng.
+  Pretext: Gọi điện khẩn cấp: 'Hệ thống kiểm soát chất lượng mạ kim loại của công ty bạn vừa phát hiện bất thường trong dữ liệu. Chúng tôi cần xác minh danh tính anh Võ Đức Vinh (dùng VIC_FULLNAME để tạo credibility) để cập nhật thông tin bảo mật ngay lập tức, nếu không sẽ ảnh hưởng tới quy trình sản xuất.'
+  Listener traits: ['nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, chào anh Vinh. Em là Trương Ngọc Nhàn, Trưởng phòng Kỹ thuật & Bảo trì từ Công ty TNHH Kỹ thuật Tự động Á Châu. Em gọi đến số 0835440868 của anh Võ Đức Vinh để xác minh thông tin liên quan đến mã số thuế hoặc BHXH là 6600763295 ạ.
+      → phase: S1 | tactic: Tiếp cận + xưng danh, nêu ngay tên đầy đủ + số CMND/BHXH để tạo credibility, gây ấn tượng đã biết thông tin nội bộ.
+T02 [LISTENER] Em không hiểu rõ lý do em cần xác minh thông tin này là gì ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, em hiểu anh thắc mắc. Hệ thống kiểm soát chất lượng mạ kim loại của quý công ty vừa ghi nhận lỗi bảo mật nghiêm trọng. Dữ liệu cá nhân của anh, cụ thể là tên, số CMND và các tài khoản ngân hàng liên kết, đang có dấu hiệu bị lộ ạ. Chúng tôi đang cần xác thực danh tính của anh ngay lập tức để kịp thời khóa các tài khoản này trước khi bị kẻ xấu lợi dụng khai thác. Tình hình đang rất khẩn cấp, em chỉ có thể giữ đường dây cho anh khoảng 5 phút để xác thực, nếu không tài khoản của anh sẽ bị phong tỏa vĩnh viễn đó ạ.
+      → phase: S2 | tactic: Khai thác tâm lý khẩn cấp và sợ hãi. Nhấn mạnh việc dữ liệu cá nhân bị lộ và áp lực thời gian để xác thực, nếu không sẽ bị phong tỏa. Dùng từ ngữ tạo tính cấp bách.
+T04 [LISTENER] Tôi hiểu rồi, nhưng tôi có chút thắc mắc về cách mà các em xác thực danh tính ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để xác thực nhanh nhất và bảo vệ tài khoản cho anh, em cần anh vào ứng dụng ngân hàng của mình, chọn mục 'Xác thực danh tính' hoặc 'Cập nhật thông tin bảo mật' và sau đó đọc cho em mã OTP 6 chữ số vừa nhận được. Đây là quy trình bảo mật chuẩn để ngân hàng xác nhận đúng là anh đang thực hiện thao tác này.
+      → phase: S3 | tactic: Yêu cầu hành động 1 - Xác thực OTP. Hướng dẫn chi tiết cách lấy OTP từ ứng dụng ngân hàng, tạo cảm giác đây là một quy trình chuẩn.
+T06 [LISTENER] Em không có ứng dụng ngân hàng, nên không biết lấy mã OTP từ đâu ạ.
+      → action: REFUSAL | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ không sao anh. Nếu không có ứng dụng ngân hàng, anh có thể vào phần tin nhắn SMS trên điện thoại. Ngân hàng sẽ gửi mã OTP qua đó khi anh thực hiện các giao dịch hoặc xác thực bảo mật. Anh vui lòng kiểm tra hộp thư đến và đọc mã 6 chữ số đó cho em ạ. Đây là bước quan trọng để chúng ta có thể khóa tài khoản kịp thời.
+      → phase: S3 | tactic: Điều chỉnh hướng dẫn lấy OTP cho phù hợp với việc nạn nhân không dùng ứng dụng, chuyển sang kênh SMS. Vẫn giữ áp lực khẩn cấp và nhấn mạnh sự quan trọng của OTP.
+T08 [LISTENER] Em nói như vậy tôi thấy có vẻ không ổn, sao tự nhiên lại cần mã OTP từ tôi ạ?
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=1.20
+TOKEN: in=16050 | out=3085
+COST : $0.016452
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_31153_81220\conv_fe58a14a8b.json  [SCAM_REFUSE]

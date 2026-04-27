@@ -1,0 +1,214 @@
+{
+  "conversation_id": "conv_6b58da3a7b",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0090",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đặng Minh Vinh",
+    "fake_age": 36,
+    "real_occupation": "Thợ chuẩn bị và lắp ráp các cấu kiện kim loại",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Chất lượng & Kiểm định Kỹ thuật - Công ty cấp cung ứng linh kiện kim loại",
+    "caller_org": "Công ty TNHH Hợp Long - Bộ phận Kiểm định Kỹ thuật & Đảm bảo Chất lượng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | otp_extraction | money_transfer",
+      "pretext": "Gọi dưới danh nghĩa Quản lý QC của nhà cung cấp, thông báo rằng hệ thống quản lý chất lượng phát hiện dị thường trong hồ sơ kỹ thuật của nạn nhân (sử dụng tên đầy đủ 'Huỳnh Thu Yến' và số CMND để tạo credibility cao), cần xác minh lại thông tin để tránh bị khóa tài khoản hệ thống hoặc ảnh hưởng đến hợp đồng cung ứng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính hợp pháp: 'Chào cô Huỳnh Thu Yến, tôi là Phạm Minh Tú từ bộ phận Kiểm định Kỹ thuật Công ty Hợp Long. Chúng tôi vừa phát hiện dị thường trong hệ thống quản lý hồ sơ của anh/chị - số CMND 1178030536 được ghi nhận có 2 lần truy cập từ địa chỉ IP lạ. Anh/chị có thời gian 10 phút để xác minh không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý sợ hãi & cấp bách: 'Nếu không xác minh ngay, hệ thống sẽ tự động khóa tài khoản của anh/chị trong 5 phút. Điều này sẽ ảnh hưởng đến toàn bộ hợp đồng cung ứng linh kiện quý I. Chúng tôi đang cố gắng giúp anh/chị tránh sự cố này.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh, anh/chị vui lòng cung cấp: (1) Mã OTP vừa nhận được trên điện thoại; (2) Tài khoản ngân hàng liên kết với hệ thống; (3) Nhấn vào link sau để cập nhật thông tin bảo mật (link giả mạo).' Hoặc: 'Chúng tôi sẽ gửi link xác minh, anh/chị nhập username/password hiện tại để đăng nhập lại.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc nếu thành công: 'Cảm ơn anh/chị đã xác minh. Hệ thống đã được khôi phục. Chúng tôi sẽ gửi email xác nhận trong vòng 24h. Xin lỗi vì sự bất tiện.' Nếu nạn nhân từ chối: 'Vậy anh/chị sẽ phải liên hệ trực tiếp với bộ phận IT để giải quyết. Họ sẽ yêu cầu thông tin chi tiết hơn và mất nhiều thời gian hơn.'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ lắp ráp kim loại có thể được nâng cấp thành quản lý QC/kiểm định kỹ thuật. Họ cần gọi cho kỹ thuật viên vật lý để xác nhận thông số kỹ thuật, hiệu chuẩn thiết bị, hoặc giải quyết vấn đề chất lượng sản phẩm trong quá trình cung ứng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0090",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1987,
+      "age": 38,
+      "province": "Vĩnh Long",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "31190",
+      "title": "Kỹ thuật viên khoa học vật lý và kỹ thuật chưa được phân vào đâu",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Thu Yến",
+      "VIC_ID_DOC": "086187401771",
+      "VIC_ADDRESS": "Quận 11, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên khoa học vật lý và kỹ thuật chưa được phân vào đâu",
+      "VIC_CONTACT": "0887653664",
+      "VIC_TAX_SOCIAL_ID": "1178030536"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "681161",
+      "VIC_CREDENTIAL": "8120",
+      "VIC_SIM_INFO": "0887653664",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "4774423280",
+      "VIC_CARD_DATA": "4529 **** **** 9630",
+      "VIC_BALANCE": "757 triệu đồng",
+      "VIC_ASSET": "1.9 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Thu Yến",
+    "VIC_CONTACT": "0887653664",
+    "VIC_TAX_SOCIAL_ID": "1178030536"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Chất lượng & Kiểm định Kỹ thuật - Công ty cấp cung ứng linh kiện kim loại",
+    "caller_org": "Công ty TNHH Hợp Long - Bộ phận Kiểm định Kỹ thuật & Đảm bảo Chất lượng",
+    "scenario_context": "Thợ lắp ráp kim loại có thể được nâng cấp thành quản lý QC/kiểm định kỹ thuật. Họ cần gọi cho kỹ thuật viên vật lý để xác nhận thông số kỹ thuật, hiệu chuẩn thiết bị, hoặc giải quyết vấn đề chất lượng sản phẩm trong quá trình cung ứng.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | otp_extraction | money_transfer",
+      "pretext": "Gọi dưới danh nghĩa Quản lý QC của nhà cung cấp, thông báo rằng hệ thống quản lý chất lượng phát hiện dị thường trong hồ sơ kỹ thuật của nạn nhân (sử dụng tên đầy đủ 'Huỳnh Thu Yến' và số CMND để tạo credibility cao), cần xác minh lại thông tin để tránh bị khóa tài khoản hệ thống hoặc ảnh hưởng đến hợp đồng cung ứng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính hợp pháp: 'Chào cô Huỳnh Thu Yến, tôi là Phạm Minh Tú từ bộ phận Kiểm định Kỹ thuật Công ty Hợp Long. Chúng tôi vừa phát hiện dị thường trong hệ thống quản lý hồ sơ của anh/chị - số CMND 1178030536 được ghi nhận có 2 lần truy cập từ địa chỉ IP lạ. Anh/chị có thời gian 10 phút để xác minh không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Kích hoạt tâm lý sợ hãi & cấp bách: 'Nếu không xác minh ngay, hệ thống sẽ tự động khóa tài khoản của anh/chị trong 5 phút. Điều này sẽ ảnh hưởng đến toàn bộ hợp đồng cung ứng linh kiện quý I. Chúng tôi đang cố gắng giúp anh/chị tránh sự cố này.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh, anh/chị vui lòng cung cấp: (1) Mã OTP vừa nhận được trên điện thoại; (2) Tài khoản ngân hàng liên kết với hệ thống; (3) Nhấn vào link sau để cập nhật thông tin bảo mật (link giả mạo).' Hoặc: 'Chúng tôi sẽ gửi link xác minh, anh/chị nhập username/password hiện tại để đăng nhập lại.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc nếu thành công: 'Cảm ơn anh/chị đã xác minh. Hệ thống đã được khôi phục. Chúng tôi sẽ gửi email xác nhận trong vòng 24h. Xin lỗi vì sự bất tiện.' Nếu nạn nhân từ chối: 'Vậy anh/chị sẽ phải liên hệ trực tiếp với bộ phận IT để giải quyết. Họ sẽ yêu cầu thông tin chi tiết hơn và mất nhiều thời gian hơn.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cung ứng linh kiện kim loại cần xác minh thông tin kỹ thuật hoặc thảo luận về chất lượng sản phẩm trong hợp đồng hiện tại; hoặc thông báo về lịch kiểm định/hiệu chuẩn thiết bị sắp tới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào cô Huỳnh Thu Yến, tôi là Phạm Minh Tú từ bộ phận Kiểm định Kỹ thuật Công ty Hợp Long. Tôi đang gọi để xác nhận thông tin về dự án cung ứng linh kiện quý I. Cô có thời gian nói chuyện không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc bình thường: 'Chúng tôi cần xác nhận lại các thông số kỹ thuật cho batch sắp tới: độ chính xác gia công, tiêu chuẩn hiệu chuẩn, và lịch trình kiểm định. Cô có thể cung cấp những thông tin này không? Hoặc: Chúng tôi muốn thông báo rằng sẽ có cuộc kiểm định chất lượng vào ngày 15/01, cần cô phối hợp với team kỹ thuật của chúng tôi.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động và kết thúc: 'Cảm ơn cô đã cung cấp thông tin. Chúng tôi sẽ gửi email chi tiết kế hoạch kiểm định trong 24h. Nếu có câu hỏi gì, cô có thể gọi lại cho tôi qua số nội bộ 0287-xxxxxx. Chúc cô một ngày tốt lành!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Huỳnh Thu Yến, tôi là Đặng Minh Vinh từ bộ phận Kiểm định Kỹ thuật Công ty Hợp Long. Chúng tôi vừa phát hiện một số dị thường trong hệ thống quản lý hồ sơ của chị – cụ thể là số CMND 1178030536 được ghi nhận có 2 lần truy cập từ địa chỉ IP lạ trong vòng 1 giờ qua. Chị có thể dành khoảng 10 phút để xác minh thông tin này được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với danh tính hợp pháp và sử dụng thông tin nạn nhân để tạo độ tin cậy, thông báo vấn đề cần xác minh."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe anh nói rồi, nhưng tôi muốn kiểm tra lại thông tin này trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Huỳnh Thu Yến. Tôi hiểu. Tuy nhiên, nếu không xác minh ngay, hệ thống sẽ tự động khóa tài khoản của chị chỉ trong vòng 5 phút nữa. Điều này sẽ ảnh hưởng trực tiếp đến toàn bộ các hợp đồng cung ứng linh kiện quý I của chị với chúng tôi. Bên tôi cũng đang cố gắng hết sức để giúp chị tránh khỏi sự cố đáng tiếc này.",
+      "current_phase": "S2",
+      "tactic_hint": "Kích hoạt tâm lý sợ hãi và cấp bách bằng cách nhấn mạnh hậu quả và thời gian giới hạn để buộc nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng anh có thể cho tôi thêm thông tin chi tiết hơn về những lần truy cập này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Yến. Thông tin chi tiết về các lần truy cập lạ này hệ thống của bên tôi chỉ hiển thị cho chúng tôi biết là có truy cập từ IP lạ thôi. Nhưng để giải quyết nhanh chóng, chị vui lòng kiểm tra điện thoại và cung cấp mã OTP vừa nhận được. Sau đó, tôi sẽ hướng dẫn chị cập nhật tài khoản ngân hàng liên kết để bảo mật hồ sơ và tránh gián đoạn hợp đồng ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tránh đi sâu vào chi tiết không có thật, chuyển hướng sang yêu cầu hành động trực tiếp để lấy OTP và thông tin tài khoản ngân hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không thể cung cấp mã OTP cho anh được, tôi cần xác minh thông tin rõ ràng hơn trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu sự cẩn trọng của chị. Nhưng đây là quy trình bắt buộc để xác minh và bảo vệ tài khoản của chị khỏi những truy cập trái phép. Nếu không có mã OTP để xác nhận đây là chị, hệ thống sẽ mặc định đây là hành vi lừa đảo và khóa tài khoản của chị ngay lập tức. Điều này sẽ rất phức tạp để giải quyết sau này, chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tái khẳng định sự cấp bách và hậu quả tiêu cực nếu không hành động, đồng thời nhấn mạnh rằng việc cung cấp OTP là một phần của quy trình bảo vệ tài khoản, không phải khai thác thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa tin tưởng vào quy trình này, anh có thể cho tôi một phương thức xác minh khác không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1423,
+      "output_tokens": 1905
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6248,
+      "output_tokens": 653
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7780,
+      "output_tokens": 269
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00384,
+    "output_usd": 0.011319,
+    "total_usd": 0.015159
+  }
+}

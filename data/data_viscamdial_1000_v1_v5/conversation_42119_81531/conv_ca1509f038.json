@@ -1,0 +1,243 @@
+{
+  "conversation_id": "conv_ca1509f038",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0021",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Quang Đức",
+    "fake_age": 37,
+    "real_occupation": "Nhân viên giao dịch và thu ngân khác",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Trưởng phòng Kế toán - Công ty May Mặc",
+    "caller_org": "Công ty TNHH May Mặc Phát Triển Việt Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Xác minh thông tin cá nhân cho hồ sơ bảo hiểm xã hội bị lỗi trong hệ thống, cần cập nhật lại để không mất quyền lợi",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với uy tín: 'Chào anh Dũng, tôi là Trưởng phòng Kế toán công ty. Tôi gọi để xác minh hồ sơ của anh. Hệ thống ghi nhận tên là Hoàng Gia Dũng, số CMND 8111513666 - đúng không ạ?' (Dùng VIC_FULLNAME + VIC_TAX_SOCIAL_ID tạo credibility cao)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp: 'Vừa rồi phòng BHXH gọi báo hồ sơ anh có lỗi, nếu không cập nhật trong hôm nay sẽ bị tạm dừng bảo hiểm. Lương tháng này cũng có vấn đề. Anh có bị mất tiền không?' (Kích hoạt sợ hãi mất quyền lợi)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh nhanh, công ty vừa nâng cấp hệ thống, anh cần cấp OTP để xác thực danh tính. Bây giờ anh check điện thoại xem có tin nhắn OTP không? Anh đọc mã cho tôi để tôi cập nhật vào hệ thống ngay' (Khai thác lòng tin từ thông tin đã xác minh)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc: Nếu nạn nhân cung cấp OTP, scammer sẽ cảm ơn và cắt máy. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm: 'Thế thì anh tự liên hệ phòng BHXH để xử lý, nhưng họ đóng cửa rồi' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Công ty may mặc cần liên hệ với thợ vận hành máy may để xác minh thông tin nhân sự, giải quyết vấn đề bảo hiểm xã hội hoặc quyết toán lương tháng. Đây là tương tác tự nhiên giữa bộ phận kế toán và công nhân trực tiếp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0021",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1989,
+      "age": 36,
+      "province": "Hải Phòng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "81531",
+      "title": "Thợ vận hành máy may",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hoàng Gia Dũng",
+      "VIC_ID_DOC": "031089449966",
+      "VIC_ADDRESS": "TP 12, Hải Phòng",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy may",
+      "VIC_CONTACT": "0938890149",
+      "VIC_TAX_SOCIAL_ID": "8111513666"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "619141",
+      "VIC_CREDENTIAL": "1320",
+      "VIC_SIM_INFO": "0938890149",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "69084198003022",
+      "VIC_CARD_DATA": "4705 **** **** 2156",
+      "VIC_BALANCE": "7 triệu đồng",
+      "VIC_ASSET": "41 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hoàng Gia Dũng",
+    "VIC_CONTACT": "0938890149",
+    "VIC_TAX_SOCIAL_ID": "8111513666"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Kế toán - Công ty May Mặc",
+    "caller_org": "Công ty TNHH May Mặc Phát Triển Việt Nam",
+    "scenario_context": "Công ty may mặc cần liên hệ với thợ vận hành máy may để xác minh thông tin nhân sự, giải quyết vấn đề bảo hiểm xã hội hoặc quyết toán lương tháng. Đây là tương tác tự nhiên giữa bộ phận kế toán và công nhân trực tiếp.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Xác minh thông tin cá nhân cho hồ sơ bảo hiểm xã hội bị lỗi trong hệ thống, cần cập nhật lại để không mất quyền lợi",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với uy tín: 'Chào anh Dũng, tôi là Trưởng phòng Kế toán công ty. Tôi gọi để xác minh hồ sơ của anh. Hệ thống ghi nhận tên là Hoàng Gia Dũng, số CMND 8111513666 - đúng không ạ?' (Dùng VIC_FULLNAME + VIC_TAX_SOCIAL_ID tạo credibility cao)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp: 'Vừa rồi phòng BHXH gọi báo hồ sơ anh có lỗi, nếu không cập nhật trong hôm nay sẽ bị tạm dừng bảo hiểm. Lương tháng này cũng có vấn đề. Anh có bị mất tiền không?' (Kích hoạt sợ hãi mất quyền lợi)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh nhanh, công ty vừa nâng cấp hệ thống, anh cần cấp OTP để xác thực danh tính. Bây giờ anh check điện thoại xem có tin nhắn OTP không? Anh đọc mã cho tôi để tôi cập nhật vào hệ thống ngay' (Khai thác lòng tin từ thông tin đã xác minh)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Kết thúc: Nếu nạn nhân cung cấp OTP, scammer sẽ cảm ơn và cắt máy. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm: 'Thế thì anh tự liên hệ phòng BHXH để xử lý, nhưng họ đóng cửa rồi' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cần xác minh thông tin nhân sự để cập nhật hồ sơ bảo hiểm xã hội hàng năm hoặc giải quyết vấn đề lương, phụ cấp",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh Dũng, tôi là Trưởng phòng Kế toán công ty. Công ty đang cập nhật hồ sơ bảo hiểm, tôi cần xác minh lại một số thông tin của anh để đảm bảo chính xác' + Giới thiệu số điện thoại nội bộ công ty hoặc email công ty"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi thông tin: Hỏi các thông tin như địa chỉ hiện tại, số tài khoản ngân hàng (nếu cần), người thân liên hệ khẩn cấp. KHÔNG bao giờ yêu cầu OTP, mật khẩu hoặc liên kết. Thông báo rõ ràng: 'Công ty sẽ không bao giờ yêu cầu OTP hoặc mật khẩu qua điện thoại'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Xác nhận thông tin đã ghi chép, hẹn anh kiểm tra hồ sơ trên hệ thống nội bộ trong vòng 3-5 ngày, cảm ơn và chào tạm biệt. Có thể gửi email xác nhận lại sau cuộc gọi"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Dũng, tôi là Hồ Quang Đức, Trưởng phòng Kế toán của Công ty TNHH May Mặc Phát Triển Việt Nam. Tôi gọi để xác minh hồ sơ của anh. Hệ thống bên tôi ghi nhận tên là Hoàng Gia Dũng, số căn cước công dân 8111513666 - đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với uy tín, dùng thông tin cá nhân của nạn nhân để tạo niềm tin và sự quen thuộc."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa nghe rõ anh, anh gọi từ số mấy vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi gọi từ số 02899999999, số hotline của công ty. Anh Dũng cứ yên tâm. Vậy thông tin tôi vừa đọc về tên và số căn cước của anh có đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin liên hệ và khẳng định lại mục đích cuộc gọi, đồng thời thúc đẩy nạn nhân xác nhận thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa yên tâm lắm, anh có thể cho tôi biết thêm thông tin về công ty không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, Công ty TNHH May Mặc Phát Triển Việt Nam là một trong những doanh nghiệp hàng đầu trong ngành may mặc, có trụ sở tại Thành phố Hồ Chí Minh. Chúng tôi có quan hệ đối tác với nhiều công ty bảo hiểm xã hội để đảm bảo quyền lợi cho người lao động. Anh có thể tìm kiếm thông tin về công ty chúng tôi trên website chính thức nếu cần. Nhưng bây giờ, điều quan trọng là xác nhận lại thông tin cá nhân của anh để tránh những rắc rối về bảo hiểm xã hội. Tên anh là Hoàng Gia Dũng, và số căn cước công dân là 8111513666, đúng chứ ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm thông tin về công ty để trấn an nạn nhân, khẳng định uy tín và nhắc lại khéo léo về mục đích chính của cuộc gọi là xác minh thông tin cá nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn cảm thấy chưa rõ ràng, anh có thể cho tôi biết thêm cách thức mà công ty sẽ sử dụng thông tin của tôi không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, thông tin của anh sẽ được sử dụng để cập nhật lại hồ sơ bảo hiểm xã hội của anh trong hệ thống. Việc này là bắt buộc để đảm bảo quyền lợi bảo hiểm của anh không bị ảnh hưởng. Anh cứ yên tâm là mọi thông tin cá nhân đều được bảo mật tuyệt đối. Bây giờ, anh vui lòng xác nhận lại giúp tôi thông tin về tên đầy đủ của anh là Hoàng Gia Dũng và số căn cước công dân là 8111513666 để tôi tiến hành cập nhật nhanh chóng ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ về việc sử dụng thông tin bằng cách nhấn mạnh mục đích chính đáng (cập nhật BHXH) và cam kết bảo mật, sau đó kiên trì yêu cầu xác nhận thông tin đã biết để chuyển sang phase tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không quen với việc xác minh thông tin như vậy, anh có thể cho tôi biết thêm về cách công ty đảm bảo bảo mật thông tin cá nhân không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Dũng cứ yên tâm, Công ty TNHH May Mặc Phát Triển Việt Nam chúng tôi tuân thủ nghiêm ngặt các quy định về bảo vệ dữ liệu cá nhân theo pháp luật Việt Nam. Mọi thông tin của anh sẽ được mã hóa và chỉ sử dụng cho mục đích nội bộ để cập nhật hồ sơ bảo hiểm. Tuy nhiên, nếu chúng ta không xác nhận và cập nhật hồ sơ ngay bây giờ, phòng Bảo hiểm Xã hội vừa gọi báo là hồ sơ của anh có lỗi và có thể tạm dừng quyền lợi bảo hiểm, bao gồm cả lương tháng này. Anh có muốn bị mất tiền không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu nỗi lo về bảo mật bằng cách khẳng định tuân thủ pháp luật và quy trình mã hóa, sau đó nhanh chóng chuyển sang tạo tâm lý khẩn cấp và kích hoạt nỗi sợ mất quyền lợi tài chính để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không thể xác nhận thông tin khi chưa rõ ràng như vậy, anh có thể cung cấp thêm thông tin nào khác về công ty không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Anh Dũng ơi, lúc nãy tôi đã nói rõ về công ty rồi mà. Bây giờ nếu anh còn băn khoăn về thông tin công ty thì lát nữa tôi sẽ gửi anh đường link website chính thức của công ty để anh tự tìm hiểu. Nhưng hiện tại, vấn đề cấp bách nhất là hồ sơ bảo hiểm xã hội của anh đang bị lỗi. Nếu không cập nhật trong hôm nay thì anh sẽ bị tạm dừng quyền lợi. Anh có muốn như vậy không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tái khẳng định thông tin đã cung cấp, chuyển hướng sự chú ý về vấn đề khẩn cấp đang diễn ra của nạn nhân và tăng áp lực bằng nỗi sợ mất quyền lợi tài chính."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không tin vào lời anh, có vẻ như đây là một trò lừa đảo, tôi sẽ không cung cấp thông tin gì cả.",
+      "listener_action": "INTERRUPTED_VICTIM_HANGUP",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1355,
+      "output_tokens": 1489
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 9766,
+      "output_tokens": 1097
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13466,
+      "output_tokens": 435
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005328,
+    "output_usd": 0.010449,
+    "total_usd": 0.015777
+  }
+}

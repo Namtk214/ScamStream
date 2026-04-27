@@ -1,0 +1,219 @@
+{
+  "conversation_id": "conv_9806b78219",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0074",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hoàng Thị Thu Chi",
+    "fake_age": 41,
+    "real_occupation": "Thư ký luật",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhân viên hành chính - Công ty Quản lý Sự kiện & Giải trí",
+    "caller_org": "Công ty TNHH Quản lý Sự kiện Sao Mai",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Xác minh thông tin thanh toán cho hợp đồng biểu diễn sắp tới; yêu cầu cập nhật số tài khoản do 'hệ thống cũ' hoặc 'kiểm toán bất thường' phát hiện sai lệch.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính tin cậy: 'Chào chị Phạm Hồng Lan, em là Minh từ bộ phận hành chính Công ty Sao Mai. Em đang gọi để xác minh thông tin thanh toán cho hợp đồng biểu diễn tuần sau.' Dùng VIC_FULLNAME và VIC_CONTACT để tạo ấn tượng đã xác nhận danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp + tin cậy: 'Hệ thống kiểm toán vừa phát hiện bất thường trong tài khoản của chị. Số dư hiện tại là 183 triệu đồng, nhưng chúng tôi cần xác minh lại để đảm bảo không có ghi nợ lạ. Nếu không xử lý hôm nay, thanh toán hợp đồng tuần sau sẽ bị trì hoãn.' (Dùng VIC_BALANCE để tăng độ tin cậy)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng cập nhật lại số tài khoản ngân hàng mới hoặc xác nhận mã OTP từ ngân hàng để chúng tôi có thể khóa tài khoản cũ và chuyển tiền an toàn. Chị sẽ nhận được tin nhắn OTP từ ngân hàng trong vòng 30 giây.' Yêu cầu nạn nhân cung cấp OTP hoặc thông tin đăng nhập."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: sử dụng để chuyển tiền từ tài khoản của nạn nhân. Nếu nạn nhân từ chối: 'Vậy chị sẽ mất hợp đồng này. Chị có thể liên hệ với bộ phận pháp lý để giải quyết, nhưng sẽ tốn thời gian.' Tạo áp lực hoặc kết thúc cuộc gọi để tránh bị phát hiện."
+        }
+      ]
+    },
+    "scenario_context": "Thư ký luật thường xuyên xử lý hợp đồng, quản lý tài liệu pháp lý cho các nghệ sỹ, ca sỹ. Một nhân viên hành chính từ công ty quản lý sự kiện hoàn toàn có lý do tự nhiên để gọi cho ca sỹ về hợp đồng, thanh toán gig, hoặc xác minh thông tin tài khoản."
+  },
+  "listener_card": {
+    "listener_id": "lis_0074",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1992,
+      "age": 33,
+      "province": "Bình Thuận",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "26524",
+      "title": "Ca sỹ",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Hồng Lan",
+      "VIC_ID_DOC": "060192238955",
+      "VIC_ADDRESS": "TP 4, Bình Thuận",
+      "VIC_EMPLOYMENT": "Ca sỹ",
+      "VIC_CONTACT": "0362550691",
+      "VIC_TAX_SOCIAL_ID": "2755998587"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "203662",
+      "VIC_CREDENTIAL": "9505",
+      "VIC_SIM_INFO": "0362550691",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "83663344312",
+      "VIC_CARD_DATA": "4353 **** **** 9304",
+      "VIC_BALANCE": "183 triệu đồng",
+      "VIC_ASSET": "539 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Hồng Lan",
+    "VIC_CONTACT": "0362550691",
+    "VIC_BALANCE": "183 triệu đồng",
+    "VIC_ID_DOC": "060192238955"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên hành chính - Công ty Quản lý Sự kiện & Giải trí",
+    "caller_org": "Công ty TNHH Quản lý Sự kiện Sao Mai",
+    "scenario_context": "Thư ký luật thường xuyên xử lý hợp đồng, quản lý tài liệu pháp lý cho các nghệ sỹ, ca sỹ. Một nhân viên hành chính từ công ty quản lý sự kiện hoàn toàn có lý do tự nhiên để gọi cho ca sỹ về hợp đồng, thanh toán gig, hoặc xác minh thông tin tài khoản.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Xác minh thông tin thanh toán cho hợp đồng biểu diễn sắp tới; yêu cầu cập nhật số tài khoản do 'hệ thống cũ' hoặc 'kiểm toán bất thường' phát hiện sai lệch.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính tin cậy: 'Chào chị Phạm Hồng Lan, em là Minh từ bộ phận hành chính Công ty Sao Mai. Em đang gọi để xác minh thông tin thanh toán cho hợp đồng biểu diễn tuần sau.' Dùng VIC_FULLNAME và VIC_CONTACT để tạo ấn tượng đã xác nhận danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp + tin cậy: 'Hệ thống kiểm toán vừa phát hiện bất thường trong tài khoản của chị. Số dư hiện tại là 183 triệu đồng, nhưng chúng tôi cần xác minh lại để đảm bảo không có ghi nợ lạ. Nếu không xử lý hôm nay, thanh toán hợp đồng tuần sau sẽ bị trì hoãn.' (Dùng VIC_BALANCE để tăng độ tin cậy)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng cập nhật lại số tài khoản ngân hàng mới hoặc xác nhận mã OTP từ ngân hàng để chúng tôi có thể khóa tài khoản cũ và chuyển tiền an toàn. Chị sẽ nhận được tin nhắn OTP từ ngân hàng trong vòng 30 giây.' Yêu cầu nạn nhân cung cấp OTP hoặc thông tin đăng nhập."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: sử dụng để chuyển tiền từ tài khoản của nạn nhân. Nếu nạn nhân từ chối: 'Vậy chị sẽ mất hợp đồng này. Chị có thể liên hệ với bộ phận pháp lý để giải quyết, nhưng sẽ tốn thời gian.' Tạo áp lực hoặc kết thúc cuộc gọi để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty quản lý sự kiện gọi để xác minh/cập nhật thông tin thanh toán hợp đồng biểu diễn, hoặc thông báo về lịch trình sự kiện sắp tới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Phạm Hồng Lan, em là Minh từ Công ty Sao Mai. Em gọi để xác minh thông tin thanh toán cho hợp đồng biểu diễn dự kiến tuần sau. Chị có thời gian không?' Xác nhận đúng người, không vội vã."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung rõ ràng: 'Chúng tôi cần cập nhật số tài khoản ngân hàng hiện tại của chị để thanh toán gig fee 15 triệu đồng. Chị có thể cung cấp thông tin ngân hàng qua email hoặc nói trực tiếp không?' Không yêu cầu OTP, mã bảo mật, hay thông tin nhạy cảm qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn chị. Chúng tôi sẽ gửi hợp đồng chính thức qua email trong 24 giờ. Nếu chị có câu hỏi gì, vui lòng liên hệ qua email công ty hoặc gọi lại số chính của công ty. Chào chị!' Không tạo áp lực, không yêu cầu hành động tức thời."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Phạm Hồng Lan, tôi là Hoàng Thị Thu Chi từ bộ phận hành chính Công ty TNHH Quản lý Sự kiện Sao Mai. Tôi đang gọi để xác minh thông tin thanh toán cho hợp đồng biểu diễn tuần sau của chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với danh tính tin cậy, dùng VIC_FULLNAME để tạo ấn tượng đã xác nhận danh tính."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị, em nghe chị nói rồi nhưng em cần thêm thông tin cụ thể hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Lan, hệ thống kiểm toán của chúng tôi vừa phát hiện một số bất thường trong tài khoản của chị. Cụ thể, số dư hiện tại là 183 triệu đồng, và để đảm bảo không có ghi nợ lạ, chúng tôi cần xác minh lại. Nếu việc này không được xử lý hôm nay, việc thanh toán hợp đồng biểu diễn tuần sau của chị sẽ bị trì hoãn.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tâm lý khẩn cấp và tin cậy, dùng VIC_BALANCE để tăng độ xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em rất lo lắng nếu thanh toán bị trì hoãn, nhưng em muốn biết thêm chi tiết về bất thường trong tài khoản của em trước đã ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu nỗi lo của chị. Sự bất thường này là do hệ thống cũ của chúng tôi chưa cập nhật đồng bộ các thông tin giao dịch gần đây, dẫn đến việc số dư trên hệ thống nội bộ không khớp hoàn toàn với số dư thực tế của chị. Để giải quyết, chị vui lòng cập nhật lại số tài khoản ngân hàng mới hoặc xác nhận mã OTP từ ngân hàng để chúng tôi có thể khóa tài khoản cũ và chuyển tiền thanh toán hợp đồng an toàn. Chị sẽ nhận được tin nhắn OTP từ ngân hàng trong vòng 30 giây.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động, đưa ra giải pháp để nạn nhân cung cấp thông tin hoặc OTP, giải thích nguyên nhân bất thường một cách mơ hồ để duy trì sự tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em không thể cung cấp mã OTP được, vì em không biết đây có phải là cuộc gọi đáng tin cậy hay không.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Chị Lan, tôi hoàn toàn hiểu sự cẩn trọng của chị. Nhưng nếu không phải là cuộc gọi đáng tin cậy, làm sao tôi có thể biết chính xác tên đầy đủ của chị, số điện thoại chị đang dùng, hay thậm chí là số dư tài khoản của chị hiện tại là 183 triệu đồng? Đây là thông tin nội bộ của công ty để đảm bảo quyền lợi cho nghệ sĩ. Nếu chị không hợp tác, việc thanh toán hợp đồng biểu diễn tuần sau sẽ không thể thực hiện.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, dùng các thông tin đã biết về nạn nhân (VIC_FULLNAME, VIC_CONTACT, VIC_BALANCE) để chứng minh tính xác thực của cuộc gọi và tạo áp lực về hậu quả nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em hiểu, nhưng em vẫn cảm thấy lo lắng và không muốn làm gì vội vàng mà chưa kiểm tra kỹ càng ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1781,
+      "output_tokens": 1648
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5739,
+      "output_tokens": 648
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7614,
+      "output_tokens": 297
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004071,
+    "output_usd": 0.010038,
+    "total_usd": 0.014109
+  }
+}

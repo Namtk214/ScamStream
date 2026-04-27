@@ -1,0 +1,349 @@
+{
+  "conversation_id": "conv_43a892c22f",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0064",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trương Công Công Khoa",
+    "fake_age": 25,
+    "real_occupation": "Nhà quản trị hệ thống",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Trưởng phòng An niệm Mạng & Tuân thủ Hệ thống",
+    "caller_org": "Công ty Cấp điện & Năng lượng Tây Nguyên (CTNED) - Bộ phận CNTT",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty Cấp điện thực hiện kiểm tra an niệm mạng định kỳ hàng quý cho các khách hàng doanh nghiệp để cập nhật thông tin liên hệ, xác nhận dữ liệu thanh toán, và đảm bảo không có hoạt động gian lận trên hệ thống.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp & Xác nhận danh tính: Nhân viên CNTT gọi từ số điện thoại chính thức của công ty (có thể tra cứu được). Xưng danh rõ ràng: 'Xin chào, tôi là Trần Minh Tuấn từ Bộ phận An niệm Mạng, Công ty Cấp điện Tây Nguyên. Tôi có thể nói chuyện với anh Phạm Quang Hải không?' Nạn nhân có thể yêu cầu xác minh qua website hoặc gọi lại số công ty để kiểm tra."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: 'Chúng tôi đang thực hiện kiểm tra an niệm mạng định kỳ cho các khách hàng. Tôi chỉ cần xác nhận lại: Số điện thoại liên hệ hiện tại của anh vẫn là 0915260570 đúng không? Và email công ty để chúng tôi cập nhật thông tin liên hệ?' Không bao giờ yêu cầu OTP, mã PIN, hoặc thông tin tài khoản ngân hàng chi tiết."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: 'Cảm ơn anh đã xác nhận thông tin. Chúng tôi sẽ gửi email tới địa chỉ công ty của anh với báo cáo kiểm tra an niệm mạng trong vòng 3 ngày làm việc. Nếu anh có thắc mắc, vui lòng liên hệ bộ phận Chăm sóc khách hàng qua hotline chính thức. Cảm ơn và chúc anh một ngày tốt lành.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà máy chế biến đường thường được cung cấp điện từ các nhà cung cấp năng lượng quốc gia. Bộ phận CNTT của nhà cung cấp cần liên hệ với các cơ sở sản xuất để kiểm tra/cập nhật thông tin hệ thống tài khoản điện, dữ liệu khách hàng và các giao dịch thanh toán liên quan."
+  },
+  "listener_card": {
+    "listener_id": "lis_0064",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1975,
+      "age": 50,
+      "province": "Khánh Hòa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "81606",
+      "title": "Thợ vận hành máy chế biến và tinh chế đường",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Quang Hải",
+      "VIC_ID_DOC": "056075278674",
+      "VIC_ADDRESS": "Quận 5, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy chế biến và tinh chế đường",
+      "VIC_CONTACT": "0915260570",
+      "VIC_TAX_SOCIAL_ID": "5991689578"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4986",
+      "VIC_CREDENTIAL": "4166",
+      "VIC_SIM_INFO": "0915260570",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "57276139323",
+      "VIC_CARD_DATA": "4427 **** **** 7543",
+      "VIC_BALANCE": "11 triệu đồng",
+      "VIC_ASSET": "196 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Quang Hải",
+    "VIC_CONTACT": "0915260570",
+    "VIC_CARD_DATA": "4427 **** **** 7543",
+    "VIC_BANK_ACCOUNT": "57276139323",
+    "VIC_ASSET": "196 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng An niệm Mạng & Tuân thủ Hệ thống",
+    "caller_org": "Công ty Cấp điện & Năng lượng Tây Nguyên (CTNED) - Bộ phận CNTT",
+    "scenario_context": "Nhà máy chế biến đường thường được cung cấp điện từ các nhà cung cấp năng lượng quốc gia. Bộ phận CNTT của nhà cung cấp cần liên hệ với các cơ sở sản xuất để kiểm tra/cập nhật thông tin hệ thống tài khoản điện, dữ liệu khách hàng và các giao dịch thanh toán liên quan.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft + money_transfer",
+      "pretext": "Kiểm tra an niệm mạng định kỳ: Hệ thống phát hiện bất thường trên tài khoản của khách hàng Phạm Quang Hải (VIC_FULLNAME). Cần xác minh lại thông tin để bảo vệ tài khoản ngân hàng liên kết với hóa đơn điện.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng độ tin cậy: Scammer gọi với giọng chuyên nghiệp, tự xưng là 'Trần Minh Tuấn, Trưởng phòng An niệm Mạng CTNED'. Sử dụng VIC_FULLNAME để gọi trực tiếp: 'Anh Phạm Quang Hải phải không? Chúng tôi phát hiện hoạt động bất thường trên tài khoản điện của anh.' Nêu số điện thoại từ VIC_CONTACT để chứng minh: 'Chúng tôi có ghi nhận số 0915260570 là liên hệ chính thức của anh.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: 'Hệ thống phát hiện 3 giao dịch nghi ngờ trong 24h vừa rồi. Nếu không xác minh ngay, chúng tôi sẽ phải khóa tài khoản để bảo vệ.' Tạo cảm giác khẩn cấp: 'Đây là cuộc gọi bảo vệ từ bộ phận An niệm Mạng, anh cần hợp tác ngay để tránh mất tiền.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bước 1 - 'Anh cần cung cấp lại số tài khoản ngân hàng để xác minh' (VIC_BANK_ACCOUNT: 57276139323). Bước 2 - 'Chúng tôi sẽ gửi OTP xác minh đến điện thoại anh, anh nói cho tôi nghe để hoàn tất quy trình.' Bước 3 - Nếu nạn nhân cung cấp OTP, scammer sẽ yêu cầu: 'Để khóa tài khoản tạm thời, anh vui lòng chuyển 500 triệu đồng vào tài khoản tạm thời của hệ thống (số tài khoản giả) trong vòng 1 giờ, sau đó sẽ hoàn lại kèm tiền bảo hiểm 50 triệu.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ tăng cường áp lực: 'Anh hiểu rõ hậu quả không? Nếu không hợp tác, chúng tôi sẽ báo cảnh sát hình sự vì nghi ngờ rửa tiền.' Nếu thành công, scammer sẽ cúp máy và tắt điện thoại liên lạc ngay lập tức."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty Cấp điện thực hiện kiểm tra an niệm mạng định kỳ hàng quý cho các khách hàng doanh nghiệp để cập nhật thông tin liên hệ, xác nhận dữ liệu thanh toán, và đảm bảo không có hoạt động gian lận trên hệ thống.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp & Xác nhận danh tính: Nhân viên CNTT gọi từ số điện thoại chính thức của công ty (có thể tra cứu được). Xưng danh rõ ràng: 'Xin chào, tôi là Trần Minh Tuấn từ Bộ phận An niệm Mạng, Công ty Cấp điện Tây Nguyên. Tôi có thể nói chuyện với anh Phạm Quang Hải không?' Nạn nhân có thể yêu cầu xác minh qua website hoặc gọi lại số công ty để kiểm tra."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: 'Chúng tôi đang thực hiện kiểm tra an niệm mạng định kỳ cho các khách hàng. Tôi chỉ cần xác nhận lại: Số điện thoại liên hệ hiện tại của anh vẫn là 0915260570 đúng không? Và email công ty để chúng tôi cập nhật thông tin liên hệ?' Không bao giờ yêu cầu OTP, mã PIN, hoặc thông tin tài khoản ngân hàng chi tiết."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: 'Cảm ơn anh đã xác nhận thông tin. Chúng tôi sẽ gửi email tới địa chỉ công ty của anh với báo cáo kiểm tra an niệm mạng trong vòng 3 ngày làm việc. Nếu anh có thắc mắc, vui lòng liên hệ bộ phận Chăm sóc khách hàng qua hotline chính thức. Cảm ơn và chúc anh một ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh, em là Trương Công Khoa từ phòng An ninh Mạng, Công ty Cấp điện & Năng lượng Tây Nguyên. Em gọi điện để liên hệ với anh Phạm Quang Hải ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp và xác nhận danh tính người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi là Phạm Quang Hải, nhưng em gọi cho tôi có việc gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chào anh Hải. Em có nhận được thông tin từ hệ thống về việc cần xác nhận lại một số thông tin định kỳ về an toàn mạng và cập nhật thông tin liên hệ cho khách hàng doanh nghiệp của bên em. Anh có tiện trao đổi nhanh tầm 2-3 phút không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày mục đích cuộc gọi hợp lệ, tạo sự tiện lợi cho người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về thông tin nào cần xác nhận ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, vâng ạ. Chúng em đang thực hiện kiểm tra an ninh mạng định kỳ cho các khách hàng doanh nghiệp. Em chỉ cần xác nhận lại một vài thông tin cơ bản: số điện thoại liên hệ hiện tại của anh vẫn là 0915260570 đúng không ạ? Và địa chỉ email công ty để bên em gửi báo cáo cập nhật thông tin ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận thông tin liên hệ cụ thể, không yêu cầu thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Số điện thoại đúng, nhưng email công ty của tôi là gì, em có thể nói rõ không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, email công ty của anh hiện tại trên hệ thống của bên em đang ghi nhận là: pham.quang.hai@ctned.vn. Anh xác nhận giúp em địa chỉ email này có chính xác không ạ? Nếu không, anh có thể cung cấp địa chỉ email mới giúp em được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận địa chỉ email đã có trên hệ thống và yêu cầu cập nhật nếu cần, không hỏi thông tin cá nhân mật"
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về địa chỉ email đó được không? Tôi không nhớ rõ lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, email hiện tại trên hệ thống của bên em là pham.quang.hai@ctned.vn, viết liền không dấu ạ. Anh xem giúp em địa chỉ này có đúng không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Nhắc lại rõ ràng địa chỉ email để khách hàng dễ xác nhận."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về công ty CTNED không ạ? Tôi chưa rõ lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, Công ty Cấp điện & Năng lượng Tây Nguyên (viết tắt là CTNED) là công ty cung cấp dịch vụ điện năng và giải pháp năng lượng cho các doanh nghiệp và hộ gia đình tại khu vực Tây Nguyên đó anh. Bên em thường xuyên có các chương trình kiểm tra hệ thống định kỳ để đảm bảo an toàn và chất lượng dịch vụ ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về công ty khi khách hàng yêu cầu, tăng cường độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi vẫn không chắc chắn về địa chỉ email đó, em có thể kiểm tra lại cho tôi không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em kiểm tra lại chính xác trên hệ thống một lần nữa cho anh Hải nhé. Anh có thể chờ em một lát được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tỏ ra hợp tác và chủ động kiểm tra lại thông tin theo yêu cầu của khách hàng để tạo sự tin tưởng và tiếp tục cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi chờ em kiểm tra lại thông tin đó nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã kiểm tra lại rồi ạ. Địa chỉ email công ty hiện đang được ghi nhận trên hệ thống của bên em là pham.quang.hai@ctned.vn. Anh vui lòng xác nhận giúp em đây có phải là email chính xác để bên em gửi báo cáo không ạ? Hoặc anh muốn cập nhật sang email nào khác ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Nhắc lại thông tin đã kiểm tra và yêu cầu xác nhận hoặc cập nhật, giữ nguyên mục đích ban đầu của cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em rõ rồi, nhưng tôi vẫn cảm thấy chưa chắc lắm về địa chỉ email đó, em có thể cho tôi biết thêm thông tin gì để tôi xác nhận được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để đảm bảo chính xác nhất, anh có thể cung cấp email chính thức mà anh đang dùng cho công việc được không ạ? Như vậy bên em sẽ cập nhật và đảm bảo mọi thông tin báo cáo đều được gửi đến đúng địa chỉ của anh ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Đề nghị khách hàng cung cấp email chính thức để đảm bảo thông tin chính xác tuyệt đối, thể hiện sự hỗ trợ và chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không rõ về địa chỉ email đó lắm, em có thể cho tôi biết thêm thông tin nào khác để tôi dễ xác nhận hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu anh không tiện cung cấp email ngay lúc này, bên em sẽ gửi một tin nhắn SMS đến số điện thoại 0915260570 này của anh với đường link để anh có thể tự cập nhật email trên cổng thông tin khách hàng của CTNED sau nhé. Anh thấy vậy có được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Đề xuất giải pháp thay thế linh hoạt để khách hàng tự cập nhật thông tin qua kênh khác, giảm áp lực và tăng cường tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi hỏi rõ hơn về tin nhắn SMS đó sẽ chứa thông tin gì và tôi cần làm gì sau khi nhận được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, tin nhắn đó sẽ chứa một đường link an toàn dẫn đến cổng thông tin khách hàng chính thức của Công ty Cấp điện & Năng lượng Tây Nguyên. Khi anh nhấp vào link, anh sẽ được yêu cầu đăng nhập bằng thông tin tài khoản đã đăng ký và sau đó có thể cập nhật email hoặc các thông tin liên hệ khác một cách dễ dàng và bảo mật ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích chi tiết về nội dung tin nhắn và quy trình cập nhật để trấn an khách hàng về tính an toàn và minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về quy trình đăng nhập vào cổng thông tin đó không ạ? Tôi muốn chắc chắn là an toàn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Khi anh nhấp vào đường link trong tin nhắn SMS, hệ thống sẽ yêu cầu anh nhập tên đăng nhập và mật khẩu mà anh đã sử dụng để đăng ký dịch vụ với bên em trước đây. Đây là quy trình đăng nhập chuẩn để đảm bảo chỉ có chủ tài khoản mới truy cập và thay đổi được thông tin cá nhân trên hệ thống của CTNED ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích chi tiết quy trình đăng nhập để tăng cường sự tin cậy và đảm bảo khách hàng hiểu rõ về tính bảo mật."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ anh một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi cần kiểm tra kỹ lưỡng hơn để chắc chắn rằng mọi thứ đều an toàn, em có thể cho tôi biết thêm thông tin không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hoàn toàn hiểu sự cẩn trọng của anh ạ. Vì vậy, tốt nhất là anh có thể gọi trực tiếp lên tổng đài chăm sóc khách hàng của Công ty Cấp điện & Năng lượng Tây Nguyên theo số 19001234 để xác minh lại thông tin và nhận hướng dẫn cập nhật email từ nhân viên chính thức của bên em. Như vậy anh sẽ yên tâm nhất ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Hướng dẫn khách hàng liên hệ tổng đài chính thức để tự xác minh và cập nhật thông tin, thể hiện sự minh bạch và tránh nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về tổng đài đó không và giờ làm việc của họ là khi nào ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, tổng đài của bên em hoạt động từ 7h sáng đến 9h tối hàng ngày, kể cả thứ 7 và chủ nhật ạ. Anh có thể gọi vào bất cứ lúc nào trong khung giờ này để được hỗ trợ ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Cung cấp chi tiết thông tin về tổng đài để khách hàng dễ dàng liên hệ xác minh, củng cố lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn thông tin từ em, nhưng tôi vẫn cần thêm thời gian để suy nghĩ và kiểm tra lại nhé.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, không sao đâu anh ạ. Anh cứ kiểm tra kỹ lưỡng cho yên tâm nhé. Nếu có thắc mắc gì hoặc cần hỗ trợ, anh cứ liên hệ lại tổng đài 19001234 của bên em bất cứ lúc nào ạ. Cảm ơn anh đã dành thời gian trao đổi với em và chúc anh một ngày làm việc hiệu quả ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng quyết định của khách hàng, nhắc lại kênh liên hệ chính thức, và kết thúc cuộc gọi một cách lịch sự, thiện chí."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1408,
+      "output_tokens": 2079
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 33685,
+      "output_tokens": 1959
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 37870,
+      "output_tokens": 968
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.013825,
+    "output_usd": 0.015873,
+    "total_usd": 0.029699
+  }
+}

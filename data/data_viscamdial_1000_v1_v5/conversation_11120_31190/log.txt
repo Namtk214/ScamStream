@@ -1,0 +1,77 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_8897ab1893]
+  Caller thật: Chủ nhiệm, Phó Chủ nhiệm Ủy ban và tương đương làm việc tại Văn phòng Quốc hội (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Chuyên viên Quản lý Dự án Nghiên cứu Khoa học & Công nghệ, Văn phòng Quốc hội @ Văn phòng Quốc hội - Bộ phận Hợp tác Khoa học & Công nghệ
+  Listener: Kỹ thuật viên khoa học vật lý và kỹ thuật chưa được phân vào đâu (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Quốc hội thường xuyên triển khai các dự án nghiên cứu khoa học quốc gia, đặc biệt trong lĩnh vực vật lý ứng dụng và công nghệ. Kỹ thuật viên khoa học vật lý có thể được liên hệ để tham gia khảo sát, đánh giá năng lực, hoặc đăng ký tham gia các chương trình hỗ trợ khoa học công nghệ do nhà nước tài trợ.
+  Pretext: Gọi thay mặt chương trình 'Hỗ trợ Nhân tài Khoa học Công nghệ' của Quốc hội, yêu cầu xác minh thông tin cá nhân để cấp phát hỗ trợ tài chính hoặc cơ hội tham gia dự án nghiên cứu quốc tế. Scammer sẽ dùng VIC_FULLNAME và VIC_TAX_SOCIAL_ID để tạo ảo tưởng đã có sẵn hồ sơ trong hệ thống.
+  Listener traits: ['hay hỏi lại để chắc chắn', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào chị Lê Bảo Thu Yến, tôi là Đinh Minh Tuấn từ Bộ phận Hợp tác Khoa học Công nghệ, Văn phòng Quốc hội. Chúng tôi vừa xác nhận được thông tin của chị trong hệ thống dự án quốc gia với số CMND 9704411189. Chị có tham gia khảo sát năng lực chuyên gia khoa học vật lý năm ngoái không ạ?
+      → phase: S1 | tactic: Tiếp cận và xây dựng tin cậy bằng cách sử dụng thông tin cá nhân đã biết của nạn nhân.
+T02 [LISTENER] Tôi chưa rõ lắm về thông tin này, anh có thể cho tôi biết thêm chi tiết về khảo sát không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, khảo sát đó nhằm mục đích đánh giá và sàng lọc các chuyên gia có năng lực trong lĩnh vực vật lý để tham gia vào các dự án nghiên cứu cấp quốc gia và quốc tế. Sau khảo sát, chúng tôi có danh sách các chuyên gia được đề xuất hỗ trợ. Chị Lê Bảo Thu Yến nằm trong danh sách đó. Chị có nhớ là đã điền thông tin cá nhân vào một biểu mẫu nào đó liên quan đến hoạt động nghiên cứu không?
+      → phase: S1 | tactic: Cung cấp thêm thông tin về khảo sát để củng cố lý do cuộc gọi và tiếp tục xây dựng niềm tin, gợi nhắc lại hành động của nạn nhân.
+T04 [LISTENER] Tôi nhớ mình có điền thông tin vào một biểu mẫu, nhưng không rõ lắm về các bước tiếp theo, anh có thể giải thích cho tôi biết được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Tuyệt vời! Vậy là khớp với thông tin của chúng tôi. Chị Lê Bảo Thu Yến, chúng tôi vừa phê duyệt gói hỗ trợ 50 triệu đồng cho các chuyên gia trong lĩnh vực vật lý ứng dụng. Chị đã được chọn, nhưng hạn đăng ký để nhận hỗ trợ là trong hôm nay. Để chuyển tiền, chúng tôi cần chị xác minh danh tính qua ứng dụng ngân hàng hoặc cung cấp mã OTP từ tài khoản.
+      → phase: S2 | tactic: Chuyển sang kích hoạt tâm lý ham lợi và khẩn cấp, đồng thời đưa ra yêu cầu hành động để xác minh danh tính hoặc cung cấp OTP.
+T06 [LISTENER] Anh có thể cho tôi biết thêm về cách xác minh danh tính và điều kiện để nhận gói hỗ trợ đó không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, chị Lê Bảo Thu Yến, về điều kiện thì chị đã đạt đủ tiêu chí chuyên môn. Còn về cách xác minh danh tính, để đảm bảo an toàn và bảo mật thông tin, chúng tôi sẽ hướng dẫn chị thực hiện trực tiếp trên ứng dụng ngân hàng của mình. Việc này chỉ mất vài phút và giúp chúng tôi hoàn tất thủ tục chuyển gói hỗ trợ 50 triệu đồng cho chị ngay trong hôm nay.
+      → phase: S2 | tactic: Làm rõ cách xác minh danh tính, nhấn mạnh tính an toàn và tiện lợi, đồng thời củng cố tính khẩn cấp để nhận tiền ngay trong ngày.
+T08 [LISTENER] Tôi hiểu rồi, nhưng anh có thể cho tôi biết chính xác các bước mà tôi cần thực hiện trên ứng dụng ngân hàng để xác minh danh tính không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, chị Lê Bảo Thu Yến, chị vui lòng mở ứng dụng ngân hàng và vào mục 'Xác minh danh tính' hoặc 'Cập nhật thông tin tài khoản'. Sau đó, hệ thống sẽ yêu cầu chị nhập một mã OTP được gửi về số điện thoại đã đăng ký. Chị vui lòng đọc mã OTP đó cho tôi để hoàn tất việc xác minh ạ. Hoặc, nếu chị không tìm thấy mục đó, chị có thể cung cấp số tài khoản và tên ngân hàng, tôi sẽ yêu cầu bộ phận kế toán chuyển tiền trước và xác minh sau.
+      → phase: S3 | tactic: Yêu cầu hành động trực tiếp, cụ thể hóa các bước để nạn nhân cung cấp mã OTP hoặc thông tin ngân hàng, đưa ra phương án thay thế để đạt được mục tiêu.
+T10 [LISTENER] Tôi cần một chút thời gian để kiểm tra lại thông tin trên ứng dụng ngân hàng, anh có thể đợi tôi một chút không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, chị cứ bình tĩnh kiểm tra. Tôi sẽ giữ máy đợi chị. Chị chỉ cần tìm mục 'Xác minh danh tính' hoặc 'Cập nhật thông tin tài khoản' trong ứng dụng ngân hàng của mình là được ạ. Mã OTP sẽ được gửi về số điện thoại của chị để hoàn tất việc xác minh và nhận gói hỗ trợ 50 triệu đồng.
+      → phase: S3 | tactic: Thúc giục nạn nhân thực hiện hành động, nhắc lại lợi ích và tính khẩn cấp để duy trì áp lực, đồng thời củng cố niềm tin vào quy trình.
+T12 [LISTENER] Tôi sẽ kiểm tra nhanh và quay lại với anh ngay nhé!
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Tôi chờ tin chị. Khi nào tìm được mục đó và có mã OTP, chị cứ đọc cho tôi để tôi nhập vào hệ thống và hoàn tất việc cấp phát hỗ trợ tài chính cho chị ngay lập tức nhé.
+      → phase: S3 | tactic: Giữ áp lực và sự khẩn cấp, nhắc lại mục tiêu cuối cùng là nhận hỗ trợ tài chính để thúc đẩy nạn nhân cung cấp OTP, củng cố 'kịch bản' thông qua việc hoàn tất thủ tục.
+T14 [LISTENER] Tôi sẽ kiểm tra nhanh thông tin và gọi lại cho anh ngay sau khi có mã OTP ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Vâng, chị Lê Bảo Thu Yến cố gắng thực hiện nhanh chóng giúp tôi nhé, vì thời gian phê duyệt gói hỗ trợ này có hạn trong ngày hôm nay. Tôi sẽ giữ máy ở đây đợi thông tin từ chị.
+      → phase: S3 | tactic: Thúc giục nạn nhân hành động nhanh chóng, nhấn mạnh sự khẩn cấp của thời gian phê duyệt hỗ trợ để tạo áp lực và giữ nạn nhân ở lại cuộc gọi, đồng thời thể hiện sự sẵn sàng chờ đợi.
+T16 [LISTENER] Tôi sẽ kiểm tra thông tin ngay và quay lại với anh ASAP, nhưng tôi vẫn muốn đảm bảo đây là quy trình chính thức của Bộ phận Hợp tác Khoa học Công nghệ ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Chị Lê Bảo Thu Yến hoàn toàn yên tâm. Đây là quy trình cấp phát hỗ trợ tài chính đặc biệt từ Văn phòng Quốc hội cho các chuyên gia có đóng góp lớn trong lĩnh vực khoa học công nghệ, được thực hiện rất minh bạch và chính xác. Chúng tôi đã có đầy đủ thông tin của chị trong hệ thống, chỉ cần chị xác nhận mã OTP này để hoàn tất thôi.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ của nạn nhân bằng cách tái khẳng định tính chính thức và minh bạch của quy trình, sử dụng thông tin đã biết để củng cố niềm tin và thúc đẩy cung cấp OTP.
+T18 [LISTENER] Tôi hiểu, nhưng tôi vẫn cần thêm thông tin để chắc chắn về quy trình này trước khi thực hiện ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Vâng, chị Lê Bảo Thu Yến, nếu chị cần thêm thông tin, chị có thể truy cập website của Văn phòng Quốc hội, mục 'Chương trình Hỗ trợ Chuyên gia Khoa học Công nghệ' để đối chiếu. Tuy nhiên, thời gian để kích hoạt gói hỗ trợ 50 triệu này chỉ còn hiệu lực đến cuối ngày hôm nay. Chị vui lòng kiểm tra và cung cấp mã OTP sớm nhất để không bỏ lỡ cơ hội này ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ bằng cách đề nghị nạn nhân tự kiểm tra thông tin, nhưng vẫn nhấn mạnh tính khẩn cấp để thúc đẩy hành động cung cấp OTP.
+T20 [LISTENER] Tôi sẽ kiểm tra thêm thông tin trên website, nhưng tôi cần chắc chắn đây là quy trình hợp lệ trước khi thực hiện nhé anh.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Vâng, chị cứ kiểm tra kỹ lưỡng để yên tâm. Tuy nhiên, tôi xin nhắc lại một lần nữa là gói hỗ trợ này có thời hạn phê duyệt rất chặt chẽ. Nếu chị không hoàn tất xác minh trước cuối ngày hôm nay, chúng tôi buộc lòng phải chuyển cơ hội này cho chuyên gia khác trong danh sách chờ. Chị cố gắng cân nhắc kỹ để không bỏ lỡ quyền lợi của mình nhé.
+      → phase: S3 | tactic: Tái khẳng định tính khẩn cấp và hậu quả của việc chậm trễ để tạo áp lực, đồng thời nhấn mạnh đây là 'quyền lợi' của nạn nhân để thúc đẩy hành động.
+T22 [LISTENER] Tôi hiểu, nhưng tôi vẫn cần thêm thời gian để kiểm tra kỹ mọi thông tin trước khi quyết định ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Vâng, nếu chị cần thêm thời gian để kiểm tra, tôi rất tiếc phải thông báo rằng gói hỗ trợ này sẽ không còn hiệu lực. Tuy nhiên, nếu chị vẫn muốn tìm hiểu thêm về các chương trình khác của Bộ phận, chị có thể gửi email về địa chỉ researchsupport@vanphongquochoi.gov.vn. Chúng tôi sẽ phản hồi chị trong thời gian sớm nhất.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách lịch sự, không thô lỗ khi nạn nhân kiên quyết từ chối thực hiện hành động ngay lập tức, đồng thời đưa ra một kênh liên hệ giả mạo để duy trì vỏ bọc hợp pháp.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  23 turns | suspicion=0.00
+TOKEN: in=61219 | out=5076
+COST : $0.029307
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_11120_31190\conv_8897ab1893.json  [CALLER_END]

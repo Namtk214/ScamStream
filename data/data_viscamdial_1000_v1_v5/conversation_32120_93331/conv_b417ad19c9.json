@@ -1,0 +1,253 @@
+{
+  "conversation_id": "conv_b417ad19c9",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0017",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Huỳnh Hữu Thành",
+    "fake_age": 43,
+    "real_occupation": "Kỹ thuật viên phòng thí nghiệm y tế",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Trưởng phòng Kiểm soát Chất lượng & An toàn Lao động - Cảng biển",
+    "caller_org": "Trung tâm Kiểm soát Y tế Cảng Hải Phòng",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi thực từ Trung tâm Kiểm soát Y tế Cảng để thông báo lịch xét nghiệm định kỳ, cập nhật hồ sơ y tế hoặc kiểm tra điều kiện sức khỏe lao động tại cảng theo quy định.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên, chức vụ, đơn vị, số điện thoại chính thức của cơ quan), xác nhận danh tính nạn nhân bằng tên đầy đủ và số ID. Không tạo áp lực hoặc khẩn cấp.",
+          "dialogue_sample": "Chào anh Hoàng Xuân Xuân Bình, tôi là ông Thắng, Trưởng phòng QC&ATLĐ từ Trung tâm Kiểm soát Y tế Cảng Hải Phòng, số điện thoại 0225-1234567. Chúng tôi đang cập nhật hồ sơ y tế định kỳ của các lao động tại cảng. Anh có thời gian nghe tôi nói một chút không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo rõ ràng mục đích (lịch xét nghiệm, cập nhật hồ sơ, kiểm tra sức khỏe), yêu cầu thông tin cần thiết (chỉ những thông tin liên quan đến y tế), không yêu cầu tài khoản ngân hàng hoặc OTP. Cung cấp địa chỉ, thời gian, địa điểm cụ thể.",
+          "dialogue_sample": "Anh sắp hết hạn xét nghiệm y tế định kỳ (hết hạn ngày 15/3). Chúng tôi sẽ tổ chức xét nghiệm tập trung vào thứ Sáu tuần tới (ngày 12/3) tại Phòng Y tế Cảng, tầng 2, tòa nhà A. Anh có thể đến được không? Hoặc anh có bệnh nền nào cần chúng tôi lưu ý không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động & kết thúc: Xác nhận lịch hẹn, cung cấp số điện thoại liên hệ chính thức để nạn nhân có thể xác minh hoặc hỏi thêm. Kết thúc cuộc gọi lịch sự, không tạo bất kỳ áp lực nào.",
+          "dialogue_sample": "Vậy anh sẽ đến vào 8 giờ sáng thứ Sáu, 12/3, phòng Y tế cảng tầng 2. Anh nhớ mang theo CMND/CCCD và giấy tờ liên quan nhé. Nếu anh có câu hỏi gì, gọi lại số 0225-1234567 gặp phòng Y tế. Cảm ơn anh, chúc anh sức khỏe!"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên phòng thí nghiệm y tế có thể được cử làm giám sát y tế tại cảng để kiểm tra sức khỏe lao động hoặc xét nghiệm hàng hóa nhập khẩu. Người mang vác hàng hóa (docker) là đối tượng cần quản lý y tế định kỳ hoặc liên quan đến các đợt kiểm tra khẩn cấp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0017",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1965,
+      "age": 60,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "93331",
+      "title": "Người mang vác hàng hóa xuống tàu và lên bờ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hoàng Xuân Xuân Bình",
+      "VIC_ID_DOC": "060065157805",
+      "VIC_ADDRESS": "Quận 12, Bình Thuận",
+      "VIC_EMPLOYMENT": "Người mang vác hàng hóa xuống tàu và lên bờ",
+      "VIC_CONTACT": "0946366806",
+      "VIC_TAX_SOCIAL_ID": "8522579879"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0842",
+      "VIC_CREDENTIAL": "688200",
+      "VIC_SIM_INFO": "0946366806",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0911048089282",
+      "VIC_CARD_DATA": "4307 **** **** 4171",
+      "VIC_BALANCE": "18 triệu đồng",
+      "VIC_ASSET": "70 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hoàng Xuân Xuân Bình",
+    "VIC_CONTACT": "0946366806",
+    "VIC_BANK_ACCOUNT": "0911048089282",
+    "VIC_ID_DOC": "060065157805"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Kiểm soát Chất lượng & An toàn Lao động - Cảng biển",
+    "caller_org": "Trung tâm Kiểm soát Y tế Cảng Hải Phòng",
+    "scenario_context": "Kỹ thuật viên phòng thí nghiệm y tế có thể được cử làm giám sát y tế tại cảng để kiểm tra sức khỏe lao động hoặc xét nghiệm hàng hóa nhập khẩu. Người mang vác hàng hóa (docker) là đối tượng cần quản lý y tế định kỳ hoặc liên quan đến các đợt kiểm tra khẩn cấp.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi thông báo kết quả xét nghiệm y tế bất thường hoặc yêu cầu cập nhật hồ sơ y tế cảng để xác nhận danh tính và lấy thông tin tài khoản ngân hàng để 'hoàn trả tiền bảo hiểm y tế'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác nhận danh tính: Xưng danh là 'Trưởng phòng QC&ATLĐ từ Trung tâm Kiểm soát Y tế Cảng', gọi tên chính xác 'Hoàng Xuân Xuân Bình' và nói 'chúng tôi có hồ sơ của anh trong hệ thống'. Dùng số CMND/CCCD (060065157805) để tạo uy tín cao: 'Theo hệ thống, chúng tôi có số ID 060065157805 của anh, đúng không?'",
+          "dialogue_sample": "Chào anh Bình, tôi là ông Thắng từ Trung tâm Kiểm soát Y tế Cảng. Chúng tôi vừa nhận được kết quả xét nghiệm định kỳ của anh, số ID 060065157805. Anh có thời gian nghe tôi nói một chút không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lo lắng: Tạo cảm giác lo lắng bằng cách nói 'kết quả xét nghiệm có bất thường nhỏ liên quan đến sức khỏe lao động' hoặc 'hồ sơ y tế của anh bị lỗi trong hệ thống nên cần cập nhật ngay'. Nhấn mạnh 'nếu không cập nhật, anh sẽ không được phép làm việc tại cảng trong tuần tới'.",
+          "dialogue_sample": "Kết quả cho thấy cần cập nhật lại hồ sơ y tế của anh ngay. Nếu không hoàn tất trong hôm nay, anh sẽ bị tạm dừng làm việc. Để xử lý nhanh, chúng tôi cần anh cung cấp lại thông tin tài khoản ngân hàng để hoàn trả chi phí xét nghiệm bất ngờ này."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Lấy thông tin tài khoản: Yêu cầu nạn nhân 'xác nhận lại số tài khoản ngân hàng' bằng cách nói 'để chúng tôi chuyển tiền hoàn trả hoặc để cập nhật vào hệ thống'. Nếu nạn nhân cung cấp (hoặc scammer đã có: 0911048089282), yêu cầu tiếp 'để hoàn tất, anh cần chuyển khoản 500k làm lệ phí cập nhật hồ sơ y tế, sau đó chúng tôi sẽ hoàn trả 2 triệu tiền bảo hiểm'. Hoặc yêu cầu cài ứng dụng 'xác thực OTP' để 'khoá tài khoản ngân hàng tạm thời'.",
+          "dialogue_sample": "Anh có thể cho tôi số tài khoản ngân hàng để chúng tôi cập nhật hệ thống không? Sau đó anh chuyển 500k làm lệ phí, rồi chúng tôi sẽ hoàn trả ngay 2 triệu tiền bảo hiểm y tế mà công ty nợ anh. Tôi sẽ hướng dẫn anh bước từng bước."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'tôi sẽ gửi email xác nhận từ cơ quan chính thức' (nhưng gửi email giả) hoặc 'anh có thể gọi lại số cảng để kiểm chứng' (nhưng đưa số điện thoại giả). Nếu nạn nhân chuyển tiền thành công, scammer kết thúc cuộc gọi ngay. Nếu nạn nhân từ chối, scammer tạo áp lực: 'Nếu anh không cập nhật hôm nay, ngày mai anh sẽ bị khóa hệ thống lao động và không được nhận lương'.",
+          "dialogue_sample": "Được anh, tôi gửi email xác nhận cho anh trong vòng 5 phút. Anh chuyển tiền trước, rồi chúng tôi hoàn trả ngay. Nếu anh không làm, thứ Hai tuần sau anh sẽ không thể làm việc được. Anh hiểu tình huống không?"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực từ Trung tâm Kiểm soát Y tế Cảng để thông báo lịch xét nghiệm định kỳ, cập nhật hồ sơ y tế hoặc kiểm tra điều kiện sức khỏe lao động tại cảng theo quy định.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên, chức vụ, đơn vị, số điện thoại chính thức của cơ quan), xác nhận danh tính nạn nhân bằng tên đầy đủ và số ID. Không tạo áp lực hoặc khẩn cấp.",
+          "dialogue_sample": "Chào anh Hoàng Xuân Xuân Bình, tôi là ông Thắng, Trưởng phòng QC&ATLĐ từ Trung tâm Kiểm soát Y tế Cảng Hải Phòng, số điện thoại 0225-1234567. Chúng tôi đang cập nhật hồ sơ y tế định kỳ của các lao động tại cảng. Anh có thời gian nghe tôi nói một chút không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo rõ ràng mục đích (lịch xét nghiệm, cập nhật hồ sơ, kiểm tra sức khỏe), yêu cầu thông tin cần thiết (chỉ những thông tin liên quan đến y tế), không yêu cầu tài khoản ngân hàng hoặc OTP. Cung cấp địa chỉ, thời gian, địa điểm cụ thể.",
+          "dialogue_sample": "Anh sắp hết hạn xét nghiệm y tế định kỳ (hết hạn ngày 15/3). Chúng tôi sẽ tổ chức xét nghiệm tập trung vào thứ Sáu tuần tới (ngày 12/3) tại Phòng Y tế Cảng, tầng 2, tòa nhà A. Anh có thể đến được không? Hoặc anh có bệnh nền nào cần chúng tôi lưu ý không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động & kết thúc: Xác nhận lịch hẹn, cung cấp số điện thoại liên hệ chính thức để nạn nhân có thể xác minh hoặc hỏi thêm. Kết thúc cuộc gọi lịch sự, không tạo bất kỳ áp lực nào.",
+          "dialogue_sample": "Vậy anh sẽ đến vào 8 giờ sáng thứ Sáu, 12/3, phòng Y tế cảng tầng 2. Anh nhớ mang theo CMND/CCCD và giấy tờ liên quan nhé. Nếu anh có câu hỏi gì, gọi lại số 0225-1234567 gặp phòng Y tế. Cảm ơn anh, chúc anh sức khỏe!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh, em là Huỳnh Hữu Thành, Trưởng phòng Kiểm soát Chất lượng & An toàn Lao động của Trung tâm Kiểm soát Y tế Cảng Hải Phòng đây ạ. Em gọi tới số 0946366806 để xác nhận với anh Hoàng Xuân Xuân Bình về lịch xét nghiệm định kỳ theo quy định của cảng mình.",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh để nạn nhân nắm rõ thông tin và xác nhận lại danh tính nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi không biết lịch xét nghiệm này có phải của tôi không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh Hoàng Xuân Xuân Bình ạ. Bên em có cập nhật thông tin trên hệ thống là anh thuộc diện cần xét nghiệm định kỳ. Đây là lịch xét nghiệm bắt buộc mỗi 6 tháng một lần để đảm bảo an toàn lao động và sức khỏe cho tất cả cán bộ, công nhân viên làm việc tại khu vực cảng biển mình đó ạ. Em có thể xác minh thêm thông tin anh cung cấp để kiểm tra chính xác hơn được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giảm nghi ngờ bằng việc giải thích rõ ràng lý do cuộc gọi và đề nghị xác minh thêm thông tin để củng cố độ tin cậy của cuộc gọi. Tập trung vào mục đích lấy thông tin nhưng không yêu cầu thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể nói cho tôi biết thêm thông tin gì không, tôi muốn chắc chắn rằng đó là đúng lịch của tôi.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu ạ. Thông tin trên hệ thống của Trung tâm Kiểm soát Y tế Cảng Hải Phòng cho thấy anh Hoàng Xuân Xuân Bình, với số căn cước công dân 060065157805, hiện đang công tác tại Cảng Hải Phòng. Lần xét nghiệm gần nhất của anh là vào ngày 15 tháng 11 năm ngoái. Theo quy định, đã đến thời điểm anh cần thực hiện xét nghiệm định kỳ tiếp theo rồi ạ. Anh có thể vui lòng xác nhận lại thông tin này giúp em được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin cụ thể (tên, CCCD, thông tin công tác, thời gian xét nghiệm gần nhất) đã có trong hồ sơ để tăng tính xác thực, sau đó yêu cầu xác nhận để kiểm tra phản ứng của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn chưa chắc chắn lắm về thông tin này, em có thể cho tôi biết thêm chi tiết được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để anh yên tâm hơn, em có thể cung cấp thêm thông tin về lịch xét nghiệm cụ thể sắp tới. Lịch xét nghiệm định kỳ cho anh Hoàng Xuân Xuân Bình sẽ diễn ra vào lúc 8h sáng ngày 25 tháng 4 năm 2024 tại Trung tâm Y tế dự phòng Cảng Hải Phòng, địa chỉ số 99 Lê Thánh Tông, Ngô Quyền, Hải Phòng. Anh có thể đến đúng giờ để thực hiện các xét nghiệm cần thiết ạ. Anh có cần em gửi lại thông tin này qua tin nhắn SMS không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giảm nghi ngờ bằng cách cung cấp thông tin chi tiết về lịch trình (thời gian, địa điểm) để làm rõ cuộc gọi, đưa ra đề nghị tiện ích để người nghe có thể tự xác minh thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ thật chi tiết như vậy, nhưng tôi vẫn không cảm thấy yên tâm lắm, vì đây là thông tin quan trọng quá.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu là anh có chút băn khoăn. Nếu anh vẫn chưa yên tâm về cuộc gọi này, anh có thể gọi trực tiếp đến số tổng đài chính thức của Trung tâm Kiểm soát Y tế Cảng Hải Phòng là 0225 3836 789 để xác minh lại thông tin và lịch hẹn của mình ạ. Em sẽ đợi anh xác nhận lại thông tin từ phía Trung tâm ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Khi người nghe vẫn nghi ngờ, hướng dẫn họ đến kênh xác minh chính thức của cơ quan để tự kiểm tra thông tin, thể hiện sự minh bạch và không tạo áp lực."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Anh có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết số điện thoại chính xác của tổng đài được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Dạ số tổng đài chính thức của Trung tâm Kiểm soát Y tế Cảng Hải Phòng là 0225 3836 789 ạ. Anh có thể lưu lại số này để gọi xác minh giúp em nhé. Khi nào anh đã xác minh xong, nếu vẫn cần hỗ trợ về lịch xét nghiệm, anh có thể gọi lại cho em theo số em đang gọi cho anh ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Nhắc lại số tổng đài chính thức để người nghe kiểm tra, đồng thời để ngỏ khả năng liên hệ lại trực tiếp nếu cần, tạo sự tiện lợi và tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn thông tin, nhưng tôi vẫn thấy không yên tâm lắm và muốn kiểm tra thêm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, không sao ạ. Anh cứ kiểm tra kỹ lưỡng để đảm bảo quyền lợi và sức khỏe cho mình nhé. Khi nào cần xác nhận lại lịch hẹn hoặc có câu hỏi gì khác, anh cứ gọi lại số tổng đài chính thức hoặc liên hệ lại với em sau khi đã kiểm tra xong ạ. Chúc anh một ngày làm việc tốt lành.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự khi người nghe vẫn tỏ ra nghi ngờ và muốn tự xác minh, không tạo áp lực và để ngỏ khả năng liên hệ lại sau."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1399,
+      "output_tokens": 2847
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 11217,
+      "output_tokens": 1227
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13381,
+      "output_tokens": 407
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00565,
+    "output_usd": 0.017547,
+    "total_usd": 0.023196
+  }
+}

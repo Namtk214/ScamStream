@@ -1,0 +1,395 @@
+{
+  "conversation_id": "conv_4f6b212f09",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0079",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trần Đức Công Tùng",
+    "fake_age": 40,
+    "real_occupation": "Người bốc xếp máy bay (như hành lý sân bay/xử lý hàng hóa)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên Phòng Quản lý Thiết bị & An toàn Hàng không",
+    "caller_org": "Công ty Dịch vụ Xử lý Hàng hóa Sân bay Tân Sơn Nhất",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Sân bay Tân Sơn Nhất cần tư vấn kỹ thuật về hiệu chuẩn cảm biến nhiệt độ/áp suất cho hệ thống kiểm tra hàng hóa nguy hiểm. Liên hệ kỹ thuật viên vật lý độc lập để xác minh tiêu chuẩn ISO và đề xuất thiết bị phù hợp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Xin chào anh Ngô Công Thế Minh, tôi là Trần Minh từ Phòng Quản lý Thiết bị Sân bay Tân Sơn Nhất. Chúng tôi lấy thông tin anh từ danh bạ kỹ thuật viên độc lập. Hiện nay chúng tôi cần tư vấn về hiệu chuẩn cảm biến cho hệ thống kiểm tra hàng hóa. Anh có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết yêu cầu kỹ thuật, phạm vi nhiệt độ, độ chính xác cần thiết. Hỏi ý kiến anh về tiêu chuẩn ISO, chi phí dự kiến, thời gian thực hiện. Có thể gửi tài liệu qua email hoặc gặp mặt tại sân bay."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác định lịch tư vấn on-site hoặc gửi báo giá chi tiết. Cảm ơn anh và chào tạm biệt. Có thể trao đổi thêm qua email hoặc điện thoại nếu cần."
+        }
+      ]
+    },
+    "scenario_context": "Sân bay cần kiểm tra/hiệu chuẩn các thiết bị cảm biến, hệ thống giám sát an toàn hàng hóa nguy hiểm — liên hệ kỹ thuật viên vật lý để tư vấn/xác minh thông số kỹ thuật. Đây là giao điểm tự nhiên giữa hậu cần sân bay và chuyên gia kỹ thuật độc lập."
+  },
+  "listener_card": {
+    "listener_id": "lis_0079",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1990,
+      "age": 35,
+      "province": "Đồng Nai",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "31190",
+      "title": "Kỹ thuật viên khoa học vật lý và kỹ thuật chưa được phân vào đâu",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Công Thế Minh",
+      "VIC_ID_DOC": "075090976276",
+      "VIC_ADDRESS": "Huyện 1, Đồng Nai",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên khoa học vật lý và kỹ thuật chưa được phân vào đâu",
+      "VIC_CONTACT": "0381931637",
+      "VIC_TAX_SOCIAL_ID": "1037102290"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "317687",
+      "VIC_CREDENTIAL": "8739",
+      "VIC_SIM_INFO": "0381931637",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "73742925582",
+      "VIC_CARD_DATA": "4775 **** **** 8587",
+      "VIC_BALANCE": "172 triệu đồng",
+      "VIC_ASSET": "457 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Công Thế Minh",
+    "VIC_CONTACT": "0381931637",
+    "VIC_ADDRESS": "Huyện 1, Đồng Nai",
+    "VIC_BALANCE": "172 triệu đồng",
+    "VIC_CARD_DATA": "4775 **** **** 8587"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Phòng Quản lý Thiết bị & An toàn Hàng không",
+    "caller_org": "Công ty Dịch vụ Xử lý Hàng hóa Sân bay Tân Sơn Nhất",
+    "scenario_context": "Sân bay cần kiểm tra/hiệu chuẩn các thiết bị cảm biến, hệ thống giám sát an toàn hàng hóa nguy hiểm — liên hệ kỹ thuật viên vật lý để tư vấn/xác minh thông số kỹ thuật. Đây là giao điểm tự nhiên giữa hậu cần sân bay và chuyên gia kỹ thuật độc lập.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để 'xác minh danh tính kỹ thuật viên' vì phát hiện giao dịch bất thường liên quan đến hóa đơn thiết bị từ tài khoản của nạn nhân. Sử dụng tên thật + địa chỉ để tạo lòng tin, sau đó yêu cầu xác nhận qua OTP để 'bảo vệ tài khoản'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Xin chào anh Ngô Công Thế Minh, tôi là Trần Minh từ Phòng Quản lý Thiết bị sân bay Tân Sơn Nhất. Chúng tôi vừa phát hiện một đơn đặt hàng cảm biến kỹ thuật lạ từ địa chỉ Huyện 1, Đồng Nai — là địa chỉ của anh. Anh có thực hiện giao dịch này không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + tin cậy: 'Hệ thống của chúng tôi phát hiện tài khoản anh có dấu hiệu bất thường — đã rút 172 triệu đồng trong tuần qua. Đây có thể là gian lận. Để bảo vệ tài khoản, chúng tôi cần xác minh danh tính anh ngay bây giờ qua mã OTP. Anh vui lòng kiểm tra điện thoại.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh nhận được mã OTP chưa? Vui lòng đọc cho tôi để xác nhận danh tính. Sau đó chúng tôi sẽ khóa tài khoản để ngăn chặn gian lận thêm.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Anh chắc chắn không phải khách hàng của chúng tôi, xin lỗi. Đó là lỗi hệ thống' và cúp máy. Nếu thành công, scammer sẽ sử dụng OTP để đổi mật khẩu tài khoản ngân hàng."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Sân bay Tân Sơn Nhất cần tư vấn kỹ thuật về hiệu chuẩn cảm biến nhiệt độ/áp suất cho hệ thống kiểm tra hàng hóa nguy hiểm. Liên hệ kỹ thuật viên vật lý độc lập để xác minh tiêu chuẩn ISO và đề xuất thiết bị phù hợp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Xin chào anh Ngô Công Thế Minh, tôi là Trần Minh từ Phòng Quản lý Thiết bị Sân bay Tân Sơn Nhất. Chúng tôi lấy thông tin anh từ danh bạ kỹ thuật viên độc lập. Hiện nay chúng tôi cần tư vấn về hiệu chuẩn cảm biến cho hệ thống kiểm tra hàng hóa. Anh có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết yêu cầu kỹ thuật, phạm vi nhiệt độ, độ chính xác cần thiết. Hỏi ý kiến anh về tiêu chuẩn ISO, chi phí dự kiến, thời gian thực hiện. Có thể gửi tài liệu qua email hoặc gặp mặt tại sân bay."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác định lịch tư vấn on-site hoặc gửi báo giá chi tiết. Cảm ơn anh và chào tạm biệt. Có thể trao đổi thêm qua email hoặc điện thoại nếu cần."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Ngô Công Thế Minh, tôi là Trần Đức Công Tùng từ Phòng Quản lý Thiết bị và An toàn Hàng không của Công ty Dịch vụ Xử lý Hàng hóa Sân bay Tân Sơn Nhất. Chúng tôi có được thông tin liên hệ của anh từ danh bạ các kỹ thuật viên độc lập. Hiện tại, chúng tôi đang cần tư vấn về việc hiệu chuẩn các thiết bị cảm biến nhiệt độ và áp suất cho hệ thống kiểm tra hàng hóa nguy hiểm. Không biết anh có thể dành chút thời gian trao đổi ngắn gọn với tôi về vấn đề này không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận người nghe một cách lịch sự, giới thiệu rõ ràng về bản thân và mục đích cuộc gọi, đồng thời hỏi về sự sẵn sàng của người nghe để bắt đầu cuộc trò chuyện kỹ thuật."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng không rõ lắm về yêu cầu cụ thể của anh, anh có thể giải thích thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, thế này anh Minh. Cụ thể thì chúng tôi cần hiệu chuẩn các cảm biến nhiệt độ và áp suất nằm trong hệ thống kiểm tra hàng hóa, đặc biệt là các mặt hàng nguy hiểm. Phạm vi nhiệt độ cần đảm bảo hoạt động hiệu quả là từ -20 độ C đến 60 độ C, còn áp suất thì từ 0 đến 10 bar. Độ chính xác yêu cầu rất cao, đạt tiêu chuẩn sai số tối thiểu. Tôi muốn hỏi ý kiến anh về các tiêu chuẩn ISO liên quan mà anh thường áp dụng, cũng như dự kiến về chi phí và thời gian thực hiện cho một hạng mục tương tự. Không biết anh có thể gợi ý thiết bị nào phù hợp không ạ? Tôi cũng có thể gửi tài liệu chi tiết qua email cho anh để anh tiện tham khảo.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp chi tiết yêu cầu kỹ thuật để người nghe nắm rõ vấn đề, đồng thời đặt câu hỏi mở về các tiêu chuẩn, chi phí, thời gian và đề xuất gửi tài liệu để tạo cơ hội tương tác sâu hơn."
+    },
+    {
+      "role": "listener",
+      "text": "Anh có thể cho em biết rõ hơn về quy trình làm việc của anh trong lĩnh vực này và các tiêu chuẩn ISO mà anh thường áp dụng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về quy trình thì chúng tôi luôn tuân thủ nghiêm ngặt các tiêu chuẩn an toàn hàng không và quốc tế. Chúng tôi muốn tìm một đối tác có thể đáp ứng các tiêu chuẩn ISO/IEC 17025 về năng lực phòng thử nghiệm và hiệu chuẩn. Ngoài ra, các tiêu chuẩn ISO 9001 về quản lý chất lượng cũng rất quan trọng. Anh Minh có kinh nghiệm làm việc với các tiêu chuẩn này không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trả lời trực tiếp câu hỏi của người nghe về quy trình và tiêu chuẩn, đồng thời đặt câu hỏi ngược lại để xác định kinh nghiệm của họ, tiếp tục cuộc trò chuyện chuyên môn."
+    },
+    {
+      "role": "listener",
+      "text": "Em có kinh nghiệm trong việc áp dụng tiêu chuẩn ISO 9001, nhưng chưa rõ lắm về ISO/IEC 17025, anh có thể giúp em hiểu thêm về điều đó được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, ISO/IEC 17025 là tiêu chuẩn về năng lực của các phòng thử nghiệm và hiệu chuẩn, đảm bảo rằng kết quả đo lường là chính xác, đáng tin cậy. Nếu anh Minh có kinh nghiệm với ISO 9001 rồi thì việc tiếp cận 17025 sẽ không quá khó. Để anh tiện hình dung, tôi có thể gửi cho anh một số tài liệu tham khảo chi tiết hơn về các tiêu chuẩn này cũng như yêu cầu kỹ thuật cụ thể của chúng tôi qua email. Anh có thể cho tôi địa chỉ email của anh không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích thêm về tiêu chuẩn ISO/IEC 17025 một cách dễ hiểu, sau đó đề xuất gửi tài liệu chi tiết qua email để thu thập thông tin liên hệ của người nghe và tiếp tục cung cấp thông tin cần thiết cho yêu cầu kỹ thuật."
+    },
+    {
+      "role": "listener",
+      "text": "Em không chắc liệu có an toàn khi gửi địa chỉ email trong trường hợp này, anh có thể đảm bảo cho em về quyền riêng tư thông tin không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Minh cứ yên tâm, thông tin cá nhân của anh luôn được chúng tôi bảo mật. Tôi chỉ cần địa chỉ email để gửi tài liệu tham khảo kỹ thuật, chứ không dùng vào mục đích nào khác. Anh có thể cung cấp email công việc nếu anh thấy thuận tiện hơn.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe về quyền riêng tư, khẳng định mục đích sử dụng email chỉ để gửi tài liệu kỹ thuật và đề xuất phương án thay thế (email công việc) để tạo sự thoải mái."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn hơi lo lắng về việc cung cấp địa chỉ email, anh có thể cho em biết thêm về công ty của anh và có những đảm bảo nào về việc bảo mật thông tin không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Minh hoàn toàn có quyền lo lắng về việc bảo mật thông tin. Chúng tôi là Công ty Dịch vụ Xử lý Hàng hóa Sân bay Tân Sơn Nhất, là một đơn vị trực thuộc Tổng Công ty Cảng Hàng không Việt Nam (ACV), hoạt động dưới sự quản lý chặt chẽ của Nhà nước. Mọi thông tin chúng tôi thu thập đều tuân thủ các quy định pháp luật hiện hành về bảo vệ dữ liệu cá nhân. Nếu anh vẫn cảm thấy chưa an toàn khi cung cấp email, tôi có thể trình bày sơ bộ các yêu cầu qua điện thoại hoặc anh có thể trực tiếp đến văn phòng của chúng tôi tại sân bay để trao đổi chi tiết hơn.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe bằng cách nhấn mạnh uy tín của tổ chức và tuân thủ pháp luật về bảo mật thông tin. Đề xuất các phương án thay thế để tiếp tục trao đổi thông tin mà không yêu cầu email, giảm bớt lo ngại của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy anh nói cũng hợp lý, nhưng em vẫn không muốn cung cấp email ngay lúc này, có cách nào khác để em nhận thông tin không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu anh chưa muốn cung cấp email lúc này thì cũng không sao. Vậy thì, một cách khác là anh có thể cho tôi một địa chỉ bưu điện hoặc số fax, nếu anh có. Hoặc không, tôi sẽ tóm tắt lại các thông tin chính qua điện thoại và sau đó chúng ta có thể sắp xếp một buổi gặp mặt trực tiếp tại sân bay để tôi trình bày chi tiết hơn và anh có thể xem xét các tài liệu tận nơi. Cách nào sẽ tiện cho anh hơn ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Đưa ra các lựa chọn thay thế việc gửi email (bưu điện, fax, gặp mặt trực tiếp) để người nghe cảm thấy thoải mái hơn trong việc tiếp nhận thông tin, đồng thời tiếp tục thúc đẩy việc trao đổi chi tiết về yêu cầu kỹ thuật."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã đưa ra các phương án khác, nhưng em vẫn chưa cảm thấy yên tâm lắm, anh có thể tóm tắt lại các thông tin chính cho em nghe được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu vậy tôi xin tóm tắt lại một lần nữa các thông tin chính về yêu cầu của chúng tôi. Chúng tôi cần tư vấn và thực hiện hiệu chuẩn các cảm biến nhiệt độ và áp suất cho hệ thống kiểm tra hàng hóa nguy hiểm tại Sân bay Tân Sơn Nhất. Yêu cầu kỹ thuật cao, phạm vi nhiệt độ từ -20 đến 60 độ C, áp suất từ 0 đến 10 bar, độ chính xác tối thiểu. Chúng tôi cần một đối tác có kinh nghiệm và khả năng đáp ứng các tiêu chuẩn ISO/IEC 17025 và ISO 9001. Mục đích của cuộc gọi này là để tìm kiếm một kỹ thuật viên độc lập uy tín như anh để đưa ra giải pháp và có thể là báo giá sơ bộ. Anh thấy thế nào về các yêu cầu này sau khi tôi tóm tắt lại?",
+      "current_phase": "L2",
+      "tactic_hint": "Tóm tắt lại các yêu cầu kỹ thuật và mục đích cuộc gọi một cách rõ ràng, ngắn gọn để người nghe nắm bắt thông tin cốt lõi mà không cần tài liệu, đồng thời đặt câu hỏi để tiếp tục cuộc trò chuyện."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, anh đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn xác nhận số điện thoại mà anh gọi cho em là số nào để đảm bảo thông tin chính xác ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số điện thoại tôi đang gọi cho anh là 0907 888 888. Anh có thể lưu lại để tiện liên lạc sau này. Anh đã kiểm tra được thông tin gì rồi ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp số điện thoại theo yêu cầu của người nghe để tăng độ tin cậy và trấn an, đồng thời đặt câu hỏi mở để tiếp tục cuộc trò chuyện và tìm hiểu nguyên nhân người nghe muốn kiểm tra."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp số điện thoại, nhưng em vẫn còn chút lo lắng về việc hợp tác, anh có thể cho em biết thêm về quy trình và thời gian thực hiện ước chừng cho dự án này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về quy trình tổng quan, sau khi chúng ta thống nhất về yêu cầu kỹ thuật và phương án đề xuất, chúng tôi sẽ yêu cầu anh gửi một bản đề xuất chi tiết kèm theo báo giá sơ bộ. Sau đó, chúng tôi có thể sắp xếp buổi gặp mặt tại sân bay để trao đổi sâu hơn, có thể là khảo sát thực tế hệ thống. Về thời gian thực hiện, điều đó phụ thuộc vào quy định nội bộ của ACV và mức độ phức tạp của giải pháp anh đưa ra, nhưng thông thường chúng tôi mong muốn hoàn thành trong khoảng 1 đến 2 tháng sau khi ký hợp đồng. Anh thấy quy trình sơ bộ này có phù hợp không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Mô tả quy trình làm việc và thời gian dự kiến để cung cấp cái nhìn tổng thể về dự án, giúp người nghe hình dung rõ hơn về các bước hợp tác, đồng thời tạo cơ hội để họ bày tỏ ý kiến về sự phù hợp của quy trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã giải thích rõ ràng, nhưng em vẫn cần thêm thông tin để quyết định liệu có nên hợp tác hay không ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Minh muốn biết thêm thông tin cụ thể nào nữa ạ? Tôi có thể cung cấp thêm chi tiết về các loại cảm biến chúng tôi đang sử dụng, hoặc các yêu cầu cụ thể hơn về môi trường làm việc của hệ thống. Hoặc anh có muốn tôi nói rõ hơn về quy trình thanh toán hay các điều khoản hợp đồng mẫu của chúng tôi không?",
+      "current_phase": "L2",
+      "tactic_hint": "Hỏi rõ người nghe muốn biết thêm thông tin gì cụ thể để đáp ứng đúng nhu cầu, đưa ra các gợi ý về loại thông tin có thể cung cấp để giúp người nghe ra quyết định, tiếp tục duy trì cuộc trò chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn biết thêm về quy trình thanh toán và các điều khoản hợp đồng mẫu của anh, có thể cho em thông tin chi tiết không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về quy trình thanh toán, chúng tôi thường chia thành các đợt theo tiến độ công việc hoặc theo từng giai đoạn hoàn thành dự án, ví dụ như tạm ứng ban đầu, thanh toán sau khi hoàn thành hiệu chuẩn, và thanh toán cuối cùng sau khi nghiệm thu. Tất cả sẽ được ghi rõ trong hợp đồng. Về hợp đồng mẫu, chúng tôi sử dụng mẫu hợp đồng dịch vụ tư vấn và hiệu chuẩn tiêu chuẩn của Tổng Công ty Cảng Hàng không Việt Nam (ACV), trong đó có đầy đủ các điều khoản về phạm vi công việc, trách nhiệm các bên, bảo mật thông tin, và giải quyết tranh chấp. Anh có muốn tôi đọc sơ qua một vài điều khoản chính không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày chi tiết về quy trình thanh toán và các điều khoản hợp đồng mẫu để tăng tính minh bạch và xây dựng lòng tin, đồng thời hỏi ý kiến người nghe về việc đọc các điều khoản chính để tiếp tục tương tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em không cần phải đọc hết, chỉ cần cho em biết một vài điều khoản quan trọng thôi, được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, những điều khoản quan trọng nhất trong hợp đồng mẫu của chúng tôi thường bao gồm: Phạm vi công việc và kết quả mong đợi, yêu cầu về năng lực và kinh nghiệm của nhà cung cấp, cam kết bảo mật thông tin tuyệt đối, các điều khoản về chất lượng dịch vụ và bảo hành sau hiệu chuẩn, cuối cùng là cơ chế giải quyết tranh chấp thông qua hòa giải hoặc trọng tài. Anh Minh có quan tâm đặc biệt đến điều khoản nào trong số này không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày các điều khoản hợp đồng quan trọng một cách ngắn gọn, súc tích để người nghe nắm bắt thông tin cốt lõi mà không bị quá tải, đồng thời đặt câu hỏi mở để tiếp tục tương tác và tìm hiểu mối quan tâm cụ thể của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy các điều khoản này khá hợp lý, nhưng em muốn biết rõ hơn về cam kết bảo mật thông tin, anh có thể giải thích thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về cam kết bảo mật thông tin, chúng tôi hiểu đây là một yếu tố cực kỳ quan trọng, đặc biệt khi làm việc với các hệ thống an ninh sân bay. Trong hợp đồng sẽ có điều khoản rõ ràng quy định rằng anh Minh, với tư cách là nhà cung cấp dịch vụ, sẽ không được phép tiết lộ bất kỳ thông tin nào liên quan đến hệ thống, quy trình hoạt động, hoặc dữ liệu nhạy cảm của Sân bay Tân Sơn Nhất cho bất kỳ bên thứ ba nào. Cam kết này có hiệu lực ngay cả sau khi hợp đồng kết thúc. Chúng tôi cũng sẽ yêu cầu anh ký một thỏa thuận bảo mật (NDA) riêng nếu cần thiết. Anh thấy cam kết như vậy có đủ chặt chẽ không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Làm rõ cam kết bảo mật thông tin bằng cách giải thích chi tiết về các điều khoản và yêu cầu liên quan, nhấn mạnh mức độ quan trọng của bảo mật trong bối cảnh sân bay, đồng thời đặt câu hỏi để xác nhận sự hài lòng của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy cam kết bảo mật như vậy là hợp lý, nhưng em vẫn cần thêm thông tin để cảm thấy yên tâm hoàn toàn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Minh còn băn khoăn gì nữa ạ? Tôi rất sẵn lòng giải đáp mọi thắc mắc để anh có thể hoàn toàn yên tâm. Chúng ta có thể bàn về lịch trình cụ thể, hoặc tôi có thể sắp xếp một buổi gặp mặt trực tiếp để anh có cơ hội trao đổi với đội ngũ kỹ thuật của chúng tôi tại sân bay, xem xét thực tế hệ thống. Anh muốn tiếp tục trao đổi qua điện thoại hay muốn gặp mặt trực tiếp để tiện hơn cho việc đưa ra quyết định?",
+      "current_phase": "L2",
+      "tactic_hint": "Hỏi rõ người nghe muốn thêm thông tin gì cụ thể để đáp ứng và giảm bớt lo lắng, đồng thời đề xuất các lựa chọn tiếp theo như gặp mặt trực tiếp để tạo cơ hội tiếp xúc thực tế và tăng cường lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã sẵn lòng giải đáp, nhưng em vẫn cảm thấy cần thêm thông tin về đội ngũ kỹ thuật của anh để yên tâm hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về đội ngũ kỹ thuật của chúng tôi thì sao ạ? Anh Minh muốn biết điều gì cụ thể hơn về họ? Ví dụ như trình độ chuyên môn, kinh nghiệm thực tế với các dự án tương tự, hay số lượng kỹ thuật viên sẽ tham gia vào dự án này? Nếu tiện, chúng tôi có thể gửi cho anh hồ sơ năng lực của phòng kỹ thuật để anh tham khảo, hoặc như tôi đã đề nghị, anh có thể đến thăm văn phòng và gặp gỡ trực tiếp các anh em kỹ thuật viên của chúng tôi.",
+      "current_phase": "L2",
+      "tactic_hint": "Hỏi rõ về thông tin cụ thể mà người nghe muốn biết về đội ngũ kỹ thuật để đáp ứng đúng nhu cầu, đồng thời nhắc lại các đề xuất đã có như gửi hồ sơ năng lực hoặc gặp trực tiếp để tăng cường sự minh bạch và tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn biết rõ hơn về trình độ chuyên môn và kinh nghiệm thực tế của các kỹ thuật viên sẽ tham gia vào dự án này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, các kỹ thuật viên của chúng tôi đều đạt trình độ đại học trở lên trong các chuyên ngành như Điện tử, Điều khiển tự động, Vật lý kỹ thuật, và có chứng chỉ hiệu chuẩn quốc tế. Họ có kinh nghiệm thực tế nhiều năm trong việc vận hành, bảo trì và hiệu chuẩn các hệ thống thiết bị đặc thù của sân bay, đặc biệt là các thiết bị kiểm tra an ninh và hàng hóa nguy hiểm. Nhiều anh em đã từng tham gia các khóa đào tạo chuyên sâu về tiêu chuẩn ISO/IEC 17025. Anh Minh có muốn biết thêm về một kỹ thuật viên cụ thể nào không, hay anh vẫn muốn gặp mặt trực tiếp để tiện đánh giá?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về trình độ chuyên môn và kinh nghiệm của đội ngũ kỹ thuật viên để tăng cường độ tin cậy, sau đó đặt câu hỏi để tiếp tục cuộc trò chuyện và gợi ý việc gặp mặt trực tiếp để đánh giá thêm."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp thông tin chi tiết về đội ngũ kỹ thuật, nhưng em vẫn cảm thấy cần thêm thời gian để suy nghĩ kỹ trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hoàn toàn hiểu. Đây là một dự án quan trọng nên anh Minh cần thời gian cân nhắc kỹ lưỡng là điều đương nhiên. Vậy anh Minh có thể cho tôi biết khoảng bao lâu thì anh có thể đưa ra quyết định hoặc phản hồi lại chúng tôi không ạ? Tôi có thể gửi lại tóm tắt nội dung cuộc trao đổi này qua tin nhắn SMS để anh tiện tham khảo lại khi cần.",
+      "current_phase": "L2",
+      "tactic_hint": "Thể hiện sự thông cảm và tôn trọng quyết định của người nghe, đồng thời nhẹ nhàng gợi ý về thời gian phản hồi và tiếp tục đề xuất gửi thông tin qua kênh khác (SMS) để giữ liên lạc và tạo điều kiện cho người nghe dễ dàng xem lại thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ cần khoảng một tuần để suy nghĩ kỹ và sẽ phản hồi lại anh sau ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1946,
+      "output_tokens": 1654
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 58101,
+      "output_tokens": 3694
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 73754,
+      "output_tokens": 1391
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.024629,
+    "output_usd": 0.01834,
+    "total_usd": 0.042969
+  }
+}

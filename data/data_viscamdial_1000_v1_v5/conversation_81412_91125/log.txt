@@ -1,0 +1,37 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_82f7046fc0]
+  Caller thật: Thợ vận hành máy cán cao su (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý an toàn lao động / Thanh tra viên kỹ thuật từ Công ty Cao Su @ Công ty Cao Su Việt Nam - Phòng An toàn Lao động & Quản lý Nhân sự
+  Listener: Người dọn dẹp khu dân cư (như chung cư, căn hộ riêng, khu vực chung trong khu dân cư) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ vận hành máy cán cao su cần liên hệ với công nhân dọn dẹp khu dân cư để xác minh thông tin an toàn lao động, kiểm tra bảo hiểm, hoặc thông báo về chương trình phúc lợi công ty. Điểm giao thoa: cả hai đều là lao động tay nghề, cùng hệ thống quản lý nhân sự & bảo hiểm xã hội.
+  Pretext: Công ty Cao Su gọi để cập nhật thông tin bảo hiểm xã hội, xác minh địa chỉ liên hệ hiện tại, hoặc thông báo về chương trình huấn luyện an toàn lao động bắt buộc cho tất cả nhân viên.
+  Listener traits: ['nhân ái muốn giúp', 'nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào anh Cao Thế Đạt, tôi là Đỗ Gia Hữu Hải từ Phòng An toàn Lao động Công ty Cao Su. Anh có thời gian nói chuyện 5 phút không? Chúng tôi muốn thông báo về chương trình huấn luyện an toàn lao động bắt buộc sắp tới cho tất cả nhân viên.
+      → phase: L1 | tactic: Tiếp cận, giới thiệu bản thân và mục đích cuộc gọi về chương trình huấn luyện an toàn lao động.
+T02 [LISTENER] Tôi nghe em nói rồi, nhưng tôi muốn biết thêm chi tiết về chương trình huấn luyện này ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng anh. Đây là buổi huấn luyện định kỳ hàng năm nhằm trang bị kiến thức và kỹ năng an toàn khi làm việc. Để đảm bảo tất cả nhân viên đều tham gia, chúng tôi đang xác nhận địa chỉ email và số điện thoại liên hệ hiện tại của anh để gửi thông tin chi tiết và lịch trình cụ thể.
+      → phase: L2 | tactic: Trình bày thêm chi tiết về mục đích của buổi huấn luyện, chuyển sang lý do cần xác minh thông tin liên hệ.
+T04 [LISTENER] Em không có địa chỉ email, chỉ có số điện thoại thôi, em có thể cung cấp cho cán bộ được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, anh cứ cung cấp số điện thoại hiện tại của mình cho tôi ạ. Chúng tôi sẽ gửi thông tin qua SMS và gọi điện thông báo lịch cụ thể cho anh. Anh vui lòng đọc lại số điện thoại để tôi xác nhận ạ.
+      → phase: L2 | tactic: Xác nhận có thể gửi thông tin qua SMS và yêu cầu người nghe đọc lại số điện thoại để xác nhận.
+T06 [LISTENER] Số điện thoại của tôi là 0904558351, em đọc lại cho cán bộ đúng không ạ?
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_CONTACT']
+
+T07 [CALLER] Vâng, 0904558351. Tôi đã ghi nhận. Cảm ơn anh Đạt đã xác nhận. Chúng tôi sẽ gửi thông báo chi tiết qua số này trong vài ngày tới. Anh vui lòng chú ý điện thoại để nhận thông tin nhé. Nếu có thắc mắc, anh có thể liên hệ Phòng An toàn Lao động qua số 028-1234-5678. Chúc anh một ngày làm việc hiệu quả.
+      → phase: L3 | tactic: Xác nhận đã nhận thông tin, kết thúc cuộc gọi tự nhiên và cung cấp kênh liên hệ nếu có thắc mắc.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  7 turns | suspicion=0.00
+TOKEN: in=11925 | out=2308
+COST : $0.012493
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_81412_91125\conv_82f7046fc0.json  [CALLER_END]

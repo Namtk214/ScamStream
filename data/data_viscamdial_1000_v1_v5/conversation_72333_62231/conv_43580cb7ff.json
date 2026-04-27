@@ -1,0 +1,220 @@
+{
+  "conversation_id": "conv_43580cb7ff",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0039",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phạm Bảo Thùy Nhung",
+    "fake_age": 48,
+    "real_occupation": "Thợ cơ khí máy móc công nghiệp/máy văn phòng",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên bán hàng / Kỹ thuật viên - Công ty cung cấp thiết bị bảo dưỡng tàu cá",
+    "caller_org": "Công ty TNHH Thiết bị Hàng hải Việt Nam (hoặc tương tự)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện tỏ vẻ là kỹ thuật viên từ công ty cung cấp thiết bị hàng hải, thông báo rằng hệ thống bảo dưỡng định kỳ của tàu cá đã ghi nhận tên 'Huỳnh Thị Hằng' trong hồ sơ khách hàng, và công ty cần xác nhận thông tin thanh toán để cập nhật hợp đồng bảo dưỡng hoặc xử lý khoản nợ phụ tùng từ lần sửa chữa trước.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh từ Công ty Thiết bị Hàng hải Việt Nam', gọi trực tiếp số điện thoại của Huỳnh Thị Hằng (từ VIC_CONTACT), mở đầu bằng câu: 'Chị Hằng ơi, em là kỹ thuật viên từ công ty chúng em, tình cờ phát hiện tài khoản của chị trong hệ thống bảo dưỡng tàu cá, chúng em cần xác nhận lại thông tin thanh toán để tránh mất hợp đồo hoặc bị tính phí phạt' — tạo credibility bằng cách biết tên, gọi đúng số điện thoại."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + sợ hãi bằng cách nói 'Chị ơi, nếu không xác nhận trong 24 giờ, hệ thống sẽ tự động khóa tài khoản và chúng em sẽ phải tính phí phạt hợp đồo lên đến 3-5 triệu đồng'. Ngoài ra, nhắc đến VIC_BALANCE ('Chúng em thấy tài khoản của chị hiện còn khoảng 5 triệu, nhưng nếu bị phạt thì sẽ không đủ') để tạo áp lực tài chính."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để tránh phí phạt, chị cần chuyển khoản xác nhận 500 nghìn đến 1 triệu đồng vào tài khoản của công ty chúng em để khóa hợp đồo cũ và cấp hợp đồo mới. Chúng em sẽ gửi link hoặc số tài khoản cho chị qua SMS hoặc Zalo ngay'. Nếu nạn nhân từ chối, scammer sẽ bảo 'Chị có thể gọi lại cho em sau 1 tiếng để xác nhận' để tránh bị ngắt điện thoại."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân phát hiện lừa đảo hoặc từ chối, scammer sẽ nói 'Vâng, chị chờ chút, em xin phép sếp em' rồi cúp máy hoặc bảo 'Chị gọi lại sau nhé, em bận đang xử lý công việc khác'. Nếu thành công, scammer sẽ cúp máy ngay sau khi nhận được xác nhận chuyển khoản."
+        }
+      ]
+    },
+    "scenario_context": "Thợ cơ khí máy móc công nghiệp có kiến thức về động cơ, máy bơm, hệ thống thủy lực — những thiết bị quan trọng trên tàu cá. Người bán hàng/kỹ thuật viên thiết bị hàng hải sẽ gọi cho chủ tàu hoặc thuyền viên để giới thiệu dịch vụ bảo dưỡng, sửa chữa, hoặc bán phụ tùng thay thế."
+  },
+  "listener_card": {
+    "listener_id": "lis_0039",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1986,
+      "age": 39,
+      "province": "Long An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "62231",
+      "title": "Lao động khai thác cá trong vùng biển Việt Nam",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Thị Hằng",
+      "VIC_ID_DOC": "080186172050",
+      "VIC_ADDRESS": "Huyện 7, Long An",
+      "VIC_EMPLOYMENT": "Lao động khai thác cá trong vùng biển Việt Nam",
+      "VIC_CONTACT": "0854131925",
+      "VIC_TAX_SOCIAL_ID": "5377276253"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "189593",
+      "VIC_CREDENTIAL": "028310",
+      "VIC_SIM_INFO": "0854131925",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "246654611519",
+      "VIC_CARD_DATA": "4548 **** **** 1132",
+      "VIC_BALANCE": "5 triệu đồng",
+      "VIC_ASSET": "17 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Thị Hằng",
+    "VIC_CONTACT": "0854131925",
+    "VIC_BALANCE": "5 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán hàng / Kỹ thuật viên - Công ty cung cấp thiết bị bảo dưỡng tàu cá",
+    "caller_org": "Công ty TNHH Thiết bị Hàng hải Việt Nam (hoặc tương tự)",
+    "scenario_context": "Thợ cơ khí máy móc công nghiệp có kiến thức về động cơ, máy bơm, hệ thống thủy lực — những thiết bị quan trọng trên tàu cá. Người bán hàng/kỹ thuật viên thiết bị hàng hải sẽ gọi cho chủ tàu hoặc thuyền viên để giới thiệu dịch vụ bảo dưỡng, sửa chữa, hoặc bán phụ tùng thay thế.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện tỏ vẻ là kỹ thuật viên từ công ty cung cấp thiết bị hàng hải, thông báo rằng hệ thống bảo dưỡng định kỳ của tàu cá đã ghi nhận tên 'Huỳnh Thị Hằng' trong hồ sơ khách hàng, và công ty cần xác nhận thông tin thanh toán để cập nhật hợp đồng bảo dưỡng hoặc xử lý khoản nợ phụ tùng từ lần sửa chữa trước.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh từ Công ty Thiết bị Hàng hải Việt Nam', gọi trực tiếp số điện thoại của Huỳnh Thị Hằng (từ VIC_CONTACT), mở đầu bằng câu: 'Chị Hằng ơi, em là kỹ thuật viên từ công ty chúng em, tình cờ phát hiện tài khoản của chị trong hệ thống bảo dưỡng tàu cá, chúng em cần xác nhận lại thông tin thanh toán để tránh mất hợp đồo hoặc bị tính phí phạt' — tạo credibility bằng cách biết tên, gọi đúng số điện thoại."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp + sợ hãi bằng cách nói 'Chị ơi, nếu không xác nhận trong 24 giờ, hệ thống sẽ tự động khóa tài khoản và chúng em sẽ phải tính phí phạt hợp đồo lên đến 3-5 triệu đồng'. Ngoài ra, nhắc đến VIC_BALANCE ('Chúng em thấy tài khoản của chị hiện còn khoảng 5 triệu, nhưng nếu bị phạt thì sẽ không đủ') để tạo áp lực tài chính."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để tránh phí phạt, chị cần chuyển khoản xác nhận 500 nghìn đến 1 triệu đồng vào tài khoản của công ty chúng em để khóa hợp đồo cũ và cấp hợp đồo mới. Chúng em sẽ gửi link hoặc số tài khoản cho chị qua SMS hoặc Zalo ngay'. Nếu nạn nhân từ chối, scammer sẽ bảo 'Chị có thể gọi lại cho em sau 1 tiếng để xác nhận' để tránh bị ngắt điện thoại."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân phát hiện lừa đảo hoặc từ chối, scammer sẽ nói 'Vâng, chị chờ chút, em xin phép sếp em' rồi cúp máy hoặc bảo 'Chị gọi lại sau nhé, em bận đang xử lý công việc khác'. Nếu thành công, scammer sẽ cúp máy ngay sau khi nhận được xác nhận chuyển khoản."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty cung cấp thiết bị hàng hải gọi để giới thiệu dịch vụ bảo dưỡng định kỳ, kiểm tra tình trạng máy móc trên tàu, hoặc thông báo về phụ tùng thay thế sắp hết hạn bảo hành.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Đây là Công ty Thiết bị Hàng hải Việt Nam, em là Minh, kỹ thuật viên tư vấn'. Xác nhận đúng người: 'Đây có phải chị Huỳnh Thị Hằng không? Em có gọi đúng số không?', chờ phản hồi rõ ràng từ nạn nhân trước khi tiếp tục."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng em đang có chương trình bảo dưỡng định kỳ cho các tàu cá trong vùng. Chúng em muốn tư vấn cho chị về dịch vụ kiểm tra động cơ, hệ thống bơm nước, và thay dầu máy. Chị có quan tâm không? Hoặc chúng em có thể gửi báo giá chi tiết qua email/SMS cho chị tham khảo'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu nạn nhân quan tâm, hỏi 'Chị có muốn chúng em gửi báo giá qua email hoặc gặp trực tiếp tại bến cảng không?' và lấy email/địa chỉ. Nếu không quan tâm, scammer sẽ nói 'Vâng, cảm ơn chị. Nếu chị cần thì gọi lại cho chúng em nhé' rồi chào tạm biệt lịch sự."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, tôi là Minh từ Công ty Thiết bị Hàng hải Việt Nam đây ạ. Chị Hằng ơi, tôi gọi từ số 0854131925 của chị, hệ thống bảo dưỡng tàu cá bên tôi vừa ghi nhận tài khoản của chị, chúng tôi cần xác nhận lại thông tin thanh toán để tránh mất hợp đồng bảo dưỡng hoặc bị tính phí phạt đó chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, gọi đúng tên và số điện thoại, đưa ra lý do gọi để tạo niềm tin và sự khẩn cấp ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Chị nghe em nói rồi, nhưng có phải chị cần xác nhận thông tin gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng chị, đúng rồi ạ. Chúng tôi thấy tài khoản của chị hiện còn khoảng 5 triệu đồng, nhưng nếu không cập nhật thông tin thanh toán sớm, hệ thống sẽ tự động khóa hợp đồng bảo dưỡng và điều này có thể dẫn đến việc chị bị phạt từ 3 đến 5 triệu đồng đó chị Huỳnh Thị Hằng.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và sợ hãi bằng cách nhắc đến VIC_BALANCE và nguy cơ bị phạt, đồng thời lặp lại VIC_FULLNAME để tăng tính xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Em không muốn mất hợp đồng đâu, chị có thể hướng dẫn em cần làm gì để cập nhật thông tin không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng chị, để tránh bị khóa hợp đồng và những khoản phí phạt không đáng có, chị cần chuyển khoản xác nhận từ 500 nghìn đến 1 triệu đồng vào tài khoản của công ty chúng tôi. Số tiền này sẽ dùng để khóa hợp đồng cũ và cấp một hợp đồng bảo dưỡng mới cho chị. Tôi sẽ gửi link hoặc số tài khoản cho chị qua SMS hoặc Zalo ngay bây giờ ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể là chuyển khoản xác nhận để 'khóa hợp đồng cũ và cấp hợp đồng mới', đồng thời chuẩn bị gửi thông tin tài khoản để thực hiện giao dịch."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em thấy có gì đó không đúng, chị có sure không ạ? Em không quen chuyển tiền như vậy đâu.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Ồ, chị cứ yên tâm. Đây là quy trình chuẩn bên chúng tôi để đảm bảo quyền lợi cho khách hàng. Nếu chị cảm thấy không tiện chuyển khoản ngay, chị có thể gọi lại cho tôi sau 1 tiếng để xác nhận lại, tôi vẫn sẽ ở đây để hỗ trợ chị ạ. Chị cứ cân nhắc nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định quy trình là bình thường và đề xuất gọi lại sau để tránh bị từ chối thẳng thừng, giữ cho cuộc gọi không bị ngắt quãng ngay lập tức."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cần chút thời gian để suy nghĩ và kiểm tra thêm ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1851,
+      "output_tokens": 2041
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6291,
+      "output_tokens": 614
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7947,
+      "output_tokens": 269
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004301,
+    "output_usd": 0.011901,
+    "total_usd": 0.016203
+  }
+}

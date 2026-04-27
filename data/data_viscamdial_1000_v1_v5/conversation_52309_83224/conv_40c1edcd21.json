@@ -1,0 +1,220 @@
+{
+  "conversation_id": "conv_40c1edcd21",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0050",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Vũ Thùy Vy",
+    "fake_age": 42,
+    "real_occupation": "Nhân viên thu ngân và bán vé có liên quan khác",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên phòng vé/lễ tân trung tâm y tế hoặc bệnh viện",
+    "caller_org": "Bệnh viện Đa khoa tỉnh Nghệ An (hoặc cơ sở y tế địa phương)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo 'khoản nợ khám chữa bệnh chưa thanh toán' hoặc 'phí dịch vụ cấp cứu' liên quan đến một lần Đỗ Thùy Ngân được vận chuyển cứu thương, yêu cầu thanh toán ngay qua thẻ ngân hàng để tránh bị khóa hồ sơ y tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào em Ngân, đây là phòng vé Bệnh viện Đa khoa Nghệ An. Em có nhận được thông báo về khoản nợ khám chữa bệnh từ tháng trước không? Hệ thống ghi nhận số điện thoại này là liên hệ của em.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + bất lực: 'Khoản này đã quá hạn thanh toán rồi. Nếu không thanh toán trong ngày hôm nay, chúng tôi sẽ phải khóa hồ sơ y tế của em, lần sau em cần cấp cứu sẽ bị từ chối. Bệnh viện cũng sẽ báo cáo lên sở Y tế.' — tạo áp lực thời gian"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Em vào app ngân hàng, chuyển khoản nhanh cho số tài khoản này [số tài khoản giả]. Nhập OTP khi hệ thống yêu cầu, sau đó báo lại cho em để em xác nhận hoàn tất thanh toán.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer sẽ nói 'Vậy em sẽ nhận được thư cảnh báo từ bệnh viện trong 24h, lúc đó mọi chuyện sẽ phức tạp hơn' để tăng sợ hãi. Nếu thành công, scammer tắt máy hoặc nói 'Cảm ơn em, hồ sơ đã được giải quyết.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên phòng vé bệnh viện thường liên hệ với lái xe cứu thương để xác nhận thông tin bệnh nhân hoặc thanh toán chi phí vận chuyển cấp cứu. Đây là giao điểm tự nhiên trong hệ thống y tế địa phương."
+  },
+  "listener_card": {
+    "listener_id": "lis_0050",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "Nghệ An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "83224",
+      "title": "Lái xe cứu thương",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Thùy Ngân",
+      "VIC_ID_DOC": "040300645804",
+      "VIC_ADDRESS": "Quận 11, Nghệ An",
+      "VIC_EMPLOYMENT": "Lái xe cứu thương",
+      "VIC_CONTACT": "0327351039",
+      "VIC_TAX_SOCIAL_ID": "7420824285"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "8947",
+      "VIC_CREDENTIAL": "8075",
+      "VIC_SIM_INFO": "0327351039",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "89318735492",
+      "VIC_CARD_DATA": "4210 **** **** 1224",
+      "VIC_BALANCE": "90 triệu đồng",
+      "VIC_ASSET": "233 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Thùy Ngân",
+    "VIC_CONTACT": "0327351039",
+    "LOCATION": "Nghệ An",
+    "VIC_BALANCE": "90 triệu đồng",
+    "VIC_CARD_DATA": "4210 **** **** 1224"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phòng vé/lễ tân trung tâm y tế hoặc bệnh viện",
+    "caller_org": "Bệnh viện Đa khoa tỉnh Nghệ An (hoặc cơ sở y tế địa phương)",
+    "scenario_context": "Nhân viên phòng vé bệnh viện thường liên hệ với lái xe cứu thương để xác nhận thông tin bệnh nhân hoặc thanh toán chi phí vận chuyển cấp cứu. Đây là giao điểm tự nhiên trong hệ thống y tế địa phương.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo 'khoản nợ khám chữa bệnh chưa thanh toán' hoặc 'phí dịch vụ cấp cứu' liên quan đến một lần Đỗ Thùy Ngân được vận chuyển cứu thương, yêu cầu thanh toán ngay qua thẻ ngân hàng để tránh bị khóa hồ sơ y tế.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào em Ngân, đây là phòng vé Bệnh viện Đa khoa Nghệ An. Em có nhận được thông báo về khoản nợ khám chữa bệnh từ tháng trước không? Hệ thống ghi nhận số điện thoại này là liên hệ của em.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + bất lực: 'Khoản này đã quá hạn thanh toán rồi. Nếu không thanh toán trong ngày hôm nay, chúng tôi sẽ phải khóa hồ sơ y tế của em, lần sau em cần cấp cứu sẽ bị từ chối. Bệnh viện cũng sẽ báo cáo lên sở Y tế.' — tạo áp lực thời gian"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Em vào app ngân hàng, chuyển khoản nhanh cho số tài khoản này [số tài khoản giả]. Nhập OTP khi hệ thống yêu cầu, sau đó báo lại cho em để em xác nhận hoàn tất thanh toán.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer sẽ nói 'Vậy em sẽ nhận được thư cảnh báo từ bệnh viện trong 24h, lúc đó mọi chuyện sẽ phức tạp hơn' để tăng sợ hãi. Nếu thành công, scammer tắt máy hoặc nói 'Cảm ơn em, hồ sơ đã được giải quyết.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Bệnh viện liên hệ xác nhận thông tin bệnh nhân và yêu cầu thanh toán chi phí vận chuyển cấp cứu hoặc khám chữa bệnh qua phương thức chính thức (chuyển khoản, thanh toán tại quầy)",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Ngân, đây là phòng vé Bệnh viện Đa khoa Nghệ An. Chúng tôi gọi để xác nhận thông tin về lần khám/vận chuyển cấp cứu ngày [ngày cụ thể]. Chị có nhận được hóa đơn gửi tới địa chỉ không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Khoản thanh toán là [số tiền cụ thể]. Chị có thể thanh toán trực tiếp tại quầy bệnh viện, hoặc chuyển khoản theo số tài khoản trên hóa đơn (chúng tôi sẽ gửi lại hóa đơn nếu chị cần).'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị. Chúng tôi sẽ ghi nhận khi chị thanh toán. Nếu có thắc mắc gì, chị gọi lại số [số điện thoại chính thức bệnh viện]. Chúc chị sức khỏe!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Đỗ Thùy Ngân, tôi là Vũ Thùy Vy từ phòng tài chính Bệnh viện Đa khoa Nghệ An. Tôi gọi từ số 0327351039 của chị để thông báo về khoản nợ khám chữa bệnh phát sinh từ tháng trước. Chị đã nhận được thông báo về khoản này chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và mục đích cuộc gọi, sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin và khẳng định tính xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết chị đang nói về khoản nợ nào cả, chị có thể cụ thể hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, đây là khoản phí dịch vụ cấp cứu và vận chuyển y tế khẩn cấp vào ngày 15 tháng trước, khi chị được xe cứu thương đưa về từ khu vực Hưng Nguyên. Tổng cộng là 3 triệu rưỡi chưa thanh toán. Chị kiểm tra lại xem có đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm chi tiết cụ thể về khoản nợ, địa điểm và thời gian để tăng tính xác thực và làm nạn nhân nhớ lại, đồng thời kiểm tra phản ứng của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhớ đã sử dụng dịch vụ nào mà lại nợ như vậy, chị có thể cho em xem thông báo cụ thể không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Hiện tại tôi không thể gửi thông báo trực tiếp qua điện thoại, nhưng chị có thể tra cứu trên cổng thông tin của Bệnh viện Đa khoa Nghệ An với mã hồ sơ mà tôi sẽ cung cấp sau cuộc gọi này. Tuy nhiên, vấn đề cấp bách bây giờ là khoản này đã quá hạn thanh toán rồi. Nếu không thanh toán trong ngày hôm nay, chúng tôi sẽ phải khóa hồ sơ y tế của chị. Điều đó có nghĩa là lần sau chị cần cấp cứu, bệnh viện có thể sẽ từ chối tiếp nhận. Bệnh viện cũng sẽ báo cáo lên sở Y tế về trường hợp này.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực về thời gian và hậu quả nghiêm trọng nếu không thanh toán, chuyển hướng sang rủi ro bị khóa hồ sơ y tế và bị báo cáo lên sở Y tế."
+    },
+    {
+      "role": "listener",
+      "text": "Chị nói gì mà em không hiểu rõ, em chỉ lái xe cứu thương thôi, không cố tình nợ nần gì cả, chị đừng làm em hoang mang như vậy.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu chị đang bối rối, nhưng đây là thông tin từ hệ thống bệnh viện, không phải tôi cố tình gây khó dễ cho chị. Vấn đề là hồ sơ của chị sẽ bị treo nếu không giải quyết. Để tránh những rắc rối không đáng có, chị vui lòng vào ứng dụng ngân hàng, chuyển khoản nhanh 3 triệu rưỡi cho số tài khoản 8989898989, Ngân hàng Vietcombank, chủ tài khoản Bệnh viện Đa khoa Nghệ An. Sau khi chuyển, chị báo lại cho tôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự bối rối của nạn nhân, đồng thời chuyển sang yêu cầu hành động cụ thể để giải quyết vấn đề bằng cách cung cấp thông tin tài khoản ngân hàng để chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thể chuyển khoản như vậy được, chị cần cung cấp thêm thông tin rõ ràng hơn nữa thì em mới yên tâm làm theo.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1834,
+      "output_tokens": 1514
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5818,
+      "output_tokens": 693
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7891,
+      "output_tokens": 296
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004181,
+    "output_usd": 0.00948,
+    "total_usd": 0.013661
+  }
+}

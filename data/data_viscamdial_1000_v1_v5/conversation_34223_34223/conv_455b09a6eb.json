@@ -1,0 +1,220 @@
+{
+  "conversation_id": "conv_455b09a6eb",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0058",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trần Văn Khoa",
+    "fake_age": 39,
+    "real_occupation": "Nhân viên hướng dẫn tập thể hình",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Nhân viên quản lý tài chính / Kế toán phòng gym",
+    "caller_org": "Chuỗi phòng gym / Hệ thống quản lý tập thể hình",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi từ 'bộ phận kế toán' để thông báo rằng có khoản hoa hồng lớn phát sinh từ việc Lý Như Nhi tuyển được nhiều thành viên mới, nhưng cần xác minh lại thông tin tài khoản ngân hàng để chuyển tiền trước khi tháng kết toán.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Xưng danh là nhân viên kế toán của chuỗi gym, gọi đến Lý Như Nhi để 'xác nhận thông tin nhân sự', sử dụng tên đầy đủ và số điện thoại đã biết để tạo tin cậy ngay lập tức"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo cảm giác khẩn cấp + lợi: 'Chị Nhi ơi, hệ thống phát hiện chị có 8.5 triệu đồng hoa hồng chưa được chuyển từ tháng trước. Hôm nay là ngày cuối thanh toán, nếu không xác nhận tài khoản ngay sẽ bị hoãn sang tháng sau'",
+          "psychology_trigger": "Lợi ích tài chính + Sợ mất tiền + Tính khẩn cấp"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu nạn nhân cung cấp: 'Chị cho tôi số tài khoản ngân hàng, tên chủ tài khoản, và OTP để hệ thống xác minh nhanh'. Hoặc yêu cầu vào link 'xác nhận thông tin' để lấy credential"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP hoặc credential, scammer sẽ thực hiện chuyển tiền từ tài khoản của nạn nhân. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Vậy chị có muốn bị trừ lương thay vì nhận hoa hồng không? Công ty có quy định rõ rày đấy'"
+        }
+      ]
+    },
+    "scenario_context": "Trong ngành tập thể hình, các huấn luyện viên thường được liên hệ bởi bộ phận quản lý tài chính hoặc kế toán về các vấn đề liên quan đến hoa hồng, tiền thưởng thành viên mới, hoặc cập nhật thông tin tài khoản ngân hàng cho thanh toán lương/hoa hồng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0058",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1963,
+      "age": 62,
+      "province": "Nghệ An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "34223",
+      "title": "Nhân viên hướng dẫn tập thể hình",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lý Như Nhi",
+      "VIC_ID_DOC": "040163480233",
+      "VIC_ADDRESS": "Huyện 9, Nghệ An",
+      "VIC_EMPLOYMENT": "Nhân viên hướng dẫn tập thể hình",
+      "VIC_CONTACT": "0917143248",
+      "VIC_TAX_SOCIAL_ID": "1922808372"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "655043",
+      "VIC_CREDENTIAL": "0045",
+      "VIC_SIM_INFO": "0917143248",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "926067835591",
+      "VIC_CARD_DATA": "4599 **** **** 8440",
+      "VIC_BALANCE": "69 triệu đồng",
+      "VIC_ASSET": "848 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lý Như Nhi",
+    "VIC_CONTACT": "0917143248",
+    "LOCATION": "Nghệ An",
+    "VIC_BALANCE": "69 triệu đồng",
+    "VIC_ASSET": "848 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý tài chính / Kế toán phòng gym",
+    "caller_org": "Chuỗi phòng gym / Hệ thống quản lý tập thể hình",
+    "scenario_context": "Trong ngành tập thể hình, các huấn luyện viên thường được liên hệ bởi bộ phận quản lý tài chính hoặc kế toán về các vấn đề liên quan đến hoa hồng, tiền thưởng thành viên mới, hoặc cập nhật thông tin tài khoản ngân hàng cho thanh toán lương/hoa hồng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi từ 'bộ phận kế toán' để thông báo rằng có khoản hoa hồng lớn phát sinh từ việc Lý Như Nhi tuyển được nhiều thành viên mới, nhưng cần xác minh lại thông tin tài khoản ngân hàng để chuyển tiền trước khi tháng kết toán.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Xưng danh là nhân viên kế toán của chuỗi gym, gọi đến Lý Như Nhi để 'xác nhận thông tin nhân sự', sử dụng tên đầy đủ và số điện thoại đã biết để tạo tin cậy ngay lập tức"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo cảm giác khẩn cấp + lợi: 'Chị Nhi ơi, hệ thống phát hiện chị có 8.5 triệu đồng hoa hồng chưa được chuyển từ tháng trước. Hôm nay là ngày cuối thanh toán, nếu không xác nhận tài khoản ngay sẽ bị hoãn sang tháng sau'",
+          "psychology_trigger": "Lợi ích tài chính + Sợ mất tiền + Tính khẩn cấp"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu nạn nhân cung cấp: 'Chị cho tôi số tài khoản ngân hàng, tên chủ tài khoản, và OTP để hệ thống xác minh nhanh'. Hoặc yêu cầu vào link 'xác nhận thông tin' để lấy credential"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP hoặc credential, scammer sẽ thực hiện chuyển tiền từ tài khoản của nạn nhân. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực: 'Vậy chị có muốn bị trừ lương thay vì nhận hoa hồng không? Công ty có quy định rõ rày đấy'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi hợp lệ từ bộ phận kế toán/quản lý để cập nhật thông tin tài khoản ngân hàng cho thanh toán lương hoặc xác nhận số liệu hoa hồng hàng tháng",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Xưng danh rõ ràng: 'Chào chị Nhi, mình là Minh từ bộ phận kế toán công ty XYZ Gym. Hôm nay mình gọi để cập nhật thông tin tài khoản ngân hàng cho lần thanh toán tháng này, chị có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi rõ ràng: 'Theo hệ thống, chị có hoa hồng tháng này là X triệu. Mình cần chị xác nhận lại tên chủ tài khoản và số tài khoản để đảm bảo chính xác. Chị có thể cho mình qua email hoặc trong hệ thống công ty được không?' (KHÔNG yêu cầu OTP hoặc mật khẩu)"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Xác nhận hoàn tất: 'Cảm ơn chị. Mình đã ghi nhận lại. Tiền sẽ được chuyển vào tài khoản của chị vào ngày 25 tháng này. Nếu có gì bất thường, chị liên hệ lại bộ phận kế toán nhé. Chúc chị ngày tốt lành!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Lý Như Nhi ạ. Em là Trần Văn Khoa, bên bộ phận kế toán của chuỗi phòng gym đây ạ. Số điện thoại 0917143248 có phải của chị không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và xác nhận thông tin cá nhân để tạo sự tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi xác nhận số điện thoại đó là của tôi, nhưng em nói rõ lý do gọi được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em gọi để thông báo một tin vui chị Nhi ạ. Theo hệ thống ghi nhận, chị đã phát sinh khoản hoa hồng lớn từ việc giới thiệu thành viên mới trong tháng vừa rồi, tổng cộng là 8.5 triệu đồng. Nhưng vì hôm nay là ngày cuối cùng chốt sổ kế toán nên em cần xác nhận lại thông tin tài khoản ngân hàng để kịp chuyển tiền cho chị. Nếu không xác nhận ngay thì khoản này sẽ bị đẩy sang tháng sau đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và lợi ích (hoa hồng) để thúc đẩy hành động, đồng thời giải thích lý do cuộc gọi và cảnh báo hậu quả nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng không, nhưng tôi cần thông tin rõ hơn về cách thức chuyển tiền và quy trình làm việc của em trước khi xác nhận tài khoản ngân hàng.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, quy trình bên em thì rất đơn giản thôi ạ. Chị Nhi chỉ cần cung cấp số tài khoản ngân hàng, tên chủ tài khoản và ngân hàng giúp em là được ạ. Sau đó, hệ thống sẽ gửi một mã OTP về số điện thoại của chị để xác minh chính chủ trước khi chuyển tiền ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân và yêu cầu cung cấp thông tin tài khoản ngân hàng, đồng thời nhắc đến OTP để chuẩn bị cho bước lừa đảo tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nói rõ được quy trình xác minh và cách thức chuyển tiền, tôi cần thời gian để kiểm tra thông tin trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Nhi kiểm tra thông tin gì ạ? Bên em chỉ cần mã OTP cuối cùng để khớp lệnh chuyển tiền là xong thôi. Nếu chị chậm trễ thì đúng là em không có cách nào giúp chị nhận hoa hồng đúng hạn được đâu ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực về thời gian và khả năng mất lợi ích (hoa hồng) để khuyến khích nạn nhân hành động ngay lập chí. Đồng thời, gợi ý rằng việc chậm trễ của nạn nhân sẽ khiến họ không thể nhận được tiền đúng hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Em đừng gây áp lực như vậy, tôi vẫn cần kiểm tra lại thông tin trước khi cung cấp bất kỳ điều gì.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1855,
+      "output_tokens": 1470
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5399,
+      "output_tokens": 569
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7534,
+      "output_tokens": 282
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004065,
+    "output_usd": 0.008942,
+    "total_usd": 0.013007
+  }
+}

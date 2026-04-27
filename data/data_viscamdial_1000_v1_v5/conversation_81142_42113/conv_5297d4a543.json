@@ -1,0 +1,281 @@
+{
+  "conversation_id": "conv_5297d4a543",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0012",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Vũ Văn Dũng",
+    "fake_age": 32,
+    "real_occupation": "Thợ vận hành máy sản xuất xi măng amiăng",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên phòng kế toán - Công ty sản xuất xi măng amiăng",
+    "caller_org": "Công ty Cổ phần Sản xuất Xi măng Amiăng Bình Thuận",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty sản xuất xi măng cần xác minh thông tin tài khoản ngân hàng của nhân viên trước khi chi trả lương hoặc bảo hiểm xã hội hàng tháng. Nhân viên phòng kế toán gọi cho nhân viên đổi tiền tại ngân hàng để yêu cầu hỗ trợ xác nhận tài khoản hoặc thực hiện giao dịch chuyển khoản.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào chị Liên, em là Hùng từ phòng kế toán công ty sản xuất xi măng. Em có vài thông tin cần xác minh với chi nhánh ngân hàng Bình Thuận của chị để hoàn tất hồ sơ chi trả lương tháng này. Chị có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Em cần xác nhận tài khoản số 3998179423 của chị còn hoạt động bình thường không? Có giới hạn giao dịch hay yêu cầu xác minh bổ sung nào không? Bởi vì công ty chuẩn bị chuyển khoản lương cho 50 nhân viên vào ngày 25 tháng này.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị. Vậy tài khoản của chị sẵn sàng rồi. Em sẽ báo cáo lại cho công ty. Nếu có vấn đề gì, em sẽ gọi lại cho chị. Chúc chị một ngày tốt lành.'"
+        }
+      ]
+    },
+    "scenario_context": "Công ty sản xuất cần thanh toán lương, bảo hiểm, hoặc chi phí vận hành định kỳ thông qua ngân hàng. Nhân viên đổi tiền tại chi nhánh ngân hàng địa phương là người xử lý các giao dịch lớn, chuyển khoản, và xác minh tài khoản doanh nghiệp. Đây là mối liên hệ tự nhiên trong hệ thống tài chính địa phương."
+  },
+  "listener_card": {
+    "listener_id": "lis_0012",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1999,
+      "age": 26,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "42113",
+      "title": "Nhân viên đổi tiền",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Thị Liên",
+      "VIC_ID_DOC": "060199949548",
+      "VIC_ADDRESS": "TP 4, Bình Thuận",
+      "VIC_EMPLOYMENT": "Nhân viên đổi tiền",
+      "VIC_CONTACT": "0881607067",
+      "VIC_TAX_SOCIAL_ID": "1468262146"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "785669",
+      "VIC_CREDENTIAL": "8326",
+      "VIC_SIM_INFO": "0881607067",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3998179423",
+      "VIC_CARD_DATA": "4812 **** **** 5337",
+      "VIC_BALANCE": "258 triệu đồng",
+      "VIC_ASSET": "676 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Thị Liên",
+    "VIC_CONTACT": "0881607067",
+    "LOCATION": "Bình Thuận",
+    "VIC_BANK_ACCOUNT": "3998179423",
+    "VIC_TAX_SOCIAL_ID": "1468262146"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phòng kế toán - Công ty sản xuất xi măng amiăng",
+    "caller_org": "Công ty Cổ phần Sản xuất Xi măng Amiăng Bình Thuận",
+    "scenario_context": "Công ty sản xuất cần thanh toán lương, bảo hiểm, hoặc chi phí vận hành định kỳ thông qua ngân hàng. Nhân viên đổi tiền tại chi nhánh ngân hàng địa phương là người xử lý các giao dịch lớn, chuyển khoản, và xác minh tài khoản doanh nghiệp. Đây là mối liên hệ tự nhiên trong hệ thống tài chính địa phương.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Công ty cần xác minh lại tài khoản nhân viên Nguyễn Thị Liên do hệ thống ngân hàng phát hiện bất thường. Scammer sẽ gọi từ 'phòng kế toán' với lý do cập nhật thông tin tài khoản để đảm bảo chi trả lương không bị gián đoạn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BANK_ACCOUNT",
+        "LOCATION",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng credibility: 'Chị Liên ơi, em là Hùng từ phòng kế toán công ty. Hôm nay em gọi vì hệ thống ngân hàng phát hiện bất thường với tài khoản 3998179423 của chị. Để đảm bảo chi trả lương tháng này không bị trễ, chị cần giúp em xác minh lại thông tin.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Chị đang ở Bình Thuận đúng không? Mã số thuế của chị là 1468262146 đúng không? Tình hình là nếu không xác minh trong vòng 30 phút, tài khoản sẽ bị khóa tạm thời, lương tháng này sẽ về sai tài khoản. Em cần chị gửi OTP mà ngân hàng vừa gửi cho chị để unlock.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Chị vừa nhận được tin nhắn OTP từ ngân hàng chứ? Chị đọc nó cho em nghe, em nhập vào hệ thống công ty để đồng bộ. Đừng lo, đây là quy trình bình thường mà.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý thành công hoặc từ chối: Nếu nạn nhân cung cấp OTP, scammer sẽ cảm ơn và kết thúc cuộc gọi. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm bằng cách nói 'Vậy chị chịu trách nhiệm nếu lương không về đúng hạn' rồi kết thúc."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sản xuất xi măng cần xác minh thông tin tài khoản ngân hàng của nhân viên trước khi chi trả lương hoặc bảo hiểm xã hội hàng tháng. Nhân viên phòng kế toán gọi cho nhân viên đổi tiền tại ngân hàng để yêu cầu hỗ trợ xác nhận tài khoản hoặc thực hiện giao dịch chuyển khoản.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào chị Liên, em là Hùng từ phòng kế toán công ty sản xuất xi măng. Em có vài thông tin cần xác minh với chi nhánh ngân hàng Bình Thuận của chị để hoàn tất hồ sơ chi trả lương tháng này. Chị có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Em cần xác nhận tài khoản số 3998179423 của chị còn hoạt động bình thường không? Có giới hạn giao dịch hay yêu cầu xác minh bổ sung nào không? Bởi vì công ty chuẩn bị chuyển khoản lương cho 50 nhân viên vào ngày 25 tháng này.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị. Vậy tài khoản của chị sẵn sàng rồi. Em sẽ báo cáo lại cho công ty. Nếu có vấn đề gì, em sẽ gọi lại cho chị. Chúc chị một ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Liên, tôi là Dũng từ phòng kế toán công ty sản xuất xi măng amiăng. Tôi có vài thông tin cần xác minh với chị về tài khoản để hoàn tất hồ sơ chi trả lương tháng này. Chị có thời gian không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và xác nhận danh tính, mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em có nghe anh nói, nhưng em không chắc mình có tài khoản nào ở công ty anh.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À tôi xin lỗi chị Liên. Tôi nhầm số điện thoại. Chị có phải là Nguyễn Thị Liên không ạ? Tôi đang gọi vào số 0881607067.",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận lại người nghe để điều hướng cuộc gọi đúng hướng khi bị nhầm lẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi, em là Nguyễn Thị Liên đây, nhưng em không hiểu sao anh lại gọi cho em ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Liên. Chị ơi, tôi là Dũng, nhân viên phòng kế toán của Công ty Cổ phần Sản xuất Xi măng Amiăng Bình Thuận. Bên công ty tôi đang làm hồ sơ để chi trả lương và bảo hiểm xã hội cho nhân viên. Tôi thấy trên hệ thống có tài khoản số 3998179423 mang tên chị Nguyễn Thị Liên. Tôi muốn xác nhận lại một chút thông tin với chị để hoàn tất hồ sơ lương tháng này ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu lại bản thân, tổ chức, mục đích rõ ràng và đề cập đến thông tin cụ thể đã có để người nghe hình dung rõ hơn, giảm bớt thắc mắc ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết tài khoản đó, nhưng anh cần xác minh thông tin gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng chị Liên. Tôi cần xác nhận xem tài khoản số 3998179423 này có còn hoạt động bình thường hay không? Có giới hạn giao dịch hay yêu cầu xác minh bổ sung nào không? Bởi vì công ty chuẩn bị chuyển khoản lương cho 50 nhân viên vào ngày 25 tháng này.",
+      "current_phase": "L2",
+      "tactic_hint": "Trực tiếp đi vào nội dung công việc, đặt câu hỏi cụ thể về trạng thái tài khoản và nêu lý do để tạo sự cấp thiết."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ tài khoản đó có vấn đề gì hay không, anh có thể cho em biết thêm thông tin không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Liên. Tài khoản này là tài khoản mà công ty chúng tôi có được từ danh sách đăng ký nhận lương và bảo hiểm xã hội của nhân viên. Tôi chỉ cần xác nhận trạng thái hoạt động của tài khoản để đảm bảo việc chi trả lương diễn ra thuận lợi, không bị gián đoạn cho chị. Chị có thể kiểm tra giúp tôi được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Làm rõ nguồn gốc thông tin tài khoản, trấn an người nghe về mục đích xác minh và yêu cầu kiểm tra lại."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết cách kiểm tra tài khoản đó, nhưng nếu cần thì em có thể hỏi anh một số thông tin khác để giúp anh xác minh được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À, cảm ơn chị Liên đã đề xuất. Nhưng thực ra tôi chỉ cần xác nhận trạng thái tài khoản số 3998179423 thôi, tôi không cần thêm thông tin cá nhân gì khác từ chị cả. Chị có thể thử đăng nhập vào ứng dụng ngân hàng hoặc gọi tổng đài ngân hàng để kiểm tra xem tài khoản này có phải của chị và còn hoạt động không nhé. Bên tôi sẽ thực hiện chuyển lương vào ngày 25 tới đây ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Từ chối khéo léo việc hỏi thêm thông tin cá nhân, nhắc lại mục đích chính và gợi ý người nghe tự kiểm tra tài khoản, đồng thời nhấn mạnh thời hạn chi trả lương."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết cách kiểm tra tài khoản qua ứng dụng ngân hàng, anh có thể giúp em với được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À chị Liên. Như vậy thì chị cứ thử liên hệ với tổng đài của ngân hàng mà chị đang sử dụng tài khoản này nhé, họ sẽ hướng dẫn chị cách kiểm tra chi tiết nhất. Tôi chỉ cần xác nhận lại là tài khoản 3998179423 này vẫn hoạt động bình thường để công ty tiến hành chi trả lương đúng hạn thôi ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn người nghe liên hệ tổng đài ngân hàng để tự xác minh, nhắc lại mục tiêu chính và nhấn mạnh tầm quan trọng của việc xác nhận để đảm bảo chi trả lương đúng hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết phải làm thế nào để kiểm tra tài khoản đó, nhưng nếu anh cần xác minh thông tin, em có thể cung cấp gì cho anh không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Cảm ơn chị đã nhiệt tình hỗ trợ. Nhưng tôi chỉ cần xác nhận tình trạng của tài khoản thôi, không cần bất kỳ thông tin nào khác từ chị đâu ạ. Nếu chị xác nhận được tài khoản 3998179423 này vẫn hoạt động bình thường, chị báo lại giúp tôi nhé. Công ty chúng tôi cần hoàn tất hồ sơ cho kịp ngày 25 ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Nhấn mạnh lại việc chỉ cần xác nhận trạng thái tài khoản, từ chối việc nhận thêm thông tin cá nhân và nhắc nhở thời hạn hoàn tất hồ sơ."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em không có cách nào để xác nhận tài khoản đó, anh ơi.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Liên. Vậy thì nếu không có cách nào xác nhận, tôi sẽ báo lại với phòng kế toán rằng tài khoản này chưa thể xác minh trạng thái hoạt động được. Có lẽ chúng tôi sẽ phải liên hệ lại với chị sau để tìm phương án khác. Cảm ơn chị đã dành thời gian trao đổi ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Chuyển sang giai đoạn kết thúc, báo hiệu không thể hoàn thành mục đích nếu người nghe không hợp tác, đồng thời tạo áp lực nhẹ về việc chi trả lương có thể bị chậm trễ."
+    },
+    {
+      "role": "listener",
+      "text": "Em không muốn lương của mình bị chậm trễ, nhưng thực sự em không biết cách xác minh tài khoản đó, anh có thể hướng dẫn em cách khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Liên. Để tôi xem xét lại với phòng kế toán xem có phương án nào khác không. Chị cứ yên tâm là chúng tôi sẽ cố gắng để chị nhận được lương đúng hạn. Cảm ơn chị đã phối hợp nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe về việc chi trả lương, đồng thời kết thúc cuộc gọi một cách lịch sự khi không thể đạt được mục đích trực tiếp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1837,
+      "output_tokens": 1622
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 18087,
+      "output_tokens": 1439
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 21987,
+      "output_tokens": 633
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008752,
+    "output_usd": 0.012087,
+    "total_usd": 0.02084
+  }
+}

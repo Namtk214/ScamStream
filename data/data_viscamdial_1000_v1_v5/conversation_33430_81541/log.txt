@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_f253dd4e04]
+  Caller thật: Thư ký hành chính và điều hành (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Trưởng phòng Nhân sự & Hành chính @ Công ty Cổ phần Hóa chất Công nghiệp Việt Nam (VNCHEM)
+  Listener: Thợ vận hành máy tẩy trắng (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Công ty sản xuất hóa chất tẩy trắng cần liên hệ với các thợ vận hành máy tẩy trắng tại các nhà máy/xưởng để thực hiện kiểm tra an toàn lao động định kỳ, cấp chứng chỉ hoặc thông báo về chương trình đào tạo bắt buộc.
+  Pretext: Gọi để thông báo rằng nạn nhân đã được chọn tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao' của công ty, yêu cầu nộp phí đăng ký để nhận chứng chỉ quốc tế, từ đó giải thích cần kiểm tra tài khoản ngân hàng để trừ phí. Scammer sẽ dùng tên đầy đủ 'Lý Bảo Lan' để xác nhận danh tính, tạo ảo tưởng công ty đã có hồ sơ chi tiết.
+  Listener traits: ['thiếu hiểu biết công nghệ', 'nhân ái muốn giúp']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Lý Bảo Lan. Tôi là Vũ Minh Quang Quân, Trưởng phòng Nhân sự & Hành chính của Công ty Cổ phần Hóa chất Công nghiệp Việt Nam, VNCHEM. Tôi gọi từ số 0843506378 của chị để thông báo một tin rất quan trọng liên quan đến quyền lợi của chị tại công ty.
+      → phase: S1 | tactic: Xưng danh, dùng tên đầy đủ và số điện thoại của nạn nhân để tạo độ tin cậy và chứng minh đã có thông tin cá nhân.
+T02 [LISTENER] Em nghe anh nói rồi, anh có thể cho em biết tin gì quan trọng không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, thưa chị Lý Bảo Lan. Chị vừa được ban lãnh đạo công ty lựa chọn tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao' của VNCHEM. Đây là một gói bảo hiểm cao cấp, dành riêng cho những nhân viên có thành tích xuất sắc như chị. Tuy nhiên, thời gian để chị đăng ký chỉ còn trong vòng 48 giờ tới, nếu không, cơ hội này sẽ bị bỏ lỡ và có thể ảnh hưởng đến đánh giá tuân thủ quy định an toàn lao động của chị tại công ty.
+      → phase: S2 | tactic: Giới thiệu về chương trình, nhấn mạnh đây là một đặc quyền dành cho người xuất sắc để kích thích lòng tự trọng, đồng thời tạo cảm giác khan hiếm và khẩn cấp về thời gian để thúc đẩy hành động.
+T04 [LISTENER] Em rất vui vì được lựa chọn, nhưng em không biết làm thế nào để đăng ký, anh có thể hướng dẫn em được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, chị Lý Bảo Lan yên tâm. Để hoàn tất việc đăng ký tham gia chương trình 'Bảo hiểm An toàn Lao động Nâng cao', chị cần nộp một khoản phí hành chính là 2.8 triệu đồng. Khoản phí này sẽ giúp chị nhận được chứng chỉ quốc tế, nâng cao profile nghề nghiệp. Hiện tại, để thuận tiện, tôi sẽ hướng dẫn chị thanh toán qua tài khoản công ty, hoặc nếu chị muốn, tôi có thể hỗ trợ để hệ thống của chúng tôi tự động trừ phí trực tiếp từ tài khoản ngân hàng của chị. Chị muốn chọn phương án nào ạ?
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể là nộp phí, đưa ra hai lựa chọn (chuyển khoản hoặc cho phép tự động trừ phí) để tạo cảm giác linh hoạt và thuận tiện cho nạn nhân, đồng thời bước đầu hướng đến mục tiêu money_transfer.
+T06 [LISTENER] Em không biết chuyển khoản như thế nào, còn tự động trừ thì không an toàn lắm, anh có thể giúp em không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, tôi hiểu sự lo lắng của chị. Vậy để tiện nhất cho chị, tôi sẽ gửi số tài khoản của công ty cho chị qua tin nhắn sau cuộc gọi này, chị có thể chuyển khoản 2.8 triệu đồng vào đó. Sau khi nhận được phí, chúng tôi sẽ hoàn tất thủ tục đăng ký và gửi chứng chỉ quốc tế về địa chỉ của chị trong vòng 3 đến 5 ngày làm việc. Chị vui lòng xác nhận lại là chị sẽ chuyển khoản và không cần chúng tôi hỗ trợ trừ phí tự động nhé?
+      → phase: S3 | tactic: Xoa dịu mối lo ngại của nạn nhân về việc chuyển khoản hoặc trừ tiền tự động, sau đó kiên quyết đưa ra một lựa chọn thanh toán an toàn hơn (chuyển khoản thủ công) để đạt được mục tiêu money_transfer.
+T08 [LISTENER] Em sẽ chuyển khoản 2.8 triệu đồng vào số tài khoản mà anh gửi cho em, nhưng anh nhớ gửi cho em nhanh nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Tuyệt vời, chị Lý Bảo Lan! Tôi sẽ gửi ngay số tài khoản công ty vào số điện thoại 0843506378 của chị. Chị nhớ kiểm tra tin nhắn và hoàn tất chuyển khoản sớm để không bị lỡ thời hạn 48 giờ nhé. Cảm ơn chị đã hợp tác!
+      → phase: S4 | tactic: Xác nhận thành công việc nạn nhân đồng ý chuyển tiền, cung cấp thông tin cần thiết và nhắc lại yếu tố khẩn cấp để thúc đẩy hành động, đồng thời kết thúc cuộc gọi một cách tự nhiên sau khi đã đạt được mục tiêu.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=0.00
+TOKEN: in=17889 | out=2888
+COST : $0.015136
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_33430_81541\conv_f253dd4e04.json  [CALLER_END]

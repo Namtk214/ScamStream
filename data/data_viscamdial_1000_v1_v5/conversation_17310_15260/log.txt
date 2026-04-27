@@ -1,0 +1,52 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_3c4adce404]
+  Caller thật: Tài chính, kế toán, quản trị hành chính (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Trưởng phòng Tài chính - Kế toán, Bộ/Ngành (hoặc giả danh Cục Quản lý Tài chính Công đoàn Trung ương) @ Cục Quản lý Tài chính & Kiểm toán, Liên đoàn Lao động Việt Nam / Bộ Lao động - Thương binh & Xã hội
+  Listener: Chủ tịch, Phó Chủ tịch tổ chức công đoàn cơ quan bộ, ngành ở trung ương (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Chủ tịch công đoàn cơ quan bộ, ngành có trách nhiệm giám sát tài chính, báo cáo ngân sách và thực hiện các quy định tài chính từ cơ quan cấp trên. Người phụ trách tài chính - kế toán từ Liên đoàn hoặc Bộ sẽ thường xuyên liên hệ để kiểm tra, rà soát, hoặc yêu cầu cung cấp tài liệu tài chính từ các tổ chức công đoàn cấp dưới.
+  Pretext: Kiểm tra tài chính định kỳ / Rà soát tài khoản công đoàn liên quan đến chương trình hỗ trợ thành viên / Xác nhận thông tin ngân hàng để cập nhật hệ thống quản lý tài chính tập trung
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào anh Lê Công Hữu Vinh, tôi là Võ Như Ngọc Yến, Trưởng phòng Tài chính từ Cục Quản lý Tài chính Liên đoàn Lao động Việt Nam. Hôm nay chúng tôi đang thực hiện rà soát tài khoản của các tổ chức công đoàn cấp cơ sở, bao gồm cả tổ chức của anh. Anh có thể xác nhận một vài thông tin được không ạ?
+      → phase: S1 | tactic: Tiếp cận, xưng danh và sử dụng thông tin đã biết (VIC_FULLNAME, VIC_EMPLOYMENT) để tạo lòng tin, xác nhận đúng người.
+T02 [LISTENER] Chị có thể cho em biết số điện thoại chị gọi từ số nào không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T03 [CALLER] Vâng, tôi gọi từ số 0243.8256.xxx của Cục Quản lý Tài chính. Anh Vinh cứ an tâm, thông tin này chúng tôi có lưu lại trên hệ thống nội bộ của Cục.
+      → phase: S1 | tactic: Xoa dịu nghi ngờ bằng cách cung cấp thông tin liên hệ giả định, khẳng định tính chính thống của cuộc gọi và uy tín của tổ chức.
+T04 [LISTENER] Em vẫn cảm thấy lo lắng và chưa chắc chắn lắm về cuộc gọi này, chị có thể cho em biết thêm thông tin để xác nhận không ạ?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T05 [CALLER] Anh Vinh cứ bình tĩnh. Chúng tôi chỉ đang làm nhiệm vụ rà soát định kỳ thôi. Anh là Chủ tịch công đoàn cơ sở, chắc anh cũng nắm rõ quy trình này mà. Theo thông báo mới nhất từ Bộ Lao động, chúng tôi phải hoàn thành việc kiểm toán tài chính này trong tuần này. Nếu không cập nhật kịp thời, tổ chức của anh có thể sẽ bị tạm dừng các khoản hỗ trợ dành cho thành viên đó. Tôi cần anh giúp chúng tôi hoàn thành đúng tiến độ.
+      → phase: S2 | tactic: Chuyển sang giai đoạn S2, tạo tâm lý khẩn cấp và trách nhiệm, nhắc nhở về hậu quả nếu không hợp tác để thúc đẩy nạn nhân hành động.
+T06 [LISTENER] Em hiểu nhưng em vẫn cần thêm thông tin cụ thể để chắc chắn hơn, chị có thể cung cấp cho em tên và chức vụ của một người mà em có thể liên hệ lại không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T07 [CALLER] Anh Lê Công Hữu Vinh, tôi đã nói rõ là tôi là Võ Như Ngọc Yến, Trưởng phòng Tài chính từ Cục Quản lý Tài chính Liên đoàn Lao động Việt Nam. Đây là đợt rà soát tài chính định kỳ và rất quan trọng, đặc biệt là với vai trò Chủ tịch công đoàn như anh. Việc trì hoãn này có thể ảnh hưởng trực tiếp đến quyền lợi của các thành viên công đoàn. Anh có thể nói rõ anh muốn xác nhận thông tin gì nữa không? Tôi đang cố gắng hỗ trợ anh nhanh nhất có thể.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách lặp lại thông tin cá nhân và tổ chức, đồng thời nhắc lại lợi ích của việc hợp tác và tạo ra một cảm giác khẩn cấp để gây áp lực cho nạn nhân.
+T08 [LISTENER] Em muốn xác nhận thông tin để đảm bảo an toàn, chị có thể cung cấp địa chỉ văn phòng Cục Quản lý Tài chính mà chị đang làm việc không ạ?
+      → action: CONTINUE | suspicion: 1.80 | disclosed: []
+
+T09 [CALLER] Anh Vinh, tôi hiểu sự cẩn trọng của anh. Tuy nhiên, việc rà soát này được tiến hành trực tuyến qua hệ thống để đảm bảo nhanh chóng và hiệu quả, tránh làm gián đoạn công việc của các cơ sở. Tôi đã cung cấp tên và chức vụ rõ ràng. Nếu anh vẫn còn băn khoăn, anh có thể gọi trực tiếp lên tổng đài của Liên đoàn Lao động Việt Nam theo số 1900 xxxx để xác minh thông tin này. Nhưng anh cần hiểu rằng mọi sự chậm trễ sẽ tự anh chịu trách nhiệm về quyền lợi đoàn viên đấy.
+      → phase: S2 | tactic: Giả vờ cung cấp thông tin xác minh (số tổng đài giả hoặc đang bị kiểm soát), đồng thời tái khẳng định áp lực trách nhiệm để tiếp tục thúc đẩy nạn nhân hợp tác.
+T10 [LISTENER] Em biết rồi, nhưng em vẫn thấy không an toàn khi cung cấp thông tin, chị có thể gửi cho em một email từ địa chỉ chính thức của Cục không ạ?
+      → action: CONTINUE | suspicion: 2.80 | disclosed: []
+
+T11 [CALLER] Anh Lê Công Hữu Vinh, tôi đã đề nghị anh liên hệ trực tiếp tổng đài rồi. Hiện tại, thời gian của tôi rất hạn chế và chúng tôi thực sự cần hoàn thành việc rà soát này. Nếu anh không thể hợp tác, tôi e rằng chúng tôi sẽ phải ghi nhận trường hợp của tổ chức anh là không phối hợp và tạm dừng các khoản hỗ trợ theo đúng quy định. Anh có muốn điều đó xảy ra không?
+      → phase: S2 | tactic: Tăng cường áp lực trách nhiệm và hậu quả tiêu cực nếu không hợp tác, đồng thời tạo cảm giác khan hiếm thời gian và sự kiên nhẫn. Đẩy nạn nhân vào thế phải đưa ra quyết định.
+T13 [LISTENER] Em xin lỗi nhưng hiện tại em vẫn cảm thấy không an toàn để cung cấp thông tin, chị có thể hiểu cho em không ạ?
+      → action: REFUSAL | suspicion: 5.60 | disclosed: []
+
+T14 [CALLER] Anh Lê Công Hữu Vinh, nếu anh đã không cảm thấy an toàn và không muốn hợp tác, thì tôi cũng không thể tiếp tục hỗ trợ được nữa. Anh vui lòng liên hệ lại Cục Quản lý Tài chính khi nào anh cảm thấy sẵn sàng để chúng tôi có thể xử lý việc này sau.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách khéo léo khi nạn nhân từ chối kiên quyết và suspicion đã quá cao. Diễn đạt sự 'thông cảm' nhưng thực chất là đặt trách nhiệm về phía nạn nhân.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  14 turns | suspicion=5.60
+TOKEN: in=28430 | out=3897
+COST : $0.020681
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_17310_15260\conv_3c4adce404.json  [CALLER_END]

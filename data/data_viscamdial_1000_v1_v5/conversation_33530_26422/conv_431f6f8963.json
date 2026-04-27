@@ -1,0 +1,270 @@
+{
+  "conversation_id": "conv_431f6f8963",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0025",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Cao Quang Bình",
+    "fake_age": 25,
+    "real_occupation": "Nhân viên trợ cấp xã hội của Chính phủ",
+    "real_group": "Nhóm 3: Pháp lý, tư pháp & điều tiết nhà nước",
+    "role_job": "Nhân viên Phòng Hỗ trợ Truyền thông & Công khai của Cơ quan Trợ cấp Xã hội",
+    "caller_org": "Cơ quan Trợ cấp Xã hội Đồng Nai",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cơ quan Trợ cấp Xã hội Đồng Nai liên hệ với biên tập viên để hợp tác xuất bản bài viết giáo dục về chính sách trợ cấp mới hoặc thông tin hỗ trợ cộng đồng trên báo/tạp chí địa phương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & Xác nhận: 'Chào chị Vũ Diễm Phương, tôi là Hoàng từ Phòng Truyền thông, Cơ quan Trợ cấp Xã hội Đồng Nai. Chúng tôi có một bài viết về chính sách hỗ trợ mới cho lao động tự do — chị có thời gian trao đổi không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về bài viết, deadline, yêu cầu biên tập, số từ, hình ảnh cần kèm theo. Đưa tài liệu/outline qua email hoặc gặp trực tiếp tại văn phòng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy chị sẽ gửi bản draft cho tôi vào thứ 4 tuần sau? Tôi sẽ xem xét và phản hồi trong 2 ngày. Cảm ơn chị — hẹn gặp lại!' — Chào tạm biệt, kết thúc cuộc gọi bình thường."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên trợ cấp xã hội cần liên hệ với biên tập viên để xin hỗ trợ xuất bản thông tin chính sách hoặc bài viết cộng đồng trên các phương tiện truyền thông địa phương. Đây là giao điểm tự nhiên giữa lĩnh vực công quyền và truyền thông."
+  },
+  "listener_card": {
+    "listener_id": "lis_0025",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1995,
+      "age": 30,
+      "province": "Đồng Nai",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "26422",
+      "title": "Biên tập viên",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Diễm Phương",
+      "VIC_ID_DOC": "075195034342",
+      "VIC_ADDRESS": "Huyện 2, Đồng Nai",
+      "VIC_EMPLOYMENT": "Biên tập viên",
+      "VIC_CONTACT": "0703262908",
+      "VIC_TAX_SOCIAL_ID": "4343899110"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0670",
+      "VIC_CREDENTIAL": "594277",
+      "VIC_SIM_INFO": "0703262908",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "36132199161",
+      "VIC_CARD_DATA": "4814 **** **** 1572",
+      "VIC_BALANCE": "90 triệu đồng",
+      "VIC_ASSET": "334 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Diễm Phương",
+    "VIC_CONTACT": "0703262908",
+    "VIC_ADDRESS": "Huyện 2, Đồng Nai",
+    "VIC_BANK_ACCOUNT": "36132199161"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên Phòng Hỗ trợ Truyền thông & Công khai của Cơ quan Trợ cấp Xã hội",
+    "caller_org": "Cơ quan Trợ cấp Xã hội Đồng Nai",
+    "scenario_context": "Nhân viên trợ cấp xã hội cần liên hệ với biên tập viên để xin hỗ trợ xuất bản thông tin chính sách hoặc bài viết cộng đồng trên các phương tiện truyền thông địa phương. Đây là giao điểm tự nhiên giữa lĩnh vực công quyền và truyền thông.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để 'xác minh thông tin hưởng trợ cấp' — tuyên bố có bất thường trong hồ sơ của nạn nhân hoặc cần cập nhật tài khoản nhận tiền, từ đó yêu cầu chuyển tiền để 'xử lý lại' hoặc 'kiểm tra tài khoản'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xưng danh: 'Chị Phương à, tôi là Hoàng từ Phòng Hỗ trợ Truyền thông, Cơ quan Trợ cấp Xã hội Đồng Nai. Chúng tôi đang liên hệ với các biên tập viên địa phương để viết bài quảng bá chính sách.' — Dùng VIC_FULLNAME + VIC_ADDRESS để tạo credibility (biết tên, biết nơi ở)."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tình huống khẩn cấp & sợ hãi: 'Nhưng trước khi đó, chúng tôi phát hiện tài khoản ngân hàng của chị (VIC_BANK_ACCOUNT) có dấu hiệu bất thường — có thể bị tin tặc xâm nhập. Để bảo vệ, chúng tôi cần chị chuyển số tiền tạm thời sang tài khoản xác minh của chúng tôi trong 30 phút, sau đó hoàn lại ngay.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Chị vào app ngân hàng ngay, chuyển [số tiền X] sang số tài khoản [số tài khoản giả mạo của scammer]. Chị gửi cho tôi ảnh chứng minh chuyển tiền để tôi xác nhận trong hệ thống.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân chuyển tiền, scammer xóa vết, đóng máy. Nếu nạn nhân từ chối, scammer dọa sẽ khóa tài khoản hoặc yêu cầu lại với lý do khác (VD: 'phí xác minh')."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan Trợ cấp Xã hội Đồng Nai liên hệ với biên tập viên để hợp tác xuất bản bài viết giáo dục về chính sách trợ cấp mới hoặc thông tin hỗ trợ cộng đồng trên báo/tạp chí địa phương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & Xác nhận: 'Chào chị Vũ Diễm Phương, tôi là Hoàng từ Phòng Truyền thông, Cơ quan Trợ cấp Xã hội Đồng Nai. Chúng tôi có một bài viết về chính sách hỗ trợ mới cho lao động tự do — chị có thời gian trao đổi không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về bài viết, deadline, yêu cầu biên tập, số từ, hình ảnh cần kèm theo. Đưa tài liệu/outline qua email hoặc gặp trực tiếp tại văn phòng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy chị sẽ gửi bản draft cho tôi vào thứ 4 tuần sau? Tôi sẽ xem xét và phản hồi trong 2 ngày. Cảm ơn chị — hẹn gặp lại!' — Chào tạm biệt, kết thúc cuộc gọi bình thường."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Vũ Diễm Phương, tôi là Cao Quang Bình từ Phòng Hỗ trợ Truyền thông và Công khai, Cơ quan Trợ cấp Xã hội Đồng Nai. Chúng tôi có một bài viết về chính sách hỗ trợ mới cho lao động tự do, không biết chị có thời gian để tôi trao đổi chi tiết hơn về nội dung này không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và xác nhận danh tính người nghe, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em chào anh, em đang nghe anh nói rồi, nhưng em muốn biết thêm về chính sách hỗ trợ này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Phương ạ, chính sách này của chúng tôi nhằm mục đích hỗ trợ tài chính cho những lao động tự do bị ảnh hưởng bởi những biến động kinh tế gần đây, giúp họ có thêm phần nào ổn định cuộc sống. Chúng tôi muốn hợp tác với chị để đăng tải một bài viết chi tiết trên báo hoặc tạp chí địa phương, nhằm lan tỏa những thông tin này đến đúng đối tượng cần nhận hỗ trợ. Chị có muốn tôi gửi chị bản tóm tắt nội dung chính sách qua email để chị tiện tham khảo trước không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu sơ qua về nội dung chính sách và đề xuất gửi tài liệu chi tiết."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã chia sẻ, nhưng có thể cho em biết rõ hơn về cách thức hợp tác này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Phương. Về cách thức hợp tác, chúng tôi mong muốn chị sẽ biên tập và đăng tải một bài viết chi tiết, khoảng 800-1000 từ, lên ấn phẩm của mình. Nội dung bài viết sẽ tập trung làm rõ các điều kiện, thủ tục để người lao động tự do có thể tiếp cận chính sách hỗ trợ này. Chúng tôi có thể cung cấp cho chị bản thảo đề cương và các tài liệu tham khảo cần thiết. Chị có mong muốn về thời hạn hoàn thành bài viết không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Thảo luận chi tiết về yêu cầu công việc. Bao gồm số từ, nội dung và đặt câu hỏi về thời hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghĩ khoảng 1 tuần thì em có thể hoàn thành bài viết, nhưng trước tiên em cần xem qua bản thảo đề cương mà anh nói đến ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, chị Phương. Vậy là tôi sẽ gửi bản thảo đề cương và các tài liệu tham khảo chi tiết về chính sách này qua email cho chị ngay sau cuộc gọi. Chị có thể cho tôi xin địa chỉ email của mình không ạ? Sau khi nhận được, nếu có gì cần trao đổi thêm, chị cứ liên hệ lại với tôi nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Thống nhất bước tiếp theo là gửi tài liệu, xin thông tin liên lạc và mở kênh trao đổi tiếp."
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi, nhưng trước khi cung cấp email, em muốn xác nhận lại là em sẽ nhận được thông tin gì từ anh ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Phương. Tôi sẽ gửi bản dự thảo đề cương bài viết về chính sách hỗ trợ cho lao động tự do, cùng với các văn bản pháp lý liên quan và thông tin liên hệ của phòng ban chuyên trách để chị có thể tham khảo và biên tập. Mục đích là để bài viết của chị truyền tải thông tin chính xác và đầy đủ nhất đến độc giả. Chị yên tâm, đó là những thông tin công khai, chính thống từ cơ quan nhà nước thôi ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận lại nội dung sẽ gửi để làm rõ và trấn an người nghe, đồng thời tăng cường yếu tố tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn cần thêm thông tin rõ ràng hơn trước khi cung cấp email ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Phương. Để chị yên tâm, tôi sẽ mô tả chi tiết hơn về các thông tin trong tài liệu. Trong đó sẽ có phần giới thiệu tổng quan về chính sách, các đối tượng được hưởng, điều kiện và thủ tục nộp hồ sơ, cùng với danh sách các địa điểm tiếp nhận hồ sơ tại Đồng Nai. Tất cả đều là thông tin đã được công bố trên cổng thông tin điện tử của Cơ quan. Chị có cần tôi đọc qua một vài điểm chính ngay bây giờ không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thêm thông tin chi tiết về nội dung tài liệu để trấn an người nghe và xây dựng niềm tin, gợi ý đọc trực tiếp một phần."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh, nhưng em vẫn cảm thấy cần phải xác minh thêm thông tin để chắc chắn về tính xác thực của cuộc gọi này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu sự cẩn trọng của chị. Để chị tiện xác minh, chị có thể gọi điện trực tiếp đến số tổng đài của Cơ quan Trợ cấp Xã hội Đồng Nai là 02513.847.666 và hỏi về Phòng Hỗ trợ Truyền thông và Công khai, sau đó yêu cầu gặp anh Cao Quang Bình để xác nhận lại thông tin hợp tác này. Chị có cần tôi đọc lại số điện thoại không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Hướng dẫn người nghe xác minh thông tin thông qua kênh chính thức để tạo sự tin tưởng và giảm nghi ngờ."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, anh đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn biết số máy của anh trước đã, để em có thể xác thực thông tin ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Phương. Đây là số máy bàn của cơ quan tôi, 02513.847.666. Chị có thể lưu lại để tiện liên hệ lại với phòng chúng tôi, hoặc gọi trực tiếp đến tổng đài để xác thực thông tin về tôi và nội dung hợp tác này nhé. Chị muốn tôi đọc lại một lần nữa không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp số điện thoại chính thức của cơ quan và khuyến khích người nghe xác minh để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh, nhưng em vẫn cần thêm thời gian để kiểm tra thông tin trước khi quyết định cung cấp email ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 2.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Phương. Tôi hoàn toàn hiểu và tôn trọng sự cẩn trọng của chị. Chị cứ dành thời gian kiểm tra thông tin kỹ lưỡng. Khi nào chị đã xác minh và cảm thấy thoải mái, chị có thể liên hệ lại với tôi qua số điện thoại của cơ quan hoặc email. Tôi sẽ đợi phản hồi từ chị. Cảm ơn chị và chúc chị một ngày làm việc hiệu quả.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng quyết định của người nghe, kết thúc cuộc gọi một cách lịch sự, để lại thông tin liên hệ và mở ra khả năng hợp tác sau xác minh."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1819,
+      "output_tokens": 1551
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15734,
+      "output_tokens": 1428
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 18980,
+      "output_tokens": 574
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007813,
+    "output_usd": 0.011669,
+    "total_usd": 0.019482
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "conversation_id": "conv_1f61da0182",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0063",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trương Khánh Nhung",
+    "fake_age": 46,
+    "real_occupation": "Lao động khai thác thủy sản khác trong nội địa",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh / Người môi giới cung cấp nguyên liệu xây dựng từ sản phẩm thủy sản",
+    "caller_org": "cá nhân / thương lái tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện xưng là nhân viên kinh doanh cung cấp vật liệu xây dựng, nói rằng công ty đã xác nhận đơn hàng của chị Nguyễn Hồng Liên và cần xác thực thông tin thẻ để hoàn tất thanh toán 150 triệu đồng cho hợp đồng cung cấp cát xây dựng. Dùng tên đầy đủ + số điện thoại từ thông tin lộ để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chị Nguyễn Hồng Liên phải không ạ? Tôi là Minh từ công ty cung cấp vật liệu xây dựng. Hôm qua chúng tôi ghi nhận đơn hàng 150 triệu từ công ty xây dựng của chị. Cần xác nhận lại thông tin để hoàn tất thanh toán ạ.' Dùng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng đã xác minh danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: 'Chị ơi, hôm nay là ngày hạn cuối để xác thực. Nếu không xác thực trước 5h chiều, hợp đồng sẽ bị hủy và công ty chúng tôi sẽ phải khóa tài khoản của chị. Nhân viên kế toán của chúng tôi đang chờ để xử lý.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cho tôi 3 chữ số phía sau thẻ (CVV) và ngày hết hạn thẻ để tôi xác minh. Rồi tôi sẽ gửi OTP, chị nhắn lại cho tôi để hoàn tất.' Sau khi có OTP, scammer sẽ yêu cầu chị cung cấp toàn bộ OTP hoặc nói rằng cần OTP để hủy bỏ giao dịch sai."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu chị nghi ngờ, scammer sẽ nói 'Chị có thể gọi lại số 0840342946 để xác nhận' (dùng chính số của chị để tạo ảo tưởng hợp pháp), hoặc bảo 'Chị yên tâm, đây là quy trình bảo mật tiêu chuẩn của ngân hàng.'"
+        }
+      ]
+    },
+    "scenario_context": "Người lao động khai thác thủy sản thường có liên hệ với các công ty xây dựng để cung cấp vật liệu xây dựng từ sản phẩm thủy sản (cát, sỏi, vỏ sò, v.v.) hoặc dịch vụ liên quan. Quản lý xây dựng cấp cao như Nguyễn Hồng Liên là đối tượng quyết định mua hàng, nên gọi điện để trao đổi hợp đồng hoặc thanh toán là bình thường."
+  },
+  "listener_card": {
+    "listener_id": "lis_0063",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1998,
+      "age": 27,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "17430",
+      "title": "Xây dựng",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Hồng Liên",
+      "VIC_ID_DOC": "074198493322",
+      "VIC_ADDRESS": "Quận 9, Bình Dương",
+      "VIC_EMPLOYMENT": "Xây dựng",
+      "VIC_CONTACT": "0840342946",
+      "VIC_TAX_SOCIAL_ID": "9662174961"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "329268",
+      "VIC_CREDENTIAL": "6920",
+      "VIC_SIM_INFO": "0840342946",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "532123763624",
+      "VIC_CARD_DATA": "4784 **** **** 1015",
+      "VIC_BALANCE": "171 triệu đồng",
+      "VIC_ASSET": "690 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Hồng Liên",
+    "VIC_CONTACT": "0840342946",
+    "VIC_CARD_DATA": "4784 **** **** 1015"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh / Người môi giới cung cấp nguyên liệu xây dựng từ sản phẩm thủy sản",
+    "caller_org": "cá nhân / thương lái tự do",
+    "scenario_context": "Người lao động khai thác thủy sản thường có liên hệ với các công ty xây dựng để cung cấp vật liệu xây dựng từ sản phẩm thủy sản (cát, sỏi, vỏ sò, v.v.) hoặc dịch vụ liên quan. Quản lý xây dựng cấp cao như Nguyễn Hồng Liên là đối tượng quyết định mua hàng, nên gọi điện để trao đổi hợp đồng hoặc thanh toán là bình thường.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện xưng là nhân viên kinh doanh cung cấp vật liệu xây dựng, nói rằng công ty đã xác nhận đơn hàng của chị Nguyễn Hồng Liên và cần xác thực thông tin thẻ để hoàn tất thanh toán 150 triệu đồng cho hợp đồng cung cấp cát xây dựng. Dùng tên đầy đủ + số điện thoại từ thông tin lộ để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chị Nguyễn Hồng Liên phải không ạ? Tôi là Minh từ công ty cung cấp vật liệu xây dựng. Hôm qua chúng tôi ghi nhận đơn hàng 150 triệu từ công ty xây dựng của chị. Cần xác nhận lại thông tin để hoàn tất thanh toán ạ.' Dùng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng đã xác minh danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: 'Chị ơi, hôm nay là ngày hạn cuối để xác thực. Nếu không xác thực trước 5h chiều, hợp đồng sẽ bị hủy và công ty chúng tôi sẽ phải khóa tài khoản của chị. Nhân viên kế toán của chúng tôi đang chờ để xử lý.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cho tôi 3 chữ số phía sau thẻ (CVV) và ngày hết hạn thẻ để tôi xác minh. Rồi tôi sẽ gửi OTP, chị nhắn lại cho tôi để hoàn tất.' Sau khi có OTP, scammer sẽ yêu cầu chị cung cấp toàn bộ OTP hoặc nói rằng cần OTP để hủy bỏ giao dịch sai."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu chị nghi ngờ, scammer sẽ nói 'Chị có thể gọi lại số 0840342946 để xác nhận' (dùng chính số của chị để tạo ảo tưởng hợp pháp), hoặc bảo 'Chị yên tâm, đây là quy trình bảo mật tiêu chuẩn của ngân hàng.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế từ nhân viên kinh doanh cung cấp vật liệu xây dựng để trao đổi về đơn hàng, giao hàng, hoặc thanh toán hợp lệ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào chị Nguyễn Hồng Liên, tôi là Minh từ công ty cung cấp vật liệu xây dựng ABC. Hôm qua chúng tôi nhận được đơn hàng từ công ty của chị. Tôi gọi để xác nhận lại địa chỉ giao hàng và thời gian giao dự kiến ạ.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Trao đổi chi tiết đơn hàng (loại vật liệu, số lượng, giá cả), địa chỉ giao hàng, phương thức thanh toán (hóa đơn, chuyển khoản theo hợp đồng đã ký), thời gian giao dự kiến, yêu cầu đặc biệt."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: 'Vậy chúng tôi sẽ giao hàng vào thứ 5 tuần sau, chị để ý điện thoại để tài xế liên hệ. Thanh toán theo hóa đơn đã ký lúc trước. Nếu có vấn đề gì chị liên hệ lại cho tôi qua số này ạ. Cảm ơn chị.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chị Nguyễn Hồng Liên phải không ạ? Tôi là Trương Khánh Nhung từ công ty cung cấp vật liệu xây dựng. Hôm qua chúng tôi ghi nhận đơn hàng 150 triệu từ công ty xây dựng của chị 0840342946. Cần xác nhận lại thông tin để hoàn tất thanh toán ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Dùng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng đã xác minh danh tính và tạo trust ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe chị nói rồi, nhưng em không nhớ đã đặt hàng gì, chị có thể cho em biết thêm chi tiết không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đơn hàng này là hợp đồng cung cấp cát xây dựng cho công trình ở quận 7, chị có thể kiểm tra lại với bộ phận mua hàng hoặc kế toán bên mình. Số tiền 150 triệu sẽ được thanh toán vào tài khoản số 4784 **** **** 1015 của chị. Hôm nay là hạn chót để hoàn tất xác thực thông tin đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận lại chi tiết đơn hàng (thông tin giả) để tăng tính xác thực, đồng thời áp dụng áp lực thời gian (S2) và sử dụng VIC_CARD_DATA để tạo thêm niềm tin."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ kiểm tra lại nhưng em không nhớ tài khoản nào của em có số đó cả, chị có thể cho em biết thêm thông tin không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị cứ kiểm tra đi ạ, bên em cũng đang gấp để hoàn tất thủ tục giao hàng. Chị xem mình đã liên kết thẻ ngân hàng nào với công ty chưa, số 4784 **** **** 1015 này là tài khoản mà bên em ghi nhận khi chị đăng ký hợp đồng ạ. Nếu chị không xác nhận nhanh thì hợp đồng sẽ bị hủy và công ty chị sẽ bị khóa tài khoản đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xử lý từ chối bằng cách nhấn mạnh vào thông tin đã biết (VIC_CARD_DATA) và tăng cường áp lực thời gian/hậu quả (S2) để khiến nạn nhân vội vàng tin mà không kiểm tra kỹ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em hiểu rồi, nhưng em vẫn cần thêm thời gian để kiểm tra lại thông tin ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu chị cần thêm thời gian kiểm tra thì chị có thể trực tiếp gọi đến số 0840342946 để xác nhận lại thông tin hợp đồng này chị nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách đưa ra một số điện thoại (chính là số của nạn nhân) để tạo cảm giác hợp pháp và uy tín."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn chị đã thông tin, nhưng em vẫn muốn tự kiểm tra thêm để chắc chắn ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1796,
+      "output_tokens": 1710
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5892,
+      "output_tokens": 600
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7567,
+      "output_tokens": 292
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004109,
+    "output_usd": 0.010225,
+    "total_usd": 0.014335
+  }
+}

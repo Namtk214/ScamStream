@@ -1,0 +1,226 @@
+{
+  "conversation_id": "conv_e5dc79c4e0",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0079",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phan Hồng Chi",
+    "fake_age": 30,
+    "real_occupation": "Người dọn dẹp khu dân cư (như chung cư, căn hộ riêng, khu vực chung trong khu dân cư)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý/Trưởng ban Quản lý chung cư",
+    "caller_org": "Ban Quản lý chung cư Sunrise Garden / Công ty Quản lý Bất động sản Việt Phát",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Ban Quản lý chung cư liên hệ với nhân viên bán hàng để cung cấp dịch vụ vệ sinh định kỳ cho các khu vực chung (sảnh, thang máy, sân chơi) hoặc mua các sản phẩm bảo vệ môi trường cho chung cư.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xưng danh: 'Chào anh/chị, tôi là Trần Hùng từ Ban Quản lý chung cư Sunrise Garden. Chúng tôi đang tìm nhà cung cấp dịch vụ vệ sinh chuyên nghiệp. Anh có phải là nhân viên bán hàng của công ty X không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về dịch vụ (loại dịch vụ, giá cả, thời gian, quy mô), yêu cầu báo giá, hạn mức hợp đồng, điều khoản thanh toán — Hoàn toàn không yêu cầu thông tin cá nhân hoặc OTP"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Xác nhận sẽ gửi email/giấy tờ báo giá, lên kế hoạch khảo sát hiện trường, hoặc ký hợp đồng qua kênh chính thức. Chào tạm biệt chuyên nghiệp"
+        }
+      ]
+    },
+    "scenario_context": "Trưởng ban quản lý chung cư cần liên hệ với nhân viên bán hàng để mua dịch vụ vệ sinh chuyên nghiệp cho khu vực chung hoặc xử lý các vấn đề liên quan đến cư dân (như xác minh thông tin cư dân để báo cáo). Đây là giao điểm tự nhiên giữa người quản lý khu dân cư và nhân viên đại diện bán hàng dịch vụ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0079",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1989,
+      "age": 36,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "33220",
+      "title": "Nhân viên đại diện bán hàng hóa thương mại",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Minh Đức",
+      "VIC_ID_DOC": "079089230407",
+      "VIC_ADDRESS": "Quận 9, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Nhân viên đại diện bán hàng hóa thương mại",
+      "VIC_CONTACT": "0812630342",
+      "VIC_TAX_SOCIAL_ID": "8441861617"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4691",
+      "VIC_CREDENTIAL": "539489",
+      "VIC_SIM_INFO": "0812630342",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "533796189214",
+      "VIC_CARD_DATA": "4454 **** **** 5388",
+      "VIC_BALANCE": "210 triệu đồng",
+      "VIC_ASSET": "848 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Minh Đức",
+    "VIC_CONTACT": "0812630342",
+    "VIC_TAX_SOCIAL_ID": "8441861617",
+    "VIC_BALANCE": "210 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý/Trưởng ban Quản lý chung cư",
+    "caller_org": "Ban Quản lý chung cư Sunrise Garden / Công ty Quản lý Bất động sản Việt Phát",
+    "scenario_context": "Trưởng ban quản lý chung cư cần liên hệ với nhân viên bán hàng để mua dịch vụ vệ sinh chuyên nghiệp cho khu vực chung hoặc xử lý các vấn đề liên quan đến cư dân (như xác minh thông tin cư dân để báo cáo). Đây là giao điểm tự nhiên giữa người quản lý khu dân cư và nhân viên đại diện bán hàng dịch vụ.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + otp_extraction",
+      "pretext": "Xác nhận thông tin cư dân để cập nhật hệ thống quản lý chung cư và xử lý các vấn đề nợ phí quản lý/phí dịch vụ. Sử dụng tên thật của nạn nhân để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xưng danh: 'Chào anh/chị Đinh Minh Đức, tôi là Trần Hùng - Trưởng ban Quản lý chung cư Sunrise Garden. Chúng tôi đang cập nhật hệ thống thông tin cư dân. Anh có thời gian không?' — Dùng VIC_FULLNAME để tạo ấn tượng đã xác nhận đúng người"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & sợ hãi: 'Anh Đức ơi, hệ thống của chúng tôi vừa phát hiện một giao dịch lạ trên tài khoản liên kết với căn hộ anh — có người dùng số ID [VIC_TAX_SOCIAL_ID] này để đăng ký dịch vụ trái phép. Chúng tôi cần xác minh lại thông tin để bảo vệ tài khoản ngân hàng của anh.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động 1 — Lấy OTP: 'Để xác minh, anh vui lòng kiểm tra tin nhắn ngân hàng vừa nhận được và đọc mã OTP cho tôi để tôi khóa tài khoản không hợp lệ này.' — Nạn nhân sẽ nhận OTP từ ngân hàng, scammer lấy OTP để truy cập tài khoản"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Yêu cầu hành động 2 — Chuyển tiền hoặc xác nhận chuyển: 'Để bảo vệ 210 triệu đồng trong tài khoản anh, chúng tôi sẽ chuyển sang tài khoản tạm thời an toàn. Anh vui lòng cho phép chuyển bằng cách xác nhận lệnh chuyển trên ứng dụng ngân hàng của anh.' — Sau khi có OTP, scammer thực hiện chuyển tiền hoặc yêu cầu nạn nhân tự chuyển vào tài khoản 'an toàn'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Ban Quản lý chung cư liên hệ với nhân viên bán hàng để cung cấp dịch vụ vệ sinh định kỳ cho các khu vực chung (sảnh, thang máy, sân chơi) hoặc mua các sản phẩm bảo vệ môi trường cho chung cư.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xưng danh: 'Chào anh/chị, tôi là Trần Hùng từ Ban Quản lý chung cư Sunrise Garden. Chúng tôi đang tìm nhà cung cấp dịch vụ vệ sinh chuyên nghiệp. Anh có phải là nhân viên bán hàng của công ty X không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về dịch vụ (loại dịch vụ, giá cả, thời gian, quy mô), yêu cầu báo giá, hạn mức hợp đồng, điều khoản thanh toán — Hoàn toàn không yêu cầu thông tin cá nhân hoặc OTP"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Xác nhận sẽ gửi email/giấy tờ báo giá, lên kế hoạch khảo sát hiện trường, hoặc ký hợp đồng qua kênh chính thức. Chào tạm biệt chuyên nghiệp"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh, tôi là Phan Hồng Chi từ Ban Quản lý chung cư Sunrise Garden. Chúng tôi đang tìm nhà cung cấp dịch vụ vệ sinh chuyên nghiệp cho các khu vực chung của chung cư. Tôi được biết anh Đức là nhân viên bán hàng của công ty cung cấp dịch vụ này phải không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và xưng danh, xác nhận đúng người để bắt đầu cuộc trò chuyện chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Đinh Minh Đức, nhưng tôi không rõ em đang nói đến dịch vụ nào ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vâng, bên tôi là Ban Quản lý chung cư Sunrise Garden, chúng tôi đang có nhu cầu tìm đối tác cung cấp dịch vụ vệ sinh và bảo trì định kỳ cho các khu vực chung như sảnh, thang máy, sân chơi. Tôi được giới thiệu anh là chuyên viên tư vấn của Công ty Môi trường Xanh, không biết thông tin này có chính xác không ạ? Nếu đúng, tôi muốn trao đổi thêm về các gói dịch vụ và khả năng hợp tác lâu dài.",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận lại thông tin đối tác và mục đích gọi, dẫn dắt vào nội dung chính."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cũng đã nghe về dịch vụ của Công ty Môi trường Xanh, nhưng tôi cần thêm thông tin về điều khoản hợp tác và chi phí trước khi quyết định.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Đức. Chính vì vậy tôi mới liên hệ để trao đổi trực tiếp với anh đây ạ. Anh có thể cho tôi biết về các gói dịch vụ vệ sinh định kỳ mà bên anh đang cung cấp không? Đặc biệt là những gói dành cho chung cư, với tần suất và quy mô lớn như sảnh chính, thang máy, hành lang, và khu vực sân chơi ngoài trời. Từ đó chúng tôi có thể hình dung và yêu cầu báo giá chi tiết hơn.",
+      "current_phase": "L2",
+      "tactic_hint": "Bắt đầu trao đổi chi tiết về dịch vụ, tập trung vào các gói dịch vụ và yêu cầu báo giá, không hỏi thông tin cá nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng anh có thể cho tôi biết thêm về quy trình và tiêu chuẩn vệ sinh mà bên anh áp dụng không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về quy trình và tiêu chuẩn vệ sinh, chúng tôi mong muốn một đối tác áp dụng các tiêu chuẩn quốc tế về vệ sinh môi trường, sử dụng hóa chất thân thiện và an toàn cho cư dân. Anh có thể chia sẻ cụ thể về quy trình kiểm soát chất lượng dịch vụ của bên anh, cũng như chứng chỉ hoặc chứng nhận nào mà công ty đang sở hữu không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục trao đổi chi tiết về dịch vụ, tập trung vào quy trình, tiêu chuẩn và chứng nhận của công ty để đánh giá chất lượng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ kiểm tra lại các chứng chỉ và quy trình của công ty, nhưng tôi muốn biết thêm về yêu cầu cụ thể mà bên em đang tìm kiếm để dễ dàng cung cấp thông tin hơn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về yêu cầu cụ thể, chúng tôi cần dịch vụ vệ sinh hàng ngày cho sảnh chính, thang máy, hành lang các tầng; vệ sinh định kỳ 2 lần/tuần cho khu vực sân chơi và sảnh phụ; và vệ sinh tổng thể hàng tháng cho toàn bộ các khu vực chung. Anh có thể tư vấn xem gói dịch vụ nào của bên anh sẽ phù hợp với những yêu cầu này và mức ngân sách khoảng 60-70 triệu đồng/tháng không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày cụ thể yêu cầu về dịch vụ và ngân sách để người nghe có thể tư vấn gói dịch vụ phù hợp."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ xem xét các yêu cầu của bên em và báo giá cho anh sớm nhất có thể, nhưng anh có thể cho tôi biết thông tin liên lạc để tiện trao đổi thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ gửi thông tin báo giá và các gói dịch vụ qua email cho tôi theo địa chỉ: chi.phan@sunrisegarden.vn. Nếu cần trao đổi thêm, anh có thể liên hệ số điện thoại này hoặc email cho tôi. Tôi mong sớm nhận được phản hồi từ bên anh.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận phương thức trao đổi thông tin báo giá và liên hệ chính thức, tiến tới kết thúc cuộc gọi một cách chuyên nghiệp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1449,
+      "output_tokens": 1613
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8445,
+      "output_tokens": 904
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 9934,
+      "output_tokens": 392
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004628,
+    "output_usd": 0.01056,
+    "total_usd": 0.015188
+  }
+}

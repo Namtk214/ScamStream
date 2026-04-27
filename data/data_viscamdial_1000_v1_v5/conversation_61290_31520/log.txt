@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_517bbb742c]
+  Caller thật: Lao động chăn nuôi chưa được phân vào đâu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên kiểm thú y / Cán bộ phòng chống dịch bệnh động vật @ Chi cục Thú y TP Cần Thơ
+  Listener: Hoa tiêu và nhân viên văn phòng trên tàu (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Hoa tiêu và nhân viên văn phòng trên tàu thường xuyên tiếp nhận hàng hóa nông sản (gia súc, thủy sản) từ các vùng chăn nuôi; cán bộ kiểm thú y cần liên hệ để kiểm tra y tế hoặc cảnh báo dịch bệnh ảnh hưởng đến tàu/hàng hóa.
+  Pretext: Gọi báo có trường hợp dịch bệnh gia súc phát hiện trên tàu hoặc hàng hóa liên quan đến tài khoản cá nhân nạn nhân; cần xác minh thông tin và thanh toán phí kiểm dịch/phạt theo số tài khoản đã lộ.
+  Listener traits: ['lo lắng cho con cái', 'lo lắng hay bận tâm']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị, tôi là Dương Thanh Trang, cán bộ Chi cục Thú y TP Cần Thơ. Tôi đang gọi điện thoại cho chị Đinh Ngọc Nhàn phải không ạ? Số tài khoản 47884190811038 của chị liên quan đến lô hàng vừa bị chúng tôi phát hiện có dấu hiệu vi phạm quy định kiểm dịch, cần xác minh thông tin ngay lập tức.
+      → phase: S1 | tactic: Xưng danh cán bộ, xác nhận tên và thông tin liên quan đến tài khoản để tạo lòng tin và đặt vấn đề khẩn cấp.
+T02 [LISTENER] Tôi là Đinh Ngọc Nhàn đây, nhưng có chuyện gì nghiêm trọng vậy chị?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng chị. Chúng tôi vừa phát hiện một trường hợp dịch bệnh gia súc trên tàu biển sắp rời cảng Cần Thơ, mà hàng hóa của chị có liên quan trực tiếp đến lô hàng này. Mã số hồ sơ của chị là 4651113001. Nếu không được xác minh và xử lý ngay trong vòng 2 giờ tới, toàn bộ lô hàng sẽ bị phong tỏa và tàu không thể rời cảng, gây thiệt hại nghiêm trọng. Chúng tôi cần chị hợp tác khẩn cấp.
+      → phase: S2 | tactic: Tạo áp lực khẩn cấp và sợ hãi bằng cách nhấn mạnh hậu quả nghiêm trọng và thời hạn giải quyết
+T04 [LISTENER] Chị ơi, tôi rất lo lắng cho lô hàng và con cái của tôi, nhưng tôi cần thêm thông tin chi tiết hơn để hiểu rõ tình hình.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, tôi hiểu sự lo lắng của chị. Chi tiết là lô hàng của chị liên quan đến một container chứa gia súc nhập khẩu có kết quả xét nghiệm dương tính với dịch tả lợn châu Phi. Để tránh dịch lây lan và đảm bảo an toàn, chúng tôi cần tiến hành kiểm dịch khẩn cấp toàn bộ lô hàng liên quan, bao gồm cả phần của chị. Mã số hồ sơ 4651113001 là mã định danh cho trường hợp này. Chị cần nhanh chóng nạp một khoản phí kiểm dịch khẩn cấp để chúng tôi có thể xử lý hồ sơ và giải tỏa lô hàng kịp thời trong 2 giờ tới, bằng không sẽ bị phong tỏa vĩnh viễn và chị phải chịu trách nhiệm pháp lý.
+      → phase: S3 | tactic: Cung cấp thêm thông tin chi tiết (được bịa đặt) để tăng độ tin cậy, đồng thời tiếp tục nhấn mạnh tính khẩn cấp, hậu quả pháp lý và yêu cầu thanh toán phí.
+T06 [LISTENER] Chị có thể cho tôi biết rõ số tiền phí kiểm dịch là bao nhiêu và cách thanh toán như thế nào không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, số tiền phí kiểm dịch khẩn cấp cho hồ sơ này là 8 triệu đồng. Để đảm bảo thủ tục được tiến hành nhanh nhất, chị vui lòng chuyển khoản số tiền này vào tài khoản 19037777777777 tại ngân hàng Techcombank, chủ tài khoản là Nguyễn Thị Bích Thủy. Trên nội dung chuyển khoản, chị ghi rõ 'Phí kiểm dịch khẩn cấp hồ sơ 4651113001' giúp tôi. Sau khi chuyển khoản, chị xác nhận lại với tôi để chúng tôi tiến hành giải quyết hồ sơ ngay lập tức, tránh bị phong tỏa và phạt hành chính ạ.
+      → phase: S3 | tactic: Cung cấp chi tiết về số tiền và phương thức thanh toán, tạo cảm giác minh bạch và thúc ép hành động nhanh chóng.
+T08 [LISTENER] Chị ơi, tôi cần thời gian để suy nghĩ và kiểm tra thông tin trước khi thực hiện chuyển khoản, có được không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Chị ơi, thời gian đang rất gấp. Chỉ còn chưa đầy 2 tiếng nữa là thời hạn xử lý. Nếu chị không chuyển khoản để nạp phí kiểm dịch ngay, lô hàng của chị sẽ bị phong tỏa hoàn toàn. Lúc đó, tàu không thể rời cảng, không chỉ gia đình chị chịu thiệt hại về tài chính mà chị còn phải chịu trách nhiệm pháp lý theo điều 331 Bộ luật hình sự về tội làm lây lan dịch bệnh nguy hiểm. Tôi khuyên chị nên xử lý nhanh để tránh những rắc rối không đáng có.
+      → phase: S4 | tactic: Tăng áp lực bằng cách nhấn mạnh hậu quả pháp lý nghiêm trọng và thời hạn gấp rút, sử dụng quyền lực tổ chức để ép buộc quyết định.
+T10 [LISTENER] Chị ơi, tôi rất lo lắng nhưng tôi cần xác thực thông tin trước khi quyết định chuyển khoản, chị có thể cho tôi số điện thoại của chi cục để tôi kiểm tra không?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=0.00
+TOKEN: in=21091 | out=2834
+COST : $0.015279
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_61290_31520\conv_517bbb742c.json  [SCAM_REFUSE]

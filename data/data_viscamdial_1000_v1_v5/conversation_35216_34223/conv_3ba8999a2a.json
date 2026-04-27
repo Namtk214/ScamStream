@@ -1,0 +1,233 @@
+{
+  "conversation_id": "conv_3ba8999a2a",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0079",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Ngô Thu Vy",
+    "fake_age": 41,
+    "real_occupation": "Nhân viên dựng phim",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên quản lý hợp đồng & thanh toán - công ty sản xuất phim",
+    "caller_org": "Công ty Sản xuất Phim Việt Vision",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi để thông báo Chi được chọn làm người mẫu/diễn viên cho quảng cáo sản phẩm năng lượng, cần xác nhận thông tin và chi phí đăng ký hợp đồng",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào Hồ Như Chi, tôi là Minh từ bộ phận Hợp đồng - Công ty Sản xuất Phim Việt Vision. Chúng tôi vừa nhận được hồ sơ của bạn từ quản lý phòng tập [Tên phòng tập]. Bạn có thể nghe điện thoại được không?' — Dùng VIC_FULLNAME + VIC_CONTACT để tạo ấn tượng đã có sẵn thông tin"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (Ham lợi + Khẩn cấp): 'Dự án quảng cáo của chúng tôi rất hot, budget lên đến 50-100 triệu cho mỗi người mẫu. Nhưng vì là dự án quốc tế, chúng tôi cần hoàn tất hợp đồng trong 24 giờ. Bạn có hứa được không?' — Tạo áp lực thời gian + lợi nhuận cao"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động (Credential Theft): 'Để xác nhận bạn là chủ tài khoản hợp pháp, tôi cần bạn cung cấp lại số thẻ tín dụng [dùng VIC_CARD_DATA để xác nhận 'đã có sẵn'] và mã OTP từ ngân hàng để kích hoạt hợp đồng điện tử. Sau đó tôi sẽ chuyển tiền ứng trước 10 triệu vào tài khoản này [VIC_BANK_ACCOUNT]'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu Chi hỏi tại sao cần OTP, scammer sẽ nói 'Đó là quy trình bảo mật của hệ thống. Nếu bạn không cung cấp, chúng tôi phải hủy đơn và mời người khác.' Nếu Chi từ chối hoàn toàn, scammer sẽ nói sẽ liên hệ lại sau và cắt máy để tìm nạn nhân khác"
+        }
+      ]
+    },
+    "scenario_context": "Công ty sản xuất phim cần tuyển diễn viên/người mẫu cho dự án quảng cáo sản phẩm thể thao. Nhân viên hướng dẫn tập thể hình có lý do để được liên hệ vì họ thường có ngoại hình phù hợp, mạng lưới tập thể hình rộng, và có thể được giới thiệu cho các vai diễn liên quan đến fitness."
+  },
+  "listener_card": {
+    "listener_id": "lis_0079",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1966,
+      "age": 59,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "34223",
+      "title": "Nhân viên hướng dẫn tập thể hình",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hồ Như Chi",
+      "VIC_ID_DOC": "001166349716",
+      "VIC_ADDRESS": "Quận 8, Hà Nội",
+      "VIC_EMPLOYMENT": "Nhân viên hướng dẫn tập thể hình",
+      "VIC_CONTACT": "0326569465",
+      "VIC_TAX_SOCIAL_ID": "6644392070"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "462395",
+      "VIC_CREDENTIAL": "153480",
+      "VIC_SIM_INFO": "0326569465",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "04135154265",
+      "VIC_CARD_DATA": "4989 **** **** 3330",
+      "VIC_BALANCE": "103 triệu đồng",
+      "VIC_ASSET": "290 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hồ Như Chi",
+    "VIC_CONTACT": "0326569465",
+    "VIC_CARD_DATA": "4989 **** **** 3330",
+    "VIC_BANK_ACCOUNT": "04135154265"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý hợp đồng & thanh toán - công ty sản xuất phim",
+    "caller_org": "Công ty Sản xuất Phim Việt Vision",
+    "scenario_context": "Công ty sản xuất phim cần tuyển diễn viên/người mẫu cho dự án quảng cáo sản phẩm thể thao. Nhân viên hướng dẫn tập thể hình có lý do để được liên hệ vì họ thường có ngoại hình phù hợp, mạng lưới tập thể hình rộng, và có thể được giới thiệu cho các vai diễn liên quan đến fitness.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi để thông báo Chi được chọn làm người mẫu/diễn viên cho quảng cáo sản phẩm năng lượng, cần xác nhận thông tin và chi phí đăng ký hợp đồng",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào Hồ Như Chi, tôi là Minh từ bộ phận Hợp đồng - Công ty Sản xuất Phim Việt Vision. Chúng tôi vừa nhận được hồ sơ của bạn từ quản lý phòng tập [Tên phòng tập]. Bạn có thể nghe điện thoại được không?' — Dùng VIC_FULLNAME + VIC_CONTACT để tạo ấn tượng đã có sẵn thông tin"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý (Ham lợi + Khẩn cấp): 'Dự án quảng cáo của chúng tôi rất hot, budget lên đến 50-100 triệu cho mỗi người mẫu. Nhưng vì là dự án quốc tế, chúng tôi cần hoàn tất hợp đồng trong 24 giờ. Bạn có hứa được không?' — Tạo áp lực thời gian + lợi nhuận cao"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động (Credential Theft): 'Để xác nhận bạn là chủ tài khoản hợp pháp, tôi cần bạn cung cấp lại số thẻ tín dụng [dùng VIC_CARD_DATA để xác nhận 'đã có sẵn'] và mã OTP từ ngân hàng để kích hoạt hợp đồng điện tử. Sau đó tôi sẽ chuyển tiền ứng trước 10 triệu vào tài khoản này [VIC_BANK_ACCOUNT]'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu Chi hỏi tại sao cần OTP, scammer sẽ nói 'Đó là quy trình bảo mật của hệ thống. Nếu bạn không cung cấp, chúng tôi phải hủy đơn và mời người khác.' Nếu Chi từ chối hoàn toàn, scammer sẽ nói sẽ liên hệ lại sau và cắt máy để tìm nạn nhân khác"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sản xuất phim thực sự liên hệ để mời Chi tham gia dự án quảng cáo/quay phim, hoặc xác nhận thông tin hợp đồng thực tế",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào Hồ Như Chi, tôi là Minh từ Công ty Sản xuất Phim Việt Vision. Chúng tôi nhận được đề xuất từ quản lý phòng tập [Tên cụ thể] và muốn tìm hiểu xem bạn có hứa tham gia dự án quảng cáo không. Bạn có thời gian trò chuyện được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết dự án (vai diễn, thời gian quay, địa điểm, yêu cầu về kỹ năng), hỏi về kinh nghiệm của Chi, thảo luận lương công, quy trình hợp đồng chính thức (sẽ gửi giấy tờ qua email hoặc buổi gặp trực tiếp)"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu bạn quan tâm, tôi sẽ gửi hợp đồng mẫu qua email. Bạn xem kỹ, trao đổi với luật sư hoặc gia đình nếu cần, rồi liên hệ lại. Chúng ta sẽ gặp trực tiếp để ký và bàn bạc chi tiết hơn.' — Không bao giờ yêu cầu OTP, mã PIN, hay chi phí trước"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Hồ Như Chi, em là Ngô Thu Vy từ bộ phận Hợp đồng - Công ty Sản xuất Phim Việt Vision. Chúng em vừa nhận được hồ sơ của chị từ quản lý phòng tập thể hình. Chị có thể nghe máy một lát được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Dùng VIC_FULLNAME và VIC_CONTACT để tạo ấn tượng đã có sẵn thông tin và tạo trust."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn biết thêm chi tiết về hồ sơ của tôi.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, hồ sơ của chị Chi đã được đề cử cho dự án quảng cáo quốc tế của chúng em với mức ngân sách rất lớn, lên đến 50-100 triệu cho mỗi người mẫu. Tuy nhiên, vì đây là dự án cấp bách, chúng em cần hoàn tất hợp đồng trong vòng 24 giờ. Chị có cam kết thời gian này được không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực thời gian và nhấn mạnh lợi nhuận cao để khai thác tâm lý ham lợi của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe em nói thì hấp dẫn quá, nhưng tôi cần chút thời gian để suy nghĩ và kiểm tra lại thông tin trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Em hiểu sự cân nhắc của chị. Tuy nhiên, như em đã chia sẻ, với tính chất khẩn cấp của dự án quốc tế này, chúng em không thể chờ đợi lâu. Nếu chị không thể cam kết hoàn tất trong 24 giờ, em e là chúng em sẽ phải chuyển cơ hội này cho ứng viên khác. Chị có chắc chắn muốn bỏ lỡ cơ hội hấp dẫn này không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Xử lý từ chối bằng cách tái khẳng định áp lực thời gian và nhấn mạnh mất mát nếu không hợp tác, đẩy nhanh quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng mà nếu cơ hội này thật sự tốt thì tôi cũng không muốn để lỡ, em có thể cho tôi biết thêm thông tin cụ thể không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nếu chị đã sẵn sàng, để xác nhận chị là chủ tài khoản hợp pháp và kích hoạt hợp đồng điện tử, em cần chị cung cấp lại số thẻ tín dụng 4989 **** **** 3330 và mã OTP từ ngân hàng cho em chị nhé. Sau đó, em sẽ chuyển ngay 10 triệu tiền ứng trước vào tài khoản 04135154265 của chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu cung cấp thông tin nhạy cảm (credential theft) sau khi đã xây dựng lòng tin và tạo động lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe nói có tiền ứng trước, nhưng sao tôi lại cần phải cung cấp thông tin thẻ tín dụng và mã OTP ạ? Tôi thấy điều đó không hợp lý lắm.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị ơi, đây là quy trình bảo mật bắt buộc của hệ thống đối với hợp đồng điện tử quốc tế ạ. Việc xác nhận này đảm bảo rằng chúng em đang làm việc với đúng chủ tài khoản và có thể chuyển khoản ứng trước một cách an toàn. Nếu chị không cung cấp được thì em đành phải hủy đơn và mời ứng viên khác, sẽ rất đáng tiếc đó ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách giải thích quy trình là bắt buộc và tạo áp lực nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang nói về việc hủy đơn, nhưng tôi cảm thấy rất không thoải mái khi phải cung cấp thông tin thẻ tín dụng và mã OTP, sao không thể tìm cách khác ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1825,
+      "output_tokens": 1666
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7714,
+      "output_tokens": 718
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10153,
+      "output_tokens": 385
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004891,
+    "output_usd": 0.010356,
+    "total_usd": 0.015247
+  }
+}

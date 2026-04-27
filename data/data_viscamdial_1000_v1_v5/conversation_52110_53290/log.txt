@@ -1,0 +1,62 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_92361dd1a6]
+  Caller thật: Người bán hàng trong quầy hàng và tại chợ (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Quản lý bán hàng / Nhân viên kinh doanh chuỗi cửa hàng bán mỹ phẩm & sản phẩm chăm sóc sức khỏe @ Công ty TNHH Thương mại Sức khỏe Vĩnh Long / Chi nhánh Hệ thống bán lẻ Vĩnh Phát
+  Listener: Nhân viên chăm sóc cá nhân trong các dịch vụ y tế chưa được phân vào đâu (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Nhân viên chăm sóc cá nhân (healthcare support) thường mua buôn sản phẩm y tế, mỹ phẩm chuyên dụng từ các nhà cung cấp bán lẻ để phục vụ khách hàng. Người bán hàng tự nhiên sẽ gọi để giới thiệu sản phẩm mới, khuyến mãi, hoặc theo dõi đơn hàng.
+  Pretext: Scammer xưng danh là nhân viên kinh doanh của chuỗi cửa hàng bán sản phẩm chăm sóc y tế. Sử dụng tên thật và địa chỉ của nạn nhân để tạo ảo tưởng đã tra cứu hồ sơ khách hàng. Gợi ý rằng có đơn hàng cần xác nhận hoặc khuyến mãi đặc biệt dành riêng cho nhân viên y tế ở TP 3, Vĩnh Long.
+  Listener traits: ['nghi ngờ nhưng lịch sự', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Mai Thị Hà, tôi là Trương Thanh Hằng, nhân viên kinh doanh của Hệ thống bán lẻ Vĩnh Phát đây ạ. Tôi gọi từ tổng đài Vĩnh Long. Tôi thấy trên hệ thống mình có địa chỉ ở TP 3, Vĩnh Long và là khách hàng thân thiết của bên em. Hôm nay em liên hệ để xác nhận lại thông tin và gửi tặng chị một voucher khuyến mãi 30% cho đơn hàng tiếp theo của mình nhé.
+      → phase: S1 | tactic: Xưng danh, dùng thông tin VIC_FULLNAME và VIC_ADDRESS để tạo trust, giới thiệu ưu đãi.
+T02 [LISTENER] Chị cảm ơn em, nhưng chị chưa hiểu rõ lắm về ưu đãi này lắm, em có thể nói thêm không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, bên em có gói ưu đãi đặc biệt dành riêng cho những khách hàng thân thiết như chị, đặc biệt là những người làm trong ngành y tế ở khu vực TP 3, Vĩnh Long. Để nhận được voucher giảm giá 30% cho bất kỳ sản phẩm chăm sóc sức khỏe nào bên em, chị chỉ cần xác nhận lại một vài thông tin trên hệ thống thôi ạ.
+      → phase: S1 | tactic: Làm rõ ưu đãi, nhấn mạnh tính đặc biệt của ưu đãi và yêu cầu xác nhận thông tin để nhận
+T04 [LISTENER] Em cần xác nhận những thông tin gì ạ, chị không rõ lắm về cách làm này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ không có gì phức tạp đâu chị ạ. Bên em chỉ cần chị xác nhận lại thông tin thẻ tín dụng của chị thôi. Đơn giản là để hệ thống đảm bảo an toàn tài khoản và chuyển voucher ưu đãi này trực tiếp vào tài khoản của chị thôi. Chị yên tâm là giao dịch này không tốn phí hay phát sinh bất cứ chi phí nào hết.
+      → phase: S2 | tactic: Khai thác tâm lý 'an toàn và không tốn phí', hướng đến việc lấy thông tin thẻ
+T06 [LISTENER] Chị không hiểu tại sao lại cần xác nhận thông tin thẻ tín dụng cho một voucher khuyến mãi, chị có thể biết thêm lý do không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T07 [CALLER] Dạ chị yên tâm, đây là quy trình bảo mật của ngân hàng để đảm bảo voucher được chuyển đúng vào tài khoản của chị, tránh bị kẻ gian lợi dụng thôi ạ. Chị cứ đọc cho tôi 4 số cuối của thẻ 4874 **** **** 3971 để tôi kiểm tra lại với hệ thống nhé.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách nhấn mạnh tính bảo mật của ngân hàng và yêu cầu 4 số cuối thẻ để xây dựng lòng tin.
+T08 [LISTENER] Em vẫn thấy lo lắng một chút, vì chị không quen với việc cung cấp thông tin thẻ tín dụng qua điện thoại như vậy, chị không thể đọc được đâu ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T09 [CALLER] Dạ không sao đâu chị. Nếu chị không tiện cung cấp thông tin thẻ, vậy chị vui lòng kiểm tra tin nhắn. Tôi sẽ gửi cho chị một mã OTP từ ngân hàng để xác nhận giao dịch này, chị chỉ cần đọc lại mã đó cho tôi là xong. Nhanh lắm ạ.
+      → phase: S2 | tactic: Chuyển hướng sang yêu cầu OTP khi nạn nhân từ chối cung cấp thông tin thẻ, vẫn nhấn mạnh sự nhanh chóng và đơn giản.
+T10 [LISTENER] Chị vẫn thấy không thoải mái khi cung cấp thông tin như vậy, em có thể giới thiệu rõ hơn về công ty và ưu đãi không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T11 [CALLER] Dạ không có gì đáng lo ngại đâu chị. Nếu chị vẫn chưa an tâm, vậy chị có thể tự mình vào ứng dụng ngân hàng, chọn phần giao dịch và chị sẽ thấy có một mã OTP được gửi về điện thoại của chị. Chị chỉ cần đọc mã OTP đó cho tôi để tôi hoàn tất việc chuyển voucher 30% vào tài khoản của chị thôi ạ. Đây là quy trình bảo mật chuẩn của ngân hàng đó chị.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ, chuyển hướng sang yêu cầu nạn nhân tự mình vào app ngân hàng để lấy mã OTP, nhấn mạnh đây là quy trình bảo mật để tạo niềm tin.
+T12 [LISTENER] Em vẫn cảm thấy lo lắng và chưa tự tin lắm về việc này, không biết chị có thể cung cấp thông tin gì rõ ràng hơn về công ty và quy trình không ạ?
+      → action: CONTINUE | suspicion: 0.70 | disclosed: []
+
+T13 [CALLER] Dạ vâng, để chị an tâm, chị có thể truy cập vào website chính thức của Hệ thống bán lẻ Vĩnh Phát tại địa chỉ Vĩnh Phát.vn để tìm hiểu thêm về công ty và các chương trình khuyến mãi hiện có. Chị sẽ thấy rõ ràng rằng đây là một chương trình ưu đãi thật cho khách hàng thân thiết ạ. Nếu chị vẫn muốn nhận voucher 30% này thì chỉ cần đọc mã OTP ngân hàng cho tôi, hoặc tôi có thể gọi lại cho chị sau khi chị đã tìm hiểu kỹ hơn ạ.
+      → phase: S4 | tactic: Xoa dịu sự nghi ngờ, cung cấp thông tin công ty để tăng độ tin cậy, đồng thời đưa ra lựa chọn để nạn nhân tự quyết định, chuẩn bị cho kịch bản gọi lại sau.
+T14 [LISTENER] Chị cũng muốn kiểm tra, nhưng chị không thấy an toàn khi phải cung cấp mã OTP qua điện thoại, em có thể cho chị biết thêm về chế độ bảo mật của công ty không ạ?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T15 [CALLER] Dạ chị hiểu cho, mã OTP là một phần của giao dịch ngân hàng, chứ không phải của công ty em. Công ty em chỉ là trung gian để hỗ trợ chị nhận ưu đãi thôi. Mã số đó chỉ có tác dụng một lần duy nhất cho giao dịch voucher 30% này thôi, nên chị có thể hoàn toàn yên tâm. Nếu chị không muốn bỏ lỡ ưu đãi này, chị cứ đọc mã OTP cho tôi, hoặc tôi sẽ xin phép kết thúc cuộc gọi tại đây. Chị có muốn nhận voucher không ạ?
+      → phase: S4 | tactic: Nhấn mạnh bản chất của OTP là của ngân hàng, không phải công ty, tạo cảm giác khẩn cấp để nạn nhân không bỏ lỡ ưu đãi và thúc đẩy họ hành động, đưa ra lựa chọn kết thúc cuộc gọi.
+T16 [LISTENER] Em cũng rất muốn nhận ưu đãi này, nhưng chị vẫn thấy không thoải mái khi cung cấp mã OTP qua điện thoại, có thể cho chị biết thêm về cách bảo mật không ạ?
+      → action: CONTINUE | suspicion: 0.90 | disclosed: []
+
+T17 [CALLER] Dạ không sao đâu chị. Tôi hiểu sự cẩn trọng của chị. Vậy thôi, có lẽ hệ thống của chúng tôi đang có chút trục trặc. Em sẽ liên hệ lại với chị vào một thời điểm khác, khi nào chị cảm thấy thoải mái hơn về việc này nhé. Cảm ơn chị đã lắng nghe.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách khéo léo khi nạn nhân có sự nghi ngờ cao và không muốn cung cấp thông tin, chuẩn bị cho cuộc gọi tiếp theo.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  17 turns | suspicion=0.90
+TOKEN: in=39127 | out=3935
+COST : $0.021367
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_52110_53290\conv_92361dd1a6.json  [CALLER_END]

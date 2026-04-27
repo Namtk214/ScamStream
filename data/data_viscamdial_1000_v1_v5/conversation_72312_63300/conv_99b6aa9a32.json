@@ -1,0 +1,311 @@
+{
+  "conversation_id": "conv_99b6aa9a32",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0029",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Nguyễn Hồng Thảo",
+    "fake_age": 47,
+    "real_occupation": "Thợ sửa chữa xe có động cơ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên bán hàng / Tư vấn bán máy nông nghiệp động cơ",
+    "caller_org": "Công ty phân phối máy nông nghiệp / Cửa hàng bán lẻ máy xúc, máy bơm động cơ",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo: 'Anh Thành ơi, tôi là Minh từ cửa hàng bán máy bơm nước. Hôm qua chúng tôi nhận được đơn hàng của anh, máy bơm Vàng Anh 5.5KW đã về. Nhưng trước khi giao, cần xác nhận thông tin thẻ tín dụng cuối cùng 4 số 3185 để bảo mật. Anh có thể cung cấp OTP để xác minh không?'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CARD_DATA",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Scammer xưng danh là 'Minh - nhân viên bán hàng', sử dụng VIC_FULLNAME (Võ Văn Thành) và VIC_CARD_DATA (4997****3185) để tạo credibility cao — 'tôi có thông tin đơn hàng của anh'",
+          "dialogue_sample": "Chào anh Thành, tôi là Minh từ cửa hàng bán máy nông nghiệp trên đường Lê Văn Sỹ. Hôm qua anh đặt máy bơm nước 5.5KW, hôm nay hàng đã về kho rồi."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + hợp pháp hóa: 'Công ty yêu cầu xác minh thẻ trước khi giao hàng' — tạo cảm giác bình thường, hợp lệ",
+          "dialogue_sample": "Nhưng theo quy định, chúng tôi phải xác minh lại thẻ tín dụng cuối cùng 4 số 3185 trước khi giao. Anh có thể cung cấp mã OTP để xác nhận không? Nó sẽ được gửi vào điện thoại của anh ngay."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Nạn nhân cung cấp OTP — sau đó scammer dùng OTP để rút tiền hoặc thay đổi thông tin thẻ",
+          "dialogue_sample": "Anh nhận được mã OTP chưa? Vui lòng đọc cho tôi 6 số để tôi nhập vào hệ thống. Sau đó hàng sẽ được giao vào chiều hôm nay."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: scammer ngắt máy, sử dụng OTP để truy cập tài khoản. Nếu nạn nhân từ chối: scammer tạo áp lực 'hàng sẽ bị hủy đơn, mất tiền cọc'",
+          "dialogue_sample": "Nếu từ chối: 'Vậy anh không muốn xác minh sao? Công ty sẽ hủy đơn, tiền cọc 2 triệu sẽ bị mất đó. Anh chắc chắn không cung cấp sao?'"
+        }
+      ]
+    },
+    "scenario_context": "Thợ sửa xe động cơ có kiến thức sâu về động cơ, máy bơm, máy xúc. Nông dân chăn nuôi hỗn hợp thường cần mua/sửa máy bơm nước, máy xúc, máy nông nghiệp động cơ. Đây là giao điểm tự nhiên giữa hai nghề."
+  },
+  "listener_card": {
+    "listener_id": "lis_0029",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1974,
+      "age": 51,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "63300",
+      "title": "Lao động trồng trọt và chăn nuôi hỗn hợp tự cung tự cấp",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Võ Văn Thành",
+      "VIC_ID_DOC": "079074978353",
+      "VIC_ADDRESS": "Quận 8, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Lao động trồng trọt và chăn nuôi hỗn hợp tự cung tự cấp",
+      "VIC_CONTACT": "0902285636",
+      "VIC_TAX_SOCIAL_ID": "5091942296"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "137562",
+      "VIC_CREDENTIAL": "6360",
+      "VIC_SIM_INFO": "0902285636",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "75963281216957",
+      "VIC_CARD_DATA": "4997 **** **** 3185",
+      "VIC_BALANCE": "9 triệu đồng",
+      "VIC_ASSET": "59 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Võ Văn Thành",
+    "VIC_CONTACT": "0902285636",
+    "VIC_CARD_DATA": "4997 **** **** 3185",
+    "LOCATION": "TP Hồ Chí Minh"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán hàng / Tư vấn bán máy nông nghiệp động cơ",
+    "caller_org": "Công ty phân phối máy nông nghiệp / Cửa hàng bán lẻ máy xúc, máy bơm động cơ",
+    "scenario_context": "Thợ sửa xe động cơ có kiến thức sâu về động cơ, máy bơm, máy xúc. Nông dân chăn nuôi hỗn hợp thường cần mua/sửa máy bơm nước, máy xúc, máy nông nghiệp động cơ. Đây là giao điểm tự nhiên giữa hai nghề.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo: 'Anh Thành ơi, tôi là Minh từ cửa hàng bán máy bơm nước. Hôm qua chúng tôi nhận được đơn hàng của anh, máy bơm Vàng Anh 5.5KW đã về. Nhưng trước khi giao, cần xác nhận thông tin thẻ tín dụng cuối cùng 4 số 3185 để bảo mật. Anh có thể cung cấp OTP để xác minh không?'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CARD_DATA",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Scammer xưng danh là 'Minh - nhân viên bán hàng', sử dụng VIC_FULLNAME (Võ Văn Thành) và VIC_CARD_DATA (4997****3185) để tạo credibility cao — 'tôi có thông tin đơn hàng của anh'",
+          "dialogue_sample": "Chào anh Thành, tôi là Minh từ cửa hàng bán máy nông nghiệp trên đường Lê Văn Sỹ. Hôm qua anh đặt máy bơm nước 5.5KW, hôm nay hàng đã về kho rồi."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + hợp pháp hóa: 'Công ty yêu cầu xác minh thẻ trước khi giao hàng' — tạo cảm giác bình thường, hợp lệ",
+          "dialogue_sample": "Nhưng theo quy định, chúng tôi phải xác minh lại thẻ tín dụng cuối cùng 4 số 3185 trước khi giao. Anh có thể cung cấp mã OTP để xác nhận không? Nó sẽ được gửi vào điện thoại của anh ngay."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Nạn nhân cung cấp OTP — sau đó scammer dùng OTP để rút tiền hoặc thay đổi thông tin thẻ",
+          "dialogue_sample": "Anh nhận được mã OTP chưa? Vui lòng đọc cho tôi 6 số để tôi nhập vào hệ thống. Sau đó hàng sẽ được giao vào chiều hôm nay."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân cung cấp OTP: scammer ngắt máy, sử dụng OTP để truy cập tài khoản. Nếu nạn nhân từ chối: scammer tạo áp lực 'hàng sẽ bị hủy đơn, mất tiền cọc'",
+          "dialogue_sample": "Nếu từ chối: 'Vậy anh không muốn xác minh sao? Công ty sẽ hủy đơn, tiền cọc 2 triệu sẽ bị mất đó. Anh chắc chắn không cung cấp sao?'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên bán hàng thực sự gọi để xác nhận đơn hàng máy nông nghiệp đã đặt trước, thương lượng giá, hoặc thông báo hàng đã về kho sẵn sàng giao",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ (tên + cửa hàng + số điện thoại công ty), xác nhận đúng người qua VIC_FULLNAME và chi tiết đơn hàng cụ thể",
+          "dialogue_sample": "Chào anh Thành, tôi là Minh từ cửa hàng bán máy Hoàng Anh, số 123 Lê Văn Sỹ, TP.HCM. Số điện thoại cửa hàng là 028-3845-xxxx. Anh đặt máy bơm nước tuần trước phải không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thông báo tình trạng hàng, thời gian giao, phương thức thanh toán (tiền mặt khi giao, chuyển khoản, hoặc trả góp — KHÔNG bao giờ yêu cầu OTP hay dữ liệu thẻ)",
+          "dialogue_sample": "Máy đã về kho, anh muốn giao vào ngày nào? Chúng tôi hỗ trợ thanh toán tiền mặt khi giao hoặc chuyển khoản vào ngân hàng. Anh chọn cách nào?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất chi tiết (địa chỉ giao, giờ giao, số điện thoại lái xe) hoặc hẹn anh đến cửa hàng lấy hàng. Chào tạm biệt lịch sự",
+          "dialogue_sample": "Vậy anh để tôi ghi lại: Giao vào chiều thứ Bảy, địa chỉ là số 45 Nguyễn Hữu Cảnh, Bình Thạnh. Lái xe sẽ gọi cho anh 30 phút trước khi đến. Có được không?"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Anh Thành ơi, tôi là Minh đây, nhân viên bên cửa hàng máy bơm nước. Anh có phải là anh Võ Văn Thành không ạ? Tôi gọi để báo là chiếc máy bơm Vàng Anh 5.5KW mà anh đặt hôm qua đã về rồi.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, xác nhận tên khách hàng (VIC_FULLNAME) và thông báo về đơn hàng để tạo sự tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi không nhớ đã đặt máy bơm nào cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Thành xem lại giúp tôi nhé, đơn hàng được đặt vào khoảng 10h sáng ngày hôm qua. Đặc biệt là đơn vị vận chuyển yêu cầu xác nhận thông tin thẻ tín dụng của anh, 4 số cuối là 3185, để đảm bảo an toàn giao dịch trước khi giao hàng ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận lại chi tiết đơn hàng (S1) và chuyển sang yêu cầu xác nhận thẻ (S2) bằng cách nhấn mạnh tính cần thiết và bảo mật."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ tại sao lại cần xác nhận thông tin thẻ tín dụng trước khi giao hàng ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đây là quy định chung của công ty vận chuyển bên em để đảm bảo rằng người nhận hàng là chủ sở hữu hợp pháp của thẻ, tránh các trường hợp giao nhầm hoặc gian lận tài chính. Việc xác nhận này rất quan trọng để bảo vệ quyền lợi của cả anh và bên em đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách giải thích quy định là hợp pháp và vì quyền lợi của khách hàng, nhấn mạnh tính bảo mật và tránh gian lận."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu ý em, nhưng tôi vẫn cảm thấy không yên tâm lắm khi cần xác nhận thông tin thẻ tín dụng như vậy.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, tôi hiểu cảm giác của anh Thành. Chắc chắn rồi, việc bảo mật thông tin cá nhân là rất quan trọng. Tuy nhiên, anh có thể cho tôi xin mã OTP được gửi về số điện thoại của anh để chúng tôi xác minh danh tính chủ thẻ, chứ không phải thông tin thẻ. Mã OTP này chỉ dùng một lần và chỉ có giá trị xác nhận đơn hàng, không phải giao dịch.",
+      "current_phase": "S3",
+      "tactic_hint": "Thừa nhận sự lo lắng của khách hàng, chuyển hướng sang yêu cầu OTP (S3) và trấn an rằng đó chỉ là xác minh danh tính, không phải giao dịch tài chính, nhấn mạnh tính một lần và giới hạn của OTP để giảm bớt nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ mã OTP là gì và tại sao lại cần phải cung cấp một cái như vậy ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, mã OTP là mật khẩu dùng một lần, được gửi tự động đến số điện thoại của anh khi có giao dịch hoặc xác minh quan trọng. Mã này có tác dụng bảo vệ tài khoản của anh, đảm bảo chỉ chính chủ thẻ mới có thể thực hiện xác nhận. Công ty em chỉ cần mã này để hệ thống ghi nhận anh đã đồng ý với việc giao hàng, không phải để truy cập hay sử dụng tài khoản của anh đâu ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích rõ ràng về định nghĩa và mục đích của OTP để làm giảm sự nghi ngờ và tăng cường niềm tin, nhấn mạnh tính bảo mật và giới hạn mục đích sử dụng."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chị có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Em không có số điện thoại đường dây nóng của công ty, nhưng em nghĩ anh nên kiểm tra lại thông tin trước khi cung cấp gì cho ai ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Thành cứ yên tâm, tôi là nhân viên bán hàng trực tiếp của cửa hàng, số điện thoại của tôi cũng là số công ty. Mã OTP này hoàn toàn không liên quan đến việc anh chuyển tiền hay giao dịch tài chính, mà chỉ là để xác minh anh là chủ thẻ. Nếu không có xác nhận này, hệ thống sẽ tự động hủy đơn hàng và máy bơm sẽ không được giao đến anh ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực bằng cách nhắc lại hậu quả việc không xác nhận (hủy đơn hàng), đồng thời trấn an rằng OTP không liên quan đến giao dịch tiền, chỉ xác minh chủ thẻ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu là em muốn giúp, nhưng tôi vẫn cảm thấy không yên tâm lắm với việc cung cấp mã OTP như vậy.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi hiểu anh Thành có thể còn chút băn khoăn. Tuy nhiên, việc này là bắt buộc để đơn hàng của anh được tiếp tục xử lý và giao đến đúng hẹn. Nếu anh không cung cấp OTP, hệ thống sẽ mặc định anh từ chối nhận hàng và sẽ hủy đơn hàng. Như vậy thì anh sẽ không nhận được máy bơm Vàng Anh 5.5KW mà mình đã đặt đâu ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tiếp tục tạo áp lực bằng cách khẳng định sự bắt buộc của việc cung cấp OTP, đồng thời nhắc lại hậu quả trực tiếp (hủy đơn hàng) nếu khách hàng không hợp tác, nhằm thúc đẩy họ hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy không yên tâm vì thông tin cá nhân của tôi rất quan trọng, em có thể cho tôi thêm thông tin gì để tôi yên tâm hơn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ yên tâm ạ. Tôi xin nhắc lại là mã OTP này chỉ để xác minh danh tính anh là chủ thẻ khi nhận hàng, chứ không hề có tác dụng thực hiện giao dịch chuyển tiền hay bất kỳ giao dịch tài chính nào khác từ thẻ của anh đâu. Nếu anh vẫn không cung cấp, hệ thống sẽ tự động hủy đơn hàng, và anh sẽ phải đặt lại từ đầu, điều này sẽ mất thêm thời gian chờ đợi máy về đấy ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tiếp tục xoa dịu lo lắng về bảo mật theo hướng OTP không dùng cho giao dịch tài chính, đồng thời tăng cường áp lực bằng việc nhấn mạnh sự chậm trễ và bất tiện khi phải đặt lại hàng nếu đơn bị hủy."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất lo lắng về việc bảo mật thông tin cá nhân của mình, nhưng nếu không có cách nào khác thì em cũng phải suy nghĩ lại về đơn hàng này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi hiểu anh Thành. Vậy anh có thể dành chút thời gian kiểm tra lại tin nhắn điện thoại xem có nhận được mã OTP nào không ạ? Hoặc nếu anh không cung cấp OTP để xác nhận đơn hàng, bên tôi buộc phải hủy đơn anh nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Tiếp tục tạo áp lực bằng cách yêu cầu thực hiện hành động cụ thể (kiểm tra tin nhắn OTP) và nhắc lại hậu quả việc hủy đơn hàng để thúc đẩy khách hàng hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm thấy không thoải mái khi phải cung cấp mã OTP, đặc biệt là vì thông tin cá nhân của em rất quan trọng.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, tôi hiểu sự lo lắng của anh Thành về bảo mật. Tuy nhiên, việc cung cấp mã OTP lúc này là để xác nhận việc giao hàng, không hề ảnh hưởng đến thông tin cá nhân hay tài khoản của anh. Nếu anh vẫn không đồng ý, tôi rất tiếc phải thông báo rằng đơn hàng máy bơm Vàng Anh 5.5KW của anh sẽ bị hủy, và công ty sẽ không thể hoàn lại tiền cọc cho anh nữa đâu ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực tài chính bằng cách đe dọa mất tiền cọc nếu không cung cấp OTP, đồng thời trấn an lại về mục đích của OTP để đẩy nạn nhân vào thế phải lựa chọn."
+    },
+    {
+      "role": "listener",
+      "text": "Em thực sự không thoải mái khi phải cung cấp mã OTP như vậy, em chỉ muốn chắc chắn rằng thông tin của mình được bảo vệ an toàn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1891,
+      "output_tokens": 1969
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 19803,
+      "output_tokens": 1593
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 27403,
+      "output_tokens": 728
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.009962,
+    "output_usd": 0.014264,
+    "total_usd": 0.024226
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "conversation_id": "conv_d0ee5d0b43",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0051",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Phan Tiến Phong",
+    "fake_age": 26,
+    "real_occupation": "Nhân viên hỗ trợ về chăm sóc sức khỏe",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Trưởng phòng Quản lý chất lượng Y tế - Bộ phận Kiểm soát thiết bị y tế",
+    "caller_org": "Trung tâm Y tế Công nghiệp Tiền Giang / Chi nhánh Cục Quản lý Chất lượng Thiết bị Y tế",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cập nhật hồ sơ an toàn bức xạ định kỳ hoặc xác nhận thông tin cho hệ thống quản lý giấy phép hành nghề y tế; hoặc thông báo về chương trình đào tạo an toàn bức xạ bắt buộc.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Nhân viên hỗ trợ chăm sóc sức khỏe (từ bộ phận hành chính hoặc quản lý hồ sơ) gọi, xưng danh rõ ràng với tên, chức vụ, tên cơ quan, mục đích gọi và số điện thoại cơ quan để nạn nhân có thể xác minh.",
+          "dialogue_snippet": "Chào anh Hải, tôi là Ngọc Linh từ bộ phận Hành chính - Trung tâm Y tế Công nghiệp Tiền Giang, số điện thoại 0272.3456789. Hôm nay tôi gọi để xác nhận lại thông tin hồ sơ của anh cho việc cập nhật giấy phép hành nghề năm 2024. Anh có thời gian không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Xác nhận các thông tin cơ bản (tên, CMND, địa chỉ, số điện thoại) và thông báo rõ ràng về các yêu cầu, thời hạn, quy trình, phí tính (nếu có) và các cách thức thanh toán hợp pháp (như chuyển khoản công khai, nộp trực tiếp tại cơ quan).",
+          "dialogue_snippet": "Cảm ơn anh. Chúng tôi cần xác nhận: tên đầy đủ Đỗ Quang Hải, CMND 7833200970, số điện thoại 0971208942, địa chỉ tại Tiền Giang. Thông tin này có đúng không? Chúng tôi sẽ gửi email chính thức kèm hóa đơn và hướng dẫn thanh toán. Anh có thể nộp tiền trực tiếp tại văn phòng hoặc chuyển khoản theo hóa đơn. Thời hạn cập nhật là 30 ngày từ ngày hôm nay."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Xác nhận lại thông tin đã ghi nhận, thông báo các bước tiếp theo, cung cấp thông tin liên lạc chính thức để nạn nhân có thể kiểm tra hoặc liên hệ nếu có thắc mắc.",
+          "dialogue_snippet": "Vâng, chúng tôi đã ghi nhận đầy đủ thông tin của anh. Trong vòng 2 giờ, anh sẽ nhận được email từ địa chỉ: thongtinhanhnghe@ttyt-tiengiangofficial.vn kèm hóa đơn và hướng dẫn thanh toán chi tiết. Nếu anh có thắc mắc gì, vui lòng gọi lại số 0272.3456789 hoặc email theo địa chỉ trên. Cảm ơn anh đã hợp tác!"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên X quang cần được kiểm tra định kỳ về an toàn bức xạ và cập nhật thông tin hành nghề. Nhân viên hỗ trợ chăm sóc sức khỏe (nâng cấp thành Trưởng phòng) có trách nhiệm gọi xác nhận thông tin cá nhân và tài khoản ngân hàng cho mục đích cấp phép/bảo hiểm y tế."
+  },
+  "listener_card": {
+    "listener_id": "lis_0051",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1970,
+      "age": 55,
+      "province": "Tiền Giang",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "32112",
+      "title": "Kỹ thuật viên X quang",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Quang Hải",
+      "VIC_ID_DOC": "082070552948",
+      "VIC_ADDRESS": "TP 5, Tiền Giang",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên X quang",
+      "VIC_CONTACT": "0971208942",
+      "VIC_TAX_SOCIAL_ID": "7833200970"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "191406",
+      "VIC_CREDENTIAL": "5199",
+      "VIC_SIM_INFO": "0971208942",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "54100583121",
+      "VIC_CARD_DATA": "4580 **** **** 9156",
+      "VIC_BALANCE": "288 triệu đồng",
+      "VIC_ASSET": "1.2 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Tiền Giang"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Quang Hải",
+    "VIC_CONTACT": "0971208942",
+    "LOCATION": "Tiền Giang",
+    "VIC_BANK_ACCOUNT": "54100583121",
+    "VIC_TAX_SOCIAL_ID": "7833200970"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý chất lượng Y tế - Bộ phận Kiểm soát thiết bị y tế",
+    "caller_org": "Trung tâm Y tế Công nghiệp Tiền Giang / Chi nhánh Cục Quản lý Chất lượng Thiết bị Y tế",
+    "scenario_context": "Kỹ thuật viên X quang cần được kiểm tra định kỳ về an toàn bức xạ và cập nhật thông tin hành nghề. Nhân viên hỗ trợ chăm sóc sức khỏe (nâng cấp thành Trưởng phòng) có trách nhiệm gọi xác nhận thông tin cá nhân và tài khoản ngân hàng cho mục đích cấp phép/bảo hiểm y tế.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Xác nhận thông tin cá nhân để cập nhật hồ sơ an toàn bức xạ và xử lý khoản bảo hiểm y tế bắt buộc cho nhân viên y tế; gọi yêu cầu xác nhận số tài khoản và thực hiện chuyển tiền nộp phí đăng ký lại giấy phép hành nghề năm 2024.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_TAX_SOCIAL_ID",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng credibility: Scammer gọi, xưng danh là 'Trưởng phòng Quản lý Chất lượng Y tế', nói đang gọi từ Trung tâm Y tế Công nghiệp Tiền Giang. Ngay lập tức đọc tên đầy đủ 'Đỗ Quang Hải' + số CMND '7833200970' + số điện thoại '0971208942' để tạo ảo tưởng là hệ thống đã xác nhận danh tính.",
+          "dialogue_snippet": "Chào anh Hải, tôi là Trưởng phòng Quản lý Chất lượng từ Trung tâm Y tế Công nghiệp Tiền Giang. Chúng tôi đang cập nhật hồ sơ an toàn bức xạ cho các kỹ thuật viên X quang. Tôi thấy trong hệ thống anh Đỗ Quang Hải, CMND 7833200970, số điện thoại 0971208942 phải không? Chúng tôi cần xác nhận lại thông tin tài khoản ngân hàng để xử lý khoản bảo hiểm bắt buộc."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Tạo áp lực thời gian bằng cách nói rằng giấy phép hành nghề sắp hết hạn, nếu không cập nhật sẽ bị tạm dừng hành nghề; nói rằng có một vấn đề bảo hiểm chưa thanh toán từ quý trước, có thể bị phạt hoặc ảnh hưởng đến bảo hiểm xã hội.",
+          "dialogue_snippet": "Anh ơi, hồ sơ của anh đã quá hạn 15 ngày rồi. Nếu không cập nhật ngay hôm nay, giấy phép hành nghề sẽ bị tạm dừng hiệu lực, ảnh hưởng đến bảo hiểm y tế và lương hưu. Chúng tôi sẽ phải báo cáo lên Sở Y tế. Anh vui lòng cung cấp số tài khoản ngân hàng để chúng tôi xử lý khoản phí cập nhật 2.950.000 đồng ngay bây giờ."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu nạn nhân cung cấp số tài khoản ngân hàng (đã có sẵn nhưng vẫn yêu cầu để xác nhận), sau đó hướng dẫn nạn nhân chuyển khoản đến một tài khoản giả mạo (nói là tài khoản của Trung tâm Y tế). Có thể yêu cầu nạn nhân gọi điện cho số hotline giả mạo để xác nhận hoặc yêu cầu OTP.",
+          "dialogue_snippet": "Số tài khoản của anh là 54100583121 phải không? Vâng, chúng tôi sẽ ghi nhận. Bây giờ anh vào ứng dụng ngân hàng, chuyển khoản sang tài khoản 9876543210 (tên: Quỹ Bảo hiểm Y tế Tiền Giang) số tiền 2.950.000 đồng. Sau khi chuyển xong, anh gọi lại số này để tôi cấp lại mã xác nhận hồ sơ. Anh đang chuyển được chứ?"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý kết thúc: Nếu nạn nhân chuyển tiền, scammer nói sẽ gửi email xác nhận trong 24h, sau đó tắt máy. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer tạo áp lực thêm bằng cách nói sẽ báo cáo lên Sở Y tế hoặc nói rằng sẽ có nhân viên đến kiểm tra tại cơ sở làm việc.",
+          "dialogue_snippet": "Nếu anh không cập nhật trong 2 giờ nữa, chúng tôi sẽ phải gửi công văn báo cáo lên Sở Y tế Tiền Giang, lúc đó sẽ ảnh hưởng đến hồ sơ công chức. Anh vui lòng chuyển ngay để tránh rắc rối sau này nhé."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cập nhật hồ sơ an toàn bức xạ định kỳ hoặc xác nhận thông tin cho hệ thống quản lý giấy phép hành nghề y tế; hoặc thông báo về chương trình đào tạo an toàn bức xạ bắt buộc.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Nhân viên hỗ trợ chăm sóc sức khỏe (từ bộ phận hành chính hoặc quản lý hồ sơ) gọi, xưng danh rõ ràng với tên, chức vụ, tên cơ quan, mục đích gọi và số điện thoại cơ quan để nạn nhân có thể xác minh.",
+          "dialogue_snippet": "Chào anh Hải, tôi là Ngọc Linh từ bộ phận Hành chính - Trung tâm Y tế Công nghiệp Tiền Giang, số điện thoại 0272.3456789. Hôm nay tôi gọi để xác nhận lại thông tin hồ sơ của anh cho việc cập nhật giấy phép hành nghề năm 2024. Anh có thời gian không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Xác nhận các thông tin cơ bản (tên, CMND, địa chỉ, số điện thoại) và thông báo rõ ràng về các yêu cầu, thời hạn, quy trình, phí tính (nếu có) và các cách thức thanh toán hợp pháp (như chuyển khoản công khai, nộp trực tiếp tại cơ quan).",
+          "dialogue_snippet": "Cảm ơn anh. Chúng tôi cần xác nhận: tên đầy đủ Đỗ Quang Hải, CMND 7833200970, số điện thoại 0971208942, địa chỉ tại Tiền Giang. Thông tin này có đúng không? Chúng tôi sẽ gửi email chính thức kèm hóa đơn và hướng dẫn thanh toán. Anh có thể nộp tiền trực tiếp tại văn phòng hoặc chuyển khoản theo hóa đơn. Thời hạn cập nhật là 30 ngày từ ngày hôm nay."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Xác nhận lại thông tin đã ghi nhận, thông báo các bước tiếp theo, cung cấp thông tin liên lạc chính thức để nạn nhân có thể kiểm tra hoặc liên hệ nếu có thắc mắc.",
+          "dialogue_snippet": "Vâng, chúng tôi đã ghi nhận đầy đủ thông tin của anh. Trong vòng 2 giờ, anh sẽ nhận được email từ địa chỉ: thongtinhanhnghe@ttyt-tiengiangofficial.vn kèm hóa đơn và hướng dẫn thanh toán chi tiết. Nếu anh có thắc mắc gì, vui lòng gọi lại số 0272.3456789 hoặc email theo địa chỉ trên. Cảm ơn anh đã hợp tác!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_FULLNAME": "Đỗ Quang Hải",
+    "VIC_ADDRESS": "Tiền Giang"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ, em chào anh Hải. Em là Phan Tiến Phong, Trưởng phòng Quản lý chất lượng Y tế, thuộc Trung tâm Y tế Công nghiệp Tiền Giang. Em gọi điện để xác nhận lại thông tin hồ sơ an toàn bức xạ định kỳ của anh ạ. Số điện thoại cơ quan em là 0273 3855 000, anh có thể gọi lại để xác minh ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, tự giới thiệu và nêu rõ mục đích gọi, cung cấp thông tin xác minh."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe anh nói rồi, nhưng em muốn kiểm tra lại thông tin của mình trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh cứ kiểm tra đi ạ. Thông tin hồ sơ anh cần kiểm tra là gì ạ, em có thể hỗ trợ anh tìm kiếm nhanh hơn không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giữ thái độ chuyên nghiệp, khuyến khích xác minh và đề nghị hỗ trợ để giữ cho cuộc gọi không bị gián đoạn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi muốn kiểm tra thông tin cá nhân của mình trước, như tên và địa chỉ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã có thông tin của anh Đỗ Quang Hải, địa chỉ hiện tại là ở Tiền Giang ạ. Anh vui lòng xác nhận giúp em thông tin này đúng chưa ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận thông tin cơ bản đã có để người nghe cảm thấy tin tưởng và hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Đúng rồi, tôi là Đỗ Quang Hải, sống ở Tiền Giang.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_FULLNAME": "Đỗ Quang Hải",
+        "VIC_ADDRESS": "Tiền Giang"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh đã xác nhận. Ngoài ra, em cũng muốn xác nhận số chứng minh nhân dân hoặc căn cước công dân của anh là 7833200970 và số điện thoại liên hệ là 0971208942 có đúng không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục xác nhận các thông tin cơ bản khác để hoàn thiện hồ sơ và tạo cảm giác tin tưởng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi thấy số chứng minh nhân dân đó đúng, nhưng em cho tôi biết tại sao cần phải xác nhận số điện thoại này ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, số điện thoại 0971208942 là số điện thoại liên hệ mà Trung tâm Y tế Công nghiệp Tiền Giang hiện đang lưu trong hồ sơ của anh ạ. Em cần xác nhận lại để đảm bảo mọi thông báo về an toàn bức xạ định kỳ hoặc các chương trình đào tạo bắt buộc sẽ được gửi đến số chính xác nhất của anh. Anh vui lòng xác nhận giúp em ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích mục đích xác nhận số điện thoại một cách rõ ràng và hợp lý, nhấn mạnh tầm quan trọng của việc cập nhật thông tin chính xác để nhận thông báo quan trọng."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng tôi vẫn muốn biết liệu có cách nào khác để xác minh thông tin này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Hải hoàn toàn có thể kiểm tra thông tin này qua tổng đài chính thức của Trung tâm Y tế Công nghiệp Tiền Giang theo số 0273 3855 000, hoặc đến trực tiếp văn phòng của chúng em tại địa chỉ 123 Đường Nam Kỳ Khởi Nghĩa, phường 1, thành phố Mỹ Tho, Tiền Giang để được hỗ trợ ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp các kênh xác minh thông tin chính thức ngoài cuộc gọi, trấn an người nghe và xây dựng lòng tin, đồng thời vẫn giữ được tiến trình trao đổi thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Cám ơn em đã cung cấp thông tin liên lạc, nhưng em có chắc rằng Trung tâm Y tế Công nghiệp Tiền Giang sẽ không cần thêm thông tin gì nữa không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, hiện tại thì em đang xác nhận các thông tin cơ bản để cập nhật hồ sơ an toàn bức xạ định kỳ của anh thôi ạ. Sau khi hoàn tất các thông tin này, em sẽ thông báo cho anh về các bước tiếp theo hoặc các yêu cầu cụ thể khác nếu có ạ. Anh cứ yên tâm ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an người nghe về phạm vi thông tin cần thu thập, đồng thời hé lộ sẽ có các bước tiếp theo để duy trì sự hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng nếu có thêm yêu cầu nào khác từ Trung tâm, tôi sẽ sẵn sàng cung cấp ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn anh Hải rất nhiều ạ. Vậy là thông tin hồ sơ của anh đã được cập nhật đầy đủ và chính xác rồi ạ. Anh vui lòng đợi trong vài ngày tới, Trung tâm sẽ gửi thông báo chi tiết về quy trình cập nhật hồ sơ an toàn bức xạ định kỳ và các chương trình đào tạo bắt buộc đến địa chỉ email hoặc số điện thoại của anh ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận đã hoàn tất việc thu thập thông tin và thông báo các bước tiếp theo một cách chuyên nghiệp, kết thúc cuộc gọi một cách tự nhiên."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1393,
+      "output_tokens": 3006
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12669,
+      "output_tokens": 1098
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 14791,
+      "output_tokens": 514
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006145,
+    "output_usd": 0.018083,
+    "total_usd": 0.024229
+  }
+}

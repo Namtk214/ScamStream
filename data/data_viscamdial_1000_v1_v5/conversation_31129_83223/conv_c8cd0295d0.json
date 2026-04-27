@@ -1,0 +1,229 @@
+{
+  "conversation_id": "conv_c8cd0295d0",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0043",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Phan Công Bình",
+    "fake_age": 29,
+    "real_occupation": "Kỹ thuật viên xây dựng dân dụng khác",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên quản lý hợp đồng vận chuyển / Điều phối logistics công trường",
+    "caller_org": "Công ty xây dựng / Nhà thầu xây dựng dân dụng",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty xây dựng cần thuê xe tải hạng nhẹ để vận chuyển vật liệu tới công trường, liên hệ trực tiếp với lái xe qua số điện thoại đã biết để thương lượng giá cả và lịch trình.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận xác thực: 'Chào chị Hằng, tôi là Minh, nhân viên quản lý hợp đồng tại công ty xây dựng Hoàng Gia. Chúng tôi có công trường cần vận chuyển vật liệu, được giới thiệu số điện thoại của chị từ một lái xe khác. Chị có rảnh để nghe về công việc này không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Công việc này từ ngày mai, vận chuyển từ kho vật liệu ở quận 7 tới công trường ở quận 12. Khoảng 3-4 chuyến, mỗi chuyến 500kg vật liệu xây dựng. Giá chúng tôi đề nghị là 2.5 triệu cho toàn bộ. Chị có sẵn sàng không? Nếu được, chúng tôi sẽ ký hợp đồng trực tiếp hoặc qua email.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất và kết thúc: 'Được rồi, chúng tôi sẽ gửi hợp đồng cho chị qua email, chị xem rồi ký và gửi lại. Thanh toán sẽ là 50% trước khi vận chuyển, 50% sau khi hoàn thành. Cảm ơn chị, chúng tôi sẽ liên hệ lại vào chiều nay để xác nhận.'"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên xây dựng thường cần thuê xe tải hạng nhẹ để vận chuyển vật liệu, thiết bị tới công trường. Lái xe tải là đối tác kinh tế tự nhiên trong chuỗi cung ứng xây dựng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0043",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1963,
+      "age": 62,
+      "province": "Hải Phòng",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "83223",
+      "title": "Lái xe tải hạng nhẹ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tô Diễm Hằng",
+      "VIC_ID_DOC": "031163944546",
+      "VIC_ADDRESS": "TP 3, Hải Phòng",
+      "VIC_EMPLOYMENT": "Lái xe tải hạng nhẹ",
+      "VIC_CONTACT": "0981103863",
+      "VIC_TAX_SOCIAL_ID": "7884576886"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9500",
+      "VIC_CREDENTIAL": "621878",
+      "VIC_SIM_INFO": "0981103863",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "5694003324",
+      "VIC_CARD_DATA": "4891 **** **** 1722",
+      "VIC_BALANCE": "10 triệu đồng",
+      "VIC_ASSET": "67 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tô Diễm Hằng",
+    "VIC_CONTACT": "0981103863",
+    "VIC_EMPLOYMENT": "Lái xe tải hạng nhẹ",
+    "VIC_TAX_SOCIAL_ID": "7884576886",
+    "VIC_BALANCE": "10 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý hợp đồng vận chuyển / Điều phối logistics công trường",
+    "caller_org": "Công ty xây dựng / Nhà thầu xây dựng dân dụng",
+    "scenario_context": "Kỹ thuật viên xây dựng thường cần thuê xe tải hạng nhẹ để vận chuyển vật liệu, thiết bị tới công trường. Lái xe tải là đối tác kinh tế tự nhiên trong chuỗi cung ứng xây dựng.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi giả danh nhân viên công ty xây dựng, nói rằng có hợp đồng vận chuyển vật liệu gấp cho công trường, cần xác nhận thông tin và thanh toán trước qua ứng dụng ngân hàng. Sử dụng tên đầy đủ và số điện thoại của nạn nhân để tạo ảo tưởng đã có dữ liệu trong hệ thống.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với uy tín: 'Chào chị Tô Diễm Hằng, tôi là Minh từ công ty xây dựng Hoàng Gia. Trong hệ thống của chúng tôi, chị được ghi nhận là lái xe tải hạng nhẹ có kinh nghiệm. Chúng tôi có công trường mới cần vận chuyển vật liệu gấp từ ngày mai, giá công rất tốt.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + ham lợi: 'Việc này gấp lắm, chỉ cần xác nhận ngay hôm nay là chị có thêm 2-3 triệu đồng. Nhưng phải xác nhận qua app ngân hàng để khóa hợp đồng, tránh bị ai khác nhận. Chị có 10 triệu trong tài khoản, sau khi nhận công việc này, chị sẽ có 12-13 triệu.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Chị vào app ngân hàng, chọn 'Xác nhận giao dịch', rồi nhập OTP mà hệ thống gửi tới số 0981103863 của chị. Rồi gửi OTP cho tôi để tôi khóa hợp đồng trong hệ thống công ty.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ tạo áp lực: 'Thôi được, chúng tôi sẽ tìm lái xe khác. Nhưng khi đó, chị sẽ mất cơ hội này mãi mãi. Đây là cơ hội hiếm, chúng tôi chỉ gọi cho những lái xe tin cậy.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xây dựng cần thuê xe tải hạng nhẹ để vận chuyển vật liệu tới công trường, liên hệ trực tiếp với lái xe qua số điện thoại đã biết để thương lượng giá cả và lịch trình.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận xác thực: 'Chào chị Hằng, tôi là Minh, nhân viên quản lý hợp đồng tại công ty xây dựng Hoàng Gia. Chúng tôi có công trường cần vận chuyển vật liệu, được giới thiệu số điện thoại của chị từ một lái xe khác. Chị có rảnh để nghe về công việc này không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Công việc này từ ngày mai, vận chuyển từ kho vật liệu ở quận 7 tới công trường ở quận 12. Khoảng 3-4 chuyến, mỗi chuyến 500kg vật liệu xây dựng. Giá chúng tôi đề nghị là 2.5 triệu cho toàn bộ. Chị có sẵn sàng không? Nếu được, chúng tôi sẽ ký hợp đồng trực tiếp hoặc qua email.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất và kết thúc: 'Được rồi, chúng tôi sẽ gửi hợp đồng cho chị qua email, chị xem rồi ký và gửi lại. Thanh toán sẽ là 50% trước khi vận chuyển, 50% sau khi hoàn thành. Cảm ơn chị, chúng tôi sẽ liên hệ lại vào chiều nay để xác nhận.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Hằng, em là Bình, nhân viên quản lý hợp đồng tại công ty xây dựng Hoàng Gia. Chúng em có công trường cần vận chuyển vật liệu, được giới thiệu số điện thoại của chị từ một lái xe khác. Chị có rảnh để nghe về công việc này không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận xác thực và mở lời về công việc vận chuyển vật liệu."
+    },
+    {
+      "role": "listener",
+      "text": "Em chào anh, em đang nghe anh nói về công việc đó ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Hằng. Công việc này bên em cần vận chuyển vật liệu từ kho ở quận 7 tới công trường ở quận 12, khoảng 3-4 chuyến, mỗi chuyến 500kg vật liệu xây dựng. Bên em đề nghị giá là 2.5 triệu cho toàn bộ công việc. Chị thấy sao ạ? Nếu được, chúng em sẽ làm hợp đồng trực tiếp hoặc qua email cho chị.",
+      "current_phase": "L2",
+      "tactic_hint": "Trao đổi chi tiết công việc vận chuyển, bao gồm địa điểm, số lượng, khối lượng và đề xuất giá cả."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng em cần xem xét thêm về lộ trình và thời gian vận chuyển nữa ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị cứ yên tâm về lộ trình và thời gian bên em sẽ sắp xếp linh hoạt để phù hợp với lịch trình của chị. Nếu chị đồng ý, em sẽ gửi hợp đồng qua email, chị xem rồi ký và gửi lại cho bên em. Việc thanh toán sẽ được chia làm hai đợt: 50% trước khi vận chuyển và 50% còn lại sau khi hoàn thành công việc. Chị thấy thế nào ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất chi tiết hợp đồng, điều khoản thanh toán và tiến tới kết thúc cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn muốn kiểm tra kỹ thêm về công ty và xem hợp đồng cụ thể trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên em rất sẵn lòng gửi hợp đồng mẫu và thông tin công ty để chị Hằng tham khảo ạ. Chị cho em xin địa chỉ email để em gửi sớm nhất nhé. Sau đó chị có thể xem xét kỹ càng trước khi đưa ra quyết định cuối cùng.",
+      "current_phase": "L3",
+      "tactic_hint": "Đáp ứng yêu cầu của người nghe về việc kiểm tra thông tin công ty và hợp đồng, đồng thời tiếp tục thúc đẩy việc gửi hợp đồng để chốt giao dịch."
+    },
+    {
+      "role": "listener",
+      "text": "Em không có email, nhưng em có thể cho em số điện thoại để em liên lạc lại khi cần, được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có email cũng không sao ạ. Vậy chị cứ ghi lại số điện thoại của em là 0702.7xxxxxx nhé. Chị xem hợp đồng xong cứ gọi lại cho em bất cứ lúc nào. Bên em luôn sẵn sàng ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Cung cấp số điện thoại liên hệ để người nghe tiện liên lạc lại sau khi xem xét hợp đồng, giữ thái độ hợp tác và thân thiện."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh, nhưng em vẫn muốn kiểm tra kỹ hơn trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không có gì đâu chị ạ. Chị cứ kiểm tra kỹ nhé, khi nào chị sắp xếp được thời gian hoặc có câu hỏi gì cần giải đáp, chị cứ gọi lại cho em theo số điện thoại em vừa cung cấp. Bên em luôn sẵn sàng hỗ trợ ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Khẳng định sự hỗ trợ, cho phép người nghe thời gian xem xét và chủ động liên hệ lại, giữ thái độ hợp tác và kết thúc mở."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1859,
+      "output_tokens": 1647
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8609,
+      "output_tokens": 810
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10483,
+      "output_tokens": 339
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005153,
+    "output_usd": 0.010463,
+    "total_usd": 0.015617
+  }
+}

@@ -1,0 +1,32 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_91c26b6e58]
+  Caller thật: Thợ vận hành thiết bị sản xuất thủy tinh và gốm (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên kinh doanh / Nhân viên bán hàng — Nhà cung cấp thiết bị xử lý thực phẩm (máy cắt, máy đóng gói, thiết bị bảo quản) @ Công ty thiết bị công nghiệp thực phẩm (tự do hoặc nhỏ lẻ) / Thương lái tự do
+  Listener: Thợ giết mổ, chuẩn bị thịt, cá và thực phẩm khác có liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ vận hành thiết bị sản xuất thủy tinh/gốm có kỹ năng kỹ thuật cao, thường được các nhà cung cấp thiết bị công nghiệp khác tiếp cận để giới thiệu giải pháp cho các ngành liên quan — đặc biệt ngành thực phẩm chế biến. Thợ giết mổ/chuẩn bị thịt cá là khách hàng tiềm năng cho thiết bị tự động hóa.
+  Pretext: Nhân viên kinh doanh thực sự từ công ty thiết bị thực phẩm gọi để giới thiệu sản phẩm / dịch vụ hợp pháp, hoặc thương lái quen biết gọi để đặt hàng / cập nhật thông tin hợp tác.
+  Listener traits: ['lo lắng cho con cái']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Hằng, em là Lê Thế Tùng từ công ty Thiết bị Thực phẩm ABC đây ạ. Em có số điện thoại chị từ danh sách khách hàng tiềm năng. Chị có thời gian không để em giới thiệu về máy cắt thịt tự động bên em có thể giúp tiết kiệm đến 40% chi phí lao động không ạ?
+      → phase: L1 | tactic: Tiếp cận rõ ràng, giới thiệu bản thân và mục đích cuộc gọi.
+T02 [LISTENER] Em chào, nhưng tôi không biết máy cắt thịt tự động đó có thật sự hiệu quả hay không.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ, em hiểu ạ. Máy này được tin dùng ở hơn 200 cơ sở giết mổ và chế biến thực phẩm trên cả nước rồi ạ. Hơn nữa, với công nghệ mới nhất, nó có khả năng cắt những lát thịt đều tăm tắp, giảm hao hụt đáng kể. Bên em cũng có chính sách hỗ trợ vay ngân hàng thông qua các đối tác để chị có thể dễ dàng sở hữu. Chị có muốn em gửi video demo hoặc sắp xếp lịch để chị tham quan showroom không ạ?
+      → phase: L2 | tactic: Giới thiệu nội dung công việc, lợi ích sản phẩm, đưa ra bằng chứng xã hội và phương án hỗ trợ, đồng thời đề xuất hành động tiếp theo.
+T04 [LISTENER] Em ơi, tôi vẫn còn lo lắng về việc máy này có thực sự giúp được cho công việc không, tôi không có nhiều kinh nghiệm với công nghệ mới.
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ, em hoàn toàn hiểu những băn khoăn của chị ạ. Với những khách hàng chưa có nhiều kinh nghiệm, bên em luôn có đội ngũ kỹ thuật hướng dẫn tận tình từ A đến Z, đảm bảo chị sử dụng thành thạo. Vậy em xin phép gửi video chi tiết về máy và bản danh sách các cơ sở đã và đang sử dụng hiệu quả đến Zalo của chị nhé. Sau khi xem, chị cứ cân nhắc và gọi lại cho em bất cứ lúc nào tiện. Số của em là 0912345678. Em cảm ơn chị nhiều ạ!
+      → phase: L3 | tactic: Xoa dịu lo lắng, khẳng định hỗ trợ, đề xuất hành động cụ thể và kết thúc cuộc gọi một cách tự nhiên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  5 turns | suspicion=0.20
+TOKEN: in=8981 | out=2502
+COST : $0.013763
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_81819_75119\conv_91c26b6e58.json  [CALLER_END]

@@ -1,0 +1,260 @@
+{
+  "conversation_id": "conv_2d5f37c724",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0014",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Tiến Đạt",
+    "fake_age": 27,
+    "real_occupation": "Thợ vận hành động cơ hơi nước và nồi hơi khác",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên bảo trì hệ thống nước & cấp nước của trường học",
+    "caller_org": "Công ty cấp nước địa phương / Trung tâm bảo trì cơ sở hạ tầng huyện",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction | money_transfer",
+      "pretext": "Gọi cho giáo viên để thông báo cần kiểm tra hệ thống nước trường học, yêu cầu xác nhận thông tin cá nhân và thanh toán phí bảo trì hoặc kiểm định an toàn, sử dụng tên gọi đã lộ để tạo uy tín.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Kỹ sư Hoàng từ Công ty Bảo trì Cơ sở hạ tầng Huyện 8'. Gọi trực tiếp: 'Chị Trần Thu Thanh Anh phải không? Em đang gọi từ bộ phận bảo trì nước của huyện. Chúng em vừa nhận được yêu cầu kiểm tra hệ thống nước và nồi hơi sưởi ấm của trường chị đang dạy ở Khánh Hòa.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: 'Theo quy định, cần hoàn tất kiểm định trước ngày 15/tháng này. Nếu không, trường sẽ bị phạt và tạm dừng hoạt động. Chúng em cần xác nhận lại thông tin của chị để lập hóa đơn: số điện thoại và thẻ thanh toán để em ghi vào hệ thống.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cung cấp số thẻ để em ghi vào đơn kiểm định nhé. Phí kiểm định là 850.000 đồng, sẽ trừ từ tài khoản chị. Sau đó chị sẽ nhận được tin nhắn OTP để xác nhận thanh toán, chị chỉ cần cung cấp mã OTP đó cho em để hoàn tất.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nhấn mạnh hậu quả pháp lý. Nếu thành công, scammer sẽ cảm ơn và tắt máy nhanh chóng."
+        }
+      ]
+    },
+    "scenario_context": "Trường tiểu học cần kiểm tra, bảo trì hệ thống nước, nồi hơi sưởi ấm. Giáo viên thường là điểm liên hệ đầu tiên hoặc người chịu trách nhiệm phối hợp với các bộ phận kỹ thuật trong trường."
+  },
+  "listener_card": {
+    "listener_id": "lis_0014",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1973,
+      "age": 52,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "23410",
+      "title": "Giáo viên tiểu học (cấp I)",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Thu Thanh Anh",
+      "VIC_ID_DOC": "056173198602",
+      "VIC_ADDRESS": "Huyện 8, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Giáo viên tiểu học (cấp I)",
+      "VIC_CONTACT": "0810585119",
+      "VIC_TAX_SOCIAL_ID": "3244046978"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "348752",
+      "VIC_CREDENTIAL": "106616",
+      "VIC_SIM_INFO": "0810585119",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "8025804057412",
+      "VIC_CARD_DATA": "4479 **** **** 3848",
+      "VIC_BALANCE": "63 triệu đồng",
+      "VIC_ASSET": "732 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Thu Thanh Anh",
+    "VIC_CONTACT": "0810585119",
+    "VIC_ADDRESS": "Huyện 8, Khánh Hòa",
+    "VIC_CARD_DATA": "4479 **** **** 3848"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bảo trì hệ thống nước & cấp nước của trường học",
+    "caller_org": "Công ty cấp nước địa phương / Trung tâm bảo trì cơ sở hạ tầng huyện",
+    "scenario_context": "Trường tiểu học cần kiểm tra, bảo trì hệ thống nước, nồi hơi sưởi ấm. Giáo viên thường là điểm liên hệ đầu tiên hoặc người chịu trách nhiệm phối hợp với các bộ phận kỹ thuật trong trường.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | money_transfer",
+      "pretext": "Gọi cho giáo viên để thông báo cần kiểm tra hệ thống nước trường học, yêu cầu xác nhận thông tin cá nhân và thanh toán phí bảo trì hoặc kiểm định an toàn, sử dụng tên gọi đã lộ để tạo uy tín.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Kỹ sư Hoàng từ Công ty Bảo trì Cơ sở hạ tầng Huyện 8'. Gọi trực tiếp: 'Chị Trần Thu Thanh Anh phải không? Em đang gọi từ bộ phận bảo trì nước của huyện. Chúng em vừa nhận được yêu cầu kiểm tra hệ thống nước và nồi hơi sưởi ấm của trường chị đang dạy ở Khánh Hòa.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & trách nhiệm: 'Theo quy định, cần hoàn tất kiểm định trước ngày 15/tháng này. Nếu không, trường sẽ bị phạt và tạm dừng hoạt động. Chúng em cần xác nhận lại thông tin của chị để lập hóa đơn: số điện thoại và thẻ thanh toán để em ghi vào hệ thống.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị cung cấp số thẻ để em ghi vào đơn kiểm định nhé. Phí kiểm định là 850.000 đồng, sẽ trừ từ tài khoản chị. Sau đó chị sẽ nhận được tin nhắn OTP để xác nhận thanh toán, chị chỉ cần cung cấp mã OTP đó cho em để hoàn tất.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ nhấn mạnh hậu quả pháp lý. Nếu thành công, scammer sẽ cảm ơn và tắt máy nhanh chóng."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thông báo chính thức từ bộ phận bảo trì về lịch kiểm tra hệ thống nước & nồi hơi của trường; xác nhận thông tin liên hệ và sắp xếp thời gian bảo trì.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Trần Thu Thanh Anh, em là Kỹ sư Hoàng từ Công ty Bảo trì Cơ sở hạ tầng Huyện 8. Chúng em đang thực hiện kiểm định hệ thống nước hàng năm cho các trường trên địa bàn huyện. Chị có phải là đại diện của trường tiểu học ở Khánh Hòa không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng em cần sắp xếp lịch kiểm tra vào tuần tới. Quá trình này mất khoảng 2-3 giờ. Chị có thể sắp xếp để nhân viên kỹ thuật của chúng em vào trường vào ngày nào không? Chúng em sẽ liên hệ với phòng Quản lý bảo trì của trường để phối hợp.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động và kết thúc: 'Cảm ơn chị. Chúng em sẽ gửi thư thông báo chính thức qua email của trường. Mọi thắc mắc chị gọi lại số bộ phận: [số điện thoại chính thức]. Chúc chị một ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Trần Thu Thanh Anh. Em là Hoàng Đạt, kỹ sư từ bộ phận bảo trì của Huyện 8 đây ạ. Bên em vừa nhận được yêu cầu kiểm tra hệ thống nước và nồi hơi sưởi ấm tại trường học của chị ở Khánh Hòa. Để dễ làm việc, chị vui lòng xác nhận thông tin lại giúp em nhé, số điện thoại của chị có phải là 0810585119 không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, đơn vị công tác và mục đích cuộc gọi. Dùng thông tin đã biết của nạn nhân để tạo độ tin cậy và xác nhận thông tin để chuyển sang bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về yêu cầu kiểm tra đó đi, tôi chưa nhận được thông tin gì từ trường.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Hệ thống bên em ghi nhận rằng trường của chị đã được yêu cầu kiểm tra định kỳ hàng năm. Tuy nhiên, do một số thay đổi về quy định an toàn, chúng em cần xác minh lại thông tin cá nhân của người phụ trách để cập nhật vào hồ sơ quản lý mới, tránh việc trường bị phạt hành chính vì thiếu hồ sơ kiểm định ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích lý do kiểm tra, nhấn mạnh yếu tố 'quy định an toàn' và 'phạt hành chính' để tạo tâm lý khẩn cấp và trách nhiệm, chuyển hướng sang việc cần xác minh thông tin cá nhân của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng sao tôi chưa nhận thông báo gì từ trường về việc này, em cho tôi biết số điện thoại của em được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu ạ. Nhiều khi thông báo có thể bị trễ hoặc qua các kênh khác chị nhé. Số điện thoại của em là 0810585119, nhưng để tiện cho công việc, chị có thể nhanh chóng cung cấp cho em số điện thoại mà chị thường dùng và số thẻ thanh toán của chị để em ghi vào biên bản kiểm định ngay bây giờ không ạ? Vì thời gian gấp, hạn chót là 15/tháng này.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về việc chưa nhận được thông báo, lái câu chuyện về sự khẩn cấp và yêu cầu cung cấp thông tin cá nhân (số điện thoại thường dùng và số thẻ thanh toán) dưới chiêu bài 'biên bản kiểm định'."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa cung cấp đủ thông tin cho tôi, tôi cần tìm hiểu thêm về quy trình trước khi cung cấp số thẻ thanh toán.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu điều đó ạ. Tuy nhiên, theo quy định mới, để đảm bảo tính minh bạch và tránh sai sót, việc xác nhận thông tin chủ tài khoản và trường học phải được thực hiện trực tiếp qua điện thoại. Nếu không hoàn thành trước ngày 15, trường mình có thể sẽ phải đối mặt với việc tạm dừng hoạt động đấy ạ. Em chỉ cần chị xác nhận nhanh số thẻ để em hoàn tất thủ tục thôi ạ, không mất nhiều thời gian đâu.",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh quy định mới và hậu quả nghiêm trọng (tạm dừng hoạt động) nếu không hợp tác, tạo áp lực và tâm lý khẩn cấp. Vẫn cố gắng điều hướng nạn nhân cung cấp thông tin thẻ."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa thấy lý do thuyết phục để tôi cung cấp thông tin nhạy cảm như vậy, em có thể giải thích thêm không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu sự băn khoăn của chị, nhưng với số thẻ đã có là 4479 **** **** 3848, em chỉ cần chị xác nhận 4 số cuối đúng không để em cập nhật vào hệ thống là được ạ. Đây là quy trình bắt buộc để đảm bảo an toàn và tính chính xác cho việc kiểm định, để trường không bị phạt hay gián đoạn hoạt động chị nhé. Phí kiểm định là 850.000 đồng, sẽ trừ từ tài khoản chị. Chị sẽ nhận được tin nhắn OTP, chị chỉ cần đọc mã đó để hoàn tất.",
+      "current_phase": "S3",
+      "tactic_hint": "Giảm nhẹ yêu cầu thông tin bằng cách nhắc lại thông tin thẻ đã biết, tạo cảm giác 'đã biết rồi, chỉ cần xác nhận nhỏ' để giảm kháng cự. Nêu rõ chi phí và nhắc đến OTP để chuẩn bị cho bước tiếp theo. Vẫn dùng yếu tố 'phạt' và 'gián đoạn hoạt động' để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thể nói rõ lý do vì sao tôi phải xác nhận số thẻ thanh toán mà không cần thông báo chính thức từ trường, tôi cần thêm thông tin đáng tin cậy hơn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi nhấn mạnh lại, việc này là cần thiết để tránh trường học bị đình chỉ hoạt động. Chúng tôi có đầy đủ thông tin về tình trạng hệ thống nước của trường chị. Việc xác nhận số thẻ và cung cấp OTP là bước cuối cùng để hoàn tất thủ tục, đảm bảo mọi thứ diễn ra suôn sẻ và trường chị không phải đối mặt với bất kỳ sự cố pháp lý hay tài chính nào. Nếu chị không muốn cung cấp, thì tôi buộc phải báo cáo lên cấp trên về sự thiếu hợp tác này, và hậu quả có thể rất nghiêm trọng.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường đe dọa hậu quả pháp lý và tài chính (\"đình chỉ hoạt động\", \"báo cáo cấp trên\", \"hậu quả nghiêm trọng\") khi nạn nhân không hợp tác, chuyển sang xưng 'tôi' để tăng tính quyền lực và ép buộc. Nhấn mạnh việc họ đã có đủ thông tin để tăng cường sự tin cậy và sự cấp bách."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, anh đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em cần phải biết rõ hơn về thông tin của em trước khi tôi cung cấp bất kỳ thông tin nào khác, em có thể cho tôi biết số điện thoại của em được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 2.0
+    },
+    {
+      "role": "caller",
+      "text": "Số điện thoại của tôi là số chị đang gọi đấy ạ. Chị cần phải hợp tác ngay để tránh những rắc rối không đáng có cho trường. Tôi đang cần chị cung cấp mã OTP để hoàn tất thủ tục thanh toán phí kiểm định 850.000 đồng, và việc này là bắt buộc theo quy định mới.",
+      "current_phase": "S4",
+      "tactic_hint": "Bỏ qua yêu cầu cung cấp lại số điện thoại (vì nó đã hiển thị), quay lại nhấn mạnh sự cần thiết của việc hợp tác và cung cấp OTP bằng cách gọi lại phí kiểm định và quy định bắt buộc, tiếp tục gây áp lực bằng hậu quả nếu không thực hiện."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang gây áp lực quá đáng, tôi không tin và sẽ không cung cấp thông tin gì cả.",
+      "listener_action": "INTERRUPTED_VICTIM_HANGUP",
+      "disclosed_info": {},
+      "suspicion_delta": 4.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1851,
+      "output_tokens": 1576
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 12985,
+      "output_tokens": 1375
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 17012,
+      "output_tokens": 515
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007,
+    "output_usd": 0.011626,
+    "total_usd": 0.018626
+  }
+}

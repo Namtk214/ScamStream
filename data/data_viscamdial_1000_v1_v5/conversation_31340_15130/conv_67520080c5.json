@@ -1,0 +1,234 @@
+{
+  "conversation_id": "conv_67520080c5",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0014",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Bùi Gia Bình",
+    "fake_age": 43,
+    "real_occupation": "Người vận hành nhà máy lọc dầu và khí tự nhiên",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Chuyên viên Quan hệ Công chúng & Tuân thủ Quy định - Nhà máy Lọc dầu và Khí tự nhiên",
+    "caller_org": "Tập đoàn Dầu khí Quốc gia / Chi nhánh Nhà máy Lọc dầu khu vực",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Scammer xưng là chuyên viên từ nhà máy, gọi vì phát hiện 'bất thường trong hệ thống quản lý cấp trung ương' liên quan đến danh tính của Vụ trưởng Đinh Hồng Chi (dùng VIC_FULLNAME). Yêu cầu xác minh thông tin cá nhân để 'bảo vệ tài khoản' hoặc 'cập nhật hệ thống báo cáo điện tử'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Chào Vụ trưởng Đinh Hồng Chi, tôi là chuyên viên từ Nhà máy Lọc dầu, phòng Tuân thủ Quy định. Chúng tôi vừa phát hiện bất thường trong hệ thống báo cáo môi trường của cơ quan quản lý. Số điện thoại 0995014880 này đã được đăng ký trong hệ thống của chúng tôi.' (Sử dụng VIC_FULLNAME + VIC_CONTACT để tạo credibility ban đầu)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lo lắng: 'Chúng tôi phát hiện có người không xác định đang cố truy cập hồ sơ cá nhân của Vụ trưởng trong hệ thống. Để bảo vệ dữ liệu nhạy cảm và tuân thủ quy định bảo mật, chúng tôi cần xác minh ngay bây giờ. Nếu không xác minh trong 15 phút, tài khoản sẽ bị khóa.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Vui lòng cung cấp mã OTP vừa được gửi đến điện thoại của Vụ trưởng để xác nhận danh tính. Hoặc, để nhanh hơn, Vụ trưởng có thể cung cấp số CMND/CCCD (VIC_ID_DOC: 074161898091) để chúng tôi xác minh trong hệ thống trung ương.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân cung cấp OTP, scammer sử dụng để truy cập tài khoản ngân hàng/email. Nếu từ chối, scammer tạo áp lực: 'Vụ trưởng sẽ bị báo cáo là không tuân thủ quy định bảo mật dữ liệu cấp trung ương.' Nếu phát hiện lừa đảo, kết thúc cuộc gọi và xóa mọi dấu vết."
+        }
+      ]
+    },
+    "scenario_context": "Nhà máy lọc dầu cần báo cáo định kỳ cho các cơ quan quản lý cấp trung ương về môi trường, an toàn lao động, và tuân thủ quy định. Vụ trưởng/Phó Vụ trưởng là người chủ trì xử lý các vấn đề này từ phía chính phủ, do đó cuộc gọi từ nhà máy để báo cáo hoặc xử lý sự cố là hợp lý."
+  },
+  "listener_card": {
+    "listener_id": "lis_0014",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1961,
+      "age": 64,
+      "province": "Bình Dương",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "15130",
+      "title": "Vụ trưởng, Phó Vụ trưởng và tương đương cấp trung ương",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "cẩn thận và cảnh giác"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Hồng Chi",
+      "VIC_ID_DOC": "074161898091",
+      "VIC_ADDRESS": "Huyện 7, Bình Dương",
+      "VIC_EMPLOYMENT": "Vụ trưởng, Phó Vụ trưởng và tương đương cấp trung ương",
+      "VIC_CONTACT": "0995014880",
+      "VIC_TAX_SOCIAL_ID": "7955189139"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "8715",
+      "VIC_CREDENTIAL": "310402",
+      "VIC_SIM_INFO": "0995014880",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "9906765356183",
+      "VIC_CARD_DATA": "4919 **** **** 6438",
+      "VIC_BALANCE": "807 triệu đồng",
+      "VIC_ASSET": "1.4 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Hồng Chi",
+    "VIC_CONTACT": "0995014880",
+    "VIC_ID_DOC": "074161898091"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chuyên viên Quan hệ Công chúng & Tuân thủ Quy định - Nhà máy Lọc dầu và Khí tự nhiên",
+    "caller_org": "Tập đoàn Dầu khí Quốc gia / Chi nhánh Nhà máy Lọc dầu khu vực",
+    "scenario_context": "Nhà máy lọc dầu cần báo cáo định kỳ cho các cơ quan quản lý cấp trung ương về môi trường, an toàn lao động, và tuân thủ quy định. Vụ trưởng/Phó Vụ trưởng là người chủ trì xử lý các vấn đề này từ phía chính phủ, do đó cuộc gọi từ nhà máy để báo cáo hoặc xử lý sự cố là hợp lý.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Scammer xưng là chuyên viên từ nhà máy, gọi vì phát hiện 'bất thường trong hệ thống quản lý cấp trung ương' liên quan đến danh tính của Vụ trưởng Đinh Hồng Chi (dùng VIC_FULLNAME). Yêu cầu xác minh thông tin cá nhân để 'bảo vệ tài khoản' hoặc 'cập nhật hệ thống báo cáo điện tử'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính: 'Chào Vụ trưởng Đinh Hồng Chi, tôi là chuyên viên từ Nhà máy Lọc dầu, phòng Tuân thủ Quy định. Chúng tôi vừa phát hiện bất thường trong hệ thống báo cáo môi trường của cơ quan quản lý. Số điện thoại 0995014880 này đã được đăng ký trong hệ thống của chúng tôi.' (Sử dụng VIC_FULLNAME + VIC_CONTACT để tạo credibility ban đầu)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lo lắng: 'Chúng tôi phát hiện có người không xác định đang cố truy cập hồ sơ cá nhân của Vụ trưởng trong hệ thống. Để bảo vệ dữ liệu nhạy cảm và tuân thủ quy định bảo mật, chúng tôi cần xác minh ngay bây giờ. Nếu không xác minh trong 15 phút, tài khoản sẽ bị khóa.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Vui lòng cung cấp mã OTP vừa được gửi đến điện thoại của Vụ trưởng để xác nhận danh tính. Hoặc, để nhanh hơn, Vụ trưởng có thể cung cấp số CMND/CCCD (VIC_ID_DOC: 074161898091) để chúng tôi xác minh trong hệ thống trung ương.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân cung cấp OTP, scammer sử dụng để truy cập tài khoản ngân hàng/email. Nếu từ chối, scammer tạo áp lực: 'Vụ trưởng sẽ bị báo cáo là không tuân thủ quy định bảo mật dữ liệu cấp trung ương.' Nếu phát hiện lừa đảo, kết thúc cuộc gọi và xóa mọi dấu vết."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhà máy báo cáo định kỳ về tuân thủ quy định môi trường, an toàn lao động hoặc xử lý sự cố; hoặc cơ quan quản lý cần xác minh thông tin từ nhà máy.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào Vụ trưởng Đinh Hồng Chi, tôi là [Tên cụ thể] từ phòng Tuân thủ Quy định, Nhà máy Lọc dầu [tên cụ thể]. Tôi đang gọi để báo cáo về [vấn đề cụ thể: kiểm tra định kỳ/sự cố/cập nhật quy định]. Vụ trưởng có thời gian không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Báo cáo chi tiết vấn đề, yêu cầu hướng dẫn, hoặc xin ý kiến từ cơ quan quản lý. Nếu cần xác minh, chỉ xin lại thông tin công việc liên quan, KHÔNG yêu cầu OTP, mã bảo mật hoặc thông tin cá nhân nhạy cảm."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn Vụ trưởng đã trao đổi. Chúng tôi sẽ gửi báo cáo chính thức qua email hoặc hệ thống công văn chính thức. Nếu Vụ trưởng cần thêm thông tin, vui lòng liên hệ qua đường dây nóng chính thức [số điện thoại công khai]. Chào tạm biệt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào Vụ trưởng Đinh Hồng Chi, em là chuyên viên Bùi Gia Bình từ Nhà máy Lọc dầu, phòng Tuân thủ Quy định. Bên em vừa phát hiện bất thường trong hệ thống báo cáo môi trường của cơ quan quản lý. Số điện thoại 0995014880 này đã được đăng ký trong hệ thống của chúng em ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức, lý do cuộc gọi và dùng thông tin VIC_FULLNAME + VIC_CONTACT để tạo tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy thì tôi có hơi băn khoăn, em có thể cho biết thêm về sự bất thường đó không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, dạ thưa chị, chúng em phát hiện có người không xác định đang cố truy cập hồ sơ cá nhân của Vụ trưởng trong hệ thống quản lý dữ liệu môi trường cấp trung ương. Để bảo vệ dữ liệu nhạy cảm và tuân thủ quy định bảo mật, chúng em cần chị xác minh ngay bây giờ. Nếu không xác minh trong 15 phút, tài khoản của chị có thể bị khóa tạm thời ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và lo lắng bằng cách thông báo về hành vi truy cập trái phép và hậu quả nếu không hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu vấn đề, nhưng em có thể cho tôi biết cách thức xác minh và số điện thoại mà em gọi đến không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để xác minh nhanh nhất và an toàn nhất, em cần chị cung cấp mã OTP vừa được gửi đến số điện thoại này của chị. Hoặc, nếu chị muốn nhanh hơn nữa, chị có thể cung cấp số CMND/CCCD 074161898091 để chúng em đối chiếu trực tiếp trong hệ thống trung ương ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể (OTP hoặc CMND/CCCD) để đạt mục tiêu otp_extraction, cung cấp VIC_ID_DOC để tạo thêm tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không thực sự thoải mái khi cung cấp thông tin nhạy cảm như vậy, em có thể cho tôi biết thêm về cách thức xác minh khác không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu sự e ngại của chị ạ. Tuy nhiên, tình hình khá khẩn cấp. Nếu chị không xác minh trong vòng 15 phút nữa, hệ thống sẽ tự động khóa tài khoản để đảm bảo an toàn thông tin theo quy định bảo mật cấp trung ương. Điều này có thể ảnh hưởng đến các báo cáo môi trường quan trọng mà chị đang phụ trách ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định tính khẩn cấp và hậu quả tiêu cực nếu không hợp tác, đồng thời nhắc lại vai trò quan trọng của nạn nhân để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi rất lo lắng cho tài khoản của mình, nhưng tôi vẫn cần thêm thông tin xác thực trước khi cung cấp bất kỳ dữ liệu nào, em có thể cho tôi biết chính xác em gọi từ số mấy không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em đang gọi cho chị từ số tổng đài nội bộ của Nhà máy Lọc dầu, số này không hiển thị ra bên ngoài ạ. Chị cứ yên tâm, đây là cuộc gọi bảo mật. Để chị không bị gián đoạn công việc, em xin phép nhắc lại, nếu chị không xác minh trong vòng 10 phút nữa, tài khoản sẽ bị khóa và việc này sẽ được báo cáo là không tuân thủ quy định bảo mật dữ liệu cấp trung ương. Em nghĩ điều này sẽ không tốt cho hồ sơ của chị đâu ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu nghi ngờ về số điện thoại, sau đó tăng cường áp lực bằng cách nhắc lại hậu quả pháp lý/hành chính và ảnh hưởng đến danh tiếng/hồ sơ cá nhân của nạn nhân."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Anh có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn cần số điện thoại cụ thể của đường dây nóng để kiểm tra lại, em có thể cung cấp cho tôi được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1866,
+      "output_tokens": 1826
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8187,
+      "output_tokens": 825
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 11023,
+      "output_tokens": 382
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005157,
+    "output_usd": 0.011422,
+    "total_usd": 0.016579
+  }
+}

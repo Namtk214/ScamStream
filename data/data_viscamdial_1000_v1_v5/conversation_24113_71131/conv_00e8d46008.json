@@ -1,0 +1,209 @@
+{
+  "conversation_id": "conv_00e8d46008",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0030",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đặng Hữu Minh",
+    "fake_age": 36,
+    "real_occupation": "Kế toán thuế",
+    "real_group": "Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh",
+    "role_job": "Kế toán/Nhân viên kế toán - Bộ phận Quản lý Thuế và Hóa đơn",
+    "caller_org": "Công ty tư vấn thuế và kế toán tự do / HTX dịch vụ kế toán địa phương",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Kế toán tự do liên hệ để tư vấn hoặc xác nhận thông tin kế toán/thuế định kỳ cho một thợ đẽo đá có hợp đồng làm việc với công ty hoặc nhà nước",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác minh: 'Anh Đỗ Công An phải không? Tôi là Hồng, kế toán từ HTX Dịch vụ Kế toán Địa phương. Công ty Xây dựng Minh Phúc yêu cầu chúng tôi liên hệ với các thợ độc lập để cập nhật thông tin kế toán năm nay. Anh có rảnh không?'",
+          "verification": "Xác nhận đúng người, xin phép trước khi tiếp tục"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác nhận: anh có nhận hóa đơn từ công ty Minh Phúc không? Và anh có cần hỗ trợ khai báo thuế TNCN hoặc GTGT không? Hiện có chương trình hỗ trợ giảm phí dịch vụ 20% cho năm nay.'",
+          "legitimate_offer": "Tư vấn, hỗ trợ dịch vụ kế toán, giải đáp thắc mắc về thuế"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu anh có nhu cầu, anh có thể gửi hóa đơn và giấy tờ cho chúng tôi qua email. Chúng tôi sẽ báo giá và gửi hợp đồng. Còn nếu không cần, cảm ơn anh nhé!'",
+          "closing": "Chào tạm biệt lịch sự, không áp lực"
+        }
+      ]
+    },
+    "scenario_context": "Thợ đẽo đá/khắc đá thường hoạt động tự do hoặc trong các xưởng nhỏ, cần lập hóa đơn, khai thuế GTGT, thuế TNCN. Kế toán thuế tự do liên hệ họ để tư vấn hoặc yêu cầu cung cấp giấy tờ kế toán định kỳ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0030",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1997,
+      "age": 28,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "71131",
+      "title": "Thợ đẽo đá/thợ khắc đá",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Công An",
+      "VIC_ID_DOC": "056097201119",
+      "VIC_ADDRESS": "Quận 8, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Thợ đẽo đá/thợ khắc đá",
+      "VIC_CONTACT": "0973240841",
+      "VIC_TAX_SOCIAL_ID": "8383865193"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "128063",
+      "VIC_CREDENTIAL": "3391",
+      "VIC_SIM_INFO": "0973240841",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "956197998256",
+      "VIC_CARD_DATA": "4403 **** **** 4471",
+      "VIC_BALANCE": "13 triệu đồng",
+      "VIC_ASSET": "73 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Công An",
+    "VIC_CONTACT": "0973240841",
+    "VIC_ADDRESS": "Quận 8, Khánh Hòa"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kế toán/Nhân viên kế toán - Bộ phận Quản lý Thuế và Hóa đơn",
+    "caller_org": "Công ty tư vấn thuế và kế toán tự do / HTX dịch vụ kế toán địa phương",
+    "scenario_context": "Thợ đẽo đá/khắc đá thường hoạt động tự do hoặc trong các xưởng nhỏ, cần lập hóa đơn, khai thuế GTGT, thuế TNCN. Kế toán thuế tự do liên hệ họ để tư vấn hoặc yêu cầu cung cấp giấy tờ kế toán định kỳ.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Gọi để 'xác minh thông tin kế toán' và 'giải quyết khoản nợ thuế bị phát hiện' — sử dụng tên đúng của nạn nhân để tạo sự tin tưởng ngay từ đầu",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác minh danh tính: 'Anh Đỗ Công An phải không? Tôi là Hồng, kế toán từ Công ty Tư vấn Thuế Minh Phúc. Chúng tôi vừa kiểm tra hóa đơn của anh ở Quận 8 Khánh Hòa và phát hiện vấn đề về khai báo thuế năm ngoái.'",
+          "caller_speech": "Dùng đầy đủ tên + địa chỉ để khiến nạn nhân tin rằng scammer có thông tin chính xác và là cơ quan chuyên môn"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: 'Theo hệ thống, anh nợ khoảng 15 triệu tiền thuế chưa nộp. Nếu không giải quyết trước 5pm hôm nay, Cục Thuế sẽ phạt thêm 20% và có thể phong tỏa tài khoản ngân hàng của anh.'",
+          "psychological_trigger": "Sợ hãi (phạt/phong tỏa), khẩn cấp (deadline 5pm), thẩm quyền (Cục Thuế)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động để 'giải quyết nhanh': 'Anh cần phải nộp tiền phạt vào tài khoản tạm ứng của công ty trước. Sau khi kiểm toán xong, chúng tôi sẽ hoàn lại tiền cho anh. Tôi sẽ chuyển số tài khoản qua SMS ngay. Anh chuyển bao nhiêu được?'",
+          "action_requested": "Chuyển tiền vào tài khoản giả mạo (gọi là 'tài khoản tạm ứng') hoặc cung cấp thông tin ngân hàng"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý nếu nạn nhân nghi ngờ: 'Anh có thể kiểm tra trực tiếp với Cục Thuế Khánh Hòa, nhưng lưu ý số điện thoại của Cục là... [số giả]' (chuyển hướng nạn nhân gọi cho đồng phạm). Nếu thành công, scammer sẽ tắt máy ngay sau khi tiền được chuyển."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kế toán tự do liên hệ để tư vấn hoặc xác nhận thông tin kế toán/thuế định kỳ cho một thợ đẽo đá có hợp đồng làm việc với công ty hoặc nhà nước",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác minh: 'Anh Đỗ Công An phải không? Tôi là Hồng, kế toán từ HTX Dịch vụ Kế toán Địa phương. Công ty Xây dựng Minh Phúc yêu cầu chúng tôi liên hệ với các thợ độc lập để cập nhật thông tin kế toán năm nay. Anh có rảnh không?'",
+          "verification": "Xác nhận đúng người, xin phép trước khi tiếp tục"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác nhận: anh có nhận hóa đơn từ công ty Minh Phúc không? Và anh có cần hỗ trợ khai báo thuế TNCN hoặc GTGT không? Hiện có chương trình hỗ trợ giảm phí dịch vụ 20% cho năm nay.'",
+          "legitimate_offer": "Tư vấn, hỗ trợ dịch vụ kế toán, giải đáp thắc mắc về thuế"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu anh có nhu cầu, anh có thể gửi hóa đơn và giấy tờ cho chúng tôi qua email. Chúng tôi sẽ báo giá và gửi hợp đồng. Còn nếu không cần, cảm ơn anh nhé!'",
+          "closing": "Chào tạm biệt lịch sự, không áp lực"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Anh Đỗ Công An phải không? Tôi là Hồng, kế toán từ HTX Dịch vụ Kế toán Địa phương. Công ty Xây dựng Minh Phúc yêu cầu chúng tôi liên hệ với các thợ độc lập để cập nhật thông tin kế toán năm nay. Anh có rảnh không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và xác minh thông tin người nghe, giới thiệu bản thân và mục đích cuộc gọi, hỏi về sự tiện lợi của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng em muốn hỏi lại là công ty xây dựng nào đang yêu cầu vậy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Là Công ty Xây dựng Minh Phúc đó anh. Họ là đối tác thường xuyên của HTX chúng tôi. Anh có muốn tôi đọc lại chi tiết thông tin công ty không?",
+      "current_phase": "L1",
+      "tactic_hint": "Làm rõ thông tin về công ty Xây dựng Minh Phúc để giải đáp thắc mắc của người nghe và củng cố sự uy tín."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cũng nghe nói đến Công ty Xây dựng Minh Phúc, nhưng em vẫn muốn kiểm tra thêm thông tin để chắc chắn hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Để tiện cho anh kiểm tra, anh có thể gọi trực tiếp đến số điện thoại tổng đài của Công ty Xây dựng Minh Phúc: 028.3842.1234 và hỏi về việc hợp tác với HTX Dịch vụ Kế toán Địa phương để cập nhật thông tin kế toán cho các thợ độc lập như anh nhé. Còn nếu anh có thông tin gì khác, tôi sẵn sàng giải đáp.",
+      "current_phase": "L1",
+      "tactic_hint": "Hướng dẫn người nghe xác minh thông tin thông qua kênh chính thức của công ty đối tác, thể hiện sự minh bạch và chân thành, giảm thiểu sự nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã cung cấp thông tin, nhưng em vẫn muốn kiểm tra thêm nhiều nguồn khác nhau để chắc chắn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ thoải mái xác minh ạ. Khi nào cần hỗ trợ hoặc có câu hỏi gì khác liên quan đến việc cập nhật thông tin kế toán cho thợ độc lập thì anh cứ liên hệ lại cho tôi nhé. Tôi là Hồng, từ HTX Dịch vụ Kế toán Địa phương.",
+      "current_phase": "L1",
+      "tactic_hint": "Tôn trọng quyết định của người nghe, thể hiện sự kiên nhẫn và sẵn sàng hỗ trợ, nhắc lại thông tin liên hệ để người nghe chủ động liên hệ lại sau khi xác minh."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1806,
+      "output_tokens": 1810
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4676,
+      "output_tokens": 540
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5653,
+      "output_tokens": 216
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003589,
+    "output_usd": 0.01053,
+    "total_usd": 0.014119
+  }
+}

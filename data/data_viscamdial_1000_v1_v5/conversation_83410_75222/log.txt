@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_9a601d90d0]
+  Caller thật: Thợ vận hành thiết bị nông nghiệp và lâm nghiệp (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý dự án cơ khí gỗ / Nhà thầu phụ trách máy móc lâm sản @ Công ty TNHH Cơ Khí Lâm Nghiệp Sài Gòn (hoặc Trung tâm Bảo trì Thiết bị Nông Lâm)
+  Listener: Thợ hoàn thiện đồ gỗ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Thợ vận hành thiết bị lâm nghiệp thường cần liên hệ với thợ hoàn thiện gỗ để báo cáo tình trạng gỗ từ xưởng cưa, thương lượng chất lượng, hoặc phối hợp bảo trì máy móc chế biến. Đây là điểm giao thoa tự nhiên trong chuỗi cung ứng gỗ.
+  Pretext: Gọi báo cáo 'sự cố máy móc' tại xưởng gỗ của nạn nhân, cần thanh toán ngay cho chi phí sửa chữa khẩn cấp. Sử dụng tên nạn nhân để tạo ảo tưởng là đã xác minh danh tính.
+  Listener traits: ['nhẹ dạ cả tin', 'nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, chào chị Đỗ Khánh Thanh Nhàn ạ, tôi là Minh từ Công ty Cơ Khí Lâm Nghiệp đây. Tôi vừa nhận được báo cáo về sự cố máy cưa gỗ tại xưởng của chị. Có vẻ như máy đang gặp trục trặc, chị có nhận được thông báo về việc này chưa ạ?
+      → phase: S1 | tactic: Tiếp cận, tự giới thiệu và sử dụng tên nạn nhân để tạo độ tin cậy ban đầu, thăm dò thông tin về sự cố.
+T02 [LISTENER] Tôi chưa nhận được thông báo gì cả, nhưng anh có thể cho tôi biết thêm chi tiết không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng. Theo ghi nhận của bên tôi, máy cưa đang bị chảy dầu nghiêm trọng rồi chị ạ. Nếu không được khắc phục ngay trong vòng 2 tiếng tới, có nguy cơ cao là máy sẽ hỏng hoàn toàn, và khi đó chi phí sửa chữa sẽ đội lên rất nhiều, có thể lên đến 60 triệu đồng. Hiện tại, chi phí sửa khẩn cấp chỉ dao động khoảng 2 đến 3 triệu thôi. Chị cần phải quyết định nhanh chóng giúp tôi ạ.
+      → phase: S2 | tactic: Tạo ra cảm giác khẩn cấp và thiệt hại kinh tế để gây áp lực cho nạn nhân, nhấn mạnh sự chênh lệch chi phí giữa sửa chữa ngay và để hỏng hoàn toàn.
+T04 [LISTENER] Tôi hiểu rồi, nhưng tôi cần thời gian để suy nghĩ và kiểm tra vấn đề này trước đã anh ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Chị Thanh Nhàn ơi, vấn đề này rất cấp bách. Nếu chị không quyết định ngay bây giờ, máy cưa của xưởng sẽ hỏng hoàn toàn. Đến lúc đó, tôi không thể chịu trách nhiệm cho thiệt hại hàng chục triệu đồng này được ạ. Chị có muốn rủi ro đó xảy ra không?
+      → phase: S2 | tactic: Tạo áp lực tâm lý mạnh mẽ, nhấn mạnh hậu quả nghiêm trọng nếu nạn nhân không hành động ngay và phủi bỏ trách nhiệm của bản thân nếu nạn nhân từ chối, nhằm buộc nạn nhân phải ra quyết định.
+T06 [LISTENER] Tôi hiểu là anh đang lo lắng, nhưng tôi vẫn cần kiểm tra kỹ càng trước khi quyết định, anh ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.00
+TOKEN: in=11146 | out=2593
+COST : $0.013947
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_83410_75222\conv_9a601d90d0.json  [SCAM_REFUSE]

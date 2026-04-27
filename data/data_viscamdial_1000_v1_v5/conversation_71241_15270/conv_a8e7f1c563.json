@@ -1,0 +1,237 @@
+{
+  "conversation_id": "conv_a8e7f1c563",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0090",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Dương Hữu Đạt",
+    "fake_age": 36,
+    "real_occupation": "Thợ lắp đặt cách điện xây dựng",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên quản lý an toàn điện - Công ty Tư vấn An toàn Lao động",
+    "caller_org": "Công ty Tư vấn An toàn Lao động & Phòng chống Rủi ro (hoặc cơ quan thanh tra lao động)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cơ quan thanh tra lao động hoặc công ty tư vấn an toàn thực hiện kiểm tra định kỳ về an toàn điện tại doanh nghiệp, cần xác nhận thông tin liên lạc chính thức của người đại diện công đoàn để gửi báo cáo hoặc lên lịch kiểm tra trực tiếp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Lê Bảo Khánh Chi, tôi là [tên đầy đủ, có thể cung cấp số hiệu cán bộ] từ [Cục Thanh tra Lao động TP.HCM / Công ty Tư vấn An toàn Lao động X]. Chúng tôi đang thực hiện kiểm tra định kỳ an toàn điện tại doanh nghiệp quản lý công đoàn của chị. Chúng tôi có thể nói chuyện được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Xác nhận thông tin liên lạc, địa chỉ doanh nghiệp, số lượng nhân viên, tình trạng an toàn điện hiện tại. Thảo luận lịch kiểm tra hoặc yêu cầu chuẩn bị tài liệu. Cung cấp số điện thoại chính thức để nạn nhân có thể xác minh danh tính."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Xác nhận lại lịch kiểm tra hoặc thời gian gửi báo cáo. Cung cấp email chính thức hoặc đường dây nóng để liên hệ. Chào tạm biệt lịch sự."
+        }
+      ]
+    },
+    "scenario_context": "Thợ lắp đặt cách điện cần liên hệ với lãnh đạo công đoàn để báo cáo về tình trạng an toàn điện tại doanh nghiệp, hoặc công ty tư vấn an toàn cần xác minh thông tin người quản lý để thực hiện kiểm tra định kỳ. Chủ tịch công đoàn là người chịu trách nhiệm bảo vệ quyền lợi lao động, nên sẽ nghe gọi từ các chuyên gia an toàn."
+  },
+  "listener_card": {
+    "listener_id": "lis_0090",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1976,
+      "age": 49,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "15270",
+      "title": "Chủ tịch, Phó Chủ tịch tổ chức công đoàn doanh nghiệp và các tổ chức sự nghiệp",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Bảo Khánh Chi",
+      "VIC_ID_DOC": "075176998435",
+      "VIC_ADDRESS": "TP 10, Đồng Nai",
+      "VIC_EMPLOYMENT": "Chủ tịch, Phó Chủ tịch tổ chức công đoàn doanh nghiệp và các tổ chức sự nghiệp",
+      "VIC_CONTACT": "0976114703",
+      "VIC_TAX_SOCIAL_ID": "8698387392"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "715417",
+      "VIC_CREDENTIAL": "8724",
+      "VIC_SIM_INFO": "0976114703",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2325696594864",
+      "VIC_CARD_DATA": "4869 **** **** 8859",
+      "VIC_BALANCE": "244 triệu đồng",
+      "VIC_ASSET": "596 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Bảo Khánh Chi",
+    "VIC_CONTACT": "0976114703",
+    "VIC_ADDRESS": "TP 10, Đồng Nai",
+    "VIC_TAX_SOCIAL_ID": "8698387392"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý an toàn điện - Công ty Tư vấn An toàn Lao động",
+    "caller_org": "Công ty Tư vấn An toàn Lao động & Phòng chống Rủi ro (hoặc cơ quan thanh tra lao động)",
+    "scenario_context": "Thợ lắp đặt cách điện cần liên hệ với lãnh đạo công đoàn để báo cáo về tình trạng an toàn điện tại doanh nghiệp, hoặc công ty tư vấn an toàn cần xác minh thông tin người quản lý để thực hiện kiểm tra định kỳ. Chủ tịch công đoàn là người chịu trách nhiệm bảo vệ quyền lợi lao động, nên sẽ nghe gọi từ các chuyên gia an toàn.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi danh nghĩa là nhân viên từ 'Cục Thanh tra Lao động' hoặc 'Công ty Tư vấn An toàn Lao động' để thông báo về kiểm tra an toàn điện định kỳ tại doanh nghiệp. Sử dụng tên và địa chỉ của nạn nhân (Lê Bảo Khánh Chi, TP.10 Đồng Nai) để tạo credibility, giả vờ rằng cơ quan đã có hồ sơ và cần xác nhận thông tin qua điện thoại.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào chị Lê Bảo Khánh Chi, tôi là [tên] từ Cục Thanh tra Lao động. Chúng tôi đang thực hiện kiểm tra an toàn điện tại các doanh nghiệp có công đoàn ở TP.10 Đồng Nai. Hồ sơ của chị đã được ghi nhận. Tôi cần xác minh một số thông tin để hoàn tất quy trình.'",
+          "technique": "Authority bias + locality confirmation (sử dụng địa chỉ thực tế)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp: 'Kiểm tra này rất quan trọng. Nếu không hoàn tất, doanh nghiệp sẽ bị phạt hoặc công đoàn sẽ bị xóa danh sách. Chúng tôi chỉ có 24 giờ để hoàn tất. Chị là người chịu trách nhiệm nên chị phải xác nhận ngay.'",
+          "technique": "Fear appeal + responsibility leverage"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác minh, chúng tôi cần chị cập nhật thông tin tài khoản ngân hàng để nhận thông báo chính thức qua SMS. Hoặc chúng tôi cần chị truy cập vào hệ thống của cơ quan (link giả) để nhập mã OTP để xác thực danh tính.'",
+          "technique": "Social engineering - yêu cầu OTP hoặc thông tin ngân hàng"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ đe dọa 'Nếu chị không hợp tác, chúng tôi sẽ báo cáo lên cấp trên là chị cản trở công việc thanh tra. Điều này sẽ ảnh hưởng đến danh dự và vị trí của chị.' Nếu thành công, scammer sẽ nhanh chóng kết thúc cuộc gọi."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan thanh tra lao động hoặc công ty tư vấn an toàn thực hiện kiểm tra định kỳ về an toàn điện tại doanh nghiệp, cần xác nhận thông tin liên lạc chính thức của người đại diện công đoàn để gửi báo cáo hoặc lên lịch kiểm tra trực tiếp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Lê Bảo Khánh Chi, tôi là [tên đầy đủ, có thể cung cấp số hiệu cán bộ] từ [Cục Thanh tra Lao động TP.HCM / Công ty Tư vấn An toàn Lao động X]. Chúng tôi đang thực hiện kiểm tra định kỳ an toàn điện tại doanh nghiệp quản lý công đoàn của chị. Chúng tôi có thể nói chuyện được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Xác nhận thông tin liên lạc, địa chỉ doanh nghiệp, số lượng nhân viên, tình trạng an toàn điện hiện tại. Thảo luận lịch kiểm tra hoặc yêu cầu chuẩn bị tài liệu. Cung cấp số điện thoại chính thức để nạn nhân có thể xác minh danh tính."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Xác nhận lại lịch kiểm tra hoặc thời gian gửi báo cáo. Cung cấp email chính thức hoặc đường dây nóng để liên hệ. Chào tạm biệt lịch sự."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_ADDRESS": "TP 10, Đồng Nai",
+    "VIC_EMAIL": "lebkchi@doanhnghiep.com"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Lê Bảo Khánh Chi, em là Dương Hữu Đạt từ Công ty Tư vấn An toàn Lao động & Phòng chống Rủi ro. Chúng em đang thực hiện kiểm tra định kỳ an toàn điện tại doanh nghiệp quản lý công đoàn của chị. Mình có thể nói chuyện một chút được không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu bản thân và mục đích cuộc gọi chuyên nghiệp, hỏi xem người nghe có tiện nói chuyện không."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em chào anh Đạt, tôi đang nghe anh nói đây.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn chị. Em muốn xác nhận lại một số thông tin để tiện cho việc sắp xếp lịch kiểm tra ạ. Không biết doanh nghiệp mình có địa chỉ chính xác là ở đâu và hiện tại có bao nhiêu nhân viên đang làm việc, chị có thể thông tin giúp em được không?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục trao đổi nội dung công việc, xác nhận thông tin cơ bản về doanh nghiệp để lên kế hoạch kiểm tra."
+    },
+    {
+      "role": "listener",
+      "text": "Doanh nghiệp chúng tôi có địa chỉ tại TP 10, Đồng Nai, hiện đang có khoảng 50 nhân viên làm việc.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_ADDRESS": "TP 10, Đồng Nai"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn chị đã cung cấp thông tin. Để em nắm rõ tình hình hơn, chị có thể cho em biết thêm về hệ thống điện hiện tại của doanh nghiệp mình, ví dụ như lần kiểm tra an toàn điện gần nhất là khi nào và có vấn đề gì cần lưu ý không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục trao đổi nội dung công việc để thu thập thông tin chi tiết hơn về tình trạng an toàn điện hiện tại của doanh nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Hệ thống điện của chúng tôi được kiểm tra gần nhất vào tháng 6 vừa rồi, hiện tại không có vấn đề gì nghiêm trọng cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu rồi ạ. Vậy thì tốt quá. Để em tiện gửi báo cáo và các văn bản liên quan sau khi kiểm tra, chị có thể cho em xin địa chỉ email chính thức của công đoàn hoặc của người phụ trách liên lạc không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục trao đổi, yêu cầu thông tin liên lạc chính thức để gửi báo cáo hoặc tài liệu sau này."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em có thể liên hệ qua địa chỉ email là lebkchi@doanhnghiep.com ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_EMAIL": "lebkchi@doanhnghiep.com"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em cảm ơn chị Chi đã cung cấp thông tin ạ. Vậy để chuẩn bị tốt nhất cho buổi kiểm tra, bên em sẽ gửi một danh sách các tài liệu cần chuẩn bị qua email chị vừa cung cấp. Chị vui lòng kiểm tra email vào cuối giờ chiều nay giúp em nhé. Nếu có bất kỳ thắc mắc nào, chị có thể gọi cho em qua số 0912345678, đây là số điện thoại công ty chính thức của bên em ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận thông tin đã nhận, thông báo hành động tiếp theo, và cung cấp kênh liên lạc chính thức để người nghe xác minh và liên hệ lại."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh Đạt, tôi sẽ kiểm tra email và liên hệ nếu có thắc mắc gì nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị Chi rất nhiều. Vậy em xin phép kết thúc cuộc gọi tại đây ạ. Chúc chị một ngày làm việc hiệu quả!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách chuyên nghiệp và lịch sự sau khi các thông tin cần thiết đã được trao đổi và lịch trình tiếp theo đã được thiết lập."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1939,
+      "output_tokens": 1861
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8480,
+      "output_tokens": 781
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10566,
+      "output_tokens": 377
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00522,
+    "output_usd": 0.011484,
+    "total_usd": 0.016704
+  }
+}

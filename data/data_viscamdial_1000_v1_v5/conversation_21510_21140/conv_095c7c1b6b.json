@@ -1,0 +1,292 @@
+{
+  "conversation_id": "conv_095c7c1b6b",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0015",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lưu Thị Lan",
+    "fake_age": 29,
+    "real_occupation": "Kỹ sư điện",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Kỹ sư điện - Chuyên gia khảo sát địa chất công trình",
+    "caller_org": "Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả danh kỹ sư điện từ dự án khảo sát địa chất công trình tại Huyện 5, Đà Nẵng. Sử dụng tên thật của nạn nhân và địa chỉ để tạo ảo tưởng rằng đã xác minh danh tính. Yêu cầu tham gia khảo sát hoặc cấp phép địa chất với lý do thanh toán phí tư vấn chuyên môn qua chuyển khoản.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Hồ Hữu Tùng, tôi là Nguyễn Văn Hùng, kỹ sư điện từ Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung. Chúng tôi đang thực hiện dự án khảo sát địa chất tại Huyện 5, Đà Nẵng và có được danh sách chuyên gia địa vật lý địa phương. Anh có thời gian trao đổi một chút không?'",
+          "tactic": "Dùng VIC_FULLNAME + VIC_ADDRESS để tạo credibility cao, gọi 'danh sách' để che giấu nguồn gốc thông tin"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo tình huống khẩn cấp + ham lợi: 'Dự án này rất quan trọng, Sở Xây dựng yêu cầu khẩn. Chúng tôi cần ý kiến chuyên gia như anh để hoàn thiện báo cáo. Nếu tham gia, anh sẽ nhận phí tư vấn 2-3 triệu. Tuy nhiên, để đảm bảo quy trình, công ty yêu cầu anh chuyển tiền cọc tài khoản chuyên gia trước (500 nghìn đến 1 triệu) để cấp chứng chỉ tư vấn tạm thời. Sau đó hoàn lại cộng phí cắt ngắn.'",
+          "tactic": "Khai thác: (1) Lòng tin vào công ty chính thức, (2) Khẩn cấp của dự án, (3) Ham lợi từ phí tư vấn, (4) Lý do hợp lý cho việc chuyển tiền nhỏ trước"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng chuyển khoản 800 nghìn vào tài khoản này [cung cấp số tài khoản giả] với nội dung \"Phí chứng chỉ tư vấn - Hồ Hữu Tùng\". Anh gửi ảnh chứng chỉ sau khi chuyển, rồi chúng tôi sẽ hoàn trả cộng phí ngay trong vòng 2-3 ngày.'",
+          "tactic": "Yêu cầu cụ thể + timeline ngắn để tạo áp lực, dùng nội dung chuyển khoản chứa tên để che giấu sự giả mạo"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, giả bộ bực dọc: 'Thôi anh, không muốn tham gia thì thôi. Chúng tôi sẽ mời chuyên gia khác. Công ty có quy trình, không phải tôi làm được gì đâu.' Rồi cắt máy để tránh bị phát hiện. Nếu thành công, tắt điện thoại/SIM ngay sau khi tiền về.",
+          "tactic": "Tránh tranh cãi, tạo ấn tượng bất lực để giảm nghi ngờ"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ sư điện thường phải phối hợp với nhà địa chất/địa vật lý khi thực hiện dự án xây dựng hạ tầng điện, khảo sát địa chất để lập kế hoạch đặt cột, dây điện ngầm, và đánh giá rủi ro địa kỹ thuật. Huyện 5, Đà Nẵng là khu vực phát triển dự án hạ tầng, tạo điểm giao thoa tự nhiên."
+  },
+  "listener_card": {
+    "listener_id": "lis_0015",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "Đà Nẵng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21140",
+      "title": "Nhà địa chất, địa vật lý",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hồ Hữu Tùng",
+      "VIC_ID_DOC": "048200391805",
+      "VIC_ADDRESS": "Huyện 5, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Nhà địa chất, địa vật lý",
+      "VIC_CONTACT": "0395342720",
+      "VIC_TAX_SOCIAL_ID": "1872819785"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "601489",
+      "VIC_CREDENTIAL": "775470",
+      "VIC_SIM_INFO": "0395342720",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "760744962512",
+      "VIC_CARD_DATA": "4273 **** **** 4913",
+      "VIC_BALANCE": "77 triệu đồng",
+      "VIC_ASSET": "505 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hồ Hữu Tùng",
+    "VIC_CONTACT": "0395342720",
+    "VIC_ADDRESS": "Huyện 5, Đà Nẵng",
+    "VIC_BALANCE": "77 triệu đồng",
+    "VIC_ID_DOC": "048200391805"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư điện - Chuyên gia khảo sát địa chất công trình",
+    "caller_org": "Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung",
+    "scenario_context": "Kỹ sư điện thường phải phối hợp với nhà địa chất/địa vật lý khi thực hiện dự án xây dựng hạ tầng điện, khảo sát địa chất để lập kế hoạch đặt cột, dây điện ngầm, và đánh giá rủi ro địa kỹ thuật. Huyện 5, Đà Nẵng là khu vực phát triển dự án hạ tầng, tạo điểm giao thoa tự nhiên.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi giả danh kỹ sư điện từ dự án khảo sát địa chất công trình tại Huyện 5, Đà Nẵng. Sử dụng tên thật của nạn nhân và địa chỉ để tạo ảo tưởng rằng đã xác minh danh tính. Yêu cầu tham gia khảo sát hoặc cấp phép địa chất với lý do thanh toán phí tư vấn chuyên môn qua chuyển khoản.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Hồ Hữu Tùng, tôi là Nguyễn Văn Hùng, kỹ sư điện từ Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung. Chúng tôi đang thực hiện dự án khảo sát địa chất tại Huyện 5, Đà Nẵng và có được danh sách chuyên gia địa vật lý địa phương. Anh có thời gian trao đổi một chút không?'",
+          "tactic": "Dùng VIC_FULLNAME + VIC_ADDRESS để tạo credibility cao, gọi 'danh sách' để che giấu nguồn gốc thông tin"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo tình huống khẩn cấp + ham lợi: 'Dự án này rất quan trọng, Sở Xây dựng yêu cầu khẩn. Chúng tôi cần ý kiến chuyên gia như anh để hoàn thiện báo cáo. Nếu tham gia, anh sẽ nhận phí tư vấn 2-3 triệu. Tuy nhiên, để đảm bảo quy trình, công ty yêu cầu anh chuyển tiền cọc tài khoản chuyên gia trước (500 nghìn đến 1 triệu) để cấp chứng chỉ tư vấn tạm thời. Sau đó hoàn lại cộng phí cắt ngắn.'",
+          "tactic": "Khai thác: (1) Lòng tin vào công ty chính thức, (2) Khẩn cấp của dự án, (3) Ham lợi từ phí tư vấn, (4) Lý do hợp lý cho việc chuyển tiền nhỏ trước"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh vui lòng chuyển khoản 800 nghìn vào tài khoản này [cung cấp số tài khoản giả] với nội dung \"Phí chứng chỉ tư vấn - Hồ Hữu Tùng\". Anh gửi ảnh chứng chỉ sau khi chuyển, rồi chúng tôi sẽ hoàn trả cộng phí ngay trong vòng 2-3 ngày.'",
+          "tactic": "Yêu cầu cụ thể + timeline ngắn để tạo áp lực, dùng nội dung chuyển khoản chứa tên để che giấu sự giả mạo"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, giả bộ bực dọc: 'Thôi anh, không muốn tham gia thì thôi. Chúng tôi sẽ mời chuyên gia khác. Công ty có quy trình, không phải tôi làm được gì đâu.' Rồi cắt máy để tránh bị phát hiện. Nếu thành công, tắt điện thoại/SIM ngay sau khi tiền về.",
+          "tactic": "Tránh tranh cãi, tạo ấn tượng bất lực để giảm nghi ngờ"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kỹ sư điện từ dự án xây dựng hạ tầng điện cần tư vấn chuyên môn từ nhà địa chất/địa vật lý về điều kiện địa chất, khả năng chịu tải nền, rủi ro sạt lở, hoặc độ sâu mặt nước ngầm tại khu vực Huyện 5, Đà Nẵng. Đây là quy trình tiêu chuẩn trước khi triển khai công trình.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Tùng, tôi là Nguyễn Văn Hùng, kỹ sư điện từ Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung. Tôi có số điện thoại của anh từ danh bạ chuyên gia của Sở Xây dựng Đà Nẵng. Chúng tôi đang thực hiện dự án khảo sát địa chất tại Huyện 5 và cần ý kiến của anh. Anh có thời gian nghe tôi giới thiệu không?'",
+          "tactic": "Xưng danh rõ ràng, giải thích nguồn gốc liên hệ (danh bạ chính thức), xin phép trước"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi cần tư vấn về: (1) Điều kiện địa chất nền tại khu vực, (2) Độ sâu tầng nước ngầm để xác định vị trí đặt cột điện, (3) Rủi ro địa kỹ thuật (sạt lở, lún subsidence). Anh có thể giúp chúng tôi không? Chúng tôi có thể trả phí tư vấn theo giờ hoặc theo dự án.' — Thảo luận chi tiết, lấy ý kiến chuyên gia",
+          "tactic": "Nêu rõ nhu cầu cụ thể, lắng nghe phản hồi, thảo luận điều khoản hợp lý"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Cảm ơn ý kiến của anh. Chúng tôi sẽ gửi email với chi tiết dự án, bản đồ khu vực, và yêu cầu cụ thể. Anh xem rồi cho biết timeline và phí tư vấn. Chúng tôi sẽ ký hợp đồng hoặc thỏa thuận bằng văn bản trước khi thanh toán. Cảm ơn anh!' — Chào tạm biệt, thống nhất tiếp xúc tiếp theo qua email/văn bản",
+          "tactic": "Rõ ràng, có tài liệu, thanh toán qua hợp đồng chính thức, không áp lực"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Hồ Hữu Tùng, tôi là Lưu Thị Lan, kỹ sư điện từ Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung. Chúng tôi đang thực hiện dự án khảo sát địa chất tại Huyện 5, Đà Nẵng và có được danh sách chuyên gia địa vật lý địa phương. Anh có thời gian trao đổi một chút không?",
+      "current_phase": "S1",
+      "tactic_hint": "Giả danh kỹ sư điện, xác nhận tên và địa chỉ nạn nhân để tạo tin tưởng ban đầu, đưa ra lý do gọi điện hợp lý."
+    },
+    {
+      "role": "listener",
+      "text": "Chào chị, em nghe chị nói rồi, nhưng em muốn hỏi lại là chị gọi từ số mấy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi đang gọi cho anh từ số điện thoại 0395342720, số liên lạc chính thức của dự án. Anh có thể kiểm tra lại thông tin. Vậy, anh có thể dành chút thời gian bàn về dự án không?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách xác nhận lại thông tin liên lạc và lặp lại lý do gọi, cố gắng đưa cuộc hội thoại trở lại mục tiêu ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em không quen chị, em cần chắc chắn hơn về thông tin dự án trước khi nói chuyện thêm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng có thể tìm hiểu thêm về Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung của chúng tôi, chúng tôi là đơn vị uy tín trong ngành. Việc chúng tôi liên hệ với anh là để mời anh đưa ra ý kiến chuyên môn cho dự án khảo sát địa chất tại Huyện 5, Đà Nẵng, nơi anh đang sinh sống. Đây là một cơ hội tốt cho anh đóng góp và nhận được thù lao xứng đáng. Anh có sẵn sàng lắng nghe chi tiết hơn về dự án này không?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách khẳng định uy tín công ty, nhắc lại lợi ích cho nạn nhân, và cố gắng chuyển sang bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa hoàn toàn yên tâm, chị có thể cho em biết thêm thông tin về dự án và công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dự án này là khảo sát địa chất công trình cho hạ tầng giao thông trọng điểm của thành phố, được Sở Xây dựng Đà Nẵng phê duyệt. Công ty chúng tôi có hơn 20 năm kinh nghiệm và đã thực hiện nhiều dự án lớn tương tự. Chúng tôi liên hệ với anh vì anh là chuyên gia có nhiều kinh nghiệm tại khu vực. Anh còn băn khoăn gì nữa không, để tôi có thể chia sẻ chi tiết hơn về vai trò của anh trong dự án này?",
+      "current_phase": "S1",
+      "tactic_hint": "Cung cấp thêm thông tin về dự án và công ty để xây dựng lòng tin, nhấn mạnh tầm quan trọng của dự án và lý do nạn nhân được chọn, nhằm đẩy cuộc trò chuyện sang giai đoạn khai thác tâm lý."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn chị đã chia sẻ thông tin, nhưng em vẫn cảm thấy chưa đủ rõ ràng để quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng đừng lo, tôi hiểu anh cần sự minh bạch. Như tôi đã nói, dự án này rất quan trọng và chúng tôi cần gấp ý kiến chuyên gia như anh. Nếu tham gia, anh sẽ nhận phí tư vấn từ 2 đến 3 triệu đồng cho công sức của mình. Tuy nhiên, để tuân thủ quy trình hành chính và để cấp chứng chỉ tư vấn tạm thời, công ty yêu cầu anh chuyển khoản một khoản tiền cọc nhỏ, khoảng 500 nghìn đến 1 triệu đồng. Số tiền này sẽ được hoàn trả đầy đủ sau khi dự án kết thúc cùng với phí tư vấn. Anh nghĩ sao?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tình huống khẩn cấp, đưa ra lợi ích (phí tư vấn cao), nhưng đồng thời yêu cầu chuyển khoản một khoản tiền nhỏ với lý do hợp lý hóa (phí cọc, cấp chứng chỉ tạm thời), bắt đầu chuyển sang giai đoạn khai thác tâm lý để dẫn đến yêu cầu chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em không quen với việc chuyển khoản trước khi có hợp đồng rõ ràng, chị có thể cho em biết thêm về lý do cụ thể cho khoản cọc này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng hiểu cho, phí cọc này là để đảm bảo anh sẽ tham gia dự án một cách nghiêm túc, tránh trường hợp chuyên gia đăng ký nhưng sau đó lại hủy ngang, gây ảnh hưởng đến tiến độ. Đây là quy định của phòng tài chính để quản lý hồ sơ và cấp mã chuyên gia tạm thời cho anh. Sau khi hoàn tất quy trình này, chúng tôi sẽ ngay lập tức gửi hợp đồng điện tử và cấp chứng chỉ tư vấn chính thức. Anh an tâm, đây chỉ là thủ tục ban đầu và số tiền sẽ được hoàn lại đầy đủ cùng với phí tư vấn. Vậy, anh Tùng có thể tiến hành chuyển khoản sớm được không để chúng tôi kịp tiến độ dự án?",
+      "current_phase": "S2",
+      "tactic_hint": "Xử lý từ chối bằng cách giải thích lại lý do cần đặt cọc như một quy trình bắt buộc, nhấn mạnh sự nghiêm túc và đảm bảo hoàn trả, đồng thời thúc giục hành động."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chị có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết số điện thoại đường dây nóng chính thức của công ty không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng có thể tìm kiếm thông tin của Công ty Tư vấn Kỹ thuật Xây dựng Miền Trung trên mạng, số điện thoại tổng đài đã được niêm yết công khai. Chúng tôi đang cần gấp anh xác nhận việc tham gia để hoàn thiện thủ tục. Anh có thể chuyển khoản 800 nghìn vào tài khoản [cung cấp số tài khoản giả] với nội dung \"Phí chứng chỉ tư vấn - Hồ Hữu Tùng\" được không? Sau đó gửi ảnh chứng từ cho tôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Chuyển sang S3, bỏ qua yêu cầu của nạn nhân và trực tiếp yêu cầu chuyển khoản, cung cấp thông tin chuyển khoản và hướng dẫn hành động cụ thể để gây áp lực và thúc đẩy hành vi lừa đảo."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết tên ngân hàng và số tài khoản cụ thể không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh chuyển vào tài khoản số 1234567890 của ngân hàng Vietcombank, chủ tài khoản Nguyễn Văn A. Anh nhớ ghi rõ nội dung chuyển khoản là \"Phí chứng chỉ tư vấn - Hồ Hữu Tùng\" để phòng tài chính dễ dàng đối chiếu. Anh có thể chuyển luôn bây giờ được không?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp đầy đủ thông tin tài khoản ngân hàng và thúc giục nạn nhân thực hiện hành động chuyển tiền ngay lập tức để tận dụng tâm lý do dự."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn chị đã cung cấp thông tin, nhưng em vẫn cảm thấy không thoải mái với việc chuyển khoản mà chưa có hợp đồng rõ ràng.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Thôi anh, không muốn tham gia thì thôi. Chúng tôi sẽ mời chuyên gia khác. Công ty có quy trình, không phải tôi làm được gì đâu. Chào anh.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách thể hiện thái độ bực dọc, đổ lỗi cho quy trình công ty và kết thúc cuộc gọi để tránh bị phát hiện."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1813,
+      "output_tokens": 2487
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 19327,
+      "output_tokens": 1553
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 20408,
+      "output_tokens": 560
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00874,
+    "output_usd": 0.016653,
+    "total_usd": 0.025393
+  }
+}

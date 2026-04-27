@@ -1,0 +1,248 @@
+{
+  "conversation_id": "conv_5a0fa87ee3",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0068",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trương Hồng Bảo Hương",
+    "fake_age": 26,
+    "real_occupation": "Nhân viên phụ tàu xe",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên phòng vận hành - Công ty hàng không",
+    "caller_org": "Công ty Hàng không Nội địa (đóng giả)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên vận hành hàng không liên hệ kiểm soát viên không lưu để điều phối các vấn đề liên quan đến an toàn chuyến bay, thời gian cất cánh, hoặc xác nhận thông tin hành khách cho báo cáo chính thức.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ với tên, bộ phận, công ty (ví dụ: 'Xin chào anh Khoa, em là Tuấn từ phòng Vận hành của Hàng không ABC'). Yêu cầu xác nhận danh tính của người nghe và thời gian thích hợp để nói chuyện.",
+          "caller_script": "Xin chào anh Khoa, em là Tuấn từ phòng Vận hành của Hàng không ABC. Em cần xác minh một số thông tin về chuyến VN234 hôm nay. Anh có thời gian không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Nói rõ mục đích gọi (ví dụ: báo cáo sự cố, điều phối giờ cất cánh, xác nhận hành khách cho hồ sơ chính thức). Không yêu cầu thông tin nhạy cảm như OTP, mật khẩu, hoặc số tài khoản ngân hàng.",
+          "caller_script": "Chuyến bay hôm nay có một hành khách tên Trần Gia Khoa (mã số 8948653105) gửi phản hồi về chất lượng dịch vụ. Em cần xác nhận anh có thấy hành khách này trên danh sách không, để hoàn tất báo cáo của em."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: Sau khi trao đổi xong, cảm ơn người nghe, xác nhận sẽ gửi email hoặc tài liệu chính thức nếu cần, rồi chào tạm biệt.",
+          "caller_script": "Cảm ơn anh đã xác nhận. Em sẽ cập nhật hệ thống ngay. Nếu cần, em sẽ gửi email báo cáo chính thức cho anh. Chúc anh ngày tốt!"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên phụ tàu xe của hãng hàng không cần liên hệ kiểm soát viên không lưu để báo cáo sự cố an toàn, hoặc điều phối vận chuyển hành khách khác thường. Đây là mối liên kết tự nhiên trong cơ sở hạ tầng hàng không."
+  },
+  "listener_card": {
+    "listener_id": "lis_0068",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1984,
+      "age": 41,
+      "province": "Thanh Hóa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "31540",
+      "title": "Kiểm soát viên không lưu",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Gia Khoa",
+      "VIC_ID_DOC": "038084665676",
+      "VIC_ADDRESS": "Quận 7, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Kiểm soát viên không lưu",
+      "VIC_CONTACT": "0772945152",
+      "VIC_TAX_SOCIAL_ID": "8948653105"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "293719",
+      "VIC_CREDENTIAL": "023049",
+      "VIC_SIM_INFO": "0772945152",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2949240332",
+      "VIC_CARD_DATA": "4933 **** **** 9794",
+      "VIC_BALANCE": "285 triệu đồng",
+      "VIC_ASSET": "2.4 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Gia Khoa",
+    "VIC_CONTACT": "0772945152",
+    "VIC_TAX_SOCIAL_ID": "8948653105"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phòng vận hành - Công ty hàng không",
+    "caller_org": "Công ty Hàng không Nội địa (đóng giả)",
+    "scenario_context": "Nhân viên phụ tàu xe của hãng hàng không cần liên hệ kiểm soát viên không lưu để báo cáo sự cố an toàn, hoặc điều phối vận chuyển hành khách khác thường. Đây là mối liên kết tự nhiên trong cơ sở hạ tầng hàng không.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi báo cáo 'sự cố an toàn' liên quan đến hành khách Trần Gia Khoa trên chuyến bay vừa qua — cần xác minh thông tin cá nhân để hoàn tất hồ sơ bảo hiểm. Yêu cầu nạn nhân xác thực danh tính qua OTP được gửi đến điện thoại.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Tuấn từ phòng Vận hành Hàng không'. Sử dụng VIC_FULLNAME ('Trần Gia Khoa') và VIC_TAX_SOCIAL_ID ('8948653105') để tạo ảo tưởng đã kiểm tra hồ sơ sẵn. Nói: 'Em vừa nhìn thấy tên anh trong danh sách hành khách chuyến VN234 hôm nay. Hệ thống ghi nhận anh có liên quan đến một sự cố nhỏ trên máy bay.'",
+          "caller_script": "Chào anh Khoa, em là Tuấn từ phòng Vận hành Hàng không. Hệ thống của em vừa ghi nhận mã số 8948653105 của anh có một thông báo bảo hiểm cần xác minh. Anh có khoảng 5 phút không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Tạo cảm giác rằng nếu không xác minh nhanh, yêu cầu bảo hiểm sẽ bị từ chối. Nói rằng 'có một yêu cầu thanh toán từ hãng bảo hiểm, nhưng phải xác nhận danh tính trước'. Sử dụng VIC_CONTACT để khẳng định: 'Em sẽ gửi mã OTP đến số 0772945152 của anh, anh đọc lại cho em để xác minh hệ thống.'",
+          "caller_script": "Vấn đề là, nếu không xác minh trong 10 phút tới, hệ thống sẽ tự động từ chối claim bảo hiểm. Đây là quy trình bắt buộc. Em sẽ gửi OTP về số điện thoại của anh ngay bây giờ — anh kiểm tra và đọc mã cho em nhé."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Nạn nhân nhận OTP (từ ngân hàng, ứng dụng thanh toán, hoặc dịch vụ thực) và đọc cho scammer. Scammer sẽ cố gắng lấy OTP để truy cập tài khoản ngân hàng hoặc ứng dụng thanh toán của nạn nhân.",
+          "caller_script": "Anh nhận được mã chưa? Mã 6 chữ số gì? Anh đọc từ từ cho em nghe... [Sau khi nhận OTP, scammer sẽ dùng để đăng nhập tài khoản hoặc thực hiện giao dịch]"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối hoặc nghi ngờ, scammer sẽ nói 'Không sao, nhưng sau này anh sẽ mất quyền claim bảo hiểm' rồi cúp máy. Nếu thành công, scammer sẽ cúp máy ngay sau khi có OTP.",
+          "caller_script": "Cảm ơn anh. Hệ thống đã xác minh thành công. Anh sẽ nhận email xác nhận trong vòng 24 giờ. Chúc anh ngày tốt!"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên vận hành hàng không liên hệ kiểm soát viên không lưu để điều phối các vấn đề liên quan đến an toàn chuyến bay, thời gian cất cánh, hoặc xác nhận thông tin hành khách cho báo cáo chính thức.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ với tên, bộ phận, công ty (ví dụ: 'Xin chào anh Khoa, em là Tuấn từ phòng Vận hành của Hàng không ABC'). Yêu cầu xác nhận danh tính của người nghe và thời gian thích hợp để nói chuyện.",
+          "caller_script": "Xin chào anh Khoa, em là Tuấn từ phòng Vận hành của Hàng không ABC. Em cần xác minh một số thông tin về chuyến VN234 hôm nay. Anh có thời gian không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Nói rõ mục đích gọi (ví dụ: báo cáo sự cố, điều phối giờ cất cánh, xác nhận hành khách cho hồ sơ chính thức). Không yêu cầu thông tin nhạy cảm như OTP, mật khẩu, hoặc số tài khoản ngân hàng.",
+          "caller_script": "Chuyến bay hôm nay có một hành khách tên Trần Gia Khoa (mã số 8948653105) gửi phản hồi về chất lượng dịch vụ. Em cần xác nhận anh có thấy hành khách này trên danh sách không, để hoàn tất báo cáo của em."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: Sau khi trao đổi xong, cảm ơn người nghe, xác nhận sẽ gửi email hoặc tài liệu chính thức nếu cần, rồi chào tạm biệt.",
+          "caller_script": "Cảm ơn anh đã xác nhận. Em sẽ cập nhật hệ thống ngay. Nếu cần, em sẽ gửi email báo cáo chính thức cho anh. Chúc anh ngày tốt!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, em chào anh Khoa ạ. Em là Trương Hồng Bảo Hương, từ phòng Vận hành của Công ty Hàng không Nội địa. Anh Khoa có tiện nghe máy không ạ? Em xin xác nhận anh là anh Trần Gia Khoa đúng không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh đầy đủ và xác nhận danh tính người nghe, hỏi thời gian tiện lợi."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Trần Gia Khoa, nhưng không biết có chuyện gì mà em gọi cho tôi ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, cảm ơn anh đã xác nhận. Hiện tại bên em đang có một số vấn đề cần điều phối liên quan đến lịch trình chuyến bay và báo cáo an toàn, nên em cần xác nhận một vài thông tin với anh để hoàn tất hồ sơ chính thức ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Nói rõ mục đích gọi là điều phối lịch trình, báo cáo an toàn và hoàn tất hồ sơ chính thức, không yêu cầu thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Vậy em cần xác nhận thông tin gì từ tôi ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin phép xác nhận trước tiên là về mã số chuyến bay và thời gian dự kiến cất cánh của chuyến VN321A ngày 15 tháng 3, theo thông tin trên hệ thống thì là 10 giờ 30 sáng. Anh có thể xác nhận lại giúp em thông tin này không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Yêu cầu xác nhận thông tin cụ thể liên quan đến chuyến bay và thời gian cất cánh, không đòi hỏi thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi xác nhận mã số chuyến bay VN321A và thời gian cất cánh vào lúc 10 giờ 30 sáng ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em cảm ơn anh Khoa đã xác nhận ạ. Tiếp theo, liên quan đến báo cáo an toàn, em cần xác nhận danh sách hành khách VIP trên chuyến bay này. Anh có thể giúp em xác nhận tên của những hành khách VIP có mặt không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục yêu cầu xác nhận thông tin cần thiết cho báo cáo an toàn (danh sách hành khách VIP), vẫn giữ nguyên tắc không đòi hỏi thông tin nhạy cảm."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ danh sách hành khách VIP lắm, em có thể cho tôi biết họ là ai không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, trên hệ thống của bên em hiện đang có thông tin về ông Nguyễn Văn A và bà Trần Thị B là hai hành khách VIP dự kiến trên chuyến VN321A. Anh Khoa vui lòng xác nhận lại xem thông tin này đã chính xác chưa ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin đã có để người nghe xác nhận, hỗ trợ họ hoàn thành yêu cầu một cách dễ dàng hơn mà không gây áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi xác nhận thông tin về ông Nguyễn Văn A và bà Trần Thị B là hai hành khách VIP dự kiến trên chuyến VN321A ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em cảm ơn anh Khoa rất nhiều vì đã xác nhận những thông tin quan trọng này. Em đã ghi nhận đầy đủ để bổ sung vào hồ sơ chính thức của chuyến bay. Sau cuộc gọi này, em sẽ gửi lại một email tổng hợp các thông tin đã trao đổi để anh tiện theo dõi. Anh có cần em hỗ trợ thêm thông tin gì khác không ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Cảm ơn người nghe đã hợp tác, thông báo về việc gửi email tổng hợp và hỏi xem có cần hỗ trợ gì thêm trước khi kết thúc cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã hỗ trợ tôi rất nhiều rồi, cảm ơn em. Nhưng tôi không cần thêm thông tin gì nữa ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy em cảm ơn anh Khoa một lần nữa nhé. Nếu có bất kỳ vấn đề gì phát sinh, anh cứ liên hệ lại với phòng Vận hành bên em ạ. Chào anh Khoa.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, cảm ơn người nghe và đưa ra gợi ý liên hệ lại nếu có vấn đề, trước khi chào tạm biệt."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1787,
+      "output_tokens": 2213
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 9858,
+      "output_tokens": 908
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 12216,
+      "output_tokens": 426
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005591,
+    "output_usd": 0.013591,
+    "total_usd": 0.019182
+  }
+}

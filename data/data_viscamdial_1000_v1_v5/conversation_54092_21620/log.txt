@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_9d7793c2a8]
+  Caller thật: Nhân viên bảo vệ rừng (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Cán bộ quản lý dự án bảo vệ rừng / Chuyên viên phát triển cảnh quan rừng @ Chi cục Kiểm lâm Đồng Nai / Trung tâm Bảo tồn Rừng Đông Nam Bộ
+  Listener: Kiến trúc sư cảnh quan (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Kiến trúc sư cảnh quan thường tham gia các dự án quy hoạch không gian xanh, phục hồi sinh thái rừng tại địa phương. Cán bộ bảo vệ rừng cần tư vấn thiết kế cảnh quan để cải tạo khu vực bảo tồn hoặc báo cáo tiến độ dự án.
+  Pretext: Gọi thông báo về một dự án phục hồi cảnh quan rừng tại Đồng Nai, yêu cầu xác nhận thông tin cá nhân và số tài khoản để thanh toán phí tư vấn thiết kế hoặc 'ký quỹ dự án'.
+  Listener traits: ['bảo thủ ngại thay đổi', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, em chào chị Lê Bảo Hương ạ? Em là Hoàng Hồng Mai, bên Trung tâm Bảo tồn Rừng Đông Nam Bộ. Em gọi cho chị để thông báo về dự án phục hồi cảnh quan rừng ở khu vực Đồng Nai, và thấy trong hồ sơ chị là kiến trúc sư cảnh quan nên muốn mời chị tham gia tư vấn thiết kế ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân, tự xưng 'em' và gọi người nghe là 'chị', dùng VIC_FULLNAME và LOCATION để tạo ấn tượng đã chuẩn bị kỹ thông tin.
+T02 [LISTENER] Em cảm ơn thông tin của em, nhưng tôi muốn xác nhận lại xem dự án này cụ thể là gì và có cần tôi cung cấp thêm thông tin gì không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, dự án này là dự án trọng điểm của tỉnh về phục hồi cảnh quan rừng sau khai thác, có quy mô lớn và được ưu tiên đặc biệt ạ. Bên em đang cần gấp các kiến trúc sư cảnh quan có kinh nghiệm như chị để tham gia thiết kế và giám sát. Nếu chị tham gia, đây sẽ là cơ hội rất tốt để hợp tác lâu dài với Trung tâm Bảo tồn Rừng Đông Nam Bộ đó ạ.
+      → phase: S2 | tactic: Khai thác tâm lý 'cơ hội' và 'ưu tiên', tạo cảm giác cấp bách để nạn nhân quan tâm và muốn tìm hiểu sâu hơn, mở đường cho việc yêu cầu thông tin cá nhân. Xưng 'em' gọi 'chị' nhất quán.
+T04 [LISTENER] Em hiểu rồi, nhưng tôi vẫn cần biết thêm thông tin về quy trình và những yêu cầu cụ thể khi tham gia dự án này ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để tiện cho việc trao đổi thông tin chi tiết về dự án cũng như hợp đồng điện tử, bên em cần chị Lê Bảo Hương cung cấp số CCCD hoặc CMND của mình ạ. Và nếu chị đồng ý hợp tác, chúng em sẽ chuyển ngay 50 triệu đồng tiền ký quỹ vào tài khoản của chị để bắt đầu công việc.
+      → phase: S3 | tactic: Yêu cầu cung cấp thông tin cá nhân (CCCD) và số tài khoản để tạo hợp đồng điện tử và chuyển tiền ký quỹ, bình thường hóa hành động này như một phần của quy trình hợp tác, đồng thời tạo cảm giác 'được nhận tiền' để kích thích nạn nhân hành động.
+T06 [LISTENER] Em thấy yêu cầu này hơi nhạy cảm, cho tôi hỏi em có thể cho biết số điện thoại liên lạc của trung tâm không ạ?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T07 [CALLER] Dạ, chị yên tâm, số điện thoại của Trung tâm là 02513.846.577 ạ. Chị cứ gọi trực tiếp xác nhận. Nhưng mà chị ơi, việc xác minh thông tin cá nhân và chuyển tiền ký quỹ là để đảm bảo quyền lợi cho cả hai bên và để dự án khởi động đúng tiến độ, tránh bỏ lỡ cơ hội tốt này ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ của nạn nhân bằng cách cung cấp thông tin công khai (số điện thoại), đồng thời nhấn mạnh lại 'cơ hội' và sự cần thiết của việc cung cấp thông tin để tạo áp lực cho nạn nhân hành động.
+T09 [LISTENER] Em cảm ơn thông tin của em, nhưng tôi vẫn thấy yêu cầu cung cấp thông tin cá nhân là không hợp lý, em có thể cho tôi biết thêm về quy trình hợp tác không?
+      → action: CONTINUE | suspicion: 1.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  9 turns | suspicion=1.60
+TOKEN: in=16272 | out=2770
+COST : $0.015034
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_54092_21620\conv_9d7793c2a8.json  [SCAM_EXPOSE]

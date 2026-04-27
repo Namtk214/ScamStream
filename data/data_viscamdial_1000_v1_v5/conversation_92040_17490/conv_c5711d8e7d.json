@@ -1,0 +1,212 @@
+{
+  "conversation_id": "conv_c5711d8e7d",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0082",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lý Công Cường",
+    "fake_age": 36,
+    "real_occupation": "Lao động làm vườn",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Quản lý Cây xanh & Cảnh quan - Công ty Dịch vụ Môi trường",
+    "caller_org": "Công ty TNHH Dịch vụ Môi trường & Bảo trì Công trình (EVMC)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện xác nhận thông tin cá nhân trong hệ thống quản lý dự án xanh hóa tòa nhà, với lý do cập nhật hợp đồng bảo trì cây xanh hàng tháng. Dùng tên đầy đủ (VIC_FULLNAME) để khẳng định đã lấy được thông tin từ hệ thống chính thức, tạo ảo tưởng về độ tin cậy.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào chị Phạm Thùy Ngọc Anh, tôi là Trần Minh Khoa từ Công ty EVMC. Chúng tôi vừa cập nhật hệ thống quản lý hợp đồng và thấy tên chị trong danh sách liên hệ chính của dự án. Tôi gọi để xác nhận lại thông tin trước khi finalize hóa đơn tháng này.'",
+          "tactic": "Dùng VIC_FULLNAME để tạo ảo tưởng đã xác minh danh tính từ hệ thống"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & quyền lực: 'Chị ơi, do lỗi hệ thống kế toán, hóa đơn tháng này bị treo. Nếu không thanh toán trong 2 giờ, hợp đồng sẽ bị tạm dừng và cây xanh sẽ không được chăm sóc. Đây là quy định từ phía khách hàng lớn của chúng tôi. Chị có thể xử lý nhanh được không?'",
+          "tactic": "Tạo cảm giác khẩn cấp + trách nhiệm của lãnh đạo + sợ ảnh hưởng công ty"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng chuyển khoản số tiền [X triệu] vào tài khoản tạm thời của công ty (xin lỗi vì tài khoản chính đang bảo trì). Tôi sẽ đọc số tài khoản: 8230808284. Sau khi chị chuyển, tôi sẽ gửi biên lai điện tử ngay.'",
+          "tactic": "Dùng VIC_BANK_ACCOUNT (tài khoản của nạn nhân) để tạo bối cảnh 'tài khoản tạm thời' nhằm lấy tiền vào tài khoản thật của scammer hoặc người thứ ba"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ: (1) Xin lỗi vì 'hiểu nhầm' và đề nghị gọi lại qua đường dây chính thức (nhưng cung cấp số điện thoại giả); (2) Nếu nạn nhân kiểm tra và phát hiện sai, scammer sẽ nói 'hệ thống của chúng tôi bị lỗi, chị thử gọi lại vào giờ hành chính' rồi tắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Scammer giả danh nhân viên quản lý cây xanh từ đơn vị dịch vụ môi trường để gọi cho lãnh đạo/quản lý cấp cao của các công ty sản xuất, dịch vụ để thương lượng hợp đồng bảo trì cảnh quan, hoặc gọi cấp quản lý để xác nhận thông tin chi phí liên quan đến dự án xanh hóa văn phòng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0082",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1982,
+      "age": 43,
+      "province": "Nghệ An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "17490",
+      "title": "Các đơn vị sản xuất và dịch vụ còn lại chưa được phân vào đâu",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Thùy Ngọc Anh",
+      "VIC_ID_DOC": "040182358556",
+      "VIC_ADDRESS": "Huyện 11, Nghệ An",
+      "VIC_EMPLOYMENT": "Các đơn vị sản xuất và dịch vụ còn lại chưa được phân vào đâu",
+      "VIC_CONTACT": "0798268718",
+      "VIC_TAX_SOCIAL_ID": "1666294877"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "1416",
+      "VIC_CREDENTIAL": "295285",
+      "VIC_SIM_INFO": "0798268718",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "8230808284",
+      "VIC_CARD_DATA": "4719 **** **** 1849",
+      "VIC_BALANCE": "93 triệu đồng",
+      "VIC_ASSET": "129 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Thùy Ngọc Anh",
+    "VIC_CONTACT": "0798268718",
+    "VIC_BANK_ACCOUNT": "8230808284"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Cây xanh & Cảnh quan - Công ty Dịch vụ Môi trường",
+    "caller_org": "Công ty TNHH Dịch vụ Môi trường & Bảo trì Công trình (EVMC)",
+    "scenario_context": "Scammer giả danh nhân viên quản lý cây xanh từ đơn vị dịch vụ môi trường để gọi cho lãnh đạo/quản lý cấp cao của các công ty sản xuất, dịch vụ để thương lượng hợp đồng bảo trì cảnh quan, hoặc gọi cấp quản lý để xác nhận thông tin chi phí liên quan đến dự án xanh hóa văn phòng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện xác nhận thông tin cá nhân trong hệ thống quản lý dự án xanh hóa tòa nhà, với lý do cập nhật hợp đồng bảo trì cây xanh hàng tháng. Dùng tên đầy đủ (VIC_FULLNAME) để khẳng định đã lấy được thông tin từ hệ thống chính thức, tạo ảo tưởng về độ tin cậy.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào chị Phạm Thùy Ngọc Anh, tôi là Trần Minh Khoa từ Công ty EVMC. Chúng tôi vừa cập nhật hệ thống quản lý hợp đồng và thấy tên chị trong danh sách liên hệ chính của dự án. Tôi gọi để xác nhận lại thông tin trước khi finalize hóa đơn tháng này.'",
+          "tactic": "Dùng VIC_FULLNAME để tạo ảo tưởng đã xác minh danh tính từ hệ thống"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & quyền lực: 'Chị ơi, do lỗi hệ thống kế toán, hóa đơn tháng này bị treo. Nếu không thanh toán trong 2 giờ, hợp đồng sẽ bị tạm dừng và cây xanh sẽ không được chăm sóc. Đây là quy định từ phía khách hàng lớn của chúng tôi. Chị có thể xử lý nhanh được không?'",
+          "tactic": "Tạo cảm giác khẩn cấp + trách nhiệm của lãnh đạo + sợ ảnh hưởng công ty"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chị vui lòng chuyển khoản số tiền [X triệu] vào tài khoản tạm thời của công ty (xin lỗi vì tài khoản chính đang bảo trì). Tôi sẽ đọc số tài khoản: 8230808284. Sau khi chị chuyển, tôi sẽ gửi biên lai điện tử ngay.'",
+          "tactic": "Dùng VIC_BANK_ACCOUNT (tài khoản của nạn nhân) để tạo bối cảnh 'tài khoản tạm thời' nhằm lấy tiền vào tài khoản thật của scammer hoặc người thứ ba"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ: (1) Xin lỗi vì 'hiểu nhầm' và đề nghị gọi lại qua đường dây chính thức (nhưng cung cấp số điện thoại giả); (2) Nếu nạn nhân kiểm tra và phát hiện sai, scammer sẽ nói 'hệ thống của chúng tôi bị lỗi, chị thử gọi lại vào giờ hành chính' rồi tắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty dịch vụ môi trường thực sự gọi cho lãnh đạo/quản lý công ty khách hàng để xác nhận thông tin cá nhân, cập nhật chi phí bảo trì cây xanh hàng tháng, hoặc thương lượng gia hạn hợp đồng dịch vụ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào chị Phạm Thùy Ngọc Anh, tôi là Trần Minh Khoa từ Công ty EVMC. Chúng tôi cung cấp dịch vụ bảo trì cây xanh cho tòa nhà của công ty chị. Tôi gọi để xác nhận lại thông tin liên hệ trong hệ thống của chúng tôi, có phải số điện thoại 0798268718 là đúng không?'",
+          "behavior": "Xác nhận danh tính hai chiều, không yêu cầu thông tin nhạy cảm ngay lập tức"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Hóa đơn tháng này của chúng tôi vừa gửi qua email. Chị có nhận được không? Chúng tôi muốn biết liệu công ty chị có nhu cầu mở rộng dịch vụ bảo trì thêm khu vực nào không? Hiện tại chúng tôi đang có chương trình ưu đãi.'",
+          "behavior": "Thảo luận công khai, cung cấp thông tin hợp lệ, không tạo áp lực"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị đã lắng nghe. Nếu chị có câu hỏi gì, vui lòng liên hệ qua email chính thức của công ty hoặc gọi lại đường dây tổng đài. Chúc chị một ngày tốt lành!'",
+          "behavior": "Cung cấp các kênh liên hệ chính thức, không bao giờ yêu cầu chuyển tiền qua điện thoại mà không có xác nhận lại qua kênh chính thức"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Phạm Thùy Ngọc Anh, tôi là Lý Công Cường từ Công ty Dịch vụ Môi trường & Bảo trì Công trình (EVMC). Chúng tôi vừa cập nhật hệ thống quản lý hợp đồng và thấy tên chị trong danh sách liên hệ chính của dự án. Tôi gọi để xác nhận lại thông tin trước khi finalize hóa đơn tháng này.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức, lý do gọi và dùng tên đầy đủ của nạn nhân để tạo trust."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ em nghe rồi, nhưng em không nhớ rõ thông tin hợp đồng lắm.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị yên tâm. Đây là hợp đồng bảo trì cây xanh định kỳ hàng tháng cho tòa nhà chị đang quản lý. Hiện tại hệ thống đang báo hóa đơn của chị bị treo do lỗi kỹ thuật kế toán. Nếu không thanh toán trong 2 giờ, hợp đồng sẽ bị tạm dừng và cây xanh sẽ không được chăm sóc. Đây là quy định từ phía khách hàng lớn của chúng tôi. Chị có thể xử lý nhanh được không?",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và quyền lực, tạo áp lực thời gian để nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em cần thêm thời gian để kiểm tra lại thông tin hợp đồng của mình ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu. Tuy nhiên, thời gian để các bạn bên quản lý dự án khắc phục lỗi này đang rất gấp, chỉ còn khoảng 1 giờ 30 phút nữa thôi là đến hạn cuối rồi. Nếu để sang tháng sau thì quy trình giải quyết sẽ phức tạp hơn nhiều và có thể ảnh hưởng đến chất lượng dịch vụ của công ty đối tác lớn này. Nếu có thể, chị Ngọc Anh có thể hỗ trợ chúng tôi xử lý trong thời gian sớm nhất không ạ? Tôi có thể hướng dẫn chị nhanh một vài bước.",
+      "current_phase": "S2",
+      "tactic_hint": "Xử lý từ chối nhẹ nhàng bằng cách nhắc lại áp lực thời gian và nguy cơ gián đoạn dịch vụ, đồng thời đề nghị hỗ trợ để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em vẫn cần thêm thời gian để kiểm tra kỹ càng trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1388,
+      "output_tokens": 2076
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4091,
+      "output_tokens": 479
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5384,
+      "output_tokens": 195
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003014,
+    "output_usd": 0.011695,
+    "total_usd": 0.014708
+  }
+}

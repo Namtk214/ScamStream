@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_7f9032d477]
+  Caller thật: Kỹ thuật viên siêu âm (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Trưởng phòng Kiểm soát Chất lượng & An toàn Lao động - Bệnh viện/Cơ sở Y tế @ Trung tâm Kiểm soát Bệnh tật & An toàn Lao động TP. Hồ Chí Minh
+  Listener: Thợ vận hành máy sản xuất sản phẩm nhựa (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Cơ sở sản xuất nhựa sử dụng thiết bị y tế (máy đo độ cứng, máy siêu âm kiểm tra vật liệu) hoặc cần kiểm định định kỳ. Trưởng phòng QC gọi để xác minh thông tin công nhân hoặc thông báo về kiểm tra sức khỏe nghề nghiệp bắt buộc.
+  Pretext: Gọi danh nghĩa cơ quan kiểm soát y tế, thông báo công nhân Lý Bảo Thị Nhung cần tham gia kiểm tra sức khỏe định kỳ hoặc có vấn đề về tiền bảo hiểm y tế. Yêu cầu thanh toán lệ phí kiểm tra hoặc phạt chậm nộp.
+  Listener traits: ['ham lợi dễ bị bait', 'lo lắng cho con cái']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Lý Bảo Thị Nhung, tôi là Mai Văn Hữu Hải từ Trung tâm Kiểm soát Bệnh tật và An toàn Lao động TP. Hồ Chí Minh. Chúng tôi đang cần xác minh lại thông tin địa chỉ cư trú của chị là TP 11, Vĩnh Long để cập nhật hồ sơ y tế cho công nhân viên. Chị xác nhận giúp tôi nhé?
+      → phase: S1 | tactic: Tiếp cận và xác thực thông tin đã biết để tạo uy tín ban đầu.
+T02 [LISTENER] Dạ, em biết địa chỉ của mình là TP 11, Vĩnh Long rồi, nhưng có cần thiết xác minh không anh ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, chị Nhung. Đây là quy trình bắt buộc để đảm bảo quyền lợi bảo hiểm y tế và các phúc lợi liên quan đến sức khỏe cho công nhân viên. Việc cập nhật thông tin này rất quan trọng để hồ sơ của chị được chính xác nhất. Chị xác nhận là TP 11, Vĩnh Long đúng không ạ?
+      → phase: S1 | tactic: Nhấn mạnh tầm quan trọng của việc xác minh để củng cố uy tín và thúc đẩy nạn nhân hợp tác, đồng thời tiếp tục xác thực thông tin.
+T04 [LISTENER] Dạ, em hiểu, nhưng em vẫn lo lắng nếu thông tin bị lộ ra ngoài thì không tốt ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Chị Nhung yên tâm, đây là quy trình bảo mật thông tin nội bộ của Trung tâm, dữ liệu của chị được bảo vệ nghiêm ngặt theo quy định. Không có chuyện thông tin bị lộ ra ngoài đâu ạ. Bây giờ liên quan đến hồ sơ y tế của chị, chúng tôi phát hiện có một vấn đề cần giải quyết gấp, đó là hồ sơ bảo hiểm y tế của chị đã quá hạn 3 tháng rồi.
+      → phase: S2 | tactic: Xoa dịu lo lắng về bảo mật, sau đó chuyển sang phase S2 để gây áp lực bằng cách thông báo về vấn đề bảo hiểm y tế đã quá hạn.
+T06 [LISTENER] Dạ, vậy anh có thể cho em biết phải làm gì để giải quyết vấn đề này không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T07 [CALLER] Vâng, chị Nhung. Với trường hợp của chị, do hồ sơ đã quá hạn 3 tháng, nếu trong vòng 24 giờ tới chị không thanh toán khoản phí bảo hiểm y tế thiếu, chị sẽ phải đối mặt với mức phạt 15% trên tổng số tiền nợ và có thể mất quyền lợi khám chữa bệnh cơ bản. Việc này sẽ ảnh hưởng trực tiếp đến sức khỏe và quyền lợi của chị đấy ạ.
+      → phase: S2 | tactic: Khai thác tâm lý khẩn cấp và sợ hãi bằng cách nhấn mạnh hậu quả pháp lý và tài chính nếu không giải quyết vấn đề ngay lập tức.
+T08 [LISTENER] Dạ, em hiểu, nhưng em không biết phải chuyển tiền cho ai và số tiền là bao nhiêu ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Vâng, chị Nhung. Số tiền chị cần thanh toán lúc này là 2,8 triệu đồng để giải quyết ngay vấn đề quá hạn. Để tiện lợi và nhanh chóng nhất, chị vui lòng chuyển khoản số tiền này vào tài khoản ngân hàng của Trung tâm, số tài khoản là 19034567891234 tại Ngân hàng Techcombank. Sau khi chuyển, chị vui lòng chụp lại biên lai gửi cho tôi để chúng tôi xác nhận và cập nhật lại hồ sơ cho chị ngay lập tức.
+      → phase: S3 | tactic: Yêu cầu hành động chuyển tiền cụ thể, cung cấp số tài khoản và đưa ra lý do để nạn nhân thực hiện chuyển khoản.
+T10 [LISTENER] Dạ, em cần thời gian để suy nghĩ lại, vì em không quen chuyển tiền cho người lạ như vậy ạ.
+      → action: REFUSAL | suspicion: 0.80 | disclosed: []
+
+T11 [CALLER] Tôi hiểu nỗi lo của chị Nhung. Tuy nhiên, đây không phải là chuyển tiền cho cá nhân mà là vào tài khoản của Trung tâm Kiểm soát Bệnh tật và An toàn Lao động TP. Hồ Chí Minh. Nếu chị cần thời gian xác minh từ công ty, chị cứ việc làm, nhưng Trung tâm chỉ có thể giữ chỗ cho chị đến hết hôm nay để giải quyết hồ sơ quá hạn. Sau thời gian này, hệ thống sẽ tự động áp dụng mức phạt và chị sẽ mất quyền lợi bảo hiểm y tế. Chị nên cân nhắc thật kỹ.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách xoa dịu, tái khẳng định tính hợp pháp của tài khoản, đồng thời tiếp tục áp dụng áp lực thời gian và hậu quả pháp lý để thúc đẩy hành động.
+T12 [LISTENER] Dạ, em không thể quyết định vội vàng như vậy được, em cần thêm thông tin rõ ràng và thời gian để suy nghĩ ạ.
+      → action: REFUSAL | suspicion: 1.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  12 turns | suspicion=1.60
+TOKEN: in=24749 | out=3155
+COST : $0.016893
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_32111_81420\conv_7f9032d477.json  [SCAM_REFUSE]

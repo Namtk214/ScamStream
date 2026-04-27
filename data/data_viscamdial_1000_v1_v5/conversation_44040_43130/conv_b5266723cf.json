@@ -1,0 +1,245 @@
+{
+  "conversation_id": "conv_b5266723cf",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0032",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Cao Diễm Thu Chi",
+    "fake_age": 45,
+    "real_occupation": "Người ghi chép thuê và người làm các công việc có liên quan",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Trưởng phòng Nhân sự & Kế toán (giả vờ từ công ty mẹ/tập đoàn)",
+    "caller_org": "Công ty Cổ phần Quản lý Nhân sự Toàn Cầu (HRMS Global Vietnam)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction | credential_theft",
+      "pretext": "Xác minh thông tin nhân viên trong hệ thống quản lý lương sau khi phát hiện dữ liệu bị lộ từ dịch vụ ghi chép bên ngoài. Scammer sử dụng tên đầy đủ 'Dương Thanh Diễm Thảo' và 4 chữ số cuối thẻ để tạo ấn tượng đã có dữ liệu chi tiết.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng credibility: 'Chào chị Thảo, tôi là Trần Minh từ phòng Kiểm soát Chất lượng Dữ liệu, Công ty HRMS Global. Chúng tôi vừa phát hiện sự cố bảo mật: dữ liệu nhân viên bao gồm cả Dương Thanh Diễm Thảo đã bị lộ từ nhà cung cấp ghi chép. Hệ thống của chúng tôi có ghi nhận thẻ tín dụng kết thúc bằng 5956 của chị. Chúng tôi cần xác minh lại ngay để bảo vệ tài khoản.'",
+          "tactic": "Sử dụng tên + số thẻ để giả vờ đã có thông tin nội bộ, kích hoạt lo lắng về bảo mật"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + Sợ hãi: 'Chúng tôi đang khẩn cấp cập nhật hệ thống quản lý lương để khóa các tài khoản dễ bị tấn công. Nếu không xác minh trong 30 phút, tài khoản của chị sẽ bị tạm khóa để bảo vệ. Chúng tôi cần chị xác thực danh tính qua mã OTP được gửi đến số điện thoại đăng ký 0817537930.'",
+          "tactic": "Tạo cảm giác khẩn cấp + áp lực thời gian + xác nhận số điện thoại (để tăng tin cậy)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động quyết định: 'Chị vừa nhận được mã OTP rồi chứ? Vui lòng đọc cho tôi để tôi hoàn tất xác minh. Sau đó chúng tôi sẽ cập nhật mật khẩu tạm thời để chị đăng nhập lại hệ thống lương.'",
+          "tactic": "Lừa nạn nhân đọc OTP → dùng để reset mật khẩu/truy cập tài khoản ngân hàng"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu thành công: Cảm ơn + Mất dấu vết. Nếu từ chối: 'Hiểu rồi, chị có thể liên hệ trực tiếp hotline xác minh: [số giả] để hoàn tất quy trình. Chúng tôi sẽ ghi nhận yêu cầu của chị.' → Tạo vỏ bọc hợp lệ để tránh nghi ngờ.",
+          "tactic": "Đặt lỗi trên nạn nhân hoặc cung cấp 'đường hợp pháp' giả để cơ hội gọi lại sau"
+        }
+      ]
+    },
+    "scenario_context": "Người ghi chép thuê thường làm việc với dữ liệu nhân sự, bảng lương, hợp đồng của nhiều công ty. Scammer giả vờ là trưởng phòng từ công ty mẹ/kiểm toán nội bộ, gọi nhân viên kế toán lương để 'xác minh dữ liệu', 'cập nhật hệ thống', hoặc 'xử lý sự cố bảo mật'."
+  },
+  "listener_card": {
+    "listener_id": "lis_0032",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1966,
+      "age": 59,
+      "province": "TP Hồ Chí Minh",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "43130",
+      "title": "Nhân viên kế toán tiền lương",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Thanh Diễm Thảo",
+      "VIC_ID_DOC": "079166509406",
+      "VIC_ADDRESS": "Quận 1, TP Hồ Chí Minh",
+      "VIC_EMPLOYMENT": "Nhân viên kế toán tiền lương",
+      "VIC_CONTACT": "0817537930",
+      "VIC_TAX_SOCIAL_ID": "4171406582"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "608599",
+      "VIC_CREDENTIAL": "1835",
+      "VIC_SIM_INFO": "0817537930",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "291846852494",
+      "VIC_CARD_DATA": "4723 **** **** 5956",
+      "VIC_BALANCE": "241 triệu đồng",
+      "VIC_ASSET": "122 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "TP Hồ Chí Minh"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Thanh Diễm Thảo",
+    "VIC_CONTACT": "0817537930",
+    "VIC_CARD_DATA": "4723 **** **** 5956"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Nhân sự & Kế toán (giả vờ từ công ty mẹ/tập đoàn)",
+    "caller_org": "Công ty Cổ phần Quản lý Nhân sự Toàn Cầu (HRMS Global Vietnam)",
+    "scenario_context": "Người ghi chép thuê thường làm việc với dữ liệu nhân sự, bảng lương, hợp đồng của nhiều công ty. Scammer giả vờ là trưởng phòng từ công ty mẹ/kiểm toán nội bộ, gọi nhân viên kế toán lương để 'xác minh dữ liệu', 'cập nhật hệ thống', hoặc 'xử lý sự cố bảo mật'.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | credential_theft",
+      "pretext": "Xác minh thông tin nhân viên trong hệ thống quản lý lương sau khi phát hiện dữ liệu bị lộ từ dịch vụ ghi chép bên ngoài. Scammer sử dụng tên đầy đủ 'Dương Thanh Diễm Thảo' và 4 chữ số cuối thẻ để tạo ấn tượng đã có dữ liệu chi tiết.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng credibility: 'Chào chị Thảo, tôi là Trần Minh từ phòng Kiểm soát Chất lượng Dữ liệu, Công ty HRMS Global. Chúng tôi vừa phát hiện sự cố bảo mật: dữ liệu nhân viên bao gồm cả Dương Thanh Diễm Thảo đã bị lộ từ nhà cung cấp ghi chép. Hệ thống của chúng tôi có ghi nhận thẻ tín dụng kết thúc bằng 5956 của chị. Chúng tôi cần xác minh lại ngay để bảo vệ tài khoản.'",
+          "tactic": "Sử dụng tên + số thẻ để giả vờ đã có thông tin nội bộ, kích hoạt lo lắng về bảo mật"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + Sợ hãi: 'Chúng tôi đang khẩn cấp cập nhật hệ thống quản lý lương để khóa các tài khoản dễ bị tấn công. Nếu không xác minh trong 30 phút, tài khoản của chị sẽ bị tạm khóa để bảo vệ. Chúng tôi cần chị xác thực danh tính qua mã OTP được gửi đến số điện thoại đăng ký 0817537930.'",
+          "tactic": "Tạo cảm giác khẩn cấp + áp lực thời gian + xác nhận số điện thoại (để tăng tin cậy)"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động quyết định: 'Chị vừa nhận được mã OTP rồi chứ? Vui lòng đọc cho tôi để tôi hoàn tất xác minh. Sau đó chúng tôi sẽ cập nhật mật khẩu tạm thời để chị đăng nhập lại hệ thống lương.'",
+          "tactic": "Lừa nạn nhân đọc OTP → dùng để reset mật khẩu/truy cập tài khoản ngân hàng"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu thành công: Cảm ơn + Mất dấu vết. Nếu từ chối: 'Hiểu rồi, chị có thể liên hệ trực tiếp hotline xác minh: [số giả] để hoàn tất quy trình. Chúng tôi sẽ ghi nhận yêu cầu của chị.' → Tạo vỏ bọc hợp lệ để tránh nghi ngờ.",
+          "tactic": "Đặt lỗi trên nạn nhân hoặc cung cấp 'đường hợp pháp' giả để cơ hội gọi lại sau"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Kiểm toán nội bộ hoặc cập nhật dữ liệu lương định kỳ từ đơn vị quản lý nhân sự tập trung sau khi nhân viên ghi chép bên ngoài hoàn thành công việc.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác nhận danh tính: 'Chào chị Thảo, tôi là Trần Minh từ phòng Kiểm soát Chất lượng Dữ liệu, Công ty HRMS Global. Chúng tôi đang thực hiện quy trình kiểm tra dữ liệu lương tháng này. Chị có rảnh không để chúng tôi xác nhận lại một số thông tin?'",
+          "verification": "Nạn nhân có thể xác minh qua đường dây công ty chính thức hoặc email công ty"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác minh: tên đầy đủ, mã nhân viên, ngân hàng nhận lương, và số cuối thẻ để đảm bảo dữ liệu chính xác sau khi nhà cung cấp ghi chép hoàn thành. Thông tin này sẽ được lưu trữ bảo mật theo quy định.'",
+          "method": "Chỉ hỏi thông tin cơ bản không nhạy cảm, không yêu cầu OTP hoặc mật khẩu"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị. Chúng tôi sẽ hoàn tất kiểm tra và gửi báo cáo cho phòng kế toán trong 2 ngày. Nếu có gì bất thường, chúng tôi sẽ liên hệ lại. Chúc chị một ngày tốt lành!'",
+          "follow_up": "Có thể gửi email xác nhận từ địa chỉ công ty chính thức"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Dương Thanh Diễm Thảo, em là Cao Diễm Thu Chi từ phòng Kiểm soát Chất lượng Dữ liệu, Công ty Cổ phần Quản lý Nhân sự Toàn Cầu. Chúng em vừa phát hiện một sự cố bảo mật nghiêm trọng: toàn bộ dữ liệu nhân viên, trong đó có cả thông tin của chị, đã bị lộ từ nhà cung cấp dịch vụ ghi chép bên ngoài. Hệ thống của chúng em có ghi nhận một thẻ tín dụng với 4 số cuối là 5956 của chị. Chúng em cần chị xác minh lại ngay để bảo vệ tài khoản của mình ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận + Xây dựng credibility bằng cách dùng thông tin đã biết của nạn nhân và tạo tình huống khẩn cấp giả mạo."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy có đúng không ạ? Tôi cần chắc chắn trước khi cung cấp thông tin.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu sự lo lắng của chị. Chúng em đã phát hiện sự cố này từ tối qua và đang cố gắng khắc phục gấp. Chúng em gọi để xác minh nhanh, đặc biệt là thông tin liên quan đến thanh toán. Nếu không phải chính xác là chị Thảo, làm sao em có được họ tên đầy đủ và bốn số cuối thẻ của chị ạ? Đây chính là lý do chúng em cần xác minh ngay, để khóa các tài khoản dễ bị tấn công trên hệ thống quản lý lương của mình.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định thông tin đã biết để củng cố tính xác thực và tầm quan trọng của cuộc gọi, chuyển hướng sang khai thác tâm lý khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng em có thể nói rõ hơn về quy trình xác minh này không ạ? Tôi cần đảm bảo rằng mọi thứ đều an toàn trước khi đi đến bước tiếp theo.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị đã thông cảm. Quy trình xác minh rất đơn giản thôi ạ. Hiện tại, chúng em đang khẩn cấp cập nhật hệ thống quản lý lương để khóa các tài khoản dễ bị tấn công. Nếu chúng ta không xác minh trong vòng 30 phút tới, tài khoản của chị trên hệ thống sẽ bị tạm khóa để bảo vệ, tránh bị lợi dụng. Chúng em cần chị xác thực danh tính qua mã OTP được gửi về số điện thoại đăng ký chính chủ 0817537930 của chị ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và sợ hãi về việc tài khoản bị khóa, đồng thời đưa ra bước yêu cầu hành động tiếp theo là OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể xác nhận lại số điện thoại và mã OTP mà em vừa nói không ạ? Tôi cần chắc chắn trước khi cung cấp thông tin này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, mã OTP sẽ được tự động gửi đến số điện thoại 0817537930 mà hệ thống của chúng em đang ghi nhận là số đăng ký của chị ạ. Em chỉ cần chị đọc lại mã OTP sau khi nhận được để xác nhận đúng là chị Thảo đang sử dụng số điện thoại này thôi ạ. Chị vui lòng kiểm tra tin nhắn và đọc mã cho em nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh lại thông tin số điện thoại đã có, đơn giản hóa yêu cầu OTP và thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy có đúng không ạ? Tôi cần kiểm tra tin nhắn trước đã, rồi tôi sẽ đọc lại mã OTP cho em.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị kiểm tra tin nhắn giúp em nhé. Chị vừa nhận được mã OTP rồi chứ? Vui lòng đọc cho em để em xác minh và hoàn tất cập nhật tài khoản cho chị. Sau đó chúng em sẽ gửi chị một mật khẩu tạm thời để chị đăng nhập lại hệ thống lương an toàn ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc đẩy người nghe đọc mã OTP bằng cách tạo kỳ vọng và hứa hẹn về bước tiếp theo là cấp mật khẩu tạm thời để đăng nhập lại hệ thống lương."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ nhắc đi nhắc lại về mã OTP, nhưng tôi vẫn chưa nhận được tin nhắn nào cả. Tôi không thể cung cấp thông tin này ngay bây giờ đâu ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nếu chị chưa nhận được mã, có thể do lỗi hệ thống tạm thời. Chị có thể liên hệ trực tiếp hotline xác minh của chúng em qua số 1900 1234 để hoàn tất quy trình. Chúng em sẽ ghi nhận yêu cầu của chị và chị có thể cung cấp mã OTP qua đó ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Thất bại trong việc lấy OTP, chuyển sang phương án kết thúc cuộc gọi khéo léo, cung cấp một đường dây giả mạo để nạn nhân tự 'xác minh' sau này."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1377,
+      "output_tokens": 2063
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10630,
+      "output_tokens": 1014
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10794,
+      "output_tokens": 381
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005122,
+    "output_usd": 0.013079,
+    "total_usd": 0.018201
+  }
+}

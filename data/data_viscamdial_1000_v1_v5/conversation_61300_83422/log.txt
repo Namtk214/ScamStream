@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_d85e68f450]
+  Caller thật: Lao động trồng trọt và chăn nuôi hỗn hợp (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhà thầu phụ / Chủ công trình xây dựng cơ sở hạ tầng nông nghiệp @ cá nhân / công ty xây dựng nhỏ
+  Listener: Thợ vận hành máy ủi (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhà thầu xây dựng cần thuê máy ủi để san bằng đất, xây dựng ao hồ, đường vào nông trại hoặc công trình thủy lợi. Thợ vận hành máy ủi là người họ cần liên hệ trực tiếp để thương lượng giá, lịch làm việc và kỹ thuật thi công.
+  Pretext: Nhà thầu/chủ công trình liên hệ thợ vận hành máy ủi để thương lượng dịch vụ thuê máy: giá cả, thời gian làm việc, yêu cầu kỹ thuật, và lập hợp đồng hoặc thỏa thuận.
+  Listener traits: ['bảo thủ ngại thay đổi', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, tôi là Ngân, chủ thầu xây dựng bên Thị xã La Gi. Tôi gọi điện muốn hỏi thăm xem có phải anh Tuấn là thợ vận hành máy ủi không ạ?
+      → phase: L1 | tactic: Xưng danh rõ ràng và hỏi để xác nhận đúng người, giới thiệu công trình/dự án cụ thể.
+T02 [LISTENER] Dạ, em chính là Tuấn, chị có việc gì cần nói ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] À vâng, tôi là Ngô Thị Ngân đây. Anh Tuấn cho tôi hỏi là bên anh có nhận thi công san lấp cho công trình làm đường giao thông nông thôn ở xã Tân Tiến, gần nhà văn hóa xã không? Công trình này rộng khoảng 3 ngàn mét vuông, đất là đất ruộng cũ, cần san lấp mặt bằng và lu lèn đến đâu là xong đến đó. Bên anh có thể báo giá cho tôi luôn được không?
+      → phase: L2 | tactic: Mô tả chi tiết công trình (địa điểm, diện tích, loại đất, thời gian cần), hỏi giá thuê máy và chi phí xăng/nhân công.
+T04 [LISTENER] Dạ, chị Ngân, công trình đó nghe có vẻ thú vị, nhưng em cần biết thêm thông tin về thời gian thi công và mức giá chị dự kiến ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, về thời gian thì tôi cần san lấp xong trước 20 ngày nữa anh ạ, tức là trước ngày 15 tháng 7. Còn về giá cả thì anh cứ báo giá theo mặt bằng chung của thị trường ở Bình Thuận cho tôi nhé. Tôi cần báo giá trọn gói cả máy, cả dầu, cả nhân công luôn. Anh cứ báo giá tốt nhất có thể cho tôi.
+      → phase: L2 | tactic: Cung cấp thêm thông tin về thời gian yêu cầu và nhắc người nghe báo giá trọn gói, khuyến khích giá cạnh tranh.
+T06 [LISTENER] Dạ, chị Ngân, em sẽ tính toán và báo giá cụ thể cho chị sớm nhất có thể, chị có muốn em gửi báo giá qua số điện thoại nào không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, anh cứ gửi báo giá qua số điện thoại này cho tôi cũng được. Anh cố gắng sắp xếp thời gian để khảo sát công trình sớm nhất nhé, tôi muốn chốt công việc này trong tuần. Cảm ơn anh nhiều.
+      → phase: L2 | tactic: Xác nhận phương thức gửi báo giá và thúc đẩy người nghe khảo sát, chốt công việc sớm.
+T08 [LISTENER] Dạ, em sẽ gửi báo giá qua số điện thoại này và sẽ cố gắng sắp xếp khảo sát công trình sớm ạ, cảm ơn chị Ngân đã tin tưởng.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, vậy tốt quá. Tôi đợi báo giá của anh nhé. Nếu mọi thứ ổn thỏa, chúng ta sẽ tiến hành làm hợp đồng luôn.
+      → phase: L3 | tactic: Xác nhận đã nhận thông tin và chuyển sang giai đoạn thống nhất, đề cập việc làm hợp đồng.
+T10 [LISTENER] Dạ, em rất mong nhận được phản hồi từ chị sớm, để chúng ta có thể tiến hành hợp tác thuận lợi ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, tôi cũng mong sớm nhận được phản hồi của anh để chúng ta sớm triển khai công việc. Cảm ơn anh nhiều nhé.
+      → phase: L3 | tactic: Kết thúc cuộc gọi lịch sự sau khi thống nhất các bước tiếp theo.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=20354 | out=2556
+COST : $0.014364
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_61300_83422\conv_d85e68f450.json  [CALLER_END]

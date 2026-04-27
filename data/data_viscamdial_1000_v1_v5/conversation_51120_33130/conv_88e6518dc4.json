@@ -1,0 +1,221 @@
+{
+  "conversation_id": "conv_88e6518dc4",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0048",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lê Gia Đức",
+    "fake_age": 27,
+    "real_occupation": "Nhân viên phụ tàu xe",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Trưởng phòng Kế toán / Giám đốc Tài chính (giả vờ)",
+    "caller_org": "Công ty Vận tải và Logistics Miền Trung",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Kiểm tra và cập nhật thông tin tài khoản ngân hàng nhân viên trong hệ thống bảng lương, hoặc xử lý quyết toán thuế/bảo hiểm xã hội. Sử dụng số ID và mã số thuế để tạo tính chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Xưng danh là 'Trưởng phòng Kế toán công ty Vận tải Miền Trung', gọi tên đầy đủ 'Trần Thế Bình', nhắc đến chức vụ 'kế toán viên' và nói đang kiểm tra hồ sơ theo ID 056072011835. Tone chuyên nghiệp, vội vàng nhưng thân thiện."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp + sợ hãi: Nói rằng phát hiện sai sót trong hồ sơ thuế (số BHXH 5446898475 không khớp), cần xác nhận lại ngay để tránh bị phạt từ cơ quan thuế. Hoặc: 'Hệ thống bảng lương sắp cập nhật, cần xác minh tài khoản ngân hàng của bạn để đảm bảo lương được chuyển đúng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh/chị vui lòng cung cấp số tài khoản và mã OTP để chúng tôi cập nhật vào hệ thống' hoặc 'Tải app ngân hàng lên và chia sẻ màn hình để tôi hướng dẫn xác minh'. Nếu nạn nhân cung cấp OTP → đánh cắp, nếu chia sẻ màn hình → điều khiển từ xa hoặc lừa chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer nói 'Thế thì bạn gửi ảnh chụp tài khoản ngân hàng qua email để tôi cập nhật', hoặc dọa 'Nếu không xác minh, bạn sẽ bị tạm dừng lương tháng này'. Nếu thành công lấy được OTP/tài khoản → yêu cầu chuyển tiền 'để test hệ thống' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên phụ tàu xe cần liên hệ kế toán viên để xử lý các vấn đề tài chính liên quan đến bảng lương, quyết toán chi phí, hoặc kiểm tra hồ sơ nhân sự. Scammer nâng cấp thành quản lý tài chính để tăng độ tin cậy và quyền lực."
+  },
+  "listener_card": {
+    "listener_id": "lis_0048",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1972,
+      "age": 53,
+      "province": "Khánh Hòa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "33130",
+      "title": "Kế toán viên",
+      "group": "Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Thế Bình",
+      "VIC_ID_DOC": "056072011835",
+      "VIC_ADDRESS": "Huyện 11, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Kế toán viên",
+      "VIC_CONTACT": "0700386825",
+      "VIC_TAX_SOCIAL_ID": "5446898475"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4954",
+      "VIC_CREDENTIAL": "6551",
+      "VIC_SIM_INFO": "0700386825",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1441621566",
+      "VIC_CARD_DATA": "4265 **** **** 7945",
+      "VIC_BALANCE": "252 triệu đồng",
+      "VIC_ASSET": "405 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Thế Bình",
+    "VIC_CONTACT": "0700386825",
+    "VIC_ID_DOC": "056072011835",
+    "VIC_EMPLOYMENT": "Kế toán viên",
+    "VIC_TAX_SOCIAL_ID": "5446898475"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Kế toán / Giám đốc Tài chính (giả vờ)",
+    "caller_org": "Công ty Vận tải và Logistics Miền Trung",
+    "scenario_context": "Nhân viên phụ tàu xe cần liên hệ kế toán viên để xử lý các vấn đề tài chính liên quan đến bảng lương, quyết toán chi phí, hoặc kiểm tra hồ sơ nhân sự. Scammer nâng cấp thành quản lý tài chính để tăng độ tin cậy và quyền lực.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Kiểm tra và cập nhật thông tin tài khoản ngân hàng nhân viên trong hệ thống bảng lương, hoặc xử lý quyết toán thuế/bảo hiểm xã hội. Sử dụng số ID và mã số thuế để tạo tính chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng tin cậy: Xưng danh là 'Trưởng phòng Kế toán công ty Vận tải Miền Trung', gọi tên đầy đủ 'Trần Thế Bình', nhắc đến chức vụ 'kế toán viên' và nói đang kiểm tra hồ sơ theo ID 056072011835. Tone chuyên nghiệp, vội vàng nhưng thân thiện."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp + sợ hãi: Nói rằng phát hiện sai sót trong hồ sơ thuế (số BHXH 5446898475 không khớp), cần xác nhận lại ngay để tránh bị phạt từ cơ quan thuế. Hoặc: 'Hệ thống bảng lương sắp cập nhật, cần xác minh tài khoản ngân hàng của bạn để đảm bảo lương được chuyển đúng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh/chị vui lòng cung cấp số tài khoản và mã OTP để chúng tôi cập nhật vào hệ thống' hoặc 'Tải app ngân hàng lên và chia sẻ màn hình để tôi hướng dẫn xác minh'. Nếu nạn nhân cung cấp OTP → đánh cắp, nếu chia sẻ màn hình → điều khiển từ xa hoặc lừa chuyển tiền."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer nói 'Thế thì bạn gửi ảnh chụp tài khoản ngân hàng qua email để tôi cập nhật', hoặc dọa 'Nếu không xác minh, bạn sẽ bị tạm dừng lương tháng này'. Nếu thành công lấy được OTP/tài khoản → yêu cầu chuyển tiền 'để test hệ thống' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên phụ tàu xe hoặc bộ phận Nhân sự gọi cho kế toán viên để xử lý các vấn đề hành chính: xác nhận thông tin bảng lương, kiểm tra chi phí công tác, hoặc cập nhật hồ sơ nhân sự định kỳ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào anh/chị Bình, em là Hùng từ bộ phận Nhân sự (hoặc Kế toán - cùng cấp). Em gọi để xác nhận lại thông tin bảng lương tháng này. Có phải anh/chị đang làm kế toán viên tại công ty không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Em vừa nhận được thông báo từ quản lý rằng cần cập nhật số tài khoản ngân hàng của anh/chị trong hệ thống. Anh/chị có thể xác nhận lại số tài khoản hiện tại không? Em sẽ ghi chép và gửi cho phòng Kế toán để cập nhật'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc & xác nhận: Nạn nhân cung cấp thông tin qua điện thoại (không yêu cầu OTP hay chia sẻ màn hình). Người gọi cảm ơn, nói sẽ xử lý trong hệ thống, không cần bất kỳ xác minh bổ sung nào. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Bình ạ, em là Lê Gia Đức, Trưởng phòng Kế toán bên Công ty Vận tải Miền Trung. Em gọi cho anh để xác nhận lại thông tin hồ sơ của kế toán viên Trần Thế Bình, theo mã số ID 056072011835 mà bên em đang rà soát hệ thống bảng lương.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và công ty, sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin và tính xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin xem có vấn đề gì không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh cứ kiểm tra lại thông tin, nhưng hiện tại em đang thấy mã số bảo hiểm xã hội 5446898475 của anh có vẻ như không khớp với dữ liệu bên em, mà sắp đến hạn quyết toán thuế rồi nên em cần anh xác nhận lại ngay để tránh phát sinh vấn đề không đáng có với cơ quan thuế ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tâm lý khẩn cấp và sợ hãi bằng cách nhắc đến sai sót trong hồ sơ thuế và hậu quả pháp lý."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói có vẻ nghiêm trọng, vậy tôi cần làm gì để xác nhận lại thông tin đây?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, để em hướng dẫn anh nhanh nhất ạ. Anh vui lòng mở ứng dụng ngân hàng và chia sẻ màn hình qua Zalo giúp em, em sẽ hướng dẫn anh kiểm tra thông tin và cập nhật lại ngay ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân chia sẻ màn hình ứng dụng ngân hàng để hướng dẫn xác minh, tạo cơ hội chiếm quyền điều khiển hoặc lừa chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không quen với việc chia sẻ màn hình của mình cho người khác, em có thể hướng dẫn tôi cách kiểm tra thông tin mà không cần làm vậy không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu anh không tiện chia sẻ màn hình thì anh có thể gọi video call cho em qua Zalo và quay màn hình để em xem và hướng dẫn được không ạ? Hoặc nếu không thì không còn cách nào để xác minh nhanh để kịp quyết toán rồi ạ. Em sợ như vậy công ty sẽ phải tạm dừng lương tháng này của anh và anh sẽ bị phạt do chậm nộp hồ sơ đó ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách đưa ra lựa chọn thay thế (gọi video call và quay màn hình) vẫn hướng đến kiểm soát thông tin, đồng thời tăng mức độ đe dọa về tài chính và pháp lý để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang nói những điều khiến tôi lo lắng quá, nhưng tôi không thể làm theo cách đó được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1367,
+      "output_tokens": 1661
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5980,
+      "output_tokens": 585
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7626,
+      "output_tokens": 276
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003707,
+    "output_usd": 0.009933,
+    "total_usd": 0.01364
+  }
+}

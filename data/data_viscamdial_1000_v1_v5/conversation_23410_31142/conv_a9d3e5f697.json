@@ -1,0 +1,302 @@
+{
+  "conversation_id": "conv_a9d3e5f697",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0038",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Công Thành",
+    "fake_age": 46,
+    "real_occupation": "Giáo viên tiểu học (cấp I)",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên phòng Công nghệ Thông tin - Trường Tiểu học",
+    "caller_org": "Trường Tiểu học Quận 11, Cần Thơ",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện giới thiệu là nhân viên IT trường tiểu học Quận 11 (nơi nạn nhân ở). Sử dụng tên nạn nhân (Phạm Xuân Nam) để tạo ấn tượng đã kiểm tra danh sách. Tuyên bố trường cần tuyển nhân viên bán dẫn hoặc cần tư vấn nâng cấp hệ thống, mời nạn nhân tham gia buổi gặp gỡ/phỏng vấn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính tin cậy: 'Chào anh Phạm Xuân Nam, em là Linh từ phòng IT Trường Tiểu học Quận 11. Em đã xem danh sách kỹ thuật viên bán dẫn ở địa phương, anh tên tuổi được nhiều người giới thiệu.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý cơ hội & uy tín: 'Trường chúng em sắp nâng cấp phòng máy tính, cần một chuyên gia bán dẫn tư vấn. Công việc này có thể kéo dài, lương tốt. Anh có quan tâm không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu xác minh danh tính qua OTP: 'Để đăng ký vào hệ thống tuyển dụng của trường, anh cần xác minh số điện thoại. Em sẽ gửi mã OTP, anh đọc cho em để hoàn tất hồ sơ.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: 'Nếu anh không quan tâm, cảm ơn anh. Nhưng nếu thay đổi ý định, em để lại số điện thoại công ty. Anh có thể gọi lại bất cứ lúc nào.'"
+        }
+      ]
+    },
+    "scenario_context": "Trường học cần nâng cấp hệ thống máy tính và thiết bị công nghệ. Nhân viên IT của trường tìm kiếm kỹ thuật viên bán dẫn địa phương để tư vấn hoặc cung cấp linh kiện chất lượng cao cho phòng máy tính và thiết bị giáo dục."
+  },
+  "listener_card": {
+    "listener_id": "lis_0038",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1993,
+      "age": 32,
+      "province": "Cần Thơ",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "31142",
+      "title": "Kỹ thuật viên bán dẫn",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Xuân Nam",
+      "VIC_ID_DOC": "092093454159",
+      "VIC_ADDRESS": "Quận 11, Cần Thơ",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên bán dẫn",
+      "VIC_CONTACT": "0834584171",
+      "VIC_TAX_SOCIAL_ID": "1387955817"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "906824",
+      "VIC_CREDENTIAL": "203818",
+      "VIC_SIM_INFO": "0834584171",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "362177404940",
+      "VIC_CARD_DATA": "4639 **** **** 4074",
+      "VIC_BALANCE": "265 triệu đồng",
+      "VIC_ASSET": "609 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Xuân Nam",
+    "VIC_CONTACT": "0834584171",
+    "VIC_ADDRESS": "Quận 11, Cần Thơ"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên phòng Công nghệ Thông tin - Trường Tiểu học",
+    "caller_org": "Trường Tiểu học Quận 11, Cần Thơ",
+    "scenario_context": "Trường học cần nâng cấp hệ thống máy tính và thiết bị công nghệ. Nhân viên IT của trường tìm kiếm kỹ thuật viên bán dẫn địa phương để tư vấn hoặc cung cấp linh kiện chất lượng cao cho phòng máy tính và thiết bị giáo dục.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi điện giới thiệu là nhân viên IT trường tiểu học Quận 11 (nơi nạn nhân ở). Sử dụng tên nạn nhân (Phạm Xuân Nam) để tạo ấn tượng đã kiểm tra danh sách. Tuyên bố trường cần tuyển nhân viên bán dẫn hoặc cần tư vấn nâng cấp hệ thống, mời nạn nhân tham gia buổi gặp gỡ/phỏng vấn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính tin cậy: 'Chào anh Phạm Xuân Nam, em là Linh từ phòng IT Trường Tiểu học Quận 11. Em đã xem danh sách kỹ thuật viên bán dẫn ở địa phương, anh tên tuổi được nhiều người giới thiệu.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý cơ hội & uy tín: 'Trường chúng em sắp nâng cấp phòng máy tính, cần một chuyên gia bán dẫn tư vấn. Công việc này có thể kéo dài, lương tốt. Anh có quan tâm không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu xác minh danh tính qua OTP: 'Để đăng ký vào hệ thống tuyển dụng của trường, anh cần xác minh số điện thoại. Em sẽ gửi mã OTP, anh đọc cho em để hoàn tất hồ sơ.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: 'Nếu anh không quan tâm, cảm ơn anh. Nhưng nếu thay đổi ý định, em để lại số điện thoại công ty. Anh có thể gọi lại bất cứ lúc nào.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trường tiểu học thực sự cần tư vấn hoặc tuyển dụng kỹ thuật viên bán dẫn để nâng cấp hệ thống công nghệ giáo dục",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào anh Phạm Xuân Nam, em là Linh từ phòng IT Trường Tiểu học Quận 11. Anh có thời gian trò chuyện một chút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: 'Trường chúng em đang có dự án nâng cấp phòng máy tính và cần tư vấn từ chuyên gia bán dẫn. Anh có thể giúp được không? Chúng em có thể lên gặp anh hoặc anh có thể ghé trường để xem tình hình hiện tại.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu anh quan tâm, chúng em sẽ gửi email chi tiết dự án và thời gian gặp gỡ. Anh có thể kiểm tra lịch và phản hồi lại. Cảm ơn anh rất nhiều.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Phạm Xuân Nam, tôi là Thành từ phòng IT Trường Tiểu học Quận 11. Tôi đã xem danh sách kỹ thuật viên bán dẫn ở địa phương, anh được nhiều người giới thiệu để tư vấn ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với danh tính tin cậy, sử dụng thông tin cá nhân của nạn nhân để tạo trust."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã liên hệ, nhưng em không rõ anh cần tư vấn gì ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, trường chúng tôi sắp sửa nâng cấp hệ thống máy tính trong các phòng học. Chúng tôi đang tìm kiếm một chuyên gia bán dẫn để tư vấn và hỗ trợ triển khai. Thấy anh có kinh nghiệm tốt trong lĩnh vực này, trường chúng tôi rất muốn mời anh tham gia buổi gặp gỡ để trao đổi thêm. Công việc này có thể kéo dài, và có mức lương khá tốt đấy anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý cơ hội và uy tín, đưa ra một lợi ích hấp dẫn (lương tốt, công việc kéo dài) để tạo động lực cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất vui khi nghe về cơ hội này, nhưng em cần thêm thông tin cụ thể hơn để quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để tôi có thể gửi cho anh thông tin chi tiết về dự án và lịch hẹn gặp mặt, anh vui lòng xác nhận lại số điện thoại tôi đang gọi cho anh có đúng không ạ? Sau đó, tôi sẽ gửi một mã OTP vào số này để xác thực danh tính, giúp anh đăng nhập vào hệ thống tuyển dụng nội bộ của trường, nơi có đầy đủ thông tin ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu xác minh danh tính qua OTP để có thể gửi thông tin chi tiết và đăng ký vào hệ thống tuyển dụng, tạo sự cần thiết cho mã OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em muốn xác nhận lại thông tin này trước đã, anh có thể cho em biết anh đang gọi từ số điện thoại nào không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số điện thoại tôi đang gọi cho anh là số nội bộ của Phòng IT trường Tiểu học Quận 11, không phải số cá nhân ạ. Anh có thể yên tâm. Anh có thể xác nhận số của mình để nhận OTP được không?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, tái khẳng định tính xác thực của thông tin và đẩy lại mục tiêu xin OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn còn lo lắng về việc này, anh có thể cho em biết thêm về trường và dự án không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ yên tâm, tất cả thông tin về trường và dự án nâng cấp hệ thống đều có trong hồ sơ tuyển dụng. Để xem được, anh chỉ cần xác thực số điện thoại bằng mã OTP mà tôi sẽ gửi, sau đó hệ thống sẽ tự động hiển thị đầy đủ thông tin cho anh. Rất nhanh chóng và tiện lợi thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự lo lắng, tái khẳng định rằng OTP là bước cần thiết để truy cập thông tin chi tiết, nhấn mạnh sự tiện lợi và nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cần thêm thông tin rõ ràng để có thể yên tâm hơn trước khi xác nhận số điện thoại ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam ơi, tôi hiểu sự cẩn trọng của anh. Để anh hoàn toàn yên tâm, tôi sẽ không gửi OTP ngay đâu. Trước hết, tôi sẽ gửi cho anh một đường link chính thức của trường có chứa các thông tin giới thiệu cơ bản về dự án, và có một form đăng ký ban đầu. Anh có thể điền thông tin đó mà không cần OTP. Sau khi anh nhận được link và xem xét, nếu anh thấy phù hợp, thì khi đó chúng ta mới nói đến việc xác thực bằng OTP để vào sâu hơn hệ thống tuyển dụng. Anh thấy cách này được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề xuất một bước trung gian ít rủi ro hơn (form đăng ký không OTP) để xây dựng lòng tin, vẫn dẫn dắt đến mục tiêu xin OTP sau này."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã đưa ra cách tiếp cận này, nhưng em vẫn muốn biết thêm về trường và dự án trước khi điền thông tin ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu anh muốn biết thêm về trường và dự án trước khi điền thông tin, tôi có thể nói sơ qua. Trường Tiểu học Quận 11 chúng tôi là một trong những trường lớn nhất khu vực, hiện đang có chủ trương số hóa toàn bộ cơ sở vật chất, đặc biệt là các phòng máy tính. Dự án này sẽ bao gồm việc nâng cấp phần cứng, phần mềm và cả hệ thống mạng. Chúng tôi ưu tiên các chuyên gia có kinh nghiệm về bán dẫn để đảm bảo hiệu suất tốt nhất. Anh có muốn tôi nói cụ thể hơn về phần nào không?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thêm thông tin chung về trường và dự án để xây dựng lòng tin, vẫn giữ hướng mục tiêu cuối cùng là OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã chia sẻ thêm thông tin, nhưng em vẫn cần một số tài liệu cụ thể từ trường trước khi quyết định ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam ơi, tôi hiểu sự cẩn trọng của anh. Như tôi đã nói, để có tài liệu cụ thể của trường, anh cần truy cập vào hệ thống tuyển dụng nội bộ. Và để truy cập vào đó, chúng ta cần xác thực số điện thoại bằng mã OTP. Đây là quy trình bắt buộc để đảm bảo an ninh thông tin của trường. Nếu anh không muốn nhận OTP lúc này, vậy tôi đành phải hiểu là anh chưa sẵn sàng tham gia dự án của trường chúng tôi rồi.",
+      "current_phase": "S3",
+      "tactic_hint": "Tái khẳng định tính cần thiết của OTP để truy cập tài liệu, đồng thời sử dụng áp lực nhẹ (nếu không OTP thì coi như từ chối) để thúc đẩy nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy không thoải mái lắm với việc này, anh có thể cho em biết thêm về quy trình và lý do rõ hơn được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu anh vẫn còn lo lắng. Quy trình của chúng tôi rất rõ ràng: Để đảm bảo chỉ những ứng viên chính thức và có thông tin xác thực mới truy cập được các tài liệu nhạy cảm của dự án, chúng tôi yêu cầu xác minh bằng OTP. Đây là chuẩn an ninh thông tin bắt buộc đối với tất cả các cơ quan nhà nước. Anh có thể cân nhắc lại không? Cơ hội này rất tốt cho anh đó.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách giải thích quy trình OTP là tiêu chuẩn an ninh, nhấn mạnh cơ hội tốt để thúc đẩy nạn nhân."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, anh đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa rõ số điện thoại mà anh đang gọi từ đâu, anh có thể cho em biết rõ hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Nam ơi, tôi đã nói rõ là số tôi đang gọi là số nội bộ của Phòng IT Trường Tiểu học Quận 11 rồi mà. Anh có thể kiểm tra danh bạ của trường để xác nhận. Bây giờ, mong anh đừng làm mất thêm thời gian của tôi nữa. Anh có muốn nhận OTP để hoàn tất hồ sơ không? Nếu không, tôi đành phải cúp máy thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Tăng áp lực nhẹ nhàng, tái khẳng định thông tin đã cung cấp và thông báo về việc kết thúc cuộc gọi nếu nạn nhân không hợp tác, đẩy nhanh quá trình xin OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn anh đã giải thích, nhưng em vẫn cần thêm thời gian để kiểm tra thông tin trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, nếu anh cần thêm thời gian để kiểm tra thì tôi sẽ không làm phiền nữa. Rất tiếc là anh đã bỏ lỡ một cơ hội tốt. Nếu sau này anh đổi ý, anh có thể liên hệ lại số công ty của trường mà tôi đã đề cập.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách khéo léo sau khi listener từ chối, để lại khả năng liên hệ lại nếu nạn nhân đổi ý."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1797,
+      "output_tokens": 1332
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 22529,
+      "output_tokens": 1708
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 25426,
+      "output_tokens": 726
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.010117,
+    "output_usd": 0.011366,
+    "total_usd": 0.021482
+  }
+}

@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_e76991213d]
+  Caller thật: Thợ lắp ráp máy cơ khí (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Kỹ sư bảo trì thiết bị - Nhà máy/Trung tâm nghiên cứu nông nghiệp @ Công ty Cơ khí Nông nghiệp Việt Nam (VNAMC) / Trung tâm Nghiên cứu Nông lâm (giả mạo)
+  Listener: Nhà bệnh học thực vật (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Thợ lắp ráp máy cơ khí có thể làm việc cho nhà cung cấp thiết bị phòng thí nghiệm hoặc máy móc nông nghiệp. Nhà bệnh học thực vật cần các thiết bị chuyên dụng (máy ly tâm, lò ấm, thiết bị phân tích) để nghiên cứu. Lý do tự nhiên để gọi: kiểm tra hóa đơn bảo hành, cập nhật thông tin khách hàng, hoặc xác nhận đơn hàng thiết bị mới.
+  Pretext: Gọi để 'xác nhận thông tin khách hàng VIP' cho hệ thống bảo trì định kỳ hoặc thông báo bảo hành máy móc sắp hết hạn. Dùng tên đầy đủ + số CMND để tạo ảo tưởng là cuộc gọi từ hệ thống chính thức.
+  Listener traits: ['nhân ái muốn giúp', 'nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Hoàng Văn Thế Khoa, tôi là Vũ Tiến Đạt từ bộ phận bảo trì của một đối tác của Công ty Cơ khí Nông nghiệp Việt Nam, VNAMC. Tôi có hồ sơ ở đây ghi nhận anh là Nhà bệnh học thực vật, và số CMND là 075097717490. Anh có nhận được thông báo về bảo hành thiết bị phòng thí nghiệm định kỳ bên mình không?
+      → phase: S1 | tactic: Tiếp cận bằng cách sử dụng thông tin cá nhân của nạn nhân để xây dựng niềm tin và danh tính giả mạo.
+T02 [LISTENER] Em chưa nhận được thông báo nào cả, anh có thể cho em biết thêm chi tiết được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, thế thì đúng rồi. Hệ thống của chúng tôi vừa phát hiện máy ly tâm của anh sắp hết hạn bảo hành, chính xác là chỉ còn 3 ngày nữa thôi. Nếu mình không gia hạn kịp thời, máy sẽ không còn được bảo trì miễn phí nữa và chi phí sửa chữa mỗi lần sau này sẽ khá cao đấy ạ.
+      → phase: S2 | tactic: Tạo tâm lý khẩn cấp và nhấn mạnh hậu quả tài chính nếu không hành động ngay.
+T04 [LISTENER] Em hiểu, nhưng anh có thể cho em biết cách gia hạn như thế nào được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Để nhanh chóng và tiện lợi nhất cho anh, anh vui lòng chuyển khoản 2.5 triệu đồng vào tài khoản của công ty để gia hạn bảo hành 2 năm cho thiết bị. Ngay sau khi nhận được, tôi sẽ gửi hóa đơn điện tử và giấy chứng nhận gia hạn bảo hành qua email cho anh.
+      → phase: S3 | tactic: Yêu cầu hành động thanh toán trực tiếp để đạt mục tiêu chuyển tiền.
+T06 [LISTENER] Em không có thông tin tài khoản của công ty anh, anh có thể cung cấp cho em thêm để em xác nhận không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, anh cứ yên tâm. Số tài khoản của công ty chúng tôi là 1903567890123 của Ngân hàng Techcombank, tên thụ hưởng là 'Công ty TNHH VNAMC'. Anh cứ chuyển khoản, và tôi sẽ xác nhận ngay lập tức cho anh ạ.
+      → phase: S3 | tactic: Cung cấp thông tin tài khoản ngân hàng giả để nạn nhân thực hiện chuyển tiền.
+T08 [LISTENER] Em cảm ơn anh đã cung cấp thông tin, nhưng em vẫn thấy lo lắng vì không quen biết công ty này, anh có thể cho em biết thêm các thông tin liên quan đến công ty không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Anh cứ yên tâm, Công ty Cơ khí Nông nghiệp Việt Nam, VNAMC, là đối tác lớn trong việc cung cấp và bảo trì thiết bị cho các trung tâm nghiên cứu nông nghiệp trên toàn quốc. Thông tin của chúng tôi đều công khai trên website chính thức đấy ạ. Nếu anh cần, tôi có thể gửi đường link website qua tin nhắn sau cuộc gọi này.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ của nạn nhân bằng cách khẳng định uy tín của công ty giả mạo và cung cấp thêm thông tin xác thực giả (website).
+T10 [LISTENER] Em cảm ơn anh đã giải thích, nhưng em vẫn cảm thấy không thoải mái lắm, nên em cần thời gian để kiểm tra thêm thông tin ạ.
+      → action: REFUSAL | suspicion: 0.50 | disclosed: []
+
+T11 [CALLER] Vâng, nếu anh cảm thấy chưa thoải mái thì tôi sẽ gửi toàn bộ thông tin chi tiết về gói bảo hành và thông tin công ty qua email cho anh để anh xem xét kỹ hơn. Mình cứ kiểm tra cho chắc chắn, có gì khó hiểu anh cứ liên hệ lại cho tôi theo số này nhé.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách cung cấp thông tin thêm qua kênh khác, tạo cảm giác cho nạn nhân có thể kiểm tra nhưng vẫn giữ liên lạc.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.50
+TOKEN: in=22395 | out=2981
+COST : $0.016656
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_82010_21323\conv_e76991213d.json  [CALLER_END]

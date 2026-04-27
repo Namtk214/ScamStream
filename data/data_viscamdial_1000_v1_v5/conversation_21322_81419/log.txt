@@ -1,0 +1,52 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_7f7db1bb5c]
+  Caller thật: Nhà tư vấn làm vườn (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Nhân viên kinh doanh/Tư vấn bán hàng - Công ty cung cấp vật liệu và hóa chất công nghiệp @ Công ty TNHH Cung cấp Vật liệu Công nghiệp Bình Phước
+  Listener: Thợ vận hành máy sản xuất sản phẩm cao su khác (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhà tư vấn làm vườn có thể chuyển hướng sang bán hóa chất bảo vệ thực vật, phân bón, hoặc vật liệu cho các nhà máy sản xuất (bao gồm cả nhà máy cao su). Thợ vận hành máy sản xuất cao su cần mua vật liệu hỗ trợ sản xuất hoặc hóa chất xử lý. Đây là giao điểm kinh doanh B2B tự nhiên.
+  Pretext: Gọi với danh nghĩa nhân viên kinh doanh, thông báo có chương trình khuyến mãi đặc biệt cho các nhà máy cao su trong khu vực. Sử dụng tên đầy đủ 'Ngô Thu Ngân' để xác nhận đúng người liên hệ, sau đó dùng thông tin ID để tạo lòng tin (giả vờ xác minh thông tin trong hệ thống).
+  Listener traits: ['dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào chị ạ. Em là Hồ Thanh Yến, nhân viên kinh doanh bên Công ty TNHH Cung cấp Vật liệu Công nghiệp Bình Phước. Em đang tìm chị Ngô Thu Ngân phải không ạ? Chị là quản lý ca sản xuất ở nhà máy cao su mình đúng không chị?
+      → phase: S1 | tactic: Xưng danh và xác nhận danh tính để tạo credibility
+T02 [LISTENER] Tôi là Ngô Thu Ngân đây, em cần hỏi gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, đúng rồi ạ. Em gọi cho chị là để thông báo về chương trình khuyến mãi đặc biệt bên em dành riêng cho các nhà máy cao su trong khu vực mình, giảm giá 40% hóa chất xử lý cao su đó chị. Nhưng mà trước khi đi vào chi tiết, em cần xác nhận lại thông tin qua hệ thống một chút để đảm bảo đúng đối tượng và tránh lạm dụng ưu đãi. Số căn cước công dân của chị là 001176266181 phải không ạ?
+      → phase: S2 | tactic: Giới thiệu ưu đãi lớn để tạo ham lợi, sau đó dùng thông tin cá nhân (ID) để tạo lòng tin và xác thực ảo.
+T04 [LISTENER] Đúng rồi, nhưng em cần xác nhận thông tin gì thêm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ tuyệt vời quá, em cảm ơn chị đã xác nhận. Hệ thống bên em đã kiểm tra và thấy chị đủ điều kiện tham gia chương trình này ạ. Vậy để được hưởng ưu đãi giảm giá 40% và khóa giá hóa chất này, chị Ngân vui lòng chuyển khoản ký cọc 5 triệu đồng vào tài khoản của Công ty TNHH Cung cấp Vật liệu Công nghiệp Bình Phước trước cuối ngày hôm nay nhé. Sau khi nhận được tiền cọc, bên em sẽ gửi hóa đơn điện tử cho chị ạ.
+      → phase: S3 | tactic: Yêu cầu hành động chuyển tiền ban đầu, tạo cảm giác khẩn cấp để khóa ưu đãi.
+T06 [LISTENER] Em ơi, nhưng tôi chưa nghe nói về công ty của em và cũng không thấy hợp đồng nào cả, có thể cho tôi biết thêm thông tin chi tiết về chương trình này được không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T07 [CALLER] Dạ chị yên tâm ạ, về thông tin công ty thì bên em là đối tác chiến lược của nhiều nhà máy lớn trong ngành cao su, chị có thể tìm hiểu thêm trên website của bọn em. Còn về hợp đồng, đây là chương trình khuyến mãi đặc biệt dành cho khách hàng thân thiết, nên chỉ cần cọc trước để xác nhận giữ ưu đãi thôi ạ. Sau khi chị chuyển cọc, bên em sẽ gửi hợp đồng và các điều khoản cụ thể qua email cho chị ngay. Quan trọng nhất là chương trình này chỉ áp dụng đến hết hôm nay thôi chị nhé, nên chị tranh thủ ạ.
+      → phase: S3 | tactic: Xoa dịu nghi ngờ bằng cách cung cấp thông tin chung, nhấn mạnh tính khẩn cấp để nạn nhân không có thời gian tìm hiểu sâu.
+T08 [LISTENER] Em ơi, nhưng tôi vẫn cảm thấy chưa đủ thông tin để quyết định, em có thể cho tôi biết rõ hơn về các điều khoản của chương trình này không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T09 [CALLER] Dạ em hiểu những lo lắng của chị ạ. Tuy nhiên, các điều khoản chi tiết sẽ được thể hiện rõ trong hợp đồng chính thức và gửi đến chị sau khi chị hoàn tất việc ký cọc để giữ ưu đãi này ạ. Việc này cũng là để đảm bảo quyền lợi cho cả hai bên. Mình có thể thực hiện thanh toán ngay bây giờ luôn được không ạ, vì chương trình này chỉ còn hiệu lực trong vài giờ tới thôi chị.
+      → phase: S3 | tactic: Tiếp tục tạo áp lực thời gian, nhấn mạnh rằng chi tiết sẽ có sau khi chuyển tiền và đảm bảo quyền lợi giả để thúc đẩy hành động.
+T10 [LISTENER] Em ơi, nhưng tôi vẫn chưa thấy rõ lý do để chuyển tiền trước như vậy, có thể cho tôi thêm thông tin gì không ạ?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T11 [CALLER] Dạ vâng, em hiểu là chị cần thêm thông tin. Tuy nhiên, nếu chị không tin tưởng bên em và không muốn tận dụng cơ hội giảm giá 40% có một không hai này, thì em cũng đành chịu thôi ạ. Chương trình này là để hỗ trợ các nhà máy trong giai đoạn khó khăn, chị Ngân có thể cân nhắc thêm. Em sẽ gọi lại vào lúc 3 giờ chiều nay để xem chị có quyết định cuối cùng chưa nhé.
+      → phase: S4 | tactic: Tạo áp lực tâm lý bằng cách nói bóng gió về việc bỏ lỡ cơ hội, đồng thời đặt ra deadline để tạo sự khẩn cấp và thúc đẩy nạn nhân đưa ra quyết định.
+T12 [LISTENER] Em ơi, tôi vẫn cần thêm thời gian để suy nghĩ và tìm hiểu rõ hơn, không thể quyết định ngay được.
+      → action: REFUSAL | suspicion: 0.80 | disclosed: []
+
+T13 [CALLER] Dạ vâng, em hiểu rồi ạ. Vậy thì em xin phép gọi lại cho chị vào lúc 3 giờ chiều nay như đã hẹn nhé. Chị Ngân cứ tìm hiểu kỹ thông tin bên em ạ. Chào chị.
+      → phase: S4 | tactic: Kết thúc cuộc gọi một cách lịch sự nhưng vẫn giữ lại cơ hội liên lạc sau để tiếp tục tạo áp lực.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  13 turns | suspicion=0.80
+TOKEN: in=28172 | out=3336
+COST : $0.018451
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_21322_81419\conv_7f7db1bb5c.json  [CALLER_END]

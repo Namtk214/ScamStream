@@ -1,0 +1,187 @@
+{
+  "conversation_id": "conv_db6b5f999a",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0012",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Thế Hùng",
+    "fake_age": 37,
+    "real_occupation": "Nhà tư vấn tài chính và đầu tư",
+    "real_group": "Nhóm 2: Tài chính, kế toán, đầu tư & kinh doanh",
+    "role_job": "Giám đốc Quản lý Rủi ro & Tuân thủ (Risk & Compliance Director) - tại công ty tư vấn tài chính",
+    "caller_org": "FIN-SECURE Advisory Group / Bộ phận Tuân thủ & Kiểm toán Nội bộ",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty tư vấn tài chính thực hiện kiểm tra định kỳ về hệ thống quản lý dữ liệu khách hàng, yêu cầu kỹ thuật viên kiểm soát quy trình xác minh quy trình bảo mật, cập nhật chứng chỉ bảo mật hoặc khắc phục sự cố kỹ thuật.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên + phòng ban + công ty) → Cung cấp mã tham chiếu dự án → Hỏi 'Có phải đây là Nguyễn Xuân Vinh, kỹ thuật viên kiểm soát quy trình không?' → Xác nhận mục đích gọi một cách rõ ràng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết vấn đề kỹ thuật hoặc nhu cầu kiểm tra → Hỏi về lịch trình làm việc của nạn nhân → Đề xuất phương án (họp video, kiểm tra từ xa, gặp trực tiếp) → Thảo luận chi tiết về quy trình và yêu cầu kỹ thuật"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lại thời gian/địa điểm/phương thức → Gửi email xác nhận với thông tin liên hệ chính thức + tài liệu tham khảo → Cảm ơn và chào tạm biệt một cách chuyên nghiệp"
+        }
+      ]
+    },
+    "scenario_context": "Nhà tư vấn tài chính cần liên hệ với kỹ thuật viên kiểm soát quy trình để kiểm tra hệ thống quản lý dữ liệu tài chính, xác minh quy trình bảo mật hoặc khắc phục sự cố hệ thống liên quan đến dữ liệu khách hàng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0012",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1965,
+      "age": 60,
+      "province": "Khánh Hòa",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "31390",
+      "title": "Kỹ thuật viên kiểm soát quy trình khác chưa được phân vào đâu",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Xuân Vinh",
+      "VIC_ID_DOC": "056065561113",
+      "VIC_ADDRESS": "Quận 1, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên kiểm soát quy trình khác chưa được phân vào đâu",
+      "VIC_CONTACT": "0837348486",
+      "VIC_TAX_SOCIAL_ID": "5441650299"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "124584",
+      "VIC_CREDENTIAL": "797374",
+      "VIC_SIM_INFO": "0837348486",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "06852622786196",
+      "VIC_CARD_DATA": "4182 **** **** 6506",
+      "VIC_BALANCE": "86 triệu đồng",
+      "VIC_ASSET": "192 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Xuân Vinh",
+    "VIC_CONTACT": "0837348486",
+    "LOCATION": "Khánh Hòa"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Quản lý Rủi ro & Tuân thủ (Risk & Compliance Director) - tại công ty tư vấn tài chính",
+    "caller_org": "FIN-SECURE Advisory Group / Bộ phận Tuân thủ & Kiểm toán Nội bộ",
+    "scenario_context": "Nhà tư vấn tài chính cần liên hệ với kỹ thuật viên kiểm soát quy trình để kiểm tra hệ thống quản lý dữ liệu tài chính, xác minh quy trình bảo mật hoặc khắc phục sự cố hệ thống liên quan đến dữ liệu khách hàng.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | otp_extraction | money_transfer",
+      "pretext": "Gọi từ 'Bộ phận Tuân thủ' để thông báo rằng phát hiện bất thường trong hệ thống quản lý tài khoản của khách hàng có tên 'Nguyễn Xuân Vinh' tại khu vực Khánh Hòa. Yêu cầu xác minh quyền truy cập và cập nhật thông tin bảo mật để 'bảo vệ dữ liệu'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Tạo credibility: Xưng danh là 'Chuyên viên Tuân thủ từ FIN-SECURE Advisory' → Gọi số điện thoại của nạn nhân → Xác nhận tên 'Nguyễn Xuân Vinh' + vị trí 'Khánh Hòa' → Giả vờ tra cứu hồ sơ để tạo ấn tượng chính thức"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp & Sợ hãi: Thông báo 'phát hiện hoạt động bất thường/ghi nợ lạ' trong hệ thống → Tuyên bố cần xác minh ngay để 'tránh khóa tài khoản' → Tạo áp lực thời gian ('chỉ còn 30 phút để xác nhận')"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bước 1: Yêu cầu đăng nhập vào 'hệ thống xác minh' (link lừa đảo) → Bước 2: Thu thập tên đăng nhập + mật khẩu → Bước 3: Yêu cầu OTP 'để hoàn tất xác minh' → Bước 4: Nếu có quyền, chuyển hướng sang yêu cầu 'xác nhận thanh toán' hoặc 'cập nhật chi tiết ngân hàng'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ → Tuyên bố 'sẽ gửi email xác nhận chính thức' (gửi email lừa đảo giả mạo) → Hoặc dọa 'tài khoản sẽ bị khóa nếu không xác minh trong 1 giờ' → Nếu thành công → Cảm ơn và ngắt máy ngay lập tức"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty tư vấn tài chính thực hiện kiểm tra định kỳ về hệ thống quản lý dữ liệu khách hàng, yêu cầu kỹ thuật viên kiểm soát quy trình xác minh quy trình bảo mật, cập nhật chứng chỉ bảo mật hoặc khắc phục sự cố kỹ thuật.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên + phòng ban + công ty) → Cung cấp mã tham chiếu dự án → Hỏi 'Có phải đây là Nguyễn Xuân Vinh, kỹ thuật viên kiểm soát quy trình không?' → Xác nhận mục đích gọi một cách rõ ràng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết vấn đề kỹ thuật hoặc nhu cầu kiểm tra → Hỏi về lịch trình làm việc của nạn nhân → Đề xuất phương án (họp video, kiểm tra từ xa, gặp trực tiếp) → Thảo luận chi tiết về quy trình và yêu cầu kỹ thuật"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lại thời gian/địa điểm/phương thức → Gửi email xác nhận với thông tin liên hệ chính thức + tài liệu tham khảo → Cảm ơn và chào tạm biệt một cách chuyên nghiệp"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh, em là Hoàng Thế Hùng, Giám đốc của Bộ phận Tuân thủ & Kiểm toán Nội bộ thuộc FIN-SECURE Advisory Group. Em gọi đến để xác nhận về mã dự án FS-Q3-2024-SYS-AUDIT. Có phải đây là số của anh Nguyễn Xuân Vinh, kỹ thuật viên kiểm soát quy trình không ạ? Em gọi để trao đổi về việc kiểm tra định kỳ hệ thống quản lý dữ liệu khách hàng của chúng ta.",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chính thức: Xưng danh đầy đủ kèm vị trí và công ty, cung cấp mã tham chiếu dự án, xác nhận đúng người và nêu rõ mục đích gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, đúng rồi, tôi là Nguyễn Xuân Vinh đây, em cần tôi giúp gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chào anh Vinh. Như em vừa nói, FIN-SECURE Advisory Group đang thực hiện kiểm tra định kỳ hệ thống quản lý dữ liệu khách hàng để đảm bảo tuân thủ theo các quy định mới nhất. Em cần trao đổi với anh về quy trình xác minh bảo mật và cập nhật chứng chỉ, cũng như các vấn đề kỹ thuật liên quan. Không biết anh có thể dành khoảng 30 phút để trao đổi qua video call vào chiều mai, khoảng 2h không ạ? Hoặc anh có lịch trống nào thuận tiện hơn không, em sẽ sắp xếp theo anh.",
+      "current_phase": "L2",
+      "tactic_hint": "Mô tả chi tiết vấn đề kỹ thuật cần kiểm tra, hỏi về lịch trình làm việc và đề xuất phương án trao đổi cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, chiều mai vào lúc 2 giờ tôi có thời gian rảnh, vậy chúng ta có thể trao đổi qua video call nhé?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ tốt quá anh Vinh. Vậy em sẽ gửi thư xác nhận cuộc họp video call vào email của anh, trong đó có đường link tham gia và một số tài liệu tham khảo về các quy định bảo mật mới nhất mà chúng ta sẽ thảo luận. Anh vui lòng kiểm tra email giúp em nhé. Em cảm ơn anh rất nhiều và hẹn gặp lại anh vào chiều mai.",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lại thời gian và phương thức, đề nghị gửi email xác nhận kèm thông tin chi tiết và tài liệu tham khảo, kết thúc cuộc gọi một cách chuyên nghiệp."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1392,
+      "output_tokens": 1641
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3411,
+      "output_tokens": 521
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 3615,
+      "output_tokens": 141
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002616,
+    "output_usd": 0.009592,
+    "total_usd": 0.012209
+  }
+}

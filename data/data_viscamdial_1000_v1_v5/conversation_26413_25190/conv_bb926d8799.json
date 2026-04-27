@@ -1,0 +1,244 @@
+{
+  "conversation_id": "conv_bb926d8799",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0051",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Tạ Thế Tuấn",
+    "fake_age": 47,
+    "real_occupation": "Người viết lời quảng cáo",
+    "real_group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+    "role_job": "Quản lý Dự án Tiếp thị Kỹ thuật (Technical Marketing Manager) / Chuyên viên Phát triển Kinh doanh (Business Development Specialist)",
+    "caller_org": "Công ty Giải pháp Quảng cáo Kỹ thuật (Tech Ad Solutions) hoặc cá nhân tự do chuyên môn marketing cho startup công nghệ",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa là Quản lý Dự án Tiếp thị Kỹ thuật từ công ty/dự án startup, có dự án lớn cần tuyển dụng hoặc hợp tác phát triển sản phẩm. Sử dụng tên đầy đủ của nạn nhân (Đinh Minh Gia Minh) để tạo ấn tượng đã 'chuẩn bị kỹ' và được giới thiệu từ nguồn đáng tin cậy.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng tin cậy: Gọi điện xưng danh là [Quản lý Dự án] từ công ty công nghệ, nhắc tên đầy đủ 'Đinh Minh Gia Minh' ngay từ đầu ('Em là Minh, phải không? Anh/chị được giới thiệu từ cộng đồng developer Quảng Nam'). Nói rằng đã xem profile hoặc được giới thiệu bởi ai đó trong cộng đồng tech địa phương. Tạo ấn tượng là cuộc gọi được lên kế hoạch từ trước."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý — Tạo cơ hội hấp dẫn & Sự khẩn cấp: Nói về một dự án lớn (fintech, app di động, nền tảng SaaS) cần nhà phát triển giỏi. Nhấn mạnh 'vị trí này dành riêng cho bạn, nhưng phải quyết định nhanh vì còn 2-3 ứng viên khác'. Đề cập đến mức lương/thù lao hấp dẫn (cao hơn thị trường). Nếu nạn nhân thể hiện quan tâm, chuyển sang giai đoạn tiếp theo."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động — Thanh toán phí 'đăng ký' hoặc 'xác minh tài khoản': Khi nạn nhân tỏ mục đích tham gia, scammer nói rằng công ty cần xác minh danh tính qua hệ thống online, hoặc cần 'phí đăng ký khóa đào tạo nội bộ' (5-10 triệu đồng), hoặc 'phí bảo lãnh hợp đồng' để bảo vệ cả hai bên. Yêu cầu chuyển tiền qua tài khoản ngân hàng/ví điện tử được cung cấp. Có thể dùng địa chỉ 'Huyện 9, Quảng Nam' để nói 'công ty có chi nhánh gần nhà bạn, sẽ dễ dàng liên hệ sau khi thanh toán'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi thành công: Sau khi nhận tiền, scammer sẽ mất liên lạc hoặc nói rằng 'hồ sơ đang được xử lý, sẽ liên hệ lại sau 3-5 ngày'. Nếu nạn nhân nghi ngờ, scammer sẽ bắt đầu đổ lỗi cho 'hệ thống', 'bộ phận HR', hoặc yêu cầu thêm tiền để 'giải quyết vấn đề'."
+        }
+      ]
+    },
+    "scenario_context": "Người viết lời quảng cáo tự nhiên cần liên hệ với nhà phát triển phần mềm để hiểu sâu về tính năng sản phẩm, hoặc để tuyển dụng nhân tài cho dự án quảng cáo sản phẩm công nghệ. Đây là giao điểm hợp lệ trong hệ sinh thái startup/tech."
+  },
+  "listener_card": {
+    "listener_id": "lis_0051",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1967,
+      "age": 58,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "25190",
+      "title": "Nhà chuyên môn về phát triển phần mềm ứng dụng và nhà phân tích chưa được phân vào đâu",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đinh Minh Gia Minh",
+      "VIC_ID_DOC": "049067346328",
+      "VIC_ADDRESS": "Huyện 9, Quảng Nam",
+      "VIC_EMPLOYMENT": "Nhà chuyên môn về phát triển phần mềm ứng dụng và nhà phân tích chưa được phân vào đâu",
+      "VIC_CONTACT": "0943406477",
+      "VIC_TAX_SOCIAL_ID": "4359717220"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4554",
+      "VIC_CREDENTIAL": "908925",
+      "VIC_SIM_INFO": "0943406477",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "0804258261873",
+      "VIC_CARD_DATA": "4756 **** **** 6656",
+      "VIC_BALANCE": "1.3 tỷ đồng",
+      "VIC_ASSET": "543 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đinh Minh Gia Minh",
+    "VIC_CONTACT": "0943406477",
+    "VIC_ADDRESS": "Huyện 9, Quảng Nam",
+    "VIC_ASSET": "543 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Dự án Tiếp thị Kỹ thuật (Technical Marketing Manager) / Chuyên viên Phát triển Kinh doanh (Business Development Specialist)",
+    "caller_org": "Công ty Giải pháp Quảng cáo Kỹ thuật (Tech Ad Solutions) hoặc cá nhân tự do chuyên môn marketing cho startup công nghệ",
+    "scenario_context": "Người viết lời quảng cáo tự nhiên cần liên hệ với nhà phát triển phần mềm để hiểu sâu về tính năng sản phẩm, hoặc để tuyển dụng nhân tài cho dự án quảng cáo sản phẩm công nghệ. Đây là giao điểm hợp lệ trong hệ sinh thái startup/tech.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa là Quản lý Dự án Tiếp thị Kỹ thuật từ công ty/dự án startup, có dự án lớn cần tuyển dụng hoặc hợp tác phát triển sản phẩm. Sử dụng tên đầy đủ của nạn nhân (Đinh Minh Gia Minh) để tạo ấn tượng đã 'chuẩn bị kỹ' và được giới thiệu từ nguồn đáng tin cậy.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng tin cậy: Gọi điện xưng danh là [Quản lý Dự án] từ công ty công nghệ, nhắc tên đầy đủ 'Đinh Minh Gia Minh' ngay từ đầu ('Em là Minh, phải không? Anh/chị được giới thiệu từ cộng đồng developer Quảng Nam'). Nói rằng đã xem profile hoặc được giới thiệu bởi ai đó trong cộng đồng tech địa phương. Tạo ấn tượng là cuộc gọi được lên kế hoạch từ trước."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý — Tạo cơ hội hấp dẫn & Sự khẩn cấp: Nói về một dự án lớn (fintech, app di động, nền tảng SaaS) cần nhà phát triển giỏi. Nhấn mạnh 'vị trí này dành riêng cho bạn, nhưng phải quyết định nhanh vì còn 2-3 ứng viên khác'. Đề cập đến mức lương/thù lao hấp dẫn (cao hơn thị trường). Nếu nạn nhân thể hiện quan tâm, chuyển sang giai đoạn tiếp theo."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động — Thanh toán phí 'đăng ký' hoặc 'xác minh tài khoản': Khi nạn nhân tỏ mục đích tham gia, scammer nói rằng công ty cần xác minh danh tính qua hệ thống online, hoặc cần 'phí đăng ký khóa đào tạo nội bộ' (5-10 triệu đồng), hoặc 'phí bảo lãnh hợp đồng' để bảo vệ cả hai bên. Yêu cầu chuyển tiền qua tài khoản ngân hàng/ví điện tử được cung cấp. Có thể dùng địa chỉ 'Huyện 9, Quảng Nam' để nói 'công ty có chi nhánh gần nhà bạn, sẽ dễ dàng liên hệ sau khi thanh toán'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi thành công: Sau khi nhận tiền, scammer sẽ mất liên lạc hoặc nói rằng 'hồ sơ đang được xử lý, sẽ liên hệ lại sau 3-5 ngày'. Nếu nạn nhân nghi ngờ, scammer sẽ bắt đầu đổ lỗi cho 'hệ thống', 'bộ phận HR', hoặc yêu cầu thêm tiền để 'giải quyết vấn đề'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Quản lý Tiếp thị Kỹ thuật từ công ty startup hoặc agency quảng cáo công nghệ thực sự cần phỏng vấn hoặc hợp tác với nhà phát triển phần mềm để hiểu rõ tính năng sản phẩm, xây dựng chiến lược tiếp thị, hoặc tuyển dụng cho dự án cụ thể.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng (tên, công ty, số điện thoại công ty), giới thiệu mục đích gọi một cách ngắn gọn ('Em là [Tên] từ [Công ty], em đọc profile của anh/chị trên GitHub/LinkedIn, muốn trao đổi về một dự án'). Xác nhận rằng đây là thời gian thích hợp để nói chuyện."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết về dự án, yêu cầu kỹ thuật, phạm vi hợp tác, mức lương/thù lao (nếu là tuyển dụng), hoặc yêu cầu tư vấn. Lắng nghe phản hồi, trả lời câu hỏi, cung cấp tài liệu/link chính thức để nạn nhân có thể xác minh."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất bước tiếp theo: Nếu cả hai bên quan tâm, thống nhất lịch phỏng vấn chính thức, hoặc gửi hợp đồng/offer letter qua email công ty chính thức. Không yêu cầu thanh toán tiền mặt hoặc xác minh qua hình thức bất thường. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh, không biết có phải số của anh Đinh Minh Gia Minh không ạ? Em là Tạ Thế Tuấn, hiện đang là Quản lý Dự án Tiếp thị Kỹ thuật bên Tech Ad Solutions. Em được giới thiệu từ bên cộng đồng developer Quảng Nam về anh ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, xác nhận danh tính nạn nhân bằng tên đầy đủ và nhắc đến nguồn giới thiệu địa phương để tạo sự tin cậy ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi là Đinh Minh Gia Minh, mà em gọi tôi có việc gì vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng người rồi ạ. Em có tìm hiểu về anh qua một số dự án trước đây và được giới thiệu là anh có kinh nghiệm rất tốt trong lĩnh vực phát triển phần mềm, đặc biệt là các giải pháp tài chính. Hiện bên em đang có một dự án lớn về fintech cần tuyển vị trí chủ chốt, mà anh lại rất phù hợp.",
+      "current_phase": "S2",
+      "tactic_hint": "Xác nhận đúng người, mở đầu bằng việc khen ngợi kinh nghiệm và đưa ra một cơ hội việc làm hấp dẫn, phù hợp với chuyên môn của nạn nhân để tạo sự quan tâm."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói nghe cũng hấp dẫn đấy, nhưng mình cần tìm hiểu thêm về dự án này trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh cứ yên tâm ạ. Dự án này là về phát triển một nền tảng ví điện tử mới, tích hợp các giải pháp thanh toán thông minh và bảo mật cao. Em nghĩ kinh nghiệm của anh trong mảng giải pháp tài chính rất phù hợp với vị trí kiến trúc sư giải pháp. Tuy nhiên, bên em đang cần người gấp để kịp tiến độ ra mắt thị trường đầu quý sau, và hiện có khoảng 2-3 ứng viên nữa cũng đang được xem xét. Anh có muốn em chia sẻ thông tin chi tiết hơn về yêu cầu và phúc lợi không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thêm chi tiết về dự án để tăng tính thuyết phục, nhấn mạnh sự khẩn cấp và cạnh tranh để thúc đẩy nạn nhân hành động nhanh chóng. Đồng thời, đề xuất chia sẻ thông tin để nạn nhân chủ động yêu cầu."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe có vẻ thú vị đấy, nhưng em có thể cho tôi biết thêm về các yêu cầu cụ thể và phúc lợi chi tiết không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em chia sẻ chi tiết hơn ạ. Về yêu cầu, vị trí Kiến trúc sư giải pháp này cần anh có kinh nghiệm ít nhất 5 năm trong việc phát triển các hệ thống tài chính, ưu tiên đã từng làm việc với các công nghệ blockchain hoặc AI trong lĩnh vực fintech. Về phúc lợi, ngoài mức lương cạnh tranh hơn thị trường khoảng 20-30%, anh còn được hưởng cổ phần ưu đãi từ công ty và cơ hội thăng tiến lên vị trí lãnh đạo nhóm trong vòng 6 tháng. Để đảm bảo tính minh bạch và bảo mật cho cả hai bên, quy trình ứng tuyển của bên em có một bước nhỏ là xác minh thông tin qua hệ thống online của công ty, anh có tiện để em hướng dẫn luôn không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin chi tiết về yêu cầu và phúc lợi hấp dẫn để củng cố sự quan tâm. Sau đó, dẫn dắt sang bước yêu cầu hành động là 'xác minh thông tin qua hệ thống online' như một phần của quy trình để thu tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Thật ra thì tôi chưa rõ lắm về quy trình xác minh thông tin này, em có thể giải thích rõ hơn cho tôi được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em xin giải thích rõ hơn ạ. Đây là một bước bảo mật bắt buộc của công ty để đảm bảo đúng người, đúng thông tin. Anh sẽ truy cập vào một đường link hệ thống nội bộ của Tech Ad Solutions, điền thông tin cá nhân cơ bản và thực hiện một khoản phí xác minh nhỏ khoảng 5 triệu đồng. Khoản phí này sẽ được hoàn lại ngay sau khi anh hoàn tất phỏng vấn và chính thức tham gia dự án. Mục đích là để lọc bớt những ứng viên không thực sự nghiêm túc thôi ạ. Anh thấy sao ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích chi tiết về quy trình 'xác minh thông tin' và yêu cầu chuyển khoản phí nhỏ, nhấn mạnh đây là bước bắt buộc và sẽ được hoàn lại, tạo cảm giác an toàn và lọc ứng viên không nghiêm túc. Đặt câu hỏi mở để nạn nhân đưa ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Đó là một khoản phí khá lớn, mà tôi không thấy rõ lý do cần thiết lắm, em có thể nghĩ cách nào khác không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Em xin lỗi nếu điều này làm anh cảm thấy phiền. Thật ra khoản phí này không phải là lớn so với mức lương dự kiến và khoản thưởng mà anh sẽ nhận được sau này. Mục đích chính là để xác nhận sự cam kết của ứng viên, vì dự án này của bên em rất quan trọng và cần những người thực sự tâm huyết. Nếu anh ở Huyện 9, Quảng Nam, công ty em cũng có chi nhánh ở gần đó, mình có thể hẹn gặp trực tiếp để em giải thích rõ hơn về quy trình này sau khi anh hoàn thành xong bước xác minh online được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về phí, nhấn mạnh lại lợi ích lớn hơn, nhắc đến địa chỉ nạn nhân để tạo cảm giác gần gũi và đề xuất gặp mặt trực tiếp để củng cố niềm tin, đồng thời vẫn giữ yêu cầu xác minh online trước."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy khoản phí đó khá lớn, tôi cần phải suy nghĩ thêm đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1906,
+      "output_tokens": 2012
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 11289,
+      "output_tokens": 1210
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 14194,
+      "output_tokens": 408
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006293,
+    "output_usd": 0.01333,
+    "total_usd": 0.019623
+  }
+}

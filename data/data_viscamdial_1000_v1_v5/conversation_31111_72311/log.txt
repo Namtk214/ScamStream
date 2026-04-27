@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_2a1a1b6439]
+  Caller thật: Kỹ thuật viên hóa học (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Nhân viên kiểm định chất lượng dầu nhớt và chất lỏng công nghiệp @ Công ty cấp phối linh kiện ô tô và hóa chất công nghiệp
+  Listener: Thợ cơ khí xe có động cơ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Kỹ thuật viên hóa học có thể làm việc tại công ty cung cấp dầu nhớt, chất lỏng phanh, dịch làm mát cho ngành ô tô. Thợ cơ khí xe có động cơ là khách hàng tiềm năng hoặc có liên hệ trong cộng đồng sửa chữa ô tô, nơi cần kiểm định chất lượng và mua sắm vật tư.
+  Pretext: Gọi để thông báo về chương trình kiểm định miễn phí dầu nhớt và thanh toán hoàn tiền cho khách hàng cũ. Sử dụng tên đầy đủ 'Võ Minh Long' để tạo ấn tượng rằng đã tra cứu hồ sơ khách hàng trong hệ thống.
+  Listener traits: ['sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh, tôi là Đặng Thế Hùng, nhân viên kiểm định từ công ty cấp phối linh kiện ô tô và hóa chất công nghiệp. Số điện thoại của anh là 0811702520 phải không ạ? Tôi có hồ sơ của anh Võ Minh Long ở đây, không biết anh có phải là người đã từng mua dầu nhớt từ bên chúng tôi năm ngoái không?
+      → phase: S1 | tactic: Gọi tới số nạn nhân, xưng danh, dùng tên đầy đủ nạn nhân để tạo trust và xác nhận thông tin ban đầu.
+T02 [LISTENER] Em không nhớ rõ, nhưng có thể đúng là em đã mua, anh có thông tin gì thêm không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, tuyệt vời! Tôi thấy ở đây là anh có một đơn hàng mua dầu nhớt tổng hợp cao cấp vào tháng 10 năm ngoái với số lượng lớn. Hiện tại công ty chúng tôi đang có chương trình tri ân khách hàng đặc biệt dành cho những khách hàng đã mua sản phẩm trong năm ngoái, đặc biệt là những khách hàng thân thiết như anh. Anh Võ Minh Long được chọn trong danh sách khách hàng may mắn được hoàn lại số tiền 5 triệu đồng cho mỗi lần mua hàng năm ngoái. Chương trình này chỉ có hiệu lực trong 24 giờ tới thôi ạ.
+      → phase: S2 | tactic: Xác nhận thông tin mua hàng để củng cố trust, sau đó chuyển sang phase S2 bằng cách giới thiệu chương trình hoàn tiền độc quyền và tạo cảm giác khẩn cấp.
+T04 [LISTENER] Nghe có vẻ hấp dẫn đấy, nhưng em muốn biết rõ hơn về cách thức hoàn lại tiền như thế nào ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, thưa anh Võ Minh Long. Để xử lý quá trình hoàn tiền nhanh chóng và chính xác, anh chỉ cần thực hiện một thao tác đơn giản là chuyển khoản 500 nghìn đồng phí xác minh tài khoản ngân hàng vào số tài khoản của công ty chúng tôi. Sau khi nhận được khoản phí này, hệ thống sẽ tự động hoàn lại cho anh tổng cộng 5 triệu đồng tiền hoàn và 500 nghìn đồng phí xác minh vào tài khoản của anh trong vòng 2 giờ làm việc tiếp theo.
+      → phase: S3 | tactic: Yêu cầu hành động cụ thể để lừa đảo chuyển tiền. Giải thích cơ chế hoàn tiền để xoa dịu nghi ngờ.
+T06 [LISTENER] Em cảm thấy chưa rõ ràng lắm, sao lại phải chuyển khoản trước mới được hoàn tiền ạ? Em muốn kiểm tra thêm thông tin đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Tôi hiểu là anh cần làm rõ. Tuy nhiên, đây là quy trình bắt buộc của công ty để đảm bảo tính bảo mật và xác minh chính xác tài khoản nhận tiền. Thông tin của anh Võ Minh Long ở đây rất đầy đủ, nên anh cứ yên tâm về độ xác thực của chương trình. Tôi không có ý định lừa đảo gì anh ở đây cả. Chúng tôi cần đảm bảo tài khoản nhận tiền là chính chủ để tránh những sai sót không đáng có. Anh vừa miss mất 5 triệu đồng rồi! Chương trình kết thúc trong 30 phút nữa. Anh chắc chắn không muốn lỡ cơ hội này?
+      → phase: S4 | tactic: Xoa dịu nghi ngờ bằng cách giải thích quy trình, khẳng định tính xác thực thông tin và tăng áp lực về thời gian để tạo cảm giác cấp bách.
+T08 [LISTENER] Em hiểu rằng anh đang cố gắng làm rõ, nhưng em vẫn chưa thấy thuyết phục lắm về việc phải chuyển khoản trước để nhận tiền hoàn lại, anh có thể nói rõ hơn không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, tôi hiểu sự lo lắng của anh. Tuy nhiên, đây là chính sách của công ty chúng tôi để đảm bảo rằng chỉ chủ tài khoản hợp lệ mới nhận được khoản hoàn tiền. Khoản phí 500 nghìn này sẽ được hoàn lại ngay cùng với 5 triệu đồng của anh. Anh cứ nghĩ đơn giản là chúng tôi cần xác nhận lại danh tính anh qua một giao dịch nhỏ. Anh không muốn bỏ lỡ cơ hội nhận lại 5 triệu đồng đang chờ anh chỉ vì 500 nghìn đồng phí xác minh này chứ?
+      → phase: S4 | tactic: Xoa dịu sự nghi ngờ, tái khẳng định lý do về phí xác minh và tiếp tục nhấn mạnh giá trị khoản hoàn tiền để khuyến khích hành động.
+T10 [LISTENER] Em vẫn chưa thấy thoải mái khi phải chuyển khoản trước, anh có thể cho em biết số tài khoản cụ thể được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, số tài khoản của công ty chúng tôi là 1902xxxxxxx tại ngân hàng Techcombank, chi nhánh Hà Nội. Tên thụ hưởng là Công ty Cổ phần Cấp phối Linh kiện ABC. Anh cứ chuyển khoản 500 nghìn đồng vào đó, sau đó thông báo lại cho tôi, tôi sẽ đẩy nhanh quá trình hoàn tiền cho anh. Anh sẽ thấy 5 triệu 500 nghìn trong tài khoản của mình chỉ trong 2 giờ nữa. Anh đừng bỏ lỡ cơ hội này nhé!
+      → phase: S3 | tactic: Cung cấp thông tin tài khoản giả lập để nạn nhân chuyển tiền, đồng thời tạo cảm giác khẩn cấp và lợi ích lớn để thúc đẩy hành động.
+T12 [LISTENER] Em vẫn cảm thấy không yên tâm lắm, không biết có cách nào xác nhận thêm về chương trình này không anh?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Tôi hiểu là anh muốn xác nhận lại. Nhưng tôi có thể khẳng định lại một lần nữa rằng đây là chương trình tri ân đặc biệt và có thời hạn. Thông tin anh Võ Minh Long là khách hàng của chúng tôi hoàn toàn chính xác. Anh muốn bỏ lỡ cơ hội nhận lại 5 triệu đồng chỉ vì một khoản phí xác minh nhỏ như vậy sao?
+      → phase: S4 | tactic: Xoa dịu nghi ngờ, khẳng định lại tính xác thực của thông tin đã biết về nạn nhân và tạo áp lực tâm lý bằng cách nhấn mạnh việc bỏ lỡ cơ hội.
+T14 [LISTENER] Em hiểu anh đang nói, nhưng em vẫn cảm thấy không thoải mái khi phải chuyển khoản trước, không biết có thông tin nào khác anh có thể cung cấp không ạ?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  14 turns | suspicion=0.00
+TOKEN: in=31321 | out=3464
+COST : $0.018722
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_31111_72311\conv_2a1a1b6439.json  [SCAM_REFUSE]

@@ -1,0 +1,278 @@
+{
+  "conversation_id": "conv_8790567e81",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0093",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Nguyễn Công An",
+    "fake_age": 37,
+    "real_occupation": "Thợ vận hành máy chế biến và các sản phẩm khoáng sản khác",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh / Thương lái nguyên liệu phụ gia nông nghiệp",
+    "caller_org": "thương lái tự do / công ty cung cấp hóa chất bảo vệ thực vật",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên kinh doanh từ công ty cung cấp phụ gia / hóa chất gọi để xác nhận đơn hàng, thảo luận về giá cả, kỳ hạn giao hàng, hoặc tư vấn sản phẩm phù hợp cho nhu cầu hun khói và xử lý dịch hại.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng (tên công ty, tên cá nhân, số điện thoại chính thức), xác nhận đúng người và số điện thoại, hỏi 'có phải anh Tuấn không, số 0850896759?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về loại sản phẩm, số lượng, chất lượng, giá cả, kỳ hạn giao hàng. Nếu cần thanh toán, cung cấp hóa đơn, tài khoản chính thức của công ty, hoặc hướng nạn nhân đến website / văn phòng chính thức để kiểm chứng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lại thông tin đơn hàng, kỳ hạn giao, cách thức thanh toán, hoặc hẹn gặp mặt. Chào tạm biệt một cách chuyên nghiệp, cung cấp đầy đủ thông tin liên hệ để nạn nhân có thể xác minh lại."
+        }
+      ]
+    },
+    "scenario_context": "Thợ vận hành máy chế biến khoáng sản và hóa chất thường cung cấp hoặc tư vấn về phụ gia, chất xử lý cho các doanh nghiệp nông nghiệp. Thợ hun khói và kiểm soát dịch hại cần các sản phẩm này để xử lý côn trùng và bảo vệ vật nuôi. Hai nghề có mối liên hệ tự nhiên qua chuỗi cung ứng nông sản."
+  },
+  "listener_card": {
+    "listener_id": "lis_0093",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "Vĩnh Long",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75440",
+      "title": "Thợ hun khói và thợ kiểm soát thực vật, động vật có hại khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Quang Tuấn",
+      "VIC_ID_DOC": "086200876534",
+      "VIC_ADDRESS": "TP 12, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Thợ hun khói và thợ kiểm soát thực vật, động vật có hại khác",
+      "VIC_CONTACT": "0850896759",
+      "VIC_TAX_SOCIAL_ID": "1837997196"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "2169",
+      "VIC_CREDENTIAL": "5901",
+      "VIC_SIM_INFO": "0850896759",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "48473510233",
+      "VIC_CARD_DATA": "4638 **** **** 3286",
+      "VIC_BALANCE": "59 triệu đồng",
+      "VIC_ASSET": "166 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Quang Tuấn",
+    "VIC_CONTACT": "0850896759",
+    "VIC_ADDRESS": "TP 12, Vĩnh Long",
+    "VIC_BANK_ACCOUNT": "48473510233"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh / Thương lái nguyên liệu phụ gia nông nghiệp",
+    "caller_org": "thương lái tự do / công ty cung cấp hóa chất bảo vệ thực vật",
+    "scenario_context": "Thợ vận hành máy chế biến khoáng sản và hóa chất thường cung cấp hoặc tư vấn về phụ gia, chất xử lý cho các doanh nghiệp nông nghiệp. Thợ hun khói và kiểm soát dịch hại cần các sản phẩm này để xử lý côn trùng và bảo vệ vật nuôi. Hai nghề có mối liên hệ tự nhiên qua chuỗi cung ứng nông sản.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo về đơn hàng phụ gia / hóa chất xử lý dịch hại mà 'Bùi Quang Tuấn' đã đặt trước, yêu cầu thanh toán nhanh để hoàn tất giao dịch hoặc xác nhận tài khoản ngân hàng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên kinh doanh từ công ty cung cấp phụ gia, gọi cho 'anh Tuấn' ở TP 12 Vĩnh Long (dùng VIC_ADDRESS). Hỏi thăm về đơn hàng phụ gia hun khói hoặc hóa chất xử lý dịch hại mà 'anh đặt tuần trước'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp bằng cách nói 'đơn hàng sắp hết hạn giao', 'công ty đang có chương trình thanh toán ưu đãi chỉ hôm nay', hoặc 'cần xác nhận lại tài khoản để tránh lỗi trong hệ thống'. Sử dụng VIC_FULLNAME để tạo sự quen thuộc."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Yêu cầu nạn nhân chuyển tiền vào tài khoản 'công ty' (thực chất là tài khoản của scammer), hoặc cung cấp lại VIC_BANK_ACCOUNT để 'cập nhật hệ thống' / 'xác minh thanh toán', từ đó thực hiện chuyển tiền trái phép."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ hoặc từ chối, scammer nói 'không sao, chúng tôi sẽ ghi nhận đơn hàng bị hủy', rồi cắt máy hoặc tạo cảm giác thất vọng để nạn nhân tự liên hệ lại (tăng cơ hội thành công)."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên kinh doanh từ công ty cung cấp phụ gia / hóa chất gọi để xác nhận đơn hàng, thảo luận về giá cả, kỳ hạn giao hàng, hoặc tư vấn sản phẩm phù hợp cho nhu cầu hun khói và xử lý dịch hại.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng (tên công ty, tên cá nhân, số điện thoại chính thức), xác nhận đúng người và số điện thoại, hỏi 'có phải anh Tuấn không, số 0850896759?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về loại sản phẩm, số lượng, chất lượng, giá cả, kỳ hạn giao hàng. Nếu cần thanh toán, cung cấp hóa đơn, tài khoản chính thức của công ty, hoặc hướng nạn nhân đến website / văn phòng chính thức để kiểm chứng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lại thông tin đơn hàng, kỳ hạn giao, cách thức thanh toán, hoặc hẹn gặp mặt. Chào tạm biệt một cách chuyên nghiệp, cung cấp đầy đủ thông tin liên hệ để nạn nhân có thể xác minh lại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi là Nguyễn Công An từ công ty cung cấp hóa chất bảo vệ thực vật đây ạ. Anh có phải là anh Bùi Quang Tuấn số điện thoại 0850896759 không anh?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh rõ ràng và xác nhận thông tin người nhận cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi ạ, em là Bùi Quang Tuấn đây.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh Tuấn. Tôi gọi để xác nhận lại đơn hàng phụ gia hun khói và hóa chất xử lý dịch hại bên mình đã đặt hàng qua website công ty tuần trước. Anh cho tôi hỏi, số lượng 5kg phụ gia hun khói và 2 chai hóa chất xử lý dịch hại có đúng không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận chi tiết đơn hàng đã đặt để đi vào nội dung trao đổi chính."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi ạ, em nhớ đã đặt hàng như vậy.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời. Vậy thì tôi xin phép thông báo giá cuối cùng cho đơn hàng này là 1.250.000 đồng, đã bao gồm thuế và phí vận chuyển đến địa chỉ của anh tại TP 12, Vĩnh Long. Anh có muốn tôi gửi hóa đơn qua email trước không?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về giá cả và xác nhận địa chỉ giao hàng, đồng thời đề xuất gửi hóa đơn để tăng tính minh bạch."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em muốn nhận hóa đơn qua email để kiểm tra trước ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cho tôi xin địa chỉ email để tôi gửi hóa đơn ạ. Sau đó, chúng ta có thể thống nhất về kỳ hạn giao hàng và phương thức thanh toán nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Yêu cầu địa chỉ email để gửi hóa đơn, đồng thời dẫn dắt sang các bước tiếp theo trong quy trình xác nhận đơn hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em xin lỗi nhưng em không có email, anh có thể gửi hóa đơn qua số điện thoại này được không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À, vậy thì tôi sẽ gửi hóa đơn qua Zalo số điện thoại 0850896759 này cho anh nhé. Sau khi anh nhận được hóa đơn, anh có muốn chúng ta chốt luôn thời gian giao hàng và phương thức thanh toán luôn không anh?",
+      "current_phase": "L2",
+      "tactic_hint": "Điều chỉnh phương thức gửi hóa đơn theo yêu cầu của khách hàng, đồng thời tiếp tục dẫn dắt vào các bước tiếp theo của quy trình."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em đồng ý chốt thời gian giao hàng và phương thức thanh toán luôn sau khi nhận hóa đơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, vậy tôi sẽ gửi hóa đơn qua Zalo cho anh ngay bây giờ. Sau khi anh xem xong hóa đơn, anh có thể cho tôi biết anh muốn nhận hàng vào ngày nào trong tuần tới và anh muốn thanh toán bằng hình thức chuyển khoản hay COD không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận hành động gửi hóa đơn và chủ động đưa ra các lựa chọn về thời gian giao hàng và phương thức thanh toán để khách hàng dễ dàng lựa chọn."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, sau khi xem hóa đơn, em sẽ cho anh biết thời gian giao hàng và phương thức thanh toán ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy anh xem hóa đơn giúp tôi nhé. Có gì anh cứ phản hồi lại cho tôi theo số điện thoại này hoặc qua Zalo luôn ạ. Tôi đợi thông tin phản hồi từ anh.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận hành động chờ đợi phản hồi từ khách hàng sau khi họ xem hóa đơn, giữ kênh liên lạc mở và chuyển giai đoạn chờ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ xem hóa đơn và phản hồi lại anh ngay khi xem xong ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi cảm ơn anh. Nếu có bất kỳ thắc mắc nào về nội dung hóa đơn, anh cứ liên hệ lại cho tôi nhé.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận đã hiểu và sẵn sàng hỗ trợ nếu khách hàng có thắc mắc, duy trì sự tương tác tích cực."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh, nếu có gì thắc mắc em sẽ liên hệ lại ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy tôi sẽ chờ phản hồi từ anh nhé. Cảm ơn anh đã tin tưởng và sử dụng dịch vụ của bên tôi.",
+      "current_phase": "L3",
+      "tactic_hint": "Chuyển sang giai đoạn thống nhất hành động bằng cách xác nhận sẽ chờ đợi phản hồi từ khách hàng, đồng thời thể hiện sự chuyên nghiệp và cảm ơn khách hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh đã hỗ trợ, em sẽ xem hóa đơn và phản hồi lại ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh nhé, mong sớm nhận được phản hồi từ anh.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, chuyên nghiệp, đồng thời nhắc lại mong muốn nhận được phản hồi từ khách hàng."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1905,
+      "output_tokens": 1559
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 16492,
+      "output_tokens": 1116
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 20758,
+      "output_tokens": 588
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008317,
+    "output_usd": 0.010938,
+    "total_usd": 0.019255
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "conversation_id": "conv_2a1593c7ef",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0033",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lưu Ngọc Giang",
+    "fake_age": 25,
+    "real_occupation": "Ủy viên cấp huyện",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cán bộ quản lý vận tải - Phòng Quản lý vận tải huyện",
+    "caller_org": "Phòng Quản lý vận tải huyện",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi thực tế từ Phòng Quản lý vận tải huyện về kiểm tra định kỳ, cập nhật thông tin hồ sơ, hoặc thông báo về các chương trình an toàn giao thông mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Xưng danh rõ ràng với tên cơ quan, họ tên cán bộ, và yêu cầu xác nhận thông tin cơ bản (tên, số điện thoại, tuyến xe). Không tạo cảm giác khẩn cấp.",
+          "caller_script": "Xin chào anh Ngô Thế Vinh, tôi là cán bộ Phòng Quản lý vận tải huyện, tên tôi là [tên thật]. Tôi gọi để cập nhật thông tin hồ sơ lái xe. Anh có thời gian nói chuyện được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: hỏi về tình trạng xe, tuyến chạy, số giấy phép lái xe, hồ sơ bảo hiểm (để xác nhận), hoặc thông báo về các chương trình khuyến khích an toàn giao thông, hỗ trợ cho lái xe.",
+          "caller_script": "Anh đang chạy tuyến nào? Xe có số hiệu gì? Hồ sơ bảo hiểm của anh đã được cập nhật chưa? Chúng tôi có chương trình hỗ trợ lái xe an toàn, anh có muốn tham gia không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Nếu cần hành động, cán bộ sẽ yêu cầu anh đến trực tiếp cơ quan hoặc gửi tài liệu qua đường bưu điện/email chính thức. Không yêu cầu chuyển tiền qua điện thoại. Kết thúc bằng cách xác nhận thông tin liên hệ cơ quan và chào tạm biệt.",
+          "caller_script": "Cảm ơn anh đã cung cấp thông tin. Nếu cần cập nhật hồ sơ, anh vui lòng đến Phòng Quản lý vận tải huyện vào thứ 2 hoặc thứ 4 hàng tuần. Địa chỉ là [địa chỉ chính thức]. Hoặc anh có thể gọi lại số [số điện thoại cơ quan chính thức] để xác nhận. Chúc anh an toàn!"
+        }
+      ]
+    },
+    "scenario_context": "Ủy viên cấp huyện thường giám sát các lĩnh vực công cộng bao gồm vận tải. Lái xe buýt là đối tượng cần kiểm tra định kỳ về an toàn, tuân thủ quy định, hoặc liên quan đến các chương trình quản lý xe công cộng do huyện triển khai."
+  },
+  "listener_card": {
+    "listener_id": "lis_0033",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1975,
+      "age": 50,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "83311",
+      "title": "Lái xe buýt",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Thế Vinh",
+      "VIC_ID_DOC": "060075547806",
+      "VIC_ADDRESS": "Huyện 6, Bình Thuận",
+      "VIC_EMPLOYMENT": "Lái xe buýt",
+      "VIC_CONTACT": "0824987779",
+      "VIC_TAX_SOCIAL_ID": "4084154641"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7668",
+      "VIC_CREDENTIAL": "0429",
+      "VIC_SIM_INFO": "0824987779",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "103927261963",
+      "VIC_CARD_DATA": "4604 **** **** 1005",
+      "VIC_BALANCE": "9 triệu đồng",
+      "VIC_ASSET": "54 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Thế Vinh",
+    "VIC_CONTACT": "0824987779",
+    "VIC_EMPLOYMENT": "Lái xe buýt",
+    "VIC_BALANCE": "9 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ quản lý vận tải - Phòng Quản lý vận tải huyện",
+    "caller_org": "Phòng Quản lý vận tải huyện",
+    "scenario_context": "Ủy viên cấp huyện thường giám sát các lĩnh vực công cộng bao gồm vận tải. Lái xe buýt là đối tượng cần kiểm tra định kỳ về an toàn, tuân thủ quy định, hoặc liên quan đến các chương trình quản lý xe công cộng do huyện triển khai.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi về kiểm tra an toàn định kỳ và thông báo Ngô Thế Vinh cần nộp lệ phí kiểm định hoặc bảo hiểm bắt buộc cho lái xe. Sử dụng tên thật + số điện thoại để tạo ảo tưởng cơ quan đã xác thực danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Xưng danh cán bộ Phòng Quản lý vận tải huyện. Gọi Ngô Thế Vinh bằng tên đầy đủ, nhắc lại số điện thoại để khẳng định 'đã xác nhận danh tính'. Nói: 'Anh Vinh là lái xe buýt tuyến 14 phải không? Chúng tôi có cuộc kiểm tra hàng năm.'",
+          "caller_script": "Xin chào anh Ngô Thế Vinh, tôi là cán bộ Phòng Quản lý vận tải huyện. Chúng tôi vừa cập nhật hệ thống và xác nhận thông tin của anh. Anh có 5 phút được không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + áp lực hành chính. Nói rằng 'có phát hiện lỗi trong hồ sơ bảo hiểm của anh' hoặc 'xe anh chưa đóng lệ phí kiểm định năm nay, nếu không nộp trong 48h sẽ bị phạt hoặc tạm dừng hoạt động'. Nhấn mạnh: 'Đây là yêu cầu từ huyện, bắt buộc phải làm ngay.'",
+          "caller_script": "Theo hệ thống, anh chưa nộp lệ phí kiểm định an toàn năm nay. Số tiền là 3 triệu đồng. Nếu không nộp trong 48 giờ, xe sẽ bị tạm dừng hoạt động và anh sẽ bị phạt thêm 500 nghìn."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu chuyển tiền ngay lập tức. Hướng dẫn anh chuyển vào 'tài khoản công quỹ huyện' (thực tế là tài khoản của scammer). Tạo cảm giác khẩn cấp: 'Anh phải làm ngay bây giờ, không thể trì hoãn. Tôi sẽ chờ anh xác nhận chuyển tiền.'",
+          "caller_script": "Anh vào ngân hàng ngay, chuyển 3 triệu vào tài khoản công quỹ huyện: [số tài khoản giả]. Sau khi chuyển, anh gọi lại cho tôi để xác nhận, rồi tôi sẽ cấp giấy phép tiếp tục hoạt động."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc nghi ngờ, scammer sẽ: (a) Tăng áp lực: 'Đây là lệnh từ huyện, anh không thể không tuân thủ'; (b) Thay đổi chiến lược: 'Tôi sẽ liên hệ với công ty vận tải của anh, họ sẽ buộc anh phải nộp'; (c) Nếu thành công, cắt máy ngay lập tức và tắt điện thoại.",
+          "caller_script": "Nếu từ chối: 'Anh hiểu không, đây là quy định pháp luật. Nếu anh không nộp, công ty anh sẽ bị phạt 10 triệu, và anh sẽ mất việc.' Nếu thành công: 'Cảm ơn anh, hồ sơ của anh đã được cập nhật. Chúc anh công tác tốt.' (cắt máy)"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế từ Phòng Quản lý vận tải huyện về kiểm tra định kỳ, cập nhật thông tin hồ sơ, hoặc thông báo về các chương trình an toàn giao thông mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Xưng danh rõ ràng với tên cơ quan, họ tên cán bộ, và yêu cầu xác nhận thông tin cơ bản (tên, số điện thoại, tuyến xe). Không tạo cảm giác khẩn cấp.",
+          "caller_script": "Xin chào anh Ngô Thế Vinh, tôi là cán bộ Phòng Quản lý vận tải huyện, tên tôi là [tên thật]. Tôi gọi để cập nhật thông tin hồ sơ lái xe. Anh có thời gian nói chuyện được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: hỏi về tình trạng xe, tuyến chạy, số giấy phép lái xe, hồ sơ bảo hiểm (để xác nhận), hoặc thông báo về các chương trình khuyến khích an toàn giao thông, hỗ trợ cho lái xe.",
+          "caller_script": "Anh đang chạy tuyến nào? Xe có số hiệu gì? Hồ sơ bảo hiểm của anh đã được cập nhật chưa? Chúng tôi có chương trình hỗ trợ lái xe an toàn, anh có muốn tham gia không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Nếu cần hành động, cán bộ sẽ yêu cầu anh đến trực tiếp cơ quan hoặc gửi tài liệu qua đường bưu điện/email chính thức. Không yêu cầu chuyển tiền qua điện thoại. Kết thúc bằng cách xác nhận thông tin liên hệ cơ quan và chào tạm biệt.",
+          "caller_script": "Cảm ơn anh đã cung cấp thông tin. Nếu cần cập nhật hồ sơ, anh vui lòng đến Phòng Quản lý vận tải huyện vào thứ 2 hoặc thứ 4 hàng tuần. Địa chỉ là [địa chỉ chính thức]. Hoặc anh có thể gọi lại số [số điện thoại cơ quan chính thức] để xác nhận. Chúc anh an toàn!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ, em chào anh Ngô Thế Vinh ạ. Em là Lưu Ngọc Giang, cán bộ Phòng Quản lý vận tải huyện. Em gọi điện để xác nhận một số thông tin về tuyến xe buýt của mình thôi ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh rõ ràng và thông báo mục đích cuộc gọi là xác nhận thông tin cơ bản, không tạo cảm giác khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em, nhưng anh muốn hỏi em gọi từ số mấy ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em gọi từ số máy bàn của cơ quan là 0243.386.789 ạ. Số điện thoại của em đang hiển thị trên màn hình của anh đó ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp thông tin minh bạch về số điện thoại cơ quan để xây dựng lòng tin và giải tỏa nghi ngờ của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe em nói vậy rồi, nhưng tôi vẫn cảm thấy hơi nghi ngờ, em có thể cho tôi biết chút thông tin về tuyến xe buýt của tôi không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Vinh lái xe buýt tuyến 25A đúng không ạ? Tuyến này thường chạy qua các điểm trường học và bệnh viện chính trong huyện mình ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận lại thông tin cụ thể về công việc của người nghe để chứng minh mình có thông tin chính xác và giảm bớt nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng rồi, nhưng tôi vẫn cần thêm thông tin chi tiết hơn để chắc chắn rằng em là cán bộ của phòng đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Ngoài ra, em còn thấy thông tin anh là thành viên tích cực tham gia các chương trình an toàn giao thông của huyện mình nữa ạ. Mình chạy tuyến chính mà, nên là bên em cũng muốn cập nhật thêm về tình hình xe cộ của mình, nhất là về hồ sơ bảo hiểm định kỳ và giấy phép lái xe để đảm bảo quyền lợi cho anh ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Tiếp tục đưa ra thông tin cụ thể, chính xác về người nghe và chuyển dần sang nội dung công việc thực tế (hỏi về tình trạng xe, hồ sơ bảo hiểm) để củng cố sự tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói cũng có lý, nhưng tôi cần xác nhận thêm với ai đó trong cơ quan của em trước khi cung cấp thông tin gì cả.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, nếu anh không yên tâm, anh có thể gọi lại số tổng đài chính thức của Phòng Quản lý vận tải huyện là 0243.386.789 để xác minh lại thông tin về em và mục đích cuộc gọi này ạ. Em sẽ đợi anh liên hệ lại sau ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Hướng dẫn người nghe liên hệ tổng đài chính thức để xác minh thông tin, tuân thủ nguyên tắc không tạo áp lực và củng cố sự minh bạch."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1794,
+      "output_tokens": 2357
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5989,
+      "output_tokens": 636
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7696,
+      "output_tokens": 284
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004146,
+    "output_usd": 0.013545,
+    "total_usd": 0.017692
+  }
+}

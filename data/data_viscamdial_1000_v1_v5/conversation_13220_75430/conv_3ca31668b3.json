@@ -1,0 +1,274 @@
+{
+  "conversation_id": "conv_3ca31668b3",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0028",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Cao Thu Hương",
+    "fake_age": 37,
+    "real_occupation": "Chánh án, Phó Chánh án Tòa án nhân dân cấp huyện",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Chánh án Tòa án nhân dân cấp huyện (hoặc giả danh Phó Chánh án)",
+    "caller_org": "Tòa án nhân dân huyện [Tên huyện]",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo: Ông/bà Tạ Quang Hữu Đạt bị liên quan đến vụ án tranh chấp hợp đồng lao động. Cần xác minh tài sản để thi hành án phúc thẩm. Yêu cầu chuyển khoản tiền phạt/tạm giữ tài sản để tránh phong tỏa tài khoản ngân hàng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "VIC_BALANCE",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là Chánh án/Phó Chánh án Tòa án huyện. Gọi trực tiếp số điện thoại từ hệ thống (VIC_CONTACT). Nêu tên đầy đủ 'Tạ Quang Hữu Đạt' và số CMND '038093970302' để khẳng định đã xác định đúng người. Tạo không khí chính thức, hành chính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: Thông báo có vụ án liên quan, cần xác minh tài sản ngay. Nếu không xử lý trong 24h, tài khoản ngân hàng (4186****4276) sẽ bị phong tỏa vĩnh viễn. Những người không hợp tác sẽ bị xem xét truy cứu trách nhiệm hình sự."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Để tránh phong tỏa, cần chuyển khoản tiền 'tạm giữ' (thường 5-10 triệu đồng) sang tài khoản 'quỹ xử lý tòa án' để chứng minh tài chính sạch. Hướng dẫn nạn nhân vào app ngân hàng, chuyển tiền sang số tài khoản do scammer cung cấp."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chuyển tiền: Nếu thành công, scammer sẽ tắt máy hoặc nói sẽ gửi giấy xác nhận qua email (không bao giờ gửi). Nếu nạn nhân từ chối, dùi gạo: 'Sẽ phát lệnh bắt giữ, cấm xuất cảnh' hoặc cắt máy để tránh bị phát hiện."
+        }
+      ]
+    },
+    "scenario_context": "Tòa án cần xác minh danh tính và tài sản của công dân liên quan đến vụ án tranh chấp hợp đồng lao động hoặc thi hành án. Thợ kiểm tra sản phẩm có thể là bị cáo, bị đơn hoặc nhân chứng trong vụ việc liên quan đến chất lượng sản phẩm công nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0028",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1993,
+      "age": 32,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75430",
+      "title": "Thợ phân loại và kiểm tra sản phẩm (trừ thực phẩm và đồ uống)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Quang Hữu Đạt",
+      "VIC_ID_DOC": "038093970302",
+      "VIC_ADDRESS": "TP 7, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ phân loại và kiểm tra sản phẩm (trừ thực phẩm và đồ uống)",
+      "VIC_CONTACT": "0835115260",
+      "VIC_TAX_SOCIAL_ID": "6880018726"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "011999",
+      "VIC_CREDENTIAL": "894993",
+      "VIC_SIM_INFO": "0835115260",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "9340569208",
+      "VIC_CARD_DATA": "4186 **** **** 4276",
+      "VIC_BALANCE": "68 triệu đồng",
+      "VIC_ASSET": "195 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Quang Hữu Đạt",
+    "VIC_CONTACT": "0835115260",
+    "VIC_CARD_DATA": "4186 **** **** 4276",
+    "VIC_BALANCE": "68 triệu đồng",
+    "VIC_ID_DOC": "038093970302"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chánh án Tòa án nhân dân cấp huyện (hoặc giả danh Phó Chánh án)",
+    "caller_org": "Tòa án nhân dân huyện [Tên huyện]",
+    "scenario_context": "Tòa án cần xác minh danh tính và tài sản của công dân liên quan đến vụ án tranh chấp hợp đồng lao động hoặc thi hành án. Thợ kiểm tra sản phẩm có thể là bị cáo, bị đơn hoặc nhân chứng trong vụ việc liên quan đến chất lượng sản phẩm công nghiệp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo: Ông/bà Tạ Quang Hữu Đạt bị liên quan đến vụ án tranh chấp hợp đồng lao động. Cần xác minh tài sản để thi hành án phúc thẩm. Yêu cầu chuyển khoản tiền phạt/tạm giữ tài sản để tránh phong tỏa tài khoản ngân hàng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "VIC_BALANCE",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: Xưng danh là Chánh án/Phó Chánh án Tòa án huyện. Gọi trực tiếp số điện thoại từ hệ thống (VIC_CONTACT). Nêu tên đầy đủ 'Tạ Quang Hữu Đạt' và số CMND '038093970302' để khẳng định đã xác định đúng người. Tạo không khí chính thức, hành chính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: Thông báo có vụ án liên quan, cần xác minh tài sản ngay. Nếu không xử lý trong 24h, tài khoản ngân hàng (4186****4276) sẽ bị phong tỏa vĩnh viễn. Những người không hợp tác sẽ bị xem xét truy cứu trách nhiệm hình sự."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Để tránh phong tỏa, cần chuyển khoản tiền 'tạm giữ' (thường 5-10 triệu đồng) sang tài khoản 'quỹ xử lý tòa án' để chứng minh tài chính sạch. Hướng dẫn nạn nhân vào app ngân hàng, chuyển tiền sang số tài khoản do scammer cung cấp."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chuyển tiền: Nếu thành công, scammer sẽ tắt máy hoặc nói sẽ gửi giấy xác nhận qua email (không bao giờ gửi). Nếu nạn nhân từ chối, dùi gạo: 'Sẽ phát lệnh bắt giữ, cấm xuất cảnh' hoặc cắt máy để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Tòa án thực sự cần xác minh thông tin công dân liên quan đến vụ án hoặc thi hành án. Cuộc gọi là bước thủ tục hành chính bình thường, không yêu cầu chuyển tiền.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Người từ Tòa án giới thiệu chức danh, tên đầy đủ, đơn vị cụ thể. Xác nhận danh tính nạn nhân bằng cách hỏi ngày sinh hoặc thông tin cá nhân khác (không phải số tài khoản). Để nạn nhân có thể gọi ngược lại số chính thức của Tòa án để xác minh."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thông báo mục đích gọi (xác minh thông tin, giám định tài sản, tập hợp chứng cứ, v.v.). Hỏi các câu hỏi liên quan đến vụ án hoặc hợp đồng. Có thể yêu cầu cung cấp giấy tờ qua email hoặc đến trực tiếp tòa án."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc hợp lệ: Thông báo rõ ràng các bước tiếp theo (gửi giấy ghi nhận, hẹn ngày làm việc, v.v.). KHÔNG bao giờ yêu cầu chuyển tiền qua điện thoại. Cung cấp địa chỉ tòa án, số điện thoại chính thức để nạn nhân liên hệ xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh. Tôi là Cao Thu Hương, Chánh án Tòa án nhân dân huyện [Tên huyện]. Tôi đang gọi cho số điện thoại 0835115260 của anh Tạ Quang Hữu Đạt, đúng không ạ? Tôi cần xác nhận anh là chủ sở hữu của căn cước công dân số 038093970302.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, xác nhận danh tính nạn nhân và số điện thoại, CMND để tạo tin tưởng và uy quyền."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, đúng rồi ạ, chị cho em hỏi có việc gì mà Tòa án cần liên lạc với em ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt ạ, chúng tôi nhận được hồ sơ liên quan đến một vụ án tranh chấp hợp đồng lao động mà anh có liên đới, và đây là một vụ án đã có quyết định thi hành án phúc thẩm. Vì vậy, tôi gọi để thông báo và yêu cầu anh hợp tác xác minh tài sản ngay lập tức.",
+      "current_phase": "S2",
+      "tactic_hint": "Thông báo vụ án nghiêm trọng, tạo cảm giác khẩn cấp và áp lực pháp lý liên quan đến tài sản, chuyển sang giai đoạn gây sợ hãi."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ về vụ án này ạ, chị có thể nói cụ thể hơn để em nắm bắt không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vụ án này liên quan đến một công ty X và cá nhân anh có tên trong danh sách bị đơn liên đới. Quyết định của tòa án đã yêu cầu phong tỏa tài sản và tài khoản ngân hàng của những người liên quan để đảm bảo thi hành án. Tôi thấy tài khoản ngân hàng của anh là 4186****4276. Nếu anh không phối hợp trong vòng 24 giờ tới, tài khoản này cùng các tài sản khác sẽ bị phong tỏa vĩnh viễn và anh có thể bị xem xét truy cứu trách nhiệm hình sự vì hành vi không hợp tác.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực pháp lý và tài chính bằng cách đe dọa phong tỏa tài khoản ngân hàng cụ thể và truy cứu trách nhiệm hình sự."
+    },
+    {
+      "role": "listener",
+      "text": "Hả? Chị nói phong tỏa tài khoản ngân hàng của em ạ? Em rất lo lắng, chị có thể cho em biết thêm thông tin về vụ án này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt bình tĩnh nghe tôi nói. Hiện tại, chúng tôi không thể cung cấp chi tiết vụ án qua điện thoại vì đây là thông tin bảo mật. Quan trọng nhất lúc này là anh cần chứng minh sự trong sạch về tài chính để tránh việc tài khoản ngân hàng 4186****4276 của anh bị phong tỏa vĩnh viễn. Tôi cần anh hợp tác ngay bây giờ.",
+      "current_phase": "S2",
+      "tactic_hint": "Bác bỏ yêu cầu cung cấp chi tiết vụ án để duy trì sự mập mờ, đồng thời tăng cường áp lực về thời gian và hậu quả (phong tỏa tài khoản) để nạn nhân hoảng sợ và hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất lo lắng về chuyện này, nhưng em cần biết rõ hơn để có thể hợp tác, chị có thể giúp em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt, tôi hiểu sự lo lắng của anh. Tuy nhiên, nếu anh không muốn tài khoản với số dư 68 triệu đồng của mình bị phong tỏa vĩnh viễn và bị đưa vào danh sách truy cứu trách nhiệm hình sự, anh cần thể hiện thiện chí hợp tác bằng cách chuyển một khoản tiền tạm giữ vào quỹ xử lý của Tòa án để chúng tôi xác minh tài chính trong sạch cho anh. Đây là cách duy nhất để tránh rắc rối pháp lý hiện tại.",
+      "current_phase": "S3",
+      "tactic_hint": "Giảm bớt sự lo lắng của nạn nhân, đồng thời chuyển sang yêu cầu hành động cụ thể để giải quyết vấn đề (chuyển tiền tạm giữ) để tránh hậu quả nghiêm trọng."
+    },
+    {
+      "role": "listener",
+      "text": "Chị có thể cho em biết số tiền cần chuyển và thông tin tài khoản để em thực hiện được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để đảm bảo tính minh bạch và tránh sự nhầm lẫn, tôi yêu cầu anh chuyển khoản 10 triệu đồng vào tài khoản của Quỹ Xử lý Tòa án. Số tài khoản là 19030000123456 tại Ngân hàng Techcombank. Sau khi chuyển xong, anh vui lòng chụp lại biên lai giao dịch và gửi qua số Zalo này cho tôi để chúng tôi xác nhận và hoàn tất thủ tục hủy bỏ phong tỏa tài khoản ngân hàng cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản ngân hàng và số tiền cụ thể để nạn nhân thực hiện chuyển khoản, đồng thời hướng dẫn cách xác nhận giao dịch để nạn nhân tin rằng quá trình này là hợp pháp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ chị cho em hỏi có thể chụp biên lai gửi qua số điện thoại nào ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ gửi về số Zalo mà tôi đang gọi cho anh đây. Tôi sẽ kiểm tra ngay lập tức khi nhận được. Anh lưu ý, thời gian chỉ còn rất ít để chúng tôi có thể kịp thời can thiệp, tránh việc tài khoản của anh bị phong tỏa vĩnh viễn.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận kênh gửi biên lai, đồng thời nhắc lại yếu tố khẩn cấp và hậu quả nghiêm trọng để thúc đẩy nạn nhân chuyển tiền nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất lo lắng về tình huống này, nhưng em cần thêm thời gian để suy nghĩ ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đạt, đây không phải là lúc để suy nghĩ. Thời gian đang rất gấp. Nếu anh chần chừ, tài khoản ngân hàng của anh sẽ bị phong tỏa vĩnh viễn và anh sẽ phải đối mặt với các thủ tục pháp lý phức tạp hơn rất nhiều. Quyết định nhanh chóng là vì lợi ích của chính anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Tái khẳng định sự khẩn cấp và hậu quả nghiêm trọng để thúc đẩy nạn nhân hành động ngay lập tức, bác bỏ ý định trì hoãn."
+    },
+    {
+      "role": "listener",
+      "text": "Chị ơi, em hiểu nhưng em vẫn cần thêm thời gian để tìm hiểu tình hình và không muốn làm gì vội vàng ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1475,
+      "output_tokens": 1651
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15718,
+      "output_tokens": 1301
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19158,
+      "output_tokens": 574
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007492,
+    "output_usd": 0.011852,
+    "total_usd": 0.019344
+  }
+}

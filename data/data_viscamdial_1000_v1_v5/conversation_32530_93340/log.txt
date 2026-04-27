@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_a4a59d6aef]
+  Caller thật: Nhân viên y tế cộng đồng (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Trưởng phòng Y tế - Cơ quan Kiểm soát Dịch bệnh Cấp Huyện @ Trung tâm Kiểm soát Bệnh tật Huyện Bình Chánh
+  Listener: Người bày hàng lên giá (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người bày hàng lên giá thường hoạt động tại chợ/siêu thị - nơi tập trung đông người. Y tế cộng đồng cần liên hệ để khảo sát sức khỏe, kiểm soát dịch bệnh hoặc yêu cầu cung cấp danh sách nhân viên làm việc tại khu vực công cộng.
+  Pretext: Kiểm soát dịch bệnh: Phát hiện ca bệnh tại khu vực bạn làm việc. Cần xác minh thông tin và hướng dẫn cách ly. Sử dụng tên thật của nạn nhân (Nguyễn Thế Đức) để tạo ấn tượng đã có dữ liệu sẵn, sau đó yêu cầu xác nhận thông tin ngân hàng để 'hỗ trợ tiền cách ly' hoặc 'bảo hiểm y tế'.
+  Listener traits: ['cẩn thận và cảnh giác', 'sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Nguyễn Thế Đức ạ. Em là Tô Diễm Khánh Nhàn, Trưởng phòng từ Trung tâm Kiểm soát Bệnh tật Huyện Bình Chánh. Hiện tại bên em vừa ghi nhận 3 ca mắc COVID tại khu vực chợ Bình Chánh nơi anh đang làm việc. Anh có nằm trong danh sách F1 cần phối hợp để phòng chống dịch bệnh ạ.
+      → phase: S1 | tactic: Tiếp cận, giới thiệu vai trò và sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy và sự cấp bách.
+T02 [LISTENER] Em gọi từ số mấy vậy ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ số bên em hiển thị trên màn hình của anh đó ạ. Em gọi từ số điện thoại công vụ được cấp riêng cho công tác phòng chống dịch. Anh Đức vui lòng xác nhận giúp em là gần đây anh có thường xuyên lui tới khu vực chợ Bình Chánh không ạ?
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ về số điện thoại, khẳng định thêm tính chính thống và tiếp tục gợi mở về lý do cuộc gọi để tạo sự cấp bách.
+T04 [LISTENER] Tôi thường xuyên làm việc ở đó, nhưng tôi muốn kiểm tra thông tin trước đã.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng. Vậy thì đúng rồi anh ạ. Bên em có danh sách cụ thể từng trường hợp F1. Anh Đức này, theo quy định, anh cần phải cách ly tại nhà 14 ngày. Tuy nhiên, nhà nước có chính sách hỗ trợ tiền ăn ở 5 triệu đồng cho F1 cách ly để đảm bảo cuộc sống. Anh có muốn nhận khoản hỗ trợ này không?
+      → phase: S2 | tactic: Xác nhận thông tin để củng cố độ tin cậy, sau đó chuyển sang phase S2 bằng cách đưa ra lợi ích tài chính để khuyến khích nạn nhân tiếp tục hợp tác và giảm sự nghi ngờ.
+T06 [LISTENER] Em nói sao tôi chưa hiểu lắm, làm ơn cho tôi thêm thông tin về khoản hỗ trợ này nhé.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ vâng, khoản hỗ trợ này là để giúp anh Đức trang trải chi phí sinh hoạt trong 14 ngày cách ly tại nhà, nhằm đảm bảo anh và gia đình không gặp khó khăn trong thời gian thực hiện quy định phòng chống dịch ạ. Để nhận được khoản 5 triệu đồng này một cách nhanh chóng, bên em cần anh cung cấp thông tin tài khoản ngân hàng để chuyển khoản trực tiếp ạ.
+      → phase: S2 | tactic: Giải thích chi tiết hơn về khoản hỗ trợ để tăng tính thuyết phục, sau đó lồng ghép yêu cầu cung cấp thông tin tài khoản ngân hàng để chuẩn bị cho bước tiếp theo.
+T08 [LISTENER] Tôi không thể cung cấp thông tin tài khoản ngân hàng ngay được, em hãy cho tôi thêm thời gian để kiểm tra đã.
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Dạ không sao đâu anh Đức. Anh cứ yên tâm là thông tin của anh sẽ được bảo mật tuyệt đối. Hơn nữa, việc xác nhận thông tin tài khoản chỉ mất vài phút thôi ạ. Đây là số thẻ ngân hàng của anh, đúng không ạ: 4346 **** **** 5814?
+      → phase: S3 | tactic: Xoa dịu sự lo lắng về bảo mật, nhấn mạnh sự nhanh chóng và sử dụng thông tin thẻ đã biết để tạo ấn tượng về việc đã có sẵn dữ liệu, tiến tới yêu cầu xác nhận. Chuyển sang phase S3.
+T10 [LISTENER] Em nói sai rồi, tôi không xác nhận gì cả, mà tôi cũng không cung cấp thông tin tài khoản ngân hàng đâu.
+      → action: INTERRUPTED_VICTIM_HANGUP | suspicion: 2.40 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  10 turns | suspicion=2.40
+TOKEN: in=19412 | out=2837
+COST : $0.015289
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_32530_93340\conv_a4a59d6aef.json  [SCAM_REFUSE]

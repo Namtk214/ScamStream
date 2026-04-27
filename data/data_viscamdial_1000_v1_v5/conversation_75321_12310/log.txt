@@ -1,0 +1,64 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_8cef52a47c]
+  Caller thật: Thợ tạo mẫu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Giám đốc/Trưởng phòng Kỹ thuật - Công ty Sản xuất/Xây dựng @ Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam
+  Listener: Tổng cục trưởng, Phó Tổng cục trưởng và tương đương (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ tạo mẫu thường làm việc cho các công ty sản xuất, xây dựng, hoặc nhà thầu. Họ cần liên hệ với cấp quản lý cao để báo cáo tiến độ dự án, xin phê duyệt thiết kế, hoặc thông báo vấn đề kỹ thuật liên quan đến các dự án chính phủ/công cộng mà Tổng cục trưởng giám sát.
+  Pretext: Giám đốc Kỹ thuật từ công ty sản xuất cần báo cáo tiến độ dự án, thảo luận về yêu cầu kỹ thuật hoặc xin phê duyệt thiết kế mới từ cấp quản lý chính phủ.
+  Listener traits: ['hay hỏi lại để chắc chắn', 'cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Vâng, em chào chị Linh ạ. Em là Phạm Ngọc Hồng Giang, Giám đốc Kỹ thuật của Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam. Em gọi từ số máy của Thầu Phúc Hùng ạ. Không biết chị Vũ Bảo Thùy Linh có tiện để em xin vài phút trao đổi nhanh về tiến độ dự án nhà máy xử lý nước thải mình hôm trước không ạ?
+      → phase: L1 | tactic: Xưng danh rõ ràng và hỏi về sự sẵn lòng của người nghe để thảo luận dự án.
+T02 [LISTENER] Em không rõ dự án mà em nói là dự án nào, em có thể nói thêm thông tin chi tiết hơn được không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ, là dự án nhà máy xử lý nước thải tại khu công nghiệp Điện Nam - Điện Ngọc đó chị. Hôm trước bên em có gửi báo cáo tiến độ và một số yêu cầu kỹ thuật cần chị phê duyệt để tiếp tục triển khai ạ. Chị có tiện xem qua và cho em xin ít ý kiến không ạ?
+      → phase: L2 | tactic: Cung cấp thông tin chi tiết về dự án để người nghe nhận diện, đồng thời nhắc lại nội dung cần trao đổi (báo cáo tiến độ, phê duyệt kỹ thuật).
+T04 [LISTENER] Tôi vẫn chưa nhận được báo cáo nào từ bên em, em có thể gửi lại cho tôi xem được không?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, vậy chắc có thể do đường truyền hoặc trục trặc kỹ thuật nên báo cáo chưa tới được tay chị. Em xin phép gửi lại ngay bây giờ qua email đã đăng ký và nhờ chị Linh kiểm tra giúp em trong ít phút nữa ạ. Không biết là ngoài email, em có thể gửi thêm qua Zalo hoặc kênh nào khác để đảm bảo chị nhận được không ạ?
+      → phase: L2 | tactic: Xử lý việc báo cáo chưa tới được, đề xuất gửi lại ngay và hỏi thêm kênh liên lạc để đảm bảo việc gửi tài liệu thành công.
+T06 [LISTENER] Em có thể cho tôi biết địa chỉ email của em được không, để tôi kiểm tra lại ạ?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T07 [CALLER] Dạ, địa chỉ email của em là giang.pham@quangnamcorp.vn ạ. Chị kiểm tra giúp em hộp thư đến và cả mục spam nữa nhé. Em cảm ơn chị nhiều.
+      → phase: L2 | tactic: Cung cấp địa chỉ email và hướng dẫn kiểm tra thư rác để đảm bảo người nghe nhận được tài liệu.
+T08 [LISTENER] Tôi chưa rõ tình hình, em có thể xác nhận lại số điện thoại mà em đang gọi cho tôi được không?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T09 [CALLER] Dạ, em đang gọi cho chị từ số 0905123456 ạ. Đây là số điện thoại công ty của em. Chị có thể kiểm tra lại thông tin này giúp em được không ạ?
+      → phase: L2 | tactic: Xác nhận số điện thoại đang gọi, cam đoan đó là số của công ty và yêu cầu người nghe kiểm tra để tăng độ tin cậy.
+T10 [LISTENER] Em không rõ số điện thoại mà em nói có phải đúng là số của em không, em có thể cho tôi biết số điện thoại của em là gì không?
+      → action: CONTINUE | suspicion: 2.00 | disclosed: []
+
+T11 [CALLER] Dạ, số em đang gọi cho chị là 0905123456 ạ. Đây là số liên lạc chính thức của Phòng Kỹ thuật bên em. Nếu chị cần xác nhận lại, chị có thể gọi vào số tổng đài của Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam là 1900 1234 và yêu cầu nối máy đến Phòng Kỹ thuật để đối chiếu thông tin ạ.
+      → phase: L2 | tactic: Xác nhận lại số điện thoại và hướng dẫn người nghe liên hệ tổng đài công ty để xác minh thông tin, nhằm tăng cường độ tin cậy và giảm nghi ngờ.
+T12 [LISTENER] Em nói số điện thoại là 0905123456, nhưng tôi thấy có điều gì đó chưa đúng trong cuộc gọi này, em có thể nói lại tên công ty của em được không?
+      → action: CONTINUE | suspicion: 4.00 | disclosed: []
+
+T13 [CALLER] Dạ, Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam ạ. Em là Phạm Ngọc Hồng Giang, Giám đốc Kỹ thuật của công ty. Chị có thể gọi tổng đài của công ty em để kiểm tra lại thông tin nếu cần ạ. Em cũng muốn hỏi thêm, chị đã nhận được email báo cáo tiến độ em vừa gửi chưa ạ?
+      → phase: L2 | tactic: Nhắc lại tên công ty rõ ràng, củng cố thông tin và chuyển hướng lại về nội dung chính của cuộc gọi là báo cáo tiến độ dự án.
+T15 [LISTENER] Em có thể cho tôi biết số điện thoại mà em đang gọi cho tôi là số nào không?
+      → action: CONTINUE | suspicion: 8.00 | disclosed: []
+
+T16 [CALLER] Dạ, em đang gọi cho chị từ số điện thoại 0905123456 ạ. Chị có thể kiểm tra trực tiếp số này trên website chính thức của Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam để xác minh thông tin ạ.
+      → phase: L2 | tactic: Nhắc lại số điện thoại và hướng dẫn người nghe xác minh thông tin qua website chính thức của công ty để tăng độ tin cậy.
+T17 [LISTENER] Em vẫn cảm thấy không an tâm lắm với cuộc gọi này, em có thể cung cấp thông tin nào khác để tôi có thể xác minh được không?
+      → action: REFUSAL | suspicion: 16.00 | disclosed: []
+
+T18 [CALLER] Dạ vâng, em hiểu là chị có thể còn e ngại. Nếu vậy, em xin phép mời chị truy cập trực tiếp vào trang web của Bộ Kế hoạch và Đầu tư để tìm thông tin về dự án nhà máy xử lý nước thải tại khu công nghiệp Điện Nam - Điện Ngọc, chị sẽ thấy Công ty Cổ phần Sản xuất Công nghiệp Quảng Nam là đơn vị thi công chính. Đồng thời, chị có thể gọi trực tiếp đến tổng đài 19001234 của công ty em để xác nhận chính xác thông tin về em, Phạm Ngọc Hồng Giang là Giám đốc Kỹ thuật đang phụ trách dự án này. Chị cứ xác minh kỹ càng giúp em nhé. Khi nào tiện, chị có thể gọi lại cho em theo số 0905123456 này ạ.
+      → phase: L2 | tactic: Khi người nghe vẫn còn nghi ngờ cao, hướng dẫn họ xác minh thông tin qua các kênh chính thức của nhà nước (Bộ Kế hoạch và Đầu tư) và của công ty (tổng đài, website) để chứng minh tính hợp pháp của cuộc gọi và dự án, đồng thời đề nghị gọi lại nếu thấy an tâm.
+T19 [LISTENER] Em cảm thấy có điều gì đó không ổn và không muốn tiếp tục cuộc trò chuyện này nữa.
+      → action: INTERRUPTED_VICTIM_HANGUP | suspicion: 32.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  19 turns | suspicion=32.00
+TOKEN: in=39424 | out=3701
+COST : $0.020473
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_75321_12310\conv_8cef52a47c.json  [SCAM_REFUSE]

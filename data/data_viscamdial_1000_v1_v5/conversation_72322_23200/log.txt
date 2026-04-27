@@ -1,0 +1,42 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_5a53a748ce]
+  Caller thật: Thợ sửa chữa động cơ máy bay (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên quản lý an toàn và kiểm định kỹ thuật - Cơ quan hàng không dân dụng @ Cục Hàng không Dân dụng Việt Nam (CAAV) - Phòng Kiểm định An toàn
+  Listener: Giáo viên trung cấp (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ sửa chữa động cơ máy bay thường phải cung cấp bằng cấp, chứng chỉ và thông tin liên lạc cho cơ quan quản lý hàng không. Giáo viên trung cấp có thể là người dạy về kỹ thuật hàng không hoặc được liên hệ để xác minh thông tin nhân viên kỹ thuật (vai trò người thân/tham chiếu).
+  Pretext: Cơ quan hàng không liên hệ để xác minh thông tin liên lạc trong hồ sơ kỹ thuật của nhân viên kỹ thuật, hoặc để cập nhật dữ liệu hành chính định kỳ
+  Listener traits: ['lo lắng cho con cái', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Nhàn, em là Diễm Giang, cán bộ từ Cục Hàng không dân dụng Việt Nam đây ạ. Em đang kiểm tra thông tin trong hồ sơ kỹ thuật hàng không. Chị có quen anh Nguyễn Văn A không ạ? Em muốn xác minh thông tin liên lạc của anh ấy.
+      → phase: L1 | tactic: Tiếp cận rõ ràng, giới thiệu bản thân và mục đích cuộc gọi, xác định mối quan hệ với người cần xác minh.
+T02 [LISTENER] Dạ, tôi có biết anh Nguyễn Văn A, nhưng không hiểu tại sao em lại cần xác minh thông tin của anh ấy ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, theo hồ sơ của Cục Hàng không dân dụng Việt Nam, anh ấy có để lại liên hệ của chị ạ. Em chỉ cần xác nhận lại xem anh ấy còn làm việc trong ngành hàng không không, hoặc nếu được, chị có thể cung cấp số liên lạc chính xác của anh ấy giúp em được không ạ?
+      → phase: L2 | tactic: Trao đổi nội dung công việc, giải thích lý do liên hệ và yêu cầu cung cấp thông tin cần thiết.
+T04 [LISTENER] Em có thể cho tôi biết thêm thông tin về việc xác minh này không? Tôi lo lắng về việc bảo mật thông tin cá nhân.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ chị yên tâm, đây là cuộc gọi định kỳ để cập nhật hồ sơ kỹ thuật thôi ạ, không liên quan đến vấn đề bảo mật thông tin cá nhân của chị đâu. Bên em chỉ cần xác nhận thông tin về anh A để đảm bảo hồ sơ của người lao động được chính xác thôi ạ. Chị có thể cho em số điện thoại mới nhất của anh ấy được không ạ?
+      → phase: L2 | tactic: Trấn an người nghe về vấn đề bảo mật thông tin, khẳng định mục đích rõ ràng và nhắc lại yêu cầu thông tin.
+T06 [LISTENER] Nhưng tôi vẫn thấy hơi nghi ngờ, không biết có thể kiểm tra thông tin của Cục Hàng không Dân dụng Việt Nam ở đâu không ạ?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ, nếu chị muốn kiểm tra thông tin về Cục Hàng không dân dụng Việt Nam, chị có thể gọi trực tiếp đến tổng đài chính thức của Cục. Số điện thoại là 024 3827 3014 ạ. Chị có thể hỏi các thông tin liên quan đến việc xác minh hồ sơ kỹ thuật hàng không. Em tin là tổng đài sẽ giải đáp được các thắc mắc của chị.
+      → phase: L2 | tactic: Hướng dẫn người nghe xác minh thông tin qua kênh chính thức của tổ chức để tăng độ tin cậy và giải tỏa nghi ngờ.
+T08 [LISTENER] Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn cần thời gian để suy nghĩ trước khi cung cấp số điện thoại của anh A.
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+T09 [CALLER] Dạ vâng, không sao ạ. Em rất cảm ơn chị đã dành thời gian trao đổi. Nếu chị cần thêm bất kỳ thông tin nào hoặc muốn xác nhận lại, chị cứ liên hệ lại theo số tổng đài em đã cung cấp nhé. Chúc chị một ngày tốt lành ạ.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự khi người nghe từ chối cung cấp thông tin, đồng thời nhắc lại kênh xác minh chính thức.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  9 turns | suspicion=1.20
+TOKEN: in=16117 | out=2557
+COST : $0.014002
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_72322_23200\conv_5a53a748ce.json  [CALLER_END]

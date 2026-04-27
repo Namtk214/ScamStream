@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_b2de561233]
+  Caller thật: Ủy viên cấp tỉnh (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Caller đóng vai: Phó Chủ tịch UBND Tỉnh / Trưởng Ban Nội chính Tỉnh ủy @ Văn phòng Tỉnh ủy - Ban Nội chính Tỉnh ủy Bình Dương
+  Listener: Chủ tịch Quốc hội, Phó Chủ tịch Quốc hội, Ủy viên thường vụ Quốc hội (Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Ủy viên cấp tỉnh có trách nhiệm giám sát, báo cáo công tác kỷ luật và kiểm tra tư cách đạo đức của các cán bộ cấp cao. Chủ tịch/Phó Chủ tịch Quốc hội là những vị trí yêu cầu kiểm tra nền tảng chính trị, tài chính định kỳ. Cuộc gọi từ cấp tỉnh để 'xác minh thông tin' hoặc 'thực hiện kiểm tra nội bộ' là hoàn toàn hợp lý.
+  Pretext: Xác minh tài sản, kiểm tra tuyên bố tài chính hàng năm và xử lý vi phạm kỷ luật tiềm ẩn của cán bộ cấp cao. Scammer sẽ khẳng định phát hiện 'bất thường' trong hồ sơ của nạn nhân hoặc liên quan đến 'quỹ bí mật' cần làm rõ.
+  Listener traits: ['lo lắng hay bận tâm', 'nóng tính dễ cáu']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Trương Đức Sơn, tôi là Hoàng Công Minh Bình, Phó Chủ tịch UBND Tỉnh kiêm Trưởng Ban Nội chính Tỉnh ủy Bình Dương. Tôi gọi để xác nhận anh là chủ sở hữu của căn hộ tại TP 7, Bình Dương và có số CCCD là 074200178082, đúng không?
+      → phase: S1 | tactic: Xưng danh và xác nhận thông tin cá nhân của nạn nhân để tạo niềm tin và uy quyền.
+T02 [LISTENER] Em nghe anh nói rồi, nhưng em muốn hỏi thêm một chút về lý do anh gọi ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, tôi gọi để thông báo về việc chúng tôi phát hiện một giao dịch bất thường lên đến 2.5 tỷ VND có liên quan đến tài khoản của anh. Đây là một phần trong đợt kiểm tra nội bộ theo yêu cầu của Trung ương về phòng chống tham nhũng. Chúng tôi cần anh xác minh ngay lập tức.
+      → phase: S2 | tactic: Giới thiệu 'vấn đề' (giao dịch bất thường), tạo áp lực về số tiền lớn và liên kết với cơ quan cấp cao để tăng mức độ nghiêm trọng và khẩn cấp.
+T04 [LISTENER] Em không biết giao dịch này xảy ra như thế nào, nhưng em cảm thấy rất lo lắng ạ.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Tôi hiểu anh lo lắng, nhưng chúng tôi cần anh hợp tác ngay. Nếu không xác minh trong 2 giờ tới, chúng tôi buộc phải báo cáo lên Trung ương và điều này chắc chắn sẽ ảnh hưởng nghiêm trọng đến địa vị chính trị cũng như sự nghiệp của anh.
+      → phase: S2 | tactic: Tăng cường áp lực về hậu quả nghiêm trọng nếu không hợp tác, tạo cảm giác khẩn cấp và đe dọa đến sự nghiệp của nạn nhân.
+T06 [LISTENER] Em hiểu nhưng em cần kiểm tra kỹ lưỡng trước khi xác nhận điều gì đó lớn như vậy ạ.
+      → action: REFUSAL | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Việc kiểm tra kỹ lưỡng là trách nhiệm của chúng tôi, không phải của anh. Trách nhiệm của anh bây giờ là phối hợp cung cấp các thông tin cần thiết để chúng tôi hoàn tất xác minh, tránh việc sự việc đi xa ngoài tầm kiểm soát và gây tiếng xấu cho anh.
+      → phase: S2 | tactic: Phủ nhận yêu cầu của nạn nhân, nhấn mạnh quyền hạn của mình và mục tiêu là 'hoàn tất xác minh' để tránh 'tiếng xấu', tiếp tục gây áp lực tinh thần.
+T08 [LISTENER] Em không đồng ý với cách làm việc này, anh không thể ép em cung cấp thông tin khi chưa rõ ràng mọi chuyện ạ.
+      → action: REFUSAL | suspicion: 1.20 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=1.20
+TOKEN: in=15171 | out=3318
+COST : $0.017808
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_15140_11110\conv_b2de561233.json  [SCAM_REFUSE]

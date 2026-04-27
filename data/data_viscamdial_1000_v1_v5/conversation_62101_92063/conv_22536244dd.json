@@ -1,0 +1,250 @@
+{
+  "conversation_id": "conv_22536244dd",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0033",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phan Hồng Giang",
+    "fake_age": 48,
+    "real_occupation": "Lao động ươm giống cây lâm nghiệp",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên bán hàng / Tư vấn viên cung cấp giống cây lâm nghiệp và vật tư nông nghiệp",
+    "caller_org": "Công ty cung cấp giống cây và vật tư lâm nghiệp / HTX Lâm sản",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để giới thiệu chương trình hỗ trợ vay vốn 'ưu đãi' cho lao động nông nghiệp ven biển — lợi suất 0%, có sẵn tiền, chỉ cần xác nhận tài khoản. Sử dụng tên đầy đủ (Tạ Khánh Lan) và địa chỉ (Huyện 4, Long An) để tạo ảo tưởng đã có hồ sơ sẵn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính tin cậy: 'Chào chị Lan, tôi là Minh từ HTX Lâm sản Đồng Tháp. Tôi có hồ sơ của chị ở đây, sống tại Huyện 4, Long An phải không? Tôi gọi để thông báo chị được lựa chọn vào chương trình hỗ trợ vay vốn ưu đãi cho bà con lao động nông nghiệp.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý cơ hội + khẩn cấp: 'Chương trình này chỉ còn 3 ngày nữa, lãi suất 0%, vốn tối đa 100 triệu. Chị có thể dùng để mua thiết bị, mở rộng sản xuất. Chị Lan hiện có khoảng 36 triệu phải không? (nhắc lại số dư gây ấn tượng biết rõ) — với vốn vay thêm sẽ rất lợi.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động xác nhận: 'Để xác nhận danh tính, chị cần chuyển 2 triệu tiền thẩm định hồ sơ vào tài khoản tôi. Sau đó tiền sẽ hoàn lại và cộng vào vốn vay. Chị có thể chuyển được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu chuyển tiền thành công: 'Cảm ơn chị, hồ sơ đã được xác nhận. Tiền vay sẽ về tài khoản trong 24h. Chị kiểm tra lại số điện thoại để nhận OTP xác nhận.' (nếu nạn nhân hỏi thêm hoặc từ chối, scammer sẽ nói 'hết hạn', cắt máy hoặc đổi lý do)."
+        }
+      ]
+    },
+    "scenario_context": "Người làm lâm nghiệp cần tiếp cận các cộng đồng lao động nông nghiệp ven biển (nuôi trồng thủy sản, canh tác lúa muối) để bán sản phẩm bổ sung (giống cây chắn gió, che nắng, phòng chống mặn) hoặc khuyến khích đầu tư vào các dự án bổ trợ. Gọi điện để tìm kiếm khách hàng tiềm năng là hành động tự nhiên trong ngành."
+  },
+  "listener_card": {
+    "listener_id": "lis_0033",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1965,
+      "age": 60,
+      "province": "Long An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "92063",
+      "title": "Lao động khai thác thủy sản trong vùng biển Việt Nam",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tạ Khánh Lan",
+      "VIC_ID_DOC": "080165652609",
+      "VIC_ADDRESS": "Huyện 4, Long An",
+      "VIC_EMPLOYMENT": "Lao động khai thác thủy sản trong vùng biển Việt Nam",
+      "VIC_CONTACT": "0844652013",
+      "VIC_TAX_SOCIAL_ID": "6163954062"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "5402",
+      "VIC_CREDENTIAL": "6485",
+      "VIC_SIM_INFO": "0844652013",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3193748443277",
+      "VIC_CARD_DATA": "4822 **** **** 3846",
+      "VIC_BALANCE": "36 triệu đồng",
+      "VIC_ASSET": "8 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tạ Khánh Lan",
+    "VIC_CONTACT": "0844652013",
+    "VIC_BALANCE": "36 triệu đồng",
+    "VIC_ADDRESS": "Huyện 4, Long An",
+    "LOCATION": "Long An"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán hàng / Tư vấn viên cung cấp giống cây lâm nghiệp và vật tư nông nghiệp",
+    "caller_org": "Công ty cung cấp giống cây và vật tư lâm nghiệp / HTX Lâm sản",
+    "scenario_context": "Người làm lâm nghiệp cần tiếp cận các cộng đồng lao động nông nghiệp ven biển (nuôi trồng thủy sản, canh tác lúa muối) để bán sản phẩm bổ sung (giống cây chắn gió, che nắng, phòng chống mặn) hoặc khuyến khích đầu tư vào các dự án bổ trợ. Gọi điện để tìm kiếm khách hàng tiềm năng là hành động tự nhiên trong ngành.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để giới thiệu chương trình hỗ trợ vay vốn 'ưu đãi' cho lao động nông nghiệp ven biển — lợi suất 0%, có sẵn tiền, chỉ cần xác nhận tài khoản. Sử dụng tên đầy đủ (Tạ Khánh Lan) và địa chỉ (Huyện 4, Long An) để tạo ảo tưởng đã có hồ sơ sẵn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với danh tính tin cậy: 'Chào chị Lan, tôi là Minh từ HTX Lâm sản Đồng Tháp. Tôi có hồ sơ của chị ở đây, sống tại Huyện 4, Long An phải không? Tôi gọi để thông báo chị được lựa chọn vào chương trình hỗ trợ vay vốn ưu đãi cho bà con lao động nông nghiệp.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý cơ hội + khẩn cấp: 'Chương trình này chỉ còn 3 ngày nữa, lãi suất 0%, vốn tối đa 100 triệu. Chị có thể dùng để mua thiết bị, mở rộng sản xuất. Chị Lan hiện có khoảng 36 triệu phải không? (nhắc lại số dư gây ấn tượng biết rõ) — với vốn vay thêm sẽ rất lợi.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động xác nhận: 'Để xác nhận danh tính, chị cần chuyển 2 triệu tiền thẩm định hồ sơ vào tài khoản tôi. Sau đó tiền sẽ hoàn lại và cộng vào vốn vay. Chị có thể chuyển được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu chuyển tiền thành công: 'Cảm ơn chị, hồ sơ đã được xác nhận. Tiền vay sẽ về tài khoản trong 24h. Chị kiểm tra lại số điện thoại để nhận OTP xác nhận.' (nếu nạn nhân hỏi thêm hoặc từ chối, scammer sẽ nói 'hết hạn', cắt máy hoặc đổi lý do)."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Giới thiệu chương trình bán giống cây chắn gió, cây che nắng, hoặc vật tư phòng chống mặn cho vùng nuôi trồng thủy sản ven biển. Hoặc thông báo về khóa đào tạo kỹ thuật lâm nghiệp bổ trợ cho nông dân.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận rõ ràng: 'Chào chị, tôi là Minh từ HTX Lâm sản Đồng Tháp. Tôi gọi để giới thiệu giống cây chắn gió chất lượng cao cho khu vực Long An. Chị có quan tâm không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung cụ thể: 'Giống cây này rất phù hợp cho vùng nuôi tôm, cá — chắn gió, giảm mặn, tăng lợi suất. Giá ưu đãi cho đơn hàng từ 1000 cây trở lên. Chị có ao nuôi bao nhiêu hecta? Chúng tôi có thể gửi mẫu miễn phí để chị xem.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết luận: 'Nếu chị quan tâm, gửi địa chỉ chi tiết, tôi sẽ gửi bảng giá và mẫu cây. Nếu không, cảm ơn chị đã nghe. Có gì cần tư vấn, gọi số này nhé.' (lưu lại contact hợp lệp để follow-up sau)."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Lan. Em là Giang từ HTX Lâm sản Đồng Tháp đây ạ. Em có hồ sơ của chị ở đây, chị là Tạ Khánh Lan, hiện đang sống tại Huyện 4, Long An có đúng không ạ? Em gọi để thông báo chị được lựa chọn vào chương trình hỗ trợ vay vốn ưu đãi cho bà con lao động nông nghiệp ven biển ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và tổ chức giả mạo, xác nhận thông tin nạn nhân để tạo tin cậy và sự quen thuộc, giới thiệu chương trình vay vốn ưu đãi."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng rồi, tôi là Tạ Khánh Lan và đang sống tại Huyện 4, Long An.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị đã xác nhận. Như em đã thông báo, chị được xét duyệt vào chương trình hỗ trợ vốn vay đặc biệt cho nông dân ven biển, với lãi suất 0% và có thể vay đến 100 triệu đồng. Chương trình này chỉ còn 3 ngày nữa thôi ạ. Em thấy trong hồ sơ chị Lan hiện có khoảng 36 triệu đồng, đúng không ạ? Nếu có thêm khoản vay này thì rất có lợi cho việc mở rộng sản xuất của chị đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý cơ hội và khẩn cấp, nhắc lại thông tin số dư tài khoản để tạo ấn tượng biết rõ về nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Thế nhưng em ơi, tôi cần kiểm tra thêm thông tin xem chương trình này có thật không đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Lan ơi, thông tin này là chính xác đó ạ. Chương trình này là của hợp tác xã mình liên kết với ngân hàng nông nghiệp. Nếu không tin thì làm sao bên em có thông tin chi tiết về chị, thậm chí cả số dư tài khoản của chị được ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách khẳng định tính xác thực của chương trình và dùng thông tin đã biết về nạn nhân (số dư tài khoản) làm bằng chứng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy tôi cũng thấy nghi ngờ, nhưng mà nếu thật thì tôi cũng muốn biết thêm thông tin để có thể quyết định cho việc vay này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em nói rõ hơn cho chị hiểu ạ. Chương trình này là hỗ trợ để bà con mình có thêm vốn đầu tư vào sản xuất, mua sắm vật tư, trang thiết bị. Đặc biệt là không cần thế chấp gì đâu ạ. Và như em đã nói, lãi suất là 0% thôi. Chị thấy có lợi không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thêm chi tiết về lợi ích của chương trình vay vốn 0% lãi suất và không cần thế chấp để giảm bớt nghi ngờ và tăng sự hấp dẫn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cũng thấy có lợi thật, nhưng em có thể cho tôi biết thêm điều kiện gì để được vay không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, điều kiện rất đơn giản thôi ạ. Vì đây là chương trình ưu tiên cho bà con nông nghiệp ven biển, đặc biệt là những người có uy tín trong vùng như chị Lan, nên chỉ cần chị xác nhận danh tính và chuyển 2 triệu đồng tiền thẩm định hồ sơ thôi ạ. Số tiền này sẽ được hoàn lại ngay và cộng vào vốn vay của chị sau khi hồ sơ được duyệt đó ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động xác nhận bằng cách chuyển tiền thẩm định hồ sơ, đồng thời nhấn mạnh số tiền sẽ được hoàn lại và cộng vào vốn vay để giảm sự đề phòng."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi thấy có điều gì đó không ổn, sao tôi lại phải chuyển tiền trước khi vay vốn được nhỉ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Lan ơi, đây là quy trình bắt buộc của bên em để xác minh thông tin và đảm bảo chị là người thật sự có nhu cầu vay vốn. Bên em cần một khoản phí nhỏ để xử lý hồ sơ ban đầu thôi ạ. Khoản tiền này sẽ được hoàn lại và cộng vào tổng số tiền vay của chị ngay khi hồ sơ được duyệt. Chị cứ yên tâm ạ, chứ nếu bên em không kiểm tra thì sẽ có nhiều trường hợp trục lợi từ chương trình này lắm.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, giải thích lý do yêu cầu chuyển tiền là một quy trình bắt buộc hợp lý và nhấn mạnh việc hoàn tiền, đồng thời cảnh báo về việc 'trục lợi' nếu không thực hiện."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ thông cảm, nhưng tôi vẫn không thấy thuyết phục, tôi sẽ kiểm tra lại thông tin trước đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1871,
+      "output_tokens": 1716
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 10104,
+      "output_tokens": 966
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13329,
+      "output_tokens": 417
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005891,
+    "output_usd": 0.011245,
+    "total_usd": 0.017136
+  }
+}

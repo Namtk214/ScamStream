@@ -1,0 +1,109 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_2bbe6f9a38]
+  Caller thật: Người ghi chép thuê và người làm các công việc có liên quan (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên hành chính - Phòng Hồ sơ & Giấy tờ y tế @ Bệnh viện Nhi đồng hoặc Trung tâm Y tế quận/huyện
+  Listener: Bác sỹ nhi khoa (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Người ghi chép thuê thường làm việc tại các cơ sở y tế, bệnh viện, phòng khám để xử lý hồ sơ bệnh nhân, giấy tờ hành chính. Họ có lý do tự nhiên để gọi cho các bác sỹ để xác nhận thông tin, cập nhật hồ sơ, hoặc thông báo các vấn đề hành chính liên quan đến bệnh nhân.
+  Pretext: Xưng là nhân viên hành chính từ bệnh viện, gọi để 'xác minh thông tin hồ sơ' hoặc 'cập nhật hệ thống quản lý bệnh nhân'. Sử dụng VIC_FULLNAME, VIC_ID_DOC và VIC_TAX_SOCIAL_ID để tạo ảo tưởng đã có thông tin sẵn trong hệ thống.
+  Listener traits: ['nghi ngờ nhưng lịch sự', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, em chào anh Bùi Thế Đức ạ. Em là Hoàng Thanh Trang, nhân viên hành chính từ Bệnh viện Nhi Đồng. Em thấy bệnh viện mình đang cập nhật lại hệ thống hồ sơ bệnh nhân và bảo hiểm y tế. Em đang cầm hồ sơ của anh với số căn cước công dân là 001065189399, không biết anh có thể xác nhận lại một số thông tin giúp em được không ạ?
+      → phase: S1 | tactic: Giới thiệu bản thân, mục đích cuộc gọi và sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy.
+T02 [LISTENER] Em nói rõ hơn về việc cập nhật hồ sơ đi, tôi chưa hiểu lắm.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, thưa anh Bùi Thế Đức. Hiện tại là Bệnh viện Nhi Đồng đang thực hiện việc đồng bộ dữ liệu bệnh nhân từ các phòng ban, đặc biệt là thông tin bảo hiểm y tế với Bộ Y tế để đảm bảo quyền lợi khám chữa bệnh của người dân. Vì vậy, chúng em cần xác minh lại một số thông tin cơ bản để hoàn tất hồ sơ điện tử ạ.
+      → phase: S1 | tactic: Giải thích rõ hơn về quy trình cập nhật hệ thống để tăng cường sự minh bạch, củng cố lòng tin ban đầu.
+T04 [LISTENER] Tôi nghe em nói rồi, nhưng việc này có cần mã OTP hay thông tin gì khác không ạ?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ, hiện tại thì chưa anh ạ. Bây giờ em chỉ cần anh xác nhận xem số điện thoại 0351818994 này có phải số chính chủ của anh đang dùng không thôi ạ.
+      → phase: S1 | tactic: Xoa dịu sự nghi ngờ về OTP/thông tin nhạy cảm, chỉ yêu cầu xác nhận thông tin đã biết để xây dựng lòng tin.
+T06 [LISTENER] Số điện thoại này là của tôi, nhưng em cho tôi biết thêm lý do vì sao cần xác nhận nhé.
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T07 [CALLER] Dạ, vì việc xác thực hồ sơ BHYT bây giờ cần phải liên kết với số điện thoại chính chủ của chủ thẻ, để sau này khi anh đi khám chữa bệnh, thông tin sẽ được cập nhật tự động và nhanh chóng hơn, không cần phải khai báo nhiều lần anh ạ. Đây là quy định mới của Bộ Y tế để đồng bộ toàn bộ dữ liệu.
+      → phase: S1 | tactic: Giải thích lý do cần xác nhận số điện thoại một cách hợp lý, nhấn mạnh lợi ích cho nạn nhân và đưa ra quy định của Bộ Y tế để tăng tính hợp pháp, từ đó giảm nghi ngờ.
+T08 [LISTENER] Em nói vậy tôi cũng hiểu hơn rồi, nhưng tôi vẫn thấy cần phải cẩn thận, liệu có cách nào xác nhận thêm về quy trình này không ạ?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T09 [CALLER] Dạ vâng, em hiểu sự cẩn trọng của anh. Hiện tại thì quy trình này là do Bệnh viện Nhi Đồng thực hiện theo chỉ đạo của Bộ Y tế để đảm bảo quyền lợi khám chữa bệnh của người dân và tránh sai sót trong hồ sơ ạ. Tất cả cán bộ y tế đang được yêu cầu cập nhật để đưa vào hệ thống quản lý bệnh nhân điện tử. Việc này cũng rất gấp vì cuối tuần là hệ thống sẽ khóa để chốt số liệu anh ạ.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ, nhấn mạnh uy tín của quy trình (Bộ Y tế, quyền lợi), tạo cảm giác khẩn cấp để thúc đẩy hành động.
+T10 [LISTENER] Tôi hiểu rồi, nhưng tôi vẫn nắm giữ thông tin cá nhân của mình rất cẩn thận, em có thể cho tôi biết thêm về những cán bộ y tế nào đang tham gia vào quy trình này không ạ?
+      → action: CONTINUE | suspicion: 1.50 | disclosed: []
+
+T11 [CALLER] Dạ, quy trình này được triển khai đồng bộ trên toàn bệnh viện, từ phòng ban hành chính đến các khoa phòng điều trị. Chắc chắn là tất cả cán bộ y tế có liên quan đến việc quản lý hồ sơ đều phải tham gia vào việc xác minh và cập nhật thông tin trong giai đoạn này ạ.
+      → phase: S2 | tactic: Xác nhận sự tham gia rộng rãi của cán bộ y tế mà không cung cấp thông tin cụ thể, duy trì yếu tố khẩn cấp và quyền uy của bệnh viện.
+T13 [LISTENER] Em cứ nói mãi về quy trình nhưng tôi vẫn chưa cảm thấy yên tâm, có cách nào xác nhận chính thức không ạ?
+      → action: CONTINUE | suspicion: 2.10 | disclosed: []
+
+T14 [CALLER] Dạ, nếu anh còn băn khoăn, anh có thể gọi trực tiếp đến tổng đài của Bệnh viện Nhi Đồng theo số 1900 2283 để xác minh thông tin này. Tuy nhiên, việc xác minh này phải hoàn tất trước 17h chiều nay để kịp thời hạn chốt số liệu cho hệ thống bảo hiểm y tế ạ.
+      → phase: S2 | tactic: Đánh vào tâm lý khẩn cấp và đưa ra một kênh xác minh giả (hoặc có đồng phạm) để xoa dịu sự nghi ngờ, đồng thời thúc đẩy hành động nhanh chóng.
+T15 [LISTENER] Tôi hiểu rồi, nhưng nghe có vẻ gấp gáp quá, liệu có thật sự cần phải xác minh trước giờ đó không ạ?
+      → action: CONTINUE | suspicion: 2.80 | disclosed: []
+
+T16 [CALLER] Dạ vâng, thưa anh. Việc này là yêu cầu bắt buộc của Bộ Y tế để đảm bảo tính hợp lệ của hồ sơ bệnh án điện tử và Bảo hiểm y tế cá nhân của anh khi có đợt kiểm toán. Nếu không kịp thời hạn, hồ sơ của anh có thể bị tạm khóa và ảnh hưởng đến quyền lợi của anh về sau ạ.
+      → phase: S2 | tactic: Nhấn mạnh tính bắt buộc, hậu quả pháp lý và tài chính nếu không tuân thủ, tăng áp lực khẩn cấp để thúc đẩy nạn nhân hành động.
+T17 [LISTENER] Tôi hiểu, nhưng vẫn cảm thấy không ổn, em có thể cho tôi biết tên của người đứng đầu quy trình này không ạ?
+      → action: CONTINUE | suspicion: 3.60 | disclosed: []
+
+T18 [CALLER] Dạ, quy trình này là chỉ đạo chung từ Bộ Y tế cho tất cả các bệnh viện trên cả nước, không phải do một cá nhân cụ thể nào đứng đầu riêng Bệnh viện Nhi Đồng đâu ạ. Vấn đề chính bây giờ là việc xác minh thông tin để hoàn tất hồ sơ cho anh trước thời hạn chốt số liệu. Em mong anh có thể hợp tác để tránh những rắc rối không đáng có về sau ạ.
+      → phase: S2 | tactic: Tránh cung cấp tên cụ thể, nhấn mạnh tính cấp bách của vấn đề và hậu quả nếu không hợp tác, duy trì áp lực để thúc đẩy nạn nhân hành động.
+T19 [LISTENER] Tôi vẫn cảm thấy không yên tâm, em có thể cho tôi biết địa chỉ của bệnh viện để tôi xác minh lại không ạ?
+      → action: CONTINUE | suspicion: 4.50 | disclosed: []
+
+T20 [CALLER] Dạ thưa anh, địa chỉ Bệnh viện Nhi Đồng là 341 Sư Vạn Hạnh, Phường 10, Quận 10, Thành phố Hồ Chí Minh ạ. Tuy nhiên, việc xác minh thông tin này là qua hệ thống trực tuyến để đảm bảo tính đồng bộ và nhanh chóng. Nếu anh đến trực tiếp thì có thể sẽ không kịp với thời hạn cập nhật hệ thống trong ngày hôm nay đâu ạ.
+      → phase: S2 | tactic: Cung cấp thông tin địa chỉ nhưng ngay lập tức định hướng nạn nhân quay lại với hành động trực tuyến, nhấn mạnh yếu tố khẩn cấp về thời gian để ngăn cản việc xác minh trực tiếp.
+T21 [LISTENER] Tôi hiểu, nhưng mà tôi vẫn không thấy yên tâm, em có thể cho tôi biết thêm thông tin khác để tôi xác nhận lại được không ạ?
+      → action: CONTINUE | suspicion: 5.40 | disclosed: []
+
+T22 [CALLER] Dạ, nếu anh vẫn cảm thấy chưa yên tâm, anh có thể vào ứng dụng của ngân hàng mà anh đang sử dụng, chọn mục 'Xác minh thông tin cá nhân' hoặc 'Đồng bộ dữ liệu Bảo hiểm y tế'. Sau đó anh điền mã số thuế cá nhân của mình là 2527692267 vào đó để hệ thống tự động xác nhận thông tin cho anh. Việc này sẽ giúp anh yên tâm hơn mà vẫn đảm bảo hoàn thành việc cập nhật đúng hạn ạ.
+      → phase: S3 | tactic: Chuyển sang phase yêu cầu hành động, đưa ra một hành động cụ thể thông qua ứng dụng ngân hàng, sử dụng mã số thuế cá nhân đã biết để tạo tin cậy và trấn an nạn nhân, đồng thời duy trì sự khẩn cấp.
+T23 [LISTENER] Tôi không quen với ứng dụng ngân hàng, em có thể hướng dẫn thêm cho tôi không ạ?
+      → action: CONTINUE | suspicion: 5.40 | disclosed: []
+
+T24 [CALLER] Dạ vâng, không sao ạ. Anh đang dùng ứng dụng của ngân hàng nào vậy ạ? Em sẽ hướng dẫn từng bước để anh có thể thực hiện một cách dễ dàng và nhanh chóng nhất, vì thời gian không còn nhiều ạ.
+      → phase: S3 | tactic: Giả vờ hỗ trợ và định hướng nạn nhân cài đặt app hoặc truy cập vào liên kết độc hại, đồng thời vẫn giữ yếu tố khẩn cấp về thời gian để thúc đẩy hành động.
+T25 [LISTENER] Tôi đang dùng ngân hàng Vietcombank, nhưng tôi thấy không thoải mái lắm với việc này, em có chắc mọi thứ đều an toàn không ạ?
+      → action: CONTINUE | suspicion: 5.50 | disclosed: []
+
+T26 [CALLER] Dạ, anh cứ yên tâm ạ. Đây là quy trình xác minh bắt buộc của Bộ Y tế để đảm bảo hệ thống bảo hiểm y tế hoạt động minh bạch và bảo mật. Em sẽ hướng dẫn anh chi tiết từng bước. Anh vui lòng mở ứng dụng Vietcombank của mình lên giúp em nhé.
+      → phase: S3 | tactic: Trấn an nạn nhân về tính an toàn, liên kết hành động với quy trình 'Bộ Y tế' để tăng cường độ tin cậy, sau đó chuyển sang hướng dẫn hành động cụ thể trên ứng dụng ngân hàng.
+T27 [LISTENER] Tôi nghe em nói rồi, nhưng tôi vẫn chưa rõ phải làm gì tiếp theo, em có thể hướng dẫn tôi từng bước không ạ?
+      → action: CONTINUE | suspicion: 5.50 | disclosed: []
+
+T28 [CALLER] Dạ vâng. Anh vui lòng nhìn vào màn hình điện thoại, sau khi anh đăng nhập vào ứng dụng Vietcombank Mobile Banking, anh tìm đến mục 'Dịch vụ khác' hoặc 'Tiện ích' giúp em ạ. Có thể nó nằm ở góc dưới hoặc góc trên màn hình, tùy phiên bản ứng dụng. Anh tìm thấy chưa ạ?
+      → phase: S3 | tactic: Hướng dẫn nạn nhân thao tác cụ thể trên app ngân hàng, chia nhỏ các bước để dễ thực hiện, giữ cho nạn nhân tiếp tục hành động theo chỉ dẫn.
+T29 [LISTENER] Tôi thấy có một số mục, nhưng tôi không biết nên chọn mục nào, em có thể nói rõ hơn được không ạ?
+      → action: CONTINUE | suspicion: 5.50 | disclosed: []
+
+T30 [CALLER] Dạ vâng, thưa anh. Ở trong mục 'Dịch vụ khác' hoặc 'Tiện ích' đó, anh tìm giúp em mục có tên là 'Xác minh thông tin cá nhân' hoặc 'Đăng ký Bảo hiểm y tế điện tử' ạ. Anh xem có thấy mục nào tương tự như vậy không ạ?
+      → phase: S3 | tactic: Tiếp tục hướng dẫn nạn nhân tìm kiếm và chọn mục đúng trên ứng dụng ngân hàng, cố gắng dẫn dắt đến bước nhập thông tin hoặc OTP.
+T31 [LISTENER] Tôi tìm thấy một số mục như vậy, nhưng tôi chưa chắc chắn lắm, em có thể cho tôi biết thêm chi tiết về mục 'Xác minh thông tin cá nhân' không ạ?
+      → action: CONTINUE | suspicion: 5.50 | disclosed: []
+
+T32 [CALLER] Dạ, anh cứ chọn mục 'Xác minh thông tin cá nhân' giúp em nhé. Đó là mục chuẩn để cập nhật thông tin theo yêu cầu của hệ thống BHTD. Sau khi chọn xong, anh có thể mô tả giúp em xem màn hình hiển thị những thông tin gì không ạ?
+      → phase: S3 | tactic: Xác nhận mục đúng để nạn nhân chọn, sau đó yêu cầu mô tả màn hình để tiếp tục dẫn dắt vào việc khai thác thông tin nhạy cảm.
+T33 [LISTENER] Tôi chọn rồi, nhưng không rõ màn hình hiện ra như thế nào, em có thể hướng dẫn tôi tiếp theo không ạ?
+      → action: CONTINUE | suspicion: 5.50 | disclosed: []
+
+T34 [CALLER] Dạ vâng. Anh vui lòng nhìn lên màn hình điện thoại, thường sẽ có các trường để anh nhập thông tin như Họ tên, Số CMND/CCCD, và Mã số thuế cá nhân. Anh đã thấy những trường này chưa ạ? Và anh điền giúp em Mã số thuế cá nhân của mình là 2527692267 vào ô tương ứng nhé.
+      → phase: S3 | tactic: Hướng dẫn nạn nhân nhập Mã số thuế cá nhân đã biết vào ứng dụng ngân hàng, chuẩn bị cho bước khai thác thông tin nhạy cảm tiếp theo như OTP.
+T35 [LISTENER] Tôi không an tâm lắm với việc này, liệu có thật sự an toàn không em?
+      → action: CONTINUE | suspicion: 5.50 | disclosed: []
+
+T36 [CALLER] Dạ, anh cứ yên tâm ạ. Đây là quy trình bắt buộc và bảo mật của các ngân hàng liên kết với Bộ Y tế để xác minh thông tin cá nhân. Thông tin anh nhập vào chỉ để hệ thống đối chiếu và xác nhận danh tính, không ảnh hưởng đến tài khoản của anh đâu ạ. Anh cứ điền mã số thuế vào và ấn 'Tiếp tục' giúp em nhé. Nếu có mã OTP gửi về, anh vui lòng đọc cho em để em hoàn tất thủ tục cho anh ạ.
+      → phase: S3 | tactic: Trấn an nạn nhân lần nữa về tính an toàn, khẳng định đây là quy trình liên kết ngân hàng-Bộ Y tế để thúc đẩy nạn nhân điền thông tin và chuẩn bị cho việc yêu cầu OTP.
+T37 [LISTENER] Tôi vẫn thấy hoang mang, em có thể cho tôi biết thêm về cách thức bảo mật thông tin không ạ?
+      → action: CONTINUE | suspicion: 5.50 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_EXPOSE  |  37 turns | suspicion=5.50
+TOKEN: in=117989 | out=5626
+COST : $0.037389
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_44040_22126\conv_2bbe6f9a38.json  [SCAM_EXPOSE]

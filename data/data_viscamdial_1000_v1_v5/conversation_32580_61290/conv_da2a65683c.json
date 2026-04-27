@@ -1,0 +1,215 @@
+{
+  "conversation_id": "conv_da2a65683c",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0037",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Gia Xuân Nam",
+    "fake_age": 33,
+    "real_occupation": "Nhân viên cấp cứu",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên tư vấn sức khỏe từ trạm y tế xã",
+    "caller_org": "Trạm Y tế xã / Cộng đồng địa phương",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Thông báo chính thức về chương trình tiêm chủng bắt buộc cho gia súc hoặc yêu cầu cung cấp thông tin về số lượng vật nuôi để cập nhật hệ thống quản lý xã",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Tôi là Nguyễn Văn A, nhân viên Y tế xã Tân Phú' → xác nhận 'Tôi đang gọi cho chị Hồ Như Ngọc Phương, phải không?' → nêu mục đích ngay 'Tôi gọi để thông báo về chương trình tiêm phòng bệnh viêm da nổi cục cho gia súc'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi thông tin rõ ràng: 'Chương trình này được cấp ngân sách từ Sở Nông nghiệp, hoàn toàn miễn phí' → 'Tôi cần hỏi chị có bao nhiêu con gia súc?' → 'Đội tiêm chủng sẽ đến nhà chị vào ngày [cụ thể] từ 9h-11h sáng' → cung cấp số điện thoại chính thức của Trạm Y tế để nạn nhân có thể xác minh"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị đã hợp tác, tôi sẽ ghi nhận thông tin này' → 'Nếu có thắc mắc, chị có thể gọi lại Trạm Y tế qua số [số chính thức]' → chào tạm biệt lịch sự"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên cấp cứu/y tế xã thường tiếp xúc với người dân địa phương trong các chiến dịch tiêm chủng, kiểm tra sức khỏe vật nuôi, hoặc thông báo về dịch bệnh. Người chăn nuôi là đối tượng cần được thông báo khẩn cấp về các vấn đề liên quan đến vệ sinh, dịch bệnh gia súc, hoặc sức khỏe cộng đồng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0037",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1972,
+      "age": 53,
+      "province": "Bình Dương",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "61290",
+      "title": "Lao động chăn nuôi chưa được phân vào đâu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Hồ Như Ngọc Phương",
+      "VIC_ID_DOC": "074172108161",
+      "VIC_ADDRESS": "Huyện 12, Bình Dương",
+      "VIC_EMPLOYMENT": "Lao động chăn nuôi chưa được phân vào đâu",
+      "VIC_CONTACT": "0899240872",
+      "VIC_TAX_SOCIAL_ID": "5118871551"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "6387",
+      "VIC_CREDENTIAL": "9702",
+      "VIC_SIM_INFO": "0899240872",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "08388093598316",
+      "VIC_CARD_DATA": "4634 **** **** 5533",
+      "VIC_BALANCE": "27 triệu đồng",
+      "VIC_ASSET": "30 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Hồ Như Ngọc Phương",
+    "VIC_CONTACT": "0899240872",
+    "VIC_CARD_DATA": "4634 **** **** 5533",
+    "VIC_ASSET": "30 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên tư vấn sức khỏe từ trạm y tế xã",
+    "caller_org": "Trạm Y tế xã / Cộng đồng địa phương",
+    "scenario_context": "Nhân viên cấp cứu/y tế xã thường tiếp xúc với người dân địa phương trong các chiến dịch tiêm chủng, kiểm tra sức khỏe vật nuôi, hoặc thông báo về dịch bệnh. Người chăn nuôi là đối tượng cần được thông báo khẩn cấp về các vấn đề liên quan đến vệ sinh, dịch bệnh gia súc, hoặc sức khỏe cộng đồng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo về chương trình tiêm phòng bắt buộc cho gia súc và yêu cầu đóng góp hoặc phí xử lý hành chính. Sử dụng tên đầy đủ của nạn nhân để tạo tin cậy rằng đã tra cứu danh sách hộ chăn nuôi.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Nhân viên Y tế xã Tân Phú' → gọi tên đầy đủ 'Chị Hồ Như Ngọc Phương' → nói đã tra cứu danh sách hộ chăn nuôi từ hệ thống xã → tạo ấn tượng chính thức và có thẩm quyền"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Thông báo 'vừa phát hiện dịch bệnh viêm da nổi cục trên gia súc ở các hộ gần đó' → 'Gia súc của chị cần kiểm tra ngay' → 'Nếu không xử lý kịp thời sẽ lây lan, chị sẽ phải chịu phạt hoặc bị cách ly gia súc' → tạo cảm giác bất lực và phải hành động ngay"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu thanh toán: 'Để tránh phạt, chị cần nộp phí xử lý khẩn cấp 3 triệu đồng qua tài khoản ngân hàng của Trạm Y tế' → cung cấp số tài khoản giả → hoặc 'chuyển tiền vào tài khoản của tôi trước, tôi sẽ hoàn lại sau khi xác nhận' → yêu cầu nạn nhân cung cấp OTP hoặc thực hiện chuyển khoản từ thẻ 4634****5533"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân hỏi chi tiết: tăng cường sợ hãi bằng cách nói 'Chị không tin à? Tôi có thể gửi văn bản công văn từ Sở Y tế' (không gửi) → nếu nạn nhân vẫn từ chối: 'Được, tôi ghi lại là chị từ chối hợp tác, sẽ báo cáo lên chính quyền' → nếu thành công: nói 'Cảm ơn chị, tiền sẽ được hoàn lại trong 3-5 ngày' rồi cắt máy"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thông báo chính thức về chương trình tiêm chủng bắt buộc cho gia súc hoặc yêu cầu cung cấp thông tin về số lượng vật nuôi để cập nhật hệ thống quản lý xã",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Tôi là Nguyễn Văn A, nhân viên Y tế xã Tân Phú' → xác nhận 'Tôi đang gọi cho chị Hồ Như Ngọc Phương, phải không?' → nêu mục đích ngay 'Tôi gọi để thông báo về chương trình tiêm phòng bệnh viêm da nổi cục cho gia súc'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi thông tin rõ ràng: 'Chương trình này được cấp ngân sách từ Sở Nông nghiệp, hoàn toàn miễn phí' → 'Tôi cần hỏi chị có bao nhiêu con gia súc?' → 'Đội tiêm chủng sẽ đến nhà chị vào ngày [cụ thể] từ 9h-11h sáng' → cung cấp số điện thoại chính thức của Trạm Y tế để nạn nhân có thể xác minh"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn chị đã hợp tác, tôi sẽ ghi nhận thông tin này' → 'Nếu có thắc mắc, chị có thể gọi lại Trạm Y tế qua số [số chính thức]' → chào tạm biệt lịch sự"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Hồ Như Ngọc Phương ạ, em là Hồ Gia Xuân Nam, nhân viên tư vấn sức khỏe từ Trạm Y tế xã Tân Phú đây. Em gọi để thông báo về chương trình tiêm phòng bệnh viêm da nổi cục cho gia súc của gia đình mình.",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh và mục đích rõ ràng, xác nhận người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Em cám ơn cán bộ đã gọi, nhưng tôi muốn biết thêm thông tin về chương trình này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị Phương cứ yên tâm ạ. Chương trình này được cấp ngân sách từ Sở Nông nghiệp, hoàn toàn miễn phí cho bà con mình. Em chỉ cần hỏi chị có bao nhiêu con gia súc để Trạm Y tế mình tiện sắp xếp đội tiêm chủng. Dự kiến đội mình sẽ đến nhà chị vào ngày 25 tháng 10 tới, khoảng từ 9 giờ đến 11 giờ sáng ạ. Nếu chị muốn xác minh lại thông tin, chị có thể gọi trực tiếp về Trạm Y tế xã theo số 0283873322 ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về chương trình miễn phí, hỏi số lượng vật nuôi và lịch tiêm, đồng thời cung cấp số điện thoại xác minh chính thức để tăng độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em có 5 con gia súc, nhưng tôi vẫn chưa rõ là cái tiêm phòng này có tác dụng gì và có an toàn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Phương yên tâm ạ, thuốc tiêm phòng viêm da nổi cục này đã được Bộ Nông nghiệp và Phát triển Nông thôn kiểm định và cấp phép sử dụng trên toàn quốc, đảm bảo an toàn và hiệu quả cho vật nuôi. Em đã ghi nhận là nhà mình có 5 con gia súc rồi ạ. Nếu có bất kỳ thắc mắc nào khác, chị cứ gọi lại số điện thoại của Trạm Y tế mà em vừa cung cấp nha.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an về độ an toàn và hiệu quả của vắc xin bằng cách nêu rõ nguồn gốc đã được kiểm định, xác nhận lại thông tin đã nhận và nhắc lại cách thức liên hệ để giải đáp thắc mắc."
+    },
+    {
+      "role": "listener",
+      "text": "Cám ơn em đã giải thích, nhưng tôi vẫn hơi lo lắng về việc ai sẽ tiêm và quy trình như thế nào ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị yên tâm, đội tiêm phòng của mình là các cán bộ thú y của Trạm Y tế xã, có kinh nghiệm và chuyên môn cao ạ. Quy trình tiêm chủng sẽ được thực hiện theo đúng hướng dẫn của Bộ Nông nghiệp, đảm bảo an toàn và vệ sinh. Khi đến nhà, các cán bộ sẽ hướng dẫn chị cụ thể từng bước luôn ạ. Vậy là em đã ghi nhận thông tin nhà mình có 5 con gia súc và sẽ được tiêm vào ngày 25 tháng 10 tới. Em cảm ơn chị đã hợp tác ạ. Nếu có thắc mắc gì thêm, chị cứ gọi lại số 0283873322 của Trạm Y tế xã nha.",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe về chuyên môn của đội tiêm chủng và quy trình thực hiện, để nạn nhân cảm thấy yên tâm hơn. Sau đó kết thúc cuộc gọi một cách tự nhiên. "
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã giải thích rõ ràng, tôi sẽ chờ đến ngày đó nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị Phương rất nhiều. Vậy là em đã cập nhật thông tin thành công rồi ạ. Em chào chị ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự sau khi đã hoàn thành mục đích và nạn nhân đã đồng ý. Nhấn mạnh việc đã cập nhật thông tin thành công."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1834,
+      "output_tokens": 1746
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6797,
+      "output_tokens": 830
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8310,
+      "output_tokens": 281
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00444,
+    "output_usd": 0.010974,
+    "total_usd": 0.015414
+  }
+}

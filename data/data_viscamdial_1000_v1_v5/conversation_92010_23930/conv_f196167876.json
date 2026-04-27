@@ -1,0 +1,225 @@
+{
+  "conversation_id": "conv_f196167876",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0066",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trương Thanh Hương",
+    "fake_age": 44,
+    "real_occupation": "Lao động trồng trọt",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh/phát triển bản thảo dự án nông nghiệp công nghệ",
+    "caller_org": "Công ty Tư vấn Nông lâm nghiệp Xanh Việt",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty nông nghiệp hoặc tổ chức huấn luyện nông dân thực sự cần thuê giáo viên ngôn ngữ để dạy tiếng Anh cho nhân viên/nông dân, hoặc dịch tài liệu kỹ thuật canh tác.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào cô Ngô Tiến Hùng, tôi là Minh từ Công ty Xanh Việt. Chúng tôi được giáo viên X giới thiệu về chuyên môn tiếng Anh của cô. Chúng tôi đang tìm giảng viên hỗ trợ khóa đào tạo tiếng Anh cho nông dân vào tháng 3. Cô có quan tâm không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về nội dung khóa học, số giờ, mức lương, thời gian bắt đầu, yêu cầu giáo viên. Có thể yêu cầu CV, bằng cấp, hoặc lịch sử giảng dạy của cô Hùng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Gửi hợp đồng qua email, xác nhận ngày phỏng vấn/onboarding, hoặc thông báo sẽ liên hệ lại sau khi xin ý kiến cấp trên. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    },
+    "scenario_context": "Công ty nông nghiệp công nghệ cần giáo viên ngôn ngữ để dạy tiếng Anh cho nhân viên xuất khẩu nông sản, hoặc dịch tài liệu kỹ thuật. Đây là giao thoa tự nhiên giữa lĩnh vực nông nghiệp hiện đại và nhu cầu đào tạo ngôn ngữ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0066",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1989,
+      "age": 36,
+      "province": "Long An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "23930",
+      "title": "Giáo viên ngôn ngữ khác",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Ngô Tiến Hùng",
+      "VIC_ID_DOC": "080089117402",
+      "VIC_ADDRESS": "TP 12, Long An",
+      "VIC_EMPLOYMENT": "Giáo viên ngôn ngữ khác",
+      "VIC_CONTACT": "0777320316",
+      "VIC_TAX_SOCIAL_ID": "5961739701"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4561",
+      "VIC_CREDENTIAL": "527473",
+      "VIC_SIM_INFO": "0777320316",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "39200228527",
+      "VIC_CARD_DATA": "4529 **** **** 4209",
+      "VIC_BALANCE": "200 triệu đồng",
+      "VIC_ASSET": "63 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Ngô Tiến Hùng",
+    "VIC_CONTACT": "0777320316",
+    "VIC_BALANCE": "200 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh/phát triển bản thảo dự án nông nghiệp công nghệ",
+    "caller_org": "Công ty Tư vấn Nông lâm nghiệp Xanh Việt",
+    "scenario_context": "Công ty nông nghiệp công nghệ cần giáo viên ngôn ngữ để dạy tiếng Anh cho nhân viên xuất khẩu nông sản, hoặc dịch tài liệu kỹ thuật. Đây là giao thoa tự nhiên giữa lĩnh vực nông nghiệp hiện đại và nhu cầu đào tạo ngôn ngữ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa công ty nông nghiệp, giới thiệu dự án đào tạo tiếng Anh cho nông dân/nông thôn. Sử dụng tên đầy đủ của nạn nhân để tạo ấn tượng đã xác minh thông tin trước, rồi dùng số dư tài khoản như bằng chứng 'đủ điều kiện' nhận hỗ trợ tài chính hoặc bảo hiểm.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào cô Ngô Tiến Hùng, tôi là Minh từ Công ty Tư vấn Nông lâm nghiệp Xanh Việt. Chúng tôi có dự án hỗ trợ giáo viên vùng nông thôn, thông tin của cô đã được lọc từ hệ thống giáo dục. Cô có 5 phút để nghe tôi giới thiệu không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: 'Dự án này hỗ trợ giáo viên tham gia huấn luyện công nhân nông nghiệp. Chúng tôi thấy cô có điều kiện kinh tế tốt (hệ thống ghi nhận cô có 200 triệu đồng tiết kiệm), nên cô là ứng viên lý tưởng. Để tham gia, cô cần ký quỹ/đăng ký ban đầu để chứng minh cam kết.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Cô cần chuyển 15-20 triệu đồng vào tài khoản của chúng tôi để khóa học miễn phí và hỗ trợ lương 50 triệu/tháng. Tôi sẽ gửi link hoặc mã QR để cô chuyển khoản ngay. Hôm nay là hạn cuối cùng.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer dùng áp lực thời gian ('hạn chót hôm nay'), hoặc đe dọa nhẹ ('sẽ mất cơ hội, chỉ còn 10 chỗ'). Nếu chuyển tiền, scammer mất liên lạc hoặc bảo 'chờ xác nhận từ công ty' rồi không bao giờ liên hệ lại."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty nông nghiệp hoặc tổ chức huấn luyện nông dân thực sự cần thuê giáo viên ngôn ngữ để dạy tiếng Anh cho nhân viên/nông dân, hoặc dịch tài liệu kỹ thuật canh tác.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào cô Ngô Tiến Hùng, tôi là Minh từ Công ty Xanh Việt. Chúng tôi được giáo viên X giới thiệu về chuyên môn tiếng Anh của cô. Chúng tôi đang tìm giảng viên hỗ trợ khóa đào tạo tiếng Anh cho nông dân vào tháng 3. Cô có quan tâm không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thảo luận chi tiết về nội dung khóa học, số giờ, mức lương, thời gian bắt đầu, yêu cầu giáo viên. Có thể yêu cầu CV, bằng cấp, hoặc lịch sử giảng dạy của cô Hùng."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Gửi hợp đồng qua email, xác nhận ngày phỏng vấn/onboarding, hoặc thông báo sẽ liên hệ lại sau khi xin ý kiến cấp trên. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Ngô Tiến Hùng, tôi là Thanh Hương từ Công ty Tư vấn Nông lâm nghiệp Xanh Việt. Chúng tôi được giáo viên Thùy Linh giới thiệu về chuyên môn tiếng Anh của anh. Hiện tại, chúng tôi đang tìm giảng viên hỗ trợ khóa đào tạo tiếng Anh cho nông dân vào tháng 3 tới. Không biết anh có quan tâm đến cơ hội này không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận, giới thiệu mục đích gọi và nghe phản hồi từ người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe chị nói rồi, nhưng em muốn biết thêm thông tin về khóa đào tạo này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, khóa học này là một chương trình đào tạo tiếng Anh cơ bản, tập trung vào các thuật ngữ nông nghiệp và giao tiếp hàng ngày cho bà con nông dân. Chúng tôi dự kiến khóa học kéo dài khoảng 2 tháng, với 2 buổi học mỗi tuần, mỗi buổi 2 tiếng vào các buổi tối hoặc cuối tuần để phù hợp với lịch làm việc của bà con. Về mức thù lao, chúng tôi sẽ trao đổi cụ thể hơn khi anh quan tâm và có thể gửi CV để chúng tôi xem xét ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thêm chi tiết về khóa học (nội dung, thời lượng, lịch trình) và yêu cầu CV để đánh giá chuyên môn của Ngô Tiến Hùng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, khóa học nghe có vẻ thú vị, nhưng em muốn hỏi thêm về mức thù lao được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Về mức thù lao, chúng tôi sẽ dựa trên kinh nghiệm và bằng cấp của anh Hùng để đưa ra con số cụ thể, nhưng dự kiến sẽ dao động từ 400.000 đến 600.000 đồng cho mỗi buổi học. Anh Hùng có thể gửi CV của mình đến địa chỉ email xuan@xanhviet.com để chúng tôi đánh giá và trao đổi chi tiết hơn không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trả lời trực tiếp câu hỏi về mức thù lao để củng cố sự tin tưởng, đồng thời tiếp tục yêu cầu CV để tiến tới bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em sẽ xem xét gửi CV nhưng chị có thể cho em biết thêm về cách thức hợp tác và thanh toán được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, về cách thức hợp tác và thanh toán, sau khi nhận được CV của anh và chúng tôi đánh giá là phù hợp, chúng ta sẽ có một buổi trao đổi cụ thể hơn về hợp đồng giảng dạy. Các khoản thanh toán sẽ được thực hiện theo từng đợt, thường là sau mỗi 2 tuần hoặc theo thỏa thuận trong hợp đồng, thông qua chuyển khoản ngân hàng trực tiếp vào tài khoản của anh Hùng. Anh cứ yên tâm về vấn đề này ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giảm thiểu sự nghi ngờ và cam kết sự minh bạch trong thanh toán, đồng thời thúc đẩy việc gửi CV để chuyển sang giai đoạn hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn chị đã giải thích rõ ràng, em sẽ suy nghĩ và gửi CV sớm ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ suy nghĩ và gửi CV sớm cho chúng tôi nhé. Nếu có bất kỳ câu hỏi nào khác trong quá trình này, anh đừng ngần ngại liên hệ lại với tôi qua số điện thoại này ạ. Chúng tôi rất mong được hợp tác với anh.",
+      "current_phase": "L3",
+      "tactic_hint": "Khuyến khích Ngô Tiến Hùng gửi CV, cung cấp kênh liên hệ và bày tỏ mong muốn hợp tác để thúc đẩy hành động tiếp theo, đồng thời kết thúc cuộc gọi một cách lịch sự."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn chị đã chia sẻ thông tin, em sẽ liên hệ lại nếu có câu hỏi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, vậy thì tôi sẽ chờ CV của anh, và rất mong được hợp tác cùng anh Ngô Tiến Hùng. Chào anh nhé!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, củng cố mong muốn hợp tác và chờ đợi hành động tiếp theo từ phía Ngô Tiến Hùng."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1785,
+      "output_tokens": 1628
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8369,
+      "output_tokens": 893
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10405,
+      "output_tokens": 349
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00502,
+    "output_usd": 0.010582,
+    "total_usd": 0.015601
+  }
+}

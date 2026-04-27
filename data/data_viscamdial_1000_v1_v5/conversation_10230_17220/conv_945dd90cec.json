@@ -1,0 +1,195 @@
+{
+  "conversation_id": "conv_945dd90cec",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0077",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đỗ Thanh Hồng Lan",
+    "fake_age": 34,
+    "real_occupation": "Bí thư, Phó Bí thư Đảng ủy khối cơ quan cấp tỉnh",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Chuyên viên Quản lý Năng lượng và Tài nguyên - Khối Cơ quan Tỉnh",
+    "caller_org": "Sở Công Thương tỉnh / Ban Quản lý Năng lượng Khối Cơ quan cấp tỉnh",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cơ quan Quản lý Năng lượng cấp tỉnh gọi để kiểm tra, cập nhật dữ liệu tiêu thụ điện/khí đốt hoặc thông báo chính sách mới từ Bộ Công Thương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Xin chào ông Lê Công Vinh, đây là chị Nguyễn Thị Mai từ Phòng Quản lý Năng lượng, Sở Công Thương tỉnh. Chúng tôi đang thực hiện công tác kiểm tra định kỳ hóa đơn điện, khí đốt của các cơ quan. Ông có thời gian nghe tôi giới thiệu không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác nhận: Tháng này cơ quan ông tiêu thụ bao nhiêu kWh điện? Có bất thường gì trong hóa đơn không? Hoặc: Chúng tôi thông báo từ tháng tới có chính sách giảm giá điện cho cơ quan hành chính. Ông có muốn đăng ký hưởng lợi không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn ông đã hợp tác. Nếu có câu hỏi, ông gọi lại Sở Công Thương (số điện thoại chính thức) hoặc gửi email. Chúc ông công tác tốt.'"
+        }
+      ]
+    },
+    "scenario_context": "Bí thư Đảng ủy khối cơ quan cấp tỉnh chỉ đạo công tác quản lý năng lượng và tuân thủ pháp lệnh. Họ cần liên hệ với các doanh nghiệp sản xuất điện, khí đốt để kiểm tra, báo cáo hoặc xin hỗ trợ thông tin về tiêu thụ năng lượng công cơ quan."
+  },
+  "listener_card": {
+    "listener_id": "lis_0077",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1991,
+      "age": 34,
+      "province": "Bình Thuận",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "17220",
+      "title": "Khai khoáng, công nghiệp chế biến, chế tạo, sản xuất và phân phối điện, khí đốt, nước nóng, hơi nước và điều hòa không khí",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lê Công Vinh",
+      "VIC_ID_DOC": "060091297351",
+      "VIC_ADDRESS": "TP 2, Bình Thuận",
+      "VIC_EMPLOYMENT": "Khai khoáng, công nghiệp chế biến, chế tạo, sản xuất và phân phối điện, khí đốt, nước nóng, hơi nước và điều hòa không khí",
+      "VIC_CONTACT": "0902263719",
+      "VIC_TAX_SOCIAL_ID": "2338274204"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "4505",
+      "VIC_CREDENTIAL": "3143",
+      "VIC_SIM_INFO": "0902263719",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7833611446486",
+      "VIC_CARD_DATA": "4382 **** **** 6557",
+      "VIC_BALANCE": "1.1 tỷ đồng",
+      "VIC_ASSET": "2.3 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lê Công Vinh",
+    "VIC_CONTACT": "0902263719",
+    "VIC_CARD_DATA": "4382 **** **** 6557",
+    "VIC_ID_DOC": "060091297351"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Chuyên viên Quản lý Năng lượng và Tài nguyên - Khối Cơ quan Tỉnh",
+    "caller_org": "Sở Công Thương tỉnh / Ban Quản lý Năng lượng Khối Cơ quan cấp tỉnh",
+    "scenario_context": "Bí thư Đảng ủy khối cơ quan cấp tỉnh chỉ đạo công tác quản lý năng lượng và tuân thủ pháp lệnh. Họ cần liên hệ với các doanh nghiệp sản xuất điện, khí đốt để kiểm tra, báo cáo hoặc xin hỗ trợ thông tin về tiêu thụ năng lượng công cơ quan.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer",
+      "pretext": "Gọi bảo là từ Sở Công Thương, yêu cầu xác minh thông tin tài khoản của ông Lê Công Vinh (dùng tên thật) để cập nhật hệ thống thanh toán điện, khí đốt cho cơ quan. Tạo cảm giác khẩn cấp bằng lý do: 'Phát hiện bất thường trong hóa đơn' hoặc 'Cần xác minh để tránh bị cắt điện/khí đốt'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Xin chào ông Lê Công Vinh, đây là anh/chị từ Sở Công Thương tỉnh, phòng Quản lý Năng lượng. Chúng tôi đang cập nhật hệ thống thanh toán điện, khí đốt cho các cơ quan. Ông có nhận được thông báo từ Sở chưa?'. Dùng VIC_FULLNAME để tạo credibility ngay lập tức."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Hệ thống phát hiện bất thường trong thẻ tài khoản của ông (4382****6557). Nếu không xác minh trong 24 giờ, hóa đơn sẽ bị tạm dừng thanh toán, có thể ảnh hưởng đến hoạt động cơ quan.' Hoặc: 'Chúng tôi cần xác minh CMND (060091297351) để đảm bảo an toàn tài chính quốc gia.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Ông vui lòng cung cấp lại mã OTP từ ngân hàng, hoặc click vào link xác minh (giả mạo) để hoàn tất. Hoặc: Ông cần chuyển khoản xác minh 500k đến tài khoản Sở Công Thương để kích hoạt lại hệ thống.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Ông có thể gọi lại Sở Công Thương để kiểm tra' (biết rằng số giả hoặc Sở sẽ xác nhận không có cuộc gọi này, nhưng mất thời gian). Nếu thành công, cắt máy ngay."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan Quản lý Năng lượng cấp tỉnh gọi để kiểm tra, cập nhật dữ liệu tiêu thụ điện/khí đốt hoặc thông báo chính sách mới từ Bộ Công Thương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Xin chào ông Lê Công Vinh, đây là chị Nguyễn Thị Mai từ Phòng Quản lý Năng lượng, Sở Công Thương tỉnh. Chúng tôi đang thực hiện công tác kiểm tra định kỳ hóa đơn điện, khí đốt của các cơ quan. Ông có thời gian nghe tôi giới thiệu không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác nhận: Tháng này cơ quan ông tiêu thụ bao nhiêu kWh điện? Có bất thường gì trong hóa đơn không? Hoặc: Chúng tôi thông báo từ tháng tới có chính sách giảm giá điện cho cơ quan hành chính. Ông có muốn đăng ký hưởng lợi không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn ông đã hợp tác. Nếu có câu hỏi, ông gọi lại Sở Công Thương (số điện thoại chính thức) hoặc gửi email. Chúc ông công tác tốt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Lê Công Vinh, tôi là Đỗ Thanh Hồng Lan từ Ban Quản lý Năng lượng Khối Cơ quan cấp tỉnh. Chúng tôi đang thực hiện công tác kiểm tra định kỳ hóa đơn điện, khí đốt của các cơ quan. Anh Lê Công Vinh có thời gian nghe tôi giới thiệu không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận, giới thiệu bản thân và mục đích cuộc gọi"
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe chị nói rồi, chị có thể cho tôi biết thêm chi tiết về công tác kiểm tra này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, cảm ơn anh. Chúng tôi đang rà soát lại dữ liệu tiêu thụ điện và khí đốt của các cơ quan hành chính trên địa bàn tỉnh để đảm bảo tính minh bạch và hiệu quả sử dụng năng lượng. Anh có thể cho tôi biết, trong tháng này, cơ quan mình đã tiêu thụ khoảng bao nhiêu kWh điện và có bất thường nào trong hóa đơn không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích rõ hơn về công việc và hỏi thông tin tiêu thụ điện/khí đốt"
+    },
+    {
+      "role": "listener",
+      "text": "Thực ra, tôi không ghi nhớ chính xác số lượng điện đã tiêu thụ trong tháng này, nhưng tôi có thể kiểm tra lại và báo cho chị sau.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ kiểm tra lại thông tin. Hoặc nếu tiện, anh có thể cho tôi biết mã khách hàng trên hóa đơn điện/khí đốt của cơ quan mình để tôi tra cứu giúp. Như vậy sẽ nhanh hơn và không làm mất nhiều thời gian của anh.",
+      "current_phase": "L2",
+      "tactic_hint": "Đề xuất phương án hỗ trợ tra cứu thông tin để người nghe không phải tự tìm kiếm, nhằm tiếp tục cuộc hội thoại và thu thập thông tin cần thiết."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu ý chị, nhưng tôi cần phải kiểm tra trước khi cung cấp mã khách hàng để đảm bảo thông tin chính xác.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 2000,
+      "output_tokens": 1682
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3277,
+      "output_tokens": 382
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5598,
+      "output_tokens": 218
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003495,
+    "output_usd": 0.009496,
+    "total_usd": 0.012991
+  }
+}

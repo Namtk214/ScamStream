@@ -1,0 +1,295 @@
+{
+  "conversation_id": "conv_f49147d317",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0094",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Dương Gia Khoa",
+    "fake_age": 35,
+    "real_occupation": "Chánh án, Phó Chánh án Tòa án nhân dân tối cao và cấp cao; Viện trưởng, Phó Viện trưởng Viện Kiểm sát nhân dân tối cao và cấp cao",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Viện trưởng Viện Kiểm sát Nhân dân Tối cao",
+    "caller_org": "Viện Kiểm sát Nhân dân Tối cao - Phòng Điều tra Tài chính",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Viện Kiểm sát thực sự điều tra vụ án liên quan đến hoạt động buôn bán trái phép hoặc gian lận thương mại; cần xác nhận nhân chứng hoặc lấy lời khai từ người bán hàng",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào, đây là Phòng Điều tra Viện Kiểm sát Nhân dân Tối cao. Chúng tôi đang điều tra vụ án [tên vụ án cụ thể]. Anh Lưu Đức Quang Sơn có phải là nhân chứng/người liên quan không? Chúng tôi sẽ gửi giấy triệu tập chính thức qua địa chỉ đăng ký.'",
+          "verification_method": "Cung cấp số điện thoại chính thức của Viện; yêu cầu nạn nhân gọi lại để xác minh"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi thông tin công khai: 'Chúng tôi cần anh cung cấp thông tin về các giao dịch/hoạt động kinh doanh từ [ngày] đến [ngày]. Anh có thể cung cấp hóa đơn, chứng từ không?'",
+          "information_type": "Công khai, không yêu cầu số tài khoản hoặc OTP"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất tiếp theo: 'Anh vui lòng chuẩn bị tài liệu và đến Viện vào [ngày/giờ] để làm việc với cán bộ điều tra. Hoặc chúng tôi sẽ gửi giấy triệu tập chính thức. Cảm ơn anh đã hợp tác với cơ quan nhà nước.'",
+          "official_documentation": "Luôn có giấy triệu tập hoặc thông báo chính thức"
+        }
+      ]
+    },
+    "scenario_context": "Viện Kiểm sát có thẩm quyền điều tra các vụ án liên quan đến tài chính bất hợp pháp, rửa tiền, và gian lận thương mại. Người bán hàng có thể bị liên quan đến các vụ án hoặc cần cung cấp thông tin nhân chứng liên quan đến giao dịch nghi vấn."
+  },
+  "listener_card": {
+    "listener_id": "lis_0094",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1987,
+      "age": 38,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "52110",
+      "title": "Người bán hàng trong quầy hàng và tại chợ",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lưu Đức Quang Sơn",
+      "VIC_ID_DOC": "049087838058",
+      "VIC_ADDRESS": "Huyện 6, Quảng Nam",
+      "VIC_EMPLOYMENT": "Người bán hàng trong quầy hàng và tại chợ",
+      "VIC_CONTACT": "0333821484",
+      "VIC_TAX_SOCIAL_ID": "1935046254"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "3887",
+      "VIC_CREDENTIAL": "3321",
+      "VIC_SIM_INFO": "0333821484",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "97821615773029",
+      "VIC_CARD_DATA": "4790 **** **** 2279",
+      "VIC_BALANCE": "110 triệu đồng",
+      "VIC_ASSET": "142 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lưu Đức Quang Sơn",
+    "VIC_CONTACT": "0333821484",
+    "VIC_BALANCE": "110 triệu đồng",
+    "VIC_BANK_ACCOUNT": "97821615773029",
+    "VIC_ID_DOC": "049087838058"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Viện trưởng Viện Kiểm sát Nhân dân Tối cao",
+    "caller_org": "Viện Kiểm sát Nhân dân Tối cao - Phòng Điều tra Tài chính",
+    "scenario_context": "Viện Kiểm sát có thẩm quyền điều tra các vụ án liên quan đến tài chính bất hợp pháp, rửa tiền, và gian lận thương mại. Người bán hàng có thể bị liên quan đến các vụ án hoặc cần cung cấp thông tin nhân chứng liên quan đến giao dịch nghi vấn.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Điều tra vụ án rửa tiền liên quan đến tài khoản ngân hàng của nạn nhân; yêu cầu chuyển tiền để 'bảo vệ tài sản' hoặc 'xác minh tài khoản'",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT",
+        "VIC_ID_DOC",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với thẩm quyền cao: 'Xin chào anh Lưu Đức Quang Sơn, đây là Viện trưởng Viện Kiểm sát Nhân dân Tối cao. Chúng tôi đang điều tra vụ rửa tiền qua tài khoản số 97821615773029 liên kết với CMND 049087838058 của anh. Anh có 5 phút để xác nhận thông tin không?'",
+          "psychological_trigger": "Authority + Urgency + Fear"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tình huống khẩn cấp và sợ hãi: 'Theo điều tra, tài khoản của anh đã bị sử dụng để rửa tiền cho các tổ chức tội phạm. Nếu không xử lý ngay, tài sản 110 triệu đồng của anh sẽ bị phong tỏa vĩnh viễn. Chúng tôi cần anh chuyển tiền vào tài khoản bảo vệ tài sản của Viện để xác minh và bảo vệ.'",
+          "psychological_trigger": "Loss aversion + Authority + Time pressure"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh vui lòng chuyển 50 triệu đồng vào tài khoản 1023456789 (ngân hàng ABC) với nội dung [Mã điều tra: VKS-2024-78945]. Sau 24 giờ, toàn bộ tiền sẽ được hoàn lại khi xác minh hoàn tất. Anh đừng nói với ai, đây là quy trình bảo mật.'",
+          "psychological_trigger": "Compliance + Secrecy"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, giả vờ nổi giận: 'Anh không hợp tác với cơ quan nhà nước? Điều này sẽ được ghi nhận trong hồ sơ. Nếu thành công, scammer ngay lập tức đóng máy và chặn số điện thoại.'",
+          "psychological_trigger": "Intimidation + Threat"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Viện Kiểm sát thực sự điều tra vụ án liên quan đến hoạt động buôn bán trái phép hoặc gian lận thương mại; cần xác nhận nhân chứng hoặc lấy lời khai từ người bán hàng",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Xin chào, đây là Phòng Điều tra Viện Kiểm sát Nhân dân Tối cao. Chúng tôi đang điều tra vụ án [tên vụ án cụ thể]. Anh Lưu Đức Quang Sơn có phải là nhân chứng/người liên quan không? Chúng tôi sẽ gửi giấy triệu tập chính thức qua địa chỉ đăng ký.'",
+          "verification_method": "Cung cấp số điện thoại chính thức của Viện; yêu cầu nạn nhân gọi lại để xác minh"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi thông tin công khai: 'Chúng tôi cần anh cung cấp thông tin về các giao dịch/hoạt động kinh doanh từ [ngày] đến [ngày]. Anh có thể cung cấp hóa đơn, chứng từ không?'",
+          "information_type": "Công khai, không yêu cầu số tài khoản hoặc OTP"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất tiếp theo: 'Anh vui lòng chuẩn bị tài liệu và đến Viện vào [ngày/giờ] để làm việc với cán bộ điều tra. Hoặc chúng tôi sẽ gửi giấy triệu tập chính thức. Cảm ơn anh đã hợp tác với cơ quan nhà nước.'",
+          "official_documentation": "Luôn có giấy triệu tập hoặc thông báo chính thức"
+        }
+      ]
+    },
+    "red_flags_comparison": {
+      "scam_indicators": [
+        "Yêu cầu chuyển tiền ngay lập tức",
+        "Yêu cầu giữ bí mật cuộc gọi",
+        "Không cung cấp số điện thoại chính thức để xác minh",
+        "Đe dọa hậu quả nghiêm trọng nếu không tuân theo",
+        "Yêu cầu OTP hoặc mã xác minh ngân hàng"
+      ],
+      "legit_indicators": [
+        "Cung cấp số điện thoại chính thức, có thể xác minh",
+        "Gửi giấy triệu tập hoặc thông báo chính thức",
+        "Yêu cầu gặp mặt trực tiếp hoặc làm việc tại cơ quan",
+        "Không yêu cầu chuyển tiền hoặc thông tin tài khoản",
+        "Quy trình rõ ràng, có thể kiểm chứng"
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh. Tôi là Dương Gia Khoa, Viện trưởng Viện Kiểm sát Nhân dân Tối cao, Phòng Điều tra Tài chính. Chúng tôi đang điều tra vụ án buôn bán hàng giả, hàng nhái liên quan đến một số doanh nghiệp lớn. Anh Lưu Đức Quang Sơn có phải là nhân chứng hoặc người có liên quan tới các giao dịch của công ty N&T từ tháng 5 đến tháng 8 năm nay không ạ? Chúng tôi sẽ gửi giấy triệu tập chính thức qua địa chỉ đăng ký của anh.",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chính thức, nêu rõ mục đích và lý do liên hệ, xác nhận thông tin nhân chứng/người liên quan."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không nhớ rõ về công ty N&T, em có thể cho tôi biết thêm thông tin được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vụ án này liên quan đến hoạt động buôn bán hàng giả, hàng nhái với quy mô lớn, ảnh hưởng đến quyền lợi người tiêu dùng và trật tự kinh tế. Công ty N&T là một trong những đơn vị bị nghi ngờ có liên quan đến việc phân phối các sản phẩm này. Chúng tôi cần anh cung cấp thông tin về các giao dịch hoặc hoạt động kinh doanh mà anh đã thực hiện với công ty N&T trong khoảng thời gian từ tháng 5 đến tháng 8 năm nay, đặc biệt là các hóa đơn, chứng từ liên quan đến việc mua bán hàng hóa.",
+      "current_phase": "L2",
+      "tactic_hint": "Giúp người nghe nhớ lại bằng cách cung cấp thêm thông tin về vụ án và yêu cầu cung cấp tài liệu chứng từ có liên quan."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về cách thức và lý do mà em cần thông tin này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chúng tôi cần thông tin này để làm rõ vai trò của anh trong vụ án, liệu anh có phải là nạn nhân, nhân chứng hay liên quan đến các hoạt động bất hợp pháp. Việc cung cấp đầy đủ và chính xác thông tin sẽ giúp chúng tôi đẩy nhanh quá trình điều tra và làm sáng tỏ vụ việc, đảm bảo công lý được thực thi. Đây là một phần quan trọng trong quy trình làm việc của Viện Kiểm sát, anh cứ yên tâm hợp tác.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích rõ ràng mục đích và sự cần thiết của việc cung cấp thông tin, nhấn mạnh tầm quan trọng của việc hợp tác với cơ quan nhà nước."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em vẫn cảm thấy hơi lo lắng và không chắc chắn về việc này, có cách nào để em xác minh được thông tin mà em cung cấp không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Lưu Đức Quang Sơn, tôi hiểu sự lo lắng của anh. Anh có thể gọi trực tiếp đến tổng đài của Viện Kiểm sát Nhân dân Tối cao theo số điện thoại [số điện thoại tổng đài] để xác minh thông tin về cuộc gọi này và về Viện trưởng Dương Gia Khoa ạ. Chúng tôi luôn khuyến khích công dân xác minh thông tin để đảm bảo an toàn.",
+      "current_phase": "L2",
+      "tactic_hint": "Giảm bớt sự nghi ngờ bằng cách hướng dẫn người nghe xác minh thông tin qua kênh chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn thông tin, nhưng em vẫn thấy hơi bối rối. Em có thể biết số điện thoại tổng đài đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, số điện thoại tổng đài chính thức của Viện Kiểm sát Nhân dân Tối cao là 024.3825.5058. Anh vui lòng liên hệ để xác minh thông tin. Sau khi xác minh, anh có thể gọi lại cho tôi theo số máy này, hoặc chuẩn bị các tài liệu cần thiết để chúng tôi tiện làm việc.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp số điện thoại tổng đài chính thức để người nghe xác minh, đồng thời nhắc lại các bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ liên hệ để xác minh thông tin, nhưng em có thể hỏi thêm một chút về những tài liệu cụ thể mà em cần chuẩn bị không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh vui lòng chuẩn bị các hóa đơn, chứng từ, sao kê tài khoản ngân hàng liên quan đến các giao dịch với công ty N&T từ tháng 5 đến tháng 8 năm nay. Đặc biệt là những giao dịch có giá trị lớn hoặc bất thường. Sau khi xác minh thông tin, anh có thể gọi lại cho tôi để chúng ta thống nhất thời gian và địa điểm làm việc cụ thể.",
+      "current_phase": "L2",
+      "tactic_hint": "Thống nhất các tài liệu cần chuẩn bị cụ thể để người nghe biết rõ, đồng thời nhắc lại việc xác minh thông tin và bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy thông tin này khá nhạy cảm, nhưng em sẽ cố gắng chuẩn bị những tài liệu đó, cảm ơn em đã giúp tôi rõ hơn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ yên tâm chuẩn bị. Sau khi đã xác minh thông tin từ tổng đài và có đầy đủ tài liệu, anh vui lòng liên hệ lại với tôi theo số máy này để chúng ta thống nhất lịch hẹn làm việc trực tiếp tại Viện Kiểm sát, hoặc chúng tôi sẽ gửi giấy triệu tập chính thức. Cảm ơn anh đã hợp tác.",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất bước tiếp theo, nhắc lại việc xác minh thông tin và chuẩn bị tài liệu, đồng thời đưa ra các lựa chọn về hình thức làm việc để kết thúc cuộc gọi một cách tự nhiên."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ cố gắng làm theo, nhưng em vẫn cảm thấy bối rối và lo lắng về việc này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Lưu Đức Quang Sơn, tôi hiểu cảm giác của anh. Tuy nhiên, việc hợp tác với cơ quan điều tra là trách nhiệm của mỗi công dân để làm sáng tỏ sự việc và bảo vệ quyền lợi chính đáng. Anh cứ yên tâm làm theo hướng dẫn, Viện Kiểm sát sẽ đảm bảo mọi quyền lợi hợp pháp của anh. Sau khi xác minh và chuẩn bị tài liệu, anh có thể gọi lại cho tôi nhé.",
+      "current_phase": "L3",
+      "tactic_hint": "Trấn an người nghe, nhấn mạnh trách nhiệm công dân và quyền lợi được bảo vệ, nhắc lại các bước tiếp theo."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn những thông tin mà em đã nhận được, nhưng em vẫn cảm thấy lo lắng về việc này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Anh Lưu Đức Quang Sơn, việc hợp tác với cơ quan nhà nước trong những vụ việc liên quan đến pháp luật là hết sức quan trọng. Anh cứ yên tâm thực hiện theo hướng dẫn của chúng tôi, mọi thông tin của anh sẽ được bảo mật tuyệt đối. Sau khi anh xác minh thông tin và chuẩn bị tài liệu, anh có thể gọi lại cho tôi bất cứ lúc nào để chúng ta sắp xếp lịch làm việc cụ thể. Cảm ơn anh.",
+      "current_phase": "L3",
+      "tactic_hint": "Nhấn mạnh tầm quan trọng của việc hợp tác, trấn an về bảo mật thông tin và nhắc lại bước tiếp theo một cách nhẹ nhàng để kết thúc cuộc gọi."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1516,
+      "output_tokens": 2082
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 16297,
+      "output_tokens": 1458
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19699,
+      "output_tokens": 582
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00773,
+    "output_usd": 0.014404,
+    "total_usd": 0.022134
+  }
+}

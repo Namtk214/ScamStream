@@ -1,0 +1,52 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_84d33218a7]
+  Caller thật: Thợ sản xuất/lắp ráp hàng da (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Trưởng phòng Kiểm soát chất lượng & An toàn lao động @ Công ty TNHH Xây dựng & Trang thiết bị Bảo vệ Lao động Việt Nam
+  Listener: Kỹ thuật viên xây dựng dân dụng (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Target: LEGIT | Path: LEGIT
+  Context: Thợ sản xuất da chuyên sang lĩnh vực trang thiết bị bảo vệ lao động (giáp, mũ, dây an toàn da) có nhu cầu kiểm tra tiêu chuẩn an toàn công trường xây dựng. Kỹ thuật viên xây dựng là người trực tiếp sử dụng/quản lý thiết bị này, nên là mục tiêu liên lạc tự nhiên.
+  Pretext: Công ty cung cấp trang thiết bị bảo vệ lao động (dây an toàn, mũ bảo hiểm, áo giáp da) liên hệ kỹ thuật viên xây dựng để: (1) Cập nhật hợp đồng dịch vụ bảo trì định kỳ; (2) Kiểm tra nhu cầu trang thiết bị mới; (3) Thông báo về chương trình khuyến mãi hoặc nâng cấp sản phẩm.
+  Listener traits: ['ham lợi dễ bị bait', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Xin chào anh Tuấn, tôi là Hồ Đức Tuấn, Trưởng phòng Kiểm soát chất lượng & An toàn lao động, công ty TNHH Xây dựng & Trang thiết bị Bảo vệ Lao động Việt Nam. Tôi có thể nói chuyện với anh một lát được không? Chúng tôi cần xác nhận thông tin hợp đồng dịch vụ hiện tại của anh.
+      → phase: L1 | tactic: Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi.
+T02 [LISTENER] Em nghe anh nói rồi, nhưng em chưa rõ thông tin hợp đồng dịch vụ đó ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, để tôi nói cụ thể hơn nhé. Theo hồ sơ của chúng tôi, công trường TP 3, Nghệ An của anh đang sử dụng dịch vụ bảo trì định kỳ các trang thiết bị bảo hộ lao động từ công ty chúng tôi. Hôm nay tôi gọi để có ba nội dung chính: thứ nhất là xác nhận thời hạn hợp đồng hiện tại của bên mình, thứ hai là hỏi xem bên anh có nhu cầu gia hạn hoặc nâng cấp thiết bị không, và cuối cùng là thông báo về một số bản cập nhật sản phẩm mới như mũ bảo hiểm loại V3 hoặc dây an toàn đạt chuẩn ISO 2023.
+      → phase: L2 | tactic: Giới thiệu rõ ràng các nội dung cần trao đổi trong cuộc gọi.
+T04 [LISTENER] Em cũng muốn biết rõ về thời hạn hợp đồng và những sản phẩm mới anh vừa nhắc đến, có điều gì đặc biệt không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, về thời hạn hợp đồng, hệ thống của chúng tôi ghi nhận hợp đồng của công trường TP 3, Nghệ An sẽ hết hạn vào cuối tháng này. Còn về sản phẩm mới, mũ bảo hiểm V3 của chúng tôi có khả năng chống va đập tốt hơn 20% so với thế hệ trước, và dây an toàn chuẩn ISO 2023 thì được cải tiến về độ bền vật liệu và cơ chế khóa, đảm bảo an toàn tối đa cho người sử dụng. Nếu anh quan tâm, tôi có thể gửi chi tiết thông số kỹ thuật và hình ảnh qua email hoặc Zalo để anh tham khảo ạ.
+      → phase: L2 | tactic: Cung cấp thêm chi tiết về hợp đồng và sản phẩm mới để kích thích sự quan tâm của khách hàng.
+T06 [LISTENER] Dạ, em thấy sản phẩm mới nghe thú vị quá, anh có thể cho em biết thêm về cách gia hạn hợp đồng được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Vâng, về việc gia hạn hợp đồng, rất đơn giản anh ạ. Công ty chúng tôi có hai lựa chọn chính: một là gia hạn theo gói dịch vụ hiện tại, hoặc hai là nâng cấp lên các gói dịch vụ cao cấp hơn với nhiều ưu đãi và quyền lợi bảo trì tốt hơn. Chúng tôi cũng có chính sách chiết khấu đặc biệt cho các hợp đồng gia hạn trước thời hạn. Nếu anh đồng ý, tôi có thể gửi bảng báo giá chi tiết từng gói qua email hoặc tin nhắn để anh tiện tham khảo và quyết định.
+      → phase: L2 | tactic: Giải thích rõ ràng các lựa chọn gia hạn hợp đồng và đề xuất gửi thông tin chi tiết.
+T08 [LISTENER] Em muốn biết thêm chi tiết về những ưu đãi cho gói dịch vụ cao cấp hơn mà anh vừa nói đến ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, đối với các gói dịch vụ cao cấp, ngoài việc bảo trì định kỳ với tần suất dày hơn, chúng tôi còn bao gồm dịch vụ kiểm tra an toàn tại chỗ hàng tháng, có đội ngũ kỹ thuật phản ứng nhanh 24/7 đối với các sự cố khẩn cấp, và đặc biệt là ưu đãi thay thế linh kiện chính hãng miễn phí trong suốt thời gian hiệu lực hợp đồng. Ngoài ra, chúng tôi còn có chương trình đào tạo an toàn lao động cho nhân viên của anh nếu anh có nhu cầu. Anh có muốn tôi gửi thông tin chi tiết về các gói này qua email hoặc Zalo ngay bây giờ không?
+      → phase: L2 | tactic: Cung cấp chi tiết các ưu đãi của gói dịch vụ cao cấp để thu hút sự quan tâm của khách hàng, đồng thời đề xuất gửi tài liệu cụ thể.
+T10 [LISTENER] Dạ, em thấy các gói dịch vụ cao cấp rất hấp dẫn, anh có thể gửi em thông tin chi tiết qua email được không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Tuyệt vời anh! Vậy anh có thể cung cấp cho tôi địa chỉ email của anh để tôi gửi toàn bộ thông tin chi tiết về các gói gia hạn hợp đồng, bảng giá và thông số kỹ thuật của các sản phẩm mới như mũ bảo hiểm V3 và dây an toàn ISO 2023 không ạ? Sau khi nhận được, anh cứ xem xét kỹ lưỡng nhé.
+      → phase: L2 | tactic: Yêu cầu thông tin email để gửi tài liệu chi tiết, chuẩn bị cho bước thống nhất và kết thúc.
+T12 [LISTENER] Dạ, em có thể cung cấp địa chỉ email là phamquangtuanhd@gmail.com ạ.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_EMAIL']
+
+T13 [CALLER] Cảm ơn anh Tuấn đã cung cấp địa chỉ email. Tôi sẽ gửi tất cả thông tin chi tiết mà chúng ta vừa trao đổi, bao gồm các gói dịch vụ, bảng giá và thông số sản phẩm mới, đến email phamquangtuanhd@gmail.com ngay bây giờ. Anh cứ xem và cân nhắc kỹ lưỡng nhé. Nếu có bất kỳ thắc mắc nào, anh có thể liên hệ lại công ty chúng tôi qua số điện thoại chính thức 0243-XXXX-XXXX để được tư vấn thêm. Cảm ơn anh và chúc anh công tác tốt!
+      → phase: L3 | tactic: Xác nhận thông tin đã nhận, thông báo hành động tiếp theo, và cung cấp kênh liên hệ chính thức cho khách hàng, sau đó kết thúc cuộc gọi một cách chuyên nghiệp.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  13 turns | suspicion=0.00
+TOKEN: in=26104 | out=3751
+COST : $0.019401
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_75364_31121\conv_84d33218a7.json  [CALLER_END]

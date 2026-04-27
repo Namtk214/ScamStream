@@ -1,0 +1,47 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_8cca09649c]
+  Caller thật: Nhân viên về tôn giáo (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên phát triển cộng đồng / Điều phối viên dự án nông nghiệp bền vững @ Tổ chức Công giáo Xã hội (hoặc chi nhánh địa phương)
+  Listener: Nhà trồng trọt (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên về tôn giáo thường điều hành các dự án cộng đồng, trong đó nông nghiệp bền vững là một trụ cột. Họ sẽ tự nhiên liên hệ với nông dân để khảo sát, hỗ trợ hoặc mời tham gia chương trình.
+  Pretext: Tổ chức Công giáo Xã hội khảo sát nông dân để đánh giá nhu cầu hỗ trợ kỹ thuật nông nghiệp bền vững hoặc mời tham gia khóa đào tạo miễn phí.
+  Listener traits: ['nhẹ dạ cả tin', 'lo lắng cho con cái']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Khoa, tôi là Nam từ Tổ chức Công giáo Xã hội. Chúng tôi đang thực hiện dự án nông nghiệp bền vững tại địa phương. Anh có thời gian nghe giới thiệu không ạ?
+      → phase: L1 | tactic: Tiếp cận chính thức, giới thiệu tổ chức và mục đích cuộc gọi.
+T02 [LISTENER] Tôi nghe anh nói rồi, nhưng tôi cần biết thêm thông tin về dự án này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, dự án của chúng tôi hướng đến việc hỗ trợ kỹ thuật nông nghiệp bền vững, cung cấp các giống cây trồng thích ứng với biến đổi khí hậu và kết nối đầu ra cho nông sản của bà con. Chúng tôi muốn khảo sát xem anh đang canh tác cây trồng gì và có vướng mắc nào không, để xem dự án có thể hỗ trợ được gì cho anh.
+      → phase: L2 | tactic: Giới thiệu chi tiết hơn về dự án và bắt đầu khảo sát nhu cầu của người nghe.
+T04 [LISTENER] Tôi hiện đang trồng rau và cây ăn quả, nhưng cũng gặp một số khó khăn trong việc tiêu thụ sản phẩm.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, trường hợp của anh rất phù hợp với mục tiêu của dự án chúng tôi. Chúng tôi có thể hỗ trợ anh về kỹ thuật canh tác bền vững để nâng cao chất lượng sản phẩm, đồng thời kết nối anh với các chuỗi cung ứng hoặc thị trường tiêu thụ ổn định hơn.
+      → phase: L2 | tactic: Xác nhận sự phù hợp của người nghe với dự án và đề xuất các hình thức hỗ trợ cụ thể, củng cố lợi ích.
+T06 [LISTENER] Tôi cảm thấy rất vui khi nghe điều đó, nhưng tôi muốn biết rõ hơn về cách mà tổ chức sẽ hỗ trợ cụ thể như thế nào.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ, trước mắt, chúng tôi sẽ mời anh tham gia một buổi hội thảo miễn phí trực tuyến hoặc trực tiếp tại địa phương, nơi các chuyên gia nông nghiệp sẽ chia sẻ kinh nghiệm và giới thiệu các mô hình canh tác hiệu quả. Sau đó, nếu anh quan tâm, chúng tôi sẽ có các buổi tư vấn riêng, thậm chí cử cán bộ xuống tận vườn để đánh giá và đưa ra giải pháp phù hợp với tình hình thực tế của anh ạ.
+      → phase: L2 | tactic: Trình bày các bước hỗ trợ cụ thể và chi tiết để người nghe hình dung rõ hơn, củng cố lòng tin và sự quan tâm.
+T08 [LISTENER] Tôi cảm thấy rất hứng thú với buổi hội thảo đó, nhưng tôi cần biết khi nào và ở đâu sẽ tổ chức ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Vâng, chúng tôi sẽ sớm gửi thông tin chi tiết về thời gian và địa điểm tổ chức hội thảo qua tin nhắn SMS đến số điện thoại của anh. Anh vui lòng theo dõi tin nhắn nhé. Sau đó, nếu anh thấy phù hợp, chúng tôi có thể sắp xếp một buổi gặp riêng để trao đổi cụ thể hơn ạ.
+      → phase: L3 | tactic: Thống nhất hành động tiếp theo, cam kết cung cấp thông tin chi tiết và gợi mở một cuộc gặp mặt trực tiếp nếu người nghe quan tâm.
+T10 [LISTENER] Tôi rất mong nhận được thông tin chi tiết từ anh qua tin nhắn, cảm ơn anh ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Vâng, tôi cảm ơn anh Khoa đã dành thời gian trao đổi. Chúc anh một ngày làm việc hiệu quả ạ.
+      → phase: L3 | tactic: Chào tạm biệt lịch sự sau khi hoàn thành mục đích cuộc gọi.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  11 turns | suspicion=0.00
+TOKEN: in=20000 | out=2718
+COST : $0.015120
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_34130_21321\conv_8cca09649c.json  [CALLER_END]

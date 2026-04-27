@@ -1,0 +1,57 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_17f12d367a]
+  Caller thật: Người thiết kế khuôn/công cụ (Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật)
+  Caller đóng vai: Nhân viên bán hàng / Tư vấn thiết bị rửa xe tự động @ Công ty cung cấp thiết bị công nghiệp / cá nhân đại lý
+  Listener: Thợ rửa xe cộ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Người thiết kế khuôn/công cụ có thể là nhân viên bán hàng hoặc đại lý cung cấp thiết bị rửa xe tự động, máy bơm, hệ thống phun nước cho các tiệm rửa xe. Đây là điểm giao thoa tự nhiên giữa hai nghề.
+  Pretext: Tư vấn bán hoặc hỗ trợ kỹ thuật về thiết bị rửa xe, nâng cấp dịch vụ, hoặc thông báo về chương trình khuyến mãi / bảo hành thực sự
+  Listener traits: ['nóng tính dễ cáu', 'ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Phan Thế Quân, tôi là Bảo Hà từ công ty ABC chuyên cung cấp thiết bị rửa xe tự động ạ. Hôm nay tôi gọi để thông báo về chương trình nâng cấp và bảo dưỡng hệ thống phun nước cho cửa hàng anh, đặc biệt là các dòng máy đời cũ ạ.
+      → phase: L1 | tactic: Xưng danh và mục đích rõ ràng, đề cập dịch vụ có lợi cho khách hàng.
+T02 [LISTENER] Em cảm ơn anh đã gọi, nhưng em không rõ chương trình này có lợi gì cho cửa hàng của em không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng, anh Quân. Chương trình này sẽ giúp hệ thống phun nước của cửa hàng anh hoạt động hiệu quả hơn, giảm tiêu thụ nước và điện, đặc biệt là khắc phục các lỗi thường gặp ở máy đời cũ như áp lực yếu hoặc tắc nghẽn. Anh có thể tiết kiệm chi phí vận hành và tăng chất lượng dịch vụ cho khách hàng của mình ạ.
+      → phase: L2 | tactic: Trình bày lợi ích cụ thể của chương trình để thu hút sự quan tâm của khách hàng.
+T04 [LISTENER] Nghe có vẻ hợp lý đấy, nhưng em chưa rõ chi phí cho chương trình này là bao nhiêu ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, về chi phí thì tùy thuộc vào hiện trạng hệ thống của cửa hàng anh và gói nâng cấp anh chọn. Chúng tôi có các gói linh hoạt, từ bảo dưỡng định kỳ đến nâng cấp toàn diện. Anh có tiện cung cấp thêm thông tin về model máy hiện tại và mức độ sử dụng không ạ, để tôi có thể đưa ra báo giá sơ bộ chính xác hơn?
+      → phase: L2 | tactic: Trả lời câu hỏi về chi phí bằng cách yêu cầu thêm thông tin để cá nhân hóa giải pháp, đồng thời xác định nhu cầu của khách hàng.
+T06 [LISTENER] Em đang sử dụng máy phun nước đời cũ, nhưng cụ thể model nào thì em không nhớ rõ, chỉ biết nó đã gần 5 năm rồi. Em muốn biết giá cả trước đã ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, tôi hiểu. Nếu anh không nhớ model cụ thể thì có thể chụp hình máy gửi qua Zalo cho tôi được không ạ? Tôi sẽ dựa vào đó để ước tính và đưa ra mức giá tốt nhất cho anh. Hoặc nếu tiện, tôi có thể sắp xếp một buổi ghé thăm cửa hàng để kiểm tra trực tiếp và tư vấn chi tiết hơn ạ.
+      → phase: L2 | tactic: Đề xuất phương án thu thập thông tin dễ dàng hơn và đưa ra lựa chọn ghé thăm trực tiếp để tư vấn chi tiết, giúp khách hàng tiện lợi hơn.
+T08 [LISTENER] Em không có Zalo, không biết có cách nào khác để gửi hình không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] À, vậy thì anh có thể gửi ảnh qua email cho tôi được không ạ? Địa chỉ email của tôi là ha.bui@abc.com. Hoặc cách tốt nhất là tôi vẫn muốn ghé thăm trực tiếp để kiểm tra và tư vấn chính xác nhất, anh tiện vào thời gian nào trong tuần tới ạ?
+      → phase: L2 | tactic: Đề xuất phương án gửi ảnh qua email và vẫn ưu tiên phương án ghé thăm trực tiếp để tư vấn chính xác nhất, đồng thời chủ động hẹn lịch.
+T10 [LISTENER] Em có thể gửi ảnh qua email nhưng em không biết sử dụng email, có cách nào khác để em có thể gửi hình không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ, nếu vậy thì để đơn giản nhất, tôi vẫn đề xuất phương án ghé thăm cửa hàng trực tiếp như đã nói. Anh Quân có thể cho tôi biết thời gian nào trong tuần tới thì tiện cho anh nhất để tôi sắp xếp lịch trình và đến kiểm tra máy ạ?
+      → phase: L2 | tactic: Kiên trì đề xuất phương án ghé thăm trực tiếp để giải quyết khó khăn của khách hàng trong việc cung cấp thông tin, đồng thời chủ động hẹn lịch để tiến tới hành động cụ thể.
+T12 [LISTENER] Em thấy tuần sau hơi bận, không biết em có thể hẹn lại vào tuần sau nữa không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ được chứ anh, tuần sau nữa cũng được ạ. Vậy anh Quân có thể cho tôi một vài khung giờ cụ thể trong tuần đó mà anh rảnh không, để tôi chủ động sắp xếp và đến tư vấn cho anh ạ?
+      → phase: L2 | tactic: Linh hoạt theo lịch của khách hàng, đồng thời chủ động đề nghị khách cung cấp khung giờ cụ thể để chốt lịch hẹn.
+T14 [LISTENER] Tuần sau nữa em cũng khá bận, em sẽ liên lạc lại vào thời gian sau ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ vâng, không sao ạ. Anh cứ sắp xếp được thời gian thuận tiện nhất rồi liên hệ lại cho tôi theo số 0323268792 này nhé. Hoặc anh có thể gọi trực tiếp lên tổng đài công ty ABC theo số 1900 6789 để được hỗ trợ ạ. Rất mong được làm việc với anh Quân.
+      → phase: L3 | tactic: Tôn trọng quyết định của khách hàng, cung cấp lại thông tin liên hệ và tổng đài chính thức, kết thúc cuộc gọi một cách tự nhiên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  15 turns | suspicion=0.00
+TOKEN: in=29802 | out=3004
+COST : $0.016712
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_31156_91220\conv_17f12d367a.json  [CALLER_END]

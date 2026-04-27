@@ -1,0 +1,292 @@
+{
+  "conversation_id": "conv_6f53ca720b",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0017",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Đặng Khánh Lan",
+    "fake_age": 40,
+    "real_occupation": "Lao động trồng trọt và chăn nuôi hỗn hợp tự cung tự cấp",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Thương lái/Nhân viên thu mua nông sản",
+    "caller_org": "thương lái tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa thương lái muốn mua sản phẩm nông sản, sử dụng tên đầy đủ 'Võ Gia An' và số ID để tạo ấn tượng đã xác minh thông tin, sau đó dẫn dắt vào yêu cầu chuyển khoản tiền đặt cọc hoặc phí xử lý hợp đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BANK_ACCOUNT",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là thương lái Tây Ninh/Đồng Tháp tên là 'Anh Minh', nói đã xác nhận thông tin Võ Gia An qua hệ thống (nêu số ID 056089415623) và muốn thương thuyết mua 5-10 tấn nông sản trong tháng này"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp bằng cách nói 'Hiện tại giá cao, nhu cầu lớn, nhưng phải ký hợp đồng hôm nay. Tôi đã chuẩn bị hợp đồng, chỉ cần anh chuyển 2-3 triệu tiền đặt cọc để khóa giá và bảo hành chất lượng'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân chuyển tiền vào tài khoản 8485482112 (tài khoản của nạn nhân nhưng scammer kiểm soát) hoặc tài khoản trung gian khác, nói 'Sau khi nhận tiền, tôi sẽ gửi hợp đồng và sắp xếp xe vận chuyển'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, bảo 'Anh có thể gọi số thuế 3282484488 để xác minh, đây là số của công ty chúng tôi' (dùng VIC_TAX_SOCIAL_ID để tạo ảo tưởng công ty chính thức), sau đó tắt máy và chặn liên lạc"
+        }
+      ]
+    },
+    "scenario_context": "Thương lái nông sản thường xuyên liên hệ với các nhà trồng trọt để mua bán sản phẩm, tìm hiểu năng lực sản xuất, hoặc thương thuyết giá. Đây là mối quan hệ tự nhiên trong chuỗi giá trị nông nghiệp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0017",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1989,
+      "age": 36,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21321",
+      "title": "Nhà trồng trọt",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp",
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Võ Gia An",
+      "VIC_ID_DOC": "056089415623",
+      "VIC_ADDRESS": "TP 9, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Nhà trồng trọt",
+      "VIC_CONTACT": "0352286761",
+      "VIC_TAX_SOCIAL_ID": "3282484488"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "383926",
+      "VIC_CREDENTIAL": "1107",
+      "VIC_SIM_INFO": "0352286761",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "8485482112",
+      "VIC_CARD_DATA": "4520 **** **** 5321",
+      "VIC_BALANCE": "665 triệu đồng",
+      "VIC_ASSET": "2.4 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Võ Gia An",
+    "VIC_CONTACT": "0352286761",
+    "VIC_ID_DOC": "056089415623",
+    "VIC_BANK_ACCOUNT": "8485482112",
+    "VIC_TAX_SOCIAL_ID": "3282484488"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Thương lái/Nhân viên thu mua nông sản",
+    "caller_org": "thương lái tự do",
+    "scenario_context": "Thương lái nông sản thường xuyên liên hệ với các nhà trồng trọt để mua bán sản phẩm, tìm hiểu năng lực sản xuất, hoặc thương thuyết giá. Đây là mối quan hệ tự nhiên trong chuỗi giá trị nông nghiệp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa thương lái muốn mua sản phẩm nông sản, sử dụng tên đầy đủ 'Võ Gia An' và số ID để tạo ấn tượng đã xác minh thông tin, sau đó dẫn dắt vào yêu cầu chuyển khoản tiền đặt cọc hoặc phí xử lý hợp đồng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_BANK_ACCOUNT",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là thương lái Tây Ninh/Đồng Tháp tên là 'Anh Minh', nói đã xác nhận thông tin Võ Gia An qua hệ thống (nêu số ID 056089415623) và muốn thương thuyết mua 5-10 tấn nông sản trong tháng này"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác khẩn cấp bằng cách nói 'Hiện tại giá cao, nhu cầu lớn, nhưng phải ký hợp đồng hôm nay. Tôi đã chuẩn bị hợp đồng, chỉ cần anh chuyển 2-3 triệu tiền đặt cọc để khóa giá và bảo hành chất lượng'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân chuyển tiền vào tài khoản 8485482112 (tài khoản của nạn nhân nhưng scammer kiểm soát) hoặc tài khoản trung gian khác, nói 'Sau khi nhận tiền, tôi sẽ gửi hợp đồng và sắp xếp xe vận chuyển'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, bảo 'Anh có thể gọi số thuế 3282484488 để xác minh, đây là số của công ty chúng tôi' (dùng VIC_TAX_SOCIAL_ID để tạo ảo tưởng công ty chính thức), sau đó tắt máy và chặn liên lạc"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thương lái thực sự gọi để tìm hiểu khả năng cung cấp nông sản, thương thuyết giá mua bán, hoặc thông báo về đơn hàng đã cam kết",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ (tên thật, số điện thoại công ty nếu có), xác nhận đúng người 'Anh Võ Gia An không ạ? Tôi là Nguyễn Văn Hùng, thương lái nông sản từ HTX Lợi Tâm, muốn hỏi về khả năng cung cấp'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Hỏi chi tiết về sản phẩm (loại, chất lượng, sản lượng/năm), thời gian thu hoạch, giá dự kiến, khả năng giao hàng; nếu có nhu cầu thực sự, thương thuyết giá qua điện thoại hoặc hẹn gặp trực tiếp"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất: Nếu đạt được thỏa thuận, sẽ gửi hợp đồng bằng văn bản (SMS, email, hoặc giấy tờ trực tiếp), thanh toán theo quy định (tiền mặt hoặc chuyển khoản sau khi giao hàng); nếu không, cảm ơn và chào tạm biệt lịch sự"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Võ Gia An, tôi là Đặng Khánh Lan, thương lái nông sản ở Đồng Tháp đây. Tôi muốn xác nhận lại, có phải số căn cước của anh là 056089415623 không ạ? Hiện tại tôi đang cần thu mua khoảng 5-10 tấn nông sản trong tháng này.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, xác nhận thông tin cá nhân của nạn nhân để tạo độ tin cậy và bắt đầu thương lượng mua nông sản."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy chị gọi đúng thông tin của em rồi, nhưng em không nhớ rõ lắm về việc thu mua nông sản này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An cứ yên tâm, tôi đã xác minh kỹ thông tin qua hệ thống rồi. Hiện tại, bên tôi đang có nhu cầu lớn về nông sản, giá thu mua cũng đang rất tốt. Tôi muốn trao đổi chi tiết hơn về hợp đồng để chúng ta có thể chốt giao dịch ngay hôm nay, anh có tiện không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và lợi ích (giá tốt, nhu cầu lớn) để thúc đẩy nạn nhân vào giai đoạn ký hợp đồng, đồng thời tạo cơ hội để dẫn dắt đến việc đặt cọc."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng đang bận nhưng nếu có cơ hội thu mua với giá tốt thì em cũng muốn nghe thêm, chị cho em biết cụ thể được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An nghe tôi nói đây. Hiện tại, giá nông sản đang rất cao và nhu cầu thị trường cũng đang tăng mạnh, nên đây là thời điểm vàng để chốt giá tốt nhất. Để đảm bảo quyền lợi cho cả hai bên và khóa được mức giá này, bên tôi cần anh chuyển trước một khoản đặt cọc nhỏ, khoảng 2 đến 3 triệu đồng, để xác nhận hợp đồng và bảo hành chất lượng hàng. Sau khi nhận được tiền, tôi sẽ gửi ngay hợp đồng qua cho anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo khan hiếm và khẩn cấp về giá cả, sau đó đưa ra yêu cầu chuyển tiền đặt cọc để 'khóa giá' và 'bảo hành chất lượng', chuẩn bị cho việc yêu cầu hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng chị cho em hỏi kỹ thêm về hợp đồng và cách thức chuyển tiền được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ yên tâm. Về hợp đồng thì tôi sẽ gửi mẫu qua Zalo cho anh ngay sau khi anh chuyển tiền đặt cọc. Còn về cách thức chuyển tiền, anh vui lòng chuyển vào tài khoản 8485482112 giúp tôi nhé. Đây là tài khoản của bên bộ phận thu mua, rất tiện lợi cho việc xử lý nhanh.",
+      "current_phase": "S3",
+      "tactic_hint": "Đáp lại câu hỏi của nạn nhân về hợp đồng và cách chuyển tiền, đồng thời đưa ra tài khoản ngân hàng cụ thể để nạn nhân chuyển tiền, thúc đẩy hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Chị cho em xin số tài khoản đó lại được không ạ, em ghi lại cho chắc ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An cứ ghi lại cho chính xác nhé: 8485482112. Sau khi chuyển tiền, anh báo lại tôi một tiếng, tôi sẽ gửi hợp đồng và sắp xếp xe vận chuyển ngay.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhắc lại số tài khoản để nạn nhân dễ dàng ghi lại, đồng thời củng cố cam kết về việc gửi hợp đồng và sắp xếp vận chuyển sau khi tiền được chuyển."
+    },
+    {
+      "role": "listener",
+      "text": "Em ghi lại rồi, nhưng chị cho em hỏi thêm là mình có thể gặp mặt để thoả thuận thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An thông cảm, hiện tại tôi đang ở Đồng Tháp để thu mua lô hàng lớn nên không tiện gặp mặt trực tiếp ngay được. Nhưng anh cứ yên tâm về quy trình, mọi thứ sẽ được thực hiện nhanh chóng và minh bạch sau khi anh hoàn tất khoản đặt cọc.",
+      "current_phase": "S3",
+      "tactic_hint": "Từ chối khéo léo yêu cầu gặp mặt trực tiếp bằng lý do khoảng cách và công việc bận rộn, đồng thời tái khẳng định sự minh bạch và thúc đẩy nạn nhân tập trung vào việc chuyển tiền đặt cọc."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng hiểu, nhưng chị có thể cho em thời gian kiểm tra thêm một chút được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An thông cảm, như tôi đã nói, hiện tại giá nông sản đang rất tốt và thị trường đang biến động nhanh. Nếu anh chậm trễ, rất có thể sẽ lỡ mất cơ hội vàng này. Tôi đảm bảo mọi thứ đều sẽ rất rõ ràng sau khi anh hoàn tất việc chuyển tiền đặt cọc.",
+      "current_phase": "S3",
+      "tactic_hint": "Tái tạo cảm giác khẩn cấp và lợi ích bị mất nếu chậm trễ, đồng thời khẳng định lại sự minh bạch để trấn an nạn nhân và khuyến khích hành động chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng chị cho em thêm một chút thời gian để suy nghĩ kỹ hơn về việc này được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh An này, tôi hiểu anh cần thời gian nhưng cơ hội không chờ đợi đâu. Để anh yên tâm hơn, anh có thể gọi vào số thuế của công ty chúng tôi là 3282484488 để xác minh lại nhé. Sau đó, anh quyết định cũng chưa muộn.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực về thời gian, đồng thời đưa ra thông tin xác minh (số thuế công ty) để xây dựng niềm tin và xử lý sự từ chối, nhưng vẫn hướng tới việc nạn nhân tự đưa ra quyết định chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ gọi xác minh như chị nói, nhưng em vẫn cần thêm thời gian để xem xét ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ gọi xác minh đi. Nhưng anh lưu ý là cơ hội chốt giá tốt sẽ không còn nếu anh để lâu quá đâu nhé. Anh gọi xong báo lại tôi sớm.",
+      "current_phase": "S4",
+      "tactic_hint": "Khẳng định lại sự khẩn cấp và lợi ích bị mất nếu chậm trễ, nhưng vẫn cho nạn nhân kiểm tra thông tin để xây dựng niềm tin, đồng thời duy trì áp lực để nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm ơn chị đã thông tin, nhưng em vẫn muốn suy nghĩ thêm trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Thôi được rồi, nếu anh cần thêm thời gian để cân nhắc thì tôi cũng không ép. Nhưng anh nhớ là số lượng nông sản hiện tại đang rất khan hiếm, giá cũng có thể thay đổi bất cứ lúc nào. Khi nào anh quyết định xong thì cứ liên hệ lại cho tôi nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạm thời chấp nhận sự từ chối, nhưng vẫn nhắc nhở về sự khan hiếm và biến động giá để giữ lại khả năng nạn nhân sẽ liên hệ lại. Kết thúc cuộc gọi một cách khéo léo."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1849,
+      "output_tokens": 1468
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 20663,
+      "output_tokens": 1485
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 22602,
+      "output_tokens": 615
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.009372,
+    "output_usd": 0.011421,
+    "total_usd": 0.020793
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "conversation_id": "conv_696c0d34e1",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0078",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Mai Thu Chi",
+    "fake_age": 35,
+    "real_occupation": "Nhân viên thuyết minh giới thiệu hàng hóa",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên bán hàng vật liệu xây dựng",
+    "caller_org": "Công ty cung cấp vật liệu xây dựng / cá nhân kinh doanh vật liệu",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi cho ông Lý Công Xuân Minh với danh nghĩa nhân viên bán hàng, nói rằng công ty đang có chương trình khuyến mãi đặc biệt cho các thợ thạch cao VIP, hoặc thông báo có một đơn hàng vật liệu cần xác nhận thanh toán trước (dùng tên đầy đủ để tạo tin cậy).",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Lý Công Xuân Minh, em là nhân viên bán hàng từ công ty [tên công ty xây dựng]. Em có chương trình khuyến mãi đặc biệt dành cho các thợ thạch cao như anh' — dùng tên đầy đủ để tạo credibility cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh nhanh quyết định đi, chương trình chỉ còn hôm nay thôi. Giá vật liệu sắp tăng 15%, nếu anh đặt hôm nay thì được giảm 20% so với giá mới. Anh có nhu cầu vật liệu gần đây không?' — tạo cảm giác có lợi, nhưng phải quyết định ngay"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để anh được giá tốt nhất, anh cần thanh toán 30% tiền cọc trước qua chuyển khoản. Anh chuyển [X triệu] vào tài khoản này để em ghi nhận đơn hàng' — sử dụng tâm lý 'có lợi' để thúc đẩy chuyển tiền"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy thôi anh, chương trình này chỉ dành cho những thợ nhanh nhạy. Anh có số điện thoại của bạn anh không? Em sẽ liên hệ những người khác' — hoặc nếu thành công: 'Cảm ơn anh, em sẽ xác nhận đơn hàng trong hôm nay. Anh chờ tin từ công ty em' rồi mất tích"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên bán vật liệu xây dựng thường liên hệ trực tiếp với thợ thạch cao để giới thiệu sản phẩm mới, chương trình khuyến mãi, hoặc xác nhận đơn hàng. Đây là mối quan hệ B2B tự nhiên trong ngành xây dựng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0078",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1975,
+      "age": 50,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "71230",
+      "title": "Thợ thạch cao",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lý Công Xuân Minh",
+      "VIC_ID_DOC": "038075258676",
+      "VIC_ADDRESS": "TP 9, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ thạch cao",
+      "VIC_CONTACT": "0345370421",
+      "VIC_TAX_SOCIAL_ID": "7565105930"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "562384",
+      "VIC_CREDENTIAL": "1922",
+      "VIC_SIM_INFO": "0345370421",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2049167532653",
+      "VIC_CARD_DATA": "4103 **** **** 6968",
+      "VIC_BALANCE": "106 triệu đồng",
+      "VIC_ASSET": "147 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lý Công Xuân Minh",
+    "VIC_CONTACT": "0345370421",
+    "VIC_BALANCE": "106 triệu đồng",
+    "VIC_ASSET": "147 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên bán hàng vật liệu xây dựng",
+    "caller_org": "Công ty cung cấp vật liệu xây dựng / cá nhân kinh doanh vật liệu",
+    "scenario_context": "Nhân viên bán vật liệu xây dựng thường liên hệ trực tiếp với thợ thạch cao để giới thiệu sản phẩm mới, chương trình khuyến mãi, hoặc xác nhận đơn hàng. Đây là mối quan hệ B2B tự nhiên trong ngành xây dựng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi cho ông Lý Công Xuân Minh với danh nghĩa nhân viên bán hàng, nói rằng công ty đang có chương trình khuyến mãi đặc biệt cho các thợ thạch cao VIP, hoặc thông báo có một đơn hàng vật liệu cần xác nhận thanh toán trước (dùng tên đầy đủ để tạo tin cậy).",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Lý Công Xuân Minh, em là nhân viên bán hàng từ công ty [tên công ty xây dựng]. Em có chương trình khuyến mãi đặc biệt dành cho các thợ thạch cao như anh' — dùng tên đầy đủ để tạo credibility cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Anh nhanh quyết định đi, chương trình chỉ còn hôm nay thôi. Giá vật liệu sắp tăng 15%, nếu anh đặt hôm nay thì được giảm 20% so với giá mới. Anh có nhu cầu vật liệu gần đây không?' — tạo cảm giác có lợi, nhưng phải quyết định ngay"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để anh được giá tốt nhất, anh cần thanh toán 30% tiền cọc trước qua chuyển khoản. Anh chuyển [X triệu] vào tài khoản này để em ghi nhận đơn hàng' — sử dụng tâm lý 'có lợi' để thúc đẩy chuyển tiền"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy thôi anh, chương trình này chỉ dành cho những thợ nhanh nhạy. Anh có số điện thoại của bạn anh không? Em sẽ liên hệ những người khác' — hoặc nếu thành công: 'Cảm ơn anh, em sẽ xác nhận đơn hàng trong hôm nay. Anh chờ tin từ công ty em' rồi mất tích"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên bán hàng thực sự liên hệ để giới thiệu sản phẩm vật liệu xây dựng mới, cập nhật giá, hoặc xác nhận một đơn hàng trước đó của thợ thạch cao",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: 'Chào anh, em là nhân viên bán hàng từ công ty [tên thực]. Anh có phải là Lý Công Xuân Minh không? Em muốn trao đổi một chút về sản phẩm vật liệu mới của công ty' — xác nhận đúng người, xưng danh rõ ràng"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Công ty em vừa nhập hàng vữa vừa (thạch cao, xi măng, cát...). Giá rất cạnh tranh. Anh có quan tâm không? Em có thể gửi bảng giá cho anh' — trình bày thông tin sản phẩm, giá cả, điều kiện mua hàng rõ ràng"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Anh cân nhắc xem. Nếu anh cần, anh gọi lại cho em. Em sẵn sàng giao hàng theo yêu cầu' hoặc 'Em sẽ gửi bảng giá qua SMS/zalo cho anh. Anh xem rồi liên hệ lại nha' — kết thúc cuộc gọi một cách bình thường"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Lý Công Xuân Minh, em là Mai Thu Chi, nhân viên bán hàng từ công ty Vật Liệu Xây Dựng Số 1. Em đang có một chương trình khuyến mãi đặc biệt dành riêng cho các thợ thạch cao ưu tú như anh ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, chào hỏi và sử dụng tên đầy đủ nạn nhân để tạo credibility cao, giới thiệu chương trình khuyến mãi đặc biệt."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em, nhưng chương trình khuyến mãi này cụ thể ra sao vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, công ty bên em đang có chương trình tri ân khách hàng thân thiết, đặc biệt là các thợ thạch cao đang cần vật liệu. Anh nhanh quyết định đi ạ, chương trình chỉ còn trong hôm nay thôi. Giá vật liệu sắp tăng 15%, nhưng nếu anh đặt hàng và thanh toán đủ cọc ngay hôm nay thì sẽ được giảm 20% trên giá mới. Anh Lý Công Xuân Minh có nhu cầu vật liệu thạch cao nào gần đây không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và lợi ích tài chính lớn (giảm giá 20% trên giá mới sau khi tăng 15%) để thúc đẩy quyết định nhanh chóng, đồng thời hỏi về nhu cầu vật liệu để xác nhận lại khả năng chuyển đổi."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe em nói có giảm giá, nhưng tôi cần thời gian cân nhắc một chút để xem mình có cần vật liệu không đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh cứ suy nghĩ đi ạ, nhưng em nhắc khéo là chương trình này chỉ áp dụng trong ngày hôm nay thôi. Nếu anh chốt sớm, mình sẽ tiết kiệm được một khoản đáng kể đó ạ. Anh cho em hỏi thêm, số dư tài khoản của anh hiện tại là 106 triệu, vậy anh có thấy phù hợp với việc đặt cọc vật liệu đợt này không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh lại sự khẩn cấp và lợi ích, đồng thời sử dụng thông tin về số dư tài khoản của nạn nhân (VIC_BALANCE) để gợi ý khả năng thanh toán và thúc đẩy quyết định, tăng cường sự tin cậy rằng mình nắm rõ thông tin của họ."
+    },
+    {
+      "role": "listener",
+      "text": "Em ơi, tôi chưa quyết định được, nên tôi vẫn cần thêm thời gian để suy nghĩ nhé.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1817,
+      "output_tokens": 1535
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3926,
+      "output_tokens": 505
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5594,
+      "output_tokens": 201
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003441,
+    "output_usd": 0.009058,
+    "total_usd": 0.012499
+  }
+}

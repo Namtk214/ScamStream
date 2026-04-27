@@ -1,0 +1,190 @@
+{
+  "conversation_id": "conv_15c29c3fc4",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0026",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Tiến Gia Hải",
+    "fake_age": 30,
+    "real_occupation": "Nhân viên môi giới thương mại",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên kinh doanh B2B - Nhà cung cấp thiết bị y tế và công nghệ quang học",
+    "caller_org": "Công ty TNHH Thiết bị Y tế Ánh Sáng",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Giới thiệu chính thức về các sản phẩm thiết bị y tế mới, dịch vụ bảo hành, hoặc mời tham dự hội thảo chuyên môn về công nghệ nhãn khoa.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & Xác nhận: 'Chào Thầy Võ Đức Thế Tuấn, em là Minh từ Công ty Ánh Sáng. Em xin phép gọi để giới thiệu về dòng sản phẩm kính hiển vi phẫu thuật mắt mới nhất. Đây có phải lúc thích hợp để nói chuyện không Thầy?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi vừa nhập khẩu thiết bị OCT 3D từ Nhật, với độ phân giải cao hơn 40% so với dòng cũ. Hiện chúng tôi đang liên hệ các chuyên gia nhãn khoa để lấy ý kiến chuyên môn và mời tham dự buổi demo tại Hà Nội vào thứ Sáu tuần tới. Thầy có quan tâm không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu Thầy đồng ý, em sẽ gửi thư mời chính thức qua email hoặc SMS kèm địa điểm và thời gian. Hoặc nếu Thầy có câu hỏi, em sẽ kết nối với kỹ sư kỹ thuật của công ty. Cảm ơn Thầy đã lắng nghe!'"
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên môi giới thương mại tự nhiên tiếp xúc với các chuyên gia y tế để giới thiệu thiết bị, dịch vụ nâng cấp, hoặc các chương trình hợp tác kinh doanh trong lĩnh vực nhãn khoa. Đây là giao điểm kinh doanh hợp lý."
+  },
+  "listener_card": {
+    "listener_id": "lis_0026",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1998,
+      "age": 27,
+      "province": "Bình Dương",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "22670",
+      "title": "Nhà chuyên môn về thị lực và nhãn khoa",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Võ Đức Thế Tuấn",
+      "VIC_ID_DOC": "074098470158",
+      "VIC_ADDRESS": "TP 2, Bình Dương",
+      "VIC_EMPLOYMENT": "Nhà chuyên môn về thị lực và nhãn khoa",
+      "VIC_CONTACT": "0329997061",
+      "VIC_TAX_SOCIAL_ID": "2450786599"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "1527",
+      "VIC_CREDENTIAL": "7972",
+      "VIC_SIM_INFO": "0329997061",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7314496825171",
+      "VIC_CARD_DATA": "4375 **** **** 4009",
+      "VIC_BALANCE": "470 triệu đồng",
+      "VIC_ASSET": "612 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Võ Đức Thế Tuấn",
+    "VIC_CONTACT": "0329997061",
+    "VIC_BALANCE": "470 triệu đồng",
+    "VIC_TAX_SOCIAL_ID": "2450786599",
+    "VIC_CARD_DATA": "4375 **** **** 4009"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh B2B - Nhà cung cấp thiết bị y tế và công nghệ quang học",
+    "caller_org": "Công ty TNHH Thiết bị Y tế Ánh Sáng",
+    "scenario_context": "Nhân viên môi giới thương mại tự nhiên tiếp xúc với các chuyên gia y tế để giới thiệu thiết bị, dịch vụ nâng cấp, hoặc các chương trình hợp tác kinh doanh trong lĩnh vực nhãn khoa. Đây là giao điểm kinh doanh hợp lý.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction | money_transfer",
+      "pretext": "Gọi giới thiệu chương trình 'Hợp tác Đầu tư Thiết bị Nhãn Khoa' với lợi suất cao, yêu cầu xác nhận thông tin cá nhân và chuyển khoản 'tiền ký quỹ' hoặc 'phí đăng ký'. Sử dụng tên đầy đủ và số điện thoại để tạo ấn tượng đã xác minh sẵn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng lòng tin: 'Chào Thầy Võ Đức Thế Tuấn, em là Minh từ Công ty Ánh Sáng. Em xin phép gọi vì em có một cơ hội đầu tư độc quyền dành cho các chuyên gia nhãn khoa như Thầy. Số điện thoại của Thầy là 0329997061 đúng không? Công ty em vừa nhận được danh sách các bác sĩ chuyên môn cao từ Hiệp hội Nhãn khoa.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý & Tạo khẩn cấp: 'Đây là chương trình hạn chế, chỉ dành cho 50 chuyên gia đầu tiên. Lợi suất 8-12% mỗi tháng từ việc cung cấp thiết bị khám mắt cao cấp cho các phòng khám. Thầy có 470 triệu, đây là khoản vừa vặn để ký quỹ. Nếu muốn vào, hôm nay là hạn chót vì ngày mai danh sách sẽ đóng.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác nhận danh sách, em cần Thầy cung cấp số thẻ tín dụng (4375****4009) và mã OTP để xác minh. Sau đó chuyển 50 triệu tiền ký quỹ vào tài khoản công ty. Em sẽ gửi hợp đồng và giấy tờ pháp lý sau khi nhận được tiền.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ giảm áp lực nhưng lấy cớ 'để lại số điện thoại để liên hệ lại' hoặc 'chuyển cho đồng nghiệp khác'. Nếu thành công, khóa máy hoặc tắt số."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Giới thiệu chính thức về các sản phẩm thiết bị y tế mới, dịch vụ bảo hành, hoặc mời tham dự hội thảo chuyên môn về công nghệ nhãn khoa.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & Xác nhận: 'Chào Thầy Võ Đức Thế Tuấn, em là Minh từ Công ty Ánh Sáng. Em xin phép gọi để giới thiệu về dòng sản phẩm kính hiển vi phẫu thuật mắt mới nhất. Đây có phải lúc thích hợp để nói chuyện không Thầy?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi vừa nhập khẩu thiết bị OCT 3D từ Nhật, với độ phân giải cao hơn 40% so với dòng cũ. Hiện chúng tôi đang liên hệ các chuyên gia nhãn khoa để lấy ý kiến chuyên môn và mời tham dự buổi demo tại Hà Nội vào thứ Sáu tuần tới. Thầy có quan tâm không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Nếu Thầy đồng ý, em sẽ gửi thư mời chính thức qua email hoặc SMS kèm địa điểm và thời gian. Hoặc nếu Thầy có câu hỏi, em sẽ kết nối với kỹ sư kỹ thuật của công ty. Cảm ơn Thầy đã lắng nghe!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Võ Đức Thế Tuấn, tôi là Hoàng Tiến Gia Hải từ Công ty Ánh Sáng. Tôi xin phép gọi để giới thiệu về dòng sản phẩm kính hiển vi phẫu thuật mắt mới nhất. Đây có phải lúc thích hợp để nói chuyện không anh?",
+      "current_phase": "L1",
+      "tactic_hint": "Giới thiệu sản phẩm mới và hỏi sự cho phép để tiếp tục cuộc trò chuyện, lịch sự và đúng vai trò."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất vui khi được anh gọi, anh cứ nói tiếp ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, cảm ơn anh. Chúng tôi vừa nhập khẩu thiết bị OCT 3D từ Nhật Bản, với độ phân giải cao hơn 40% so với dòng cũ. Hiện tại, chúng tôi đang liên hệ các chuyên gia nhãn khoa để lấy ý kiến chuyên môn và mời tham dự buổi demo tại Hà Nội vào thứ Sáu tuần tới. Anh có quan tâm đến công nghệ này không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày thông tin chi tiết về sản phẩm mới và mời tham dự sự kiện để khách hàng có thể trải nghiệm trực tiếp."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất quan tâm đến công nghệ này, anh có thể cho em biết thêm chi tiết về buổi demo không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Nếu anh đồng ý, tôi sẽ gửi thư mời chính thức qua email hoặc tin nhắn SMS kèm địa điểm và thời gian cụ thể của buổi demo. Hoặc nếu anh có bất kỳ câu hỏi nào cần giải đáp thêm, tôi có thể kết nối anh với kỹ sư kỹ thuật của công ty để được tư vấn chuyên sâu. Cảm ơn anh đã lắng nghe!",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất hành động tiếp theo, cung cấp lựa chọn cho khách hàng và kết thúc cuộc gọi một cách lịch sự."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1846,
+      "output_tokens": 1689
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3380,
+      "output_tokens": 404
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 3493,
+      "output_tokens": 128
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003046,
+    "output_usd": 0.009532,
+    "total_usd": 0.012578
+  }
+}

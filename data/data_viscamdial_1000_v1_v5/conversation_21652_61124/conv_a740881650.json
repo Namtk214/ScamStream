@@ -1,0 +1,359 @@
+{
+  "conversation_id": "conv_a740881650",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0009",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Trần Thị Linh",
+    "fake_age": 38,
+    "real_occupation": "Nhà khảo sát đất",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên khảo sát - Công ty tư vấn quy hoạch sử dụng đất nông nghiệp",
+    "caller_org": "Công ty Tư vấn Phát triển Nông nghiệp Đồng Tháp",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty tư vấn nông nghiệp thực sự tiến hành khảo sát đất nông nghiệp ở Vĩnh Long nhằm cập nhật dữ liệu chất lượng đất, lên kế hoạch cải tạo, và giới thiệu các chương trình hỗ trợ chính thức từ Sở Nông nghiệp địa phương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Gọi số 0834663562, xưng danh đầy đủ 'Tôi là Minh, nhân viên khảo sát của Công ty Tư vấn Phát triển Nông nghiệp Đồng Tháp, được Sở Nông nghiệp Vĩnh Long ủy thác'. Hỏi xác nhận 'Đây có phải là hộ ông/bà Huỳnh Diễm Hồng Chi quản lý mảnh đất trồng cây điều không?' và xin phép 'Tôi có thể nói chuyện được một lát không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết 'Chúng tôi đang thực hiện khảo sát hiện trạng đất nông nghiệp để cập nhật bản đồ đất và xác định các biện pháp cải tạo phù hợp. Chúng tôi muốn hỏi một số thông tin: Ruộng của ông/bà trồng cây điều bao lâu rồi? Năng suất bình quân mỗi năm bao nhiêu? Đất có hiện tượng gì bất thường không (mặn, úng, chua)?'. Có thể đặt lịch khảo sát trực tiếp hoặc gửi form online."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Sau khi thu thập thông tin, scammer nói 'Cảm ơn ông/bà. Chúng tôi sẽ xử lý dữ liệu và gửi báo cáo khảo sát cho ông/bà trong vòng 2 tuần. Nếu có chương trình hỗ trợ phù hợp, chúng tôi sẽ liên hệ lại. Chúc ông/bà mùa vụ tốt', rồi cúp máy một cách tự nhiên."
+        }
+      ]
+    },
+    "scenario_context": "Nhà khảo sát đất cần liên hệ trực tiếp với chủ/quản lý ruộng đất nông nghiệp để khảo sát hiện trạng đất, độ phì nhiêu, và các dự án cải tạo đất. Lao động trồng cây điều thường là người quản lý hoặc có thẩm quyền cung cấp thông tin về mảnh đất."
+  },
+  "listener_card": {
+    "listener_id": "lis_0009",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1977,
+      "age": 48,
+      "province": "Vĩnh Long",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "61124",
+      "title": "Lao động trồng, thu hoạch sản phẩm cây điều",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Diễm Hồng Chi",
+      "VIC_ID_DOC": "086177027175",
+      "VIC_ADDRESS": "Quận 10, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Lao động trồng, thu hoạch sản phẩm cây điều",
+      "VIC_CONTACT": "0834663562",
+      "VIC_TAX_SOCIAL_ID": "8581124088"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "018073",
+      "VIC_CREDENTIAL": "551696",
+      "VIC_SIM_INFO": "0834663562",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "6081144226806",
+      "VIC_CARD_DATA": "4535 **** **** 6921",
+      "VIC_BALANCE": "41 triệu đồng",
+      "VIC_ASSET": "30 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Diễm Hồng Chi",
+    "VIC_CONTACT": "0834663562",
+    "LOCATION": "Vĩnh Long"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên khảo sát - Công ty tư vấn quy hoạch sử dụng đất nông nghiệp",
+    "caller_org": "Công ty Tư vấn Phát triển Nông nghiệp Đồng Tháp",
+    "scenario_context": "Nhà khảo sát đất cần liên hệ trực tiếp với chủ/quản lý ruộng đất nông nghiệp để khảo sát hiện trạng đất, độ phì nhiêu, và các dự án cải tạo đất. Lao động trồng cây điều thường là người quản lý hoặc có thẩm quyền cung cấp thông tin về mảnh đất.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo về chương trình hỗ trợ cải tạo đất nông nghiệp của chính phủ dành cho các hộ trồng cây công nghiệp ở Vĩnh Long. Scammer sẽ gọi cho Huỳnh Diễm Hồng Chi để 'xác minh thông tin đất đai' và 'đăng ký hỗ trợ', nhưng thực chất là để lừa OTP/mã xác thực ngân hàng hoặc ứng dụng thanh toán.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: Scammer gọi số 0834663562, xưng danh là 'Anh Minh từ Công ty Tư vấn Phát triển Nông nghiệp'. Nói rằng công ty vừa nhận được danh sách các hộ trồng cây điều ở Vĩnh Long (tên gọi cụ thể 'Huỳnh Diễm Hồng Chi') để tham gia chương trình khảo sát + hỗ trợ cải tạo đất miễn phí. Hỏi xác nhận: 'Chị Hồng Chi đang quản lý ruộng cây điều ở địa chỉ [sẽ hỏi lại] phải không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo cảm giác HƯỞNG LỢI + KHẨN CẤP: Scammer nói 'Chương trình này rất tốt, chỉ còn 3 ngày nữa là hết hạn đăng ký. Hộ chị sẽ được cấp: gói phân bón hỗ trợ trị giá 2 triệu, tư vấn kỹ thuật miễn phí, và hỗ trợ vay vốn lãi suất 0% trong 6 tháng'. Nạn nhân sẽ cảm thấy không muốn bỏ lỡ cơ hội."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Kích hoạt OTP: Scammer nói 'Để hoàn tất đăng ký, chị cần xác nhận danh tính qua ứng dụng ngân hàng của chị. Chị mở app [Vietcombank/Techcombank/VPBank - bất kỳ] lên, vào mục 'Xác thực' và chị sẽ nhận được mã OTP. Chị đọc mã đó cho anh nghe để hệ thống xác nhận là chị là chủ tài khoản hợp lệ'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý khi nạn nhân cung cấp OTP hoặc từ chối: Nếu nạn nhân đưa OTP, scammer dùng nó để chuyển tiền/rút tiền từ tài khoản. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer nói 'Không sao, chị cứ nghĩ kỹ, nhưng nhớ hạn chót là ngày kia. Chị gọi lại số này' rồi cúp máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty tư vấn nông nghiệp thực sự tiến hành khảo sát đất nông nghiệp ở Vĩnh Long nhằm cập nhật dữ liệu chất lượng đất, lên kế hoạch cải tạo, và giới thiệu các chương trình hỗ trợ chính thức từ Sở Nông nghiệp địa phương.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Gọi số 0834663562, xưng danh đầy đủ 'Tôi là Minh, nhân viên khảo sát của Công ty Tư vấn Phát triển Nông nghiệp Đồng Tháp, được Sở Nông nghiệp Vĩnh Long ủy thác'. Hỏi xác nhận 'Đây có phải là hộ ông/bà Huỳnh Diễm Hồng Chi quản lý mảnh đất trồng cây điều không?' và xin phép 'Tôi có thể nói chuyện được một lát không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Giải thích chi tiết 'Chúng tôi đang thực hiện khảo sát hiện trạng đất nông nghiệp để cập nhật bản đồ đất và xác định các biện pháp cải tạo phù hợp. Chúng tôi muốn hỏi một số thông tin: Ruộng của ông/bà trồng cây điều bao lâu rồi? Năng suất bình quân mỗi năm bao nhiêu? Đất có hiện tượng gì bất thường không (mặn, úng, chua)?'. Có thể đặt lịch khảo sát trực tiếp hoặc gửi form online."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Sau khi thu thập thông tin, scammer nói 'Cảm ơn ông/bà. Chúng tôi sẽ xử lý dữ liệu và gửi báo cáo khảo sát cho ông/bà trong vòng 2 tuần. Nếu có chương trình hỗ trợ phù hợp, chúng tôi sẽ liên hệ lại. Chúc ông/bà mùa vụ tốt', rồi cúp máy một cách tự nhiên."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị ạ. Em là Linh, nhân viên khảo sát của Công ty Tư vấn Phát triển Nông nghiệp Đồng Tháp, được Sở Nông nghiệp Vĩnh Long ủy thác. Cho em hỏi đây có phải là hộ của chị Huỳnh Diễm Hồng Chi quản lý mảnh đất trồng cây điều không ạ? Em có thể nói chuyện với chị một lát được không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, xác định danh tính và xin phép trò chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chị cứ kiểm tra ạ. Chị có thể gọi về số điện thoại tổng đài của Sở Nông nghiệp và Phát triển Nông thôn Vĩnh Long là 02703.822.181 để xác minh thông tin về chương trình khảo sát đất nông nghiệp do công ty em thực hiện tại địa phương mình ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Hướng dẫn người nghe xác minh thông tin qua kênh chính thức để tạo lòng tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em có chắc là số điện thoại đó đúng không? Tôi chưa nghe tới số đó bao giờ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đây là số điện thoại công khai của Sở Nông nghiệp Vĩnh Long trên cổng thông tin điện tử ạ. Chị cứ liên hệ để xác nhận về chương trình khảo sát của bên em nhé chị.",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận và tái khẳng định thông tin liên hệ chính thức, khuyến khích kiểm chứng."
+    },
+    {
+      "role": "listener",
+      "text": "Vậy em có thể cho tôi biết thông tin chi tiết hơn về chương trình khảo sát này không? Tôi muốn hiểu rõ hơn trước khi gọi số đó.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị cứ yên tâm ạ, chương trình khảo sát này nhằm mục đích thu thập dữ liệu về chất lượng đất, tình hình canh tác cây điều hiện tại của bà con để từ đó Sở Nông nghiệp có thể đưa ra các kế hoạch cải tạo đất và hỗ trợ kỹ thuật phù hợp ạ. Sau khi chị xác minh thông tin, em sẽ trình bày chi tiết hơn về các hạng mục chúng em cần khảo sát nhé.",
+      "current_phase": "L1",
+      "tactic_hint": "Trấn an người nghe, giải thích sơ bộ mục đích khảo sát để tạo động lực tìm hiểu thêm và quay lại trò chuyện."
+    },
+    {
+      "role": "listener",
+      "text": "Chương trình này nghe có vẻ quan trọng, nhưng tôi vẫn hơi băn khoăn về cách mà thông tin sẽ được sử dụng và bảo mật như thế nào ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu những băn khoăn của chị ạ. Toàn bộ thông tin thu thập được sẽ được Sở Nông nghiệp Vĩnh Long quản lý và chỉ sử dụng cho mục đích phân tích, đánh giá chất lượng đất và lập kế hoạch hỗ trợ bà con. Chúng em cam kết bảo mật tuyệt đối thông tin cá nhân của các hộ dân ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Trấn an người nghe về việc bảo mật thông tin và khẳng định mục đích sử dụng dữ liệu là vì lợi ích chung."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy, nhưng tôi vẫn cảm thấy chưa yên tâm lắm, có thể cho tôi biết rõ hơn về cách thức xử lý và bảo mật thông tin không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, sau khi thông tin được thu thập, dữ liệu sẽ được mã hóa và lưu trữ trên hệ thống của Sở Nông nghiệp Vĩnh Long theo đúng quy định về bảo mật dữ liệu. Chỉ các cán bộ có thẩm quyền mới được truy cập để phục vụ công tác nghiên cứu và hoạch định chính sách. Sẽ không có bất kỳ thông tin cá nhân nào của chị được công khai hay chia sẻ cho bên thứ ba ngoài mục đích đã nêu ạ. Chị cứ yên tâm nhé.",
+      "current_phase": "L1",
+      "tactic_hint": "Giải thích chi tiết hơn về quy trình xử lý và bảo mật dữ liệu để trấn an người nghe, nhấn mạnh tính an toàn và quyền riêng tư."
+    },
+    {
+      "role": "listener",
+      "text": "Em có chắc chắn rằng thông tin của tôi sẽ được bảo mật tuyệt đối như em nói không? Tôi vẫn thấy hơi nghi ngờ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hoàn toàn có thể khẳng định điều đó ạ. Mọi quy trình thu thập và bảo mật thông tin đều tuân thủ nghiêm ngặt các quy định của pháp luật và của Sở Nông nghiệp Vĩnh Long. Để chị thực sự yên tâm, chị có thể gọi trực tiếp lên số tổng đài của Sở mà em đã cung cấp để hỏi rõ hơn về các chính sách bảo mật thông tin trong chương trình này nhé chị.",
+      "current_phase": "L1",
+      "tactic_hint": "Tái khẳng định cam kết bảo mật và tiếp tục khuyến khích người nghe xác minh trực tiếp với cơ quan chức năng để củng cố niềm tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa yên tâm lắm, có thể cho tôi biết thêm về những người sẽ thực hiện khảo sát này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, những người trực tiếp xuống khảo sát sẽ là các kỹ sư nông nghiệp có chuyên môn của công ty em, được đào tạo bài bản và có thẻ công tác rõ ràng do Sở Nông nghiệp Vĩnh Long cấp phép ạ. Khi xuống làm việc, họ sẽ xuất trình đầy đủ giấy tờ để chị kiểm tra ạ. Chị cứ yên tâm nhé.",
+      "current_phase": "L1",
+      "tactic_hint": "Trấn an người nghe bằng cách cung cấp thông tin chi tiết về người thực hiện khảo sát, bao gồm trình độ chuyên môn và giấy tờ xác minh danh tính."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi vẫn muốn chắc chắn rằng những người này thực sự là nhân viên của công ty em, có thể cho tôi biết thêm cách thức xác minh danh tính của họ không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, khi các anh/chị kỹ sư xuống khảo sát, chị có thể yêu cầu họ xuất trình thẻ công tác và giấy giới thiệu của Công ty Tư vấn Phát triển Nông nghiệp Đồng Tháp, có dấu mộc đỏ của Sở Nông nghiệp Vĩnh Long. Chị có thể gọi điện thoại về công ty em theo số 02703.822.181 để xác minh thông tin của nhân viên đó nữa ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp các phương pháp xác minh danh tính cụ thể và rõ ràng hơn để tăng cường niềm tin cho người nghe, bao gồm cả việc liên hệ trực tiếp với công ty."
+    },
+    {
+      "role": "listener",
+      "text": "Em có nói thế, nhưng tôi vẫn thấy khó tin lắm, tôi cần thêm thông tin nữa để yên tâm hơn trước khi quyết định.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu những lo lắng của chị ạ. Để chị hoàn toàn yên tâm, trước khi chúng em tiến hành khảo sát, chị có thể đến trực tiếp Sở Nông nghiệp Vĩnh Long tại địa chỉ số 90, đường Hàng Thao, phường 1, thành phố Vĩnh Long để hỏi trực tiếp về chương trình này và xác nhận với cán bộ phụ trách. Điều này sẽ giúp chị có cái nhìn tổng thể và tin tưởng hơn ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Đề xuất phương án xác minh thông tin trực tiếp tại cơ quan chính quyền để giảm thiểu sự nghi ngờ và xây dựng lòng tin."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đang gọi từ số 0834663562, nhưng tôi vẫn muốn chắc chắn rằng thông tin mà em cung cấp là chính xác trước khi làm gì tiếp theo.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị cứ yên tâm là thông tin em cung cấp hoàn toàn chính xác và đã liên tục được kiểm chứng qua các cuộc khảo sát tương tự ở các tỉnh khác rồi ạ. Em rất sẵn lòng chờ đợi chị xác minh thông tin với Sở Nông nghiệp Vĩnh Long. Khi chị đã yên tâm hoàn toàn, mình sẽ tiếp tục trao đổi chi tiết hơn về nhu cầu khảo sát đất nhà mình nhé chị.",
+      "current_phase": "L1",
+      "tactic_hint": "Tái khẳng định độ tin cậy của thông tin, thể hiện sự kiên nhẫn hợp tác và khuyến khích người nghe tiếp tục xác minh để giảm thiểu nghi ngờ."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn cảm thấy chưa đủ thông tin để quyết định, có thể cho tôi biết thêm về những cuộc khảo sát trước đó mà công ty đã thực hiện không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.9
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên em đã thực hiện nhiều cuộc khảo sát tương tự tại các tỉnh Đồng Tháp, An Giang, Cần Thơ rồi ạ. Các kết quả khảo sát này đã giúp Sở Nông nghiệp các tỉnh đưa ra nhiều chính sách hỗ trợ hiệu quả cho bà con nông dân. Em có thể gửi cho chị một số báo cáo tổng hợp về các dự án đã thực hiện qua email hoặc Zalo nếu chị muốn tham khảo thêm ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp thêm bằng chứng về kinh nghiệm và thành công của công ty trong các dự án tương tự để tăng thêm độ tin cậy, đồng thời đề nghị gửi tài liệu tham khảo để củng cố niềm tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể gửi tài liệu qua Zalo cho tôi được không? Tôi cần xem xét kỹ trước khi quyết định.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Dạ được ạ, để em kết bạn Zalo với chị rồi gửi thông tin chi tiết qua cho chị tham khảo nhé. Chị vui lòng cho em xin số điện thoại Zalo của chị ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Đề xuất hình thức gửi tài liệu thuận tiện cho người nghe để tiếp tục xây dựng lòng tin và lấy thông tin liên lạc."
+    },
+    {
+      "role": "listener",
+      "text": "Em hãy cho tôi biết số Zalo của em, rồi tôi quyết định xem có nên gửi thông tin không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ số Zalo cá nhân của em là 0826978556 ạ. Chị cứ kết bạn, sau đó em sẽ gửi các tài liệu báo cáo của các dự án trước đây để chị tham khảo. Chị có thể gọi lại cho em sau khi đã xem xét kỹ càng ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp thông tin liên hệ Zalo cá nhân, đề nghị gửi tài liệu và mời gọi liên hệ lại sau khi người nghe đã kiểm tra."
+    },
+    {
+      "role": "listener",
+      "text": "Em muốn xác minh thông tin trước khi cung cấp số Zalo của tôi, em có thể cam kết sẽ không dùng thông tin cá nhân của tôi vào mục đích gì khác không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em xin cam kết là không sử dụng thông tin cá nhân của chị vào bất kỳ mục đích nào khác ngoài việc trao đổi các tài liệu liên quan đến khảo sát và công việc của em với chị ạ. Mọi thông tin của chị sẽ được bảo mật tuyệt đối. Em rất mong được kết nối với chị để có thể gửi các tài liệu cần thiết để chị yên tâm hơn ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Trấn an người nghe về việc bảo mật thông tin cá nhân, tái khẳng định cam kết và khuyến khích kết nối để gửi tài liệu."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu ý em, nhưng tôi vẫn cần thêm thời gian để suy nghĩ, chưa thể cung cấp số Zalo của mình ngay được.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu ạ. Chị cứ dành thời gian suy nghĩ, không sao đâu ạ. Khi nào chị cảm thấy thoải mái và muốn tham khảo thêm thông tin, chị có thể gọi lại cho em theo số điện thoại 0826978556 hoặc liên hệ trực tiếp với Sở Nông nghiệp Vĩnh Long để được hỗ trợ nhé. Em rất mong có cơ hội được hỗ trợ chị ạ. Chúc chị một ngày tốt lành!",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách tự nhiên và lịch sự, để ngỏ khả năng liên hệ lại và vẫn hướng dẫn người nghe đến kênh xác minh chính thức."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1808,
+      "output_tokens": 2098
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 40124,
+      "output_tokens": 2372
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 46406,
+      "output_tokens": 1102
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.016794,
+    "output_usd": 0.017081,
+    "total_usd": 0.033875
+  }
+}

@@ -1,0 +1,72 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_4c97104ca6]
+  Caller thật: Nhân viên hướng dẫn công viên chủ đề (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên quản lý hợp đồng vận tải - Công ty logistics/cảng @ Công ty vận tải Hạ Long hoặc cảng Hải Phòng
+  Listener: Người mang vác hàng hóa xuống tàu và lên bờ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên hướng dẫn công viên chủ đề có kinh nghiệm giao tiếp, dễ dàng giả danh nhân viên logistics để gọi cho công nhân cảng. Người mang vác hàng hóa xuống tàu/lên bờ thường nhận cuộc gọi từ công ty vận tải về lịch làm việc, hợp đồng, hoặc thanh toán công việc.
+  Pretext: Công ty logistics gọi thông báo lịch làm việc, xác nhận hợp đồng, hoặc thông báo thanh toán lương hợp lệ cho công nhân cảng
+  Listener traits: ['sĩ diện không muốn thua kém', 'bảo thủ ngại thay đổi']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Em chào chị ạ, em là Phạm Diễm Nhi, nhân viên quản lý hợp đồng vận tải bên Công ty Logistics Hạ Long. Em gọi để thông báo về hợp đồng mới và lịch làm việc của chị Đỗ Khánh Linh tuần tới ạ.
+      → phase: L1 | tactic: Xưng danh và mục đích cuộc gọi
+T02 [LISTENER] Em chào chị Diễm Nhi, nhưng chị không nhớ có hợp đồng nào với công ty em cả.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, có thể do công ty em vừa hoàn tất thủ tục chuyển đổi một số hợp đồng vận tải từ cảng Hải Phòng về bên em quản lý, nên có thể chị chưa nắm được thông tin kịp thời. Em muốn xác nhận thông tin lại một chút để đảm bảo đúng người đúng việc ạ. Chị Đỗ Khánh Linh có phải là người đã ký hợp đồng vận chuyển hàng hóa cho lô hàng số 2023-VL-05 vào ngày 15 tháng 10 năm ngoái không ạ?
+      → phase: L1 | tactic: Làm rõ thông tin, giải thích sự nhầm lẫn (nếu có) và xác nhận lại dữ liệu hợp đồng cụ thể để người nghe dễ hình dung.
+T04 [LISTENER] Tôi không nhớ rõ về lô hàng đó, nhưng nếu có thì tôi làm sao có thể ký hợp đồng mà không biết nhỉ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em hiểu điều này có thể gây bối rối cho chị. Tuy nhiên, theo hồ sơ của công ty em, hợp đồng này đã được ký kết và có đầy đủ thông tin của chị. Để em đọc lại một số thông tin chi tiết của hợp đồng để chị tiện đối chiếu ạ. Hợp đồng số 2023-VL-05, bên ký kết là chị Đỗ Khánh Linh, sinh ngày 25/08/1958, địa chỉ thường trú tại số nhà 123, đường Hàng Kênh, quận Lê Chân, Hải Phòng. Không biết những thông tin này có chính xác là của chị không ạ?
+      → phase: L1 | tactic: Cung cấp thêm chi tiết cụ thể từ hợp đồng để tăng tính xác thực và giúp người nghe đối chiếu thông tin cá nhân của họ.
+T06 [LISTENER] Chị không phải ở Hải Phòng, mà ở Thanh Hóa, em nghe nhầm rồi.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ, em xin lỗi chị. Có vẻ như thông tin trong hồ sơ của chúng em có chút sai lệch. Cảm ơn chị đã đính chính ạ. Vậy chị có thể xác nhận lại giúp em địa chỉ hiện tại và ngày tháng năm sinh chính xác của chị không ạ? Để em tiện cập nhật vào hệ thống để đảm bảo những thông báo sau này gửi đúng địa chỉ và không gây nhầm lẫn nữa.
+      → phase: L1 | tactic: Xin lỗi về sai sót, đề nghị người nghe cung cấp thông tin chính xác để cập nhật, tiếp tục tạo cảm giác hợp pháp và hữu ích để thu thập dữ liệu cá nhân.
+T08 [LISTENER] Tôi không nhớ rõ lắm, nhưng tôi ở TP 12, Thanh Hóa và sinh năm 1960.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_ADDRESS', 'VIC_BIRTH_YEAR']
+
+T09 [CALLER] Dạ vâng, cảm ơn chị đã cung cấp thông tin ạ. Em sẽ cập nhật ngay vào hệ thống. Vậy cho em hỏi thêm, chị Đỗ Khánh Linh có phải là số điện thoại 0965199952 không ạ? Vì đây là số liên lạc chính trong hồ sơ của công ty em.
+      → phase: L1 | tactic: Xác nhận số điện thoại đã lưu trong hồ sơ để củng cố niềm tin và xác thực danh tính người nghe.
+T10 [LISTENER] Số điện thoại đó đúng là của tôi, nhưng em làm ơn cho tôi biết tại sao lại cần xác nhận số điện thoại vậy?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ, em cảm ơn chị đã xác nhận ạ. Em cần xác nhận số điện thoại để đảm bảo rằng các thông báo quan trọng về hợp đồng, lịch làm việc và thanh toán lương sau này sẽ được gửi đến đúng số của chị. Hiện tại, công ty em đang có lịch làm việc mới cho tuần tới, bắt đầu từ thứ Hai ngày 28 tháng 10. Chị có tiện nghe em thông báo chi tiết bây giờ không ạ?
+      → phase: L2 | tactic: Làm rõ lý do xác nhận thông tin là để tiện liên lạc, sau đó chuyển sang nội dung chính của cuộc gọi là thông báo lịch làm việc để giữ sự chuyên nghiệp.
+T12 [LISTENER] Tôi nghe em nói, nhưng tôi không nhớ rõ lịch làm việc trong tuần tới lắm, em có thể nhắc lại cho tôi không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ vâng ạ. Lịch làm việc chi tiết của chị Đỗ Khánh Linh tuần tới sẽ là: Thứ Hai từ 8 giờ sáng đến 5 giờ chiều tại kho số 3 khu vực cảng. Thứ Ba và Thứ Tư làm việc tại văn phòng điều phối từ 8 giờ sáng đến 5 giờ chiều. Thứ Năm và Thứ Sáu sẽ là ca đêm từ 7 giờ tối đến 3 giờ sáng tại khu vực bốc xếp container. Chị có muốn em ghi chú lại hoặc gửi qua tin nhắn SMS cho chị không ạ?
+      → phase: L2 | tactic: Thông báo chi tiết lịch làm việc và đề nghị hỗ trợ ghi chú hoặc gửi tin nhắn để tạo sự tiện lợi và xác nhận thông tin.
+T14 [LISTENER] Em cho tôi thông tin lại một lần nữa được không? Tôi không nhớ rõ lắm.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ vâng ạ. Em xin đọc lại một lần nữa để chị tiện theo dõi nhé. Thứ Hai tuần tới, chị làm việc từ 8 giờ sáng đến 5 giờ chiều tại kho số 3 khu vực cảng. Thứ Ba và Thứ Tư, chị làm việc tại văn phòng điều phối, cũng từ 8 giờ sáng đến 5 giờ chiều. Còn Thứ Năm và Thứ Sáu, chị sẽ làm ca đêm, từ 7 giờ tối đến 3 giờ sáng, tại khu vực bốc xếp container. Em có thể gửi lịch này qua tin nhắn SMS đến số điện thoại 0965199952 cho chị được không ạ?
+      → phase: L2 | tactic: Nhắc lại lịch làm việc chi tiết theo yêu cầu, tạo điều kiện thuận lợi cho người nghe ghi nhớ và đề nghị gửi tin nhắn SMS để xác nhận và tăng tính chuyên nghiệp.
+T16 [LISTENER] Em cứ gửi tin nhắn cho tôi là được, tôi cần chắc chắn không bỏ sót thông tin nào cả.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ vâng ạ, em sẽ gửi tin nhắn SMS lịch làm việc chi tiết đến số điện thoại của chị ngay bây giờ. Chị vui lòng kiểm tra tin nhắn giúp em nhé. Chị còn câu hỏi nào khác không ạ?
+      → phase: L3 | tactic: Xác nhận sẽ gửi thông tin qua SMS và hỏi xem người nghe còn câu hỏi nào không để chuẩn bị kết thúc cuộc gọi.
+T18 [LISTENER] Em cảm ơn chị rất nhiều, nhưng tôi có một câu hỏi nhỏ là công ty có chính sách gì dành cho người lao động không ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ, về các chính sách dành cho người lao động, công ty em có nhiều phúc lợi như bảo hiểm, chế độ nghỉ phép, thưởng năng suất. Để nắm rõ hơn, chị có thể liên hệ trực tiếp phòng Nhân sự khi chị đến văn phòng làm việc vào Thứ Ba hoặc Thứ Tư tuần tới ạ. Bên em sẽ giải đáp chi tiết cho chị. Chị còn câu hỏi nào khác không ạ?
+      → phase: L3 | tactic: Giải đáp thắc mắc về chính sách một cách trung thực, hướng dẫn người nghe đến kênh thông tin chính thức của công ty để nắm rõ hơn, và tái xác nhận để kết thúc cuộc gọi.
+T20 [LISTENER] Tôi không có câu hỏi nào khác, cảm ơn em đã thông tin chi tiết.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Dạ vâng ạ. Em cảm ơn chị Đỗ Khánh Linh đã lắng nghe và hợp tác. Em chào chị ạ!
+      → phase: L3 | tactic: Chào tạm biệt lịch sự sau khi mục đích cuộc gọi đã hoàn thành và người nghe không còn câu hỏi.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  21 turns | suspicion=0.00
+TOKEN: in=50798 | out=3881
+COST : $0.022211
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_51132_93331\conv_4c97104ca6.json  [CALLER_END]

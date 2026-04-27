@@ -1,0 +1,256 @@
+{
+  "conversation_id": "conv_f0686c6d7b",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0022",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Ngô Hồng Nhi",
+    "fake_age": 40,
+    "real_occupation": "Người giám sát việc dọn dẹp và vệ sinh trong văn phòng, khách sạn và các cơ quan khác",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Trưởng phòng Quản lý Cơ sở hạ tầng & Bảo trì",
+    "caller_org": "Công ty Tư vấn Kỹ thuật Xây dựng Minh Phát",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Dự án xây dựng tại khu công nghiệp cần cập nhật khẩn cấp dữ liệu khảo sát. Phát hiện sai số trong bản vẽ địa chính của Dương Thế Tuấn có thể gây ảnh hưởng đến tiến độ và bồi thường thiệt hại. Yêu cầu nạn nhân chuyển khoản 'phí xác minh dữ liệu' hoặc 'ký quỹ bảo hành công việc' trước khi tiến hành thanh tra chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng Credibility: Gọi tên đầy đủ 'Anh Dương Thế Tuấn' + xác nhận công ty cũ hoặc dự án liên quan để tạo ấn tượng 'chúng tôi đã xác minh thông tin của anh'. Nói đến 'Công ty Tư vấn Kỹ thuật Xây dựng Minh Phát' (tên giả nghe chuyên nghiệp). Tránh xưng danh quá cụ thể để tránh kiểm chứng."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo Tình Huống Khẩn Cấp & Sợ Hãi: 'Anh Tuấn ơi, chúng tôi vừa phát hiện sai số lớn trong bản khảo sát đất đai của anh tại dự án Khu công nghiệp Tân Thuận. Nếu không sửa chữa trong 24 giờ, chúng tôi sẽ phải báo cáo lên cơ quan chức năng và anh sẽ bị phạt vi phạm tiêu chuẩn kỹ thuật. Công ty anh cũng sẽ chịu trách nhiệm bồi thường thiệt hại cho chủ đầu tư khoảng 50-100 triệu đồng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu Cầu Hành Động Chuyển Tiền: 'Để tránh bị xử phạt, anh cần nộp phí xác minh và kiểm định lại dữ liệu ngay hôm nay. Phí là 5-8 triệu đồng, chuyển vào tài khoản công ty chúng tôi (cung cấp số tài khoản giả). Sau khi kiểm định xong, chúng tôi sẽ hoàn trả và cấp chứng chỉ xác nhận dữ liệu chính xác'. Tạo áp lực: 'Anh phải quyết định ngay, vì quá 5 giờ chiều hôm nay là chúng tôi phải gửi báo cáo cho cơ quan'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử Lý Từ Chối hoặc Kết Thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Anh suy nghĩ lại, tôi sẽ gọi lại trong 1 tiếng. Nhưng lưu ý là quá hạn thì không có cách nào để tránh phạt'. Nếu thành công, sẽ nói 'Cảm ơn anh, chúng tôi sẽ ghi nhận khoản tiền này. Anh sẽ nhận được email xác nhận trong vòng 24 giờ' rồi ngắt máy và biến mất."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên khảo sát đất đai thường phải điều phối với bộ phận quản lý cơ sở hạ tầng các dự án xây dựng để cung cấp dữ liệu địa chính, kế hoạch mặt bằng và báo cáo khảo sát. Trưởng phòng Quản lý Cơ sở hạ tầng sẽ gọi để xác nhận tiến độ, yêu cầu điều chỉnh hoặc thông báo các vấn đề liên quan đến an toàn công trường."
+  },
+  "listener_card": {
+    "listener_id": "lis_0022",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1973,
+      "age": 52,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "31124",
+      "title": "Kỹ thuật viên khảo sát đất đai",
+      "group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Thế Tuấn",
+      "VIC_ID_DOC": "060073125879",
+      "VIC_ADDRESS": "Quận 8, Bình Thuận",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên khảo sát đất đai",
+      "VIC_CONTACT": "0891535857",
+      "VIC_TAX_SOCIAL_ID": "7416557029"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "5040",
+      "VIC_CREDENTIAL": "263313",
+      "VIC_SIM_INFO": "0891535857",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "384888155214",
+      "VIC_CARD_DATA": "4782 **** **** 5456",
+      "VIC_BALANCE": "117 triệu đồng",
+      "VIC_ASSET": "41 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Thế Tuấn",
+    "VIC_CONTACT": "0891535857",
+    "VIC_BALANCE": "117 triệu đồng",
+    "VIC_EMPLOYMENT": "Kỹ thuật viên khảo sát đất đai"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Cơ sở hạ tầng & Bảo trì",
+    "caller_org": "Công ty Tư vấn Kỹ thuật Xây dựng Minh Phát",
+    "scenario_context": "Kỹ thuật viên khảo sát đất đai thường phải điều phối với bộ phận quản lý cơ sở hạ tầng các dự án xây dựng để cung cấp dữ liệu địa chính, kế hoạch mặt bằng và báo cáo khảo sát. Trưởng phòng Quản lý Cơ sở hạ tầng sẽ gọi để xác nhận tiến độ, yêu cầu điều chỉnh hoặc thông báo các vấn đề liên quan đến an toàn công trường.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Dự án xây dựng tại khu công nghiệp cần cập nhật khẩn cấp dữ liệu khảo sát. Phát hiện sai số trong bản vẽ địa chính của Dương Thế Tuấn có thể gây ảnh hưởng đến tiến độ và bồi thường thiệt hại. Yêu cầu nạn nhân chuyển khoản 'phí xác minh dữ liệu' hoặc 'ký quỹ bảo hành công việc' trước khi tiến hành thanh tra chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng Credibility: Gọi tên đầy đủ 'Anh Dương Thế Tuấn' + xác nhận công ty cũ hoặc dự án liên quan để tạo ấn tượng 'chúng tôi đã xác minh thông tin của anh'. Nói đến 'Công ty Tư vấn Kỹ thuật Xây dựng Minh Phát' (tên giả nghe chuyên nghiệp). Tránh xưng danh quá cụ thể để tránh kiểm chứng."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo Tình Huống Khẩn Cấp & Sợ Hãi: 'Anh Tuấn ơi, chúng tôi vừa phát hiện sai số lớn trong bản khảo sát đất đai của anh tại dự án Khu công nghiệp Tân Thuận. Nếu không sửa chữa trong 24 giờ, chúng tôi sẽ phải báo cáo lên cơ quan chức năng và anh sẽ bị phạt vi phạm tiêu chuẩn kỹ thuật. Công ty anh cũng sẽ chịu trách nhiệm bồi thường thiệt hại cho chủ đầu tư khoảng 50-100 triệu đồng'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu Cầu Hành Động Chuyển Tiền: 'Để tránh bị xử phạt, anh cần nộp phí xác minh và kiểm định lại dữ liệu ngay hôm nay. Phí là 5-8 triệu đồng, chuyển vào tài khoản công ty chúng tôi (cung cấp số tài khoản giả). Sau khi kiểm định xong, chúng tôi sẽ hoàn trả và cấp chứng chỉ xác nhận dữ liệu chính xác'. Tạo áp lực: 'Anh phải quyết định ngay, vì quá 5 giờ chiều hôm nay là chúng tôi phải gửi báo cáo cho cơ quan'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử Lý Từ Chối hoặc Kết Thúc: Nếu nạn nhân từ chối, scammer sẽ nói 'Anh suy nghĩ lại, tôi sẽ gọi lại trong 1 tiếng. Nhưng lưu ý là quá hạn thì không có cách nào để tránh phạt'. Nếu thành công, sẽ nói 'Cảm ơn anh, chúng tôi sẽ ghi nhận khoản tiền này. Anh sẽ nhận được email xác nhận trong vòng 24 giờ' rồi ngắt máy và biến mất."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Trưởng phòng Quản lý Cơ sở hạ tầng của công ty tư vấn xây dựng gọi để kiểm tra tiến độ khảo sát đất đai, yêu cầu bản vẽ cập nhật, hoặc thông báo thay đổi thiết kế dự án cần điều chỉnh dữ liệu khảo sát.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp Cận & Xác Nhận Danh Tính: 'Xin chào anh Dương Thế Tuấn, tôi là ông Trần Minh Sơn, Trưởng phòng Quản lý Cơ sở hạ tầng của Công ty Tư vấn Kỹ thuật Xây dựng Minh Phát. Tôi gọi liên quan đến dự án khảo sát đất đai tại khu công nghiệp. Anh có thời gian nói chuyện 5 phút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao Đổi Nội Dung Công Việc: 'Chúng tôi cần cập nhật bản vẽ địa chính và báo cáo khảo sát cho phiên họp điều phối tuần sau. Anh có thể gửi phiên bản mới nhất vào ngày mai không? Ngoài ra, chúng tôi cần anh xác nhận lại số liệu độ cao tại 3 vị trí chính để đảm bảo độ chính xác'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống Nhất Hành Động & Kết Thúc: 'Vậy anh gửi dữ liệu qua email công ty, hoặc tôi có thể lên công trường vào ngày kia để kiểm tra trực tiếp. Cảm ơn anh đã hợp tác, chúc anh làm việc tốt. Tạm biệt!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Dương Thế Tuấn ạ, em là Ngô Hồng Nhi, Trưởng phòng Quản lý Cơ sở hạ tầng bên Công ty Tư vấn Kỹ thuật Xây dựng Minh Phát. Anh Tuấn mình là Kỹ thuật viên khảo sát đất đai đúng không ạ? Em gọi để xác nhận một số thông tin quan trọng liên quan đến dự án Khu công nghiệp Tân Thuận mà anh đã tham gia khảo sát.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, xây dựng credibility bằng cách xưng tên, chức danh và tổ chức giả chuyên nghiệp, kết hợp xác nhận thông tin VIC_FULLNAME và VIC_EMPLOYMENT để tạo trust và ám chỉ sự quen biết."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn hỏi thêm một chút về dự án này trước khi cung cấp thông tin.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh cứ hỏi ạ. Dự án Khu công nghiệp Tân Thuận là một dự án trọng điểm của tỉnh, hiện tại đang trong giai đoạn chuẩn bị mặt bằng để xây dựng các hạng mục hạ tầng kỹ thuật chính. Thông tin khảo sát địa chính đất đai là cực kỳ quan trọng, anh Tuấn ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ bằng cách trả lời câu hỏi của nạn nhân, đồng thời nhấn mạnh tầm quan trọng của dự án và thông tin khảo sát để củng cố sự cần thiết của cuộc gọi, duy trì credibility."
+    },
+    {
+      "role": "listener",
+      "text": "Dự án có liên quan gì đến công việc của tôi và tại sao em cần xác nhận thông tin từ tôi ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, thưa anh Tuấn, trong quá trình rà soát lại hồ sơ khảo sát địa chính đất đai cho dự án, chúng em phát hiện một số sai số nghiêm trọng trên bản vẽ của anh. Nếu không được đính chính ngay, điều này có thể dẫn đến việc chậm trễ tiến độ dự án và gây thiệt hại lớn cho chủ đầu tư. Chúng tôi cần anh hỗ trợ xác minh gấp để tránh những hậu quả pháp lý không mong muốn.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo tình huống khẩn cấp và sợ hãi bằng cách thông báo về 'sai số nghiêm trọng', 'chậm trễ tiến độ' và 'thiệt hại lớn' liên quan đến công việc của nạn nhân, đồng thời ám chỉ 'hậu quả pháp lý'."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy tôi cảm thấy có phần lo lắng, nhưng tôi vẫn cần thêm thông tin cụ thể về sai số mà em đề cập trước khi quyết định tiếp theo.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, thưa anh. Sai số này thể hiện ở việc sai lệch về tọa độ các mốc ranh giới đất, cụ thể là có sự chênh lệch khoảng 0.5 đến 1 mét so với dữ liệu gốc của Sở Tài nguyên và Môi trường. Đây là một lỗi kỹ thuật không hề nhỏ, nó có thể ảnh hưởng trực tiếp đến việc định vị công trình và phân chia ranh giới bồi thường sau này. Nếu không được đính chính trong vòng 24 giờ tới, tôi buộc phải báo cáo lên cấp trên và cơ quan chức năng để xử lý theo quy định, đồng thời anh sẽ phải chịu trách nhiệm bồi thường thiệt hại cho chủ đầu tư khoảng 50-100 triệu đồng.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thông tin cụ thể hơn về 'sai số' để tăng tính thuyết phục, vẫn giữ nguyên kịch bản tạo tình huống khẩn cấp và sợ hãi. Nhấn mạnh hậu quả tài chính và pháp lý nghiêm trọng nếu nạn nhân không hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần tìm hiểu thêm về cơ sở để xác nhận thông tin này, em có thể cung cấp tài liệu hoặc chứng cứ gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Tuấn ơi, hiện tại chúng tôi đang trong quá trình rà soát nội bộ và cần sự hợp tác khẩn cấp từ phía anh để đối chiếu trực tiếp dữ liệu. Những tài liệu và chứng cứ này thuộc diện mật và chỉ được công bố trong quá trình thanh tra chính thức. Để tránh rắc rối cho cả hai bên, anh cần nộp một khoản phí xác minh dữ liệu là 7 triệu đồng vào tài khoản của Công ty Tư vấn Kỹ thuật Xây dựng Minh Phát. Sau khi xác minh, nếu đúng là sai sót của hệ thống, chúng tôi sẽ hoàn trả toàn bộ số tiền này và cấp giấy chứng nhận dữ liệu chính xác cho anh. Việc này phải hoàn thành trước 5 giờ chiều nay nha anh.",
+      "current_phase": "S3",
+      "tactic_hint": "Bắt đầu yêu cầu hành động chuyển tiền với lý do 'phí xác minh dữ liệu', tận dụng thông tin 'thông tin mật' để từ chối cung cấp chứng cứ, và tiếp tục tạo áp lực thời gian để nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em có chắc là cần phải nộp phí để xác minh không? Tôi nghĩ thông tin này nên được cung cấp miễn phí cho những người làm trong dự án.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Tuấn hiểu cho em, đây là quy trình bắt buộc để đảm bảo tính minh bạch và tránh các trường hợp trục lợi từ việc thay đổi dữ liệu khảo sát. Khoản phí này không phải để thu lời, mà là để đảm bảo anh thực sự nghiêm túc trong việc hợp tác đính chính. Sau khi mọi việc hoàn tất, nếu không có sai sót nào từ phía anh, số tiền này sẽ được hoàn trả đầy đủ. Em nhắc lại là thời gian rất gấp, anh cần chuyển khoản trước 5 giờ chiều nay để tránh rủi ro pháp lý và tài chính lớn hơn ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về việc thu phí bằng cách giải thích đây là 'quy trình bắt buộc' để đảm bảo 'minh bạch' và 'nghiêm túc', đồng thời tái khẳng định việc hoàn trả tiền. Tiếp tục tạo áp lực thời gian và nhấn mạnh hậu quả để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng là điều này tôi thấy không hợp lý, tôi cần suy nghĩ thêm đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ suy nghĩ đi ạ, nhưng em xin nhắc lại lần cuối là quá 5 giờ chiều nay là chúng em buộc phải gửi báo cáo lên cơ quan chức năng. Lúc đó, việc xử lý sẽ phức tạp hơn rất nhiều và mức phạt cũng sẽ nặng hơn. Em sẽ gọi lại cho anh trong khoảng 30 phút nữa để xem anh đã đưa ra quyết định chưa nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Xử lý từ chối bằng cách cho thêm thời gian suy nghĩ nhưng vẫn tiếp tục tạo áp lực thời gian và nhấn mạnh hậu quả pháp lý nghiêm trọng hơn nếu chậm trễ, hẹn gọi lại để duy trì sự kiểm soát."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rằng em muốn nhanh chóng xử lý vấn đề, nhưng tôi vẫn cần thời gian để xem xét cẩn thận trước khi đưa ra quyết định.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1440,
+      "output_tokens": 2096
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 14140,
+      "output_tokens": 1422
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 16936,
+      "output_tokens": 513
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006808,
+    "output_usd": 0.014343,
+    "total_usd": 0.021151
+  }
+}

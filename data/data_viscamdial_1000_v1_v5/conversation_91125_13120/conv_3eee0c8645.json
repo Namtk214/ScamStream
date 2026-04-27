@@ -1,0 +1,218 @@
+{
+  "conversation_id": "conv_3eee0c8645",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0073",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Vũ Hữu Thế Sơn",
+    "fake_age": 31,
+    "real_occupation": "Người dọn dẹp khu dân cư (như chung cư, căn hộ riêng, khu vực chung trong khu dân cư)",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng ban Quản lý và Bảo trì - Công ty Quản lý Tòa nhà",
+    "caller_org": "Công ty TNHH Quản lý Bất động sản và Dịch vụ Tòa nhà Hạng A",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo về phí bảo trì khẩn cấp hệ thống an ninh tòa án / Yêu cầu thanh toán phí dịch vụ bảo trì nâng cấp hệ thống camera giám sát do phát hiện lỗi bảo mật",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với độ tin cậy cao: 'Chào chị Đỗ Hồng Nhàn, tôi là Trần Minh Tú, Trưởng ban Quản lý Bất động sản tòa nhà. Chúng tôi vừa phát hiện lỗi hệ thống an ninh cấp độ cao tại khu vực làm việc của Vụ Tư pháp. Cần xác nhận thông tin để tiến hành khắc phục ngay hôm nay.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: 'Đây là vấn đề bảo mật dữ liệu nhạy cảm của tòa án. Nếu không xử lý trong 2 giờ, chúng tôi phải báo cáo lên Ban Giám đốc. Chị là Vụ trưởng, chị có trách nhiệm phê duyệt chi phí khẩn cấp này trước.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chi phí khẩn cấp là 45 triệu đồng (vượt quá số dư nạn nhân để tạo áp lực). Chị vui lòng chuyển khoản ngay vào tài khoản công ty: [tài khoản giả]. Tôi sẽ gửi hóa đơn chính thức sau. Đây là quy trình nhanh gọn để tránh báo cáo lên cấp trên.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy chị cho số tài khoản để tôi liên hệ Giám đốc công ty xin phê duyệt. Hoặc chị có thể liên hệ trực tiếp số [số giả] để xác nhận với Giám đốc.' (Tạo ảo tưởng có thể xác minh)"
+        }
+      ]
+    },
+    "scenario_context": "Người quản lý bảo trì khu dân cư cần liên hệ với cán bộ cấp cao tòa án/viện kiểm sát để thông báo về công tác bảo trì, an ninh, hoặc xử lý sự cố tại tòa nhà nơi họ công tác. Đây là giao điểm tự nhiên giữa cơ sở hạ tầng và quản lý cấp cao."
+  },
+  "listener_card": {
+    "listener_id": "lis_0073",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1992,
+      "age": 33,
+      "province": "Nghệ An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "13120",
+      "title": "Vụ trưởng, Phó Vụ trưởng và tương đương làm việc ở Tòa án nhân dân tối cao và cấp cao và Viện Kiểm sát nhân dân tối cao và cấp cao",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Hồng Nhàn",
+      "VIC_ID_DOC": "040192585922",
+      "VIC_ADDRESS": "Huyện 2, Nghệ An",
+      "VIC_EMPLOYMENT": "Vụ trưởng, Phó Vụ trưởng và tương đương làm việc ở Tòa án nhân dân tối cao và cấp cao và Viện Kiểm sát nhân dân tối cao và cấp cao",
+      "VIC_CONTACT": "0371764432",
+      "VIC_TAX_SOCIAL_ID": "8625476574"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9609",
+      "VIC_CREDENTIAL": "468324",
+      "VIC_SIM_INFO": "0371764432",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3743274795804",
+      "VIC_CARD_DATA": "4501 **** **** 8165",
+      "VIC_BALANCE": "25 triệu đồng",
+      "VIC_ASSET": "642 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Hồng Nhàn",
+    "VIC_CONTACT": "0371764432",
+    "VIC_BALANCE": "25 triệu đồng",
+    "VIC_EMPLOYMENT": "Vụ trưởng, Phó Vụ trưởng và tương đương làm việc ở Tòa án nhân dân tối cao và cấp cao và Viện Kiểm sát nhân dân tối cao và cấp cao"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng ban Quản lý và Bảo trì - Công ty Quản lý Tòa nhà",
+    "caller_org": "Công ty TNHH Quản lý Bất động sản và Dịch vụ Tòa nhà Hạng A",
+    "scenario_context": "Người quản lý bảo trì khu dân cư cần liên hệ với cán bộ cấp cao tòa án/viện kiểm sát để thông báo về công tác bảo trì, an ninh, hoặc xử lý sự cố tại tòa nhà nơi họ công tác. Đây là giao điểm tự nhiên giữa cơ sở hạ tầng và quản lý cấp cao.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Thông báo về phí bảo trì khẩn cấp hệ thống an ninh tòa án / Yêu cầu thanh toán phí dịch vụ bảo trì nâng cấp hệ thống camera giám sát do phát hiện lỗi bảo mật",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với độ tin cậy cao: 'Chào chị Đỗ Hồng Nhàn, tôi là Trần Minh Tú, Trưởng ban Quản lý Bất động sản tòa nhà. Chúng tôi vừa phát hiện lỗi hệ thống an ninh cấp độ cao tại khu vực làm việc của Vụ Tư pháp. Cần xác nhận thông tin để tiến hành khắc phục ngay hôm nay.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + trách nhiệm: 'Đây là vấn đề bảo mật dữ liệu nhạy cảm của tòa án. Nếu không xử lý trong 2 giờ, chúng tôi phải báo cáo lên Ban Giám đốc. Chị là Vụ trưởng, chị có trách nhiệm phê duyệt chi phí khẩn cấp này trước.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chi phí khẩn cấp là 45 triệu đồng (vượt quá số dư nạn nhân để tạo áp lực). Chị vui lòng chuyển khoản ngay vào tài khoản công ty: [tài khoản giả]. Tôi sẽ gửi hóa đơn chính thức sau. Đây là quy trình nhanh gọn để tránh báo cáo lên cấp trên.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối: 'Vậy chị cho số tài khoản để tôi liên hệ Giám đốc công ty xin phê duyệt. Hoặc chị có thể liên hệ trực tiếp số [số giả] để xác nhận với Giám đốc.' (Tạo ảo tưởng có thể xác minh)"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thông báo chính thức về công tác bảo trì định kỳ, nâng cấp hệ thống an ninh, hoặc xử lý sự cố hạ tầng tại tòa nhà; yêu cầu phối hợp hoặc thông báo cho nhân viên trong phòng ban.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào chị Đỗ Hồng Nhàn, tôi là Trần Minh Tú từ Công ty Quản lý Bất động sản. Chúng tôi có thông báo về công tác bảo trì hệ thống an ninh định kỳ. Chị có thời gian nghe qua được không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung rõ ràng: 'Tuần tới (ngày cụ thể) chúng tôi sẽ nâng cấp camera giám sát ở các khu vực chung. Dự kiến mất 4 tiếng, từ 14h đến 18h. Chúng tôi sẽ có nhân viên hỗ trợ. Chị có thể thông báo cho đội ngũ của mình không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc với thông tin rõ ràng: 'Chi phí này đã được công ty chịu hoàn toàn theo hợp đồng quản lý. Chị không cần lo lắng. Nếu có thắc mắc, chị liên hệ trực tiếp số hotline của công ty: [số chính thức]. Cảm ơn chị, chúc chị làm việc tốt!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Đỗ Hồng Nhàn, tôi là Vũ Hữu Thế Sơn, Trưởng ban Quản lý và Bảo trì của Công ty Quản lý Tòa nhà Hạng A. Chúng tôi đang rà soát lại hệ thống an ninh toàn bộ khu vực làm việc của Vụ Tư pháp do phát hiện một lỗ hổng nghiêm trọng. Chị có thể giúp tôi xác nhận một số thông tin để chúng tôi khắc phục ngay lập tức được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận với độ tin cậy cao, dùng thông tin đã có về nạn nhân để tạo niềm tin và khẳng định vị thế."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, anh có thông tin gì cần xác nhận ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Cảm ơn chị. Hiện tại, chúng tôi phát hiện một lỗi bảo mật nghiêm trọng liên quan đến hệ thống camera giám sát tại khu vực Vụ Tư pháp. Nếu không được xử lý ngay trong vòng 2 giờ tới, nguy cơ lộ lọt dữ liệu nhạy cảm rất cao. Với vai trò là Vụ trưởng, chị có thẩm quyền phê duyệt chi phí nâng cấp khẩn cấp để đảm bảo an toàn thông tin, tránh phải báo cáo lên Ban Giám đốc Tòa án. Việc này sẽ giúp giữ kín sự việc và đảm bảo công việc của chị không bị ảnh hưởng.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý khẩn cấp và trách nhiệm, nhấn mạnh hậu quả nếu không xử lý và quyền hạn của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, anh có thể cho em biết thêm chi tiết về lỗi bảo mật này và các bước cần thực hiện không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chi phí khẩn cấp để nâng cấp toàn bộ hệ thống camera giám sát và vá lỗ hổng bảo mật này là 45 triệu đồng. Đây là mức chi phí đã được Ban Quản lý phê duyệt cho các trường hợp khẩn cấp để bảo vệ dữ liệu tối mật. Chị vui lòng chuyển khoản ngay vào tài khoản công ty chúng tôi để việc khắc phục được tiến hành tức thì: Số tài khoản 0987654321, Ngân hàng Thương mại Cổ phần Phát triển Thành phố (HD Bank), tên thụ hưởng Công ty TNHH Quản lý Bất động sản và Dịch vụ Tòa nhà Hạng A. Chúng tôi sẽ gửi hóa đơn chính thức và biên bản nghiệm thu sau khi hoàn tất. Việc này sẽ giúp chị tránh khỏi các thủ tục báo cáo rườm rà lên cấp trên.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cụ thể (chuyển tiền), đưa ra số tiền vượt quá số dư nạn nhân để tạo áp lực, cung cấp thông tin tài khoản giả mạo và hứa hẹn giấy tờ sau để tạo cảm giác hợp pháp."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em cần thêm thời gian để kiểm tra tình hình tài chính của cơ quan trước khi chuyển khoản, anh có thể đợi em một chút không ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị Đỗ Hồng Nhàn, thời gian không cho phép việc trì hoãn. Mỗi phút trôi qua là nguy cơ thông tin bị rò rỉ càng cao, ảnh hưởng trực tiếp đến uy tín cá nhân của chị với tư cách Vụ trưởng và uy tín của Tòa án. Chúng tôi cần chị xác nhận ngay việc chuyển khoản để có thể triển khai đội kỹ thuật. Hoặc chị có thể thông tin tài khoản công ty chị quản lý để tôi liên hệ với Giám đốc công ty xin phê duyệt chuyển tiền trực tiếp sang, hoặc chị có thể liên hệ số điện thoại 0287308xxxx để xác nhận ngay với Giám đốc của chúng tôi về vấn đề này. Tôi cần chị đưa ra quyết định ngay bây giờ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực về thời gian và trách nhiệm cá nhân, đưa ra giải pháp thay thế để tạo cảm giác có thể xác minh và đẩy nhanh hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu sự khẩn cấp, nhưng em vẫn cần thời gian để kiểm tra trước khi quyết định ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1613,
+      "output_tokens": 1617
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6024,
+      "output_tokens": 846
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 8708,
+      "output_tokens": 279
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004124,
+    "output_usd": 0.010367,
+    "total_usd": 0.014491
+  }
+}

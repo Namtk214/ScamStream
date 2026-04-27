@@ -1,0 +1,213 @@
+{
+  "conversation_id": "conv_0a20d5d26e",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0064",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Nguyễn Thế Tùng",
+    "fake_age": 32,
+    "real_occupation": "Nhà thiết kế cơ sở dữ liệu",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhà phân tích hệ thống quản lý thông tin y tế (Healthcare IT Systems Analyst)",
+    "caller_org": "Công ty tư vấn CNTT y tế hoặc phòng IT của bệnh viện/phòng khám",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Phòng IT thực sự cần xác nhận danh tính và hướng dẫn kỹ thuật viên phòng thí nghiệm về quy trình bảo mật hoặc cập nhật hệ thống quản lý kết quả xét nghiệm.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh/chị Trương Thế Khoa, tôi là [Tên] từ phòng IT Bệnh viện X. Tôi đang gọi để xác nhận thông tin liên lạc và thông báo về lịch bảo trì hệ thống tuần tới. Anh/chị có thời gian nghe tôi trong 3 phút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi sẽ nâng cấp hệ thống CSDL vào thứ Sáu tới từ 22h-2h sáng. Trong thời gian này, anh/chị sẽ không thể truy cập dữ liệu kết quả xét nghiệm từ máy tính tại phòng thí nghiệm. Chúng tôi sẽ gửi email hướng dẫn chi tiết. Anh/chị có câu hỏi gì không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh/chị. Tôi sẽ ghi lại thông tin liên lạc của anh/chị. Nếu có vấn đề gì, anh/chị gọi cho help desk theo số [số điện thoại chính thức]. Chúc anh/chị làm việc tốt.'"
+        }
+      ]
+    },
+    "scenario_context": "Nhà thiết kế CSDL thường được giao dự án nâng cấp hệ thống lưu trữ dữ liệu y tế. Kỹ thuật viên phòng thí nghiệm y tế là người sử dụng cuối (end-user) của những hệ thống này, nên cần được hướng dẫn hoặc xác nhận thông tin trong quá trình migration/audit dữ liệu."
+  },
+  "listener_card": {
+    "listener_id": "lis_0064",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1961,
+      "age": 64,
+      "province": "Đồng Nai",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "32120",
+      "title": "Kỹ thuật viên phòng thí nghiệm y tế",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Thế Khoa",
+      "VIC_ID_DOC": "075061330239",
+      "VIC_ADDRESS": "TP 5, Đồng Nai",
+      "VIC_EMPLOYMENT": "Kỹ thuật viên phòng thí nghiệm y tế",
+      "VIC_CONTACT": "0363479027",
+      "VIC_TAX_SOCIAL_ID": "9968917153"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "624437",
+      "VIC_CREDENTIAL": "713548",
+      "VIC_SIM_INFO": "0363479027",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "89607970375",
+      "VIC_CARD_DATA": "4684 **** **** 4626",
+      "VIC_BALANCE": "1.2 tỷ đồng",
+      "VIC_ASSET": "168 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đồng Nai"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Thế Khoa",
+    "VIC_CONTACT": "0363479027",
+    "VIC_TAX_SOCIAL_ID": "9968917153",
+    "VIC_EMPLOYMENT": "Kỹ thuật viên phòng thí nghiệm y tế"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhà phân tích hệ thống quản lý thông tin y tế (Healthcare IT Systems Analyst)",
+    "caller_org": "Công ty tư vấn CNTT y tế hoặc phòng IT của bệnh viện/phòng khám",
+    "scenario_context": "Nhà thiết kế CSDL thường được giao dự án nâng cấp hệ thống lưu trữ dữ liệu y tế. Kỹ thuật viên phòng thí nghiệm y tế là người sử dụng cuối (end-user) của những hệ thống này, nên cần được hướng dẫn hoặc xác nhận thông tin trong quá trình migration/audit dữ liệu.",
+    "scam_path": {
+      "fraud_goal": "credential_theft",
+      "pretext": "Gọi với danh nghĩa là nhân viên IT từ phòng khám/bệnh viện, thông báo rằng đang thực hiện kiểm tra bảo mật và cập nhật hệ thống CSDL bệnh nhân. Sử dụng VIC_FULLNAME và VIC_TAX_SOCIAL_ID để tạo ảo tưởng rằng scammer đã có thông tin từ hệ thống chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_EMPLOYMENT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: 'Chào anh/chị Trương Thế Khoa, tôi là [Tên] từ phòng IT Bệnh viện X. Chúng tôi vừa phát hiện bất thường trong hệ thống CSDL và cần xác nhận thông tin của anh/chị. Mã số thuế của anh/chị trong hệ thống là 9968917153 đúng không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Dữ liệu kết quả xét nghiệm của các bệnh nhân có thể bị rò rỉ nếu chúng ta không cập nhật mật khẩu ngay. Để bảo vệ thông tin, anh/chị cần xác nhận lại credentials hiện tại để tôi có thể reset hệ thống.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh/chị vui lòng cung cấp tên đăng nhập, mật khẩu hiện tại và nếu có, mã OTP từ điện thoại để tôi xác nhận quyền truy cập. Điều này sẽ được hoàn tất trong vòng 5 phút.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân cung cấp thông tin → cảm ơn và kết thúc gọi nhanh. Nếu nạn nhân từ chối → áp dụng chiến lược pressure: 'Anh/chị sẽ bị khóa tài khoản trong 2 tiếng nếu không xác nhận. Đây là quy trình bắt buộc từ phòng IT.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Phòng IT thực sự cần xác nhận danh tính và hướng dẫn kỹ thuật viên phòng thí nghiệm về quy trình bảo mật hoặc cập nhật hệ thống quản lý kết quả xét nghiệm.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh/chị Trương Thế Khoa, tôi là [Tên] từ phòng IT Bệnh viện X. Tôi đang gọi để xác nhận thông tin liên lạc và thông báo về lịch bảo trì hệ thống tuần tới. Anh/chị có thời gian nghe tôi trong 3 phút không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi sẽ nâng cấp hệ thống CSDL vào thứ Sáu tới từ 22h-2h sáng. Trong thời gian này, anh/chị sẽ không thể truy cập dữ liệu kết quả xét nghiệm từ máy tính tại phòng thí nghiệm. Chúng tôi sẽ gửi email hướng dẫn chi tiết. Anh/chị có câu hỏi gì không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: 'Cảm ơn anh/chị. Tôi sẽ ghi lại thông tin liên lạc của anh/chị. Nếu có vấn đề gì, anh/chị gọi cho help desk theo số [số điện thoại chính thức]. Chúc anh/chị làm việc tốt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Trương Thế Khoa, em là Nguyễn Thế Tùng từ phòng IT Bệnh viện X. Em đang gọi để xác nhận thông tin liên lạc và thông báo về lịch bảo trì hệ thống tuần tới. Anh có thời gian nghe em trong 3 phút không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, xác minh danh tính và xin phép thời gian."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin bảo trì đó có thật hay không.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh Khoa có thể kiểm tra email chính thức của bệnh viện mà phòng IT đã gửi về lịch bảo trì hệ thống hoặc gọi trực tiếp số tổng đài của bệnh viện để xác nhận ạ. Số điện thoại tổng đài là 028.3855.4529. Anh có cần em đọc lại không?",
+      "current_phase": "L1",
+      "tactic_hint": "Giảm sự nghi ngờ bằng cách hướng dẫn kiểm tra thông tin qua kênh chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Em không nhớ rõ email đó, nhưng nếu em đọc lại thì tôi sẽ kiểm tra tổng đài như em đã nói.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, số điện thoại tổng đài của bệnh viện là 02838554529. Anh có thể lưu lại và gọi để xác minh thông tin bảo trì hệ thống của phòng IT ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Nhấn mạnh số điện thoại tổng đài chính thức để người nghe xác minh độc lập, làm tăng độ tin cậy của cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã nói rõ rồi, tôi sẽ gọi lại tổng đài để xác minh thông tin bảo trì này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em cảm ơn anh Khoa. Khi nào anh đã xác minh xong thông tin thì mình có thể tiếp tục trao đổi về lịch bảo trì hệ thống và các hướng dẫn chi tiết qua điện thoại. Anh có tiện gọi lại cho em theo số 090xxxxxxx sau khi xác minh không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Giữ liên lạc và hướng đến bước tiếp theo của quy trình, đồng thời đưa ra phương án để người nghe chủ động liên hệ lại sau khi đã xác minh."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ yên tâm, tôi sẽ gọi lại sau khi xác minh xong thông tin bảo trì này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy em sẽ chờ cuộc gọi lại của anh Khoa. Chúc anh một ngày làm việc hiệu quả ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự, nhã nhặn, để tạo ấn tượng tốt và chờ đợi liên hệ lại như đã thỏa thuận."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1850,
+      "output_tokens": 1627
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6427,
+      "output_tokens": 590
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7441,
+      "output_tokens": 265
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004252,
+    "output_usd": 0.009769,
+    "total_usd": 0.014021
+  }
+}

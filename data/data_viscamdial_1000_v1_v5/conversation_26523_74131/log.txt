@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_69b2329afd]
+  Caller thật: Nhạc trưởng/giám đốc dàn nhạc/ban nhạc/dàn hợp xướng (Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ)
+  Caller đóng vai: Nhân viên kỹ thuật âm thanh / Quản lý hạ tầng sự kiện @ Công ty sản xuất âm thanh sự kiện / Ban tổ chức sự kiện
+  Listener: Thợ lắp đặt đường dây điện (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Nhạc trưởng/giám đốc dàn nhạc cần liên hệ thợ lắp đặt đường dây điện để chuẩn bị hạ tầng điện cho các buổi biểu diễn, sự kiện lớn. Thợ lắp đặt là người trực tiếp chịu trách nhiệm đảm bảo nguồn điện an toàn và đủ công suất cho thiết bị âm thanh chuyên nghiệp.
+  Pretext: Gọi để 'xác nhận thông tin nhân viên thi công đã đăng ký trong hệ thống quản lý sự kiện' trước buổi biểu diễn lớn sắp tới. Sử dụng tên đầy đủ nạn nhân để tạo ảo tưởng đã có trong database.
+  Listener traits: ['dễ bị lừa bởi authority', 'hay hỏi lại để chắc chắn']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Phạm Xuân Gia Nam, em là Minh từ ban tổ chức sự kiện Gala Âm nhạc 2024. Chúng em có hồ sơ của anh trong danh sách thợ lắp đặt điện, mã số thuế là 6834060034. Em gọi để xác nhận nhanh thông tin trước khi ký hợp đồng chính thức ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân, sự kiện có thật, dùng đầy đủ tên nạn nhân và mã số thuế để tạo tin cậy, nêu lý do cuộc gọi và mục tiêu.
+T02 [LISTENER] Em nói đúng tên và mã số thuế của tôi, nhưng tôi muốn kiểm tra lại một chút thông tin trước khi xác nhận.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Vâng anh. Anh cứ kiểm tra lại thông tin hồ sơ bên em gửi qua tin nhắn Zalo số 0882781564. Anh xem đúng thông tin chưa rồi xác nhận lại giúp em ạ. Mình còn 5 phút để hoàn tất trước khi hệ thống tự động hủy hợp đồng đó anh.
+      → phase: S2 | tactic: Tạo cảm giác khẩn cấp (thời hạn 5 phút, hợp đồng bị hủy), chuyển hướng đối tượng sang kiểm tra Zalo/SMS để tiếp tục kịch bản S2.
+T04 [LISTENER] Em nói thời hạn khẩn cấp, nhưng tôi cần thêm thời gian để kiểm tra thông tin một cách kỹ lưỡng.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, em hiểu. Nhưng bên em đang gấp rút hoàn thành danh sách thợ để còn chốt danh sách với ban tổ chức, nên anh xem nhanh giúp em nhé. Nếu không kịp, em đành chuyển sang người khác để dự phòng đó ạ.
+      → phase: S2 | tactic: Thúc ép nhẹ nhàng, tạo cảm giác cạnh tranh công việc và nhấn mạnh sự cần thiết phải hành động nhanh chóng để không bị mất cơ hội, vẫn giữ trong phase S2.
+T06 [LISTENER] Tôi hiểu nhưng vẫn cần thêm thời gian để đảm bảo mọi thứ đúng, em có thể cho tôi ít phút nữa không?
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.00
+TOKEN: in=11599 | out=2290
+COST : $0.012993
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_26523_74131\conv_69b2329afd.json  [SCAM_REFUSE]

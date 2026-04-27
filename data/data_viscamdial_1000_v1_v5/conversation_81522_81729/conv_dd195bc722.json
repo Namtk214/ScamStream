@@ -1,0 +1,250 @@
+{
+  "conversation_id": "conv_dd195bc722",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0092",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Phạm Minh Khoa",
+    "fake_age": 34,
+    "real_occupation": "Thợ vận hành máy đan",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kinh doanh / Thương lái cung cấp nguyên liệu gỗ",
+    "caller_org": "cá nhân / thương lái tự do",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi với danh nghĩa nhân viên kinh doanh từ công ty cung cấp nguyên liệu gỗ, xưng là 'anh Hùng' từ HTX Gỗ Thanh Hóa (tận dụng địa chỉ VIC_ADDRESS). Nói rằng có gói ưu đãi hỗ trợ doanh nghiệp, hoặc cần xác minh thông tin khách hàng để cập nhật hệ thống quản lý chất lượng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Nam, em là anh Hùng từ HTX Gỗ Thanh Hóa. Em có thông tin anh đang vận hành máy chế biến gỗ ở TP 5, Thanh Hóa phải không? Em đang cập nhật danh sách khách hàng thân thiết để tặng chương trình khuyến mãi đặc biệt này.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý — tạo cảm giác may mắn + khẩn cấp: 'Anh may mắn lắm, chỉ có 100 khách được chọn. Nhưng em cần xác minh danh tính anh ngay bây giờ qua app ngân hàng để kích hoạt ưu đãi. Anh có app của ngân hàng không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh mở app lên, em sẽ hướng anh bước từng bước. Em sẽ gửi OTP xác minh qua SMS, anh nhận được rồi đọc lại cho em nghe để em kích hoạt gói ưu đãi 50% giảm giá nguyên liệu gỗ trong 6 tháng.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ nói 'Thôi anh, lỗi hệ thống. Để anh cân nhắc, em để số điện thoại này. Anh gọi lại khi sẵn sàng nhé.' Nếu thành công (nạn nhân đọc OTP), scammer sẽ cảm ơn và cắt máy ngay."
+        }
+      ]
+    },
+    "scenario_context": "Cả hai đều làm công việc vận hành máy móc trong lĩnh vực chế biến gỗ/sợi. Thương lái cung cấp nguyên liệu hoặc phụ tùng máy có lý do gọi trực tiếp cho thợ vận hành để trao đổi về chất lượng sản phẩm, đơn hàng, hoặc sự cố kỹ thuật."
+  },
+  "listener_card": {
+    "listener_id": "lis_0092",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1985,
+      "age": 40,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81729",
+      "title": "Thợ vận hành thiết bị chế biến gỗ khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Mai Đức Nam",
+      "VIC_ID_DOC": "038085904358",
+      "VIC_ADDRESS": "TP 5, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ vận hành thiết bị chế biến gỗ khác",
+      "VIC_CONTACT": "0835298380",
+      "VIC_TAX_SOCIAL_ID": "1303340280"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "296411",
+      "VIC_CREDENTIAL": "494220",
+      "VIC_SIM_INFO": "0835298380",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "372573670387",
+      "VIC_CARD_DATA": "4362 **** **** 1139",
+      "VIC_BALANCE": "126 triệu đồng",
+      "VIC_ASSET": "66 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Mai Đức Nam",
+    "VIC_CONTACT": "0835298380",
+    "VIC_ADDRESS": "TP 5, Thanh Hóa",
+    "VIC_EMPLOYMENT": "Thợ vận hành thiết bị chế biến gỗ khác"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh / Thương lái cung cấp nguyên liệu gỗ",
+    "caller_org": "cá nhân / thương lái tự do",
+    "scenario_context": "Cả hai đều làm công việc vận hành máy móc trong lĩnh vực chế biến gỗ/sợi. Thương lái cung cấp nguyên liệu hoặc phụ tùng máy có lý do gọi trực tiếp cho thợ vận hành để trao đổi về chất lượng sản phẩm, đơn hàng, hoặc sự cố kỹ thuật.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi với danh nghĩa nhân viên kinh doanh từ công ty cung cấp nguyên liệu gỗ, xưng là 'anh Hùng' từ HTX Gỗ Thanh Hóa (tận dụng địa chỉ VIC_ADDRESS). Nói rằng có gói ưu đãi hỗ trợ doanh nghiệp, hoặc cần xác minh thông tin khách hàng để cập nhật hệ thống quản lý chất lượng.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh Nam, em là anh Hùng từ HTX Gỗ Thanh Hóa. Em có thông tin anh đang vận hành máy chế biến gỗ ở TP 5, Thanh Hóa phải không? Em đang cập nhật danh sách khách hàng thân thiết để tặng chương trình khuyến mãi đặc biệt này.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý — tạo cảm giác may mắn + khẩn cấp: 'Anh may mắn lắm, chỉ có 100 khách được chọn. Nhưng em cần xác minh danh tính anh ngay bây giờ qua app ngân hàng để kích hoạt ưu đãi. Anh có app của ngân hàng không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh mở app lên, em sẽ hướng anh bước từng bước. Em sẽ gửi OTP xác minh qua SMS, anh nhận được rồi đọc lại cho em nghe để em kích hoạt gói ưu đãi 50% giảm giá nguyên liệu gỗ trong 6 tháng.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ nói 'Thôi anh, lỗi hệ thống. Để anh cân nhắc, em để số điện thoại này. Anh gọi lại khi sẵn sàng nhé.' Nếu thành công (nạn nhân đọc OTP), scammer sẽ cảm ơn và cắt máy ngay."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên kinh doanh từ công ty cung cấp nguyên liệu/phụ tùng gọi để trao đổi về đơn hàng mới, chất lượng sản phẩm, hoặc thông báo về chương trình ưu đãi thực sự cho khách hàng thân thiết.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Nam, em là anh Hùng từ công ty cung cấp gỗ X. Em có thông tin anh đang vận hành máy chế biến gỗ. Em muốn trao đổi về nhu cầu nguyên liệu của anh để đưa ra báo giá tốt nhất.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Anh đang cần loại gỗ gì? Sản lượng hàng tháng là bao nhiêu? Em có thể gửi mẫu qua đường bưu điện hoặc anh có thể ghé showroom em để xem trực tiếp. Giá hiện tại em ưu đãi 10-15% cho đơn hàng từ 5 tấn trở lên.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy anh cân nhắc xong, anh gọi em nhé. Số điện thoại em là [số]. Hoặc anh có thể ghé showroom em ở địa chỉ X vào thứ 2-6, từ 8h-17h. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Nam, tôi là Hùng từ HTX Gỗ Thanh Hóa. Tôi có thông tin anh đang vận hành máy chế biến gỗ ở TP 5, Thanh Hóa phải không? Tôi đang cập nhật danh sách khách hàng thân thiết để tặng chương trình khuyến mãi đặc biệt này.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân và công ty, sử dụng thông tin cá nhân của nạn nhân để tạo niềm tin và giới thiệu ưu đãi."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe nói như vậy rồi, nhưng em cần chắc chắn hơn về chương trình khuyến mãi này để hiểu rõ hơn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ yên tâm, đây là chương trình ưu đãi tri ân khách hàng đặc biệt chỉ dành cho 100 doanh nghiệp tiêu biểu như anh thôi. Tôi cần xác minh lại một chút thông tin để kích hoạt ưu đãi này. Anh có mở app ngân hàng mình đang dùng không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác may mắn và khẩn cấp, đồng thời chuyển hướng sang yêu cầu hành động đầu tiên là mở app ngân hàng để chuẩn bị cho việc khai thác OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em không rõ về việc cần mở app ngân hàng để xác minh thông tin, có cần thiết không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ hình dung thế này, hệ thống của tôi cần đối chiếu thông tin doanh nghiệp của anh với thông tin tài khoản ngân hàng để đảm bảo gói ưu đãi đi đúng đối tượng. Anh mở app đi, nó chỉ là bước xác minh nhỏ để hưởng trọn gói ưu đãi giảm giá 50% nguyên liệu gỗ thôi mà.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, giải thích lý do cần mở app ngân hàng một cách hợp lý và nhấn mạnh lợi ích của gói ưu đãi để thúc đẩy nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn không hiểu rõ lắm, tại sao phải liên kết thông tin doanh nghiệp với tài khoản ngân hàng để nhận ưu đãi ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Anh đừng nhầm lẫn việc liên kết nhé. Tôi không yêu cầu anh liên kết hay cung cấp bất kỳ thông tin mật nào của tài khoản ngân hàng đâu. Chỉ đơn giản là xác nhận anh là chủ sở hữu hợp pháp của doanh nghiệp thôi, thông qua một mã xác nhận mà ngân hàng gửi về cho anh. Anh làm theo tôi hướng dẫn, sẽ không mất nhiều thời gian đâu.",
+      "current_phase": "S3",
+      "tactic_hint": "Làm rõ và trấn an nạn nhân rằng không yêu cầu thông tin nhạy cảm, chỉ là xác nhận danh tính qua mã OTP, tiếp tục dẫn dắt nạn nhân thực hiện hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng mà em vẫn cảm thấy hơi băn khoăn về việc này, có thể giải thích rõ hơn cho em được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ hình dung, việc này giống như anh đăng ký dịch vụ online vậy đó. Họ sẽ gửi một mã xác nhận về số điện thoại đăng ký của anh, để đảm bảo đúng người đang thao tác. Ngân hàng của anh cũng sẽ làm tương tự để bảo vệ thông tin cho anh. Anh cứ mở app ngân hàng, tôi sẽ hướng dẫn anh từng bước. Chỉ là để kích hoạt gói ưu đãi 50% thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "So sánh với quy trình xác nhận thông thường để giảm bớt nghi ngờ và nhấn mạnh lợi ích của ưu đãi để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn thấy không thoải mái khi phải mở app ngân hàng, em muốn hỏi thêm về chương trình khuyến mãi này trước đã ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh cứ hỏi đi, tôi sẵn lòng giải thích mọi thắc mắc. Nhưng mà thời gian ưu đãi có hạn, gói 50% giảm giá nguyên liệu này đang chờ anh lắm đấy. Mình tranh thủ tiện cái lúc này xác minh để tôi chốt danh sách sớm cho anh nhé. Anh cần tôi giải thích thêm về chương trình hay về bước xác minh ngân hàng?",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách đề nghị giải thích thêm, nhưng đồng thời tạo áp lực thời gian và nhắc lại lợi ích của ưu đãi để thúc đẩy nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em cảm thấy không thoải mái lắm với việc mở app ngân hàng, em cần thời gian để suy nghĩ thêm ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Thôi anh, lỗi hệ thống rồi. Để anh cân nhắc, tôi để số điện thoại này, anh 0835298380. Anh gọi lại khi nào sẵn sàng nhé, chương trình ưu đãi này thực sự rất tốt cho doanh nghiệp của anh đó.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách khéo léo khi nạn nhân từ chối kiên quyết, để lại thông tin liên hệ và nhắc nhở về lợi ích đã đề xuất trước đó."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1858,
+      "output_tokens": 1539
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 11813,
+      "output_tokens": 1010
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13198,
+      "output_tokens": 435
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.0062,
+    "output_usd": 0.010481,
+    "total_usd": 0.016681
+  }
+}

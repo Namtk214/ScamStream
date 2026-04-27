@@ -1,0 +1,283 @@
+{
+  "conversation_id": "conv_6387a8c1c5",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0006",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phạm Như Thùy Hà",
+    "fake_age": 36,
+    "real_occupation": "Kỹ sư hóa học",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Nhân viên kiểm soát chất lượng / Giám sát vận chuyển chất thải nguy hiểm",
+    "caller_org": "Công ty Xử lý Chất thải Công nghiệp Việt Nam (VIWASTE) / Chi nhánh Nghệ An",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi cho Cao Thế Tùng thông báo rằng xe tải của anh bị phát hiện vi phạm tiêu chuẩn vận chuyển chất thải (container bị hỏng, hóa chất rò rỉ) tại trạm kiểm tra Huyện 12, Nghệ An. Cần thanh toán phí xử lý sự cố hoặc nộp tiền đặt cọc để tránh bị phạt hành chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh, phòng Kiểm soát Chất lượng VIWASTE Nghệ An'. Gọi trực tiếp số điện thoại của Cao Thế Tùng, xác nhận tên + địa chỉ Huyện 12 để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: 'Anh Tùng ơi, xe tải BKS [bịa số] của anh vừa bị kiểm tra tại Huyện 12 hôm nay, phát hiện container chứa axit sunfuric bị rò rỉ 2 lít. Theo luật Bảo vệ môi trường, chúng tôi phải phạt 50-100 triệu hoặc tạm giữ xe. Nhưng nếu anh thanh toán phí xử lý sự cố ngay (10 triệu) thì chúng tôi có thể giải quyết nội bộ, không cần báo cáo lên sở'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần chuyển khoản 10 triệu vào tài khoản công ty (số tài khoản: [giả mạo]) trong vòng 30 phút, hoặc gửi tiền qua Momo/Zalo Pay cho tôi để xử lý nhanh. Tôi sẽ gửi biên bản xử lý lại cho anh sau'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ đe dọa 'Anh không hợp tác thì chúng tôi phải báo cáo lên Sở Tài nguyên Môi trường, phạt 100 triệu + tạm giữ xe 30 ngày' rồi cúp máy. Nếu thành công, scammer sẽ cúp máy sau khi nhận tiền."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ sư hóa học làm việc tại công ty xử lý chất thải cần liên hệ với lái xe tải để kiểm tra chất lượng container, điều kiện vận chuyển, hoặc xác nhận lịch trình giao nhận chất thải nguy hiểm theo quy định môi trường."
+  },
+  "listener_card": {
+    "listener_id": "lis_0006",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1965,
+      "age": 60,
+      "province": "Nghệ An",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "83326",
+      "title": "Lái xe tải chở chất thải (bao gồm cả xe tải móc với thùng chứa cuộn)",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority",
+      "nghi ngờ nhưng lịch sự"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Cao Thế Tùng",
+      "VIC_ID_DOC": "040065497075",
+      "VIC_ADDRESS": "Huyện 12, Nghệ An",
+      "VIC_EMPLOYMENT": "Lái xe tải chở chất thải (bao gồm cả xe tải móc với thùng chứa cuộn)",
+      "VIC_CONTACT": "0340267211",
+      "VIC_TAX_SOCIAL_ID": "9607454588"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "578502",
+      "VIC_CREDENTIAL": "9401",
+      "VIC_SIM_INFO": "0340267211",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "044172203697",
+      "VIC_CARD_DATA": "4795 **** **** 1524",
+      "VIC_BALANCE": "76 triệu đồng",
+      "VIC_ASSET": "138 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Cao Thế Tùng",
+    "VIC_CONTACT": "0340267211",
+    "VIC_ADDRESS": "Huyện 12, Nghệ An"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kiểm soát chất lượng / Giám sát vận chuyển chất thải nguy hiểm",
+    "caller_org": "Công ty Xử lý Chất thải Công nghiệp Việt Nam (VIWASTE) / Chi nhánh Nghệ An",
+    "scenario_context": "Kỹ sư hóa học làm việc tại công ty xử lý chất thải cần liên hệ với lái xe tải để kiểm tra chất lượng container, điều kiện vận chuyển, hoặc xác nhận lịch trình giao nhận chất thải nguy hiểm theo quy định môi trường.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi cho Cao Thế Tùng thông báo rằng xe tải của anh bị phát hiện vi phạm tiêu chuẩn vận chuyển chất thải (container bị hỏng, hóa chất rò rỉ) tại trạm kiểm tra Huyện 12, Nghệ An. Cần thanh toán phí xử lý sự cố hoặc nộp tiền đặt cọc để tránh bị phạt hành chính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Anh Minh, phòng Kiểm soát Chất lượng VIWASTE Nghệ An'. Gọi trực tiếp số điện thoại của Cao Thế Tùng, xác nhận tên + địa chỉ Huyện 12 để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + khẩn cấp: 'Anh Tùng ơi, xe tải BKS [bịa số] của anh vừa bị kiểm tra tại Huyện 12 hôm nay, phát hiện container chứa axit sunfuric bị rò rỉ 2 lít. Theo luật Bảo vệ môi trường, chúng tôi phải phạt 50-100 triệu hoặc tạm giữ xe. Nhưng nếu anh thanh toán phí xử lý sự cố ngay (10 triệu) thì chúng tôi có thể giải quyết nội bộ, không cần báo cáo lên sở'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh cần chuyển khoản 10 triệu vào tài khoản công ty (số tài khoản: [giả mạo]) trong vòng 30 phút, hoặc gửi tiền qua Momo/Zalo Pay cho tôi để xử lý nhanh. Tôi sẽ gửi biên bản xử lý lại cho anh sau'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ đe dọa 'Anh không hợp tác thì chúng tôi phải báo cáo lên Sở Tài nguyên Môi trường, phạt 100 triệu + tạm giữ xe 30 ngày' rồi cúp máy. Nếu thành công, scammer sẽ cúp máy sau khi nhận tiền."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty xử lý chất thải cần xác nhận lịch trình vận chuyển, kiểm tra tình trạng container trước giao nhận, hoặc thông báo lịch trình tập kết chất thải mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh đầy đủ 'Anh Minh, phòng Điều phối Vận chuyển VIWASTE Nghệ An. Tôi gọi để xác nhận thông tin anh Cao Thế Tùng, lái xe tải BKS [số thật] phải không ạ?'. Xác nhận đúng người."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi có đơn hàng vận chuyển chất thải công nghiệp từ nhà máy tại TP Vinh đến trung tâm xử lý ở Hà Tĩnh, khối lượng 15 tấn, ngày mai 7h sáng. Container được kiểm tra kỹ kỹ, hóa chất được niêm phong. Anh có sẵn sàng không? Giá vận chuyển 8 triệu, thanh toán sau khi giao hàng. Anh cần lưu ý gì không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy anh chuẩn bị xe sáng mai, tôi sẽ gửi địa chỉ chi tiết + số điện thoại người nhận qua tin nhắn. Xe phải có bảng cảnh báo chất thải nguy hiểm, giấy tờ vận chuyển đầy đủ. Cảm ơn anh, chào tạm biệt'."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_FULLNAME": "Cao Thế Tùng"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh Tùng ạ, em là Minh đây, nhân viên kiểm soát chất lượng từ VIWASTE Nghệ An. Em gọi từ số 0340267211, có phải số của anh Cao Thế Tùng ở Huyện 12, Nghệ An không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, xác nhận thông tin nạn nhân để tạo độ tin cậy"
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi là Cao Thế Tùng, nhưng em gọi có việc gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {
+        "VIC_FULLNAME": "Cao Thế Tùng"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn anh Tùng đã xác nhận. Anh Tùng ơi, hiện tại xe tải biển số 37C-123.45 của anh vừa bị kiểm tra tại trạm kiểm soát ở Huyện 12 hôm nay, phát hiện container chở axit sunfuric bị rò rỉ khoảng 2 lít. Theo quy định về bảo vệ môi trường, trường hợp này có thể bị phạt từ 50 đến 100 triệu đồng hoặc tạm giữ phương tiện ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Khai thác tâm lý sợ hãi và khẩn cấp, đưa ra thông tin vi phạm cụ thể và hậu quả để gây áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, vậy tôi cần phải làm gì để giải quyết vụ này hả em?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, để tránh bị phạt nặng và xe bị tạm giữ, bên em có một giải pháp nội bộ là anh chỉ cần đóng phí xử lý sự cố môi trường là 10 triệu đồng. Như vậy thì mình sẽ không phải làm báo cáo lên sở và giữ được xe ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Đưa ra giải pháp 'nội bộ' với chi phí thấp hơn để nạn nhân chấp nhận, đồng thời nhấn mạnh lợi ích tránh phạt nặng và giữ xe."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng tôi cần kiểm tra lại thông tin này trước đã, em có tài liệu gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu là anh muốn xác minh thông tin. Tuy nhiên, tình hình rò rỉ axit này khá cấp bách và cần xử lý ngay để hạn chế ảnh hưởng môi trường cũng như tránh các cơ quan chức năng khác vào cuộc. Nếu anh không xử lý trong vòng 30 phút tới, em e là chúng tôi sẽ buộc phải báo cáo lên Sở Tài nguyên Môi trường, khi đó mức phạt sẽ không còn là 10 triệu nữa đâu ạ, mà có thể lên tới 100 triệu và xe của anh chắc chắn sẽ bị tạm giữ 30 ngày.",
+      "current_phase": "S4",
+      "tactic_hint": "Tạo áp lực thời gian, đe dọa hậu quả pháp lý nghiêm trọng hơn nếu không hợp tác ngay, đẩy nạn nhân vào thế phải hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng tôi vẫn muốn tìm hiểu thêm về quy trình này, em có thể giải thích rõ hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, quy trình rất đơn giản ạ. Anh chỉ cần chuyển khoản 10 triệu đồng vào tài khoản công ty chúng em trong vòng 30 phút. Sau khi nhận được khoản tiền, chúng em sẽ lập tức gửi biên bản xác nhận đã xử lý sự cố cho anh, đảm bảo xe anh được giải tỏa và không có bất kỳ báo cáo nào lên Sở Tài nguyên Môi trường. Anh có thể chuyển qua tài khoản của VIWASTE là 19030800123456 tại ngân hàng Techcombank, hoặc nếu tiện hơn thì em có thể gửi số Momo của em để anh chuyển khoản trực tiếp cho nhanh gọn ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích quy trình thanh toán đơn giản, đưa ra các lựa chọn chuyển khoản và tạo cảm giác gấp gáp để nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng tôi còn băn khoăn về độ tin cậy của tài khoản đó, em có thể cho tôi biết thêm thông tin gì để tôi yên tâm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Tùng cứ yên tâm ạ. Đây là tài khoản chính thức của công ty VIWASTE chi nhánh Nghệ An. Nếu không tin tưởng, anh có thể tra cứu thông tin trên website của cục môi trường hoặc anh có thể chuyển trực tiếp qua số Momo của em cho tiện, em sẽ gửi biên bản xác nhận ngay lập tức cho anh sau khi nhận được tiền. Anh nên nhớ, nếu anh không xử lý trong vòng 15 phút tới, chúng tôi buộc phải báo cáo lên Sở Tài nguyên và Môi trường. Lúc đó thì mức phạt sẽ không còn là 10 triệu đâu ạ, mà có thể lên tới 100 triệu và xe của anh chắc chắn sẽ bị tạm giữ 30 ngày.",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách cung cấp thông tin xác thực (dù là giả), đồng thời tiếp tục tạo áp lực thời gian và đe dọa hậu quả nghiêm trọng hơn để ép nạn nhân hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em có thể cung cấp cho tôi thông tin nào khác để tôi yên tâm hơn về công ty và tài khoản đó được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng ơi, tôi đã cung cấp thông tin về công ty VIWASTE và tài khoản rồi. Nếu anh vẫn còn băn khoăn về độ tin cậy, tôi sẽ không thể hỗ trợ anh giải quyết nội bộ nữa. Tôi sẽ buộc phải báo cáo lên Sở Tài nguyên Môi trường đúng như quy định. Khi đó, mọi việc sẽ trở nên phức tạp và tốn kém hơn rất nhiều cho anh. Anh cứ suy nghĩ kỹ đi ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Thể hiện sự cứng rắn, đặt nạn nhân vào thế phải lựa chọn giữa tin tưởng và chịu hậu quả nặng hơn, kết thúc cuộc gọi khi nạn nhân từ chối quá nhiều."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chờ chị một chút, tôi hỏi người nhà xem sao."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng tôi vẫn cần thêm thời gian để suy nghĩ và kiểm tra thông tin ạ, em có thể cho tôi biết rõ hơn về quy trình báo cáo lên Sở không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng ơi, tôi đã nói rõ rồi ạ. Nếu anh không xử lý trong thời gian chúng tôi cho phép, chúng tôi buộc phải thực hiện đúng quy trình báo cáo lên Sở Tài nguyên Môi trường. Lúc đó, mọi thủ tục sẽ theo quy định pháp luật và không còn sự hỗ trợ nội bộ nào nữa. Anh sẽ phải đối mặt với mức phạt cao hơn rất nhiều và việc tạm giữ xe là chắc chắn. Tôi không thể chờ đợi anh thêm được nữa đâu ạ. Anh quyết định nhanh giúp tôi.",
+      "current_phase": "S4",
+      "tactic_hint": "Thúc ép nạn nhân ra quyết định nhanh chóng, nhắc lại hậu quả nghiêm trọng của việc chậm trễ và loại bỏ khả năng hỗ trợ nội bộ."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng tôi vẫn cảm thấy cần phải kiểm tra thông tin rõ ràng hơn trước khi quyết định, em có thể kiên nhẫn một chút không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Tùng, tôi đã dành đủ thời gian để giải thích và cung cấp tất cả các lựa chọn rồi. Nếu anh không tin tưởng và không thể đưa ra quyết định ngay, tôi e rằng chúng tôi đành phải thực hiện đúng quy trình báo cáo lên Sở Tài nguyên Môi trường. Tôi sẽ phải cúp máy đây và tiến hành báo cáo. Chúc anh một ngày tốt lành.",
+      "current_phase": "S4",
+      "tactic_hint": "Kết thúc cuộc gọi một cách lịch sự nhưng dứt khoát, sau khi đã hết kiên nhẫn với sự từ chối và nghi ngờ của nạn nhân, đồng thời nhấn mạnh hậu quả để nạn nhân tự suy nghĩ."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1854,
+      "output_tokens": 1679
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 18549,
+      "output_tokens": 1585
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 20746,
+      "output_tokens": 595
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.008676,
+    "output_usd": 0.012715,
+    "total_usd": 0.02139
+  }
+}

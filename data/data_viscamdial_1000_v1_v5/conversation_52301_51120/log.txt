@@ -1,0 +1,72 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c43206b48e]
+  Caller thật: Nhân viên thu ngân và bán vé (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Caller đóng vai: Nhân viên kiểm soát vé và thanh toán - Nhà xe/Công ty vận tải @ Công ty Vận tải Liên Tỉnh ABC hoặc tương tự
+  Listener: Nhân viên phụ tàu xe (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: LEGIT | Path: LEGIT
+  Context: Nhân viên thu ngân/bán vé của nhà xe cần liên hệ nhân viên phụ tàu để xác nhận hành khách, kiểm tra thông tin đặt vé, hoặc xử lý các vấn đề thanh toán/hoàn vé liên quan đến hành trình. Đây là giao tiếp nội bộ hàng ngày trong ngành vận tải hành khách.
+  Pretext: Nhân viên kiểm soát vé gọi xác nhận thông tin hành khách trước chuyến đi, kiểm tra thanh toán đã đủ, hoặc thông báo thay đổi lịch trình/yêu cầu cập nhật thông tin liên lạc
+  Listener traits: ['dễ bị lừa bởi authority', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Anh Minh ơi, em là Huỳnh Đức Đạt từ Công ty Vận tải Liên Tỉnh ABC. Hôm nay anh có chuyến đi TP.HCM - Hà Nội lúc 14h phải không ạ? Em gọi để xác nhận anh vẫn đi và cập nhật số điện thoại liên hệ nếu cần ạ.
+      → phase: L1 | tactic: Xưng danh rõ ràng, mục đích rõ ràng, tạo sự tin tưởng.
+T02 [LISTENER] Tôi vẫn đi chuyến đó, nhưng mà em có thể cho tôi biết thêm thông tin về chuyến đi này không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, anh Minh có thể cho em xin lại mã vé hoặc thông tin cá nhân như họ tên đầy đủ và ngày sinh để em kiểm tra chính xác thông tin chuyến đi của anh được không ạ? Em cũng muốn xác nhận lại địa điểm đón chính xác và giờ xe sẽ xuất phát để anh chủ động hơn ạ.
+      → phase: L2 | tactic: Xác nhận lại thông tin hành khách để kiểm tra vé, đồng thời cung cấp thêm chi tiết chuyến đi.
+T04 [LISTENER] Em có thể cho tôi biết địa điểm đón và giờ xe xuất phát trước được không, rồi tôi sẽ cung cấp thông tin của tôi sau.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để em kiểm tra nhanh và cung cấp thông tin ngay cho anh nhé. Anh vui lòng đợi em một vài phút ạ.
+      → phase: L2 | tactic: Giữ thái độ hợp tác và không gây áp lực, đồng thời thể hiện đang hỗ trợ yêu cầu của khách hàng.
+T06 [LISTENER] Em đợi một chút nhé, nhưng mà em có thể cho tôi biết thêm một chút thông tin về công ty của em không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T07 [CALLER] Dạ vâng, Công ty Vận tải Liên Tỉnh ABC của chúng em là một doanh nghiệp đã có uy tín lâu năm trong lĩnh vực vận tải hành khách liên tỉnh. Chúng em có trụ sở chính tại TP.HCM và các chi nhánh ở nhiều tỉnh thành lớn, chuyên cung cấp các tuyến xe chất lượng cao với đội ngũ tài xế chuyên nghiệp. Anh có thể tìm hiểu thêm thông tin chi tiết trên website chính thức của công ty là www.vantailientinhabc.vn ạ.
+      → phase: L2 | tactic: Trấn an khách hàng bằng cách cung cấp thông tin về công ty, xây dựng lòng tin và sự uy tín.
+T08 [LISTENER] Công ty của em có địa chỉ ở đâu cụ thể không, và em đã hoạt động bao lâu rồi?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T09 [CALLER] Dạ, trụ sở chính của chúng em đặt tại số 123 Đường Nguyễn Huệ, Quận 1, TP.HCM, và công ty đã hoạt động được hơn 15 năm rồi ạ. Chúng em luôn cố gắng mang đến dịch vụ tốt nhất cho quý khách hàng.
+      → phase: L2 | tactic: Cung cấp chi tiết thông tin về công ty để tăng cường sự tin cậy và trấn an khách hàng.
+T10 [LISTENER] Cảm ơn em đã cung cấp thông tin, nhưng tôi vẫn chưa chắc lắm về việc cung cấp dữ liệu cá nhân của mình, em có thể bảo đảm thông tin của tôi sẽ được bảo mật không?
+      → action: CONTINUE | suspicion: 0.80 | disclosed: []
+
+T11 [CALLER] Dạ vâng, em hoàn toàn hiểu sự lo lắng của anh Minh ạ. Anh yên tâm là mọi thông tin cá nhân của khách hàng đều được công ty chúng em bảo mật tuyệt đối theo chính sách riêng tư. Thông tin anh cung cấp chỉ dùng để đối chiếu với hệ thống vé và không được chia sẻ cho bên thứ ba. Nếu anh vẫn chưa tiện cung cấp qua điện thoại, anh có thể gọi trực tiếp lên tổng đài 1900-xxxx của công ty để được hỗ trợ kiểm tra hoặc ghé quầy vé trực tiếp tại bến xe sớm trước giờ khởi hành nhé ạ.
+      → phase: L2 | tactic: Trấn an khách hàng về vấn đề bảo mật thông tin, đồng thời đưa ra các phương án thay thế để khách hàng cảm thấy an toàn và thoải mái hơn khi cung cấp thông tin.
+T13 [LISTENER] Em có thể cho tôi biết số điện thoại đường dây nóng của công ty không ạ?
+      → action: CONTINUE | suspicion: 0.90 | disclosed: []
+
+T14 [CALLER] Dạ vâng, số điện thoại tổng đài hỗ trợ và đường dây nóng chính thức của công ty em là 1900-xxxx ạ. Anh có thể gọi vào số này để xác minh lại thông tin hoặc nếu có bất kỳ thắc mắc nào khác ạ.
+      → phase: L2 | tactic: Cung cấp số điện thoại tổng đài chính thức để khách hàng có thể tự xác minh, tăng cường sự tin tưởng và trấn an về tính hợp pháp của cuộc gọi.
+T15 [LISTENER] Cảm ơn em đã cung cấp số điện thoại, nhưng tôi vẫn cảm thấy hơi nghi ngờ, em có thể cho tôi biết rõ hơn về cách mà công ty bảo mật thông tin của khách hàng không?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T16 [CALLER] Dạ vâng, về chính sách bảo mật thông tin khách hàng, Công ty Vận tải Liên Tỉnh ABC chúng em tuân thủ nghiêm ngặt các quy định về bảo vệ dữ liệu cá nhân. Mọi thông tin anh Minh cung cấp sẽ được mã hóa và lưu trữ trên hệ thống máy chủ an toàn, có tường lửa bảo vệ. Chỉ những nhân viên có thẩm quyền và được đào tạo về bảo mật mới có quyền truy cập thông tin này, và chỉ khi phục vụ mục đích liên quan đến việc đặt vé, xác nhận chuyến đi hoặc hỗ trợ khách hàng thôi ạ. Cam kết của chúng em là không tiết lộ thông tin cá nhân của khách hàng cho bất kỳ bên thứ ba nào khi chưa có sự đồng ý của khách hàng, trừ khi có yêu cầu từ pháp luật.
+      → phase: L2 | tactic: Giải thích chi tiết hơn về chính sách bảo mật để trấn an khách hàng, xây dựng lòng tin và giảm sự nghi ngờ.
+T17 [LISTENER] Tôi vẫn cảm thấy chưa yên tâm lắm, em có thể cho tôi một số thông tin khác để tôi xác thực không?
+      → action: CONTINUE | suspicion: 1.20 | disclosed: []
+
+T18 [CALLER] Dạ, nếu anh Minh vẫn còn lo lắng, em xin phép nhắc lại là anh hoàn toàn có thể gọi trực tiếp đến tổng đài chính thức của công ty em là 1900-xxxx để xác minh cuộc gọi này và thông tin chuyến đi. Hoặc anh có thể ghé trực tiếp quầy vé tại các bến xe để nhân viên hỗ trợ trực tiếp ạ. Em không thể cung cấp thêm thông tin cá nhân của người khác để anh xác thực mà không có sự đồng ý của họ, vì đó là vi phạm chính sách bảo mật ạ.
+      → phase: L2 | tactic: Nhấn mạnh lại các kênh xác thực chính thức, đồng thời từ chối khéo léo yêu cầu cung cấp thông tin không phù hợp để giữ vững nguyên tắc bảo mật và tránh nghi ngờ.
+T19 [LISTENER] Em hiểu, nhưng tôi vẫn cảm thấy không thoải mái khi cung cấp thông tin, có cách nào khác để xác nhận không ạ?
+      → action: CONTINUE | suspicion: 1.40 | disclosed: []
+
+T20 [CALLER] Dạ, nếu anh Minh không muốn cung cấp thông tin qua điện thoại, mình có thể đến trực tiếp quầy vé tại bến xe để xác nhận thông tin vé và chuyến đi, hoặc anh có thể gửi tin nhắn xác nhận qua số điện thoại đã đăng ký vé của công ty. Miễn sao thông tin được xác nhận trước giờ khởi hành là được ạ. Anh yên tâm nhé.
+      → phase: L2 | tactic: Đề xuất các phương án xác nhận thông tin thay thế để giảm bớt sự lo lắng của khách hàng, đồng thời vẫn đảm bảo hoàn thành mục đích cuộc gọi.
+T21 [LISTENER] Em không chắc là có phương án nào khác tốt hơn không, nhưng tôi cần phải nghĩ thêm về việc này.
+      → action: REFUSAL | suspicion: 1.90 | disclosed: []
+
+T22 [CALLER] Dạ vâng, vậy anh cứ suy nghĩ thêm ạ. Nhưng anh cố gắng xác nhận lại thông tin trước 13h trưa nay để công ty có thể sắp xếp chỗ ngồi và đảm bảo chuyến đi của anh được thuận lợi nhất nhé. Nếu có thay đổi gì, anh cứ gọi lại cho tổng đài 1900-xxxx của công ty em ạ. Chúc anh có một ngày làm việc hiệu quả!
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự, vẫn giữ mục đích xác nhận nhưng không tạo áp lực. Nhắc nhở thời hạn và cung cấp kênh liên lạc chính thức để khách hàng chủ động xử lý sau.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  22 turns | suspicion=1.90
+TOKEN: in=49269 | out=4117
+COST : $0.023080
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v4\conversation_52301_51120\conv_c43206b48e.json  [CALLER_END]

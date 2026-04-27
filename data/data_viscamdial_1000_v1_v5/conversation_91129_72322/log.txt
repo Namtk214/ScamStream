@@ -1,0 +1,44 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_98b1e7aa47]
+  Caller thật: Người dọn dẹp ở các cơ sở khác (như trung tâm mua sắm, trường học, bệnh viện, những nơi thờ tự) (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên bảo trì & an toàn lao động tại các cơ sở công cộng @ Công ty quản lý bảo trì cơ sở hạ tầng công cộng
+  Listener: Thợ sửa chữa động cơ máy bay (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Người bảo trì cơ sở công cộng cần liên hệ với thợ sửa chữa máy bay để xác minh thông tin an toàn lao động hoặc kiểm tra thiết bị tại khu vực làm việc của nạn nhân (nhà xưởng sửa chữa máy bay có nhiều thiết bị điện, khí nén, cần tuân thủ quy định an toàn).
+  Pretext: Gọi xưng danh là nhân viên kiểm tra an toàn lao động, nói rằng hệ thống bảo hiểm xã hội của Vũ Thị Ngân có bất thường cần xác minh gấp, hoặc có một khoản tiền bảo hiểm thất thường cần khôi phục tài khoản ngay lập tức.
+  Listener traits: ['cẩn thận và cảnh giác']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Vũ Thị Ngân phải không ạ? Em là Lý Khánh Liên đây, từ bộ phận Kiểm tra An toàn Lao động của Công ty quản lý bảo trì cơ sở hạ tầng công cộng. Bên em vừa phát hiện tài khoản bảo hiểm xã hội của chị đang có dấu hiệu bất thường, cần xác minh ngay để bảo vệ tài khoản cho chị ạ.
+      → phase: S1 | tactic: Giới thiệu bản thân và đưa ra lý do cuộc gọi, sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy ban đầu.
+T02 [LISTENER] Em gọi từ số mấy vậy ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ em gọi từ số hotline của bên em, số 1900 1234 chị nhé. Chị Ngân ơi, vấn đề này khá là gấp đó ạ, hệ thống bên em vừa ghi nhận có người đang cố gắng rút 37 triệu đồng từ tài khoản bảo hiểm xã hội của chị. Nếu chúng ta không xác minh ngay trong 5 phút tới, có thể tài khoản của chị sẽ bị khóa vĩnh viễn và chị sẽ không thể nhận được bất kỳ khoản bảo hiểm lao động nào nữa đâu ạ.
+      → phase: S2 | tactic: Tạo cảm giác khẩn cấp và sợ hãi bằng cách nhấn mạnh hậu quả mất tiền và khóa tài khoản, đồng thời sử dụng thông tin về số tiền cụ thể để tăng độ tin cậy.
+T04 [LISTENER] Em nói vậy tôi cũng thấy lo, nhưng tôi muốn kiểm tra lại thông tin này có đúng không đã.
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ em hiểu là chị lo lắng ạ. Nhưng bên em hoàn toàn gọi đúng số của chị và biết rõ thông tin của chị là Vũ Thị Ngân, làm Thợ sửa chữa động cơ máy bay. Nếu không phải là thật thì làm sao em biết rõ về chị như vậy được ạ? Hiện tại, hệ thống đang hiển thị một mã OTP đã được gửi đến số điện thoại của chị để xác minh giao dịch kia. Chị vui lòng đọc lại mã OTP đó cho em được không ạ?
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ bằng cách nhắc lại thông tin cá nhân chính xác của nạn nhân, sau đó chuyển sang yêu cầu hành động trực tiếp là cung cấp OTP để giải quyết tình huống khẩn cấp.
+T06 [LISTENER] Em không hiểu rõ mã OTP mà em đang nói đến, em có thể giải thích thêm cho tôi được không?
+      → action: CONTINUE | suspicion: 0.70 | disclosed: []
+
+T07 [CALLER] Dạ, mã OTP là một dãy số hoặc ký tự được gửi tự động từ ngân hàng hoặc tổ chức tài chính để xác nhận rằng đúng chủ tài khoản đang thực hiện giao dịch đó. Nó giống như chìa khóa để mở giao dịch vậy. Chị vui lòng kiểm tra tin nhắn điện thoại để tìm dãy số đó và đọc lại giúp em nhé. Chỉ khi có mã này em mới giúp chị chặn đứng giao dịch rút tiền bất thường kia và bảo vệ tài khoản cho chị được ạ.
+      → phase: S3 | tactic: Giải thích rõ hơn về mã OTP và nhấn mạnh sự cần thiết của nó để giải quyết vấn đề khẩn cấp, tạo áp lực cho nạn nhân đọc OTP.
+T08 [LISTENER] Tôi vẫn chưa hiểu rõ lắm, nên tôi không thể cung cấp thông tin đó được.
+      → action: REFUSAL | suspicion: 1.40 | disclosed: []
+
+T09 [CALLER] Dạ vâng, nếu chị vẫn cảm thấy chưa yên tâm, thì chị có thể gọi trực tiếp lên tổng đài bảo hiểm xã hội 1900-1234 để xác minh lại nhé. Nhưng mà chị Ngân ơi, tài khoản của chị đang có nguy cơ bị khóa vĩnh viễn đó ạ. Bên em chỉ có thể giữ tài khoản chị ở trạng thái chờ xác minh trong khoảng 5 phút nữa thôi. Sau đó, hệ thống sẽ tự động khóa tài khoản ạ. Mong chị cân nhắc để không ảnh hưởng đến quyền lợi bảo hiểm của mình.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách đưa ra một số tổng đài giả để nạn nhân gọi lại xác minh, đồng thời nhắc lại mối đe dọa về việc khóa tài khoản và giới hạn thời gian để tăng áp lực.
+T11 [LISTENER] Tôi cần kiểm tra thêm thông tin này trước khi quyết định, không thể vội vàng được.
+      → action: REFUSAL | suspicion: 2.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  11 turns | suspicion=2.80
+TOKEN: in=20369 | out=2758
+COST : $0.015216
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_91129_72322\conv_98b1e7aa47.json  [SCAM_REFUSE]

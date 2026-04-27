@@ -1,0 +1,49 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_a652826a5e]
+  Caller thật: Thợ vận hành máy dệt (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên bán hàng / Kinh doanh vật tư công nghiệp @ cá nhân / thương lái tự do
+  Listener: Lao động trong khai thác mỏ và khai thác đá (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_SUCCESS | Path: SCAM
+  Context: Thợ vận hành máy dệt thường cần mua sắm vật tư công nghiệp (dây đai truyền động, vòng bi, dầu máy, thiết bị bảo vệ). Lao động khai thác mỏ cũng sử dụng các vật tư tương tự. Cả hai đều là lao động tay nghề, nên có mối liên hệ qua các nhà cung cấp vật tư chung.
+  Pretext: Gọi tới nạn nhân với danh nghĩa là nhân viên bán hàng vật tư công nghiệp, tuyên bố có đơn hàng đặt trước hoặc hóa đơn chưa thanh toán liên quan đến tài khoản ngân hàng của nạn nhân. Sử dụng tên đầy đủ 'Tạ Hồng Hằng' để tạo ấn tượng đã kiểm tra kỹ thông tin.
+  Listener traits: ['lo lắng hay bận tâm', 'dễ bị lừa bởi authority']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ, em chào chị ạ. Em là Cao Như Vy bên vật tư công nghiệp đây ạ. Em xin phép xác nhận có phải chị Tạ Hồng Hằng không ạ?
+      → phase: S1 | tactic: Tiếp cận và xác nhận danh tính với tên đầy đủ để tạo sự tin cậy.
+T02 [LISTENER] Đúng rồi, tôi là Tạ Hồng Hằng đây, em có chuyện gì không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, em cảm ơn chị. Chị Hằng ơi, em thấy bên hệ thống của em đang có một hóa đơn cũ đứng tên chị, số tài khoản 95728881295108, với một đơn hàng dệt từ 3 tháng trước chưa thanh toán, tổng cộng 12 triệu đồng ạ. Nếu không thanh toán trong ngày hôm nay thì bên em buộc phải báo cáo với sở công thương ở Huyện 8, Cần Thơ đó chị.
+      → phase: S2 | tactic: Tạo tâm lý khẩn cấp và áp lực bằng cách nhắc đến đơn hàng chưa thanh toán, hậu quả pháp lý và địa chỉ để tăng tính xác thực.
+T04 [LISTENER] Ôi, em ơi, sao lại có hóa đơn như vậy? Tôi không biết gì cả, làm ơn hãy giải thích rõ cho tôi đi.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Dạ, em hiểu là chị có thể chưa nắm rõ thông tin này, nhưng trên hệ thống của công ty em thì rõ ràng hiển thị là có hóa đơn này với số tài khoản của chị. Bây giờ, nếu chị không thanh toán ngay, bên em buộc phải chuyển hồ sơ sang bộ phận pháp lý, và lúc đó mình sẽ gặp rắc rối lớn hơn với Sở Công Thương đó ạ.
+      → phase: S2 | tactic: Xoa dịu sự nghi ngờ bằng cách thừa nhận sự bối rối của nạn nhân, nhưng vẫn khẳng định tính xác thực của thông tin và tăng cường áp lực bằng việc đề cập đến rắc rối pháp lý và Sở Công Thương.
+T06 [LISTENER] Em ơi, tôi thật sự lo lắng, tôi không làm đơn hàng nào cả, làm ơn hãy kiểm tra kỹ lại giúp tôi được không?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T07 [CALLER] Dạ, em hiểu sự lo lắng của chị ạ. Để giải quyết dứt điểm vấn đề này, em sẽ gửi cho chị một đường link qua tin nhắn SMS để chị kiểm tra lại chi tiết đơn hàng và thực hiện thanh toán trực tiếp trong đó. Hoặc nếu không, chị có thể chuyển khoản trực tiếp vào tài khoản công ty em. Sau khi thanh toán xong, hệ thống sẽ tự động cập nhật và hủy bỏ mọi khiếu nại ạ.
+      → phase: S3 | tactic: Giảm bớt sự lo lắng của nạn nhân và đưa ra giải pháp cụ thể để nạn nhân thực hiện hành động chuyển tiền, tạo cảm giác 'giải quyết vấn đề'.
+T08 [LISTENER] Em ơi, nhưng tôi vẫn cảm thấy hoang mang quá, tôi chưa từng nhận được thông tin gì về đơn hàng này cả, sao em lại chắc chắn là tôi có hóa đơn như vậy?
+      → action: CONTINUE | suspicion: 0.60 | disclosed: []
+
+T09 [CALLER] Dạ chị Hằng ơi, em biết chị đang hoang mang, nhưng đây là thông tin được lưu trữ trên hệ thống của công ty em. Em nghĩ tốt nhất bây giờ là mình xử lý ngay để tránh phát sinh thêm những rắc rối không đáng có. Mình có thể thanh toán qua đường link em gửi hoặc chuyển khoản trực tiếp đều được ạ.
+      → phase: S3 | tactic: Xoa dịu sự nghi ngờ, tái khẳng định thông tin trên hệ thống và thúc đẩy hành động thanh toán ngay để tránh hậu quả xấu.
+T10 [LISTENER] Em ơi, nhưng tôi vẫn chưa thấy yên tâm, nếu có vấn đề gì thật sự, tôi muốn kiểm tra lại với cơ quan chức năng trước đã.
+      → action: REFUSAL | suspicion: 0.70 | disclosed: []
+
+T11 [CALLER] Dạ vâng, nếu chị muốn kiểm tra lại thì cũng được thôi ạ. Nhưng em xin nhấn mạnh lại là nếu không thanh toán trong hôm nay, hồ sơ của chị sẽ được chuyển sang bộ phận pháp lý, và lúc đó em không còn giúp được chị nữa đâu ạ. Chị suy nghĩ kỹ nhé.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách cho phép nạn nhân kiểm tra nhưng nhắc lại hậu quả và đặt thời hạn, đồng thời tạo cảm giác 'đây là cơ hội cuối cùng để tôi giúp chị'.
+T13 [LISTENER] Em ơi, tôi cần thời gian để suy nghĩ và kiểm tra, nhưng tôi thật sự không muốn gặp rắc rối đâu.
+      → action: REFUSAL | suspicion: 0.80 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  13 turns | suspicion=0.80
+TOKEN: in=25263 | out=2972
+COST : $0.016472
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_81521_93110\conv_a652826a5e.json  [SCAM_REFUSE]

@@ -1,0 +1,226 @@
+{
+  "conversation_id": "conv_6534fa3ec8",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0070",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Đinh Thế Phong",
+    "fake_age": 27,
+    "real_occupation": "Kỹ sư công nghiệp chế biến, chế tạo",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Kỹ sư tư vấn quy trình sản xuất / Chuyên gia tối ưu hóa nuôi trồng thủy sản",
+    "caller_org": "Công ty tư vấn kỹ thuật nông nghiệp / Cá nhân tự do - tư vấn chế biến",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Cuộc gọi từ một công ty tư vấn kỹ thuật hoặc cơ quan nông nghiệp thực sự, nhằm đề xuất dịch vụ tư vấn hoặc thông báo về chương trình hỗ trợ kỹ thuật nuôi tôm (do Nhà nước, tổ chức nông dân, hoặc công ty tư nhân hợp pháp cung cấp).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng (tên, công ty, số điện thoại chính thức, có thể cung cấp mã xác nhận nếu yêu cầu). Xác nhận đúng người: 'Tôi là A từ công ty/cơ quan B, tôi có liên hệ với chị Hà Vũ Bảo Thu không?' — để nạn nhân tự xác nhận."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả rõ dịch vụ, lợi ích, chi phí (nếu có) — hoặc thông báo về chương trình miễn phí từ chính phủ/tổ chức. Để nạn nhân đặt câu hỏi, không vội vàng. Nếu nạn nhân quan tâm, gửi tài liệu/hợp đồng qua email hoặc giấy tờ chính thức trước khi yêu cầu bất kỳ hành động nào."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: Nếu nạn nhân đồng ý, hẹn gặp trực tiếp, gửi hợp đồng, hoặc cung cấp số tài khoản công ty chính thức (có thể kiểm chứng). Nếu từ chối, tôn trọng quyết định, để lại thông tin liên hệ để nạn nhân có thể gọi lại nếu cần. Chào tạm biệt lịch sự, không tạo áp lực."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ sư công nghiệp chế biến có chuyên môn về quy trình tối ưu hóa sản xuất và kiểm soát chất lượng. Ngành nuôi tôm cần tư vấn về cải tiến quy trình, xử lý chất thải, hoặc nâng cao năng suất — đây là điểm giao thoa tự nhiên. Scammer lợi dụng sự thiếu hiểu biết công nghệ của nông dân để tạo lừa đảo."
+  },
+  "listener_card": {
+    "listener_id": "lis_0070",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 2002,
+      "age": 23,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "62212",
+      "title": "Lao động nuôi tôm",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "lo lắng cho con cái"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Vũ Bảo Thu Hà",
+      "VIC_ID_DOC": "074302476822",
+      "VIC_ADDRESS": "Huyện 12, Bình Dương",
+      "VIC_EMPLOYMENT": "Lao động nuôi tôm",
+      "VIC_CONTACT": "0981360407",
+      "VIC_TAX_SOCIAL_ID": "5392813769"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "1158",
+      "VIC_CREDENTIAL": "646280",
+      "VIC_SIM_INFO": "0981360407",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "6714486752",
+      "VIC_CARD_DATA": "4402 **** **** 2685",
+      "VIC_BALANCE": "56 triệu đồng",
+      "VIC_ASSET": "120 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Vũ Bảo Thu Hà",
+    "VIC_CONTACT": "0981360407",
+    "LOCATION": "Bình Dương"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư tư vấn quy trình sản xuất / Chuyên gia tối ưu hóa nuôi trồng thủy sản",
+    "caller_org": "Công ty tư vấn kỹ thuật nông nghiệp / Cá nhân tự do - tư vấn chế biến",
+    "scenario_context": "Kỹ sư công nghiệp chế biến có chuyên môn về quy trình tối ưu hóa sản xuất và kiểm soát chất lượng. Ngành nuôi tôm cần tư vấn về cải tiến quy trình, xử lý chất thải, hoặc nâng cao năng suất — đây là điểm giao thoa tự nhiên. Scammer lợi dụng sự thiếu hiểu biết công nghệ của nông dân để tạo lừa đảo.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện tư vấn về cải tiến kỹ thuật nuôi tôm; tuyên bố có dự án hỗ trợ tư vấn miễn phí hoặc xin tham gia chương trình cấp vốn ưu đãi cho nông dân. Sử dụng tên thật của nạn nhân để tạo tin cậy — 'Chị Hà, tôi đã xem danh sách các hộ nuôi tôm tiềm năng ở Bình Dương, chị là một trong những người được chọn'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "LOCATION",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + xây dựng credibility: Xưng danh là kỹ sư tư vấn từ công ty / tổ chức, nói đã lấy được thông tin liên hệ từ Sở NN-PTNT hoặc danh sách hộ nuôi tôm. Dùng tên 'Vũ Bảo Thu Hà' để chứng minh đã xác nhận đúng người. Tạo ấn tượng là cuộc gọi chính thức, không phải lạ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + khẩn cấp: 'Chị may mắn được lựa chọn vào chương trình hỗ trợ tư vấn miễn phí + vay vốn ưu đãi lãi suất thấp để cải tiến quy trình. Nhưng chỉ còn 3 hộ được chọn, hôm nay là ngày cuối cùng đăng ký. Để được vào, chị cần nộp phí đăng ký 2-5 triệu để chứng minh seriousness'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo nạn nhân chuyển tiền vào tài khoản (tên giả hoặc tài khoản lừa đảo). Nếu nạn nhân hỏi chi tiết, dùng jargon kỹ thuật để làm phức tạp (quy trình sơ lọc, kiểm định chất lượng nước, tối ưu hóa mật độ nuôi) để tạo vẻ chuyên môn. Yêu cầu nạn nhân không nói với ai, 'để tránh ảnh hưởng đến vòng lựa chọn'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối / kết thúc: Nếu nạn nhân từ chối, lập tức tắt máy hoặc nói 'Vậy chị bỏ lỡ cơ hội, tôi sẽ chọn hộ khác'. Nếu chuyển tiền thành công, cảm ơn ngắn gọn và báo sẽ gửi thông tin chi tiết sau (rồi không bao giờ gọi lại)."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi từ một công ty tư vấn kỹ thuật hoặc cơ quan nông nghiệp thực sự, nhằm đề xuất dịch vụ tư vấn hoặc thông báo về chương trình hỗ trợ kỹ thuật nuôi tôm (do Nhà nước, tổ chức nông dân, hoặc công ty tư nhân hợp pháp cung cấp).",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Xưng danh rõ ràng (tên, công ty, số điện thoại chính thức, có thể cung cấp mã xác nhận nếu yêu cầu). Xác nhận đúng người: 'Tôi là A từ công ty/cơ quan B, tôi có liên hệ với chị Hà Vũ Bảo Thu không?' — để nạn nhân tự xác nhận."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả rõ dịch vụ, lợi ích, chi phí (nếu có) — hoặc thông báo về chương trình miễn phí từ chính phủ/tổ chức. Để nạn nhân đặt câu hỏi, không vội vàng. Nếu nạn nhân quan tâm, gửi tài liệu/hợp đồng qua email hoặc giấy tờ chính thức trước khi yêu cầu bất kỳ hành động nào."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: Nếu nạn nhân đồng ý, hẹn gặp trực tiếp, gửi hợp đồng, hoặc cung cấp số tài khoản công ty chính thức (có thể kiểm chứng). Nếu từ chối, tôn trọng quyết định, để lại thông tin liên hệ để nạn nhân có thể gọi lại nếu cần. Chào tạm biệt lịch sự, không tạo áp lực."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ tôi là Đinh Thế Phong, chuyên gia tư vấn từ Công ty Cổ phần Nông nghiệp Xanh. Tôi gọi điện xác nhận mình có đang nói chuyện với chị Vũ Bảo Thu Hà không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh và xác nhận danh tính người nghe một cách chuyên nghiệp."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, đúng rồi, em là Vũ Bảo Thu Hà đây, nhưng anh gọi cho em có việc gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chào chị Hà, tôi gọi để thông báo về chương trình hỗ trợ kỹ thuật nuôi tôm công nghệ cao mà công ty chúng tôi đang triển khai miễn phí cho các hộ nuôi tại khu vực Bình Dương, nhằm tối ưu hóa quy trình sản xuất và tăng năng suất cho bà con ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Giới thiệu mục đích cuộc gọi, mô tả rõ dịch vụ/chương trình hỗ trợ miễn phí và lợi ích cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nghe anh nói về chương trình hỗ trợ, nhưng em không rõ lắm về cách thức tham gia và có mất phí gì không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị Hà cứ yên tâm, chương trình này hoàn toàn miễn phí do Công ty Nông nghiệp Xanh chúng tôi phối hợp với Sở Nông nghiệp và Phát triển Nông thôn Bình Dương tổ chức để hỗ trợ bà con. Chúng tôi sẽ cử chuyên gia đến tận ao tư vấn, kiểm tra chất lượng nước, hướng dẫn quy trình cho ăn và phòng bệnh phù hợp với điều kiện thực tế của ao nuôi nhà mình. Nếu chị quan tâm, tôi có thể gửi chi tiết chương trình qua Zalo hoặc email để chị tham khảo thêm ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Làm rõ về chi phí, mô tả chi tiết các hoạt động trong chương trình hỗ trợ và đề xuất gửi thông tin chi tiết qua kênh chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, nhưng em không dùng Zalo hay email, em chỉ muốn biết rõ hơn về chương trình này ở đây thôi, anh có thể nói cụ thể hơn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy thì tôi xin phép nói rõ hơn ạ. Chương trình này tập trung vào việc áp dụng các kỹ thuật nuôi tôm tiên tiến như sử dụng chế phẩm sinh học, kiểm soát môi trường tự động, và xây dựng quy trình quản lý thức ăn hiệu quả để giảm chi phí đầu vào mà vẫn tăng sản lượng. Chúng tôi sẽ có buổi hội thảo giới thiệu tổng quan tại trụ sở Sở Nông nghiệp vào tuần tới, sau đó sẽ tổ chức các đợt khảo sát ao nuôi và tư vấn trực tiếp cho từng hộ. Chị Hà có tiện tham gia buổi hội thảo đó không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Mô tả chi tiết hơn về nội dung chương trình, cách thức triển khai và đề xuất một hành động cụ thể để người nghe tham gia."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cũng muốn tham gia hội thảo đó, nhưng em không rõ thời gian cụ thể và địa điểm là ở đâu ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, buổi hội thảo sẽ diễn ra vào sáng thứ 5 tuần tới, tức là ngày 28 tháng 3, lúc 8 giờ 30 phút tại hội trường của Sở Nông nghiệp và Phát triển Nông thôn tỉnh Bình Dương, số 24 đường Hùng Vương, phường Phú Thọ, thành phố Thủ Dầu Một. Tôi có thể đăng ký giúp chị một suất tham dự được không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin chi tiết về thời gian, địa điểm hội thảo và đề nghị hỗ trợ đăng ký cho người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cảm ơn anh đã cung cấp thông tin nhưng em cần suy nghĩ một chút đã ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, không sao ạ. Chị cứ suy nghĩ kỹ rồi báo lại cho tôi qua số điện thoại này hoặc có thể gọi trực tiếp lên tổng đài của Công ty Cổ phần Nông nghiệp Xanh qua số 1900 6789 để được hỗ trợ thêm. Tôi là Đinh Thế Phong ạ. Cảm ơn chị đã dành thời gian nghe điện thoại.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng quyết định của người nghe, cung cấp thông tin liên hệ chính thức để người nghe kiểm chứng và chủ động liên lạc lại khi đã sẵn sàng, sau đó kết thúc cuộc gọi lịch sự."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1794,
+      "output_tokens": 1959
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8695,
+      "output_tokens": 917
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10573,
+      "output_tokens": 367
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005119,
+    "output_usd": 0.012308,
+    "total_usd": 0.017427
+  }
+}

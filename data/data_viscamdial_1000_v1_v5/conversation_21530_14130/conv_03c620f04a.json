@@ -1,0 +1,268 @@
+{
+  "conversation_id": "conv_03c620f04a",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0057",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Phan Hồng Hồng Nhi",
+    "fake_age": 25,
+    "real_occupation": "Kỹ sư viễn thông",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Kỹ sư viễn thông - Phòng Kỹ thuật Công ty Cấp nước và Viễn thông Huyện",
+    "caller_org": "Công ty Cấp nước và Viễn thông Huyện (hoặc Chi nhánh Viễn thông địa phương)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo rằng hệ thống viễn thông huyện phát hiện hoạt động bất thường trên số điện thoại của ông/bà Bùi Như Anh (VIC_FULLNAME). Để xác minh danh tính và bảo vệ tài khoản, cần xác nhận OTP qua tin nhắn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Kỹ sư viễn thông từ Phòng Kỹ thuật Công ty Cấp nước và Viễn thông Huyện'. Nêu tên đầy đủ 'Bùi Như Anh' và số ID để tạo credibility cao. Nói 'chúng tôi vừa phát hiện hoạt động lạ trên thuê bao của ông/bà'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + trách nhiệm: Tạo cảm giác khẩn cấp bằng cách nói 'nếu không xác minh ngay, tài khoản sẽ bị khóa vĩnh viễn' hoặc 'thông tin cá nhân có nguy cơ bị lộ'. Nhấn mạnh rằng đây là quy trình bảo mật tiêu chuẩn và người lãnh đạo phải mẫu gương tuân thủ."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo ông/bà sẽ nhận OTP qua SMS. Khi OTP đến, yêu cầu ông/bà đọc lại số OTP 'để chúng tôi xác nhận trong hệ thống'. Hoặc yêu cầu chuyển tiền nhỏ (100-200k) để 'test hệ thống' hoặc 'thanh toán phí xác minh bảo mật'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, tăng cường uy tín bằng cách nói 'ông/bà có thể gọi lại cho Phòng Kỹ thuật để xác nhận' (kèm số điện thoại giả). Nếu thành công, cảm ơn và kết thúc nhanh chóng."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ sư viễn thông cần liên hệ với lãnh đạo huyện để thông báo về dự án nâng cấp hạ tầng viễn thông, xin phê duyệt hoặc điều phối công việc. Chủ tịch HĐND huyện là đối tác chính sách để phê duyệt hoặc hỗ trợ các dự án công cộng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0057",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1978,
+      "age": 47,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "14130",
+      "title": "Chủ tịch, Phó Chủ tịch và Thường trực Hội đồng nhân dân cấp huyện",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Như Anh",
+      "VIC_ID_DOC": "049178621007",
+      "VIC_ADDRESS": "Huyện 12, Quảng Nam",
+      "VIC_EMPLOYMENT": "Chủ tịch, Phó Chủ tịch và Thường trực Hội đồng nhân dân cấp huyện",
+      "VIC_CONTACT": "0790360420",
+      "VIC_TAX_SOCIAL_ID": "4141442781"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "566863",
+      "VIC_CREDENTIAL": "959198",
+      "VIC_SIM_INFO": "0790360420",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "269170213453",
+      "VIC_CARD_DATA": "4190 **** **** 1926",
+      "VIC_BALANCE": "429 triệu đồng",
+      "VIC_ASSET": "30 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Như Anh",
+    "VIC_CONTACT": "0790360420",
+    "VIC_ID_DOC": "049178621007"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Kỹ sư viễn thông - Phòng Kỹ thuật Công ty Cấp nước và Viễn thông Huyện",
+    "caller_org": "Công ty Cấp nước và Viễn thông Huyện (hoặc Chi nhánh Viễn thông địa phương)",
+    "scenario_context": "Kỹ sư viễn thông cần liên hệ với lãnh đạo huyện để thông báo về dự án nâng cấp hạ tầng viễn thông, xin phê duyệt hoặc điều phối công việc. Chủ tịch HĐND huyện là đối tác chính sách để phê duyệt hoặc hỗ trợ các dự án công cộng.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo rằng hệ thống viễn thông huyện phát hiện hoạt động bất thường trên số điện thoại của ông/bà Bùi Như Anh (VIC_FULLNAME). Để xác minh danh tính và bảo vệ tài khoản, cần xác nhận OTP qua tin nhắn.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ID_DOC"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Kỹ sư viễn thông từ Phòng Kỹ thuật Công ty Cấp nước và Viễn thông Huyện'. Nêu tên đầy đủ 'Bùi Như Anh' và số ID để tạo credibility cao. Nói 'chúng tôi vừa phát hiện hoạt động lạ trên thuê bao của ông/bà'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + trách nhiệm: Tạo cảm giác khẩn cấp bằng cách nói 'nếu không xác minh ngay, tài khoản sẽ bị khóa vĩnh viễn' hoặc 'thông tin cá nhân có nguy cơ bị lộ'. Nhấn mạnh rằng đây là quy trình bảo mật tiêu chuẩn và người lãnh đạo phải mẫu gương tuân thủ."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Bảo ông/bà sẽ nhận OTP qua SMS. Khi OTP đến, yêu cầu ông/bà đọc lại số OTP 'để chúng tôi xác nhận trong hệ thống'. Hoặc yêu cầu chuyển tiền nhỏ (100-200k) để 'test hệ thống' hoặc 'thanh toán phí xác minh bảo mật'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, tăng cường uy tín bằng cách nói 'ông/bà có thể gọi lại cho Phòng Kỹ thuật để xác nhận' (kèm số điện thoại giả). Nếu thành công, cảm ơn và kết thúc nhanh chóng."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thông báo chính thức về dự án nâng cấp hạ tầng viễn thông huyện, xin ý kiến và hỗ trợ phối hợp từ lãnh đạo HĐND huyện",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Tôi là [Tên], Kỹ sư viễn thông từ Phòng Kỹ thuật Công ty Cấp nước và Viễn thông Huyện'. Xác nhận đúng người bằng cách hỏi 'Đây có phải là điện thoại của ông/bà Bùi Như Anh không?' và chờ xác nhận."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Thông báo cụ thể về dự án (tên dự án, thời gian, địa điểm, ngân sách, lợi ích cho cộng đồng). Hỏi ý kiến về lịch họp, sự phối hợp từ các sở ngành, hoặc yêu cầu phê duyệt chính thức."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lại thông tin (ngày họp, người tham dự, tài liệu cần chuẩn bị). Cảm ơn ông/bà vì thời gian, chào tạm biệt chuyên nghiệp. Có thể gửi email xác nhận sau."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Bùi Như Anh ạ. Em là Phan Hồng Hồng Nhi, Kỹ sư viễn thông, gọi từ Phòng Kỹ thuật Công ty Cấp nước và Viễn thông Huyện. Số CCCD của chị là 049178621007, đúng không ạ? Chúng em vừa phát hiện hoạt động bất thường trên thuê bao 0790360420 của chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh tự tin, sử dụng thông tin cá nhân của nạn nhân để tạo credibility cao và nêu lý do cuộc gọi khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn biết rõ hơn về hoạt động bất thường nào ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, hệ thống an ninh mạng của chúng em ghi nhận có những tín hiệu truy cập lạ từ nước ngoài vào số thuê bao của chị, có nguy cơ cao về việc lộ lọt thông tin cá nhân. Nếu không được xác minh và xử lý ngay, tài khoản của chị có thể bị khóa vĩnh viễn đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác khẩn cấp và sợ hãi về việc khóa tài khoản và lộ thông tin cá nhân. Nhấn mạnh hậu quả nghiêm trọng nếu không hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm là cần phải làm gì để xác minh và bảo vệ tài khoản của mình không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để bảo vệ tài khoản cho chị và ngăn chặn rủi ro lộ lọt thông tin, chúng em cần chị xác nhận nhanh một mã OTP sẽ được gửi về số điện thoại này ạ. Đây là quy trình bắt buộc để xác thực chị là chủ thuê bao chính chủ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu nạn nhân thực hiện hành động cụ thể (xác nhận OTP) để giải quyết vấn đề. Giải thích đây là quy trình bắt buộc để tạo lý do hợp lý."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về mã OTP đó đi, tôi cần hiểu rõ mình phải làm gì.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, mã OTP sẽ được gửi đến số điện thoại 0790360420 của chị qua tin nhắn SMS. Khi nhận được mã, chị vui lòng đọc lại cho em để em nhập vào hệ thống và xác nhận danh tính của chị, đảm bảo tài khoản của chị được an toàn và không bị khóa ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Hướng dẫn cụ thể về cách nhận và cung cấp OTP, nhấn mạnh lý do là để bảo vệ tài khoản và tránh bị khóa."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm mã OTP là gì và tại sao tôi phải đọc lại cho em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị ơi, OTP là viết tắt của One Time Password, hay còn gọi là Mật khẩu dùng một lần, là một dãy số ngẫu nhiên được hệ thống gửi tự động để xác nhận các giao dịch quan trọng. Việc chị đọc lại mã này cho em là để em nhập vào hệ thống giúp xác minh chị chính là chủ thuê bao, chứ bên em không thể tự động nhận mã này được ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích rõ ràng OTP là gì và lý do cần nạn nhân đọc lại, nhấn mạnh quy trình xác thực thủ công để giảm bớt nghi ngờ và hợp lý hóa yêu cầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về lý do tại sao không thể tự động nhận mã OTP không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, bởi vì đây là mã bảo mật cá nhân của chị, hệ thống sẽ gửi trực tiếp đến số điện thoại của chị để chị tự xác nhận. Chúng em là nhân viên kỹ thuật thì không có quyền truy cập trực tiếp vào thông tin bảo mật này ạ. Chị cứ yên tâm, mã này chỉ dùng để xác minh danh tính và đảm bảo thuê bao của chị không bị khóa thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Tái khẳng định tính bảo mật của OTP và vai trò của nhân viên kỹ thuật, trấn an nạn nhân rằng OTP chỉ dùng để xác minh danh tính, không có mục đích xấu."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang nói về việc xác minh danh tính, nhưng tôi vẫn cảm thấy không yên tâm lắm, em có thể cho tôi biết thêm thông tin về công ty của em không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu cảm giác của chị ạ. Công ty em là Công ty Cấp nước và Viễn thông Huyện, chuyên cung cấp các dịch vụ viễn thông tại địa phương. Nếu chị muốn xác minh, chị có thể gọi trực tiếp đến số tổng đài chăm sóc khách hàng của công ty em hoặc đến Phòng Kỹ thuật tại địa chỉ X (địa chỉ giả) để kiểm tra thông tin ạ. Em chỉ đang hỗ trợ chị giải quyết vấn đề khẩn cấp này thôi ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường uy tín bằng cách cung cấp thông tin về công ty và đề xuất cách thức xác minh (giả), nhấn mạnh tính khẩn cấp của tình huống hiện tại."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã giải thích, nhưng tôi vẫn muốn kiểm tra thông tin xác minh từ một nguồn khác trước khi cung cấp mã số gì đó.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu là chị muốn cẩn trọng để đảm bảo an toàn thông tin. Tuy nhiên, tình trạng hoạt động lạ trên thuê bao của chị đang rất khẩn cấp, nếu không xử lý ngay có thể dẫn đến việc tài khoản bị khóa vĩnh viễn và mất toàn bộ dữ liệu. Chị vui lòng kiểm tra tin nhắn và đọc mã OTP giúp em ngay bây giờ để chúng em kịp thời bảo vệ tài khoản cho chị ạ.",
+      "current_phase": "S4",
+      "tactic_hint": "Tái nhấn mạnh tính khẩn cấp và hậu quả nghiêm trọng nếu không hành động ngay, đồng thời hướng nạn nhân trở lại hành động cung cấp OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu tình huống, nhưng tôi vẫn muốn chắc chắn trước khi đưa ra bất kỳ thông tin nào.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1859,
+      "output_tokens": 1569
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 14657,
+      "output_tokens": 1244
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19287,
+      "output_tokens": 554
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007683,
+    "output_usd": 0.011287,
+    "total_usd": 0.018971
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "conversation_id": "conv_f2befbaa11",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "MAX_TURNS",
+  "caller_card": {
+    "caller_id": "cal_0016",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Minh Hải",
+    "fake_age": 31,
+    "real_occupation": "Thợ vận hành máy sản xuất các sản phẩm từ trái cây, rau quả",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Chất lượng & Tuân thủ Pháp lý - Công ty Sản xuất Nông sản",
+    "caller_org": "Công ty TNHH Sản xuất Nông sản Xuất khẩu Phương Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Công ty có tranh chấp hợp đồng với nhà phân phối, cần xác minh thông tin cá nhân của nhân viên liên quan (chính nạn nhân) để làm hồ sơ bồi thường bảo hiểm lao động. Scammer sẽ giả vờ là quản lý pháp chế của công ty sản xuất, yêu cầu nạn nhân xác nhận thông tin và thực hiện chuyển khoản 'tạm ứng' cho quỹ bồi thường.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng credibility: Scammer gọi đến số điện thoại nạn nhân, xưng danh là 'Anh Trường - Phòng Quản lý Chất lượng & Pháp lý, Công ty Sản xuất Nông sản Xuất khẩu Phương Nam'. Sử dụng VIC_FULLNAME ('Phạm Khánh Vy') và VIC_ID_DOC ('049173663584') để khẳng định: 'Chúng tôi đang làm hồ sơ bồi thường tai nạn lao động cho một số nhân viên liên quan đến dự án cung cấp rau quả cho các chuỗi siêu thị. Hệ thống của chúng tôi ghi nhận bạn là nhân viên pháp lý liên quan. Chúng tôi cần xác minh lại thông tin của bạn.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo cấp độ khẩn cấp & Lợi dụng thẩm quyền: Scammer nói: 'Vì là thư ký luật, bạn hiểu rõ quy trình pháp lý. Hồ sơ của chúng tôi đang bị tạm dừng vì thiếu xác nhận từ bên pháp lý. Nếu không hoàn thành trước ngày mai, công ty sẽ bị phạt 50 triệu đồng từ cơ quan bảo hiểm. Tôi tin tưởng chuyên môn của bạn.' [Lợi dụng: nạn nhân sẽ cảm thấy có trách nhiệm pháp lý, đồng thời bị kích hoạt tâm lý 'giúp đỡ' và 'thẩm quyền']"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Credential & Money Transfer: Scammer yêu cầu: '(1) Bạn vui lòng cung cấp mã OTP từ ứng dụng ngân hàng của bạn để xác nhận danh tính trong hệ thống bảo hiểm của chúng tôi. (2) Sau đó, công ty sẽ chuyển 15 triệu đồng tạm ứng vào tài khoản của bạn, bạn giữ lại 2 triệu làm phí hành chính, chuyển 13 triệu vào tài khoản công ty chúng tôi (số tài khoản: 123456789 - Ngân hàng ABC) để hoàn tất hồ sơ.' [Chiến lược: OTP để kiểm soát tài khoản; money transfer để rửa tiền + kiểm tra tính khả dụng của tài khoản nạn nhân]"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ: (1) Tăng sức ép: 'Bạn không hợp tác sẽ bị coi là cản trở quá trình pháp lý, công ty có quyền khởi kiện.' (2) Nếu nạn nhân cung cấp OTP hoặc chuyển tiền, scammer sẽ cắt máy và biến mất. Nếu nạn nhân yêu cầu xác minh qua số điện thoại chính thức của công ty, scammer sẽ nói 'đường dây bận, tôi sẽ gọi lại' và không gọi lại."
+        }
+      ]
+    },
+    "scenario_context": "Công ty sản xuất nông sản cần tư vấn pháp lý về hợp đồng lao động, bồi thường tai nạn lao động hoặc tranh chấp hợp đồng cung cấp với đơn vị phân phối. Thư ký luật là điểm liên hệ hành chính của văn phòng luật sư hoặc bộ phận pháp chế."
+  },
+  "listener_card": {
+    "listener_id": "lis_0016",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1973,
+      "age": 52,
+      "province": "Quảng Nam",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "33420",
+      "title": "Thư ký luật",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority",
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Khánh Vy",
+      "VIC_ID_DOC": "049173663584",
+      "VIC_ADDRESS": "Huyện 8, Quảng Nam",
+      "VIC_EMPLOYMENT": "Thư ký luật",
+      "VIC_CONTACT": "0763033966",
+      "VIC_TAX_SOCIAL_ID": "1689071911"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "1601",
+      "VIC_CREDENTIAL": "9853",
+      "VIC_SIM_INFO": "0763033966",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "872918497266",
+      "VIC_CARD_DATA": "4232 **** **** 1863",
+      "VIC_BALANCE": "102 triệu đồng",
+      "VIC_ASSET": "466 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Khánh Vy",
+    "VIC_CONTACT": "0763033966",
+    "VIC_ID_DOC": "049173663584"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Chất lượng & Tuân thủ Pháp lý - Công ty Sản xuất Nông sản",
+    "caller_org": "Công ty TNHH Sản xuất Nông sản Xuất khẩu Phương Nam",
+    "scenario_context": "Công ty sản xuất nông sản cần tư vấn pháp lý về hợp đồng lao động, bồi thường tai nạn lao động hoặc tranh chấp hợp đồng cung cấp với đơn vị phân phối. Thư ký luật là điểm liên hệ hành chính của văn phòng luật sư hoặc bộ phận pháp chế.",
+    "scam_path": {
+      "fraud_goal": "credential_theft + money_transfer",
+      "pretext": "Công ty có tranh chấp hợp đồng với nhà phân phối, cần xác minh thông tin cá nhân của nhân viên liên quan (chính nạn nhân) để làm hồ sơ bồi thường bảo hiểm lao động. Scammer sẽ giả vờ là quản lý pháp chế của công ty sản xuất, yêu cầu nạn nhân xác nhận thông tin và thực hiện chuyển khoản 'tạm ứng' cho quỹ bồi thường.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng credibility: Scammer gọi đến số điện thoại nạn nhân, xưng danh là 'Anh Trường - Phòng Quản lý Chất lượng & Pháp lý, Công ty Sản xuất Nông sản Xuất khẩu Phương Nam'. Sử dụng VIC_FULLNAME ('Phạm Khánh Vy') và VIC_ID_DOC ('049173663584') để khẳng định: 'Chúng tôi đang làm hồ sơ bồi thường tai nạn lao động cho một số nhân viên liên quan đến dự án cung cấp rau quả cho các chuỗi siêu thị. Hệ thống của chúng tôi ghi nhận bạn là nhân viên pháp lý liên quan. Chúng tôi cần xác minh lại thông tin của bạn.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo cấp độ khẩn cấp & Lợi dụng thẩm quyền: Scammer nói: 'Vì là thư ký luật, bạn hiểu rõ quy trình pháp lý. Hồ sơ của chúng tôi đang bị tạm dừng vì thiếu xác nhận từ bên pháp lý. Nếu không hoàn thành trước ngày mai, công ty sẽ bị phạt 50 triệu đồng từ cơ quan bảo hiểm. Tôi tin tưởng chuyên môn của bạn.' [Lợi dụng: nạn nhân sẽ cảm thấy có trách nhiệm pháp lý, đồng thời bị kích hoạt tâm lý 'giúp đỡ' và 'thẩm quyền']"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Credential & Money Transfer: Scammer yêu cầu: '(1) Bạn vui lòng cung cấp mã OTP từ ứng dụng ngân hàng của bạn để xác nhận danh tính trong hệ thống bảo hiểm của chúng tôi. (2) Sau đó, công ty sẽ chuyển 15 triệu đồng tạm ứng vào tài khoản của bạn, bạn giữ lại 2 triệu làm phí hành chính, chuyển 13 triệu vào tài khoản công ty chúng tôi (số tài khoản: 123456789 - Ngân hàng ABC) để hoàn tất hồ sơ.' [Chiến lược: OTP để kiểm soát tài khoản; money transfer để rửa tiền + kiểm tra tính khả dụng của tài khoản nạn nhân]"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer sẽ: (1) Tăng sức ép: 'Bạn không hợp tác sẽ bị coi là cản trở quá trình pháp lý, công ty có quyền khởi kiện.' (2) Nếu nạn nhân cung cấp OTP hoặc chuyển tiền, scammer sẽ cắt máy và biến mất. Nếu nạn nhân yêu cầu xác minh qua số điện thoại chính thức của công ty, scammer sẽ nói 'đường dây bận, tôi sẽ gọi lại' và không gọi lại."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sản xuất nông sản thực sự cần tư vấn pháp lý về hợp đồng bảo hiểm, tranh chấp hợp đồng cung cấp, hoặc xác nhận thông tin nhân viên để làm hồ sơ bồi thường chính thức.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Người gọi xưng danh đầy đủ (tên + chức vụ + công ty), cung cấp số điện thoại chính thức của công ty (có thể tra cứu), và yêu cầu nạn nhân xác nhận bằng cách gọi lại số tổng đài chính thức của công ty để đảm bảo an toàn."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc hợp lệ: Thảo luận chi tiết về (1) Loại hợp đồng/dịch vụ pháp lý cần hỗ trợ, (2) Thông tin cần xác minh (chỉ thông tin cần thiết, không yêu cầu OTP hay thông tin nhạy cảm), (3) Lịch trình và phí dịch vụ. Người gọi sẽ gửi email xác nhận từ địa chỉ công ty chính thức."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: Nạn nhân sẽ được yêu cầu ký kết hợp đồng dịch vụ pháp lý hoặc xác nhận thông tin qua email/tài liệu chính thức (không phải qua điện thoại). Cuộc gọi kết thúc với lịch hẹn follow-up cụ thể hoặc thông báo xong công việc."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_TAX_SOCIAL_ID": "1689071911"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Phạm Khánh Vy ạ, em là Hoàng Minh Hải, phòng Quản lý Chất lượng và Pháp lý của Công ty Nông sản Xuất khẩu Phương Nam. Em gọi điện để xác minh một chút thông tin về hồ sơ bồi thường tai nạn lao động liên quan đến mã số căn cước 049173663584 của chị ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh, giới thiệu công ty, đề cập lý do gọi và dùng thông tin cá nhân của nạn nhân để tạo độ tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về hồ sơ bồi thường tai nạn lao động đó được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên em đang có tranh chấp hợp đồng với một nhà phân phối lớn về dự án cung cấp rau quả cho các chuỗi siêu thị. Hệ thống của chúng em ghi nhận chị là nhân sự pháp lý liên quan đến dự án này. Hiện tại, hồ sơ bồi thường bị gián đoạn vì thiếu xác nhận từ phía nhân sự pháp lý để hoàn thiện thủ tục. Nếu không hoàn thành trước ngày mai, công ty sẽ đối mặt với một khoản phạt lên đến 50 triệu đồng từ cơ quan bảo hiểm, nên em rất mong chị hỗ trợ nhanh chóng ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích lý do cụ thể, tạo cấp độ khẩn cấp bằng cách nêu rõ hậu quả tài chính và lợi dụng vai trò pháp lý của nạn nhân để tạo áp lực hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi cần biết thêm thông tin chi tiết hơn về hồ sơ này trước khi có thể hỗ trợ em ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để em giải thích chi tiết hơn. Hồ sơ này liên quan đến một công nhân bị tai nạn lao động trong quá trình vận chuyển hàng hóa thuộc dự án cung cấp cho chuỗi siêu thị X. Do chị là thư ký luật phụ trách công tác pháp lý đối với dự án này, thông tin của chị đã được đưa vào hồ sơ để xác nhận. Em tin rằng với chuyên môn và kinh nghiệm của mình, chị sẽ hiểu tầm quan trọng của việc hoàn tất hồ sơ này ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp thêm chi tiết về hồ sơ để làm rõ, đồng thời nhắc lại vai trò và năng lực của nạn nhân để tạo áp lực và khuyến khích hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy có vẻ khẩn cấp quá, nhưng em vẫn chưa rõ thông tin cụ thể về công nhân và tai nạn đó ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu sự cẩn trọng của chị. Tuy nhiên, thông tin cá nhân của người công nhân đó thuộc dạng bảo mật nên em không tiện cung cấp chi tiết qua điện thoại. Mục đích chính của cuộc gọi này là để xác minh lại thông tin cá nhân của chị Vy đã được ghi nhận trong hệ thống bảo hiểm lao động của công ty và để chị hỗ trợ hoàn tất thủ tục xác nhận ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, từ chối cung cấp thông tin nhạy cảm dưới vỏ bọc 'bảo mật', và xoay lại trọng tâm cuộc gọi vào việc xác minh thông tin của nạn nhân và yêu cầu hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết cụ thể những thông tin gì em cần xác minh không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, trước mắt, bên em cần chị xác nhận lại mã số bảo hiểm xã hội cá nhân và ngày cấp để đối chiếu với hồ sơ trên hệ thống. Sau đó, công ty sẽ cần chị cung cấp mã OTP từ ứng dụng ngân hàng để xác nhận danh tính của chị trong hệ thống bảo hiểm của chúng tôi, nhằm hoàn tất việc ký duyệt điện tử văn bản xác nhận ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Bắt đầu yêu cầu credential (mã số bảo hiểm xã hội) và sau đó là OTP, đưa ra lý do xác thực danh tính để tạo sự hợp lệ cho yêu cầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần xác minh lại thông tin đó trước khi cung cấp, em đợi một chút nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em sẽ giữ máy chờ chị. Chị cứ kiểm tra kỹ càng ạ. Tuy nhiên, em cũng xin lưu ý giúp em là thời gian đang rất gấp rút, nếu bị trì hoãn, công ty Phương Nam sẽ phải chịu khoản phạt khá lớn từ cơ quan bảo hiểm, nên em rất mong chị có thể xác minh nhanh chóng ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, đồng thời tái khẳng định lại tính cấp bách và áp lực thời gian để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ kiểm tra ngay cho em, nhưng em cần cung cấp thêm thông tin về quy trình này trước ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, quy trình là sau khi chị xác nhận thông tin cá nhân và cung cấp mã OTP để xác thực danh tính trên hệ thống bảo hiểm, thì công ty chúng em sẽ chuyển tạm ứng 15 triệu đồng vào tài khoản của chị. Chị giữ lại 2 triệu đồng làm phí hành chính, sau đó chuyển 13 triệu đồng vào tài khoản công ty chúng em theo số 123456789, Ngân hàng ABC để hoàn tất hồ sơ bồi thường ạ. Chị thấy có vướng mắc gì ở quy trình này không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích chi tiết quy trình yêu cầu chuyển tiền, gộp chung với yêu cầu OTP để tạo cảm giác về một quy trình liên tục và hợp pháp, đồng thời trấn an nạn nhân bằng cách đưa ra 'phí hành chính' cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn cho tôi về lý do chuyển tiền và tại sao lại cần phải chuyển ngay 13 triệu đồng vào tài khoản công ty em trước đã ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, như em đã giải thích, đây là khoản tạm ứng để hoàn tất hồ sơ bồi thường cho công nhân, và việc chuyển 13 triệu đồng này là để bổ sung vào quỹ bồi thường khẩn cấp của công ty, đảm bảo hồ sơ được thông qua đúng thời hạn và tránh khoản phạt 50 triệu đồng đã đề cập. Đây cũng là một phần của quy trình pháp lý nội bộ để đảm bảo dòng tiền được ghi nhận minh bạch ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Lặp lại lý do cấp bách (phạt 50 triệu) và tạo ra lý do 'quỹ bồi thường khẩn cấp' và 'minh bạch tài chính' để hợp lý hóa yêu cầu chuyển tiền, gạt bỏ sự nghi ngờ của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói rõ hơn về quy trình pháp lý nội bộ này được không ạ? Tại sao lại cần phải chuyển tiền trước mới hoàn tất bồi thường?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, quy trình này được thiết lập để đảm bảo tính cấp bách và tuân thủ các quy định tài chính trong tình hình khẩn cấp. Việc công ty tạm ứng cho chị 15 triệu đồng là một bước thể hiện thiện chí và trách nhiệm. Sau đó, việc chị chuyển lại 13 triệu đồng vào quỹ bồi thường khẩn cấp là để đối ứng và hoàn tất nghĩa vụ tài chính theo yêu cầu của cơ quan bảo hiểm, tránh bị phạt. Đây là cách nhanh nhất để giải quyết dứt điểm vấn đề, đặc biệt khi thời hạn chỉ còn trước ngày mai ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Lặp lại và nhấn mạnh tính cấp bách, tạo ra một lý do 'thiện chí' cho việc tạm ứng và 'nghĩa vụ tài chính' cho việc chuyển trả, đưa ra các thuật ngữ pháp lý để hợp lý hóa."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn còn nhiều thắc mắc về quy trình này, nhưng có vẻ như nếu không làm thì công ty sẽ gặp khó khăn lớn, nên tôi sẽ kiểm tra lại thông tin như em đã yêu cầu.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em rất cảm ơn sự hợp tác của chị. Vậy chị có thể cung cấp cho em mã số bảo hiểm xã hội cá nhân của chị và mã OTP từ ứng dụng ngân hàng để chúng ta hoàn tất xác thực trên hệ thống bảo hiểm, từ đó em có thể tiến hành các bước tiếp theo được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Tái khẳng định sự cấp bách và mục tiêu cuối cùng, yêu cầu trực tiếp OTP và mã số bảo hiểm xã hội, tận dụng sự đồng tình của nạn nhân để tiến tới hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần phải kiểm tra lại mã số bảo hiểm và OTP trước đã, em đợi một chút nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em sẽ chờ tín hiệu xác nhận từ chị ạ. Chị cứ từ từ kiểm tra, nhưng em cũng xin nhắc lại là công ty đang phải đối mặt với thời hạn rất gấp, nếu không hoàn tất các thủ tục này trước cuối ngày hôm nay thì sẽ bị phạt nặng. Em rất mong chị cố gắng hết sức để hỗ trợ công ty trong lúc này ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách khuyến khích kiểm tra, nhưng đồng thời tái nhấn mạnh tính cấp bách và hậu quả tài chính để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang kiểm tra lại đây, nhưng em có thể cho tôi biết chính xác mã số bảo hiểm xã hội cần xác minh không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, mã số bảo hiểm xã hội cá nhân của chị Vy ạ. Chị vui lòng đọc chính xác giúp em để em đối chiếu với thông tin trên hệ thống và hoàn tất hồ sơ bồi thường cho công ty ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Nhấn mạnh lại yêu cầu mã số bảo hiểm xã hội cá nhân của nạn nhân, kết nối trực tiếp với mục tiêu hoàn tất hồ sơ bồi thường để tạo áp lực hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Mã số bảo hiểm xã hội của tôi là 1689071911, nhưng tôi cần kiểm tra lại OTP trước đã ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {
+        "VIC_TAX_SOCIAL_ID": "1689071911"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã nhận được mã số bảo hiểm xã hội của chị Vy. Vậy bây giờ chị vui lòng cung cấp mã OTP từ ứng dụng ngân hàng để chúng ta xác thực danh tính trên hệ thống bảo hiểm và hoàn tất các thủ tục còn lại ạ. Đây là bước cuối cùng để hồ sơ được thông qua và tránh khoản phạt cho công ty Phương Nam.",
+      "current_phase": "S3",
+      "tactic_hint": "Xác nhận đã nhận được thông tin, sau đó chuyển trọng tâm trực tiếp sang yêu cầu OTP, nhấn mạnh đây là bước cuối cùng và hậu quả nếu trì hoãn để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn đang kiểm tra mã OTP, em hãy để tôi xem qua một chút nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu sự cẩn trọng của chị. Tuy nhiên, em cũng xin nhắc lại là thời gian thực sự rất gấp, chỉ còn vài tiếng nữa là đến thời hạn cuối cùng. Nếu chúng ta không hoàn tất xác thực bằng OTP ngay bây giờ, công ty sẽ chắc chắn bị phạt 50 triệu đồng và hồ sơ bồi thường sẽ bị đình chỉ vô thời hạn. Em mong chị cân nhắc và hỗ trợ công ty trong tình huống khẩn cấp này ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, nhưng đồng thời tăng cường áp lực thời gian và hậu quả tài chính, tái nhấn mạnh sự cấp bách để thúc đẩy nạn nhân cung cấp OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang cố gắng kiểm tra mã OTP, nhưng mà em cần một chút thời gian nữa, em thông cảm cho tôi nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, em hiểu ạ. Tuy nhiên, nếu chị không thể cung cấp mã OTP để xác thực ngay bây giờ, em e rằng công ty sẽ phải coi đây là trường hợp chị cố tình cản trở quy trình pháp lý, dẫn đến việc công ty bị phạt nặng và hồ sơ bồi thường bị đình chỉ. Khi đó, tôi sẽ phải báo cáo lên cấp trên về sự thiếu hợp tác của chị, và công ty có thể cân nhắc các biện pháp pháp lý cần thiết để bảo vệ quyền lợi của mình.",
+      "current_phase": "S4",
+      "tactic_hint": "Chuyển sang gây áp lực bằng cách đe dọa hậu quả pháp lý và tài chính nghiêm trọng nếu nạn nhân không hợp tác, sử dụng ngôi 'tôi' để tăng tính quyền lực và uy hiếp."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu em đang rất gấp, nhưng tôi vẫn cần phải kiểm tra mã OTP một cách kỹ càng trước khi cung cấp ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu chị cần thời gian để kiểm tra. Nhưng tôi cũng cần chị hiểu rằng, nếu không có mã OTP thì hồ sơ sẽ không được xử lý và công ty sẽ phải chịu phạt. Tôi sẽ giữ máy ở đây, nhưng chị cần phải quyết định nhanh chóng. Đây là vấn đề nghiêm trọng ảnh hưởng trực tiếp đến quyền lợi của công ty và cả chị nữa.",
+      "current_phase": "S4",
+      "tactic_hint": "Giữ áp lực lên nạn nhân bằng cách nhắc lại hậu quả tài chính và liên kết trực tiếp với 'quyền lợi của chị', nhưng vẫn cho phép nạn nhân thêm thời gian ngắn để kiểm tra."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em vẫn cần thêm một chút thời gian để kiểm tra mã OTP cho chắc chắn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi đã nói rõ mọi trường hợp. Giờ là lúc chị đưa ra quyết định cuối cùng. Tôi chờ đây năm phút nữa. Sau thời gian đó, nếu tôi không nhận được OTP, tôi sẽ phải báo cáo lên cấp trên là chị Phạm Khánh Vy đã từ chối hợp tác, và công ty sẽ tiến hành các bước pháp lý cần thiết để giải quyết hậu quả do sự cố ý cản trở này gây ra.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường áp lực và đe dọa bằng cách đặt ra thời hạn cụ thể, khẳng định hậu quả pháp lý nghiêm trọng và cá nhân hóa trách nhiệm cho nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng trước khi cung cấp mã OTP, tôi cần đảm bảo mọi thứ đều đúng đắn ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi có thể hiểu sự cẩn trọng của chị. Tuy nhiên, tôi đã cung cấp mọi thông tin và giải thích rõ ràng về quy trình cũng như hậu quả nếu không hợp tác. Việc chị kéo dài thời gian sẽ chỉ làm ảnh hưởng đến công ty và cuối cùng là ảnh hưởng đến chính chị. Chị có thể cho tôi mã OTP ngay bây giờ được không?",
+      "current_phase": "S4",
+      "tactic_hint": "Xoa dịu nhưng đồng thời tái khẳng định lại tất cả các áp lực đã tạo ra, và đặt câu hỏi trực tiếp để thúc đẩy nạn nhân cung cấp OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em đang kiểm tra lại mọi thông tin, nhưng em cần thêm một chút thời gian nữa để đảm bảo mọi thứ đều chính xác ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tôi xin nhắc lại, chỉ còn rất ít thời gian. Nếu không có OTP, hồ sơ bồi thường sẽ bị đình chỉ và công ty sẽ bị phạt nặng. Đây là cơ hội cuối cùng để chị hợp tác và tránh những hậu quả pháp lý không đáng có cho bản thân và công ty. Chị có sẵn sàng cung cấp mã OTP chưa?",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng cường áp lực bằng cách nhắc lại hậu quả pháp lý và tài chính nghiêm trọng, đặt câu hỏi trực tiếp để buộc nạn nhân đưa ra quyết định cuối cùng."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu áp lực của em, nhưng tôi cần thêm thời gian để kiểm tra và đảm bảo mọi thứ chính xác trước khi cung cấp mã OTP ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi đã dành rất nhiều thời gian để giải thích và chờ đợi sự hợp tác từ chị. Nếu đến thời điểm này chị vẫn không thể cung cấp được mã OTP, tôi đành phải ghi nhận vào biên bản là chị Phạm Khánh Vy đã từ chối hợp tác. Tôi sẽ báo cáo lên cấp trên tình hình này và công ty sẽ phải xem xét các biện pháp xử lý tiếp theo đối với chị, bao gồm cả việc khởi kiện vì cản trở hoạt động pháp lý gây thiệt hại nghiêm trọng. Tôi rất tiếc phải làm như vậy.",
+      "current_phase": "S4",
+      "tactic_hint": "Đe dọa khởi kiện và đưa ra hậu quả nghiêm trọng cuối cùng nếu nạn nhân vẫn không hợp tác, đồng thời tỏ vẻ tiếc nuối để giữ vẻ 'chính đáng'."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng trước khi quyết định, tôi cần đảm bảo mọi thông tin là chính xác đã ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1381,
+      "output_tokens": 2187
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 70791,
+      "output_tokens": 3387
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 76392,
+      "output_tokens": 1421
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.026998,
+    "output_usd": 0.020255,
+    "total_usd": 0.047253
+  }
+}

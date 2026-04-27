@@ -1,0 +1,37 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_a09ec65d8b]
+  Caller thật: Cơ yếu (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Nhân viên quản lý bảo trì & an ninh tòa nhà @ Công ty quản lý tòa nhà / Ban quản lý chung cư
+  Listener: Người lau dọn tòa nhà (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Cơ yếu có thể được tuyển dụng vào vị trí quản lý bảo trì, an ninh tòa nhà. Họ cần liên lạc với nhân viên lau dọn về các vấn đề bảo trì, an toàn lao động, hoặc xác nhận danh sách nhân viên.
+  Pretext: Quản lý tòa nhà gọi xác nhận danh sách nhân viên lau dọn, thông báo về buổi họp an toàn lao động, hoặc thông báo về thay đổi lịch trình bảo trì hệ thống.
+  Listener traits: ['ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào anh Tô Gia Đức, tôi là Tiến Long từ Ban quản lý tòa nhà. Anh là nhân viên lau dọn tầng 3-5 đúng không? Tôi gọi để xác nhận thông tin cho hồ sơ.
+      → phase: L1 | tactic: Tiếp cận, giới thiệu bản thân và mục đích cuộc gọi.
+T02 [LISTENER] Vâng, tôi là Tô Gia Đức đây, nhưng anh cần xác nhận thông tin gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Cảm ơn anh. Tôi gọi để thông báo về việc thay đổi lịch trình bảo trì hệ thống cấp nước định kỳ trên tầng 3 và 4. Thay vì thứ tư như mọi khi, chúng tôi sẽ thực hiện vào thứ năm tuần tới, từ 8 giờ sáng đến 10 giờ sáng.
+      → phase: L2 | tactic: Thông báo nội dung công việc cụ thể liên quan đến lịch trình bảo trì hệ thống.
+T04 [LISTENER] Cảm ơn anh đã thông báo, tôi sẽ ghi nhớ lịch mới này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Vâng, anh Đức. Anh lưu ý giúp chúng tôi là trong khoảng thời gian bảo trì này, khu vực đó sẽ tạm ngưng cấp nước để đảm bảo an toàn. Anh có thể sắp xếp công việc cho phù hợp không ạ?
+      → phase: L2 | tactic: Nhấn mạnh thông tin quan trọng và hỏi về khả năng thích nghi của người nghe.
+T06 [LISTENER] Vâng, tôi sẽ sắp xếp lại công việc cho phù hợp trong thời gian đó.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Tuyệt vời. Cảm ơn anh đã hợp tác. Nếu có bất kỳ thắc mắc nào khác, anh vui lòng liên hệ lại số điện thoại này. Chúc anh một ngày làm việc hiệu quả.
+      → phase: L3 | tactic: Kết thúc cuộc gọi một cách lịch sự sau khi hoàn thành mục đích.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  7 turns | suspicion=0.00
+TOKEN: in=11319 | out=2028
+COST : $0.011722
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_3100_71330\conv_a09ec65d8b.json  [CALLER_END]

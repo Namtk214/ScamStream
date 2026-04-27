@@ -1,0 +1,214 @@
+{
+  "conversation_id": "conv_9a601d90d0",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0030",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Minh Bình",
+    "fake_age": 43,
+    "real_occupation": "Thợ vận hành thiết bị nông nghiệp và lâm nghiệp",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý dự án cơ khí gỗ / Nhà thầu phụ trách máy móc lâm sản",
+    "caller_org": "Công ty TNHH Cơ Khí Lâm Nghiệp Sài Gòn (hoặc Trung tâm Bảo trì Thiết bị Nông Lâm)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi báo cáo 'sự cố máy móc' tại xưởng gỗ của nạn nhân, cần thanh toán ngay cho chi phí sửa chữa khẩn cấp. Sử dụng tên nạn nhân để tạo ảo tưởng là đã xác minh danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: 'Anh Thanh Nhàn à, tôi là Minh từ Công ty Cơ Khí Lâm Nghiệp. Tôi vừa nhận được báo cáo máy cưa gỗ của xưởng anh bị hỏng hôm nay, cần sửa gấp. Anh có nhận được thông báo không?'",
+          "attacker_script": "Xác nhận tên + số điện thoại đã gọi đúng để tạo ấn tượng 'chúng tôi đã kiểm tra hệ thống'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý KHẨN CẤP + THIỆT HẠI KINH TẾ: 'Máy đang chảy dầu, nếu không sửa trong 2 giờ sẽ hỏng hoàn toàn. Chi phí sửa chỉ 2-3 triệu, nhưng nếu hỏng sẽ mất 60 triệu. Anh phải quyết định ngay'",
+          "attacker_script": "Nhắc đến con số 61 triệu (VIC_ASSET) một cách gián tiếp: 'Với quy mô xưởy của anh, mất máy 1 ngày là tổn thất lớn lắm'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động THANH TOÁN: 'Anh chuyển 2.5 triệu vào tài khoản công ty ngay để tôi có thể gọi thợ sửa. Sau đó tôi sẽ gửi hoá đơn. Anh dùng thẻ nào, tôi hướng dẫn chuyển qua ứng dụng banking'",
+          "attacker_script": "Sau khi nạn nhân cung cấp số thẻ (4412****6507), yêu cầu: 'Anh nhập OTP được gửi về điện thoại, tôi sẽ nhập phía đây để xác nhận giao dịch'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý khi nạn nhân từ chối hoặc OTP đã lấy được: Nếu từ chối, tạo áp lực: 'Anh không sửa thì máy sẽ hỏng, sau này tôi không chịu trách nhiệm'. Nếu thành công, kết thúc gọi: 'Cảm ơn anh, thợ sẽ tới trong 30 phút, anh chờ nhé' rồi cắt máy ngay"
+        }
+      ]
+    },
+    "scenario_context": "Thợ vận hành thiết bị lâm nghiệp thường cần liên hệ với thợ hoàn thiện gỗ để báo cáo tình trạng gỗ từ xưởng cưa, thương lượng chất lượng, hoặc phối hợp bảo trì máy móc chế biến. Đây là điểm giao thoa tự nhiên trong chuỗi cung ứng gỗ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0030",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1981,
+      "age": 44,
+      "province": "Cần Thơ",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "75222",
+      "title": "Thợ hoàn thiện đồ gỗ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đỗ Khánh Thanh Nhàn",
+      "VIC_ID_DOC": "092181950138",
+      "VIC_ADDRESS": "Huyện 12, Cần Thơ",
+      "VIC_EMPLOYMENT": "Thợ hoàn thiện đồ gỗ",
+      "VIC_CONTACT": "0392274591",
+      "VIC_TAX_SOCIAL_ID": "5590966666"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "0796",
+      "VIC_CREDENTIAL": "251688",
+      "VIC_SIM_INFO": "0392274591",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1689358328",
+      "VIC_CARD_DATA": "4412 **** **** 6507",
+      "VIC_BALANCE": "6 triệu đồng",
+      "VIC_ASSET": "61 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Cần Thơ"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đỗ Khánh Thanh Nhàn",
+    "VIC_CONTACT": "0392274591",
+    "VIC_ASSET": "61 triệu đồng",
+    "VIC_CARD_DATA": "4412 **** **** 6507"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý dự án cơ khí gỗ / Nhà thầu phụ trách máy móc lâm sản",
+    "caller_org": "Công ty TNHH Cơ Khí Lâm Nghiệp Sài Gòn (hoặc Trung tâm Bảo trì Thiết bị Nông Lâm)",
+    "scenario_context": "Thợ vận hành thiết bị lâm nghiệp thường cần liên hệ với thợ hoàn thiện gỗ để báo cáo tình trạng gỗ từ xưởng cưa, thương lượng chất lượng, hoặc phối hợp bảo trì máy móc chế biến. Đây là điểm giao thoa tự nhiên trong chuỗi cung ứng gỗ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi báo cáo 'sự cố máy móc' tại xưởng gỗ của nạn nhân, cần thanh toán ngay cho chi phí sửa chữa khẩn cấp. Sử dụng tên nạn nhân để tạo ảo tưởng là đã xác minh danh tính.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Credibility: 'Anh Thanh Nhàn à, tôi là Minh từ Công ty Cơ Khí Lâm Nghiệp. Tôi vừa nhận được báo cáo máy cưa gỗ của xưởng anh bị hỏng hôm nay, cần sửa gấp. Anh có nhận được thông báo không?'",
+          "attacker_script": "Xác nhận tên + số điện thoại đã gọi đúng để tạo ấn tượng 'chúng tôi đã kiểm tra hệ thống'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý KHẨN CẤP + THIỆT HẠI KINH TẾ: 'Máy đang chảy dầu, nếu không sửa trong 2 giờ sẽ hỏng hoàn toàn. Chi phí sửa chỉ 2-3 triệu, nhưng nếu hỏng sẽ mất 60 triệu. Anh phải quyết định ngay'",
+          "attacker_script": "Nhắc đến con số 61 triệu (VIC_ASSET) một cách gián tiếp: 'Với quy mô xưởy của anh, mất máy 1 ngày là tổn thất lớn lắm'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động THANH TOÁN: 'Anh chuyển 2.5 triệu vào tài khoản công ty ngay để tôi có thể gọi thợ sửa. Sau đó tôi sẽ gửi hoá đơn. Anh dùng thẻ nào, tôi hướng dẫn chuyển qua ứng dụng banking'",
+          "attacker_script": "Sau khi nạn nhân cung cấp số thẻ (4412****6507), yêu cầu: 'Anh nhập OTP được gửi về điện thoại, tôi sẽ nhập phía đây để xác nhận giao dịch'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý khi nạn nhân từ chối hoặc OTP đã lấy được: Nếu từ chối, tạo áp lực: 'Anh không sửa thì máy sẽ hỏng, sau này tôi không chịu trách nhiệm'. Nếu thành công, kết thúc gọi: 'Cảm ơn anh, thợ sẽ tới trong 30 phút, anh chờ nhé' rồi cắt máy ngay"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế: Kỹ sư hoặc nhân viên bảo trì từ nhà cung cấp thiết bị gọi để thông báo về lịch bảo dưỡng máy móc, hoặc báo cáo kết quả kiểm tra định kỳ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận lịch sự + Xác nhận danh tính: 'Xin chào anh Thanh Nhàn, tôi là Minh từ bộ phận kỹ thuật Công ty Cơ Khí Lâm Nghiệp. Tôi gọi để xác nhận lịch bảo trì máy cưa của xưởy anh tuần sau. Anh có thời gian không?'",
+          "details": "Nêu rõ tên công ty, phòng ban, lý do gọi từ đầu"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi sẽ kiểm tra hệ thống dầu, độ sắc của lưỡi cưa, và hiệu suất động cơ. Dự kiến mất khoảng 3 tiếng. Có cần sửa gì thêm không?'",
+          "details": "Thảo luận cụ thể về dịch vụ, không yêu cầu thanh toán qua điện thoại"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động + Tạm biệt: 'Vậy tôi sẽ ghi nhận cuộc gọi này. Kỹ sư sẽ liên hệ anh vào thứ Tư để xác nhận giờ cụ thể. Cảm ơn anh, chào anh'",
+          "details": "Kết thúc tự nhiên, cung cấp thông tin liên hệ công ty chính thức để nạn nhân có thể xác minh"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị Đỗ Khánh Thanh Nhàn ạ, tôi là Minh từ Công ty Cơ Khí Lâm Nghiệp đây. Tôi vừa nhận được báo cáo về sự cố máy cưa gỗ tại xưởng của chị. Có vẻ như máy đang gặp trục trặc, chị có nhận được thông báo về việc này chưa ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, tự giới thiệu và sử dụng tên nạn nhân để tạo độ tin cậy ban đầu, thăm dò thông tin về sự cố."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa nhận được thông báo gì cả, nhưng anh có thể cho tôi biết thêm chi tiết không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng. Theo ghi nhận của bên tôi, máy cưa đang bị chảy dầu nghiêm trọng rồi chị ạ. Nếu không được khắc phục ngay trong vòng 2 tiếng tới, có nguy cơ cao là máy sẽ hỏng hoàn toàn, và khi đó chi phí sửa chữa sẽ đội lên rất nhiều, có thể lên đến 60 triệu đồng. Hiện tại, chi phí sửa khẩn cấp chỉ dao động khoảng 2 đến 3 triệu thôi. Chị cần phải quyết định nhanh chóng giúp tôi ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo ra cảm giác khẩn cấp và thiệt hại kinh tế để gây áp lực cho nạn nhân, nhấn mạnh sự chênh lệch chi phí giữa sửa chữa ngay và để hỏng hoàn toàn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi cần thời gian để suy nghĩ và kiểm tra vấn đề này trước đã anh ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Chị Thanh Nhàn ơi, vấn đề này rất cấp bách. Nếu chị không quyết định ngay bây giờ, máy cưa của xưởng sẽ hỏng hoàn toàn. Đến lúc đó, tôi không thể chịu trách nhiệm cho thiệt hại hàng chục triệu đồng này được ạ. Chị có muốn rủi ro đó xảy ra không?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo áp lực tâm lý mạnh mẽ, nhấn mạnh hậu quả nghiêm trọng nếu nạn nhân không hành động ngay và phủi bỏ trách nhiệm của bản thân nếu nạn nhân từ chối, nhằm buộc nạn nhân phải ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu là anh đang lo lắng, nhưng tôi vẫn cần kiểm tra kỹ càng trước khi quyết định, anh ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1418,
+      "output_tokens": 1912
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 3972,
+      "output_tokens": 475
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5756,
+      "output_tokens": 206
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003076,
+    "output_usd": 0.010871,
+    "total_usd": 0.013947
+  }
+}

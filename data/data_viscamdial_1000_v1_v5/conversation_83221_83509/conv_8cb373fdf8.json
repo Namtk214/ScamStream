@@ -1,0 +1,279 @@
+{
+  "conversation_id": "conv_8cb373fdf8",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0019",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Mai Thị Hương",
+    "fake_age": 26,
+    "real_occupation": "Lái xe taxi",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên quản lý hành chính cảng biển / Nhân viên đăng ký tàu thuyền",
+    "caller_org": "Cảng vụ Hàng hải / Chi cục Đăng ký Tàu thuyền địa phương",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên cảng vụ gọi để xác nhận thông tin hành chính định kỳ, cập nhật hồ sơ thủy thủ hoặc thông báo về các thay đổi chính sách mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác thực: 'Xin chào anh Trương Gia Văn Hùng, tôi là Trần Minh, nhân viên Cảng vụ Hàng hải. Chúng tôi đang cập nhật hồ sơ định kỳ. Anh có thể xác nhận số điện thoại liên hệ của anh là 0382405330 không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác nhận địa chỉ thường trú, người liên hệ khẩn cấp, và cập nhật giấy phép thủy thủ của anh. Anh có sẵn sàng cung cấp những thông tin này không? Chúng tôi sẽ ghi chép và cập nhật vào hệ thống trong vòng 3-5 ngày làm việc'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: 'Cảm ơn anh đã cung cấp thông tin. Anh sẽ nhận được thư xác nhận qua email hoặc bưu điện trong tuần tới. Nếu có câu hỏi gì, anh có thể gọi lại số cảng vụ [số chính thức]. Cảm ơn anh!'"
+        }
+      ]
+    },
+    "scenario_context": "Thủy thủ trên tàu cần liên hệ với cảng biển để xử lý thủ tục hành chính, đăng ký giấy phép, hoặc giải quyết các vấn đề hành chính liên quan đến tàu. Một lái xe taxi có thể được gọi bởi các cơ quan này để vận chuyển tài liệu hoặc có thể là người quen của nhân viên cảng, tạo điểm giao thoa tự nhiên khi gọi điện xác nhận thông tin hoặc yêu cầu thủy thủ cung cấp dữ liệu."
+  },
+  "listener_card": {
+    "listener_id": "lis_0019",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1962,
+      "age": 63,
+      "province": "Nghệ An",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "83509",
+      "title": "Thủy thủ trên tàu và những thợ có liên quan khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Gia Văn Hùng",
+      "VIC_ID_DOC": "040062120059",
+      "VIC_ADDRESS": "Huyện 2, Nghệ An",
+      "VIC_EMPLOYMENT": "Thủy thủ trên tàu và những thợ có liên quan khác",
+      "VIC_CONTACT": "0382405330",
+      "VIC_TAX_SOCIAL_ID": "7531546392"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "873850",
+      "VIC_CREDENTIAL": "879456",
+      "VIC_SIM_INFO": "0382405330",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "033402481129",
+      "VIC_CARD_DATA": "4442 **** **** 5313",
+      "VIC_BALANCE": "34 triệu đồng",
+      "VIC_ASSET": "35 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Gia Văn Hùng",
+    "VIC_CONTACT": "0382405330",
+    "VIC_TAX_SOCIAL_ID": "7531546392",
+    "VIC_CARD_DATA": "4442 **** **** 5313"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý hành chính cảng biển / Nhân viên đăng ký tàu thuyền",
+    "caller_org": "Cảng vụ Hàng hải / Chi cục Đăng ký Tàu thuyền địa phương",
+    "scenario_context": "Thủy thủ trên tàu cần liên hệ với cảng biển để xử lý thủ tục hành chính, đăng ký giấy phép, hoặc giải quyết các vấn đề hành chính liên quan đến tàu. Một lái xe taxi có thể được gọi bởi các cơ quan này để vận chuyển tài liệu hoặc có thể là người quen của nhân viên cảng, tạo điểm giao thoa tự nhiên khi gọi điện xác nhận thông tin hoặc yêu cầu thủy thủ cung cấp dữ liệu.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | otp_extraction | money_transfer",
+      "pretext": "Gọi điện giả danh nhân viên cảng vụ, nói rằng hệ thống quản lý tàu thuyền phát hiện bất thường trong hồ sơ của thủy thủ Trương Gia Văn Hùng (dùng VIC_FULLNAME để tạo trust). Yêu cầu xác nhận thông tin cá nhân và số CMND để 'cập nhật hệ thống' hoặc 'xử lý vi phạm hành chính'.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_TAX_SOCIAL_ID",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác thực danh tính: 'Xin chào anh Hùng, tôi là Trần Minh từ Cảng vụ Hàng hải. Chúng tôi vừa phát hiện bất thường trong hồ sơ cá nhân của anh — số điện thoại 0382405330 đã được ghi nhận. Anh có thể xác nhận lại không?'. Dùng VIC_FULLNAME + VIC_CONTACT để tạo credibility cao."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Nếu không xác nhận lại thông tin trong 24h, hồ sơ của anh sẽ bị tạm khóa và không thể hoạt động trên biển. Điều này sẽ ảnh hưởng đến lương và bảo hiểm xã hội của anh'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để xác nhận, anh cần cung cấp lại số CMND (VIC_TAX_SOCIAL_ID) và số thẻ ngân hàng (VIC_CARD_DATA). Sau đó chúng tôi sẽ gửi OTP về điện thoại của anh, anh chỉ cần cung cấp mã đó để hoàn tất quá trình xác thực'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc kết thúc: Nếu nạn nhân từ chối, scammer có thể nói 'Vậy anh chịu trách nhiệm nếu hồ sơ bị khóa nhé' rồi cắt máy. Nếu thành công, scammer sẽ yêu cầu OTP hoặc trực tiếp yêu cầu chuyển tiền để 'thanh toán phí xử lý bất thường'."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên cảng vụ gọi để xác nhận thông tin hành chính định kỳ, cập nhật hồ sơ thủy thủ hoặc thông báo về các thay đổi chính sách mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác thực: 'Xin chào anh Trương Gia Văn Hùng, tôi là Trần Minh, nhân viên Cảng vụ Hàng hải. Chúng tôi đang cập nhật hồ sơ định kỳ. Anh có thể xác nhận số điện thoại liên hệ của anh là 0382405330 không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi cần xác nhận địa chỉ thường trú, người liên hệ khẩn cấp, và cập nhật giấy phép thủy thủ của anh. Anh có sẵn sàng cung cấp những thông tin này không? Chúng tôi sẽ ghi chép và cập nhật vào hệ thống trong vòng 3-5 ngày làm việc'."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động hoặc kết thúc: 'Cảm ơn anh đã cung cấp thông tin. Anh sẽ nhận được thư xác nhận qua email hoặc bưu điện trong tuần tới. Nếu có câu hỏi gì, anh có thể gọi lại số cảng vụ [số chính thức]. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Trương Gia Văn Hùng, em là Mai Thị Hương, nhân viên Cảng vụ Hàng hải. Chúng em đang cập nhật hồ sơ định kỳ. Anh có thể xác nhận số điện thoại liên hệ của anh là 0382405330 không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và xác thực thông tin cơ bản"
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn xác nhận lại xem thông tin này có đúng không đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, đúng rồi anh ạ. Đây là số điện thoại mà bên em đã lưu trong hồ sơ của anh. Chúng em chỉ muốn xác nhận lại để đảm bảo thông tin luôn chính xác thôi ạ. Anh Trương Gia Văn Hùng phải không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận lại thông tin và làm rõ mục đích cuộc gọi để giảm sự nghi ngờ"
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ nói đi, nhưng tôi vẫn thấy cần kiểm tra lại cho chắc chắn.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, phiền anh Trương Gia Văn Hùng xác nhận lại giúp em số điện thoại mình là 0382405330 phải không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Nhấn mạnh lại thông tin cần xác nhận và yêu cầu người nghe xác nhận trực tiếp."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm thông tin về hồ sơ của tôi không đã, rồi tôi sẽ xác nhận sau.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, hồ sơ của anh Trương Gia Văn Hùng bên em có lưu trữ thông tin về giấy phép thủy thủ, lịch sử làm việc trên tàu và các chứng chỉ chuyên môn ạ. Nhưng trước hết, em cần anh xác nhận số điện thoại này để đảm bảo rằng chúng em đang trao đổi với đúng người và để cập nhật hồ sơ được chính xác nhất ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp thông tin tổng quát về hồ sơ để trấn an, đồng thời vẫn giữ vững yêu cầu xác nhận số điện thoại trước khi đi sâu vào chi tiết."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn muốn kiểm tra thêm thông tin trước đã, em có thể cho tôi biết thêm chi tiết về lịch sử làm việc của tôi không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để tránh làm mất thời gian của anh, em xin phép nhắc lại ạ. Em chỉ cần anh xác nhận số điện thoại 0382405330 này là của anh thôi ạ. Sau khi xác nhận xong, chúng em sẽ đi vào chi tiết hơn về các thông tin cần cập nhật trong hồ sơ của anh ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Nhấn mạnh lại mục đích ban đầu là xác nhận số điện thoại, cam kết sẽ cung cấp thêm thông tin sau khi xác nhận cơ bản."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết chính xác là tài liệu nào mà em đã lưu về tôi không đã, tôi cần kiểm tra trước khi xác nhận.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Trương Gia Văn Hùng ơi, để cập nhật hồ sơ định kỳ theo quy định của Cảng vụ, em cần anh xác nhận số điện thoại liên hệ 0382405330 này là chính xác. Sau đó, em sẽ cung cấp các thông tin cụ thể về những tài liệu mà anh cần bổ sung hoặc xác nhận ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Nhấn mạnh lại tầm quan trọng của việc xác nhận số điện thoại theo quy định, cam kết sẽ cung cấp thông tin chi tiết sau đó."
+    },
+    {
+      "role": "listener",
+      "text": "Em vẫn chưa cho tôi biết rõ tài liệu nào đã được lưu, tôi cần thông tin cụ thể trước khi xác nhận.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Trương Gia Văn Hùng ơi, em hiểu sự cẩn trọng của anh. Tuy nhiên, theo quy trình xác minh của Cảng vụ, em bắt buộc phải xác nhận thông tin liên hệ chính chủ trước khi cung cấp thêm bất kỳ chi tiết hồ sơ nào khác ạ. Anh cứ xác nhận giúp em số điện thoại 0382405330 này là của mình nhé, rồi em sẽ đi vào chi tiết ngay lập tức ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Hiểu sự thận trọng của người nghe, nhưng vẫn khẳng định quy trình bắt buộc xác nhận thông tin cơ bản trước, để trấn an và thúc đẩy việc xác nhận."
+    },
+    {
+      "role": "listener",
+      "text": "Em cứ nói theo quy trình của em, nhưng tôi vẫn cần thêm thông tin rõ ràng về hồ sơ của tôi trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Trương Gia Văn Hùng, nếu anh cảm thấy chưa yên tâm, anh có thể gọi trực tiếp lên tổng đài Cảng vụ Hàng hải [số chính thức] để xác minh lại thông tin cuộc gọi này và kiểm tra hồ sơ của mình ạ. Bên em luôn khuyến khích mọi người liên hệ trực tiếp để được hỗ trợ tốt nhất ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Giảm sự nghi ngờ bằng cách hướng dẫn người nghe liên hệ kênh chính thức để xác minh thông tin, đồng thời duy trì mục tiêu xác thực thông tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết số điện thoại tổng đài mà tôi gọi để xác minh không đã? Tôi cần chắc chắn trước khi xác nhận.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, số tổng đài của Cảng vụ Hàng hải là 02253822238 ạ. Anh có thể gọi để xác minh thông tin về cuộc gọi này và hồ sơ của mình. Sau khi kiểm tra xong, anh có thể gọi lại cho em theo số 0382405330 này để mình tiếp tục công việc anh nhé.",
+      "current_phase": "L1",
+      "tactic_hint": "Cung cấp số tổng đài chính thức để người nghe xác minh, đồng thời nhắc lại số điện thoại của mình để người nghe có thể liên hệ lại, giữ luồng công việc."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không cảm thấy an tâm khi nghe thông tin này, em đừng ép buộc tôi xác nhận số điện thoại mà không cung cấp đủ chi tiết về hồ sơ của tôi.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Trương Gia Văn Hùng ơi, em đã cung cấp số tổng đài chính thức của Cảng vụ Hàng hải để anh có thể xác minh thông tin. Em rất mong anh sẽ kiểm tra để yên tâm hơn. Em xin phép kết thúc cuộc gọi tại đây. Cảm ơn anh đã lắng nghe ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Sau khi bị từ chối và không thể tiến hành tiếp, kết thúc cuộc gọi một cách lịch sự, vẫn đề xuất kênh xác minh chính thức."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1843,
+      "output_tokens": 1716
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 17341,
+      "output_tokens": 1367
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 21124,
+      "output_tokens": 638
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00848,
+    "output_usd": 0.01238,
+    "total_usd": 0.02086
+  }
+}

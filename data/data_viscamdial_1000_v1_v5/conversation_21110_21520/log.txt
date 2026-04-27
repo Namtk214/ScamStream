@@ -1,0 +1,39 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_21c1b7792c]
+  Caller thật: Nhà vật lý học và thiên văn học (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Kỹ sư phần mềm nhúng / Chuyên gia tích hợp hệ thống điều khiển thiên văn @ Viện Vật lý và Thiên văn học (VAST) / Công ty cung cấp giải pháp công nghệ
+  Listener: Kỹ sư điện tử (Nhóm 4: Y tế, giáo dục & khoa học)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Nhà vật lý học và thiên văn học cần gọi cho kỹ sư điện tử để hợp tác phát triển hệ thống điều khiển tự động cho thiết bị quan sát (kính viễn vọng, camera CCD), hoặc tích hợp cảm biến điện tử vào dự án nghiên cứu khoa học.
+  Pretext: Scammer xưng danh là kỹ sư dự án từ VAST, nói rằng họ đang thực hiện dự án nâng cấp hệ thống điều khiển cho kính viễn vọng quốc gia. Họ gọi để 'xác nhận thông tin kỹ sư điện tử có kinh nghiệm' và đề cập rằng Cao Gia Xuân Tuấn được đề cử tham gia dự án này với mức phí tư vấn/hợp tác 50-100 triệu đồng (gần với tài sản nạn nhân 339 triệu). Tạo sự khẩn cấp bằng cách nói rằng deadline nộp hồ sơ tài chính là hôm nay.
+  Listener traits: ['ham lợi dễ bị bait', 'nhẹ dạ cả tin']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh ạ, em là Phan Thế Văn Khoa, kỹ sư dự án bên Viện Vật lý và Thiên văn học VAST đây ạ. Em gọi để xác nhận thông tin anh Cao Gia Xuân Tuấn là kỹ sư điện tử chuyên về hệ thống điều khiển phải không ạ? Bên em có hồ sơ của anh từ cơ sở dữ liệu chuyên gia.
+      → phase: S1 | tactic: Giới thiệu bản thân, tổ chức, chức danh và dùng đầy đủ tên, chức danh của nạn nhân để tạo uy tín và trust.
+T02 [LISTENER] Dạ đúng rồi, tôi là Cao Gia Xuân Tuấn đây, em có cần xác nhận thêm thông tin gì không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ vâng, đúng là anh Tuấn rồi ạ. Như đã trao đổi, hiện tại Viện em đang triển khai dự án nâng cấp hệ thống điều khiển cho Kính viễn vọng quốc gia. Chúng em đang gấp rút tìm kiếm các chuyên gia tư vấn độc lập để hỗ trợ dự án. Hồ sơ của anh đã được đề xuất và hội đồng đánh giá rất cao kinh nghiệm của anh trong lĩnh vực này. Mức phí tư vấn dự kiến cho giai đoạn đầu là 80 triệu đồng. Em xin phép hỏi luôn là anh Tuấn có quan tâm đến cơ hội hợp tác này không ạ?
+      → phase: S2 | tactic: Bắt đầu chuyển sang Phase 2: Khai thác tâm lý và tạo sự khẩn cấp bằng cách giới thiệu về dự án, đề cập đến mức phí hấp dẫn và hỏi về sự quan tâm của nạn nhân.
+T04 [LISTENER] Nghe có vẻ hấp dẫn quá, nhưng tôi cần thêm thông tin về dự án và cách thức hợp tác thì mới dám quyết định ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T05 [CALLER] Dạ vâng, để em chia sẻ thêm. Do tính chất dự án là cấp bách và có tính bảo mật cao, mọi thông tin chi tiết sẽ được gửi qua email sau khi anh xác nhận tham gia. Tuy nhiên, em có thể nói sơ bộ là dự án sẽ kéo dài 6 tháng, và mức phí 80 triệu là cho giai đoạn 3 tháng đầu tiên. Anh cho em hỏi là anh có thể sắp xếp thời gian được không? Vì bên em cần chốt danh sách nhân sự trong hôm nay để nộp cho ban quản lý dự án ạ.
+      → phase: S2 | tactic: Tạo sự khẩn cấp bằng cách đẩy nhanh deadline và gợi ý về việc 'bỏ lỡ cơ hội' nếu không phản hồi nhanh chóng, đồng thời khẳng định lại các thông tin hấp dẫn đã đưa ra.
+T06 [LISTENER] Tôi hiểu rồi, nhưng tôi cần thêm thời gian để suy nghĩ và kiểm tra thông tin trước khi quyết định tham gia ạ.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ em hiểu ạ. Tuy nhiên, như em đã nói, thời gian nộp hồ sơ tài chính cho dự án là rất gấp, hạn chót là cuối giờ chiều nay. Nếu anh không xác nhận tham gia ngay, rất tiếc là bên em sẽ phải chuyển cơ hội này cho ứng viên khác. Đây thực sự là một cơ hội tốt để anh có thể đóng góp vào một dự án khoa học quốc gia và nhận được mức thu nhập hấp dẫn. Anh có thể cân nhắc lại và cho em xin thông tin quyết định trong vòng 30 phút tới không ạ?
+      → phase: S2 | tactic: Tăng cường yếu tố khẩn cấp và áp lực về thời gian, đồng thời nhấn mạnh lợi ích và 'mất mát' nếu nạn nhân không hành động nhanh chóng.
+T08 [LISTENER] Em nói nghe hấp dẫn quá, nhưng tôi vẫn cần thời gian để suy nghĩ thêm đã.
+      → action: REFUSAL | suspicion: 0.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  8 turns | suspicion=0.00
+TOKEN: in=16706 | out=3120
+COST : $0.016844
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v3\conversation_21110_21520\conv_21c1b7792c.json  [SCAM_REFUSE]

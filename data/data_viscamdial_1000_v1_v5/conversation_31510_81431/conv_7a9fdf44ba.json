@@ -1,0 +1,230 @@
+{
+  "conversation_id": "conv_7a9fdf44ba",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0091",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Lý Đức Khoa",
+    "fake_age": 40,
+    "real_occupation": "Kỹ thuật viên máy của tàu thủy",
+    "real_group": "Nhóm 5: CNTT, dữ liệu, viễn thông & kỹ thuật",
+    "role_job": "Nhân viên kinh doanh / Nhân viên bán hàng — Công ty cung cấp thiết bị, vật liệu máy móc cho ngành công nghiệp",
+    "caller_org": "Công ty cung cấp thiết bị công nghiệp (tên giả hoặc thực)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên kinh doanh công ty cung cấp thiết bị thực sự gọi để: (1) Xác nhận thông tin khách hàng sau cập nhật hệ thống, (2) Giới thiệu dịch vụ bảo trì máy móc mới, (3) Thống nhất lịch bảo trì hoặc giao hàng, (4) Xin phản hồi về chất lượng dịch vụ trước đó.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng, công ty, bộ phận, tên đầy đủ. Xác nhận: 'Tôi đang nói với anh Trần Đức An, số 0832563353 phải không? Anh đang làm việc tại [tên công ty] ở Hải Phòng?' Đợi xác nhận rõ ràng từ nạn nhân."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Nêu rõ lý do gọi (ví dụ: 'Chúng tôi muốn cập nhật thông tin khách hàng sau nâng cấp hệ thống' hoặc 'Giới thiệu gói bảo trì máy móc với giá ưu đãi cho khách hàng thân thiết'). Lắng nghe phản hồi, không tạo áp lực."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu nạn nhân quan tâm, hẹn lịch gọi lại hoặc gửi tài liệu qua email/SMS. Nếu không quan tâm, cảm ơn và chào tạm biệt một cách lịch sự. Không kéo dài cuộc gọi không cần thiết."
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên máy tàu thủy thường phải mua sắm, bảo trì thiết bị và vật liệu cho hệ thống máy móc. Thợ vận hành máy làm thùng carton cũng cần cung cấp vật liệu, linh kiện. Hai người này có thể gặp nhau qua các nhà cung cấp chung hoặc mạng lưới công nghiệp địa phương (Hải Phòng là cảng lớn, có nhiều nhà máy)."
+  },
+  "listener_card": {
+    "listener_id": "lis_0091",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2001,
+      "age": 24,
+      "province": "Hải Phòng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81431",
+      "title": "Thợ vận hành máy làm thùng catong/hộp giấy",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "sĩ diện không muốn thua kém",
+      "lo lắng hay bận tâm"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trần Đức An",
+      "VIC_ID_DOC": "031201953244",
+      "VIC_ADDRESS": "Huyện 11, Hải Phòng",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy làm thùng catong/hộp giấy",
+      "VIC_CONTACT": "0832563353",
+      "VIC_TAX_SOCIAL_ID": "7093571319"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "736202",
+      "VIC_CREDENTIAL": "5718",
+      "VIC_SIM_INFO": "0832563353",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "4689752038",
+      "VIC_CARD_DATA": "4101 **** **** 7324",
+      "VIC_BALANCE": "2 triệu đồng",
+      "VIC_ASSET": "77 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trần Đức An",
+    "VIC_CONTACT": "0832563353",
+    "LOCATION": "Hải Phòng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh / Nhân viên bán hàng — Công ty cung cấp thiết bị, vật liệu máy móc cho ngành công nghiệp",
+    "caller_org": "Công ty cung cấp thiết bị công nghiệp (tên giả hoặc thực)",
+    "scenario_context": "Kỹ thuật viên máy tàu thủy thường phải mua sắm, bảo trì thiết bị và vật liệu cho hệ thống máy móc. Thợ vận hành máy làm thùng carton cũng cần cung cấp vật liệu, linh kiện. Hai người này có thể gặp nhau qua các nhà cung cấp chung hoặc mạng lưới công nghiệp địa phương (Hải Phòng là cảng lớn, có nhiều nhà máy).",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi với danh nghĩa nhân viên kinh doanh công ty cung cấp thiết bị, nói rằng công ty vừa cập nhật hệ thống khách hàng và phát hiện tài khoản của 'Trần Đức An' có khoản nợ từ đơn hàng trước đó (hoặc gói bảo trì máy móc). Dùng tên thật + số điện thoại lộ để tạo tin cậy ngay từ đầu.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là nhân viên công ty cung cấp thiết bị, gọi bằng tên đầy đủ 'Trần Đức An' và xác nhận số điện thoại 0832563353 để tạo credibility cao. Nói: 'Chúng tôi là công ty XYZ, gọi để xác nhận thông tin tài khoản của anh tại Hải Phòng.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: Nói rằng hệ thống phát hiện khoản thanh toán chưa hoàn tất từ 2-3 tháng trước, nếu không thanh toán trong 24-48h sẽ bị khóa tài khoản hoặc ảnh hưởng đến tín dụng. Tạo áp lực thời gian."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: Hướng dẫn nạn nhân chuyển khoản vào tài khoản 'công ty' (thực tế là tài khoản của scammer) với lý do 'xác nhận thanh toán online nhanh nhất'. Hoặc yêu cầu cấp dữ liệu tài khoản ngân hàng để 'hệ thống tự động rút'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân từ chối hoặc hoài nghi: Giả vờ khó chịu, nói 'anh sẽ bị báo cáo tín dụng xấu', hoặc cắt máy để tránh bị phát hiện. Nếu thành công: Cảm ơn nhanh và cắt máy ngay."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên kinh doanh công ty cung cấp thiết bị thực sự gọi để: (1) Xác nhận thông tin khách hàng sau cập nhật hệ thống, (2) Giới thiệu dịch vụ bảo trì máy móc mới, (3) Thống nhất lịch bảo trì hoặc giao hàng, (4) Xin phản hồi về chất lượng dịch vụ trước đó.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng, công ty, bộ phận, tên đầy đủ. Xác nhận: 'Tôi đang nói với anh Trần Đức An, số 0832563353 phải không? Anh đang làm việc tại [tên công ty] ở Hải Phòng?' Đợi xác nhận rõ ràng từ nạn nhân."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Nêu rõ lý do gọi (ví dụ: 'Chúng tôi muốn cập nhật thông tin khách hàng sau nâng cấp hệ thống' hoặc 'Giới thiệu gói bảo trì máy móc với giá ưu đãi cho khách hàng thân thiết'). Lắng nghe phản hồi, không tạo áp lực."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Nếu nạn nhân quan tâm, hẹn lịch gọi lại hoặc gửi tài liệu qua email/SMS. Nếu không quan tâm, cảm ơn và chào tạm biệt một cách lịch sự. Không kéo dài cuộc gọi không cần thiết."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh. Tôi là Lý Đức Khoa, nhân viên kinh doanh của Công ty Thiết bị Công nghiệp ABC. Tôi đang nói chuyện với anh Trần Đức An, số điện thoại 0832563353 phải không ạ? Anh có đang làm việc tại văn phòng ở Hải Phòng không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh rõ ràng, công ty, bộ phận, tên đầy đủ. Xác nhận thông tin khách hàng và địa điểm làm việc."
+    },
+    {
+      "role": "listener",
+      "text": "Em là Trần Đức An đây, nhưng em không hiểu anh đang có ý định gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào anh An. Tôi xin lỗi nếu đã làm phiền. Gọi cho anh hôm nay là tôi muốn xác nhận lại một số thông tin khách hàng sau khi bên tôi vừa hoàn tất nâng cấp hệ thống. Điều này để đảm bảo dịch vụ hỗ trợ sau này cho anh được tốt nhất ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Lý do gọi hợp lý, giảm sự nghi ngờ và tập trung vào lợi ích khách hàng (dịch vụ tốt hơn)."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng anh có thể cho em biết rõ hơn về việc nâng cấp hệ thống này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, bên tôi vừa triển khai hệ thống quản lý khách hàng mới, giúp theo dõi lịch sử mua hàng, bảo hành và bảo trì được hiệu quả hơn. Vì vậy, tôi cần anh xác nhận lại một số thông tin cơ bản như địa chỉ công ty, người liên hệ chính và các số seri thiết bị mà bên anh đã mua từ công ty chúng tôi ạ. Điều này sẽ giúp các yêu cầu hỗ trợ của anh được xử lý nhanh chóng và chính xác hơn trong tương lai.",
+      "current_phase": "L2",
+      "tactic_hint": "Giải thích chi tiết hơn về việc nâng cấp hệ thống và tầm quan trọng của việc xác nhận thông tin, nhấn mạnh lợi ích trực tiếp cho khách hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn muốn biết rõ hơn về những thông tin cụ thể nào cần xác nhận ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, những thông tin cụ thể tôi cần anh xác nhận chỉ bao gồm tên công ty, địa chỉ trụ sở chính, tên người đại diện liên hệ và số điện thoại liên hệ ạ. Ngoài ra, nếu anh có thể cung cấp thêm các số serial của những thiết bị mà bên anh đã mua từ công ty chúng tôi thì càng tốt ạ. Tôi cam đoan đây chỉ là những thông tin cơ bản để cập nhật hồ sơ, không liên quan đến tài chính hay bất kỳ thông tin nhạy cảm nào khác.",
+      "current_phase": "L2",
+      "tactic_hint": "Làm rõ những thông tin cần xác nhận, trấn an khách hàng về tính bảo mật và không nhạy cảm của thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em vẫn cảm thấy hơi lo lắng khi cung cấp thông tin này, anh có thể đảm bảo rằng thông tin của em sẽ được bảo mật không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.4
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh An hoàn toàn có thể yên tâm. Công ty chúng tôi luôn đặt vấn đề bảo mật thông tin khách hàng lên hàng đầu. Mọi dữ liệu đều được mã hóa và chỉ sử dụng nội bộ để phục vụ anh tốt hơn. Nếu anh vẫn còn băn khoăn, tôi có thể gửi cho anh chính sách bảo mật thông tin của công ty qua email hoặc anh có thể gọi trực tiếp lên tổng đài của chúng tôi theo số 1900 6789 để xác minh thông tin này ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trấn an khách hàng về bảo mật thông tin, đưa ra các kênh xác minh thông tin chính thức để tăng độ tin cậy."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Anh có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi, nhưng em không cảm thấy thoải mái khi cung cấp thông tin này cho anh, có thể anh hiểu em ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi hiểu rồi. Nếu anh không tiện cung cấp thông tin qua điện thoại thì tôi xin phép không làm phiền nữa. Anh có thể lưu lại số tổng đài 1900 6789 của công ty chúng tôi để tiện liên hệ khi cần hỗ trợ hoặc xác minh bất kỳ thông tin nào khác ạ. Cảm ơn anh đã dành thời gian nghe máy. Chào anh An.",
+      "current_phase": "L3",
+      "tactic_hint": "Tôn trọng quyết định của khách hàng, cung cấp kênh liên lạc chính thức và kết thúc cuộc gọi lịch sự."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1834,
+      "output_tokens": 1660
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8580,
+      "output_tokens": 933
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10708,
+      "output_tokens": 357
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.005156,
+    "output_usd": 0.010847,
+    "total_usd": 0.016003
+  }
+}

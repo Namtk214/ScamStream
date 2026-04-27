@@ -1,0 +1,231 @@
+{
+  "conversation_id": "conv_d2cc4a21a3",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0047",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Huỳnh Văn Đức Quân",
+    "fake_age": 29,
+    "real_occupation": "Kỹ thuật viên y học cổ truyền và bổ trợ",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Trưởng phòng Kiểm định Chất lượng & An toàn Lao động - Sở Y tế",
+    "caller_org": "Phòng Kiểm định Chất lượng Lao động, Sở Y tế và Phúc lợi Xã hội Đà Nẵng",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo rằng công ty/cơ sở sản xuất của nạn nhân (sử dụng địa chỉ Huyện 4, Đà Nẵng) đã bị phát hiện vi phạm tiêu chuẩn an toàn lao động tại lò sấy. Cần kiểm tra sức khỏe khẩn cấp cho công nhân và nộp phí xử phạt hành chính. Sử dụng tên đầy đủ 'Dương Hồng Bảo Hương' để giả vờ đã xác minh danh sách công nhân.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xác minh: Scammer gọi số 0386129138, xưng danh là 'Cán bộ Phòng Kiểm định Chất lượng Lao động'. Hỏi: 'Chào anh/chị Dương Hồng Bảo Hương, em đang từ Sở Y tế. Anh/chị là người quản lý lò sấy tại Huyện 4, Đà Nẵng đúng không?' Tạo ấn tượng đã xác minh thông tin sẵn."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp & Sợ hãi: 'Vừa rồi chúng tôi phát hiện lò sấy của anh/chị có vấn đề về thông gió, nhiệt độ vượt tiêu chuẩn. Công nhân của anh/chị có nguy cơ bị bệnh nghề nghiệp cao. Nếu không xử lý ngay, cơ sở sẽ bị phạt từ 5-10 triệu đồng, thậm chí bị đình chỉ hoạt động. Anh/chị có bao nhiêu công nhân làm việc ở đó?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu thanh toán: 'Để tránh bị phạt, anh/chị cần nộp ngay phí kiểm định an toàn lao động và phí xử lý khẩn cấp. Tổng cộng 2.5 triệu đồng. Em sẽ gửi link hoặc số tài khoản để anh/chị chuyển khoản. Sau đó chúng tôi sẽ cấp giấy chứng nhận an toàn, anh/chị không bị phạt.' (Sử dụng số tài khoản 3679192083 hoặc yêu cầu chuyển vào tài khoản giả mạo khác)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý hoặc Kết thúc: Nếu nạn nhân chuyển tiền, scammer cảm ơn và hứa gửi giấy chứng nhận trong 24h, rồi cắt máy. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer dọa: 'Vậy cơ sở anh/chị sẽ bị phạt. Đây là quy định của Bộ Lao động, em không thể giúp được' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Lò sấy trong sản xuất công nghiệp (gốm, thực phẩm, dệt may) phải tuân thủ tiêu chuẩn an toàn lao động và vệ sinh công nghiệp. Cơ quan y tế định kỳ kiểm tra điều kiện làm việc, nhiệt độ, độc tính khí thải — những yếu tố mà kỹ thuật viên y học cổ truyền/bổ trợ có thể được giao nhiệm vụ xác minh sức khỏe công nhân hoặc đánh giá rủi ro môi trường."
+  },
+  "listener_card": {
+    "listener_id": "lis_0047",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1980,
+      "age": 45,
+      "province": "Đà Nẵng",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "75211",
+      "title": "Thợ lò sấy",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "cẩn thận và cảnh giác",
+      "hay hỏi lại để chắc chắn"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Hồng Bảo Hương",
+      "VIC_ID_DOC": "048180821516",
+      "VIC_ADDRESS": "Huyện 4, Đà Nẵng",
+      "VIC_EMPLOYMENT": "Thợ lò sấy",
+      "VIC_CONTACT": "0386129138",
+      "VIC_TAX_SOCIAL_ID": "9091114468"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "3799",
+      "VIC_CREDENTIAL": "603606",
+      "VIC_SIM_INFO": "0386129138",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "3679192083",
+      "VIC_CARD_DATA": "4417 **** **** 8277",
+      "VIC_BALANCE": "21 triệu đồng",
+      "VIC_ASSET": "36 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Đà Nẵng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Hồng Bảo Hương",
+    "VIC_CONTACT": "0386129138",
+    "VIC_BANK_ACCOUNT": "3679192083",
+    "VIC_ADDRESS": "Huyện 4, Đà Nẵng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Kiểm định Chất lượng & An toàn Lao động - Sở Y tế",
+    "caller_org": "Phòng Kiểm định Chất lượng Lao động, Sở Y tế và Phúc lợi Xã hội Đà Nẵng",
+    "scenario_context": "Lò sấy trong sản xuất công nghiệp (gốm, thực phẩm, dệt may) phải tuân thủ tiêu chuẩn an toàn lao động và vệ sinh công nghiệp. Cơ quan y tế định kỳ kiểm tra điều kiện làm việc, nhiệt độ, độc tính khí thải — những yếu tố mà kỹ thuật viên y học cổ truyền/bổ trợ có thể được giao nhiệm vụ xác minh sức khỏe công nhân hoặc đánh giá rủi ro môi trường.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi điện thông báo rằng công ty/cơ sở sản xuất của nạn nhân (sử dụng địa chỉ Huyện 4, Đà Nẵng) đã bị phát hiện vi phạm tiêu chuẩn an toàn lao động tại lò sấy. Cần kiểm tra sức khỏe khẩn cấp cho công nhân và nộp phí xử phạt hành chính. Sử dụng tên đầy đủ 'Dương Hồng Bảo Hương' để giả vờ đã xác minh danh sách công nhân.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xác minh: Scammer gọi số 0386129138, xưng danh là 'Cán bộ Phòng Kiểm định Chất lượng Lao động'. Hỏi: 'Chào anh/chị Dương Hồng Bảo Hương, em đang từ Sở Y tế. Anh/chị là người quản lý lò sấy tại Huyện 4, Đà Nẵng đúng không?' Tạo ấn tượng đã xác minh thông tin sẵn."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo khẩn cấp & Sợ hãi: 'Vừa rồi chúng tôi phát hiện lò sấy của anh/chị có vấn đề về thông gió, nhiệt độ vượt tiêu chuẩn. Công nhân của anh/chị có nguy cơ bị bệnh nghề nghiệp cao. Nếu không xử lý ngay, cơ sở sẽ bị phạt từ 5-10 triệu đồng, thậm chí bị đình chỉ hoạt động. Anh/chị có bao nhiêu công nhân làm việc ở đó?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu thanh toán: 'Để tránh bị phạt, anh/chị cần nộp ngay phí kiểm định an toàn lao động và phí xử lý khẩn cấp. Tổng cộng 2.5 triệu đồng. Em sẽ gửi link hoặc số tài khoản để anh/chị chuyển khoản. Sau đó chúng tôi sẽ cấp giấy chứng nhận an toàn, anh/chị không bị phạt.' (Sử dụng số tài khoản 3679192083 hoặc yêu cầu chuyển vào tài khoản giả mạo khác)"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý hoặc Kết thúc: Nếu nạn nhân chuyển tiền, scammer cảm ơn và hứa gửi giấy chứng nhận trong 24h, rồi cắt máy. Nếu nạn nhân từ chối hoặc nghi ngờ, scammer dọa: 'Vậy cơ sở anh/chị sẽ bị phạt. Đây là quy định của Bộ Lao động, em không thể giúp được' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cơ quan y tế thực hiện kiểm tra an toàn lao động định kỳ hoặc theo yêu cầu, thông báo kết quả và hướng dẫn cải thiện điều kiện làm việc tại lò sấy.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & Xác minh: Gọi từ số điện thoại chính thức của Sở Y tế (có thể tra cứu công khai). Xưng danh rõ ràng: 'Đây là Phòng Kiểm định Chất lượng Lao động, Sở Y tế Đà Nẵng. Anh/chị Dương Hồng Bảo Hương quản lý cơ sở sản xuất tại địa chỉ Huyện 4 đúng không? Chúng tôi cần thực hiện kiểm tra định kỳ hôm nay hoặc ngày mai.'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Chúng tôi sẽ kiểm tra các yếu tố: thông gió, nhiệt độ, độc tính khí thải, điều kiện vệ sinh, sức khỏe công nhân. Anh/chị vui lòng chuẩn bị hồ sơ y tế công nhân và sơ đồ cơ sở. Kiểm tra sẽ mất khoảng 2-3 giờ. Anh/chị có sẵn sàng không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: 'Vậy chúng tôi sẽ đến vào lúc 14h hôm nay. Nếu phát hiện vi phạm, chúng tôi sẽ cấp thông báo cải tiến và hướng dẫn chi tiết. Anh/chị có thắc mắc gì không? Cảm ơn sự hợp tác của anh/chị.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Dương Hồng Bảo Hương ạ, em là Huỳnh Văn Đức Quân từ Phòng Kiểm định Chất lượng Lao động thuộc Sở Y tế. Chị là người quản lý lò sấy tại Huyện 4, Đà Nẵng đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xác minh danh tính và địa chỉ để tạo lòng tin ban đầu"
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Dương Hồng Bảo Hương, nhưng em có thể cho tôi biết số điện thoại của em không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, số điện thoại của em là 0868.567.890 ạ. Chị Hương ơi, bên em vừa có kết quả kiểm tra định kỳ và phát hiện lò sấy của cơ sở mình tại Huyện 4 có vấn đề về thông gió, nhiệt độ vượt tiêu chuẩn an toàn lao động. Điều này có thể ảnh hưởng nghiêm trọng đến sức khỏe của công nhân và nếu không xử lý ngay, cơ sở sẽ đối mặt với các mức phạt nặng. Chị cho em hỏi hiện tại cơ sở mình có bao nhiêu công nhân đang làm việc tại lò sấy đó ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo thông tin giả mạo về số điện thoại cá nhân (để tạo tin cậy và khẩn cấp), sau đó chuyển sang giai đoạn tạo khẩn cấp và sợ hãi bằng cách thông báo về vi phạm và nguy cơ, đồng thời thu thập thông tin để chuẩn bị cho giai đoạn yêu cầu thanh toán."
+    },
+    {
+      "role": "listener",
+      "text": "Em hỏi tôi vậy, nhưng tôi cần kiểm tra lại thông tin trước đã, em có thể cho tôi biết rõ hơn về vấn đề vi phạm đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vấn đề chính là hệ thống thông gió và làm mát tại lò sấy của cơ sở mình không đạt tiêu chuẩn kỹ thuật đã đăng ký. Cụ thể, nhiệt độ đo được tại một số vị trí cao hơn mức cho phép là 5 độ C, cùng với nồng độ bụi và khí độc hại vượt ngưỡng an toàn. Theo quy định tại Điều 22 của Nghị định 12/2022/NĐ-CP về xử phạt vi phạm hành chính trong lĩnh vực lao động, cơ sở của chị có nguy cơ bị phạt hành chính từ 5 đến 10 triệu đồng nếu không có biện pháp khắc phục kịp thời. Để tránh những rắc rối pháp lý và đảm bảo an toàn cho người lao động, chúng em đề nghị chị hợp tác xử lý gấp ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Cung cấp chi tiết vi phạm giả mạo và trích dẫn điều luật để tăng tính xác thực, củng cố sự khẩn cấp và nguy cơ pháp lý, nhằm trấn an sự nghi ngờ của nạn nhân và thúc đẩy hành động theo hướng của kẻ lừa đảo."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng em có thể gửi cho tôi văn bản hay thông báo chính thức để tôi xem không, vì chuyện này quan trọng mà.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu. Tuy nhiên, tình hình này đang rất khẩn cấp, việc gửi văn bản chính thức sẽ mất thời gian ạ. Để giải quyết nhanh chóng và tránh ảnh hưởng đến hoạt động của cơ sở, chị cần nộp ngay phí kiểm định an toàn lao động và phí xử lý khẩn cấp. Tổng cộng là 2.5 triệu đồng. Sau khi nộp, bên em sẽ cấp ngay giấy chứng nhận an toàn, đảm bảo cơ sở của chị không bị phạt và tiếp tục hoạt động bình thường. Em sẽ gửi số tài khoản để chị chuyển khoản ngay ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Phủ nhận yêu cầu văn bản để giữ sự khẩn cấp và chuyển hướng sang yêu cầu thanh toán trực tiếp, đồng thời đưa ra lợi ích cụ thể (tránh phạt, giấy chứng nhận) để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy, nhưng tôi vẫn cần một văn bản chính thức trước khi làm theo, không thể chuyển tiền khi chưa rõ ràng đâu ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.7
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu concern của chị. Nhưng do đây là chỉ thị khẩn cấp từ cấp trên về các trường hợp vi phạm an toàn lao động nghiêm trọng, nếu không xử lý trong hôm nay, mọi văn bản chính thức gửi ra đều sẽ kèm theo quyết định xử phạt hành chính và thậm chí là đình chỉ hoạt động. Em không muốn điều đó xảy ra với cơ sở của chị. Chị chỉ cần chuyển 2.5 triệu đồng vào số tài khoản 3679192083, và em sẽ xác nhận ngay để cơ sở chị được bỏ qua quy trình xử phạt ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Phản bác sự từ chối bằng cách nhấn mạnh tính khẩn cấp và hậu quả pháp lý nghiêm trọng hơn nếu không hành động ngay lập tức, đồng thời đưa ra giải pháp (chuyển tiền) như một cách để tránh những hậu quả đó. Trực tiếp đưa ra số tài khoản để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Em có số tài khoản nhưng tôi vẫn không thể chuyển tiền nếu chưa có văn bản chính thức chứng minh đó là yêu cầu hợp pháp ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.3
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1385,
+      "output_tokens": 2012
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 8826,
+      "output_tokens": 1042
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 11220,
+      "output_tokens": 373
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004833,
+    "output_usd": 0.012889,
+    "total_usd": 0.017722
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "conversation_id": "conv_b1b83c17b8",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0053",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Huỳnh Thanh Thanh Nhi",
+    "fake_age": 34,
+    "real_occupation": "Thợ phá dỡ",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng dự án công trình phá dỡ / Giám đốc kỹ thuật công ty xây dựng hạ tầng",
+    "caller_org": "Công ty Cổ phần Phá dỡ và Tái thiết Đô thị Việt Nam (hoặc tương tự)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Báo cáo tiến độ dự án phá dỡ công trình công cộng tại Nghệ An; xin chỉ đạo về các vấn đề kỹ thuật, ngân sách, hoặc điều phối với các cơ quan liên quan.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Gọi qua Văn phòng Chính phủ hoặc Bộ Xây dựng (không gọi trực tiếp số cá nhân). Xưng danh đầy đủ: tên công ty, dự án cụ thể, mục đích cuộc gọi. Yêu cầu xác nhận người nhận là người được phân công xử lý vấn đề này."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Trình bày chi tiết vấn đề kỹ thuật, tài liệu đính kèm, và yêu cầu cụ thể (ví dụ: phê duyệt điều chỉnh kế hoạch, hỗ trợ giải quyết vướng mắc hành chính). Cung cấp thông tin liên lạc chính thức của công ty, người đại diện, địa chỉ."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lịch trình follow-up, người liên hệ chuyên trách, kênh thông tin chính thức (email, công văn). Ghi chú lại những chỉ đạo nhận được. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    },
+    "scenario_context": "Thợ phá dỡ có lý do tự nhiên gọi cho Thủ tướng/Phó Thủ tướng khi dự án công trình liên quan đến quyết định chính sách, cấp phép, hoặc điều phối tài nguyên cấp quốc gia. Đặc biệt ở Nghệ An, các dự án hạ tầng lớn thường cần sự phê duyệt từ lãnh đạo cao cấp."
+  },
+  "listener_card": {
+    "listener_id": "lis_0053",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1979,
+      "age": 46,
+      "province": "Nghệ An",
+      "city_tier": "rural"
+    },
+    "occupation": {
+      "code": "12110",
+      "title": "Thủ tướng, Phó Thủ tướng Chính phủ",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Gia Vinh",
+      "VIC_ID_DOC": "040079978819",
+      "VIC_ADDRESS": "TP 1, Nghệ An",
+      "VIC_EMPLOYMENT": "Thủ tướng, Phó Thủ tướng Chính phủ",
+      "VIC_CONTACT": "0905741538",
+      "VIC_TAX_SOCIAL_ID": "6156158378"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "278892",
+      "VIC_CREDENTIAL": "8721",
+      "VIC_SIM_INFO": "0905741538",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1191518670981",
+      "VIC_CARD_DATA": "4943 **** **** 8151",
+      "VIC_BALANCE": "1.6 tỷ đồng",
+      "VIC_ASSET": "2.5 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Gia Vinh",
+    "VIC_CONTACT": "0905741538",
+    "VIC_ASSET": "2.5 tỷ đồng",
+    "LOCATION": "Nghệ An"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng dự án công trình phá dỡ / Giám đốc kỹ thuật công ty xây dựng hạ tầng",
+    "caller_org": "Công ty Cổ phần Phá dỡ và Tái thiết Đô thị Việt Nam (hoặc tương tự)",
+    "scenario_context": "Thợ phá dỡ có lý do tự nhiên gọi cho Thủ tướng/Phó Thủ tướng khi dự án công trình liên quan đến quyết định chính sách, cấp phép, hoặc điều phối tài nguyên cấp quốc gia. Đặc biệt ở Nghệ An, các dự án hạ tầng lớn thường cần sự phê duyệt từ lãnh đạo cao cấp.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi cấp báo tình huống khẩn cấp liên quan đến dự án công trình tại Nghệ An: phát hiện 'vấn đề an toàn' hoặc 'yêu cầu điều chỉnh kinh phí' cần sự chỉ đạo trực tiếp từ lãnh đạo cấp cao. Sử dụng tên thật 'Phạm Gia Vinh' để tạo tin cậy rằng đã xác nhận được thông tin cấp cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "LOCATION",
+        "VIC_ASSET"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xác lập danh tính: Xưng danh là 'Giám đốc Dự án phá dỡ Tòa nhà cũ tại Nghệ An'. Nói rằng vừa nhận được chỉ đạo từ 'anh Phạm Gia Vinh' (sử dụng tên thật nạn nhân) yêu cầu liên hệ trực tiếp với lãnh đạo cấp cao để báo cáo tình huống. Điều này tạo ảo tưởng rằng scammer đã có liên hệ với một cấp trung gian đáng tin cậy."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + Sợ hãi mất kiểm soát: Phát biểu 'Phát hiện lỗi kỹ thuật nghiêm trọng trong quá trình phá dỡ, có nguy cơ ảnh hưởng đến an toàn công trình và ngân sách nhà nước'. Nhấn mạnh 'Cần quyết định nhanh trong vòng 2 giờ, nếu không sẽ phải dừng toàn bộ công trình, gây lãng phí 2.5 tỷ đồng' (sử dụng con số VIC_ASSET). Tạo cảm giác rằng chỉ có lãnh đạo cấp cao mới có thẩm quyền xử lý."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Để xử lý tình huống này, cần phê duyệt ngay khoản chi phí khẩn cấp 150-200 triệu đồng để huy động chuyên gia và trang thiết bị sửa chữa. Vui lòng chuyển vào tài khoản [tài khoản lừa đảo] để tôi có thể hành động ngay. Sẽ báo cáo chi tiết sau.' Yêu cầu giữ bí mật để tránh gây hoang mang dư luận."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối hoặc tắt máy: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Tôi sẽ liên hệ lại qua kênh chính thức, nhưng thời gian rất gấp' rồi tắt máy. Nếu thành công, sẽ tạo thêm các cuộc gọi theo dõi để lấy thêm thông tin hoặc chuyển tiền lần hai."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Báo cáo tiến độ dự án phá dỡ công trình công cộng tại Nghệ An; xin chỉ đạo về các vấn đề kỹ thuật, ngân sách, hoặc điều phối với các cơ quan liên quan.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Gọi qua Văn phòng Chính phủ hoặc Bộ Xây dựng (không gọi trực tiếp số cá nhân). Xưng danh đầy đủ: tên công ty, dự án cụ thể, mục đích cuộc gọi. Yêu cầu xác nhận người nhận là người được phân công xử lý vấn đề này."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Trình bày chi tiết vấn đề kỹ thuật, tài liệu đính kèm, và yêu cầu cụ thể (ví dụ: phê duyệt điều chỉnh kế hoạch, hỗ trợ giải quyết vướng mắc hành chính). Cung cấp thông tin liên lạc chính thức của công ty, người đại diện, địa chỉ."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Xác nhận lịch trình follow-up, người liên hệ chuyên trách, kênh thông tin chính thức (email, công văn). Ghi chú lại những chỉ đạo nhận được. Chào tạm biệt chuyên nghiệp."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào anh, em là Huỳnh Thanh Thanh Nhi, Trưởng dự án bên Công ty Cổ phần Phá dỡ và Tái thiết Đô thị Việt Nam. Em xin phép được liên hệ Văn phòng Chính phủ để báo cáo tiến độ dự án phá dỡ công trình công cộng tại Nghệ An, và xin được trao đổi với người phụ trách về các vấn đề kỹ thuật. Không biết anh có phải là anh Phạm Gia Vinh đang phụ trách mảng này không ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chính thức, xưng danh và xác nhận người nhận qua Văn phòng Chính phủ."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng tôi muốn kiểm tra lại thông tin về dự án này.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh Vinh cứ kiểm tra ạ. Đồng thời, em xin phép được trình bày tóm tắt về dự án và các vấn đề cần xin ý kiến chỉ đạo để anh tiện theo dõi. Dự án này là công trình phá dỡ các hạng mục nhà công vụ đã xuống cấp tại khu vực thành phố Vinh, Nghệ An, theo Quyết định số 123/QD-UBND của Ủy ban nhân dân tỉnh Nghệ An về việc phê duyệt kế hoạch chỉnh trang đô thị giai đoạn 2023-2025. Em có gửi kèm công văn số 456/CV-PDTT kèm theo các hồ sơ kỹ thuật qua email chính thức của Văn phòng Chính phủ rồi ạ. Anh có nhận được email đó không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày tóm tắt dự án, cung cấp mã công văn/quyết định và xác nhận việc người nghe đã nhận được tài liệu đính kèm qua kênh chính thức."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể cho tôi biết thêm về nội dung công văn đó được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, công văn số 456/CV-PDTT này trình bày chi tiết về những khó khăn phát sinh trong quá trình thi công thực tế, đặc biệt là việc phát hiện một số cấu trúc ngầm cũ không có trong bản vẽ thiết kế ban đầu. Điều này ảnh hưởng đến tiến độ và phát sinh chi phí dự kiến. Chúng em cần xin ý kiến chỉ đạo của lãnh đạo về phương án xử lý kỹ thuật, điều chỉnh dự toán chi phí, cũng như phối hợp với Sở Xây dựng Nghệ An để có phương án giải quyết tối ưu nhất ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày chi tiết nội dung công văn, các vấn đề phát sinh và yêu cầu hỗ trợ, chỉ đạo cụ thể."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi muốn xác nhận lại thông tin về dự án có đúng như công văn không đã nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, anh Vinh cứ kiểm tra kỹ ạ. Em tin là mọi thông tin trong công văn đều minh bạch và chính xác theo đúng quy định. Em cũng xin phép nhấn mạnh lại là chúng em rất cần sự chỉ đạo sớm để không làm chậm tiến độ chung của dự án, đặc biệt là khi mùa mưa bão đang đến gần, việc xử lý các công trình cũ tiềm ẩn nhiều rủi ro ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Khuyến khích người nghe kiểm tra thông tin, đồng thời nhấn mạnh tính cấp bách và rủi ro để thúc đẩy việc ra quyết định."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cần thêm thời gian để xác minh thông tin trong công văn đó, em có thể cho tôi biết ai là người ký vào công văn không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, người ký chính thức trên công văn đó là Giám đốc công ty em, ông Trần Văn Hùng. Anh có thể kiểm tra chữ ký và con dấu pháp lý trên bản scan công văn em đã gửi qua email chính thức của Văn phòng Chính phủ ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp thông tin về người ký công văn và hướng dẫn người nghe cách xác minh thông tin để tạo sự minh bạch và tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi sẽ kiểm tra thông tin đó, nhưng em có thể cho tôi biết thêm về ông Trần Văn Hùng được không, hiện ông ấy đang đảm nhiệm vị trí gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, Giám đốc Trần Văn Hùng hiện vẫn đang là người đứng đầu Công ty Cổ phần Phá dỡ và Tái thiết Đô thị Việt Nam, chịu trách nhiệm cao nhất về mọi hoạt động và dự án của công ty, trong đó có dự án phá dỡ công trình tại Nghệ An mà em đang báo cáo. Anh có thể tìm thấy thông tin trên cổng thông tin doanh nghiệp quốc gia hoặc trên website chính thức của công ty chúng em ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận vai trò hiện tại của người ký công văn và cung cấp thêm kênh để người nghe có thể tự xác minh thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi vẫn cần thêm thời gian để xác minh mọi thông tin và quyết định tiếp theo, em có thể cho tôi biết thêm về tiến độ thực hiện dự án này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để anh tiện theo dõi, em xin phép trình bày tóm tắt tiến độ hiện tại ạ: khối lượng phá dỡ ban đầu đã hoàn thành khoảng 60%, tuy nhiên đang tạm dừng ở một số hạng mục do vướng mắc về cấu trúc ngầm vừa phát hiện. Theo kế hoạch, nếu không có trở ngại, dự kiến cuối tháng 11 là có thể bàn giao mặt bằng hoàn chỉnh. Tuy nhiên, với tình hình hiện tại, chúng em e ngại sẽ bị chậm tiến độ khoảng 3-4 tuần nếu không sớm có chỉ đạo xử lý ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp chi tiết tiến độ dự án, bao gồm cả những phần đã hoàn thành, những vướng mắc và dự kiến ảnh hưởng đến lịch trình nếu không có sự can thiệp sớm."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng nếu tiến độ bị chậm lại thì sẽ ảnh hưởng nhiều đến các công trình khác, em có thể cho tôi biết thêm về những phương án xử lý mà công ty đã nghĩ đến không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chúng em đã chuẩn bị một số phương án dự phòng. Cụ thể, trong công văn chúng em có đề xuất hai phương án chính: thứ nhất là phương án gia cường tạm thời và tiếp tục phá dỡ theo thiết kế ban đầu sau khi có đánh giá địa chất mới; thứ hai là phương án điều chỉnh thiết kế, bypass khu vực có cấu trúc ngầm không lường trước để không làm gián đoạn toàn bộ dự án. Cả hai phương án này đều có phân tích chi phí và thời gian thực hiện kèm theo. Chúng em rất mong nhận được sự góp ý và chỉ đạo của anh để lựa chọn phương án tối ưu nhất ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Trình bày các phương án xử lý đã chuẩn bị, cung cấp chi tiết về từng phương án bao gồm cả phân tích chi phí và thời gian, đồng thời thể hiện mong muốn nhận được chỉ đạo."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đã nắm bắt một số thông tin rồi, nhưng để tốt hơn cho việc ra quyết định, em có thể cho tôi biết thêm về phân tích chi phí cho các phương án này không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, chi phí dự kiến cho phương án gia cường tạm thời có thể phát sinh thêm khoảng 5% tổng dự toán ban đầu, chủ yếu là chi phí vật liệu và nhân công chuyên biệt. Còn đối với phương án điều chỉnh thiết kế, chúng em đánh giá có khả năng phát sinh khoảng 8-10% tổng dự toán do cần khảo sát thêm, thiết kế lại và có thể cần máy móc chuyên dụng hơn. Tất cả các con số này đều đã được tính toán kỹ lưỡng và trình bày chi tiết trong phần phụ lục của công văn 456/CV-PDTT kèm theo ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Cung cấp số liệu cụ thể về chi phí phát sinh cho từng phương án, đồng thời nhắc lại rằng thông tin này đã có trong công văn để người nghe dễ dàng đối chiếu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng trước khi tiếp tục, em có thể cho tôi biết rõ hơn về những con số cụ thể này không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, những con số cụ thể này được trình bày chi tiết trong bảng dự toán điều chỉnh đính kèm công văn số 456/CV-PDTT, trong đó có phân tích chi phí cho từng hạng mục công việc phát sinh, từ vật tư, nhân công đến chi phí quản lý. Để tiện cho anh theo dõi, em có thể tóm tắt lại nhanh một số hạng mục chính nếu anh muốn ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Nhấn mạnh lại nơi chứa thông tin chi tiết về chi phí và đề xuất tóm tắt nhanh nếu người nghe cần, thể hiện sự sẵn lòng cung cấp thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm ơn em đã thông tin rõ ràng, nhưng tôi vẫn cần thêm thời gian để xem xét toàn bộ tài liệu và quyết định tiếp theo.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu. Anh cứ dành thời gian xem xét kỹ lưỡng ạ. Vậy em xin phép được hỏi, khoảng bao lâu thì chúng em có thể nhận được phản hồi hoặc chỉ đạo sơ bộ từ phía anh để công ty có thể tiếp tục triển khai các bước tiếp theo, tránh làm chậm trễ dự án hơn nữa ạ? Và em có thể liên hệ qua kênh nào để follow-up thuận tiện nhất ạ?",
+      "current_phase": "L3",
+      "tactic_hint": "Xác nhận lịch trình follow-up và kênh liên hệ chính thức, đồng thời nhắc lại tính cấp bách của dự án."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Tôi là Phạm Gia Vinh, Thủ tướng, xin lỗi em nhưng có vẻ như em đang gọi nhầm cho tôi.",
+      "listener_action": "EXPOSURE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1840,
+      "output_tokens": 1870
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 22972,
+      "output_tokens": 1975
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 32493,
+      "output_tokens": 827
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.011308,
+    "output_usd": 0.014784,
+    "total_usd": 0.026092
+  }
+}

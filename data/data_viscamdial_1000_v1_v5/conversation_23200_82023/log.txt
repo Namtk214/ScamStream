@@ -1,0 +1,32 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_bac7273136]
+  Caller thật: Giáo viên trung cấp (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Nhân viên kiểm tra chất lượng sản phẩm công nghiệp / Kỹ sư kiểm định pin @ Trung tâm Kiểm định Chất lượng Sản phẩm Công nghiệp Vĩnh Long
+  Listener: Thợ lắp ráp pin (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: LEGIT | Path: LEGIT
+  Context: Giáo viên trung cấp có thể làm việc tại các trường dạy nghề hoặc cơ sở đào tạo công nghiệp. Trong vai trò kiểm định, họ có lý do tự nhiên để liên hệ với thợ lắp ráp pin nhằm xác minh tiêu chuẩn an toàn hoặc theo dõi chất lượng sản phẩm trong chuỗi cung ứng địa phương.
+  Pretext: Trung tâm kiểm định chất lượng liên hệ để xác nhận thông tin nhân công tham gia lắp ráp lô pin xuất xứ địa phương, nhằm cấp chứng chỉ an toàn hoặc cập nhật hồ sơ công nhân cho cơ sở dữ liệu quốc gia.
+  Listener traits: ['ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Trương Khánh Lan, tôi là Phạm Quang Hải từ Trung tâm Kiểm định Chất lượng Sản phẩm Công nghiệp Vĩnh Long. Chúng tôi đang cập nhật hồ sơ nhân công tham gia dây chuyền lắp ráp pin tháng 11 tại địa phương. Chị có thể xác nhận một vài thông tin cơ bản không ạ?
+      → phase: L1 | tactic: Xác nhận đúng người và giới thiệu mục đích cuộc gọi ban đầu, không tạo áp lực.
+T02 [LISTENER] Dạ, em nghe anh nói rồi, anh cần xác nhận thông tin gì ạ?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Chúng tôi chỉ cần xác nhận: chị Trương Khánh Lan tham gia lắp ráp pin từ ngày nào, thuộc bộ phận nào, và có tham gia khóa đào tạo an toàn điện tử không? Những thông tin này chỉ để lưu trong hồ sơ của Trung tâm và không liên quan đến vấn đề lương thưởng hay kỷ luật của chị đâu ạ.
+      → phase: L2 | tactic: Yêu cầu thông tin cụ thể liên quan đến công việc, đồng thời trấn an người nghe về mục đích sử dụng thông tin.
+T04 [LISTENER] Dạ, em lắp ráp pin từ tháng 5 năm ngoái, chưa tham gia khóa đào tạo an toàn điện tử ạ.
+      → action: PARTIAL_COMPLIANCE | suspicion: 0.00 | disclosed: ['VIC_FULLNAME']
+
+T05 [CALLER] Cảm ơn chị Trương Khánh Lan đã cung cấp thông tin. Vậy chúng tôi sẽ ghi nhận chị tham gia từ tháng 5 năm ngoái và chưa tham gia khóa đào tạo an toàn điện tử. Chúng tôi sẽ gửi thư xác nhận về địa chỉ Huyện 8, Vĩnh Long trong vòng 3 ngày làm việc. Nếu chị có bất kỳ câu hỏi gì, vui lòng gọi lại số 0292-XXXXXX để được giải đáp. Chào chị.
+      → phase: L3 | tactic: Xác nhận thông tin đã nhận, thông báo hành động tiếp theo và hướng dẫn liên hệ nếu có thắc mắc, kết thúc cuộc gọi một cách tự nhiên.
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: CALLER_END  |  5 turns | suspicion=0.00
+TOKEN: in=8563 | out=2348
+COST : $0.012988
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v5\conversation_23200_82023\conv_bac7273136.json  [CALLER_END]

@@ -1,0 +1,54 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_c564a290c9]
+  Caller thật: Nhà thiết kế trang phục/thời trang, phụ kiện (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Giám đốc Bộ phận Hợp tác B2B - Công ty Trang phục & Phụ kiện Du lịch @ Vietour Fashion & Accessories Co., Ltd.
+  Listener: Nhân viên và tư vấn viên du lịch (Nhóm 7: Dịch vụ, bán hàng, CSKH & gig)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Nhà thiết kế trang phục/phụ kiện du lịch thường cần liên hệ với các công ty du lịch để cung cấp trang phục đồng phục, phụ kiện branding cho tour guides, hoặc tổ chức các sự kiện du lịch. Nhân viên tư vấn du lịch là người quyết định hoặc có ảnh hưởng lớn trong việc chọn lựa nhà cung cấp này.
+  Pretext: Gọi để thảo luận về hợp đồng cung cấp trang phục đồng phục cho đội tour guides của công ty du lịch nạn nhân, kèm theo yêu cầu thanh toán đặt cọc hoặc hóa đơn khẩn cấp. Scammer sẽ sử dụng tên thật của nạn nhân (Lý Thu Giang) và số CMND để tạo vẻ đã xác minh thông tin qua hệ thống.
+  Listener traits: ['ham lợi dễ bị bait']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Lý Thu Giang, tôi là Vũ Bảo Hương từ Vietour Fashion. Hệ thống của chúng tôi vừa cập nhật thông tin công ty chị với số CMND 056189290744, tôi muốn xác nhận lại số điện thoại liên hệ là 0917871009, đúng không ạ?
+      → phase: S1 | tactic: Tạo trust bằng cách sử dụng thông tin cá nhân và tổ chức xác minh thông tin.
+T02 [LISTENER] Em nghe chị nói rồi, nhưng em muốn kiểm tra lại thông tin trước khi xác nhận ạ.
+      → action: REFUSAL | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Vâng, chị cứ kiểm tra lại ạ. Vì chúng tôi có chương trình khuyến mãi đặc biệt cho trang phục tour guide chất lượng cao, giảm 40% nếu công ty chị ký hợp đồng trong tuần này. Đây là cơ hội tốt để nâng cao nhận diện thương hiệu và tiết kiệm chi phí đấy ạ.
+      → phase: S2 | tactic: Bắt đầu chuyển sang Phase S2: Khai thác tâm lý khẩn cấp và lợi ích bằng cách giới thiệu chương trình khuyến mãi và lợi ích rõ ràng để khơi gợi sự quan tâm và tạo cảm giác FOMO, đồng thời cho nạn nhân thời gian kiểm tra.
+T04 [LISTENER] Wow, giảm 40% nghe hấp dẫn quá chị ạ! Nhưng em vẫn chưa rõ về điều kiện ký hợp đồng thì có gì đặc biệt không ạ?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T05 [CALLER] Điều kiện rất đơn giản, chỉ cần công ty chị đồng ý đặt cọc 15% tổng giá trị hợp đồng để chúng tôi tiến hành sản xuất và giữ chỗ ưu đãi. Với nhu cầu khoảng 50-100 bộ đồng phục mỗi năm của một công ty du lịch như chị, đây sẽ là một khoản đầu tư rất hiệu quả.
+      → phase: S3 | tactic: Chuyển sang Phase S3: Yêu cầu hành động thanh toán. Nêu rõ điều kiện đặt cọc để nhận ưu đãi, đồng thời nhấn mạnh lợi ích và tính hợp lý của số tiền.
+T06 [LISTENER] Dạ, em thấy khoản đầu tư này có vẻ hợp lý, nhưng em cần thêm thông tin để quyết định ạ.
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T07 [CALLER] Vâng, tôi hiểu. Để chị có đủ thông tin quyết định, tôi sẽ gửi ngay hóa đơn tạm tính và thông tin tài khoản công ty Vietour Fashion qua email cho chị. Chị có thể chuyển khoản đặt cọc 15% (khoảng 45-60 triệu đồng) vào tài khoản công ty trong vòng 2 giờ tới để giữ ưu đãi giảm 40% không ạ?
+      → phase: S3 | tactic: Tiếp tục thúc đẩy hành động thanh toán bằng cách cung cấp thông tin cần thiết và giới hạn thời gian để tạo áp lực và khẩn cấp, đồng thời gợi ý số tiền đặt cọc cụ thể.
+T08 [LISTENER] Chị ơi, em cần thêm thời gian để xem xét trước khi chuyển khoản đặt cọc, chị có thể gửi thông tin qua email cho em trước được không ạ?
+      → action: REFUSAL | suspicion: 0.20 | disclosed: []
+
+T09 [CALLER] Dạ, tôi sẽ gửi ngay thông tin chi tiết qua email cho chị. Tuy nhiên, chương trình khuyến mãi giảm 40% của chúng tôi chỉ áp dụng trong ngày hôm nay thôi ạ. Chị cố gắng sắp xếp để không bỏ lỡ cơ hội này nhé.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách tiếp tục tạo áp lực thời gian (tạo cảm giác FOMO), cho phép nạn nhân kiểm tra thông tin nhưng vẫn thúc giục hành động sớm.
+T10 [LISTENER] Em hiểu nhưng mà chị có thể cho em biết thêm về công ty của chị và những sản phẩm đang cung cấp không ạ?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T11 [CALLER] Vâng, Vietour Fashion là một trong những công ty hàng đầu về trang phục và phụ kiện du lịch tại Việt Nam, đã có hơn 10 năm kinh nghiệm. Chúng tôi chuyên cung cấp đồng phục chất lượng cao cho các công ty lữ hành, resort và khách sạn. Chị có thể tham khảo thêm trên website của chúng tôi là vietourfashion.vn, nhưng ưu đãi này chỉ dành cho khách hàng liên hệ trực tiếp qua số hotline ạ.
+      → phase: S4 | tactic: Giới thiệu thêm về công ty để tăng độ tin cậy và trấn an nạn nhân, đồng thời nhấn mạnh rằng ưu đãi chỉ dành cho những người liên hệ trực tiếp để duy trì sự khẩn cấp và không cho nạn nhân có thời gian tìm hiểu quá kỹ về các điều khoản online.
+T12 [LISTENER] Dạ, em cảm ơn chị đã chia sẻ, nhưng em vẫn cảm thấy cần thêm thời gian để suy nghĩ kỹ hơn trước khi quyết định đầu tư ạ.
+      → action: REFUSAL | suspicion: 0.20 | disclosed: []
+
+T13 [CALLER] Tôi hiểu. Đó là một quyết định quan trọng mà chị cần cân nhắc kỹ. Nhưng để không bỏ lỡ chương trình khuyến mãi giảm 40%, tôi đề nghị chị cố gắng xem xét và phản hồi trong hôm nay. Nếu cần, tôi có thể gửi thêm một số mẫu thiết kế tiêu biểu qua email để chị tham khảo thêm.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách tiếp tục tạo áp lực thời gian (FOMO) nhưng vẫn cho nạn nhân không gian tự quyết định. Đồng thời đề xuất thêm thông tin (mẫu thiết kế) để giữ liên lạc và tạo thêm độ tin cậy.
+T14 [LISTENER] Dạ, chị có thể gửi mẫu thiết kế qua email cho em để em tham khảo, nhưng em vẫn cần suy nghĩ thêm ạ.
+      → action: REFUSAL | suspicion: 0.20 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  14 turns | suspicion=0.20
+TOKEN: in=29701 | out=3381
+COST : $0.018155
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_21631_42210\conv_c564a290c9.json  [SCAM_REFUSE]

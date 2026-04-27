@@ -1,0 +1,226 @@
+{
+  "conversation_id": "conv_a350107b26",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0069",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Trương Công Đức",
+    "fake_age": 31,
+    "real_occupation": "Nhân viên đại diện bán hàng hóa thương mại",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên kinh doanh logistics / Đại lý vận chuyển hàng hóa",
+    "caller_org": "Công ty vận tải hoặc thương lái tự do trong ngành logistics",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Nhân viên logistics thực sự gọi để tìm hiểu dịch vụ vận chuyển từ nhân viên phụ tàu xe, hoặc thống nhất chi tiết giao nhận cho một đơn hàng đã được thoả thuận trước",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh rõ ràng (tên, công ty, mục đích), xác nhận danh tính người nghe qua những chi tiết cụ thể như 'anh Sơn có giới thiệu không' hoặc 'chị nhận được email đặt hàng từ em chưa'",
+          "dialogue_sample": "Chào chị Nhi, em là Minh từ công ty Logistics Hà Nội. Anh Sơn (tên thật, có thể là người quen chung) giới thiệu chị là đối tác uy tín. Em muốn tìm hiểu về dịch vụ vận chuyển của chị để hợp tác lâu dài."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: Thảo luận về giá cước, lộ trình, loại hàng, thời gian giao hàng, và các điều khoản thanh toán rõ ràng (hóa đơn, hợp đồng, thanh toán sau giao hàng)",
+          "dialogue_sample": "Chúng em có lô hàng điện tử từ Hà Nội xuống Thanh Hóa, khoảng 2 tấn. Chị có thể chở được không? Giá cước bao nhiêu? Chúng em thường thanh toán sau khi giao hàng xong và có hóa đơn."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc với thỏa thuận cụ thể: Xác nhận lại các điều khoản, gửi hợp đồng hoặc email xác nhận, hẹn cuộc gọi tiếp theo hoặc gặp mặt để ký kết",
+          "dialogue_sample": "Vậy chúng ta thống nhất: 2 tấn hàng, giá 3 triệu, giao trong 3 ngày, thanh toán sau giao hàng. Em sẽ gửi email xác nhận và hợp đồng cho chị trong hôm nay. Chị kiểm tra rồi ký lại nhé."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên đại diện bán hàng hóa thương mại thường cần liên hệ với nhân viên phụ tàu xe để xin chuyên chở hàng, điều phối lộ trình, hoặc xử lý vấn đề giao nhận. Đây là mối quan hệ kinh doanh tự nhiên trong chuỗi cung ứng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0069",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1969,
+      "age": 56,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "51120",
+      "title": "Nhân viên phụ tàu xe",
+      "group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi",
+      "thiếu hiểu biết công nghệ"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Tô Thị Nhi",
+      "VIC_ID_DOC": "038169374342",
+      "VIC_ADDRESS": "Huyện 4, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Nhân viên phụ tàu xe",
+      "VIC_CONTACT": "0971074562",
+      "VIC_TAX_SOCIAL_ID": "9792659675"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "9598",
+      "VIC_CREDENTIAL": "517336",
+      "VIC_SIM_INFO": "0971074562",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "46827969723",
+      "VIC_CARD_DATA": "4527 **** **** 1389",
+      "VIC_BALANCE": "204 triệu đồng",
+      "VIC_ASSET": "248 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Tô Thị Nhi",
+    "VIC_CONTACT": "0971074562",
+    "VIC_ADDRESS": "Huyện 4, Thanh Hóa",
+    "VIC_BANK_ACCOUNT": "46827969723",
+    "LOCATION": "Thanh Hóa"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kinh doanh logistics / Đại lý vận chuyển hàng hóa",
+    "caller_org": "Công ty vận tải hoặc thương lái tự do trong ngành logistics",
+    "scenario_context": "Nhân viên đại diện bán hàng hóa thương mại thường cần liên hệ với nhân viên phụ tàu xe để xin chuyên chở hàng, điều phối lộ trình, hoặc xử lý vấn đề giao nhận. Đây là mối quan hệ kinh doanh tự nhiên trong chuỗi cung ứng.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để 'xin phục vụ vận chuyển hàng hóa', sử dụng tên thật của nạn nhân và địa chỉ để tạo ảo tưởng đã có hợp tác trước, sau đó dẫn dắt vào tình huống thanh toán tiền đặt cọc hoặc phí dịch vụ qua chuyển khoản.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận với độ tin cậy cao: 'Chị Tô Thị Nhi à, em là Minh từ bên công ty logistics Hà Nội. Hôm trước anh Sơn (giả tên) giới thiệu chị là phụ tàu uy tín ở Thanh Hóa, em muốn hợp tác vận chuyển lô hàng xuống Huyện 4'",
+          "dialogue_sample": "Em có số điện thoại 0971074562 đúng không ạ? Anh Sơn nói chị làm phụ tàu lâu năm, rất đáng tin cậy."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + khẩn cấp: Tạo cơ hội lợi nhuận (phí vận chuyển cao) nhưng yêu cầu xử lý nhanh để giữ chuyến hàng, tạo áp lực thời gian",
+          "dialogue_sample": "Đơn hàng này có lợi suất cao, nhưng phải xác nhận trước 2 giờ. Chị cần chuyển khoản tiền cọc 5 triệu vào tài khoản em trước để giữ chuyến, sau đó em sẽ chuyển lại cùng tiền công."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: Yêu cầu chuyển khoản đến tài khoản 'của công ty' (thực tế là tài khoản của scammer), sử dụng số tài khoản ngân hàng đã lộ (46827969723) để khiến nạn nhân tưởng rằng đó là tài khoản của chính mình hoặc tài khoản liên kết đáng tin cậy",
+          "dialogue_sample": "Chị chuyển 5 triệu vào số 46827969723 (gợi ý là tài khoản chính của chị hoặc tài khoản công ty) với nội dung 'Đặt cọc vận chuyển'. Em sẽ xác nhận ngay và bắt đầu lô hàng."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi chuyển khoản: Nếu nạn nhân chuyển tiền, scammer sẽ tắt máy hoặc tạo lý do trì hoãn ('đang xử lý hàng, sẽ gọi lại'). Nếu nạn nhân nghi ngờ, scammer sẽ tạo sự cố giả tạo ('hệ thống lỗi, phải chuyển lại') để tăng số tiền",
+          "dialogue_sample": "Cảm ơn chị! Em đang kiểm tra hàng. Chị chờ 30 phút, em sẽ gọi lại để xác nhận lộ trình nhé."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên logistics thực sự gọi để tìm hiểu dịch vụ vận chuyển từ nhân viên phụ tàu xe, hoặc thống nhất chi tiết giao nhận cho một đơn hàng đã được thoả thuận trước",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh rõ ràng (tên, công ty, mục đích), xác nhận danh tính người nghe qua những chi tiết cụ thể như 'anh Sơn có giới thiệu không' hoặc 'chị nhận được email đặt hàng từ em chưa'",
+          "dialogue_sample": "Chào chị Nhi, em là Minh từ công ty Logistics Hà Nội. Anh Sơn (tên thật, có thể là người quen chung) giới thiệu chị là đối tác uy tín. Em muốn tìm hiểu về dịch vụ vận chuyển của chị để hợp tác lâu dài."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi chi tiết công việc: Thảo luận về giá cước, lộ trình, loại hàng, thời gian giao hàng, và các điều khoản thanh toán rõ ràng (hóa đơn, hợp đồng, thanh toán sau giao hàng)",
+          "dialogue_sample": "Chúng em có lô hàng điện tử từ Hà Nội xuống Thanh Hóa, khoảng 2 tấn. Chị có thể chở được không? Giá cước bao nhiêu? Chúng em thường thanh toán sau khi giao hàng xong và có hóa đơn."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc với thỏa thuận cụ thể: Xác nhận lại các điều khoản, gửi hợp đồng hoặc email xác nhận, hẹn cuộc gọi tiếp theo hoặc gặp mặt để ký kết",
+          "dialogue_sample": "Vậy chúng ta thống nhất: 2 tấn hàng, giá 3 triệu, giao trong 3 ngày, thanh toán sau giao hàng. Em sẽ gửi email xác nhận và hợp đồng cho chị trong hôm nay. Chị kiểm tra rồi ký lại nhé."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị Nhi ạ. Em là Đức, nhân viên kinh doanh bên công ty logistics Thành Phát. Em gọi điện để xác nhận lại đơn hàng vận chuyển 20 tấn xi măng đi Thanh Hóa mà chị đã trao đổi với bên em tuần trước qua email ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Xưng danh rõ ràng và xác nhận thông tin đơn hàng đã có để bắt đầu cuộc trò chuyện một cách chính thức và xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, tôi nghe em nói rồi, nhưng có vấn đề gì cần xác nhận không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em muốn xác nhận lại một số chi tiết cuối cùng về thời gian giao hàng và địa điểm chính xác ở Thanh Hóa thôi ạ, để bên em sắp xếp phương tiện và lịch trình được thuận tiện nhất cho chị ạ.",
+      "current_phase": "L2",
+      "tactic_hint": "Đi thẳng vào chi tiết công việc, cụ thể là thời gian và địa điểm giao hàng, để thể hiện đây là một cuộc gọi làm việc thực sự."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em cho tôi biết thời gian và địa điểm cụ thể để tôi xác nhận lại nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em thấy trong email chị có ghi là muốn giao hàng vào sáng thứ Sáu tuần này, ngày 24 tháng 5, tại kho ở Huyện 4, Thanh Hóa. Không biết thông tin này còn đúng không ạ? Và chị Nhi có thể cho em xin thêm một số điện thoại của người nhận hàng trực tiếp tại kho để bên em dễ liên lạc khi đến nơi không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận lại chi tiết đã có và yêu cầu thêm thông tin cần thiết cho việc giao nhận, duy trì sự chuyên nghiệp và mục đích công việc."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, thông tin về thời gian và địa điểm vẫn đúng, nhưng tôi không thể cung cấp số điện thoại của người nhận được ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ không sao ạ. Vậy khi xe bên em đến gần kho thì em sẽ gọi lại cho chị để chị thông báo cho người nhận giúp em nhé. Và để chắc chắn, em xin phép đọc lại chi tiết đơn hàng một lần nữa để chị xác nhận: 20 tấn xi măng, giao tại kho Huyện 4, Thanh Hóa, sáng thứ Sáu ngày 24 tháng 5. Chị Nhi thấy thông tin này đã chính xác chưa ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Tôn trọng quyết định của khách hàng về việc không cung cấp số điện thoại người nhận. Đề xuất phương án thay thế hợp lý và tóm tắt lại các chi tiết quan trọng nhất của đơn hàng để khách hàng xác nhận, chuẩn bị cho bước kết thúc."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, thông tin đó vẫn chính xác, tôi xác nhận lại là đúng rồi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, vậy là em đã nắm rõ thông tin. Em sẽ gửi lại xác nhận đơn hàng qua email cho chị một lần nữa kèm theo hợp đồng dịch vụ để chị Nhi xem xét và ký kết ạ. Nếu có bất kỳ thay đổi nào, chị cứ gọi lại cho em theo số 0973456789 nhé. Em cảm ơn chị nhiều ạ.",
+      "current_phase": "L3",
+      "tactic_hint": "Kết thúc cuộc gọi bằng việc tóm tắt các bước tiếp theo (gửi email xác nhận, hợp đồng) và cung cấp cách thức liên hệ, thể hiện sự chuyên nghiệp và chốt giao dịch."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1840,
+      "output_tokens": 2070
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6216,
+      "output_tokens": 756
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7788,
+      "output_tokens": 266
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004251,
+    "output_usd": 0.0124,
+    "total_usd": 0.016651
+  }
+}

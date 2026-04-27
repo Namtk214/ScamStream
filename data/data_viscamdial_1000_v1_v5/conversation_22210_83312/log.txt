@@ -1,0 +1,69 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_19b7af661f]
+  Caller thật: Y tá/Điều dưỡng (cao cấp) (Nhóm 4: Y tế, giáo dục & khoa học)
+  Caller đóng vai: Trưởng phòng Y tế & An toàn Lao động (Health & Safety Manager) @ Công ty Quản lý Vận tải Điện Xanh Việt Nam / Bộ phận Y tế Doanh nghiệp
+  Listener: Lái xe điện (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Công ty vận tải điện tử định kỳ liên hệ với các tài xế hợp tác để thực hiện kiểm tra y tế định kỳ, bảo hiểm lao động, và xác minh thông tin cá nhân theo quy định pháp luật. Trưởng phòng Y tế có lý do chính đáng để gọi điện cho lái xe điện để xác minh dữ liệu hoặc thông báo về chương trình khám sức khỏe.
+  Pretext: Xác minh thông tin bảo hiểm lao động và yêu cầu cập nhật tài khoản ngân hàng để nhận hỗ trợ y tế hoặc bảo hiểm tai nạn lao động từ công ty
+  Listener traits: ['lo lắng cho con cái', 'nghi ngờ nhưng lịch sự']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Sơn ạ. Em là Tô Như Hương, Trưởng phòng Y tế và An toàn Lao động của công ty. Em gọi điện để xác minh lại thông tin bảo hiểm lao động định kỳ hàng quý của anh Huỳnh Văn Sơn, số CMND là 074064756822. Không biết anh đã nhận được thông báo về việc này từ công ty mình chưa ạ?
+      → phase: S1 | tactic: Giới thiệu bản thân và mục đích cuộc gọi, sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy và khơi gợi sự chú ý.
+T02 [LISTENER] Em ơi, tôi chưa nhận được thông báo gì cả, em có thể giải thích rõ hơn được không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, em hiểu rồi ạ. Vậy thì em xin phép giải thích lại để anh nắm rõ hơn nhé. Hiện tại hệ thống công ty đang rà soát định kỳ toàn bộ hồ sơ bảo hiểm lao động của nhân viên để đảm bảo quyền lợi cho mọi người, đặc biệt là các khoản hỗ trợ y tế hoặc bảo hiểm tai nạn lao động. Vì có một số vấn đề phát sinh nhỏ trong hồ sơ của anh nên em mới trực tiếp liên hệ để xác minh lại đó ạ.
+      → phase: S2 | tactic: Làm rõ mục đích cuộc gọi, tạo cảm giác có vấn đề cần giải quyết, gợi mở về quyền lợi để chuyển sang khâu tạo khẩn cấp và lợi ích
+T04 [LISTENER] Em nói có vấn đề phát sinh trong hồ sơ của tôi, vậy tôi cần làm gì để giải quyết? Em có thể cho tôi biết rõ hơn không?
+      → action: CONTINUE | suspicion: 0.20 | disclosed: []
+
+T05 [CALLER] Dạ vâng, anh cứ yên tâm ạ. Công ty mình luôn muốn đảm bảo quyền lợi tốt nhất cho nhân viên mà. Hiện tại, theo thông tin mà em đang có trên hệ thống, anh có một khoản hỗ trợ y tế khẩn cấp, hoặc có thể là bảo hiểm tai nạn lao động đang chờ được chi trả, khoảng 2 đến 3 triệu đồng đó anh. Tuy nhiên, vì một lỗi hệ thống nhỏ nên thông tin tài khoản ngân hàng của anh chưa được cập nhật chính xác. Để đảm bảo khoản tiền này được chuyển đúng người, đúng tài khoản của anh, công ty cần xác minh lại thông tin tài khoản ngân hàng một lần nữa. Nếu mình không xác minh trong vòng 24 giờ tới, số tiền này sẽ bị hoàn lại công ty đó anh.
+      → phase: S2 | tactic: Tạo khẩn cấp bằng cách đặt ra thời hạn và nhấn mạnh lợi ích tài chính (2-3 triệu đồng) có thể bị mất nếu không hành động nhanh chóng. Đồng thời, gợi mở việc cần xác minh tài khoản ngân hàng.
+T06 [LISTENER] Em ơi, tôi nghe em nói có khoản hỗ trợ, nhưng tôi cũng không hiểu rõ lắm về việc xác minh tài khoản ngân hàng. Em có thể hướng dẫn tôi cụ thể được không?
+      → action: CONTINUE | suspicion: 0.30 | disclosed: []
+
+T07 [CALLER] Dạ được chứ anh. Để em hướng dẫn anh cụ thể nha. Bây giờ anh chỉ cần cung cấp giúp em số tài khoản ngân hàng mà anh muốn nhận hỗ trợ, cùng với tên chủ tài khoản đó ạ. Em sẽ nhập thông tin này vào hệ thống để cập nhật và xác minh. Sau khi xác minh thành công, khoản tiền 2-3 triệu đồng đó sẽ được chuyển về tài khoản của anh trong vòng 24 đến 48 giờ làm việc. Anh cứ yên tâm nhé.
+      → phase: S3 | tactic: Yêu cầu thông tin cụ thể (số tài khoản ngân hàng, tên chủ tài khoản) để nạn nhân hành động, đồng thời tái khẳng định lợi ích (nhận tiền hỗ trợ) và làm dịu đi sự nghi ngờ.
+T08 [LISTENER] Em ơi, tôi vẫn chưa hoàn toàn yên tâm, em có thể cho tôi biết tên công ty cũng như cách thức xác minh sẽ diễn ra như thế nào không?
+      → action: CONTINUE | suspicion: 0.40 | disclosed: []
+
+T09 [CALLER] Dạ, em là Tô Như Hương, Trưởng phòng Y tế và An toàn Lao động của Công ty Quản lý Vận tải Điện Xanh Việt Nam ạ. Về cách thức xác minh thì đơn giản thôi anh. Sau khi anh cung cấp số tài khoản và họ tên chủ tài khoản, bên em sẽ nhập vào hệ thống. Hệ thống sẽ gửi một mã xác thực về số điện thoại chính chủ của anh, anh chỉ cần đọc mã OTP đó cho em để hoàn tất việc xác minh bảo mật thôi ạ. Như vậy là đảm bảo an toàn tuyệt đối cho khoản tiền của anh rồi.
+      → phase: S3 | tactic: Trấn an người nghe bằng cách nhắc lại danh tính tổ chức, giải thích quy trình xác minh một cách đơn giản, đồng thời tạo tiền đề để yêu cầu mã OTP sau này dưới vỏ bọc 'xác minh bảo mật' và 'đảm bảo an toàn tuyệt đối'.
+T10 [LISTENER] Em ơi, tôi vẫn chưa hiểu rõ lắm về mã OTP là gì, em có thể giải thích thêm cho tôi được không?
+      → action: CONTINUE | suspicion: 0.50 | disclosed: []
+
+T11 [CALLER] Dạ vâng, mã OTP là mật khẩu dùng một lần đó anh. Hệ thống sẽ gửi một dãy số ngẫu nhiên về số điện thoại của anh để xác nhận chính chủ, đảm bảo chỉ có anh mới có quyền truy cập và xác nhận thông tin tài khoản của mình. Anh yên tâm là mã này chỉ có giá trị trong một thời gian ngắn và sau khi em xác minh xong là nó sẽ hết hiệu lực ngay ạ.
+      → phase: S3 | tactic: Giải thích mã OTP là gì một cách đơn giản và trấn an người nghe về tính bảo mật, hợp lý hóa việc xin OTP là để 'xác nhận chính chủ' và 'đảm bảo an toàn tài khoản'.
+T12 [LISTENER] Em ơi, tôi vẫn cảm thấy hơi lăn tăn về việc này, em có thể cho tôi biết thêm thông tin nào khác để tôi yên tâm hơn không?
+      → action: CONTINUE | suspicion: 0.70 | disclosed: []
+
+T13 [CALLER] Dạ, anh Sơn cứ yên tâm ạ. Công ty em là Công ty Quản lý Vận tải Điện Xanh Việt Nam, là một trong những đơn vị hàng đầu trong lĩnh vực vận tải, và em, Tô Như Hương, Trưởng phòng Y tế và An toàn Lao động, đang trực tiếp phụ trách mảng phúc lợi cho nhân viên. Việc xác minh thông tin bảo hiểm định kỳ và chi trả các khoản hỗ trợ là quy trình bắt buộc của công ty để đảm bảo quyền lợi tốt nhất cho anh và toàn thể nhân viên. Em nghĩ, nếu anh không tin tưởng vào công ty, thì em cũng không thể giúp anh nhận được khoản hỗ trợ này đâu ạ. Anh cứ nghĩ xem, nếu em muốn lừa đảo, tại sao em lại biết đầy đủ thông tin cá nhân của anh, từ họ tên đầy đủ là Huỳnh Văn Sơn, số CMND 074064756822, cho đến việc anh đang ở Bình Dương và thậm chí cả thông tin về tài khoản ngân hàng của anh đang có khoảng 75 triệu đồng trong đó nữa ạ? Tất cả những thông tin này chỉ có hệ thống nội bộ của công ty mới có thể nắm được thôi ạ.
+      → phase: S3 | tactic: Trấn an người nghe bằng cách tái khẳng định danh tính và chức vụ, nhấn mạnh quy trình nội bộ, đồng thời sử dụng các thông tin đã biết về nạn nhân (họ tên, CMND, địa chỉ, số dư tài khoản) để củng cố niềm tin và tạo áp lực tâm lý, ngụ ý rằng chỉ người trong hệ thống mới biết những thông tin đó.
+T15 [LISTENER] Em ơi, tôi muốn xác minh thêm thông tin trước khi cung cấp gì cả, em có thể cho tôi số điện thoại đường dây nóng chính thức của công ty không?
+      → action: CONTINUE | suspicion: 0.90 | disclosed: []
+
+T16 [CALLER] Dạ anh Sơn cứ yên tâm ạ. Anh có thể tìm hiểu thông tin về công ty em trên mạng hoặc liên hệ tổng đài chung của công ty để xác minh lại. Tuy nhiên, em xin nhắc lại là việc xác minh thông tin tài khoản ngân hàng để nhận khoản hỗ trợ này cần được thực hiện trong vòng 24 giờ. Nếu quá thời hạn này, hệ thống sẽ tự động hủy bỏ khoản hỗ trợ và anh sẽ mất cơ hội nhận được số tiền này đó ạ. Anh xem xét giúp em nhé.
+      → phase: S3 | tactic: Trấn an người nghe bằng cách gợi ý xác minh độc lập nhưng đồng thời tạo áp lực thời gian và nhấn mạnh hậu quả mất lợi ích để thúc đẩy hành động.
+T17 [LISTENER] Em ơi, tôi vẫn chưa hoàn toàn yên tâm về việc này, em có chắc chắn đây là quy trình của công ty không?
+      → action: CONTINUE | suspicion: 1.00 | disclosed: []
+
+T18 [CALLER] Dạ vâng, em hiểu là anh đang băn khoăn. Tuy nhiên, nếu không phải là quy trình của công ty, thì làm sao em có thể biết rõ đến từng chi tiết như vậy về anh Sơn, về số CMND 074064756822, và cả khoản tiền 75 triệu trong tài khoản của anh đang ở Bình Dương nữa chứ ạ? Những thông tin này đều là thông tin nội bộ và bảo mật của công ty đó anh. Em chỉ đang cố gắng giúp anh nhận được quyền lợi chính đáng thôi ạ.
+      → phase: S3 | tactic: Trấn an người nghe, tái khẳng định tính xác thực bằng cách lặp lại các thông tin cá nhân đã biết và nhấn mạnh chúng là thông tin nội bộ, đồng thời tạo cảm giác đang giúp đỡ nạn nhân.
+T19 [LISTENER] Em ơi, tôi cảm thấy không thoải mái với việc này, tôi cần thời gian để suy nghĩ thêm.
+      → action: REFUSAL | suspicion: 2.00 | disclosed: []
+
+T20 [CALLER] Dạ, em hiểu là anh đang cần thời gian để suy nghĩ. Tuy nhiên, như em đã trao đổi ngay từ đầu, đây là một khoản hỗ trợ khẩn cấp và công ty có quy định riêng về thời hạn xử lý. Nếu anh không xác nhận trong vòng 24h thì hệ thống sẽ tự động hủy bỏ khoản hỗ trợ này, và em cũng đành chịu thôi ạ. Rất tiếc là anh sẽ bỏ lỡ cơ hội nhận được số tiền này từ công ty đó ạ.
+      → phase: S4 | tactic: Xử lý từ chối bằng cách nhắc lại các cam kết trước đó (thời hạn 24h) và hậu quả của việc từ chối (mất cơ hội nhận tiền), đồng thời thể hiện sự 'tiếc nuối' để tạo cảm giác nạn nhân đang bỏ lỡ lợi ích.
+T21 [LISTENER] Em ơi, tôi thật sự không thoải mái với việc này, tôi xin phép cúp máy ở đây.
+      → action: INTERRUPTED_VICTIM_HANGUP | suspicion: 4.00 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  21 turns | suspicion=4.00
+TOKEN: in=56157 | out=5050
+COST : $0.027452
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_22210_83312\conv_19b7af661f.json  [SCAM_REFUSE]

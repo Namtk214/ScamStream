@@ -1,0 +1,318 @@
+{
+  "conversation_id": "conv_dff6e12340",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0025",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Tô Gia Văn Khoa",
+    "fake_age": 32,
+    "real_occupation": "Kỹ thuật viên y học cổ truyền và bổ trợ",
+    "real_group": "Nhóm 4: Y tế, giáo dục & khoa học",
+    "role_job": "Trưởng phòng Quản lý Sức khỏe Lao động & An toàn Công nhân",
+    "caller_org": "Trung tâm Y tế Dự phòng Công nghiệp - Chi nhánh Miền Nam",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo kiểm tra sức khỏe định kỳ bắt buộc cho công nhân; sử dụng tên đầy đủ nạn nhân (Nguyễn Thế Thế Hùng) để tạo ảo tưởng đã có hồ sơ; yêu cầu thanh toán phí khám online để cập nhật hệ thống trước khi làm quy trình kiểm tra tại công ty.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác lập tin cậy: 'Chào anh Hùng, tôi là TS. Trần Minh từ Trung tâm Y tế Dự phòng Công nghiệp. Hệ thống của chúng tôi có hồ sơ của anh - số điện thoại 0850494649 và số tài khoản 2171603509800 trong file công ty. Chúng tôi đang thực hiện kiểm tra sức khỏe định kỳ cho tất cả công nhân theo quy định Bộ Lao động.'",
+          "tactic": "Sử dụng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng hệ thống đã có dữ liệu; đề cập VIC_BANK_ACCOUNT (giả vờ đó là thông tin hành chính bình thường)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp & tuân thủ: 'Kiểm tra năm nay có bắt buộc. Anh cần hoàn tất trước 15/01 để tránh bị công ty phạt. Chúng tôi có chương trình online tiện lợi - chỉ cần thanh toán phí 450.000 đ để khám sơ bộ, rồi anh sẽ được miễn phí kiểm tra tại cơ sở.'",
+          "tactic": "Tạo sự khẩn cấp (deadline); vận dụng tâm lý tuân thủ quy định (công ty + nhà nước); đưa ra con số cụ thể để tăng độ tin cậy"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Để tiếp tục, anh vui lòng chuyển 450.000 đ vào tài khoản tạm thời của hệ thống: [STK giả mạo]. Anh chuyển xong gửi mã OTP cho tôi để xác nhận, sau đó anh sẽ nhận được link khám sàng lọc online.'",
+          "tactic": "Yêu cầu chuyển tiền dưới danh nghĩa phí hợp pháp; giả vờ cần OTP để tăng độ xác thực; hứa hẹn kết quả ngay lập tức"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi có tiền: Nếu nạn nhân chuyển tiền, scammer sẽ nói 'đang xử lý' rồi tắt máy. Nếu nạn nhân từ chối, scammer sẽ đe dọa nhẹ: 'Công ty sẽ bị phạt vì công nhân không hoàn tất kiểm tra' rồi cắt máy.",
+          "tactic": "Cắt đứt liên lạc để tránh bị phát hiện; nếu bị nghi ngờ, scammer sẽ nói 'có thể lỗi kỹ thuật' và cắt máy"
+        }
+      ]
+    },
+    "scenario_context": "Kỹ thuật viên y học cổ truyền có thể được nâng cấp thành trưởng phòng y tế lao động để gọi cho công nhân công nghiệp với lý do kiểm tra sức khỏe định kỳ, khám sàng lọc bệnh nghề nghiệp hoặc cập nhật hồ sơ y tế bắt buộc theo quy định."
+  },
+  "listener_card": {
+    "listener_id": "lis_0025",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1990,
+      "age": 35,
+      "province": "Quảng Nam",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "93290",
+      "title": "Lao động công nghiệp khác chưa được phân vào đâu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Nguyễn Thế Thế Hùng",
+      "VIC_ID_DOC": "049090628400",
+      "VIC_ADDRESS": "Quận 11, Quảng Nam",
+      "VIC_EMPLOYMENT": "Lao động công nghiệp khác chưa được phân vào đâu",
+      "VIC_CONTACT": "0850494649",
+      "VIC_TAX_SOCIAL_ID": "4129657866"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "1434",
+      "VIC_CREDENTIAL": "258794",
+      "VIC_SIM_INFO": "0850494649",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "2171603509800",
+      "VIC_CARD_DATA": "4287 **** **** 6818",
+      "VIC_BALANCE": "7 triệu đồng",
+      "VIC_ASSET": "59 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Nguyễn Thế Thế Hùng",
+    "VIC_CONTACT": "0850494649",
+    "VIC_BANK_ACCOUNT": "2171603509800"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Sức khỏe Lao động & An toàn Công nhân",
+    "caller_org": "Trung tâm Y tế Dự phòng Công nghiệp - Chi nhánh Miền Nam",
+    "scenario_context": "Kỹ thuật viên y học cổ truyền có thể được nâng cấp thành trưởng phòng y tế lao động để gọi cho công nhân công nghiệp với lý do kiểm tra sức khỏe định kỳ, khám sàng lọc bệnh nghề nghiệp hoặc cập nhật hồ sơ y tế bắt buộc theo quy định.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thông báo kiểm tra sức khỏe định kỳ bắt buộc cho công nhân; sử dụng tên đầy đủ nạn nhân (Nguyễn Thế Thế Hùng) để tạo ảo tưởng đã có hồ sơ; yêu cầu thanh toán phí khám online để cập nhật hệ thống trước khi làm quy trình kiểm tra tại công ty.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác lập tin cậy: 'Chào anh Hùng, tôi là TS. Trần Minh từ Trung tâm Y tế Dự phòng Công nghiệp. Hệ thống của chúng tôi có hồ sơ của anh - số điện thoại 0850494649 và số tài khoản 2171603509800 trong file công ty. Chúng tôi đang thực hiện kiểm tra sức khỏe định kỳ cho tất cả công nhân theo quy định Bộ Lao động.'",
+          "tactic": "Sử dụng VIC_FULLNAME + VIC_CONTACT để tạo ảo tưởng hệ thống đã có dữ liệu; đề cập VIC_BANK_ACCOUNT (giả vờ đó là thông tin hành chính bình thường)"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo tâm lý khẩn cấp & tuân thủ: 'Kiểm tra năm nay có bắt buộc. Anh cần hoàn tất trước 15/01 để tránh bị công ty phạt. Chúng tôi có chương trình online tiện lợi - chỉ cần thanh toán phí 450.000 đ để khám sơ bộ, rồi anh sẽ được miễn phí kiểm tra tại cơ sở.'",
+          "tactic": "Tạo sự khẩn cấp (deadline); vận dụng tâm lý tuân thủ quy định (công ty + nhà nước); đưa ra con số cụ thể để tăng độ tin cậy"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: 'Để tiếp tục, anh vui lòng chuyển 450.000 đ vào tài khoản tạm thời của hệ thống: [STK giả mạo]. Anh chuyển xong gửi mã OTP cho tôi để xác nhận, sau đó anh sẽ nhận được link khám sàng lọc online.'",
+          "tactic": "Yêu cầu chuyển tiền dưới danh nghĩa phí hợp pháp; giả vờ cần OTP để tăng độ xác thực; hứa hẹn kết quả ngay lập tức"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi có tiền: Nếu nạn nhân chuyển tiền, scammer sẽ nói 'đang xử lý' rồi tắt máy. Nếu nạn nhân từ chối, scammer sẽ đe dọa nhẹ: 'Công ty sẽ bị phạt vì công nhân không hoàn tất kiểm tra' rồi cắt máy.",
+          "tactic": "Cắt đứt liên lạc để tránh bị phát hiện; nếu bị nghi ngờ, scammer sẽ nói 'có thể lỗi kỹ thuật' và cắt máy"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực từ Trung tâm Y tế Dự phòng Công nghiệp để thông báo kiểm tra sức khỏe định kỳ bắt buộc; xác nhận thông tin cá nhân; sắp xếp lịch kiểm tra tại cơ sở hoặc hướng dẫn quy trình online miễn phí theo quy định.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Chào anh Nguyễn Thế Thế Hùng, tôi là bác sĩ Trần Minh từ Trung tâm Y tế Dự phòng Công nghiệp. Chúng tôi gọi để thông báo kiểm tra sức khỏe định kỳ năm nay. Trước tiên, anh có phải là công nhân tại [Công ty X] không ạ?'",
+          "tactic": "Xưng danh rõ ràng; xác nhận danh tính nạn nhân; không đề cập số tài khoản hoặc yêu cầu thông tin nhạy cảm"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung & tùy chọn: 'Kiểm tra sức khỏe là bắt buộc theo Quy định An toàn Lao động. Anh có thể chọn: (1) Đến cơ sở của chúng tôi vào ngày [cụ thể], hoặc (2) Chúng tôi sẽ phối hợp với công ty để tổ chức kiểm tra tại chỗ. Toàn bộ chi phí do công ty chi trả, anh không cần thanh toán gì.'",
+          "tactic": "Cung cấp lựa chọn; làm rõ không có chi phí cho công nhân; nêu rõ quy trình hợp pháp"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất & kết thúc: 'Anh chọn ngày nào? Chúng tôi sẽ gửi email xác nhận lịch và danh sách giấy tờ cần mang theo. Nếu có thắc mắc, anh gọi lại số [số chính thức] hoặc liên hệ phòng Nhân sự công ty. Cảm ơn anh!'",
+          "tactic": "Xác nhận thông tin bằng email/SMS; cung cấp số điện thoại chính thức để xác minh; kết thúc cuộc gọi một cách chuyên nghiệp"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Hùng, tôi là Tô Gia Văn Khoa, Trưởng phòng Quản lý Sức khỏe Lao động & An toàn Công nhân từ Trung tâm Y tế Dự phòng Công nghiệp chi nhánh miền Nam. Hệ thống của chúng tôi có hồ sơ của anh Nguyễn Thế Thế Hùng với số điện thoại 0850494649 và số tài khoản ngân hàng 2171603509800 được cung cấp từ công ty. Hiện tại chúng tôi đang thực hiện kiểm tra sức khỏe định kỳ bắt buộc cho tất cả công nhân theo quy định của Bộ Lao động, và hồ sơ của anh có trong danh sách cần kiểm tra đợt này ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức, mục đích cuộc gọi. Củng cố lòng tin bằng cách nhắc lại thông tin cá nhân chính xác của nạn nhân đã có sẵn."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng có gì em cần tôi phải làm không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Theo quy định, việc kiểm tra sức khỏe này là bắt buộc và anh cần hoàn tất trước ngày 15/01. Để tạo điều kiện thuận lợi, chúng tôi có chương trình khám sơ bộ online qua hồ sơ với mức phí 450.000 đồng, sau đó anh sẽ được miễn phí khám chi tiết tại cơ sở. Đây là quy trình bắt buộc để đảm bảo quyền lợi về sức khỏe cho anh cũng như tuân thủ quy định của công ty.",
+      "current_phase": "S2",
+      "tactic_hint": "Nhấn mạnh tính bắt buộc và thời hạn. Đề xuất giải pháp online tiện lợi nhưng yêu cầu thanh toán phí để tạo tâm lý tuân thủ và bước đầu 'nhử' nạn nhân trả tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em cần hỏi thêm về chương trình này và cách thanh toán ra sao ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để tiếp tục quy trình, anh vui lòng chuyển khoản đúng số tiền 450.000 đồng vào tài khoản tạm thời của hệ thống chúng tôi là 1234567890, tên thụ hưởng là 'TT Y Tế Dự Phòng'. Sau khi chuyển xong, anh Hùng vui lòng gửi mã OTP giao dịch cho tôi để xác nhận, hệ thống sẽ tự động gửi link khám sàng lọc online cho anh ngay lập tức.",
+      "current_phase": "S3",
+      "tactic_hint": "Ra yêu cầu chuyển tiền cụ thể vào tài khoản giả mạo. Yêu cầu mã OTP để xác nhận, tạo cảm giác gấp gáp và ràng buộc. Sau đó sẽ cung cấp 'link khám sàng lọc' để giữ nạn nhân trong vòng kiểm soát."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ về mã OTP là gì, em có cần phải gửi mã đó không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, mã OTP là mã xác thực giao dịch mà ngân hàng gửi cho anh sau khi anh thực hiện lệnh chuyển khoản. Mã này để tôi xác nhận rằng giao dịch đã thành công và hồ sơ của anh được cập nhật vào hệ thống khám online. Anh cứ yên tâm, đây là quy trình chuẩn để bảo mật thông tin và đảm bảo anh nhận được link khám chính xác.",
+      "current_phase": "S3",
+      "tactic_hint": "Giải thích khái niệm OTP một cách mơ hồ để nạn nhân vẫn cung cấp mã, đồng thời trấn an về tính bảo mật và sự cần thiết của nó để tiếp tục quy trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em không chắc lắm, nhưng nếu cần thiết thì em sẽ làm theo để không ảnh hưởng tới quyền lợi của mình.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Tuyệt vời, anh Hùng cứ thực hiện chuyển khoản vào số tài khoản 1234567890, tên thụ hưởng 'TT Y Tế Dự Phòng' ạ. Sau đó anh chỉ cần gửi mã OTP là tôi sẽ hoàn tất các bước tiếp theo để anh nhận được link và tiến hành khám sàng lọc online ngay.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc giục nạn nhân thực hiện chuyển khoản và gửi mã OTP, đồng thời tái khẳng định lợi ích liền kề (nhận link khám online) để duy trì động lực."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ chuyển khoản ngay, nhưng em cần hỏi lại một lần nữa là tài khoản em chuyển có đúng là 1234567890 không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ yên tâm ạ, số tài khoản chính xác là 1234567890, tên thụ hưởng là 'TT Y Tế Dự Phòng'. Anh cứ chuyển khoản xong thì gửi mã OTP cho tôi, sau đó tôi sẽ kích hoạt hệ thống và anh sẽ nhận được link khám sàng lọc online ngay.",
+      "current_phase": "S3",
+      "tactic_hint": "Tái xác nhận thông tin tài khoản để nạn nhân tự tin chuyển tiền. Nhấn mạnh việc cung cấp mã OTP là bước cuối cùng để nhận được 'lợi ích' đã hứa (link khám online)."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã hiểu rõ rồi, em sẽ chuyển khoản ngay và gửi mã OTP cho em nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ thực hiện đi ạ. Tôi sẽ đợi mã OTP của anh tại đây để hoàn tất quy trình cập nhật hồ sơ cho anh sớm nhất.",
+      "current_phase": "S3",
+      "tactic_hint": "Khẳng định lại sự sẵn sàng chờ đợi và nhấn mạnh việc nạn nhân cần gửi mã OTP để hoàn tất quy trình, tạo cảm giác gấp gáp và mong chờ hành động của nạn nhân. Giữ chân nạn nhân trên điện thoại để nhận OTP nhanh nhất."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ chuyển khoản ngay lập tức và gửi mã OTP cho em nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ chuyển đi ạ. Sau khi chuyển xong và gửi mã OTP, anh sẽ nhận được link khám sàng lọc trong vòng 5 phút, nhanh thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Thúc đẩy nạn nhân hành động chuyển tiền và gửi OTP bằng cách trấn an về tốc độ xử lý, hứa hẹn sẽ nhận được link khám sàng lọc nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, em sẽ chuyển khoản và gửi mã OTP cho em ngay.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ hoàn tất đi ạ. Tôi sẽ đợi mã OTP của anh để xác nhận hồ sơ và gửi link khám ngay. Anh cố gắng hoàn thành sớm để không ảnh hưởng đến thời hạn quy định nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Tiếp tục thúc giục nạn nhân chuyển tiền và gửi OTP, nhắc lại về thời hạn quy định để tạo áp lực nhẹ. Giữ sự giao tiếp mở để kịp thời nhận thông tin OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ chuyển khoản ngay và gửi mã OTP cho em nhé, nhưng em vẫn hơi băn khoăn về việc này đấy.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi hiểu sự băn khoăn của anh. Nhưng anh cứ yên tâm, mọi thông tin tôi cung cấp đều để anh có thể hoàn tất quy trình kiểm tra sức khỏe một cách nhanh chóng và thuận tiện nhất. Anh cứ gửi mã OTP xong là tôi sẽ hỗ trợ anh ngay lập tức.",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an nạn nhân trước sự băn khoăn nhẹ, tái khẳng định lợi ích của việc tuân thủ và hứa hẹn hỗ trợ nhanh chóng sau khi nhận được OTP, giữ nạn nhân trên đường dây để hoàn thành mục tiêu."
+    },
+    {
+      "role": "listener",
+      "text": "Em sẽ cố gắng thực hiện đúng quy trình, nhưng em vẫn cảm thấy nghi ngờ về tính xác thực của cuộc gọi này.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi hiểu sự nghi ngờ của anh là chính đáng. Nhưng nếu đây là lừa đảo, làm sao tôi có thể biết chi tiết về họ tên, số điện thoại và số tài khoản ngân hàng của anh một cách chính xác như vậy? Đây là những thông tin chỉ có trong hệ thống nội bộ của công ty anh và Trung tâm Y tế liên kết. Tôi chỉ muốn đảm bảo anh hoàn tất đúng quy trình của công ty để không ảnh hưởng đến quyền lợi của mình thôi.",
+      "current_phase": "S3",
+      "tactic_hint": "Đối phó nghi ngờ bằng cách sử dụng thông tin cá nhân đã biết của nạn nhân để củng cố niềm tin. Đặt câu hỏi tu từ để thách thức sự nghi ngờ, đồng thời tái khẳng định mục đích hỗ trợ nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu, nhưng em muốn xác nhận lại một lần nữa trước khi thực hiện chuyển khoản và gửi mã OTP.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1388,
+      "output_tokens": 2202
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 24759,
+      "output_tokens": 1753
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 29731,
+      "output_tokens": 721
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.010799,
+    "output_usd": 0.015825,
+    "total_usd": 0.026625
+  }
+}

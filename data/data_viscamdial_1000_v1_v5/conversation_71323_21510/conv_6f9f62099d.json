@@ -1,0 +1,230 @@
+{
+  "conversation_id": "conv_6f9f62099d",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0041",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Cao Hồng Yến",
+    "fake_age": 26,
+    "real_occupation": "Thợ vẽ bảng hiệu",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kiểm tra an toàn điện - Công ty cấp điện địa phương",
+    "caller_org": "Chi nhánh Công ty Điện lực Quận 1 - Phòng An toàn Điện",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo phát hiện hành vi dùng điện bất thường trên hóa đơn của chủ hộ Phạm Thanh Thùy Liên (sử dụng VIC_FULLNAME để tạo tin cậy), cần xác thực danh tính qua mã OTP để tránh bị khóa tài khoản hoặc phạt tiền.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trần Minh - Phòng An toàn Điện Công ty Điện lực Quận 1', dùng VIC_FULLNAME 'Phạm Thanh Thùy Liên' + VIC_ID_DOC '040169987558' để xác nhận 'chủ hộ' và tạo ấn tượng họ đã kiểm tra hồ sơ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Chị Liên ơi, hệ thống của chúng tôi phát hiện tài khoản của chị có dấu hiệu bị xâm nhập. Nếu không xác thực trong 15 phút, hóa đơn sẽ bị phong tỏa và phạt tiền hành chính.' Tạo sự vội vàng + sợ hãi mất tiền."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chúng tôi sẽ gửi mã OTP về số điện thoại đã đăng ký (VIC_CONTACT: 0820391067). Chị đọc mã đó cho tôi để xác thực ngay.' Sau khi nhận OTP, yêu cầu chị cấp mã này hoặc 'đợi tôi gửi link xác thực'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý: Nếu nạn nhân cấp OTP → scammer dùng để truy cập tài khoản ngân hàng liên kết. Nếu nạn nhân từ chối hoặc hỏi chi tiết → scammer tăng cường áp lực ('Chị có chắc không? Tài khoản sẽ bị khóa vĩnh viễn') hoặc cắt máy để tránh bị đặt câu hỏi."
+        }
+      ]
+    },
+    "scenario_context": "Thợ vẽ bảng hiệu làm việc trên cao, thường xuyên cần điện để chiếu sáng khu vực công trình. Kỹ sư điện là người có thẩm quyền quyết định về hệ thống điện gia đình/công sở, và công ty điện lực cần liên hệ họ khi phát hiện bất thường hoặc yêu cầu kiểm tra."
+  },
+  "listener_card": {
+    "listener_id": "lis_0041",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1969,
+      "age": 56,
+      "province": "Nghệ An",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "21510",
+      "title": "Kỹ sư điện",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nghi ngờ nhưng lịch sự",
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Thanh Thùy Liên",
+      "VIC_ID_DOC": "040169987558",
+      "VIC_ADDRESS": "Huyện 10, Nghệ An",
+      "VIC_EMPLOYMENT": "Kỹ sư điện",
+      "VIC_CONTACT": "0820391067",
+      "VIC_TAX_SOCIAL_ID": "9548549828"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "083323",
+      "VIC_CREDENTIAL": "3819",
+      "VIC_SIM_INFO": "0820391067",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "73540073271",
+      "VIC_CARD_DATA": "4539 **** **** 9750",
+      "VIC_BALANCE": "815 triệu đồng",
+      "VIC_ASSET": "3.7 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Nghệ An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Thanh Thùy Liên",
+    "VIC_CONTACT": "0820391067",
+    "VIC_ID_DOC": "040169987558"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kiểm tra an toàn điện - Công ty cấp điện địa phương",
+    "caller_org": "Chi nhánh Công ty Điện lực Quận 1 - Phòng An toàn Điện",
+    "scenario_context": "Thợ vẽ bảng hiệu làm việc trên cao, thường xuyên cần điện để chiếu sáng khu vực công trình. Kỹ sư điện là người có thẩm quyền quyết định về hệ thống điện gia đình/công sở, và công ty điện lực cần liên hệ họ khi phát hiện bất thường hoặc yêu cầu kiểm tra.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi thông báo phát hiện hành vi dùng điện bất thường trên hóa đơn của chủ hộ Phạm Thanh Thùy Liên (sử dụng VIC_FULLNAME để tạo tin cậy), cần xác thực danh tính qua mã OTP để tránh bị khóa tài khoản hoặc phạt tiền.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trần Minh - Phòng An toàn Điện Công ty Điện lực Quận 1', dùng VIC_FULLNAME 'Phạm Thanh Thùy Liên' + VIC_ID_DOC '040169987558' để xác nhận 'chủ hộ' và tạo ấn tượng họ đã kiểm tra hồ sơ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Chị Liên ơi, hệ thống của chúng tôi phát hiện tài khoản của chị có dấu hiệu bị xâm nhập. Nếu không xác thực trong 15 phút, hóa đơn sẽ bị phong tỏa và phạt tiền hành chính.' Tạo sự vội vàng + sợ hãi mất tiền."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Chúng tôi sẽ gửi mã OTP về số điện thoại đã đăng ký (VIC_CONTACT: 0820391067). Chị đọc mã đó cho tôi để xác thực ngay.' Sau khi nhận OTP, yêu cầu chị cấp mã này hoặc 'đợi tôi gửi link xác thực'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý: Nếu nạn nhân cấp OTP → scammer dùng để truy cập tài khoản ngân hàng liên kết. Nếu nạn nhân từ chối hoặc hỏi chi tiết → scammer tăng cường áp lực ('Chị có chắc không? Tài khoản sẽ bị khóa vĩnh viễn') hoặc cắt máy để tránh bị đặt câu hỏi."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty Điện lực gọi để thông báo kiểm tra định kỳ hệ thống điện, hoặc xác nhận thông tin cập nhật hóa đơn điện tử của chủ hộ.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng 'Đây là Công ty Điện lực Quận 1, tôi là nhân viên Trần Minh từ Phòng Chăm sóc Khách hàng', xác nhận đúng người qua VIC_FULLNAME và địa chỉ, không yêu cầu xác thực danh tính ngay."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thông báo mục đích cụ thể ('Kiểm tra định kỳ hệ thống điện khu vực' hoặc 'Xác nhận email để nhận hóa đơn điện tử'), cung cấp số điện thoại công ty chính thức để nạn nhân gọi lại xác minh nếu cần."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Thống nhất lịch kiểm tra hoặc xác nhận email, cung cấp mã tham chiếu yêu cầu, chào tạm biệt chuyên nghiệp. KHÔNG bao giờ yêu cầu OTP, mã PIN, hoặc thông tin tài khoản ngân hàng."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị ạ, em là Cao Hồng Yến bên Phòng An toàn Điện Công ty Điện lực Quận 1 đây ạ. Em gọi để xác nhận với chị Phạm Thanh Thùy Liên, chủ hộ có mã khách hàng và số căn cước công dân là 040169987558 đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, tổ chức và xác nhận danh tính nạn nhân bằng thông tin đã biết để tạo tin cậy."
+    },
+    {
+      "role": "listener",
+      "text": "Dạ, em nói đúng thông tin của tôi, nhưng tôi muốn biết thêm về lý do em gọi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn chị Liên đã xác nhận. Em gọi là vì hệ thống của chúng tôi vừa phát hiện hành vi sử dụng điện bất thường trên hóa đơn của chị, có dấu hiệu bị kẻ gian xâm nhập tài khoản hoặc gian lận điện. Nếu không xác thực ngay trong vòng 15 phút tới, hóa đơn của mình sẽ bị phong tỏa và phải chịu phạt hành chính đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Giải thích lý do cuộc gọi và tạo tình huống khẩn cấp, đe dọa phạt tiền để thúc đẩy hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Hơi lo lắng một chút, nhưng em có thể cho tôi biết cụ thể hơn về cách xác thực được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để xác thực nhanh chóng và đơn giản nhất, chúng tôi sẽ gửi một mã OTP về số điện thoại chị đã đăng ký là 0820391067. Chị vui lòng đọc mã OTP đó cho em để hệ thống ghi nhận xác thực và tránh trường hợp hóa đơn của mình bị khóa chị nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu cung cấp mã OTP với lý do xác thực khẩn cấp, nhắc lại hậu quả nếu không thực hiện."
+    },
+    {
+      "role": "listener",
+      "text": "Em không hiểu rõ mã OTP là gì, nhưng tôi cũng không muốn bị khóa hóa đơn đâu, em có thể hướng dẫn thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị yên tâm, mã OTP là một dãy số bảo mật mà ngân hàng hoặc công ty điện lực gửi cho mình để xác nhận các giao dịch quan trọng. Giờ em sẽ gửi mã đó về số điện thoại 0820391067 của chị, sau đó chị đọc lại mã đó cho em là được, rất nhanh thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự lo lắng của nạn nhân, giải thích đơn giản về OTP và tái khẳng định hành động cần làm để lấy mã, tạo cảm giác an toàn và dễ thực hiện."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói rồi, nhưng em có chắc chắn đây là cách xác thực đúng không ạ? Tôi vẫn thấy hơi nghi ngờ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu là chị hơi lo, nhưng đây là quy trình bắt buộc để bảo vệ quyền lợi của chị. Nếu chị không cung cấp mã OTP để xác thực, thì chúng tôi không thể can thiệp vào hệ thống được, và tài khoản điện của chị chắc chắn sẽ bị khóa vĩnh viễn đó ạ. Chị suy nghĩ kỹ giúp em nhé.",
+      "current_phase": "S4",
+      "tactic_hint": "Tăng áp lực bằng cách nhấn mạnh hậu quả nghiêm trọng nếu không hợp tác, biến sự nghi ngờ thành nguy cơ mất mát lớn, tạo cảm giác cấp bách để nạn nhân phải hành động."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi vẫn cảm thấy không thoải mái lắm với cách này, nhưng em có thể cam đoan rằng đây là phương pháp an toàn không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1780,
+      "output_tokens": 1515
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 7562,
+      "output_tokens": 729
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 10614,
+      "output_tokens": 363
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.004884,
+    "output_usd": 0.009615,
+    "total_usd": 0.0145
+  }
+}

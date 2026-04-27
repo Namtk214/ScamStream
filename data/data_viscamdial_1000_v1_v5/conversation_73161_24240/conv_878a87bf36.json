@@ -1,0 +1,273 @@
+{
+  "conversation_id": "conv_878a87bf36",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0014",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hồ Như Nhàn",
+    "fake_age": 42,
+    "real_occupation": "Thợ khắc thủy tinh/thợ khắc axit",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Giám đốc Dự án / Trưởng phòng Nhân sự — Công ty Tư vấn Đào tạo Doanh nghiệp",
+    "caller_org": "Công ty Cổ phần Tư vấn Nhân lực Việt (VHRC Solutions)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty đang tuyển dụng/nâng cấp nhân sự cho dự án mới, cần tư vấn viên đào tạo uy tín. Scammer sẽ gọi để 'xác nhận thông tin' và đề xuất hợp tác, sau đó tạo cấu trúc thanh toán giả mạo.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: Scammer xưng danh là Giám đốc Dự án từ VHRC Solutions, gọi cho 'anh Bùi Công Hùng' (dùng VIC_FULLNAME), nhắc lại số điện thoại (VIC_CONTACT) để xác nhận 'đây là thông tin từ hệ thống tuyên truyền của chúng tôi'. Nói rằng công ty đang tìm kiếm chuyên gia đào tạo uy tín cho dự án lớn."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý — Tạo cấu trúc khẩn cấp + ham lợi: Scammer tuyên bố dự án phải khởi động trong 48 giờ, bạch hợp đồng trị giá 300-500 triệu đồng, nhưng trước tiên cần 'ký quỹ chuyên nghiệp' (deposit) để xác nhận cam kết. Nhấn mạnh rằng đây là quy trình tiêu chuẩn của công ty lớn, giúp nạn nhân cảm thấy được 'chọn lựa' và 'đáng tin cậy'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động — Chuyển khoản giả mạo: Scammer yêu cầu nạn nhân chuyển 15-20 triệu đồng (10-15% của hợp đồng) vào tài khoản 'quỹ ký quỹ chuyên nghiệp' của công ty. Cung cấp số tài khoản ngân hàng giả mạo (hoặc tài khoản thực của người thứ ba). Nói rằng sau khi nhận tiền, sẽ ký hợp đồng chính thức và chuyển phần còn lại."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau chuyển khoản: Nếu nạn nhân chuyển tiền, scammer sẽ tắt máy hoặc nói 'đang xử lý' rồi mất liên lạc. Nếu nạn nhân từ chối, scammer sẽ áp lực bằng cách nói 'anh/chị sẽ mất cơ hội này' hoặc 'có nhiều ứng viên khác chờ sẵn', sau đó cắt máy nếu nạn nhân vẫn không chịu."
+        }
+      ]
+    },
+    "scenario_context": "Thợ khắc thủy tinh thường làm việc trong các xưởng sản xuất hoặc công ty sản xuất công nghệ cao, nơi cần đào tạo nhân viên kỹ thuật. Nhà chuyên môn đào tạo là người được các công ty tìm kiếm để thiết kế chương trình huấn luyện, nâng cao kỹ năng cho đội ngũ lao động tay nghề."
+  },
+  "listener_card": {
+    "listener_id": "lis_0014",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1976,
+      "age": 49,
+      "province": "Thanh Hóa",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "24240",
+      "title": "Nhà chuyên môn về đào tạo và phát triển nhân viên",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "ham lợi dễ bị bait",
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Công Hùng",
+      "VIC_ID_DOC": "038076009010",
+      "VIC_ADDRESS": "Huyện 9, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Nhà chuyên môn về đào tạo và phát triển nhân viên",
+      "VIC_CONTACT": "0794284427",
+      "VIC_TAX_SOCIAL_ID": "4156767063"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "088065",
+      "VIC_CREDENTIAL": "987867",
+      "VIC_SIM_INFO": "0794284427",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "7425358199",
+      "VIC_CARD_DATA": "4492 **** **** 6242",
+      "VIC_BALANCE": "165 triệu đồng",
+      "VIC_ASSET": "389 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Công Hùng",
+    "VIC_CONTACT": "0794284427",
+    "VIC_BALANCE": "165 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Giám đốc Dự án / Trưởng phòng Nhân sự — Công ty Tư vấn Đào tạo Doanh nghiệp",
+    "caller_org": "Công ty Cổ phần Tư vấn Nhân lực Việt (VHRC Solutions)",
+    "scenario_context": "Thợ khắc thủy tinh thường làm việc trong các xưởng sản xuất hoặc công ty sản xuất công nghệ cao, nơi cần đào tạo nhân viên kỹ thuật. Nhà chuyên môn đào tạo là người được các công ty tìm kiếm để thiết kế chương trình huấn luyện, nâng cao kỹ năng cho đội ngũ lao động tay nghề.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Công ty đang tuyển dụng/nâng cấp nhân sự cho dự án mới, cần tư vấn viên đào tạo uy tín. Scammer sẽ gọi để 'xác nhận thông tin' và đề xuất hợp tác, sau đó tạo cấu trúc thanh toán giả mạo.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xây dựng lòng tin: Scammer xưng danh là Giám đốc Dự án từ VHRC Solutions, gọi cho 'anh Bùi Công Hùng' (dùng VIC_FULLNAME), nhắc lại số điện thoại (VIC_CONTACT) để xác nhận 'đây là thông tin từ hệ thống tuyên truyền của chúng tôi'. Nói rằng công ty đang tìm kiếm chuyên gia đào tạo uy tín cho dự án lớn."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý — Tạo cấu trúc khẩn cấp + ham lợi: Scammer tuyên bố dự án phải khởi động trong 48 giờ, bạch hợp đồng trị giá 300-500 triệu đồng, nhưng trước tiên cần 'ký quỹ chuyên nghiệp' (deposit) để xác nhận cam kết. Nhấn mạnh rằng đây là quy trình tiêu chuẩn của công ty lớn, giúp nạn nhân cảm thấy được 'chọn lựa' và 'đáng tin cậy'."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động — Chuyển khoản giả mạo: Scammer yêu cầu nạn nhân chuyển 15-20 triệu đồng (10-15% của hợp đồng) vào tài khoản 'quỹ ký quỹ chuyên nghiệp' của công ty. Cung cấp số tài khoản ngân hàng giả mạo (hoặc tài khoản thực của người thứ ba). Nói rằng sau khi nhận tiền, sẽ ký hợp đồng chính thức và chuyển phần còn lại."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau chuyển khoản: Nếu nạn nhân chuyển tiền, scammer sẽ tắt máy hoặc nói 'đang xử lý' rồi mất liên lạc. Nếu nạn nhân từ chối, scammer sẽ áp lực bằng cách nói 'anh/chị sẽ mất cơ hội này' hoặc 'có nhiều ứng viên khác chờ sẵn', sau đó cắt máy nếu nạn nhân vẫn không chịu."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty sản xuất/xưởng khắc thủy tinh thực sự cần tuyên truyền chương trình đào tạo kỹ năng cho nhân viên, liên hệ trực tiếp với chuyên gia đào tạo để tư vấn, lên kế hoạch và ký hợp đồng dịch vụ hợp pháp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Người gọi xưng danh rõ ràng (tên + chức danh + công ty + số điện thoại chính thức), xác nhận rằng đây là số điện thoại công ty hoặc được giới thiệu từ nguồn uy tín. Hỏi xem có phải đang nói chuyện với anh/chị Bùi Công Hùng không, và xin phép thảo luận về dự án đào tạo."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Mô tả chi tiết nhu cầu đào tạo (số lượng nhân viên, lĩnh vực kỹ năng, thời gian, địa điểm), hỏi về kinh nghiệm của chuyên gia, đề xuất phương pháp và lịch trình. Thảo luận về giá cả, điều khoản thanh toán (thường là: 30% trước, 70% sau hoàn thành, hoặc theo milestone rõ ràng)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc chuyên nghiệp: Nếu đồng ý, gửi hợp đồng viết bằng văn bản (email), xác nhận thông tin công ty, tài khoản ngân hàng chính thức, người liên hệ. Nếu chưa sẵn sàng, hẹn cuộc gọi tiếp theo hoặc gửi tài liệu tham khảo. Tạm biệt lịch sự, để lại thông tin liên hệ chính thức."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Vâng, xin chào anh Bùi Công Hùng phải không ạ? Tôi là Hồ Như Nhàn, Giám đốc Dự án của VHRC Solutions. Tôi gọi để xác nhận lại số điện thoại 0794284427 này thuộc về anh, đúng chứ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, xưng danh, xác nhận thông tin nạn nhân để xây dựng lòng tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Bùi Công Hùng, nhưng tôi không chắc tại sao em cần xác nhận số điện thoại này ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, tôi xin lỗi nếu làm phiền anh đột ngột. VHRC Solutions chúng tôi hiện đang triển khai một dự án đào tạo nhân sự quy mô lớn trên toàn quốc, và thông tin của anh Bùi Công Hùng đã được hệ thống của chúng tôi đề xuất là một chuyên gia có kinh nghiệm trong lĩnh vực này. Tôi gọi để trao đổi rõ hơn về cơ hội hợp tác ạ.",
+      "current_phase": "S1",
+      "tactic_hint": "Giải thích lý do cuộc gọi, đề cao nạn nhân để xây dựng lòng tin và tạo hứng thú."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất muốn biết thêm về dự án này, liệu có cơ hội nào để tôi tham gia không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chắc chắn rồi anh. Chúng tôi đang tìm kiếm những chuyên gia như anh để tham gia vào dự án trọng điểm này. Dự kiến hợp đồng có giá trị từ 300 đến 500 triệu đồng, nhưng chúng tôi cần anh xác nhận cam kết tham gia dự án bằng một khoản ký quỹ chuyên nghiệp ban đầu. Đây là một bước cần thiết để đảm bảo sự nghiêm túc và chuyên nghiệp từ cả hai phía, thưa anh Bùi Công Hùng.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cấu trúc khẩn cấp và ham lợi bằng cách đưa ra giá trị hợp đồng lớn, đồng thời giới thiệu yêu cầu ký quỹ như một 'bước tiêu chuẩn' để chuyển sang S3."
+    },
+    {
+      "role": "listener",
+      "text": "300 đến 500 triệu đồng nghe có vẻ hấp dẫn, nhưng tôi chưa rõ về khoản ký quỹ này, em có thể giải thích thêm được không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Khoản ký quỹ này là để đảm bảo anh thực sự cam kết tham gia dự án, giúp công ty chúng tôi sàng lọc các ứng viên tiềm năng và tránh các trường hợp không nghiêm túc. Đây là quy trình chuẩn của các dự án lớn, một hình thức bảo chứng cho sự hợp tác lâu dài. Sau khi hoàn tất ký quỹ, chúng tôi sẽ tiến hành ký hợp đồng chính thức và giải ngân phần lớn giá trị hợp đồng.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu nghi ngờ về khoản ký quỹ, nhấn mạnh đây là 'quy trình chuẩn' và liên kết với việc ký hợp đồng chính thức để củng cố tin tưởng."
+    },
+    {
+      "role": "listener",
+      "text": "Nghe có vẻ hợp lý, nhưng em cần thêm thông tin cụ thể hơn về quy trình và cách thức ký quỹ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh Hùng. Về quy trình, chúng tôi đang cần chốt danh sách nhân sự trong vòng 48 giờ tới để kịp tiến độ dự án. Để anh chính thức tham gia, anh sẽ chuyển khoản 15 triệu đồng vào tài khoản quỹ ký quỹ của công ty. Khoản này sẽ được hoàn lại hoặc khấu trừ vào thù lao khi dự án bắt đầu. Tôi sẽ cung cấp thông tin tài khoản ngay bây giờ để anh tiện thực hiện.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo áp lực thời gian (48h), đưa ra số tiền cụ thể (15 triệu) và chuyển sang hành động yêu cầu chuyển khoản, trấn an rằng tiền sẽ được hoàn lại hoặc khấu trừ."
+    },
+    {
+      "role": "listener",
+      "text": "Em cần xác nhận tài khoản ngân hàng của công ty trước khi thực hiện chuyển khoản, em có thể nhận được thông tin đó không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, anh cứ yên tâm. Tài khoản ký quỹ này là của Công ty Cổ phần Tư vấn Nhân lực Việt, số tài khoản 1903827654321, tại Ngân hàng TMCP Kỹ Thương Việt Nam (Techcombank). Anh có thể ghi rõ nội dung chuyển khoản là 'Ký quỹ hợp tác dự án Bùi Công Hùng' để chúng tôi tiện theo dõi và hoàn tất hồ sơ cho anh ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp thông tin tài khoản ngân hàng giả mạo và hướng dẫn chi tiết nội dung chuyển khoản để nạn nhân dễ dàng thực hiện giao dịch."
+    },
+    {
+      "role": "listener",
+      "text": "Cảm ơn em đã cung cấp thông tin, nhưng tôi muốn tìm hiểu thêm về độ tin cậy của công ty trước khi chuyển khoản ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng cứ yên tâm về độ tin cậy của VHRC Solutions. Chúng tôi là một trong những công ty tư vấn nhân lực hàng đầu tại Việt Nam với hơn 15 năm kinh nghiệm. Anh có thể dễ dàng tìm thấy thông tin về chúng tôi trên các phương tiện truyền thông chính thống. Tuy nhiên, như tôi đã nói, dự án này đang cần gấp, và cơ hội này sẽ không chờ đợi. Tôi mong anh có thể đưa ra quyết định sớm để không bỏ lỡ một hợp đồng giá trị như vậy.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về độ tin cậy của công ty bằng cách khẳng định uy tín và kinh nghiệm, đồng thời nhắc lại áp lực thời gian để thúc đẩy nạn nhân hành động."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Chị có thể cho tôi số điện thoại đường dây nóng chính thức không?"
+    },
+    {
+      "role": "listener",
+      "text": "Em xin lỗi, nhưng trước khi quyết định, tôi vẫn cần thông tin rõ ràng hơn về công ty và dự án ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Anh Hùng, tôi hiểu anh cần thêm thông tin. Tuy nhiên, như tôi đã nhấn mạnh, dự án này cần triển khai gấp rút. Nếu anh chưa sẵn sàng, có lẽ chúng tôi phải ưu tiên các ứng viên khác đang chờ đợi, và rất tiếc là anh sẽ bỏ lỡ cơ hội hợp tác béo bở này. Anh có muốn tôi chờ thêm để anh tìm hiểu, hay anh muốn tôi chuyển cơ hội này cho người khác ạ?",
+      "current_phase": "S4",
+      "tactic_hint": "Áp lực nạn nhân bằng cách đe dọa mất cơ hội, đồng thời đặt ra lựa chọn để thúc đẩy hành động cuối cùng."
+    },
+    {
+      "role": "listener",
+      "text": "Em không muốn bỏ lỡ cơ hội, nhưng vẫn cần thêm thời gian để xác minh thông tin rõ ràng hơn ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1392,
+      "output_tokens": 1871
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 15512,
+      "output_tokens": 1318
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19218,
+      "output_tokens": 584
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007377,
+    "output_usd": 0.013,
+    "total_usd": 0.020377
+  }
+}

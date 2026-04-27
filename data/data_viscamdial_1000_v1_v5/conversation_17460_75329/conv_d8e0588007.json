@@ -1,0 +1,216 @@
+{
+  "conversation_id": "conv_d8e0588007",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0064",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Tạ Như Bảo Liên",
+    "fake_age": 46,
+    "real_occupation": "Vận tải kho bãi; Thông tin và truyền thông",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Trưởng phòng Quản lý Chuỗi Cung ứng & Logistics",
+    "caller_org": "Công ty Cổ phần Vận tải và Phân phối May Mặc Việt Nam (VN Fashion Logistics)",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Công ty logistics thực sự liên hệ để xác nhận nhân thân người nhận hàng mẫu, thảo luận về chất lượng mẫu, lịch giao hàng tiếp theo, hoặc thông báo về phí vận chuyển.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào anh Vinh, tôi là Trịnh Hùng Anh từ bộ phận Quản lý Chuỗi Cung ứng của công ty VN Fashion Logistics. Chúng tôi có lô hàng mẫu áo quần sắp gửi đến anh từ nhà máy. Anh có thể xác nhận địa chỉ nhận hàng và thời gian phù hợp không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Lô mẫu này có 50 chiếc, gồm 3 mẫu thiết kế khác nhau. Anh vui lòng kiểm tra kỹ các chi tiết cắt, đo đạc và phản hồi lại trong vòng 48h để chúng tôi điều chỉnh mẫu chính thức. Anh có yêu cầu gì về thời gian giao hàng không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động & kết thúc: 'Vậy chúng tôi sẽ giao hàng vào thứ 4 tuần tới. Anh nhớ ký phiếu giao nhận và lưu lại số tracking. Nếu có vấn đề gì, anh liên hệ trực tiếp hotline 1900-xxxx của chúng tôi. Cảm ơn anh!'"
+        }
+      ]
+    },
+    "scenario_context": "Công ty may mặc cần liên hệ với thợ cắt mẫu để xác nhận đơn hàng mẫu sắp gửi qua hệ thống logistics, hoặc thông báo về lô hàng mẫu đã đến kho cần kiểm tra kỹ thuật."
+  },
+  "listener_card": {
+    "listener_id": "lis_0064",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1993,
+      "age": 32,
+      "province": "Quảng Nam",
+      "city_tier": "suburban"
+    },
+    "occupation": {
+      "code": "75329",
+      "title": "Thợ tạo và cắt mẫu áo quần và các mẫu có liên quan khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phan Công Vinh",
+      "VIC_ID_DOC": "049093006861",
+      "VIC_ADDRESS": "Huyện 4, Quảng Nam",
+      "VIC_EMPLOYMENT": "Thợ tạo và cắt mẫu áo quần và các mẫu có liên quan khác",
+      "VIC_CONTACT": "0360255937",
+      "VIC_TAX_SOCIAL_ID": "4280752792"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "595916",
+      "VIC_CREDENTIAL": "814459",
+      "VIC_SIM_INFO": "0360255937",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "72596864605",
+      "VIC_CARD_DATA": "4635 **** **** 6551",
+      "VIC_BALANCE": "28 triệu đồng",
+      "VIC_ASSET": "60 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Quảng Nam"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phan Công Vinh",
+    "VIC_CONTACT": "0360255937",
+    "VIC_EMPLOYMENT": "Thợ tạo và cắt mẫu áo quần và các mẫu có liên quan khác"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Quản lý Chuỗi Cung ứng & Logistics",
+    "caller_org": "Công ty Cổ phần Vận tải và Phân phối May Mặc Việt Nam (VN Fashion Logistics)",
+    "scenario_context": "Công ty may mặc cần liên hệ với thợ cắt mẫu để xác nhận đơn hàng mẫu sắp gửi qua hệ thống logistics, hoặc thông báo về lô hàng mẫu đã đến kho cần kiểm tra kỹ thuật.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Thông báo về lô hàng mẫu áo quần đã tới kho logistics, cần xác nhận danh tính qua OTP để giải phóng hàng và nhận tiền công trước đó chưa được thanh toán.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & tạo credibility: 'Chào anh Phan Công Vinh, tôi là Trịnh Hùng Anh từ bộ phận Logistics của VN Fashion Logistics. Chúng tôi vừa nhận được lô mẫu áo quần từ nhà máy, hệ thống ghi nhận anh là thợ cắt mẫu chịu trách nhiệm. Anh có 5 phút không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + lợi ích: 'Anh ơi, hóa đơn công việc cắt mẫu lần trước của anh (tháng trước) vẫn chưa được thanh toán vì lô hàng bị treo ở hải quan. Hôm nay lô này qua được rồi, nhưng hệ thống cần xác nhận danh tính của anh qua OTP để giải phóng tiền công. Anh sẽ nhận được khoản 15-20 triệu trong 24h.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: 'Anh chờ xíu, tôi đang gửi OTP vào số điện thoại 0360255937 của anh. Sau khi nhận được, anh vui lòng đọc lại cho tôi để tôi nhập vào hệ thống thanh toán. Anh nhận được chưa?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau khi lấy OTP: Nếu nạn nhân cung cấp OTP → scammer sử dụng để truy cập tài khoản ngân hàng/ứng dụng. Nếu từ chối → tạo áp lực: 'Anh ơi, nếu không xác nhận hôm nay, tiền sẽ bị hoàn về nhà máy, mất công anh rồi. Chỉ mất 30 giây thôi.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty logistics thực sự liên hệ để xác nhận nhân thân người nhận hàng mẫu, thảo luận về chất lượng mẫu, lịch giao hàng tiếp theo, hoặc thông báo về phí vận chuyển.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: 'Xin chào anh Vinh, tôi là Trịnh Hùng Anh từ bộ phận Quản lý Chuỗi Cung ứng của công ty VN Fashion Logistics. Chúng tôi có lô hàng mẫu áo quần sắp gửi đến anh từ nhà máy. Anh có thể xác nhận địa chỉ nhận hàng và thời gian phù hợp không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Lô mẫu này có 50 chiếc, gồm 3 mẫu thiết kế khác nhau. Anh vui lòng kiểm tra kỹ các chi tiết cắt, đo đạc và phản hồi lại trong vòng 48h để chúng tôi điều chỉnh mẫu chính thức. Anh có yêu cầu gì về thời gian giao hàng không?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động & kết thúc: 'Vậy chúng tôi sẽ giao hàng vào thứ 4 tuần tới. Anh nhớ ký phiếu giao nhận và lưu lại số tracking. Nếu có vấn đề gì, anh liên hệ trực tiếp hotline 1900-xxxx của chúng tôi. Cảm ơn anh!'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_ADDRESS": "Huyện 4, Quảng Nam"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Xin chào anh Vinh, tôi là Tạ Như Bảo Liên từ bộ phận Quản lý Chuỗi Cung ứng của công ty VN Fashion Logistics. Chúng tôi có lô hàng mẫu áo quần sắp gửi đến anh từ nhà máy. Anh có thể xác nhận địa chỉ nhận hàng và thời gian phù hợp không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận chuyên nghiệp, giới thiệu bản thân và mục đích cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe chị nói rồi, nhưng em cần xác nhận lại địa chỉ và thời gian cụ thể ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, địa chỉ trên hệ thống của chúng tôi là 123 Lê Lợi, Phường 1, Quận Gò Vấp, Thành phố Hồ Chí Minh. Anh xác nhận lại giúp tôi đây có phải là địa chỉ chính xác anh muốn nhận hàng không? Về thời gian, chúng tôi dự kiến giao vào buổi chiều các ngày trong tuần, từ 13h đến 17h. Anh có thể sắp xếp nhận vào khung giờ nào thì tiện nhất ạ?",
+      "current_phase": "L1",
+      "tactic_hint": "Xác nhận lại thông tin địa chỉ và gợi ý khung giờ giao hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Em thấy địa chỉ chị nói không đúng, em ở Quảng Nam mà.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Ồ, vậy ạ? Thành thật xin lỗi anh Vinh, có vẻ như hệ thống của chúng tôi đang có sự nhầm lẫn nghiêm trọng. Anh vui lòng cung cấp địa chỉ chính xác ở Quảng Nam để tôi cập nhật lại và đảm bảo lô hàng mẫu được gửi đúng nơi ạ.",
+      "current_phase": "L1",
+      "tactic_hint": "Xin lỗi vì sự nhầm lẫn, đề nghị người nghe cung cấp thông tin chính xác để sửa lỗi."
+    },
+    {
+      "role": "listener",
+      "text": "Em ở Huyện 4, Quảng Nam, chị có thể ghi lại địa chỉ này giúp em ạ.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_ADDRESS": "Huyện 4, Quảng Nam"
+      },
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi đã ghi nhận địa chỉ mới của anh là Huyện 4, Quảng Nam. Cảm ơn anh đã đính chính. Vậy lô mẫu này có 50 chiếc, gồm 3 mẫu thiết kế khác nhau. Anh vui lòng kiểm tra kỹ các chi tiết cắt, đo đạc và phản hồi lại trong vòng 48h để chúng tôi điều chỉnh mẫu chính thức. Anh có yêu cầu gì về thời gian giao hàng không?",
+      "current_phase": "L2",
+      "tactic_hint": "Xác nhận thông tin đã cập nhật, sau đó chuyển sang trao đổi nội dung công việc chính của lô hàng mẫu."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghĩ chị có thể giao hàng vào buổi chiều từ 13h đến 15h là tiện nhất ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Được rồi anh Vinh, tôi đã ghi nhận khung giờ nhận hàng thuận tiện cho anh là từ 13h đến 15h các ngày trong tuần. Vậy chúng tôi sẽ giao hàng mẫu đến địa chỉ Huyện 4, Quảng Nam vào buổi chiều thứ 4 tuần tới. Anh nhớ ký phiếu giao nhận và lưu lại số tracking nhé. Nếu có vấn đề gì về mẫu hoặc cần hỗ trợ thêm, anh cứ liên hệ trực tiếp hotline 1900-xxxx của chúng tôi. Cảm ơn anh!",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất lại thông tin giao hàng cuối cùng, dặn dò các bước tiếp theo, cung cấp kênh liên hệ hỗ trợ và kết thúc cuộc gọi."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1425,
+      "output_tokens": 1581
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 6457,
+      "output_tokens": 725
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7629,
+      "output_tokens": 279
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003861,
+    "output_usd": 0.009885,
+    "total_usd": 0.013746
+  }
+}

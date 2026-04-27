@@ -1,0 +1,194 @@
+{
+  "conversation_id": "conv_e0ed0bcb05",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "SCAM_EXPOSE",
+  "caller_card": {
+    "caller_id": "cal_0093",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Công Dũng",
+    "fake_age": 44,
+    "real_occupation": "Thợ vận hành máy sợi tổng hợp",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Nhân viên kiểm soát chất lượng / Kỹ thuật viên công nghệ vật liệu",
+    "caller_org": "Công ty cung cấp nguyên liệu sợi tổng hợp cho ngành bán dẫn",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction + credential_theft",
+      "pretext": "Gọi báo cáo sự cố: Phát hiện giao dịch bất thường trên tài khoản công ty của bạn liên quan đến đơn hàng vật liệu. Cần xác minh ngay để tránh khóa tài khoản và ảnh hưởng đến lương tháng này.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_CARD_DATA",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Tạo credibility: 'Xin chào Dương Giang, tôi là Phạm Minh từ phòng Kiểm soát Chất lượng. Hệ thống của chúng tôi vừa phát hiện giao dịch lạ trên thẻ 4453 ***3136 của anh — đó là thẻ công ty phải không? Chúng tôi cần xác nhận ngay trước khi khóa tài khoản.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Số tiền bất thường này (khoảng 86 triệu) đã bị flag. Nếu không xác minh trong 10 phút, hệ thống sẽ tự động khóa, và lương tháng của anh cũng bị treo theo. Anh có bị ai yêu cầu chuyển tiền hay cài app lạ không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động OTP + credential: 'Để xác minh, tôi cần anh cung cấp mã OTP vừa nhận được trên điện thoại. Sau đó, anh cần đăng nhập vào ứng dụng ngân hàng để chúng tôi xem chi tiết. Anh đang ở đâu, có thể mở app được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý nếu thành công: Sau khi lấy OTP + screenshot đăng nhập, scammer cắt máy và sử dụng thông tin để truy cập tài khoản ngân hàng, chuyển tiền hoặc kích hoạt các giao dịch tiếp theo. Nếu nạn nhân từ chối, scammer tạo áp lực: 'Anh không hợp tác được à? Thế tôi sẽ báo cáo lên quản lý của anh là anh từ chối xác minh — sẽ ảnh hưởng đến đánh giá công việc đó.'"
+        }
+      ]
+    },
+    "scenario_context": "Chuỗi cung ứng công nghiệp: sợi tổng hợp được dùng trong quy trình vận chuyển, lưu trữ chip silicon. Nhân viên kiểm soát chất lượng từ nhà cung cấp nguyên liệu có lý do tự nhiên để liên hệ với thợ vận hành máy sản xuất chip về các yêu cầu kỹ thuật, kiểm tra lô hàng, hoặc xác nhận thông tin đơn hàng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0093",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1983,
+      "age": 42,
+      "province": "Thanh Hóa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "81893",
+      "title": "Thợ vận hành máy sản xuất con chip silicon",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Dương Ngọc Giang",
+      "VIC_ID_DOC": "038183163694",
+      "VIC_ADDRESS": "Huyện 3, Thanh Hóa",
+      "VIC_EMPLOYMENT": "Thợ vận hành máy sản xuất con chip silicon",
+      "VIC_CONTACT": "0791637535",
+      "VIC_TAX_SOCIAL_ID": "7759392177"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "2496",
+      "VIC_CREDENTIAL": "8085",
+      "VIC_SIM_INFO": "0791637535",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "1129059694",
+      "VIC_CARD_DATA": "4453 **** **** 3136",
+      "VIC_BALANCE": "86 triệu đồng",
+      "VIC_ASSET": "161 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Thanh Hóa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Dương Ngọc Giang",
+    "VIC_CONTACT": "0791637535",
+    "VIC_BALANCE": "86 triệu đồng",
+    "VIC_TAX_SOCIAL_ID": "7759392177",
+    "VIC_CARD_DATA": "4453 **** **** 3136"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên kiểm soát chất lượng / Kỹ thuật viên công nghệ vật liệu",
+    "caller_org": "Công ty cung cấp nguyên liệu sợi tổng hợp cho ngành bán dẫn",
+    "scenario_context": "Chuỗi cung ứng công nghiệp: sợi tổng hợp được dùng trong quy trình vận chuyển, lưu trữ chip silicon. Nhân viên kiểm soát chất lượng từ nhà cung cấp nguyên liệu có lý do tự nhiên để liên hệ với thợ vận hành máy sản xuất chip về các yêu cầu kỹ thuật, kiểm tra lô hàng, hoặc xác nhận thông tin đơn hàng.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction + credential_theft",
+      "pretext": "Gọi báo cáo sự cố: Phát hiện giao dịch bất thường trên tài khoản công ty của bạn liên quan đến đơn hàng vật liệu. Cần xác minh ngay để tránh khóa tài khoản và ảnh hưởng đến lương tháng này.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_BALANCE",
+        "VIC_CARD_DATA",
+        "VIC_TAX_SOCIAL_ID"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Tạo credibility: 'Xin chào Dương Giang, tôi là Phạm Minh từ phòng Kiểm soát Chất lượng. Hệ thống của chúng tôi vừa phát hiện giao dịch lạ trên thẻ 4453 ***3136 của anh — đó là thẻ công ty phải không? Chúng tôi cần xác nhận ngay trước khi khóa tài khoản.'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp + sợ hãi: 'Số tiền bất thường này (khoảng 86 triệu) đã bị flag. Nếu không xác minh trong 10 phút, hệ thống sẽ tự động khóa, và lương tháng của anh cũng bị treo theo. Anh có bị ai yêu cầu chuyển tiền hay cài app lạ không?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động OTP + credential: 'Để xác minh, tôi cần anh cung cấp mã OTP vừa nhận được trên điện thoại. Sau đó, anh cần đăng nhập vào ứng dụng ngân hàng để chúng tôi xem chi tiết. Anh đang ở đâu, có thể mở app được không?'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý nếu thành công: Sau khi lấy OTP + screenshot đăng nhập, scammer cắt máy và sử dụng thông tin để truy cập tài khoản ngân hàng, chuyển tiền hoặc kích hoạt các giao dịch tiếp theo. Nếu nạn nhân từ chối, scammer tạo áp lực: 'Anh không hợp tác được à? Thế tôi sẽ báo cáo lên quản lý của anh là anh từ chối xác minh — sẽ ảnh hưởng đến đánh giá công việc đó.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên kiểm soát chất lượng từ nhà cung cấp liên hệ để xác nhận thông tin đơn hàng, kiểm tra tình trạng vận chuyển, hoặc thông báo về một thay đổi kỹ thuật trong lô nguyên liệu sắp giao.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác nhận: 'Xin chào, tôi là Phạm Minh từ phòng Kiểm soát Chất lượng công ty XYZ. Tôi đang gọi để xác nhận thông tin liên hệ của anh cho đơn hàng sợi tổng hợp lô #PH2024-001. Anh là Dương Giang, phải không? Số điện thoại 0791637535 có còn đúng không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: 'Lô hàng này sẽ giao vào thứ Năm tuần tới. Tôi muốn thông báo rằng chúng tôi vừa nâng cấp quy trình sấy, có thể ảnh hưởng nhẹ đến độ ẩm so với lô trước. Anh cần điều chỉnh gì trên dây chuyền của mình không? Hoặc anh muốn tôi gửi báo cáo kỹ thuật trước?'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động + Kết thúc: 'Được rồi, tôi sẽ gửi email báo cáo cho anh trong hôm nay. Nếu có vấn đề gì trong quá trình kiểm tra lô hàng, anh gọi lại cho tôi trực tiếp được. Cảm ơn anh, tạm biệt.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào chị Dương Ngọc Giang, tôi là Hoàng Công Dũng từ phòng Kiểm soát Chất lượng của công ty cung cấp nguyên liệu sợi tổng hợp. Hệ thống của chúng tôi vừa phát hiện một giao dịch bất thường trên thẻ 4453 **** 3136 của chị — đó là thẻ công ty phải không ạ? Chúng tôi cần xác nhận ngay trước khi hệ thống tự động khóa tài khoản của chị.",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và tạo credibility bằng cách sử dụng thông tin cá nhân và thẻ công ty đã biết, đồng thời tạo cảm giác khẩn cấp để xác minh giao dịch bất thường."
+    },
+    {
+      "role": "listener",
+      "text": "Anh nói sao? Tôi không hiểu anh đang nói gì cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, xin lỗi chị. Tôi xin nhắc lại. Hệ thống bên tôi ghi nhận trên thẻ 4453 **** 3136 của chị có phát sinh một giao dịch đáng ngờ, cụ thể là một khoản chi 86 triệu đồng. Chị có đang thực hiện giao dịch nào với số tiền này không ạ? Nếu không, chúng ta cần xử lý gấp để tránh việc tài khoản bị khóa tạm thời.",
+      "current_phase": "S1",
+      "tactic_hint": "Làm rõ thông tin giao dịch bất thường để tăng sự tin cậy và khẩn cấp, khai thác tâm lý lo lắng về việc tài khoản bị khóa."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi không có giao dịch nào như vậy cả, anh làm ơn ngừng gọi cho tôi nhé.",
+      "listener_action": "EXPOSURE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1869,
+      "output_tokens": 1719
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 2552,
+      "output_tokens": 320
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 3531,
+      "output_tokens": 123
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.002909,
+    "output_usd": 0.009469,
+    "total_usd": 0.012378
+  }
+}

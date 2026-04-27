@@ -1,0 +1,34 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_f1f0d6e6f4]
+  Caller thật: Thợ sửa chữa xe đạp và thợ có liên quan (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Quản lý Logistics / Trưởng phòng Vận chuyển (giả vờ từ công ty vận tải hoặc cảng) @ Công ty Vận tải & Logistics Sài Gòn Port / Chi nhánh Hải Phòng
+  Listener: Người mang vác hàng hóa xuống tàu và lên bờ (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_EXPOSE | Path: SCAM
+  Context: Thợ sửa chữa xe đạp có thể cung cấp dịch vụ bảo trì xe nâng, xe tải nhỏ cho công ty cảng/logistics. Ngược lại, quản lý logistics cần gọi cho các công nhân vận chuyển hàng (dockers) để thông báo lịch làm việc, yêu cầu bổ sung thông tin hoặc xử lý sự cố.
+  Pretext: Công ty vận tải cảng phát hiện sai sót trong bảng lương/thưởng của anh và cần xác minh thông tin tài khoản ngân hàng để chuyển khoản bổ sung 5-10 triệu đồng hoặc xử lý phí bảo hiểm lao động chưa khấu trừ đúng.
+  Listener traits: ['cẩn thận và cảnh giác', 'thiếu hiểu biết công nghệ']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Dạ em chào anh Đinh Quang Quân ạ. Em là Tô Bảo Liên, bên phía Phòng Nhân sự của Logistics Sài Gòn Port chi nhánh Hải Phòng đây ạ. Em gọi từ số 0905714801 của anh đúng không ạ? Dạ công ty có phát hiện một số sai sót trong hồ sơ lương thưởng liên quan đến mã số BHXH 8160405946 của anh cần xác minh gấp ạ.
+      → phase: S1 | tactic: Xưng danh, xác nhận danh tính nạn nhân bằng các thông tin đã biết để tạo uy tín và sự tin cậy ngay từ đầu.
+T02 [LISTENER] Em nói rõ hơn về sai sót nào trong hồ sơ lương thưởng của tôi được không?
+      → action: CONTINUE | suspicion: 0.10 | disclosed: []
+
+T03 [CALLER] Dạ vâng, cụ thể là phòng kế toán phát hiện bên em đã khấu trừ chưa đúng khoản phí bảo hiểm tai nạn nghề nghiệp của anh trong quý trước. Theo quy định mới nhất thì tiền này sẽ được hoàn lại trực tiếp cho anh, khoảng 5 triệu đồng lận ạ. Nhưng hôm nay là hạn chót để xử lý, nếu không thì khoản này sẽ tự động chuyển vào quỹ phúc lợi của công ty mất anh ạ.
+      → phase: S2 | tactic: Giải thích sai sót theo hướng có lợi cho nạn nhân (hoàn tiền), tạo yếu tố khẩn cấp để thúc đẩy hành động (hạn chót hôm nay).
+T04 [LISTENER] Tôi nghe em nói, nhưng tôi cần xác minh lại thông tin qua số điện thoại khác trước đã.
+      → action: REFUSAL | suspicion: 0.30 | disclosed: []
+
+T05 [CALLER] Dạ anh Quân ơi, em hiểu sự cẩn trọng của anh. Nhưng thật sự đây là khoản tiền hoàn trả trực tiếp cho anh, không phải là yêu cầu đóng góp gì cả. Anh cứ xác nhận thông tin này với em, sau đó em sẽ tạo lệnh hoàn trả luôn. Nếu anh liên hệ qua số tổng đài thì có thể sẽ mất thời gian hơn và dễ bị lỡ mất hạn chót hôm nay đó ạ.
+      → phase: S4 | tactic: Xoa dịu sự nghi ngờ, nhấn mạnh lợi ích và yếu tố khẩn cấp để thuyết phục nạn nhân hành động ngay, đồng thời giảm thiểu cơ hội nạn nhân xác minh thông tin.
+T06 [LISTENER] Em hiểu rồi, nhưng tôi vẫn muốn kiểm tra lại thông tin từ bên công ty khác trước khi quyết định.
+      → action: REFUSAL | suspicion: 0.60 | disclosed: []
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_REFUSE  |  6 turns | suspicion=0.60
+TOKEN: in=11418 | out=2450
+COST : $0.013264
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v2\conversation_72340_93331\conv_f1f0d6e6f4.json  [SCAM_REFUSE]

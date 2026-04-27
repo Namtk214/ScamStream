@@ -1,0 +1,208 @@
+{
+  "conversation_id": "conv_b01069ef11",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0083",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Dương Quang Minh",
+    "fake_age": 35,
+    "real_occupation": "Chủ tịch Quốc hội, Phó Chủ tịch Quốc hội, Ủy viên thường vụ Quốc hội",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Phó Chủ tịch Quốc hội - Trưởng Ban Kinh tế và Phát triển bền vững",
+    "caller_org": "Văn phòng Quốc hội Việt Nam - Ban Kinh tế và Phát triển bền vững",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Phó Chủ tịch Quốc hội gọi để thông báo rằng Phan Xuân Đức đã được chọn tham gia một dự án cơ sở hạ tầng quốc gia trọng điểm, nhưng cần xác minh tài chính và thanh toán phí đăng ký/bảo hiểm công nghiệp trước khi ký hợp đồo chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Phó Chủ tịch Quốc hội, gọi trực tiếp số điện thoại của Phan Xuân Đức, xác nhận đầy đủ tên, nghề nghiệp, số điện thoại để tạo credibility cao. Nói rằng 'Chúng tôi có hồ sơ của anh từ Sở Xây dựng TP.HCM'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác vinh dự và khẩn cấp - 'Đây là cơ hội hiếm để tham gia dự án Khu Công nghệ Xanh 3 tỷ USD, nhưng chúng tôi chỉ có thể dành chỗ cho anh trong 24 giờ. Các kiến trúc sư khác đang chờ'. Nhắc lại tên đầy đủ 'Phan Xuân Đức' để tăng mức tin tưởng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để hoàn tất hồ sơ, anh cần chuyển khoản phí bảo hiểm chuyên môn 50 triệu đồng vào tài khoản công vụ. Tôi sẽ cung cấp số tài khoản ngân hàng và mã chuyển khoản' (thực tế là tài khoản cá nhân của scammer). Yêu cầu chuyển từ tài khoản ngân hàng có đuôi '3915' mà scammer đã biết từ thông tin lộ."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý: Nếu nạn nhân chuyển tiền, scammer bảo 'Hợp đồng sẽ gửi qua email trong 48 giờ' rồi ngắt điện thoại và xóa số. Nếu nạn nhân từ chối, scammer tạo áp lực: 'Thế thì anh sẽ mất cơ hội này. Chúng tôi sẽ chọn kiến trúc sư khác' rồi cắt máy."
+        }
+      ]
+    },
+    "scenario_context": "Phó Chủ tịch Quốc hội cần gọi cho kiến trúc sư xây dựng để thảo luận về một dự án cơ sở hạ tầng quốc gia hoặc yêu cầu tư vấn về quy hoạch đô thị liên quan đến chính sách phát triển. Đây là điểm giao thoa tự nhiên giữa lãnh đạo chính trị và chuyên gia kỹ thuật."
+  },
+  "listener_card": {
+    "listener_id": "lis_0083",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1985,
+      "age": 40,
+      "province": "Khánh Hòa",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "21610",
+      "title": "Kiến trúc sư xây dựng",
+      "group": "Nhóm 4: Y tế, giáo dục & khoa học",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nóng tính dễ cáu",
+      "nhân ái muốn giúp"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phan Xuân Đức",
+      "VIC_ID_DOC": "056085248828",
+      "VIC_ADDRESS": "Quận 3, Khánh Hòa",
+      "VIC_EMPLOYMENT": "Kiến trúc sư xây dựng",
+      "VIC_CONTACT": "0892944761",
+      "VIC_TAX_SOCIAL_ID": "7357220670"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "627094",
+      "VIC_CREDENTIAL": "972256",
+      "VIC_SIM_INFO": "0892944761",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "752915235778",
+      "VIC_CARD_DATA": "4235 **** **** 3915",
+      "VIC_BALANCE": "1.5 tỷ đồng",
+      "VIC_ASSET": "1.9 tỷ đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Khánh Hòa"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phan Xuân Đức",
+    "VIC_CONTACT": "0892944761",
+    "VIC_CARD_DATA": "4235 **** **** 3915",
+    "VIC_EMPLOYMENT": "Kiến trúc sư xây dựng",
+    "VIC_BANK_ACCOUNT": "752915235778"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Phó Chủ tịch Quốc hội - Trưởng Ban Kinh tế và Phát triển bền vững",
+    "caller_org": "Văn phòng Quốc hội Việt Nam - Ban Kinh tế và Phát triển bền vững",
+    "scenario_context": "Phó Chủ tịch Quốc hội cần gọi cho kiến trúc sư xây dựng để thảo luận về một dự án cơ sở hạ tầng quốc gia hoặc yêu cầu tư vấn về quy hoạch đô thị liên quan đến chính sách phát triển. Đây là điểm giao thoa tự nhiên giữa lãnh đạo chính trị và chuyên gia kỹ thuật.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Phó Chủ tịch Quốc hội gọi để thông báo rằng Phan Xuân Đức đã được chọn tham gia một dự án cơ sở hạ tầng quốc gia trọng điểm, nhưng cần xác minh tài chính và thanh toán phí đăng ký/bảo hiểm công nghiệp trước khi ký hợp đồo chính thức.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_EMPLOYMENT",
+        "VIC_CONTACT",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là Phó Chủ tịch Quốc hội, gọi trực tiếp số điện thoại của Phan Xuân Đức, xác nhận đầy đủ tên, nghề nghiệp, số điện thoại để tạo credibility cao. Nói rằng 'Chúng tôi có hồ sơ của anh từ Sở Xây dựng TP.HCM'."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý: Tạo cảm giác vinh dự và khẩn cấp - 'Đây là cơ hội hiếm để tham gia dự án Khu Công nghệ Xanh 3 tỷ USD, nhưng chúng tôi chỉ có thể dành chỗ cho anh trong 24 giờ. Các kiến trúc sư khác đang chờ'. Nhắc lại tên đầy đủ 'Phan Xuân Đức' để tăng mức tin tưởng."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để hoàn tất hồ sơ, anh cần chuyển khoản phí bảo hiểm chuyên môn 50 triệu đồng vào tài khoản công vụ. Tôi sẽ cung cấp số tài khoản ngân hàng và mã chuyển khoản' (thực tế là tài khoản cá nhân của scammer). Yêu cầu chuyển từ tài khoản ngân hàng có đuôi '3915' mà scammer đã biết từ thông tin lộ."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý: Nếu nạn nhân chuyển tiền, scammer bảo 'Hợp đồng sẽ gửi qua email trong 48 giờ' rồi ngắt điện thoại và xóa số. Nếu nạn nhân từ chối, scammer tạo áp lực: 'Thế thì anh sẽ mất cơ hội này. Chúng tôi sẽ chọn kiến trúc sư khác' rồi cắt máy."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Phó Chủ tịch Quốc hội gọi cho kiến trúc sư Phan Xuân Đức để mời ông tham gia tư vấn về một dự án quy hoạch đô thị quốc gia, hoặc thảo luận về tiêu chuẩn thiết kế bền vững cho các công trình công cộng mới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: Xưng danh rõ ràng (tên đầy đủ, chức danh, cơ quan), xác nhận gọi cho đúng người 'Anh Phan Xuân Đức phải không?', giải thích mục đích gọi ngay: 'Tôi là Phó Chủ tịch Quốc hội Trần Văn Hùng, gọi từ Văn phòng Quốc hội'."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Mô tả chi tiết dự án (tên dự án, địa điểm, quy mô, yêu cầu thiết kế), hỏi ý kiến chuyên môn của kiến trúc sư, thảo luận về khả năng tham gia, lịch trình tiếp theo (họp trực tiếp, gửi tài liệu dự án qua email chính thức)."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Thống nhất các bước tiếp theo cụ thể (cấp phòng Ban sẽ gửi mời chính thức qua email/thư), cảm ơn, chào tạm biệt. Không bao giờ yêu cầu chuyển tiền hoặc cung cấp thông tin ngân hàng qua điện thoại."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Anh Phan Xuân Đức phải không ạ? Tôi là Dương Quang Minh, Phó Chủ tịch Quốc hội kiêm Trưởng Ban Kinh tế và Phát triển bền vững. Tôi gọi từ số công vụ của Quốc hội và muốn xác nhận lại một số thông tin với anh, kiến trúc sư xây dựng, số điện thoại 0892944761. Chúng tôi có hồ sơ của anh từ Sở Xây dựng TP.HCM liên quan đến một dự án quan trọng.",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh chức vụ cao, xác nhận đầy đủ thông tin cá nhân của nạn nhân để tạo độ tin cậy và chứng minh rằng đã nắm được thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Phan Xuân Đức, nhưng em có thể cho tôi biết thêm thông tin cụ thể về dự án đó được không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dự án mà chúng tôi đang nói đến là Khu Công nghệ Xanh với tổng mức đầu tư lên đến 3 tỷ USD. Đây là một dự án mang tầm vóc quốc gia, đòi hỏi những kiến trúc sư hàng đầu và chúng tôi đã đặc biệt chọn anh, Phan Xuân Đức, dựa trên hồ sơ năng lực rất ấn tượng. Tuy nhiên, để đảm bảo vị trí tham gia dự án, chúng tôi cần xác nhận lại một số thông tin tài chính và hoàn tất phí bảo hiểm công nghiệp trong vòng 24 giờ tới. Các kiến trúc sư khác đang chờ cơ hội này.",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo cảm giác vinh dự, khẩn cấp và độc quyền để thúc đẩy nạn nhân hành động nhanh chóng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng em cần thêm thời gian để suy nghĩ trước khi quyết định.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Anh Đức, tôi hiểu anh cần thời gian, nhưng đây là một dự án trọng điểm quốc gia và cơ hội không dành cho nhiều người. Chúng tôi chỉ có thể giữ chỗ cho anh trong vòng 24 giờ như đã thông báo. Để hoàn tất hồ sơ và đảm bảo vị trí tham gia dự án Khu Công nghệ Xanh, anh cần chuyển khoản phí bảo hiểm chuyên môn là 50 triệu đồng vào tài khoản công vụ của ban. Tôi sẽ cung cấp số tài khoản và mã chuyển khoản cho anh ngay bây giờ. Anh vui lòng chuyển từ tài khoản có đuôi 3915 của anh để chúng tôi dễ dàng xác minh.",
+      "current_phase": "S3",
+      "tactic_hint": "Tạo áp lực thời gian và khẩn cấp, đồng thời đưa ra yêu cầu hành động cụ thể (chuyển tiền) và sử dụng thông tin tài khoản đã biết để tăng tính xác thực."
+    },
+    {
+      "role": "listener",
+      "text": "Em không thể chuyển khoản mà không biết rõ thông tin chi tiết, anh có thể giải thích thêm về việc này không?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1453,
+      "output_tokens": 1757
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4260,
+      "output_tokens": 568
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5832,
+      "output_tokens": 209
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.00318,
+    "output_usd": 0.01033,
+    "total_usd": 0.01351
+  }
+}

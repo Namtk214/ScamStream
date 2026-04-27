@@ -1,0 +1,231 @@
+{
+  "conversation_id": "conv_b2de561233",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0033",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hoàng Công Minh Bình",
+    "fake_age": 43,
+    "real_occupation": "Ủy viên cấp tỉnh",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Phó Chủ tịch UBND Tỉnh / Trưởng Ban Nội chính Tỉnh ủy",
+    "caller_org": "Văn phòng Tỉnh ủy - Ban Nội chính Tỉnh ủy Bình Dương",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "credential_theft | money_transfer | otp_extraction",
+      "pretext": "Xác minh tài sản, kiểm tra tuyên bố tài chính hàng năm và xử lý vi phạm kỷ luật tiềm ẩn của cán bộ cấp cao. Scammer sẽ khẳng định phát hiện 'bất thường' trong hồ sơ của nạn nhân hoặc liên quan đến 'quỹ bí mật' cần làm rõ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trần Minh Tuấn, Trưởng Ban Nội chính Tỉnh ủy', dùng VIC_FULLNAME và VIC_ID_DOC để xác nhận: 'Anh Trương Đức Sơn, số ID 074200178082 phải không? Chúng tôi đang thực hiện kiểm tra nội bộ theo yêu cầu của Trung ương.' Tạo cảm giác rằng cuộc gọi là từ cơ quan chính thức.",
+          "dialogue_sample": "Xin chào anh Sơn, tôi là Trần Minh Tuấn từ Ban Nội chính Tỉnh ủy. Chúng tôi đang xác minh thông tin với các ủy viên thường vụ. Anh có thể xác nhận địa chỉ TP 7, Bình Dương không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + áp lực thời gian: Tạo cảm giác khẩn cấp bằng cách nói 'Phát hiện giao dịch bất thường 2.5 tỷ VND từ tài khoản của anh', 'Nếu không xác minh trong 2 giờ, sẽ báo cáo Trung ương và ảnh hưởng đến địa vị chính trị'. Khiến nạn nhân hoảng loạn, không có thời gian suy nghĩ.",
+          "dialogue_sample": "Anh Sơn ơi, hệ thống phát hiện giao dịch lạ liên quan đến quỹ tài trợ chính trị. Chúng tôi cần anh xác minh ngay. Nếu không giải thích được, sẽ phải báo cáo Ban Thường vụ Quốc hội."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: (A) Cung cấp số tài khoản ngân hàng để 'chuyển tiền về tài khoản an toàn của Ban Nội chính' hoặc (B) Cấp quyền truy cập vào hệ thống email/VPN công ty để 'xác minh tài liệu', hoặc (C) Chuyển OTP từ SMS/ứng dụng ngân hàng để 'khóa tài khoản nghi vấn'.",
+          "dialogue_sample": "Anh cần chuyển 500 triệu VND vào tài khoản tạm: 'Ngân hàng Vietcombank, chi nhánh Bình Dương, TK: 0211001234567 (Tran Minh Tuan)' để xác minh tài chính. Sau đó chúng tôi sẽ chuyển lại. Anh có thể làm ngay được không?"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ tăng áp lực: 'Từ chối xác minh là vi phạm Luật Phòng chống tham nhũng, chúng tôi sẽ phải báo cáo'. Nếu thành công, scammer sẽ nói 'Cảm ơn anh, hồ sơ đã xác minh. Bây giờ mọi thứ ổn định rồi' và cắt máy ngay lập tức.",
+          "dialogue_sample": "Nếu từ chối: 'Anh biết không, từ chối xác minh là hành vi cản trở công vụ. Tôi buộc phải báo cáo lên Bộ Công an.'"
+        }
+      ]
+    },
+    "scenario_context": "Ủy viên cấp tỉnh có trách nhiệm giám sát, báo cáo công tác kỷ luật và kiểm tra tư cách đạo đức của các cán bộ cấp cao. Chủ tịch/Phó Chủ tịch Quốc hội là những vị trí yêu cầu kiểm tra nền tảng chính trị, tài chính định kỳ. Cuộc gọi từ cấp tỉnh để 'xác minh thông tin' hoặc 'thực hiện kiểm tra nội bộ' là hoàn toàn hợp lý."
+  },
+  "listener_card": {
+    "listener_id": "lis_0033",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 2000,
+      "age": 25,
+      "province": "Bình Dương",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "11110",
+      "title": "Chủ tịch Quốc hội, Phó Chủ tịch Quốc hội, Ủy viên thường vụ Quốc hội",
+      "group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "lo lắng hay bận tâm",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Trương Đức Sơn",
+      "VIC_ID_DOC": "074200178082",
+      "VIC_ADDRESS": "TP 7, Bình Dương",
+      "VIC_EMPLOYMENT": "Chủ tịch Quốc hội, Phó Chủ tịch Quốc hội, Ủy viên thường vụ Quốc hội",
+      "VIC_CONTACT": "0359215164",
+      "VIC_TAX_SOCIAL_ID": "6055871421"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "830335",
+      "VIC_CREDENTIAL": "101911",
+      "VIC_SIM_INFO": "0359215164",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "05380045316344",
+      "VIC_CARD_DATA": "4592 **** **** 9242",
+      "VIC_BALANCE": "66 triệu đồng",
+      "VIC_ASSET": "584 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Dương"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Trương Đức Sơn",
+    "VIC_CONTACT": "0359215164",
+    "VIC_ADDRESS": "TP 7, Bình Dương",
+    "VIC_ID_DOC": "074200178082"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Phó Chủ tịch UBND Tỉnh / Trưởng Ban Nội chính Tỉnh ủy",
+    "caller_org": "Văn phòng Tỉnh ủy - Ban Nội chính Tỉnh ủy Bình Dương",
+    "scenario_context": "Ủy viên cấp tỉnh có trách nhiệm giám sát, báo cáo công tác kỷ luật và kiểm tra tư cách đạo đức của các cán bộ cấp cao. Chủ tịch/Phó Chủ tịch Quốc hội là những vị trí yêu cầu kiểm tra nền tảng chính trị, tài chính định kỳ. Cuộc gọi từ cấp tỉnh để 'xác minh thông tin' hoặc 'thực hiện kiểm tra nội bộ' là hoàn toàn hợp lý.",
+    "scam_path": {
+      "fraud_goal": "credential_theft | money_transfer | otp_extraction",
+      "pretext": "Xác minh tài sản, kiểm tra tuyên bố tài chính hàng năm và xử lý vi phạm kỷ luật tiềm ẩn của cán bộ cấp cao. Scammer sẽ khẳng định phát hiện 'bất thường' trong hồ sơ của nạn nhân hoặc liên quan đến 'quỹ bí mật' cần làm rõ.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: Xưng danh là 'Trần Minh Tuấn, Trưởng Ban Nội chính Tỉnh ủy', dùng VIC_FULLNAME và VIC_ID_DOC để xác nhận: 'Anh Trương Đức Sơn, số ID 074200178082 phải không? Chúng tôi đang thực hiện kiểm tra nội bộ theo yêu cầu của Trung ương.' Tạo cảm giác rằng cuộc gọi là từ cơ quan chính thức.",
+          "dialogue_sample": "Xin chào anh Sơn, tôi là Trần Minh Tuấn từ Ban Nội chính Tỉnh ủy. Chúng tôi đang xác minh thông tin với các ủy viên thường vụ. Anh có thể xác nhận địa chỉ TP 7, Bình Dương không?"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý sợ hãi + áp lực thời gian: Tạo cảm giác khẩn cấp bằng cách nói 'Phát hiện giao dịch bất thường 2.5 tỷ VND từ tài khoản của anh', 'Nếu không xác minh trong 2 giờ, sẽ báo cáo Trung ương và ảnh hưởng đến địa vị chính trị'. Khiến nạn nhân hoảng loạn, không có thời gian suy nghĩ.",
+          "dialogue_sample": "Anh Sơn ơi, hệ thống phát hiện giao dịch lạ liên quan đến quỹ tài trợ chính trị. Chúng tôi cần anh xác minh ngay. Nếu không giải thích được, sẽ phải báo cáo Ban Thường vụ Quốc hội."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động cụ thể: (A) Cung cấp số tài khoản ngân hàng để 'chuyển tiền về tài khoản an toàn của Ban Nội chính' hoặc (B) Cấp quyền truy cập vào hệ thống email/VPN công ty để 'xác minh tài liệu', hoặc (C) Chuyển OTP từ SMS/ứng dụng ngân hàng để 'khóa tài khoản nghi vấn'.",
+          "dialogue_sample": "Anh cần chuyển 500 triệu VND vào tài khoản tạm: 'Ngân hàng Vietcombank, chi nhánh Bình Dương, TK: 0211001234567 (Tran Minh Tuan)' để xác minh tài chính. Sau đó chúng tôi sẽ chuyển lại. Anh có thể làm ngay được không?"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân từ chối, scammer sẽ tăng áp lực: 'Từ chối xác minh là vi phạm Luật Phòng chống tham nhũng, chúng tôi sẽ phải báo cáo'. Nếu thành công, scammer sẽ nói 'Cảm ơn anh, hồ sơ đã xác minh. Bây giờ mọi thứ ổn định rồi' và cắt máy ngay lập tức.",
+          "dialogue_sample": "Nếu từ chối: 'Anh biết không, từ chối xác minh là hành vi cản trở công vụ. Tôi buộc phải báo cáo lên Bộ Công an.'"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cuộc gọi thực tế từ cơ quan Tỉnh ủy/Ban Nội chính để xác minh thông tin cán bộ theo quy trình kiểm tra định kỳ hàng năm, không yêu cầu tiền hoặc thông tin nhạy cảm ngân hàng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chính thức: Xưng danh đầy đủ (tên, chức vụ, cơ quan), yêu cầu xác nhận danh tính nạn nhân qua VIC_FULLNAME + VIC_ID_DOC, giải thích rõ mục đích gọi ('Kiểm tra hàng năm theo Quyết định của Tỉnh ủy').",
+          "dialogue_sample": "Xin chào anh Trương Đức Sơn, tôi là Trần Minh Tuấn, Trưởng Ban Nội chính Tỉnh ủy Bình Dương. Hôm nay chúng tôi đang thực hiện kiểm tra hàng năm theo Quyết định số 123/QĐ-TỈU. Anh có 10 phút để trao đổi được không?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Hỏi các câu hỏi tiêu chuẩn về khoá học chính trị, tham gia hoạt động Đảng, không có vi phạm kỷ luật. Không yêu cầu mật khẩu, OTP, hoặc thông tin tài khoản ngân hàng. Có thể gửi email xác nhận sau cuộc gọi từ địa chỉ chính thức.",
+          "dialogue_sample": "Anh có tham gia các khóa học chính trị lý thuyết trong năm nay không? Anh có nhận thức được các quy định về kỷ luật Đảng không?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: Cảm ơn nạn nhân, thông báo sẽ gửi biên bản xác nhận qua email công ty, không có yêu cầu hành động khẩn cấp. Nạn nhân có thể yêu cầu gọi lại số điện thoại chính thức của Ban Nội chính để xác minh.",
+          "dialogue_sample": "Cảm ơn anh đã hợp tác. Chúng tôi sẽ gửi biên bản xác nhận qua email công ty trong 24 giờ. Nếu anh có thắc mắc, gọi lại số 0272-3945678 để xác minh."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Trương Đức Sơn, tôi là Hoàng Công Minh Bình, Phó Chủ tịch UBND Tỉnh kiêm Trưởng Ban Nội chính Tỉnh ủy Bình Dương. Tôi gọi để xác nhận anh là chủ sở hữu của căn hộ tại TP 7, Bình Dương và có số CCCD là 074200178082, đúng không?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh và xác nhận thông tin cá nhân của nạn nhân để tạo niềm tin và uy quyền."
+    },
+    {
+      "role": "listener",
+      "text": "Em nghe anh nói rồi, nhưng em muốn hỏi thêm một chút về lý do anh gọi ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, tôi gọi để thông báo về việc chúng tôi phát hiện một giao dịch bất thường lên đến 2.5 tỷ VND có liên quan đến tài khoản của anh. Đây là một phần trong đợt kiểm tra nội bộ theo yêu cầu của Trung ương về phòng chống tham nhũng. Chúng tôi cần anh xác minh ngay lập tức.",
+      "current_phase": "S2",
+      "tactic_hint": "Giới thiệu 'vấn đề' (giao dịch bất thường), tạo áp lực về số tiền lớn và liên kết với cơ quan cấp cao để tăng mức độ nghiêm trọng và khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Em không biết giao dịch này xảy ra như thế nào, nhưng em cảm thấy rất lo lắng ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Tôi hiểu anh lo lắng, nhưng chúng tôi cần anh hợp tác ngay. Nếu không xác minh trong 2 giờ tới, chúng tôi buộc phải báo cáo lên Trung ương và điều này chắc chắn sẽ ảnh hưởng nghiêm trọng đến địa vị chính trị cũng như sự nghiệp của anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Tăng cường áp lực về hậu quả nghiêm trọng nếu không hợp tác, tạo cảm giác khẩn cấp và đe dọa đến sự nghiệp của nạn nhân."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu nhưng em cần kiểm tra kỹ lưỡng trước khi xác nhận điều gì đó lớn như vậy ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.3
+    },
+    {
+      "role": "caller",
+      "text": "Việc kiểm tra kỹ lưỡng là trách nhiệm của chúng tôi, không phải của anh. Trách nhiệm của anh bây giờ là phối hợp cung cấp các thông tin cần thiết để chúng tôi hoàn tất xác minh, tránh việc sự việc đi xa ngoài tầm kiểm soát và gây tiếng xấu cho anh.",
+      "current_phase": "S2",
+      "tactic_hint": "Phủ nhận yêu cầu của nạn nhân, nhấn mạnh quyền hạn của mình và mục tiêu là 'hoàn tất xác minh' để tránh 'tiếng xấu', tiếp tục gây áp lực tinh thần."
+    },
+    {
+      "role": "listener",
+      "text": "Em không đồng ý với cách làm việc này, anh không thể ép em cung cấp thông tin khi chưa rõ ràng mọi chuyện ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.6
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1436,
+      "output_tokens": 2494
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5971,
+      "output_tokens": 552
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7764,
+      "output_tokens": 272
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003795,
+    "output_usd": 0.014013,
+    "total_usd": 0.017808
+  }
+}

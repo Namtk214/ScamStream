@@ -1,0 +1,228 @@
+{
+  "conversation_id": "conv_dc9ce84dbe",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0043",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Hồ Hữu Nam",
+    "fake_age": 26,
+    "real_occupation": "Thợ vẽ biển quảng cáo, thợ trang trí, thợ khắc và thợ khắc axit khác",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Trưởng phòng Thiết kế & Trang trí - Công ty Quảng cáo ngoài trời",
+    "caller_org": "Công ty TNHH Quảng cáo Sáng Tạo Việt (Creative Ads Vietnam)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả vờ là công ty quảng cáo gọi để 'xác nhận thông tin dự án trang trí thư viện' mà thư viện đã đăng ký, sau đó yêu cầu thanh toán đặt cọc hoặc phí thiết kế ban đầu vào tài khoản công ty.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Tạo credibility: Scammer gọi, xưng là 'Anh Minh - Phòng Thiết kế, Công ty Quảng cáo Sáng Tạo Việt'. Nói rằng 'Chị Huỳnh Thị Yến' (dùng VIC_FULLNAME) đã liên hệ công ty về dự án trang trí thư viện. Yêu cầu xác nhận lại thông tin chi tiết để lập hóa đơn và báo giá.",
+          "dialogue_sample": "Chào chị, em là Anh Minh từ Công ty Quảng cáo Sáng Tạo Việt. Hôm qua chị Yến gửi yêu cầu báo giá trang trí biển hiệu thư viện phải không? Em cần xác nhận lại số điện thoại và họ tên để lập file dự án ạ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý tạo cấp bách: Scammer tạo áp lực thời gian — 'Chương trình khuyến mãi giảm 20% chỉ còn 2 ngày', hoặc 'Dự án sắp khởi công, cần xác nhận ngay để đưa vào lịch thi công'. Đồng thời, scammer gợi ý rằng việc thanh toán đặt cọc sẽ 'bảo vệ' suất ưu đãi.",
+          "dialogue_sample": "Chị ơi, chương trình khuyến mãi của em chỉ còn hôm nay thôi. Nếu chị chuyển đặt cọc 30% hôm nay là 60 triệu, em sẽ lock giá và bắt đầu thiết kế 3D cho chị xem trong 2 ngày. Số tài khoản em là..."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Scammer cung cấp số tài khoản ngân hàng (của tài khoản giả hoặc tài khoản rửa tiền) và yêu cầu chuyển khoản đặt cọc. Sử dụng VIC_BALANCE (201 triệu) để tính toán số tiền 'hợp lý' (30-40% = 60-80 triệu) để nạn nhân không quá nghi ngờ nhưng vẫn là khoản lớn.",
+          "dialogue_sample": "Vậy chị chuyển 60 triệu vào tài khoản này: Ngân hàng Vietcombank, Số TK: 1234567890, Chủ TK: Công ty TNHH Quảng cáo Sáng Tạo Việt. Em sẽ gửi hóa đơn và hợp đồng qua email ngay sau khi nhận tiền ạ."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân chuyển tiền, scammer sẽ tắt máy hoặc nói 'đang xử lý, sẽ gọi lại'. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm ('Chị sẽ mất ưu đãi', 'Em đã dành thời gian cho chị', 'Công ty sẽ hủy dự án') hoặc yêu cầu ít tiền hơn.",
+          "dialogue_sample": "Thôi chị, em hiểu chị cần suy nghĩ. Nhưng như vậy em sẽ phải loại chị khỏi danh sách ưu tiên rồi. Nếu chị muốn, chị chuyển 30 triệu trước để giữ chỗ cũng được."
+        }
+      ]
+    },
+    "scenario_context": "Thư viện cộng đồng cần thiết kế, trang trí biển hiệu, poster thông báo, bảng menu sự kiện hoặc nâng cấp không gian trưng bày. Người làm trong ngành quảng cáo/trang trí tự nhiên sẽ liên hệ các cơ quan công cộng để tìm hiểu nhu cầu và báo giá dịch vụ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0043",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1987,
+      "age": 38,
+      "province": "Long An",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "44010",
+      "title": "Nhân viên thư viện",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "bảo thủ ngại thay đổi"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Huỳnh Thị Yến",
+      "VIC_ID_DOC": "080187525054",
+      "VIC_ADDRESS": "Quận 5, Long An",
+      "VIC_EMPLOYMENT": "Nhân viên thư viện",
+      "VIC_CONTACT": "0792824030",
+      "VIC_TAX_SOCIAL_ID": "8615143950"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "541303",
+      "VIC_CREDENTIAL": "0609",
+      "VIC_SIM_INFO": "0792824030",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "32012163114",
+      "VIC_CARD_DATA": "4584 **** **** 7371",
+      "VIC_BALANCE": "201 triệu đồng",
+      "VIC_ASSET": "716 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Long An"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Huỳnh Thị Yến",
+    "VIC_CONTACT": "0792824030",
+    "VIC_ASSET": "716 triệu đồng",
+    "VIC_BALANCE": "201 triệu đồng"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Trưởng phòng Thiết kế & Trang trí - Công ty Quảng cáo ngoài trời",
+    "caller_org": "Công ty TNHH Quảng cáo Sáng Tạo Việt (Creative Ads Vietnam)",
+    "scenario_context": "Thư viện cộng đồng cần thiết kế, trang trí biển hiệu, poster thông báo, bảng menu sự kiện hoặc nâng cấp không gian trưng bày. Người làm trong ngành quảng cáo/trang trí tự nhiên sẽ liên hệ các cơ quan công cộng để tìm hiểu nhu cầu và báo giá dịch vụ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Giả vờ là công ty quảng cáo gọi để 'xác nhận thông tin dự án trang trí thư viện' mà thư viện đã đăng ký, sau đó yêu cầu thanh toán đặt cọc hoặc phí thiết kế ban đầu vào tài khoản công ty.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_BALANCE"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Tạo credibility: Scammer gọi, xưng là 'Anh Minh - Phòng Thiết kế, Công ty Quảng cáo Sáng Tạo Việt'. Nói rằng 'Chị Huỳnh Thị Yến' (dùng VIC_FULLNAME) đã liên hệ công ty về dự án trang trí thư viện. Yêu cầu xác nhận lại thông tin chi tiết để lập hóa đơn và báo giá.",
+          "dialogue_sample": "Chào chị, em là Anh Minh từ Công ty Quảng cáo Sáng Tạo Việt. Hôm qua chị Yến gửi yêu cầu báo giá trang trí biển hiệu thư viện phải không? Em cần xác nhận lại số điện thoại và họ tên để lập file dự án ạ."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý tạo cấp bách: Scammer tạo áp lực thời gian — 'Chương trình khuyến mãi giảm 20% chỉ còn 2 ngày', hoặc 'Dự án sắp khởi công, cần xác nhận ngay để đưa vào lịch thi công'. Đồng thời, scammer gợi ý rằng việc thanh toán đặt cọc sẽ 'bảo vệ' suất ưu đãi.",
+          "dialogue_sample": "Chị ơi, chương trình khuyến mãi của em chỉ còn hôm nay thôi. Nếu chị chuyển đặt cọc 30% hôm nay là 60 triệu, em sẽ lock giá và bắt đầu thiết kế 3D cho chị xem trong 2 ngày. Số tài khoản em là..."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động chuyển tiền: Scammer cung cấp số tài khoản ngân hàng (của tài khoản giả hoặc tài khoản rửa tiền) và yêu cầu chuyển khoản đặt cọc. Sử dụng VIC_BALANCE (201 triệu) để tính toán số tiền 'hợp lý' (30-40% = 60-80 triệu) để nạn nhân không quá nghi ngờ nhưng vẫn là khoản lớn.",
+          "dialogue_sample": "Vậy chị chuyển 60 triệu vào tài khoản này: Ngân hàng Vietcombank, Số TK: 1234567890, Chủ TK: Công ty TNHH Quảng cáo Sáng Tạo Việt. Em sẽ gửi hóa đơn và hợp đồng qua email ngay sau khi nhận tiền ạ."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý phản ứng: Nếu nạn nhân chuyển tiền, scammer sẽ tắt máy hoặc nói 'đang xử lý, sẽ gọi lại'. Nếu nạn nhân từ chối, scammer sẽ tạo áp lực thêm ('Chị sẽ mất ưu đãi', 'Em đã dành thời gian cho chị', 'Công ty sẽ hủy dự án') hoặc yêu cầu ít tiền hơn.",
+          "dialogue_sample": "Thôi chị, em hiểu chị cần suy nghĩ. Nhưng như vậy em sẽ phải loại chị khỏi danh sách ưu tiên rồi. Nếu chị muốn, chị chuyển 30 triệu trước để giữ chỗ cũng được."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Công ty quảng cáo thực sự liên hệ thư viện để tìm hiểu nhu cầu dịch vụ trang trí, biển hiệu, hoặc nâng cấp không gian theo yêu cầu của khách hàng công cộng. Mục đích là lập báo giá, thảo luận chi tiết dự án, và xây dựng hợp đồng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận chuyên nghiệp: Scammer xưng danh đầy đủ (tên, công ty, vị trí), giải thích rõ lý do gọi, và xác nhận rằng người nghe là người liên hệ đúng (hoặc yêu cầu được chuyển đến người phụ trách dự án).",
+          "dialogue_sample": "Chào chị Yến, em là Anh Minh - Trưởng phòng Thiết kế của Công ty Quảng cáo Sáng Tạo Việt. Em gọi vì hôm qua thư viện gửi yêu cầu báo giá cho dự án trang trí không gian trưng bày. Chị có thời gian để em tìm hiểu chi tiết nhu cầu không ạ?"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc: Scammer (hoặc nhân viên thực) hỏi chi tiết về yêu cầu (kích thước, phong cách, ngân sách dự kiến, thời gian), ghi chép thông tin, và hứa sẽ gửi báo giá chi tiết qua email trong 2-3 ngày làm việc.",
+          "dialogue_sample": "Vâng chị. Vậy thư viện cần trang trí biển hiệu ngoài cửa hay là không gian bên trong? Kích thước khoảng bao nhiêu? Và ngân sách dự tính của chị là bao nhiêu để em tính toán phù hợp?"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc cuộc gọi chuyên nghiệp: Scammer xác nhận lại thông tin liên hệ (email, điện thoại), hứa gửi báo giá chi tiết, và yêu cầu phép gọi lại nếu có câu hỏi. Không có yêu cầu thanh toán ngay hay áp lực thời gian.",
+          "dialogue_sample": "Cảm ơn chị đã chia sẻ. Em sẽ lập báo giá chi tiết và gửi email cho chị trong 2 ngày. Nếu chị có câu hỏi gì, cứ gọi em qua số này: 0123456789 hoặc email: minh@creativeads.vn. Chào chị!"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Dạ em chào chị ạ. Em là Minh bên Phòng Thiết kế của Công ty Quảng cáo Sáng Tạo Việt đây ạ. Em gọi để xác nhận lại thông tin về dự án trang trí thư viện mà bên chị Huỳnh Thị Yến đã đăng ký bên em ạ. Chị Yến có tiện nghe máy trong 1-2 phút không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận, giới thiệu vai trò và công ty, dùng tên nạn nhân để tạo trust và xác nhận thông tin ban đầu."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe em nói nhưng không nhớ có đăng ký dự án nào cả, em có thể cho tôi biết thêm chi tiết không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em hiểu là chị có thể chưa tiện nhớ ngay ạ. Hồ sơ bên em ghi nhận là chị Huỳnh Thị Yến, số điện thoại 0792824030, có liên hệ bên em để tư vấn về gói trang trí thư viện, đặc biệt là các hạng mục trưng bày sách mới và khu đọc sách thiếu nhi. Chị có muốn em gửi lại bản tóm tắt qua Zalo để chị xem lại không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu nghi ngờ, dùng các thông tin đã biết của nạn nhân để chứng minh tính xác thực và gợi ý gửi thêm thông tin để nạn nhân kiểm tra lại."
+    },
+    {
+      "role": "listener",
+      "text": "Em có thể gửi lại bản tóm tắt cho tôi qua Zalo, nhưng tôi vẫn cần xác minh thêm thông tin này trước đã.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em đã gửi bản tóm tắt qua Zalo cho chị rồi ạ. Chị kiểm tra giúp em nhé. Bên em đang có chương trình ưu đãi giảm 20% cho các gói trang trí thư viện nếu mình chốt trong 2 ngày tới, nên em muốn xác nhận sớm để không bỏ lỡ cơ hội ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang giai đoạn S2 bằng cách tạo áp lực thời gian với chương trình khuyến mãi, đồng thời tiếp tục xác nhận thông tin."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói 20% cũng hấp dẫn đấy, nhưng tôi vẫn cần thêm thông tin và thời gian để suy nghĩ đã.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ em hiểu ạ. Tuy nhiên, nếu mình bỏ lỡ ưu đãi này thì chi phí có thể sẽ cao hơn đến 40-50 triệu đồng so với dự kiến ban đầu, chưa kể việc sắp xếp lịch thi công nữa. Chị có muốn em tư vấn sơ bộ lại về gói dịch vụ để chị nắm rõ hơn không ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo thêm áp lực về mặt tài chính và lịch trình, đồng thời đưa ra lựa chọn tư vấn để tiếp tục giữ liên lạc và xây dựng niềm tin."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu em, nhưng tôi vẫn muốn xem lại thông tin một cách cẩn thận trước khi quyết định.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1426,
+      "output_tokens": 2460
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 5896,
+      "output_tokens": 596
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 7529,
+      "output_tokens": 284
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003735,
+    "output_usd": 0.01396,
+    "total_usd": 0.017695
+  }
+}

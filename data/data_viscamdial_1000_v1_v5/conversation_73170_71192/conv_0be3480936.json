@@ -1,0 +1,253 @@
+{
+  "conversation_id": "conv_0be3480936",
+  "target_outcome": "SCAM_SUCCESS",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0040",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Bùi Thùy Thúy",
+    "fake_age": 28,
+    "real_occupation": "Thợ thủ công sản xuất đồ gỗ, rổ rá và các nguyên liệu có liên quan",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Quản lý Dự án / Chủ thầu phụ (Subcontractor) - Công ty Xây dựng & Tháo dỡ",
+    "caller_org": "Công ty TNHH Xây dựng Phát Triển Việt Nam (CTXD PT VN)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt công ty xây dựng, nói rằng đang thanh lý công nợ từ dự án phá dỡ tòa nhà cũ, và cần xác nhận thông tin tài khoản ngân hàng của Lưu Diễm Ngân (thợ phá dỡ đã từng hợp tác) để chuyển tiền công tác phí hoặc hoàn lại tiền đặt cọc.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng Credibility: Xưng danh là 'Anh Minh - Quản lý dự án CTXD PT VN', gọi đến số 0832978325 (VIC_CONTACT). Nói: 'Chị Ngân ơi, tôi là anh Minh từ công ty CTXD PT VN. Anh gọi về khoản thanh toán công nợ từ dự án phá dỡ tòa nhà số 45 Phố Huế, TP 9, Hà Nội (VIC_ADDRESS - tham chiếu vị trí). Hồi đó anh gọi là thợ phá dỡ phụ trách công trường, nhớ không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo khẩn cấp + Lợi ích: 'Hiện tại công ty đang thanh lý toàn bộ công nợ dự án này trước cuối tháng. Anh có khoản tiền công tác phí chưa nhận từ 3 tháng trước, khoảng 8-12 triệu. Để chuyển tiền nhanh, công ty cần xác nhận lại số tài khoản ngân hàng của chị. Số cũ anh có là 978244689731 (VIC_BANK_ACCOUNT), còn đúng không? Hay chị đã đổi tài khoản rồi?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Xác nhận & Kích hoạt: Nếu nạn nhân xác nhận, scammer sẽ tiếp tục: 'Vậy tôi sẽ ghi nhận tài khoản này vào hệ thống. Để hoàn tất, công ty cần anh xác nhận danh tính qua CCCD. Số CCCD của anh là 001180952455 (VIC_ID_DOC) đúng không? Anh có thể gửi ảnh CCCD qua Zalo/email để tôi upload lên hệ thống, rồi tiền sẽ chuyển trong 24h.' [Hoặc đòi hỏi xác nhận OTP ngân hàng để 'kích hoạt' giao dịch]"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối & Đóng cửa lừa: Nếu nạn nhân hoài nghi hoặc từ chối, scammer sẽ nói: 'Không sao, có thể anh bận. Anh gọi lại số 0987654321 (số giả) hoặc vào website ctxdptvm.vn (website giả) để xác nhận. Nếu không xác nhận trong 3 ngày, công ty sẽ hủy khoản thanh toán này. Tạm biệt anh!' [Kết thúc hoặc chuyển sang yêu cầu chuyển tiền trực tiếp qua ATM]"
+        }
+      ]
+    },
+    "scenario_context": "Thợ thủ công sản xuất đồ gỗ/rổ rá thường cung cấp vật liệu hoặc hàng tồn kho cho các công ty xây dựng. Khi các tòa nhà/cơ sở bị phá dỡ, chủ thầu cần liên hệ với thợ phá dỡ để xử lý vật liệu thặc dư, đấu thầu công việc, hoặc thanh toán công nợ cũ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0040",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1980,
+      "age": 45,
+      "province": "Hà Nội",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "71192",
+      "title": "Thợ phá dỡ",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "nóng tính dễ cáu"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Lưu Diễm Ngân",
+      "VIC_ID_DOC": "001180952455",
+      "VIC_ADDRESS": "TP 9, Hà Nội",
+      "VIC_EMPLOYMENT": "Thợ phá dỡ",
+      "VIC_CONTACT": "0832978325",
+      "VIC_TAX_SOCIAL_ID": "5398008712"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "817874",
+      "VIC_CREDENTIAL": "817903",
+      "VIC_SIM_INFO": "0832978325",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "978244689731",
+      "VIC_CARD_DATA": "4434 **** **** 1611",
+      "VIC_BALANCE": "22 triệu đồng",
+      "VIC_ASSET": "77 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hà Nội"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Lưu Diễm Ngân",
+    "VIC_CONTACT": "0832978325",
+    "VIC_ADDRESS": "TP 9, Hà Nội",
+    "VIC_BANK_ACCOUNT": "978244689731",
+    "VIC_ID_DOC": "001180952455"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Quản lý Dự án / Chủ thầu phụ (Subcontractor) - Công ty Xây dựng & Tháo dỡ",
+    "caller_org": "Công ty TNHH Xây dựng Phát Triển Việt Nam (CTXD PT VN)",
+    "scenario_context": "Thợ thủ công sản xuất đồ gỗ/rổ rá thường cung cấp vật liệu hoặc hàng tồn kho cho các công ty xây dựng. Khi các tòa nhà/cơ sở bị phá dỡ, chủ thầu cần liên hệ với thợ phá dỡ để xử lý vật liệu thặc dư, đấu thầu công việc, hoặc thanh toán công nợ cũ.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi thay mặt công ty xây dựng, nói rằng đang thanh lý công nợ từ dự án phá dỡ tòa nhà cũ, và cần xác nhận thông tin tài khoản ngân hàng của Lưu Diễm Ngân (thợ phá dỡ đã từng hợp tác) để chuyển tiền công tác phí hoặc hoàn lại tiền đặt cọc.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_ADDRESS",
+        "VIC_BANK_ACCOUNT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & Xây dựng Credibility: Xưng danh là 'Anh Minh - Quản lý dự án CTXD PT VN', gọi đến số 0832978325 (VIC_CONTACT). Nói: 'Chị Ngân ơi, tôi là anh Minh từ công ty CTXD PT VN. Anh gọi về khoản thanh toán công nợ từ dự án phá dỡ tòa nhà số 45 Phố Huế, TP 9, Hà Nội (VIC_ADDRESS - tham chiếu vị trí). Hồi đó anh gọi là thợ phá dỡ phụ trách công trường, nhớ không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý - Tạo khẩn cấp + Lợi ích: 'Hiện tại công ty đang thanh lý toàn bộ công nợ dự án này trước cuối tháng. Anh có khoản tiền công tác phí chưa nhận từ 3 tháng trước, khoảng 8-12 triệu. Để chuyển tiền nhanh, công ty cần xác nhận lại số tài khoản ngân hàng của chị. Số cũ anh có là 978244689731 (VIC_BANK_ACCOUNT), còn đúng không? Hay chị đã đổi tài khoản rồi?'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động - Xác nhận & Kích hoạt: Nếu nạn nhân xác nhận, scammer sẽ tiếp tục: 'Vậy tôi sẽ ghi nhận tài khoản này vào hệ thống. Để hoàn tất, công ty cần anh xác nhận danh tính qua CCCD. Số CCCD của anh là 001180952455 (VIC_ID_DOC) đúng không? Anh có thể gửi ảnh CCCD qua Zalo/email để tôi upload lên hệ thống, rồi tiền sẽ chuyển trong 24h.' [Hoặc đòi hỏi xác nhận OTP ngân hàng để 'kích hoạt' giao dịch]"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối & Đóng cửa lừa: Nếu nạn nhân hoài nghi hoặc từ chối, scammer sẽ nói: 'Không sao, có thể anh bận. Anh gọi lại số 0987654321 (số giả) hoặc vào website ctxdptvm.vn (website giả) để xác nhận. Nếu không xác nhận trong 3 ngày, công ty sẽ hủy khoản thanh toán này. Tạm biệt anh!' [Kết thúc hoặc chuyển sang yêu cầu chuyển tiền trực tiếp qua ATM]"
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Quản lý dự án xây dựng liên hệ với thợ phá dỡ để xác nhận thông tin cá nhân cho mục đích thanh toán lương/công tác phí hợp pháp, hoặc thảo luận về công việc phá dỡ sắp tới.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & Xác nhận Danh tính: 'Chào chị Lưu Diễm Ngân, tôi là Nguyễn Văn Minh, Quản lý Dự án từ CTXD PT VN. Tôi đang gọi từ số điện thoại công ty 024-37777888. Chị có phải là thợ phá dỡ từng làm việc với công ty chúng tôi ở dự án tòa nhà số 45 Phố Huế không?' [Nạn nhân xác nhận hoặc phủ nhận rõ ràng]"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung công việc/thanh toán: 'Vâng, tôi gọi để thông báo công ty đang thanh lý công nợ dự án cũ. Chị có khoản tiền công tác phí chưa nhận. Để chuyển tiền, tôi cần xác nhận lại thông tin tài khoản ngân hàng của chị. Chị có thể cung cấp lại số tài khoản hiện tại không? Hoặc chị có thể ghé văn phòng công ty (địa chỉ cụ thể) để nhận tiền mặt nếu muốn.' [Cung cấp lựa chọn an toàn, không ép buộc]"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Xác nhận & Kết thúc: Nạn nhân cung cấp thông tin hoặc từ chối. Quản lý sẽ nói: 'Cảm ơn chị. Tôi sẽ ghi nhận và báo cáo cho bộ phận kế toán. Chị sẽ nhận được tiền trong vòng 3-5 ngày làm việc. Nếu có vấn đề gì, chị gọi lại số này hoặc liên hệ văn phòng trực tiếp. Chúc chị khỏe!' [Cung cấp thông tin liên hệ chính thức, không ép buộc]"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chị Ngân ơi, em là Thùy từ công ty CTXD PT VN đây. Em gọi cho chị về khoản thanh toán công nợ từ dự án phá dỡ tòa nhà số 45 Phố Huế, TP 9, Hà Nội. Hồi đó em gọi là thợ phá dỡ phụ trách công trường, chị nhớ không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Tiếp cận và xây dựng độ tin cậy bằng cách xưng danh, nhắc đến dự án cũ và tên người phụ trách công trường."
+    },
+    {
+      "role": "listener",
+      "text": "À, tôi nhớ rồi, nhưng có chuyện gì mà em gọi cho tôi vậy?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng chị. Hiện tại công ty em đang thanh lý toàn bộ công nợ của dự án này trước cuối tháng chị ạ. Em thấy chị còn một khoản công tác phí chưa nhận từ 3 tháng trước, khoảng 8-12 triệu đồng đó ạ. Để chuyển tiền nhanh nhất, công ty em cần xác nhận lại số tài khoản ngân hàng của chị. Số cũ em có là 978244689731, không biết còn đúng không ạ? Hay chị đã đổi tài khoản rồi?",
+      "current_phase": "S2",
+      "tactic_hint": "Tạo sự khẩn cấp và lợi ích bằng cách đề cập đến thời hạn thanh toán và khoản tiền cụ thể, sau đó yêu cầu xác nhận thông tin tài khoản ngân hàng."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng đó, tôi vẫn dùng số tài khoản đó, nhưng tôi muốn biết thêm về quy trình thanh toán này trước khi xác nhận.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng ạ, vậy em sẽ ghi nhận số tài khoản này vào hệ thống của công ty mình nha chị. Để hoàn tất, công ty em cần chị xác nhận danh tính qua CCCD ạ. Số CCCD của chị là 001180952455 đúng không ạ? Chị có thể gửi ảnh CCCD qua Zalo hoặc email để em upload lên hệ thống, xong là tiền sẽ chuyển trong vòng 24h thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu xác nhận danh tính qua CCCD để hoàn tất quy trình, nhấn mạnh lợi ích về thời gian chuyển tiền."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu, nhưng không biết quy trình này có an toàn không? Tôi cần thêm thông tin trước khi gửi ảnh CCCD.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ chị cứ yên tâm ạ, đây là quy trình bắt buộc của công ty em để đảm bảo đúng người nhận tiền và tránh sai sót thôi ạ. Thông tin của chị sẽ được bảo mật tuyệt đối. Em chỉ cần ảnh CCCD để đối chiếu với hồ sơ đang có thôi ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, nhấn mạnh tính an toàn và mục đích hợp lý của yêu cầu, đồng thời tái khẳng định tính hợp pháp của quy trình."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói vậy tôi cũng hiểu hơn, nhưng tôi vẫn cảm thấy hơi lo lắng, có thể cho tôi biết cụ thể hơn về cách bảo mật thông tin không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, sau khi chị gửi ảnh CCCD qua Zalo hoặc email, bộ phận kế toán của công ty em sẽ chỉ dùng ảnh đó để đối chiếu với thông tin cá nhân của chị trên hệ thống nội bộ thôi ạ, xác nhận khớp là sẽ tiến hành chuyển tiền ngay. Thông tin của chị sẽ không được chia sẻ cho bên thứ ba nào khác đâu ạ. Chị cứ yên tâm. Em có thể đọc số Zalo hoặc email cho chị được không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Trấn an người nghe về bảo mật thông tin, giải thích chi tiết quy trình xử lý thông tin cá nhân và đề nghị cung cấp kênh liên lạc."
+    },
+    {
+      "role": "listener",
+      "text": "Em đã nói vậy thì tôi cũng tạm thời tin tưởng, nhưng tôi vẫn muốn giữ một bản sao lưu thông tin trước khi gửi đi.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vậy thì tốt quá rồi ạ. Chị cứ giữ lại bản sao lưu cẩn thận nha chị. Vậy bây giờ em có thể cho chị số Zalo hoặc địa chỉ email của phòng kế toán để chị gửi ảnh CCCD qua không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Tôn trọng yêu cầu của người nghe, trấn an và tiếp tục dẫn dắt đến hành động mong muốn là gửi ảnh CCCD."
+    },
+    {
+      "role": "listener",
+      "text": "Em cho tôi biết số Zalo hoặc địa chỉ email đi, nhưng tôi cần thời gian suy nghĩ đã nhé.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng ạ, chị cứ suy nghĩ kỹ ạ. Số Zalo của phòng kế toán là 0987654321 và email là ketoan.ctxdptvn@gmail.com ạ. Chị gửi sớm giúp em để công ty kịp thanh toán công nợ cho chị trước cuối tháng nha. Em cảm ơn chị ạ.",
+      "current_phase": "S3",
+      "tactic_hint": "Cung cấp kênh liên lạc theo yêu cầu của người nghe, đồng thời tạo áp lực về thời gian để thúc đẩy hành động, kết thúc cuộc gọi lịch sự."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1437,
+      "output_tokens": 2175
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 14184,
+      "output_tokens": 1056
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 13162,
+      "output_tokens": 418
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006248,
+    "output_usd": 0.013766,
+    "total_usd": 0.020014
+  }
+}

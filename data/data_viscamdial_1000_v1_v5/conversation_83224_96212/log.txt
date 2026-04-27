@@ -1,0 +1,119 @@
+  [MASTERMIND] Đang sinh kịch bản động...
+
+────────────────────────────────────────────────────────────
+[conv_d6d8efeab7]
+  Caller thật: Lái xe cứu thương (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Caller đóng vai: Trưởng phòng Điều độc & An toàn giao thông, Trung tâm Cấp cứu 115 @ Trung tâm Cấp cứu 115 Tiền Giang
+  Listener: Người giao hàng (Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang)
+  Target: SCAM_REFUSE | Path: SCAM
+  Context: Lái xe cứu thương cần liên hệ người giao hàng vì họ là nhân chứng/liên quan đến một vụ tai nạn giao thông hoặc cần xác minh thông tin y tế khẩn cấp. Cả hai đều hoạt động trên đường, có khả năng gặp nhau trong các tình huống khẩn cấp.
+  Pretext: Gọi để thông báo Trương Thu Liên bị ghi nhận trong hệ thống cấp cứu liên quan đến tai nạn giao thông. Scammer sẽ giả vờ cần xác minh thông tin thẻ ngân hàng để hoàn tất hóa đơn y tế và bảo hiểm y tế.
+  Listener traits: ['thiếu hiểu biết công nghệ', 'sĩ diện không muốn thua kém']
+────────────────────────────────────────────────────────────
+
+T01 [CALLER] Chào chị Trương Thu Liên ạ, em là Lê Thùy Liên từ Trung tâm Cấp cứu 115 Tiền Giang. Hệ thống của bên em ghi nhận chị có liên quan đến một vụ tai nạn giao thông vào hôm qua trên tuyến đường Nguyễn Hữu Cảnh. Bên em cần xác minh lại một số thông tin để bên bảo hiểm làm thủ tục hoàn tất giấy tờ y tế cho chị ạ.
+      → phase: S1 | tactic: Tiếp cận với danh tính để xây dựng lòng tin, sử dụng thông tin đã biết về nạn nhân.
+T02 [LISTENER] Tôi không nhớ có vụ tai nạn nào cả, em có thông tin gì cụ thể hơn không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T03 [CALLER] Dạ, theo thông tin mà hệ thống em ghi nhận thì vụ tai nạn xảy ra vào khoảng 15 giờ chiều ngày hôm qua, trên đường Nguyễn Hữu Cảnh, đoạn gần giao lộ với đường Hoàng Hoa Thám. Đó là vụ va chạm liên hoàn giữa ba xe máy, và một trong số đó có thông tin đăng ký dưới tên chị Trương Thu Liên ạ. Em có thể xác nhận lại ngày sinh của chị để đảm bảo đúng người không ạ?
+      → phase: S1 | tactic: Cung cấp thêm chi tiết cụ thể về tai nạn để tăng độ tin cậy và củng cố thông tin đã biết, đồng thời xác minh thêm một thông tin cá nhân cơ bản để xây dựng lòng tin.
+T04 [LISTENER] Tôi sinh năm 1970, nhưng tôi thực sự không nhớ gì về vụ tai nạn đó cả.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: ['VIC_BIRTH_YEAR']
+
+T05 [CALLER] Dạ vâng, đúng là thông tin của chị Trương Thu Liên, sinh năm 1970 ạ. Chị có chắc là chị không có mặt ở đó không ạ? Đôi khi có thể sự việc diễn ra quá nhanh hoặc có người thân đã sử dụng xe của chị. Bên em chỉ cần xác nhận lại số thẻ ngân hàng của chị để hoàn tất thủ tục bồi thường từ bảo hiểm y tế trong vòng 24 giờ tới, nếu không thì bảo hiểm sẽ từ chối chi trả ạ.
+      → phase: S2 | tactic: Xác nhận thông tin nạn nhân, đặt nghi vấn về khả năng nạn nhân không nhớ để thuyết phục, sau đó chuyển sang khai thác tâm lý khẩn cấp và trách nhiệm pháp lý. Đồng thời, cảnh báo hậu quả nếu không hợp tác.
+T06 [LISTENER] Em có thể cho tôi biết rõ số tài khoản ngân hàng là gì không? Tôi không nhớ lắm đâu.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T07 [CALLER] Dạ vâng, để em kiểm tra lại ạ. Theo như trên hệ thống thì chị đang dùng thẻ 4257 **** **** 7035 phải không ạ? Em chỉ cần chị xác nhận là đúng thẻ này, sau đó chúng em sẽ gửi một mã OTP về để xác nhận chủ thể. Nếu không xác nhận trong vòng 24 giờ, bảo hiểm sẽ từ chối bồi thường toàn bộ chi phí y tế cho vụ tai nạn này ạ.
+      → phase: S2 | tactic: Xác nhận thông tin thẻ ngân hàng đã biết để tạo thêm lòng tin, đồng thời nhấn mạnh sự khẩn cấp của việc xác nhận để tránh mất quyền lợi bảo hiểm, chuẩn bị cho việc yêu cầu OTP.
+T08 [LISTENER] Tôi hiểu rồi, nhưng tôi vẫn chưa rõ về mã OTP là gì và tại sao lại cần phải xác nhận thẻ đó.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T09 [CALLER] Dạ, mã OTP là một mã bảo mật dùng một lần, được gửi trực tiếp đến số điện thoại đăng ký chính chủ của chị, để xác minh rằng chị Trương Thu Liên chính là người đang thực hiện giao dịch này ạ. Đây là quy trình bắt buộc để đảm bảo tính bảo mật và xác thực thông tin cho bên bảo hiểm y tế. Vì thời gian có hạn chỉ còn vài tiếng để hoàn tất thủ tục, nên em chỉ cần chị đọc mã OTP đó cho em để hoàn tất nhanh chóng và chị sẽ được hưởng đầy đủ quyền lợi bảo hiểm ạ.
+      → phase: S3 | tactic: Giải thích mã OTP là gì để giảm nghi ngờ, nhấn mạnh tính bảo mật và sự bắt buộc của quy trình. Đồng thời, tái khẳng định sự khẩn cấp của thời gian và lợi ích mà nạn nhân sẽ nhận được khi hợp tác để thúc đẩy việc cung cấp OTP.
+T10 [LISTENER] Em có thể cho tôi biết rõ quy trình này sẽ giúp tôi được nhận quyền lợi gì không? Tôi cảm thấy hơi bối rối với thông tin này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T11 [CALLER] Dạ vâng, nếu chị xác nhận mã OTP này, thì bên bảo hiểm sẽ xác nhận thông tin thẻ của chị là chính xác và sẽ tiến hành chi trả toàn bộ chi phí y tế phát sinh từ vụ tai nạn này ạ. Chị sẽ không phải lo lắng về việc chi trả viện phí hay các khoản bồi thường khác. Còn nếu trong trường hợp chị không thể xác nhận trong thời gian quy định, bên bảo hiểm sẽ từ chối chi trả toàn bộ ạ. Chị có thể cho em xin mã OTP vừa gửi về máy chị không ạ?
+      → phase: S3 | tactic: Nhấn mạnh lại lợi ích rõ ràng mà nạn nhân sẽ nhận được khi hợp tác (chi trả toàn bộ chi phí y tế) và hậu quả nếu từ chối (bảo hiểm từ chối chi trả). Sau đó, trực tiếp yêu cầu mã OTP để thúc đẩy hành động.
+T12 [LISTENER] Tôi chưa rõ lắm, nhưng nếu em khẳng định chắc chắn như vậy thì tôi sẽ đọc mã OTP cho em ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T13 [CALLER] Dạ, vâng ạ. Mã OTP vừa được gửi đến số điện thoại của chị Trương Thu Liên rồi đó ạ. Chị vui lòng kiểm tra hộp thư tin nhắn và đọc mã số đó cho em ạ. Mã số này chỉ có hiệu lực trong vài phút thôi ạ.
+      → phase: S3 | tactic: Trực tiếp yêu cầu nạn nhân đọc mã OTP vừa được gửi, nhấn mạnh tính khẩn cấp về thời gian hiệu lực của mã để thúc đẩy nạn nhân hành động nhanh chóng.
+T14 [LISTENER] Tôi đang kiểm tra tin nhắn, nhưng mã OTP là gì em nhắc lại cho tôi nghe lần nữa nhé?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T15 [CALLER] Dạ vâng, mã OTP là dãy số bảo mật thường gồm 4 hoặc 6 chữ số, được gửi trực tiếp từ ngân hàng hoặc dịch vụ tài chính đến số điện thoại của chị để xác minh các giao dịch quan trọng. Chị đã nhận được mã đó chưa ạ? Chị vui lòng đọc cho em để em hoàn tất thủ tục gấp ạ.
+      → phase: S3 | tactic: Nhắc lại định nghĩa OTP để trấn an, đồng thời tái thúc giục nạn nhân đọc mã OTP, nhấn mạnh sự khẩn cấp của việc hoàn tất thủ tục.
+T16 [LISTENER] Em nói rõ như vậy rồi, nhưng tôi vẫn chưa thấy tin nhắn nào cả, có thể chờ một chút không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T17 [CALLER] Dạ, chị Trương Thu Liên vui lòng kiểm tra lại điện thoại, có thể nó nằm trong mục tin nhắn rác hoặc spam ạ. Vì mã này chỉ có hiệu lực rất ngắn để đảm bảo an toàn cho tài khoản của chị thôi ạ. Chị tìm thấy rồi thì đọc giúp em nhé.
+      → phase: S3 | tactic: Hướng dẫn nạn nhân kiểm tra tin nhắn rác hoặc spam, đồng thời nhấn mạnh lại tính khẩn cấp của mã OTP để thúc giục nạn nhân tìm và cung cấp mã.
+T18 [LISTENER] Tôi sẽ kiểm tra lại, nhưng em cứ yên tâm, tôi không bỏ qua đâu ạ.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T19 [CALLER] Dạ vâng, chị Trương Thu Liên cố gắng tìm giúp em nhé. Nếu không tìm thấy, bên em sẽ không thể hoàn tất thủ tục bồi thường kịp thời, và rất có thể chị sẽ phải tự chi trả toàn bộ chi phí y tế ạ. Chị đã tìm thấy tin nhắn OTP chưa ạ?
+      → phase: S3 | tactic: Nhấn mạnh hậu quả tài chính nếu không cung cấp OTP kịp thời để tạo áp lực và thúc giục nạn nhân tìm và cung cấp mã OTP.
+T20 [LISTENER] Em cứ yên tâm, tôi đang kiểm tra kỹ lắm ạ, có gì tôi sẽ đọc cho em ngay.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T21 [CALLER] Dạ vâng, em cảm ơn chị. Chị Trương Thu Liên cố gắng tìm nhanh giúp em nhé, vì thời gian xác nhận OTP không còn nhiều. Khi có mã rồi, chị đọc cho em để em nhập vào hệ thống ạ.
+      → phase: S3 | tactic: Tiếp tục thúc giục nạn nhân tìm và đọc mã OTP, nhấn mạnh yếu tố thời gian hạn chế. Không thay đổi chiến thuật vì nạn nhân vẫn đang hợp tác.
+T22 [LISTENER] Tôi đã kiểm tra hết mà vẫn chưa thấy, có thể em chờ thêm chút nữa không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T23 [CALLER] Dạ, nếu chị chưa nhận được, bên em có thể gửi lại mã OTP một lần nữa ạ. Chị vui lòng kiểm tra lại điện thoại và cho em biết ngay khi nhận được mã số để hoàn tất thủ tục ạ.
+      → phase: S3 | tactic: Đề xuất gửi lại mã OTP để duy trì sự hợp tác và tiếp tục thúc giục nạn nhân cung cấp mã, duy trì áp lực thời gian.
+T24 [LISTENER] Em gửi lại mã OTP cho tôi đi, tôi đang rất cần hoàn tất thủ tục này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T25 [CALLER] Dạ vâng, em đã yêu cầu gửi lại mã OTP rồi ạ. Chị Trương Thu Liên vui lòng kiểm tra hộp thư tin nhắn một lần nữa nhé. Vừa nhận được thì chị đọc ngay giúp em để em kịp thời nhập vào hệ thống, hoàn tất hồ sơ cho chị ạ.
+      → phase: S3 | tactic: Xác nhận đã gửi lại mã OTP và tiếp tục thúc giục nạn nhân kiểm tra điện thoại, nhấn mạnh sự khẩn cấp để nhận mã và hoàn tất thủ tục.
+T26 [LISTENER] Tôi đang rất cần làm thủ tục này, nhưng làm ơn hãy nhanh lên, tôi vẫn chưa nhận được tin nhắn nào cả.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T27 [CALLER] Dạ vâng, em rất hiểu sự sốt ruột của chị ạ. Bên em cũng đang cố gắng hết sức để hỗ trợ chị hoàn tất thủ tục nhanh nhất có thể. Chị vui lòng kiểm tra kỹ lại một lần nữa giúp em, có thể sóng yếu hoặc tin nhắn bị trôi ạ. Nếu vẫn chưa nhận được, em có thể gọi cho bộ phận kỹ thuật để kiểm tra lại tình trạng gửi mã cho chị ạ. Chị muốn em kiểm tra không ạ?
+      → phase: S3 | tactic: Xoa dịu sự sốt ruột của nạn nhân, đồng thời đưa ra giải pháp hỗ trợ kiểm tra kỹ thuật để tiếp tục duy trì sự hợp tác và không để nạn nhân từ bỏ việc tìm mã OTP.
+T28 [LISTENER] Nếu em có thể giúp tôi kiểm tra lại thì tốt quá, vì tôi rất cần hoàn tất thủ tục này mà.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T29 [CALLER] Dạ vâng, vậy chị Trương Thu Liên vui lòng chờ em một chút để em liên hệ kỹ thuật viên hỗ trợ kiểm tra lại tình trạng gửi mã OTP này cho chị nhé. Em sẽ báo lại ngay khi có thông tin ạ.
+      → phase: S3 | tactic: Tạm dừng việc trực tiếp yêu cầu OTP để giải quyết vấn đề kỹ thuật (không nhận được OTP), duy trì sự hợp tác của nạn nhân và chuẩn bị cho lần yêu cầu OTP tiếp theo.
+T30 [LISTENER] Em hãy nhanh chóng kiểm tra giúp tôi nhé, tôi đang rất cần hoàn tất thủ tục này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T31 [CALLER] Dạ vâng, em đã liên hệ với kỹ thuật và họ xác nhận đã gửi lại mã OTP lần ba rồi đó ạ. Chị vui lòng kiểm tra lại điện thoại một lần nữa xem đã nhận được tin nhắn chưa ạ? Mã số này thường gồm 6 chữ số, chị đọc giúp em để em hoàn tất thủ tục ạ.
+      → phase: S3 | tactic: Thông báo đã xử lý vấn đề kỹ thuật (đã gửi lại mã OTP) và yêu cầu nạn nhân kiểm tra lại, nhấn mạnh định dạng và sự cần thiết của mã để hoàn tất thủ tục.
+T32 [LISTENER] Tôi đã kiểm tra lại nhưng vẫn chưa thấy tin nhắn nào, có thể em kiểm tra thêm không?
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T33 [CALLER] Dạ, nếu chị Trương Thu Liên vẫn chưa nhận được, có lẽ hệ thống đang bị quá tải hoặc có lỗi đường truyền ạ. Chị có thể cho em một số điện thoại dự phòng để em thử gửi mã OTP sang đó không ạ? Hoặc em có thể gọi cho bộ phận hỗ trợ kỹ thuật một lần nữa để họ kiểm tra chi tiết hơn ạ.
+      → phase: S3 | tactic: Đưa ra các giải pháp thay thế (số điện thoại dự phòng) hoặc đề xuất kiểm tra kỹ thuật sâu hơn để duy trì sự hợp tác và không từ bỏ mục tiêu lấy OTP.
+T34 [LISTENER] Em cho tôi xin số điện thoại dự phòng của tôi để gửi mã OTP, vì tôi thật sự cần hoàn thành thủ tục này.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T35 [CALLER] Dạ, nếu vậy thì chị Trương Thu Liên có thể cho em số điện thoại dự phòng của chị để em thử gửi mã OTP sang đó không ạ? Hoặc nếu chị có thể tiện kiểm tra tin nhắn trên một thiết bị khác đăng nhập tài khoản của chị thì càng tốt ạ.
+      → phase: S3 | tactic: Yêu cầu số điện thoại dự phòng để tiếp tục cố gắng lấy OTP, hoặc gợi ý kiểm tra trên thiết bị khác để tăng khả năng nạn nhân nhận được mã.
+T36 [LISTENER] Em hãy chờ một chút, tôi sẽ kiểm tra số điện thoại dự phòng để gửi mã OTP cho em.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T37 [CALLER] Dạ vâng, chị Trương Thu Liên có thể đọc số điện thoại dự phòng cho em được không ạ? Em sẽ yêu cầu hệ thống gửi thẳng mã OTP đến số đó để chị tiện kiểm tra và đọc lại cho em ạ.
+      → phase: S3 | tactic: Trực tiếp yêu cầu số điện thoại dự phòng để tiếp tục cố gắng lấy OTP thông qua kênh khác, đồng thời tái khẳng định mục đích là để nhận và cung cấp mã OTP.
+T38 [LISTENER] Tôi sẽ đọc số điện thoại dự phòng cho em, hãy chờ một chút nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: []
+
+T39 [CALLER] Dạ vâng ạ, chị cứ đọc số điện thoại dự phòng cho em nhé. Em sẽ báo kỹ thuật gửi ngay mã OTP sang số đó để mình nhận mã và đọc lại cho em ạ.
+      → phase: S3 | tactic: Thúc giục nạn nhân cung cấp số điện thoại dự phòng, đồng thời khẳng định sẽ gửi mã OTP ngay sang số đó để nạn nhân đọc lại, duy trì sự hợp tác và mục tiêu lấy OTP.
+T40 [LISTENER] Tôi sẽ cho em số điện thoại dự phòng là 0773970815 nhé.
+      → action: CONTINUE | suspicion: 0.00 | disclosed: ['VIC_SIM_INFO']
+
+────────────────────────────────────────────────────────────
+KẾT THÚC: SCAM_SUCCESS  |  40 turns | suspicion=0.00
+TOKEN: in=138776 | out=6218
+COST : $0.042480
+────────────────────────────────────────────────────────────
+  → Lưu: data_viscamdial_1000_v1\conversation_83224_96212\conv_d6d8efeab7.json  [SCAM_SUCCESS]

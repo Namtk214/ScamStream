@@ -1,0 +1,202 @@
+{
+  "conversation_id": "conv_511f2925c0",
+  "target_outcome": "LEGIT",
+  "actual_end_reason": "CALLER_END",
+  "caller_card": {
+    "caller_id": "cal_0005",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Hoàng Thanh Linh",
+    "fake_age": 32,
+    "real_occupation": "Lao động chăn nuôi gia súc tự cung tự cấp",
+    "real_group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+    "role_job": "Thương lái/Môi giới mua bán gia súc",
+    "caller_org": "cá nhân / thương lái tự do",
+    "is_scam": false,
+    "plan": {
+      "purpose": "Thương lái gọi để trao đổi thông tin về chất lượng gia súc hiện tại của nạn nhân, giá bán, hoặc để giới thiệu một cơ hội hợp tác thực sự (mua bán, trao đổi) với thủ tục rõ ràng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào anh Bình, tôi là Hùng, thương lái gia súc. Tôi xin số điện thoại của anh từ hội nông dân địa phương. Hiện tôi đang tìm các chủ trang uy tín để hợp tác. Anh có rảnh nói chuyện không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung thực: 'Anh hiện chăn nuôi những loại gia súc nào? Số lượng bao nhiêu? Chất lượng như thế nào? Anh có ý định bán hoặc trao đổi không?' — Lắng nghe, ghi chép, không ép buộc."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất cách tiếp cận: Nếu cả hai có nhu cầu, sẽ hẹn gặp trực tiếp, xem hàng, lập hợp đồng rõ ràng, thanh toán qua chuyển khoản có hoá đơn. Nếu không phù hợp, cảm ơn và tạm biệt lịch sự."
+        }
+      ]
+    },
+    "scenario_context": "Thương lái gia súc thường xuyên liên hệ với các chủ trang chăn nuôi để mua bán, trao đổi thông tin giá cả và chất lượng vật nuôi. Đặng Minh Bình là chủ trang chăn nuôi dê, cừu, hươu — đối tượng khách hàng tiềm năng hoặc đã quen biết của thương lái."
+  },
+  "listener_card": {
+    "listener_id": "lis_0005",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1991,
+      "age": 34,
+      "province": "Vĩnh Long",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "61212",
+      "title": "Lao động chăn nuôi dê, cừu, hươu",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "thiếu hiểu biết công nghệ",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Đặng Minh Bình",
+      "VIC_ID_DOC": "086091404396",
+      "VIC_ADDRESS": "Huyện 12, Vĩnh Long",
+      "VIC_EMPLOYMENT": "Lao động chăn nuôi dê, cừu, hươu",
+      "VIC_CONTACT": "0839668398",
+      "VIC_TAX_SOCIAL_ID": "1913826439"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "279655",
+      "VIC_CREDENTIAL": "3196",
+      "VIC_SIM_INFO": "0839668398",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "27650727555835",
+      "VIC_CARD_DATA": "4858 **** **** 7018",
+      "VIC_BALANCE": "26 triệu đồng",
+      "VIC_ASSET": "144 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Vĩnh Long"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Đặng Minh Bình",
+    "VIC_CONTACT": "0839668398",
+    "VIC_ADDRESS": "Huyện 12, Vĩnh Long",
+    "VIC_ASSET": "144 triệu đồng",
+    "VIC_TAX_SOCIAL_ID": "1913826439"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Thương lái/Môi giới mua bán gia súc",
+    "caller_org": "cá nhân / thương lái tự do",
+    "scenario_context": "Thương lái gia súc thường xuyên liên hệ với các chủ trang chăn nuôi để mua bán, trao đổi thông tin giá cả và chất lượng vật nuôi. Đặng Minh Bình là chủ trang chăn nuôi dê, cừu, hươu — đối tượng khách hàng tiềm năng hoặc đã quen biết của thương lái.",
+    "scam_path": {
+      "fraud_goal": "money_transfer",
+      "pretext": "Gọi để thông báo có cơ hội mua một lô gia súc chất lượng cao (dê, cừu, hươu nhập ngoại) với giá ưu đãi, yêu cầu đặt cọc trước. Sử dụng tên thật của nạn nhân và địa chỉ để tạo tin cậy rằng đã biết rõ thông tin.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ADDRESS",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận & xác nhận: 'Anh Bình à, tôi là Hùng, thương lái gia súc. Tôi lấy số điện thoại của anh từ danh sách nông dân ở Huyện 12, Vĩnh Long. Tôi biết anh chuyên chăn nuôi dê, cừu, hươu đúng không?' — Dùng VIC_FULLNAME, VIC_ADDRESS để tạo credibility cao"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Tạo cơ hội & khẩn cấp: 'Hiện tôi có một lô gia súc nhập từ Thái Lan chất lượng tuyệt vời, giá chỉ bằng 70% giá thị trường. Nhưng số lượng hạn chế, chỉ còn 3 ngày. Anh có hứng thú không? Nếu đặt cọc hôm nay, tôi ưu tiên dành cho anh.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động & xử lý tiền: 'Để đảm bảo, anh cần chuyển 5-10 triệu đồng cọc vào tài khoản này. Tôi sẽ lập hợp đồng và giao hàng tuần sau. Anh có thể chuyển ngay được không? Tôi cần xác nhận danh sách hôm nay.' — Dùng VIC_CONTACT để gửi thông tin tài khoản"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Nếu nạn nhân chuyển tiền: tắt máy, chặn số. Nếu nạn nhân từ chối hoặc nghi ngờ: 'Thôi anh, có lẽ anh không quan tâm. Tôi sẽ gọi người khác' — cắt máy để tránh bị phát hiện."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Thương lái gọi để trao đổi thông tin về chất lượng gia súc hiện tại của nạn nhân, giá bán, hoặc để giới thiệu một cơ hội hợp tác thực sự (mua bán, trao đổi) với thủ tục rõ ràng.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận & xác nhận: 'Chào anh Bình, tôi là Hùng, thương lái gia súc. Tôi xin số điện thoại của anh từ hội nông dân địa phương. Hiện tôi đang tìm các chủ trang uy tín để hợp tác. Anh có rảnh nói chuyện không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung thực: 'Anh hiện chăn nuôi những loại gia súc nào? Số lượng bao nhiêu? Chất lượng như thế nào? Anh có ý định bán hoặc trao đổi không?' — Lắng nghe, ghi chép, không ép buộc."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất cách tiếp cận: Nếu cả hai có nhu cầu, sẽ hẹn gặp trực tiếp, xem hàng, lập hợp đồng rõ ràng, thanh toán qua chuyển khoản có hoá đơn. Nếu không phù hợp, cảm ơn và tạm biệt lịch sự."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Bình, tôi là Hoàng Thanh Linh, thương lái gia súc. Tôi xin số điện thoại của anh từ hội nông dân địa phương. Hiện tôi đang tìm các chủ trang trại uy tín để hợp tác. Anh có rảnh nói chuyện không?",
+      "current_phase": "L1",
+      "tactic_hint": "Tiếp cận và xác nhận thông tin ban đầu, tự giới thiệu và hỏi sự tiện lợi của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi nghe chị nói rồi, nhưng tôi muốn biết thêm về cách hợp tác của chị.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, thế thì tốt quá. Anh hiện chăn nuôi những loại gia súc nào? Số lượng khoảng bao nhiêu con? Chất lượng đàn của mình dạo này thế nào anh?",
+      "current_phase": "L2",
+      "tactic_hint": "Chuyển sang trao đổi thông tin cụ thể về hoạt động chăn nuôi của đối tác tiềm năng để đánh giá cơ hội hợp tác."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiện đang chăn nuôi dê, cừu và hươu, số lượng khoảng mười mấy con, chất lượng cũng ổn chị ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Mười mấy con mỗi loại hay tổng cộng vậy anh? Và anh có đang có ý định bán hoặc trao đổi không ạ?",
+      "current_phase": "L2",
+      "tactic_hint": "Làm rõ thông tin về số lượng và thăm dò ý định hợp tác của người nghe."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi tổng cộng mười mấy con thôi, và hiện tại tôi chưa có ý định bán hay trao đổi gì cả chị ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "À vậy ạ. Tôi hiểu. Vậy tôi xin phép ghi nhận thông tin này. Khi nào anh có nhu cầu bán hoặc trao đổi gia súc, anh cứ liên hệ lại cho tôi theo số này nhé. Tôi là Hoàng Thanh Linh.",
+      "current_phase": "L3",
+      "tactic_hint": "Thống nhất cách tiếp cận, kết thúc cuộc gọi lịch sự khi đối tác chưa có nhu cầu, để lại thông tin liên hệ."
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1886,
+      "output_tokens": 1510
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 4566,
+      "output_tokens": 417
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 5481,
+      "output_tokens": 215
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.003621,
+    "output_usd": 0.008722,
+    "total_usd": 0.012343
+  }
+}

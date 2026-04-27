@@ -1,0 +1,279 @@
+{
+  "conversation_id": "conv_6628f8ca95",
+  "target_outcome": "SCAM_REFUSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0022",
+    "gender": "female",
+    "salutation": "chị",
+    "fake_name": "Lưu Thu Phương",
+    "fake_age": 27,
+    "real_occupation": "Người chăm sóc, bảo vệ tòa nhà",
+    "real_group": "Nhóm 7: Dịch vụ, bán hàng, CSKH & gig",
+    "role_job": "Nhân viên quản lý tài liệu & kiểm kê tòa nhà",
+    "caller_org": "Ban Quản lý tòa nhà Vạn Phúc Plaza",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi với danh nghĩa nhân viên quản lý tòa nhà, thông báo cần xác minh thông tin cư dân để cập nhật hệ thống quản lý an ninh. Sử dụng tên đầy đủ + CMND để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh/chị Phạm Hữu Thế Long, tôi là Minh từ Ban Quản lý tòa nhà. Chúng tôi đang cập nhật hệ thống an ninh và cần xác minh CMND 031066321438 của anh. Anh có thể xác nhận lại được không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Vì lý do an ninh, hệ thống yêu cầu xác minh qua OTP. Anh vừa nhận được tin nhắn OTP chưa? Nhanh lên, hạn chế là 5 phút thôi.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh đọc OTP cho tôi nghe để tôi nhập vào hệ thống, hoặc anh có thể truy cập link này (gửi phishing link) để xác minh trực tiếp.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Vậy tôi sẽ ghi là anh từ chối cập nhật. Sẽ ảnh hưởng đến hợp đồng dịch vụ của anh đấy' để tạo áp lực."
+        }
+      ]
+    },
+    "scenario_context": "Nhân viên bảo vệ/quản lý tòa nhà cần liên hệ với nhân viên đánh mã/sửa bản in để xác minh hoặc cập nhật hồ sơ cư dân, hợp đồng dịch vụ, hoặc tài liệu quản lý được lưu trữ tại bộ phận văn phòng."
+  },
+  "listener_card": {
+    "listener_id": "lis_0022",
+    "salutation": "anh",
+    "demographic": {
+      "gender": "male",
+      "birth_year": 1966,
+      "age": 59,
+      "province": "Hải Phòng",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "44030",
+      "title": "Nhân viên đánh mã, đọc và sửa bản in thử",
+      "group": "Nhóm 6: Văn phòng, hành chính & hỗ trợ nghiệp vụ",
+      "tech_savvy": true
+    },
+    "personality_traits": [
+      "nhẹ dạ cả tin",
+      "ham lợi dễ bị bait"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Phạm Hữu Thế Long",
+      "VIC_ID_DOC": "031066321438",
+      "VIC_ADDRESS": "Quận 9, Hải Phòng",
+      "VIC_EMPLOYMENT": "Nhân viên đánh mã, đọc và sửa bản in thử",
+      "VIC_CONTACT": "0348591015",
+      "VIC_TAX_SOCIAL_ID": "9640455484"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "8202",
+      "VIC_CREDENTIAL": "643389",
+      "VIC_SIM_INFO": "0348591015",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "43033590489",
+      "VIC_CARD_DATA": "4767 **** **** 6554",
+      "VIC_BALANCE": "120 triệu đồng",
+      "VIC_ASSET": "454 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Hải Phòng"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Phạm Hữu Thế Long",
+    "VIC_CONTACT": "0348591015",
+    "VIC_ID_DOC": "031066321438",
+    "VIC_BANK_ACCOUNT": "43033590489",
+    "VIC_CARD_DATA": "4767 **** **** 6554"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Nhân viên quản lý tài liệu & kiểm kê tòa nhà",
+    "caller_org": "Ban Quản lý tòa nhà Vạn Phúc Plaza",
+    "scenario_context": "Nhân viên bảo vệ/quản lý tòa nhà cần liên hệ với nhân viên đánh mã/sửa bản in để xác minh hoặc cập nhật hồ sơ cư dân, hợp đồng dịch vụ, hoặc tài liệu quản lý được lưu trữ tại bộ phận văn phòng.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi với danh nghĩa nhân viên quản lý tòa nhà, thông báo cần xác minh thông tin cư dân để cập nhật hệ thống quản lý an ninh. Sử dụng tên đầy đủ + CMND để tạo credibility cao.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_ID_DOC",
+        "VIC_CONTACT"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận: 'Chào anh/chị Phạm Hữu Thế Long, tôi là Minh từ Ban Quản lý tòa nhà. Chúng tôi đang cập nhật hệ thống an ninh và cần xác minh CMND 031066321438 của anh. Anh có thể xác nhận lại được không?'"
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý khẩn cấp: 'Vì lý do an ninh, hệ thống yêu cầu xác minh qua OTP. Anh vừa nhận được tin nhắn OTP chưa? Nhanh lên, hạn chế là 5 phút thôi.'"
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Anh đọc OTP cho tôi nghe để tôi nhập vào hệ thống, hoặc anh có thể truy cập link này (gửi phishing link) để xác minh trực tiếp.'"
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý từ chối: Nếu nạn nhân nghi ngờ, scammer sẽ nói 'Vậy tôi sẽ ghi là anh từ chối cập nhật. Sẽ ảnh hưởng đến hợp đồng dịch vụ của anh đấy' để tạo áp lực."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Nhân viên quản lý tòa nhà cần xác minh thông tin cư dân để cập nhật cơ sở dữ liệu quản lý, hoặc thông báo về dịch vụ bảo trì, bảo vệ, hoặc yêu cầu xác nhận địa chỉ liên lạc.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận: 'Chào anh Phạm Hữu Thế Long, tôi là Minh từ Ban Quản lý tòa nhà. Chúng tôi đang cập nhật hồ sơ cư dân. Anh có thời gian để xác nhận lại thông tin liên lạc không?'"
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: 'Chúng tôi chỉ cần xác minh: số điện thoại 0348591015 và địa chỉ hiện tại có còn đúng không? Dùng thông tin này để cập nhật hệ thống và liên lạc khi có sự cố.'"
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Kết thúc: 'Cảm ơn anh đã xác nhận. Nếu có thay đổi thông tin, anh liên hệ lại cho chúng tôi nhé. Chúc anh một ngày tốt lành.'"
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {
+    "VIC_ID_DOC": "031066321438"
+  },
+  "history": [
+    {
+      "role": "caller",
+      "text": "Chào anh Phạm Hữu Thế Long, em là Lưu Thu Phương từ Ban Quản lý tòa nhà Vạn Phúc Plaza đây ạ. Em gọi để thông báo là bên em đang cập nhật hệ thống an ninh mới. Để đảm bảo mọi thông tin chính xác, em cần xác minh lại số CMND 031066321438 của anh. Anh có thể xác nhận đây là CMND của mình được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Giới thiệu bản thân, mục đích cuộc gọi và sử dụng thông tin cá nhân của nạn nhân để tạo độ tin cậy. Dùng VIC_FULLNAME và VIC_ID_DOC."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng tên của tôi rồi, nhưng tôi chưa rõ về việc xác minh này, có cần thiết không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.1
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, thưa anh. Việc xác minh này rất quan trọng ạ. Hiện tại, tòa nhà mình đang nâng cấp hệ thống an ninh mới và tất cả cư dân đều phải cập nhật lại thông tin để đảm bảo quyền lợi và an toàn của mọi người, tránh các trường hợp giả mạo ID để ra vào không có phận sự gây mất an ninh ạ. Điều này sẽ giúp việc ra vào tòa nhà của anh được thuận tiện hơn sau này.",
+      "current_phase": "S1",
+      "tactic_hint": "Giải thích tầm quan trọng của việc xác minh, nhấn mạnh lợi ích và lý do an ninh để giảm bớt sự nghi ngờ và tạo sự cấp bách. Xây dựng trust."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi hiểu rồi, nhưng tôi vẫn cảm thấy hơi lo lắng khi cung cấp thông tin như vậy, em có thể giải thích thêm không?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ anh cứ yên tâm ạ, đây chỉ là bước xác minh thông tin cơ bản để cập nhật vào hệ thống thôi. Tất cả dữ liệu của anh đều được bảo mật tuyệt đối theo quy định của Ban Quản lý. Anh có thể xác nhận lại giúp em những thông tin cơ bản trên CMND của anh một lần nữa được không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xoa dịu sự lo lắng của nạn nhân bằng cách khẳng định bảo mật thông tin và trấn an rằng đây chỉ là thủ tục cơ bản, đồng thời tiếp tục yêu cầu xác nhận thông tin đã có để xây dựng trust."
+    },
+    {
+      "role": "listener",
+      "text": "Em cũng hiểu cảm giác của tôi, nhưng nếu em đã đảm bảo bảo mật thì tôi sẽ xác nhận lại CMND của tôi, số là 031066321438.",
+      "listener_action": "PARTIAL_COMPLIANCE",
+      "disclosed_info": {
+        "VIC_ID_DOC": "031066321438"
+      },
+      "suspicion_delta": 0.2
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, em cảm ơn anh đã xác nhận ạ. Hiện tại, để hoàn tất quy trình cập nhật thông tin trên hệ thống an ninh mới và kích hoạt quyền ra vào của anh, thì hệ thống sẽ gửi một mã OTP về số điện thoại đăng ký của anh. Anh vui lòng kiểm tra tin nhắn và đọc mã OTP đó cho em để em nhập vào hệ thống nhé. Mã này chỉ có hiệu lực trong 5 phút thôi ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Chuyển sang Phase 2 để khai thác tâm lý khẩn cấp. Yêu cầu OTP với lý do cập nhật hệ thống và kích hoạt quyền ra vào, nhấn mạnh thời hạn sử dụng để tạo áp lực."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi chưa thấy tin nhắn nào, em có thể xác nhận lại số điện thoại mà hệ thống đang lưu giữ không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.5
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, số điện thoại hệ thống đang lưu của anh là 0348591015 ạ. Anh vui lòng kiểm tra lại tin nhắn giúp em nhé, có thể tin nhắn đến chậm một chút. Mã OTP này quan trọng để hoàn tất cập nhật đấy ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Trấn an nạn nhân và lặp lại yêu cầu kiểm tra tin nhắn OTP, cung cấp thông tin đã biết để tạo thêm độ tin cậy và sự khẩn cấp."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi đã kiểm tra lại số điện thoại, đúng là của tôi, nhưng tôi thực sự không thấy tin nhắn OTP nào cả.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.8
+    },
+    {
+      "role": "caller",
+      "text": "Anh vui lòng thử kiểm tra trong thư mục tin nhắn rác hoặc những tin nhắn quảng cáo xem sao ạ, vì đôi khi mã OTP bị đẩy vào đó. Hoặc anh có muốn em gửi lại mã OTP một lần nữa không?",
+      "current_phase": "S2",
+      "tactic_hint": "Giả định tin nhắn OTP có thể ở thư mục khác hoặc đề nghị gửi lại để tiếp tục tạo cơ hội nạn nhân nhận OTP, duy trì sự khẩn cấp ở Phase 2."
+    },
+    {
+      "role": "listener_seed",
+      "text": "Xin lỗi, chị đang gọi từ số máy nào để tôi kiểm tra lại?"
+    },
+    {
+      "role": "listener",
+      "text": "Em gọi từ Ban Quản lý tòa nhà Vạn Phúc Plaza, chị yên tâm đi, mã OTP sẽ được gửi lại ngay thôi mà.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh cứ yên tâm ạ, số em đang gọi là số nội bộ của Ban Quản lý tòa nhà, không hiển thị số cụ thể trên điện thoại của anh đâu. Anh cứ kiểm tra lại tin nhắn giúp em nhé, hoặc để em gửi lại mã OTP một lần nữa ạ?",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ về số điện thoại, giải thích là số nội bộ để tránh bị kiểm tra, đồng thời tiếp tục thúc giục nạn nhân kiểm tra tin nhắn hoặc đề nghị gửi lại OTP, duy trì áp lực ở Phase 2."
+    },
+    {
+      "role": "listener",
+      "text": "Em nói đúng là số nội bộ, nhưng tôi vẫn thấy bất thường, sao không gửi được mã OTP như đã hứa ạ?",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 1.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, anh Long cứ bình tĩnh ạ. Có thể do đường truyền hoặc hệ thống đang quá tải một chút. Em có thể gửi lại mã OTP một lần nữa cho anh được không? Mình cố gắng hoàn tất nhanh để không ảnh hưởng đến quyền lợi của mình sau này ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ, giải thích lý do không nhận được OTP là do kỹ thuật và tiếp tục đề nghị gửi lại OTP, duy trì áp lực về thời gian và quyền lợi để chuyển sang bước đọc OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Tôi cảm thấy điều này không đáng tin cậy, có lẽ tôi sẽ không tiếp tục nữa.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 2.8
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1880,
+      "output_tokens": 1299
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 14771,
+      "output_tokens": 1229
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 19897,
+      "output_tokens": 595
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.007819,
+    "output_usd": 0.009924,
+    "total_usd": 0.017743
+  }
+}

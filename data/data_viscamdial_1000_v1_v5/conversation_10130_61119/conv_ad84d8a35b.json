@@ -1,0 +1,255 @@
+{
+  "conversation_id": "conv_ad84d8a35b",
+  "target_outcome": "SCAM_EXPOSE",
+  "actual_end_reason": "SCAM_REFUSE",
+  "caller_card": {
+    "caller_id": "cal_0049",
+    "gender": "male",
+    "salutation": "anh",
+    "fake_name": "Tạ Tiến Quân",
+    "fake_age": 29,
+    "real_occupation": "Bí thư, Phó Bí thư Đảng ủy khối trực thuộc trung ương",
+    "real_group": "Nhóm 1: Lãnh đạo, quản lý công và quản lý cấp cao",
+    "role_job": "Cán bộ liên lạc / Điều phối viên chương trình hỗ trợ nông nghiệp",
+    "caller_org": "Cơ quan Đảng ủy khối (Văn phòng hỗ trợ nông dân)",
+    "is_scam": true,
+    "plan": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để xác minh thông tin hỗ trợ lương tối thiểu nông dân năm 2025, nêu rõ tên đầy đủ 'Bùi Hồng Thu Lan' và số điện thoại từ danh sách hộ gia đình, yêu cầu xác nhận thông tin tài khoản để chuyển tiền hỗ trợ trực tiếp.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: Xưng danh là 'Cán bộ Văn phòng Đảng ủy khối, phòng hỗ trợ nông dân', gọi tên đầy đủ 'Bùi Hồng Thu Lan' từ danh sách, xác nhận số điện thoại 0834575582 để tạo ảo giác đã xác minh được danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + khẩn cấp: Thông báo 'Chương trình hỗ trợ nông dân tháng này có quỹ tăng, bạn được hưởng 5-10 triệu, nhưng phải xác nhận ngay hôm nay, nếu không sẽ chuyển cho người khác'. Tạo cảm giác lợi ích lớn nhưng thời gian sắp hết."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để chuyển tiền vào tài khoản của bạn, tôi cần gửi mã OTP xác minh. Bạn sẽ nhận được tin nhắn, hãy đọc mã cho tôi nghe để hoàn tất thủ tục'. Nếu có phản kháng, nói 'Đây là quy trình bảo mật, tất cả người lao động đều phải làm như vậy'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân cung cấp OTP, scammer dùng để truy cập tài khoản ngân hàng hoặc chuyển tiền. Nếu nạn nhân từ chối, nói 'Được, tôi sẽ ghi chú bạn bỏ qua lần này, gọi lại sau' để tránh nghi ngờ."
+        }
+      ]
+    },
+    "scenario_context": "Bí thư/Phó Bí thư Đảng ủy khối có trách nhiệm triển khai chương trình hỗ trợ nông dân, cấp phát hỗ trợ, hoặc xác minh thông tin người lao động nông nghiệp để cập nhật danh sách thụ hưởng. Lao động nông nghiệp như Bùi Hồng Thu Lan là đối tượng tiềm năng được quản lý, hỗ trợ."
+  },
+  "listener_card": {
+    "listener_id": "lis_0049",
+    "salutation": "chị",
+    "demographic": {
+      "gender": "female",
+      "birth_year": 1990,
+      "age": 35,
+      "province": "Bình Thuận",
+      "city_tier": "urban"
+    },
+    "occupation": {
+      "code": "61119",
+      "title": "Lao động trồng, thu hoạch cây mùa vụ khác",
+      "group": "Nhóm 8: Lao động tay nghề, nông nghiệp, phổ thông & vũ trang",
+      "tech_savvy": false
+    },
+    "personality_traits": [
+      "dễ bị lừa bởi authority"
+    ],
+    "A1_identity": {
+      "VIC_FULLNAME": "Bùi Hồng Thu Lan",
+      "VIC_ID_DOC": "060190102883",
+      "VIC_ADDRESS": "Huyện 7, Bình Thuận",
+      "VIC_EMPLOYMENT": "Lao động trồng, thu hoạch cây mùa vụ khác",
+      "VIC_CONTACT": "0834575582",
+      "VIC_TAX_SOCIAL_ID": "7484833319"
+    },
+    "A2_authentication_targets": {
+      "VIC_OTP": "7306",
+      "VIC_CREDENTIAL": "3859",
+      "VIC_SIM_INFO": "0834575582",
+      "VIC_BIOMETRIC": "face_id"
+    },
+    "A3_financial": {
+      "VIC_BANK_ACCOUNT": "131799346211",
+      "VIC_CARD_DATA": "4539 **** **** 4867",
+      "VIC_BALANCE": "88 triệu đồng",
+      "VIC_ASSET": "152 triệu đồng"
+    },
+    "A4_sensitive_context": {
+      "LOCATION": "Bình Thuận"
+    }
+  },
+  "known_info_for_caller": {
+    "VIC_FULLNAME": "Bùi Hồng Thu Lan",
+    "VIC_CONTACT": "0834575582",
+    "VIC_CARD_DATA": "4539 **** **** 4867"
+  },
+  "mastermind_plan": {
+    "caller_role_job": "Cán bộ liên lạc / Điều phối viên chương trình hỗ trợ nông nghiệp",
+    "caller_org": "Cơ quan Đảng ủy khối (Văn phòng hỗ trợ nông dân)",
+    "scenario_context": "Bí thư/Phó Bí thư Đảng ủy khối có trách nhiệm triển khai chương trình hỗ trợ nông dân, cấp phát hỗ trợ, hoặc xác minh thông tin người lao động nông nghiệp để cập nhật danh sách thụ hưởng. Lao động nông nghiệp như Bùi Hồng Thu Lan là đối tượng tiềm năng được quản lý, hỗ trợ.",
+    "scam_path": {
+      "fraud_goal": "otp_extraction",
+      "pretext": "Gọi để xác minh thông tin hỗ trợ lương tối thiểu nông dân năm 2025, nêu rõ tên đầy đủ 'Bùi Hồng Thu Lan' và số điện thoại từ danh sách hộ gia đình, yêu cầu xác nhận thông tin tài khoản để chuyển tiền hỗ trợ trực tiếp.",
+      "key_weapon_used": [
+        "VIC_FULLNAME",
+        "VIC_CONTACT",
+        "VIC_CARD_DATA"
+      ],
+      "phases": [
+        {
+          "phase_id": "S1",
+          "objective": "Tiếp cận + Xây dựng tin cậy: Xưng danh là 'Cán bộ Văn phòng Đảng ủy khối, phòng hỗ trợ nông dân', gọi tên đầy đủ 'Bùi Hồng Thu Lan' từ danh sách, xác nhận số điện thoại 0834575582 để tạo ảo giác đã xác minh được danh tính."
+        },
+        {
+          "phase_id": "S2",
+          "objective": "Khai thác tâm lý ham lợi + khẩn cấp: Thông báo 'Chương trình hỗ trợ nông dân tháng này có quỹ tăng, bạn được hưởng 5-10 triệu, nhưng phải xác nhận ngay hôm nay, nếu không sẽ chuyển cho người khác'. Tạo cảm giác lợi ích lớn nhưng thời gian sắp hết."
+        },
+        {
+          "phase_id": "S3",
+          "objective": "Yêu cầu hành động: 'Để chuyển tiền vào tài khoản của bạn, tôi cần gửi mã OTP xác minh. Bạn sẽ nhận được tin nhắn, hãy đọc mã cho tôi nghe để hoàn tất thủ tục'. Nếu có phản kháng, nói 'Đây là quy trình bảo mật, tất cả người lao động đều phải làm như vậy'."
+        },
+        {
+          "phase_id": "S4",
+          "objective": "Xử lý sau: Nếu nạn nhân cung cấp OTP, scammer dùng để truy cập tài khoản ngân hàng hoặc chuyển tiền. Nếu nạn nhân từ chối, nói 'Được, tôi sẽ ghi chú bạn bỏ qua lần này, gọi lại sau' để tránh nghi ngờ."
+        }
+      ]
+    },
+    "legit_path": {
+      "purpose": "Cập nhật danh sách hỗ trợ nông dân, xác minh thông tin cá nhân để cấp phát chương trình hỗ trợ lương tối thiểu hoặc bảo hiểm xã hội cho lao động nông nghiệp.",
+      "phases": [
+        {
+          "phase_id": "L1",
+          "objective": "Tiếp cận + Xác nhận: Xưng danh là 'Cán bộ Văn phòng Đảng ủy khối, phòng hỗ trợ nông dân', gọi tên và xác nhận số điện thoại từ danh sách hộ gia đình đã được Uỷ ban Nhân dân địa phương cung cấp."
+        },
+        {
+          "phase_id": "L2",
+          "objective": "Trao đổi nội dung: Thông báo về chương trình hỗ trợ (lương tối thiểu, bảo hiểm, dự án hỗ trợ nông nghiệp), xác minh địa chỉ, tài khoản ngân hàng hiện tại, số người phụ thuộc. Không yêu cầu OTP, mã PIN, hoặc thông tin thẻ tín dụng qua điện thoại."
+        },
+        {
+          "phase_id": "L3",
+          "objective": "Thống nhất hành động: Hẹn người lao động đến trụ sở Uỷ ban Nhân dân hoặc Chi nhánh ngân hàng địa phương để ký giấy tờ và cập nhật thông tin chính thức, hoặc thông báo sẽ gửi thư/SMS chính thức từ cơ quan. Chào tạm biệt lịch sự."
+        }
+      ]
+    }
+  },
+  "all_disclosed_info": {},
+  "history": [
+    {
+      "role": "caller",
+      "text": "Alo, tôi là Tạ Tiến Quân, cán bộ Văn phòng Đảng ủy khối, phòng hỗ trợ nông dân. Tôi gọi từ danh sách hộ gia đình để xác minh thông tin cho chương trình hỗ trợ lương tối thiểu. Có phải chị Bùi Hồng Thu Lan số điện thoại 0834575582 đúng không ạ?",
+      "current_phase": "S1",
+      "tactic_hint": "Xưng danh rõ ràng, vị trí công tác tin cậy, nêu rõ mục đích gọi, và sử dụng thông tin cá nhân chính xác của nạn nhân để tạo niềm tin và khẳng định tính chính thống của cuộc gọi."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, tôi là Bùi Hồng Thu Lan đây, em cần xác minh thông tin gì ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chào chị. Chúng tôi đang có chương trình hỗ trợ lương tối thiểu cho nông dân năm 2025. Theo danh sách, chị đủ điều kiện nhận một khoản hỗ trợ từ 5 đến 10 triệu đồng ạ. Chị có muốn xác nhận để nhận khoản tiền này không?",
+      "current_phase": "S2",
+      "tactic_hint": "Thông báo về khoản hỗ trợ lớn để kích thích lòng tham, đồng thời tạo cảm giác đây là một cơ hội có hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Em rất vui khi nghe tin này, nhưng em cần biết thêm thông tin cụ thể về chương trình hỗ trợ ạ.",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, chị Lan yên tâm. Chương trình này là của Văn phòng Đảng ủy khối phối hợp với Bộ Nông nghiệp & Phát triển Nông thôn để hỗ trợ bà con nông dân gặp khó khăn. Khoản hỗ trợ này sẽ được chuyển trực tiếp vào tài khoản ngân hàng của chị. Hiện tại, chúng tôi chỉ cần chị xác nhận một vài thông tin tài khoản để hoàn tất thủ tục chuyển tiền thôi ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Xoa dịu sự nghi ngờ bằng cách cung cấp thêm thông tin về nguồn gốc chương trình và trấn an về tính hợp pháp, đồng thời xác nhận lại về hình thức chuyển tiền trực tiếp vào tài khoản để chuẩn bị cho bước yêu cầu thông tin tài khoản."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em cần biết những thông tin gì cụ thể ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, để hoàn tất việc chuyển tiền hỗ trợ, tôi cần chị xác nhận số tài khoản ngân hàng của mình ạ. Chị cho tôi xin 4 số cuối của số thẻ là 4867 đúng không ạ?",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu xác nhận thông tin tài khoản ngân hàng và sử dụng thông tin thẻ ngân hàng đã biết (VIC_CARD_DATA) để tăng tính xác thực và chuẩn bị cho việc yêu cầu OTP."
+    },
+    {
+      "role": "listener",
+      "text": "Vâng, đúng rồi, nhưng em có cần phải cung cấp thêm thông tin gì khác không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ vâng, để đảm bảo tiền được chuyển chính xác vào tài khoản của chị và để xác nhận đây là giao dịch hợp lệ từ phía chị, bên ngân hàng sẽ gửi một mã OTP về số điện thoại của chị. Chị vui lòng đọc mã đó cho tôi để hoàn tất thủ tục nhận hỗ trợ nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Yêu cầu hành động cung cấp OTP, giải thích đây là bước xác thực giao dịch để chuyển tiền một cách chính đáng."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa từng nghe về mã OTP, em có thể được giải thích thêm không ạ?",
+      "listener_action": "CONTINUE",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Vâng, mã OTP là mã xác thực dùng một lần, ngân hàng gửi về để đảm bảo chỉ có chị mới có quyền thực hiện giao dịch này. Chị cứ yên tâm, đây là quy trình bảo mật chuẩn để ngân hàng xác nhận chị là chủ tài khoản và có thể nhận khoản hỗ trợ này ạ. Chị vui lòng kiểm tra tin nhắn và đọc mã đó giúp tôi để hoàn thành nốt nhé.",
+      "current_phase": "S3",
+      "tactic_hint": "Giảm thiểu sự nghi ngờ và xoa dịu nạn nhân bằng cách giải thích ý nghĩa của mã OTP như một biện pháp bảo mật hợp lý, nhấn mạnh rằng nó là quy trình tiêu chuẩn để xác thực chủ tài khoản và nhận tiền, qua đó tiếp tục thúc đẩy nạn nhân cung cấp mã."
+    },
+    {
+      "role": "listener",
+      "text": "Em chưa rõ lắm về quy trình này, em cần thêm thời gian để kiểm tra lại ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    },
+    {
+      "role": "caller",
+      "text": "Dạ, nếu chị cần thêm thời gian để kiểm tra, tôi sẽ ghi nhận lại đây. Nhưng mà chị lưu ý là chương trình này chỉ áp dụng xác nhận trong hôm nay thôi ạ, nếu không thì khoản hỗ trợ này sẽ được chuyển cho bà con khác đang trong danh sách chờ đó ạ.",
+      "current_phase": "S2",
+      "tactic_hint": "Tái kích hoạt tâm lý khẩn cấp và ham lợi (S2) để khuyến khích nạn nhân hành động nhanh chóng, đồng thời giảm bớt áp lực bằng cách cho phép nạn nhân 'kiểm tra lại' nhưng vẫn gắn với khung thời gian giới hạn."
+    },
+    {
+      "role": "listener",
+      "text": "Em hiểu rồi, nhưng em thật sự cần thời gian để suy nghĩ thêm về thông tin này ạ.",
+      "listener_action": "REFUSAL",
+      "disclosed_info": {},
+      "suspicion_delta": 0.0
+    }
+  ],
+  "token_usage": {
+    "anthropic/claude-haiku-4.5": {
+      "input_tokens": 1867,
+      "output_tokens": 1618
+    },
+    "google/gemini-2.5-flash": {
+      "input_tokens": 11862,
+      "output_tokens": 1061
+    },
+    "openai/gpt-4o-mini": {
+      "input_tokens": 15849,
+      "output_tokens": 459
+    }
+  },
+  "cost_usd": {
+    "input_usd": 0.006617,
+    "output_usd": 0.011018,
+    "total_usd": 0.017635
+  }
+}
