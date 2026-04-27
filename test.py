@@ -252,7 +252,43 @@ def main():
     save_errors_excel(raw, all_labels, all_d_probs, all_t_probs, args.threshold,
                       os.path.join(out_dir, "test_errors.xlsx"))
 
+    # Error analysis — 20 samples per type
+    print_error_samples(raw, all_labels, all_d_probs, all_t_probs, args.threshold,
+                        max_per_type=20)
+
     print("\nDone!")
+
+
+def print_error_samples(raw, all_labels, all_d_probs, all_t_probs, threshold,
+                        max_per_type=20):
+    """Print top False Positives and False Negatives with turn-by-turn probs."""
+    FP, FN = [], []
+    for idx, (label, d_prob, t_probs) in enumerate(zip(all_labels, all_d_probs, all_t_probs)):
+        pred = 1 if d_prob >= threshold else 0
+        if label == 0 and pred == 1:
+            FP.append((idx, d_prob, t_probs, raw[idx]["turns"][:len(t_probs)]))
+        elif label == 1 and pred == 0:
+            FN.append((idx, d_prob, t_probs, raw[idx]["turns"][:len(t_probs)]))
+
+    print(f"\n  Total errors: FP={len(FP)}, FN={len(FN)}")
+
+    print(f"\n{'='*65}")
+    print(f"  FALSE POSITIVES (harmless → predicted scam) — top {min(len(FP), max_per_type)}")
+    print(f"{'='*65}")
+    for idx, dp, tps, turns in sorted(FP, key=lambda x: -x[1])[:max_per_type]:
+        print(f"\n  [FP #{idx}] p_final={dp:.4f}  ({len(turns)} turns)")
+        for t, (p, turn) in enumerate(zip(tps, turns), 1):
+            alert = " [!]" if p >= threshold else ""
+            print(f"    T{t}: p={p:.4f}{alert}  {str(turn)[:90]}")
+
+    print(f"\n{'='*65}")
+    print(f"  FALSE NEGATIVES (scam → predicted harmless) — top {min(len(FN), max_per_type)}")
+    print(f"{'='*65}")
+    for idx, dp, tps, turns in sorted(FN, key=lambda x: x[1])[:max_per_type]:
+        print(f"\n  [FN #{idx}] p_final={dp:.4f}  ({len(turns)} turns)")
+        for t, (p, turn) in enumerate(zip(tps, turns), 1):
+            alert = " [!]" if p >= threshold else ""
+            print(f"    T{t}: p={p:.4f}{alert}  {str(turn)[:90]}")
 
 
 if __name__ == "__main__":
