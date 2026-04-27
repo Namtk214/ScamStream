@@ -72,9 +72,10 @@ class StreamingInferenceEngine:
         Returns:
           {
             "turn_index":  int   (0-based),
-            "probability": float P(SCAM),
-            "is_scam":     bool,
-            "prefix_prob": float  Noisy-OR–style prefix score (max over turns so far),
+            "q_t":         float  per-turn evidence P(SCAM),
+            "p_agg":       float  Noisy-OR cumulative (monotonically non-decreasing),
+            "is_scam":     bool   p_agg >= alert_thresh,
+            "probability": float  (alias for p_agg, backward compat),
           }
         """
         # Tokenize turn mới
@@ -89,7 +90,7 @@ class StreamingInferenceEngine:
         mask_t = enc["attention_mask"]  # [1, L]
 
         # Thêm vào buffer
-        buf = self._buffers.setdefault(dialogue_id, {"ids": [], "masks": []})
+        buf = self._buffers.setdefault(dialogue_id, {"ids": [], "masks": [], "p_agg": 0.0})
         buf["ids"].append(ids_t.squeeze(0))
         buf["masks"].append(mask_t.squeeze(0))
 
@@ -117,16 +118,21 @@ class StreamingInferenceEngine:
 
         output = self.model(input_ids, attn_masks, turn_mask)
         turn_probs = output["turn_probs"][0, :T].cpu().tolist()  # [T]
-        p_t = turn_probs[-1]
+        q_t = turn_probs[-1]   # per-turn evidence
 
-        prefix_prob = max(turn_probs)  # đơn giản: max qua các turns
-        turn_index  = T - 1
+        # Online Noisy-OR update: p_agg = 1 - (1 - p_prev) * (1 - q_t)
+        p_agg_prev = buf["p_agg"]
+        p_agg = 1.0 - (1.0 - p_agg_prev) * (1.0 - q_t)
+        buf["p_agg"] = p_agg
+
+        turn_index = T - 1
 
         return {
-            "turn_index":  turn_index,
-            "probability": p_t,
-            "is_scam":     p_t >= self.cfg.alert_thresh,
-            "prefix_prob": prefix_prob,
+            "turn_index":     turn_index,
+            "q_t":            q_t,
+            "p_agg":          p_agg,
+            "is_scam":        p_agg >= self.cfg.alert_thresh,
+            "probability":    p_agg,       # backward compat alias
             "all_turn_probs": turn_probs,
         }
 
@@ -193,11 +199,11 @@ def _demo():
 
         results = engine.predict_conversation(conv["turns"], dialogue_id=conv["id"])
         for r in results:
-            bar    = "█" * int(r["probability"] * 20) + "░" * (20 - int(r["probability"] * 20))
+            bar    = "█" * int(r["p_agg"] * 20) + "░" * (20 - int(r["p_agg"] * 20))
             status = " ← ALERT" if r["is_scam"] else ""
             text   = conv["turns"][r["turn_index"]]["text"][:55]
-            print(f"  T{r['turn_index']+1:02d} [{bar}] p={r['probability']:.3f}{status}")
-            print(f"       \"{text}...\"" if len(text) >= 55 else f"       \"{text}\"")
+            print(f"  T{r['turn_index']+1:02d} [{bar}] q={r['q_t']:.3f} p_agg={r['p_agg']:.3f}{status}")
+            print(f"       \"{text}...\'" if len(text) >= 55 else f"       \"{text}\"")
 
 
 if __name__ == "__main__":

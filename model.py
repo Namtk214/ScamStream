@@ -1,5 +1,6 @@
 """
-M1 Classifier — HaLong Embedding + Causal CrossTurnAttention + U-shape Loss.
+M1 Classifier — HaLong Embedding + Causal CrossTurnAttention + U-shape Loss
+              + Weighted Prefix Auxiliary Loss (from Streaming-Bert Noisy-OR).
 
 Architecture:
   turn text → HaLong encoder ([CLS] token) → e_t [embed_dim]
@@ -7,11 +8,18 @@ Architecture:
             → CrossTurnAttention (causal: turn_t attends to h_0..h_{t-1})
             → MLP head → sigmoid → turn_probs [B, T]
 
-Training:
-  U-shape temporal weight + class balance:
-    w(t, N) = (2t/N - 1)^2 * (1 - w_floor) + w_floor
-  Lớn ở hai đầu (turn 0 và turn N), đáy ở giữa (turn N/2).
-  Phạt cả early miss lẫn late miss.
+Training Loss:
+  L_total = L_focal_ushape + λ × L_weighted_prefix
+
+  1) Focal × U-shape temporal weight × class balance (main):
+     w(t, N) = (2t/N - 1)^2 * (1 - w_floor) + w_floor
+     Lớn ở hai đầu (turn 0 và turn N), đáy ở giữa (turn N/2).
+     Phạt cả early miss lẫn late miss.
+
+  2) Weighted Prefix auxiliary (from Noisy-OR):
+     p_t_agg = 1 − ∏(1 − q_i)  — cumulative Noisy-OR trên turn_probs
+     L_prefix = Σ (2t/N) × BCE(p_t_agg, y)  — weight tuyến tính tăng
+     Thúc đẩy model predict đúng sớm dần.
 
 Streaming inference:
   Duy trì buffer turns đã encode; mỗi turn mới chạy full forward
@@ -72,6 +80,58 @@ def focal_u_shape_loss(turn_probs: torch.Tensor, labels: torch.Tensor,
                      torch.full_like(loss_per_sample, class_weight_harmless),
                      torch.ones_like(loss_per_sample))
     loss_per_sample = loss_per_sample * cw
+
+    return loss_per_sample.mean()
+
+
+def weighted_prefix_auxiliary_loss(turn_probs: torch.Tensor, labels: torch.Tensor,
+                                   turn_mask: torch.Tensor,
+                                   eps: float = 1e-6) -> torch.Tensor:
+    """
+    Weighted Prefix auxiliary loss sử dụng Noisy-OR aggregation.
+    (Adapted from Streaming-Bert weighted_prefix_loss.py)
+
+    Coi turn_probs như evidence probabilities q_t, tính:
+      p_t_agg = 1 − ∏_{i=0}^{t} (1 − q_i)   (cumulative Noisy-OR)
+    rồi apply weighted BCE:
+      L = Σ w_t × BCE(p_t_agg, y)   với w_t = 2t/N (tuyến tính tăng, 1-based)
+
+    Weight tuyến tính: turn đầu bị phạt nhẹ (model đang thiếu info),
+    turn cuối phạt nặng (đủ info nhưng vẫn sai).
+
+    Noisy-OR tính ở log-space để tránh underflow cho dialogue dài.
+    """
+    B, T = turn_probs.shape
+    q = turn_probs.clamp(eps, 1 - eps)                        # [B, T]
+
+    # ── Cumulative Noisy-OR ở log-space ──
+    # log(1 - p_t_agg) = Σ_{i=0}^{t} log(1 - q_i)
+    log_not_q  = torch.log1p(-q)                              # [B, T]
+    cumsum_log = torch.cumsum(log_not_q, dim=1)               # [B, T]
+    p_agg      = (1.0 - torch.exp(cumsum_log)).clamp(eps, 1 - eps)  # [B, T]
+
+    # Zero-out padding positions
+    p_agg = p_agg * turn_mask.float()
+    # Clamp lại sau masking để tránh log(0) trong BCE
+    p_agg = p_agg.clamp(eps, 1 - eps)
+
+    # ── Labels expanded ──
+    y = labels.float().unsqueeze(1).expand(B, T)              # [B, T]
+
+    # ── Per-prefix BCE ──
+    per_prefix_bce = F.binary_cross_entropy(
+        p_agg, y, reduction='none'
+    )                                                          # [B, T]
+
+    # ── Weights: w_t = 2t/N, t = 1..N (1-based), tuyến tính tăng ──
+    n     = turn_mask.sum(dim=1).clamp(min=1).float()          # [B]
+    t_idx = torch.arange(1, T + 1, dtype=torch.float32,
+                         device=q.device)                      # [T], 1-based
+    weights = 2.0 * t_idx.unsqueeze(0) / n.unsqueeze(1)       # [B, T]
+    weights = weights * turn_mask.float()                      # zero padding
+
+    # ── Per-sample weighted sum ──
+    loss_per_sample = (weights * per_prefix_bce).sum(dim=1)    # [B]
 
     return loss_per_sample.mean()
 
@@ -194,10 +254,22 @@ class M1Classifier(nn.Module):
 
         loss = None
         if labels is not None:
-            loss = focal_u_shape_loss(turn_probs, labels, turn_mask,
-                                      w_floor=self.cfg.w_floor,
-                                      gamma=self.cfg.focal_gamma,
-                                      class_weight_harmless=self.cfg.class_weight_harmless)
+            # Main loss: Focal × U-shape × Class balance
+            loss_focal = focal_u_shape_loss(
+                turn_probs, labels, turn_mask,
+                w_floor=self.cfg.w_floor,
+                gamma=self.cfg.focal_gamma,
+                class_weight_harmless=self.cfg.class_weight_harmless,
+            )
+
+            # Auxiliary loss: Weighted Prefix (Noisy-OR cumulative)
+            if self.cfg.weighted_lambda > 0:
+                loss_prefix = weighted_prefix_auxiliary_loss(
+                    turn_probs, labels, turn_mask,
+                )
+                loss = loss_focal + self.cfg.weighted_lambda * loss_prefix
+            else:
+                loss = loss_focal
 
         return {
             "loss":           loss,

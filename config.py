@@ -24,6 +24,12 @@ class M1Config:
     focal_gamma: float = 2.0          # focusing: 0=BCE thuần, 2=focal chuẩn
     class_weight_harmless: float = 8.0   # sample-level balance — 2× ratio to suppress FA
 
+    # Weighted Prefix auxiliary loss (from Streaming-Bert Noisy-OR)
+    # L_total = L_focal_ushape + λ × L_weighted_prefix
+    # L_weighted_prefix = Σ (2t/N) × BCE(p_t_agg, y)  — Noisy-OR cumulative
+    # λ = 0 → tắt auxiliary, trở về pure Focal U-shape
+    weighted_lambda: float = 0.5
+
     # Augmentation (Fix 02 from HSM-Net §03)
     truncate_aug: bool = True
     aug_k: int = 3            # số bản truncate mỗi scam dialogue
