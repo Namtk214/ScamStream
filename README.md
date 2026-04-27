@@ -149,8 +149,14 @@ python infer_stream.py --model-dir outputs/real/best_model
 
 ## Requirements
 
-- Python 3.8+
-- PyTorch
-- Transformers (HuggingFace)
-- openpyxl (for Excel processing)
-- wandb (optional, for logging)
+Cài đặt các thư viện cần thiết bằng lệnh sau:
+
+```bash
+pip install torch transformers numpy scikit-learn openpyxl wandb
+```
+
+- **Python 3.8+**
+- **PyTorch** & **Transformers**: Core models
+- **numpy** & **scikit-learn**: Tính toán metrics (F1, Precision, Recall, v.v.)
+- **openpyxl**: Dùng để đọc file Excel (`Real.xlsx`)
+- **wandb**: Dành cho visualization và logging (optional, nhưng được hỗ trợ trong code)
