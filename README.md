@@ -70,12 +70,6 @@ Dataset phải là file JSON với format sau:
 # Truyền đường dẫn dataset trực tiếp
 python train.py --train-file /path/to/train.json --test-file /path/to/test.json
 
-# Hoặc dùng preset dataset options
-python train.py --dataset real         # Real-1 → Real-2
-python train.py --dataset synthetic    # Synthetic → Real-2
-python train.py --dataset tele         # Tele → Real-2
-python train.py --dataset real_syn     # Real-1 + Synthetic → Real-2
-python train.py --dataset real_tele    # Real-1 + Tele → Real-2
 
 # Kết hợp với các flags khác
 python train.py --train-file train.json --test-file test.json --debug          # 2 epochs, no aug
@@ -83,7 +77,7 @@ python train.py --train-file train.json --test-file test.json --small          #
 python train.py --train-file train.json --test-file test.json --output-dir ./out
 ```
 
-### 3. Dataset Options Summary
+### 2. Dataset Options Summary
 
 | `--dataset` | Train Set | Test Set | Description |
 |-------------|-----------|----------|-------------|
@@ -95,13 +89,13 @@ python train.py --train-file train.json --test-file test.json --output-dir ./out
 
 Output checkpoints tự động lưu vào `outputs/<dataset_option>/best_model/`.
 
-### 2. Evaluation
+### 3. Evaluation
 
 ```bash
 python test.py --model-dir outputs/best_model
 ```
 
-### 3. Streaming Inference
+### 4. Streaming Inference
 
 ```bash
 python infer_stream.py --model-dir outputs/best_model
