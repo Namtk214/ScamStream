@@ -192,14 +192,51 @@ class M1Classifier(nn.Module):
         )
 
     def unfreeze_encoder(self):
+        """Unfreeze toàn bộ encoder."""
         for p in self.encoder.parameters():
             p.requires_grad = True
         self._encoder_frozen = False
+        self._enable_grad_ckpt()
+
+    def unfreeze_last_n_layers(self, n: int):
+        """Unfreeze last N transformer layers + pooler, giữ layers trước frozen."""
+        # Freeze everything first
+        for p in self.encoder.parameters():
+            p.requires_grad = False
+
+        # Find transformer layers (works for BERT-like models)
+        layers = None
+        if hasattr(self.encoder, 'encoder') and hasattr(self.encoder.encoder, 'layer'):
+            layers = self.encoder.encoder.layer
+        elif hasattr(self.encoder, 'transformer') and hasattr(self.encoder.transformer, 'layer'):
+            layers = self.encoder.transformer.layer
+
+        if layers is not None:
+            total = len(layers)
+            for i in range(max(0, total - n), total):
+                for p in layers[i].parameters():
+                    p.requires_grad = True
+            print(f"  Unfroze encoder layers [{total-n}..{total-1}] (last {n} of {total})")
+        else:
+            # Fallback: unfreeze toàn bộ
+            print("  [WARN] Cannot find layer structure — unfreezing all encoder params")
+            for p in self.encoder.parameters():
+                p.requires_grad = True
+
+        # Unfreeze pooler if exists
+        if hasattr(self.encoder, 'pooler') and self.encoder.pooler is not None:
+            for p in self.encoder.pooler.parameters():
+                p.requires_grad = True
+
+        self._encoder_frozen = False
+        self._enable_grad_ckpt()
+
+    def _enable_grad_ckpt(self):
         if self.cfg.use_grad_ckpt and hasattr(self.encoder, 'gradient_checkpointing_enable'):
             self.encoder.gradient_checkpointing_enable(
                 gradient_checkpointing_kwargs={'use_reentrant': False}
             )
-            print("Gradient checkpointing enabled on encoder.")
+            print("  Gradient checkpointing enabled on encoder.")
 
     def _encode_turns(self, input_ids: torch.Tensor, attn_masks: torch.Tensor) -> torch.Tensor:
         """

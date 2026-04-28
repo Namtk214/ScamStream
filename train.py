@@ -332,42 +332,34 @@ def train(cfg: M1Config = None, dataset_option: str = None,
     print(f"\nLoading model: {cfg.model_name}")
     model = M1Classifier(cfg).to(device)
 
-    print(f"Loss: Noisy-OR Focal(γ={cfg.focal_gamma}) × U-shape(floor={cfg.w_floor}) × class_w(harm={cfg.class_weight_harmless})")
-    if cfg.weighted_lambda > 0:
-        print(f"      + Weighted Prefix auxiliary (λ={cfg.weighted_lambda}) — FocalBCE on p_agg prefixes")
-    else:
-        print(f"      Weighted Prefix auxiliary: OFF (λ=0)")
-    print(f"Trainable params (encoder frozen): {model.count_trainable_params():,}")
+    # Apply Phase 1 overrides to cfg (model reads cfg at forward time)
+    cfg.class_weight_harmless = cfg.phase1_harm_weight
+    cfg.weighted_lambda = cfg.phase1_lambda_aux
+    current_phase = 1
+
+    print(f"\n{'='*60}")
+    print(f"PHASE 1 (epoch 1-{cfg.phase2_epoch-1}): encoder frozen, pure Focal")
+    print(f"{'='*60}")
+    print(f"  harm_weight = {cfg.class_weight_harmless}")
+    print(f"  lambda_aux  = {cfg.weighted_lambda}")
+    print(f"  lr          = {cfg.phase1_lr}")
+    print(f"  Trainable params: {model.count_trainable_params():,}")
 
     optimizer = AdamW(
         filter(lambda p: p.requires_grad, model.parameters()),
-        lr=cfg.lr, weight_decay=cfg.weight_decay,
+        lr=cfg.phase1_lr, weight_decay=cfg.weight_decay,
     )
 
-    # Số optimizer steps trước khi unfreeze
     steps_per_epoch  = len(train_loader) // cfg.grad_accum_steps
-    frozen_epochs    = cfg.unfreeze_epoch - 1          # epochs chạy với encoder frozen
-    total_steps_frozen = steps_per_epoch * frozen_epochs or steps_per_epoch * cfg.num_epochs
-    warmup_steps_frozen = max(1, int(total_steps_frozen * cfg.warmup_ratio))
+    phase1_total = steps_per_epoch * (cfg.phase2_epoch - 1)
+    warmup_steps = max(1, int(phase1_total * cfg.warmup_ratio))
     scheduler = get_cosine_schedule_with_warmup(
         optimizer,
-        num_warmup_steps=warmup_steps_frozen,
-        num_training_steps=total_steps_frozen,
+        num_warmup_steps=warmup_steps,
+        num_training_steps=phase1_total,
     )
 
     # ── Wandb ──
-    # try:
-    #     import wandb
-    #     wandb.login(key=WANDB_API_KEY)
-    #     wandb_run = wandb.init(
-    #         project="viscam-m1",
-    #         name=f"m1-halong-ep{cfg.num_epochs}-bs{cfg.batch_size}",
-    #         config=dataclasses.asdict(cfg),
-    #     )
-    #     print(f"Wandb run: {wandb_run.url}")
-    # except Exception as e:
-    #     print(f"[WARN] Wandb init failed: {e} — continuing without wandb")
-    #     wandb_run = None
     wandb_run = None
 
     # ── Training loop ──
@@ -381,24 +373,69 @@ def train(cfg: M1Config = None, dataset_option: str = None,
     for epoch in range(1, cfg.num_epochs + 1):
         t0 = time.time()
 
-        if epoch == cfg.unfreeze_epoch:
-            model.unfreeze_encoder()
+        # ── Phase 2 transition ──
+        if epoch == cfg.phase2_epoch and current_phase < 2:
+            current_phase = 2
+            cfg.class_weight_harmless = cfg.phase2_harm_weight
+            cfg.weighted_lambda = cfg.phase2_lambda_aux
+
+            print(f"\n{'='*60}")
+            print(f"PHASE 2 (epoch {cfg.phase2_epoch}-{cfg.phase3_epoch-1}): frozen + auxiliary")
+            print(f"{'='*60}")
+            print(f"  harm_weight = {cfg.class_weight_harmless}")
+            print(f"  lambda_aux  = {cfg.weighted_lambda}")
+            print(f"  lr          = {cfg.phase2_lr}")
+
             optimizer = AdamW(
-                model.parameters(),
-                lr=cfg.lr * 0.1, weight_decay=cfg.weight_decay,
+                filter(lambda p: p.requires_grad, model.parameters()),
+                lr=cfg.phase2_lr, weight_decay=cfg.weight_decay,
             )
-            remaining_epochs = cfg.num_epochs - epoch + 1
-            total_steps_unfreeze  = steps_per_epoch * remaining_epochs
-            warmup_steps_unfreeze = max(1, int(total_steps_unfreeze * cfg.warmup_ratio))
+            phase2_total = steps_per_epoch * (cfg.phase3_epoch - cfg.phase2_epoch)
+            warmup_steps = max(1, int(phase2_total * cfg.warmup_ratio))
             scheduler = get_cosine_schedule_with_warmup(
                 optimizer,
-                num_warmup_steps=warmup_steps_unfreeze,
-                num_training_steps=total_steps_unfreeze,
+                num_warmup_steps=warmup_steps,
+                num_training_steps=phase2_total,
             )
-            print(f"\nEpoch {epoch}: encoder unfrozen, lr={cfg.lr * 0.1:.2e}")
-            print(f"Trainable params: {model.count_trainable_params():,}")
 
-        print(f"\nEpoch {epoch}/{cfg.num_epochs}")
+        # ── Phase 3 transition ──
+        if epoch == cfg.phase3_epoch and current_phase < 3:
+            current_phase = 3
+            cfg.class_weight_harmless = cfg.phase3_harm_weight
+            cfg.weighted_lambda = cfg.phase3_lambda_aux
+
+            # Unfreeze last N layers
+            model.unfreeze_last_n_layers(cfg.phase3_unfreeze_layers)
+
+            print(f"\n{'='*60}")
+            print(f"PHASE 3 (epoch {cfg.phase3_epoch}+): unfreeze last {cfg.phase3_unfreeze_layers} layers")
+            print(f"{'='*60}")
+            print(f"  harm_weight  = {cfg.class_weight_harmless}")
+            print(f"  lambda_aux   = {cfg.weighted_lambda}")
+            print(f"  head_lr      = {cfg.phase3_head_lr}")
+            print(f"  encoder_lr   = {cfg.phase3_encoder_lr}")
+            print(f"  Trainable params: {model.count_trainable_params():,}")
+
+            # Separate param groups: encoder layers vs head
+            encoder_params = [p for n, p in model.named_parameters()
+                              if p.requires_grad and 'encoder' in n]
+            head_params    = [p for n, p in model.named_parameters()
+                              if p.requires_grad and 'encoder' not in n]
+            optimizer = AdamW([
+                {"params": head_params,    "lr": cfg.phase3_head_lr},
+                {"params": encoder_params, "lr": cfg.phase3_encoder_lr},
+            ], weight_decay=cfg.weight_decay)
+
+            remaining = cfg.num_epochs - cfg.phase3_epoch + 1
+            phase3_total = steps_per_epoch * remaining
+            warmup_steps = max(1, int(phase3_total * cfg.warmup_ratio))
+            scheduler = get_cosine_schedule_with_warmup(
+                optimizer,
+                num_warmup_steps=warmup_steps,
+                num_training_steps=phase3_total,
+            )
+
+        print(f"\nEpoch {epoch}/{cfg.num_epochs} [Phase {current_phase}]")
         tr_loss, global_step = run_epoch(
             model, train_loader, optimizer, scheduler, device, cfg, global_step, wandb_run
         )

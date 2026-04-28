@@ -22,13 +22,6 @@ class M1Config:
     # w(t,N) = (2t/N - 1)^2 * (1 - w_floor) + w_floor
     w_floor: float = 0.1              # minimum weight ở giữa dialogue
     focal_gamma: float = 2.0          # focusing: 0=BCE thuần, 2=focal chuẩn
-    class_weight_harmless: float = 6.0   # sample-level balance — 2× ratio to suppress FA
-
-    # Weighted Prefix auxiliary loss (from Streaming-Bert Noisy-OR)
-    # L_total = L_focal_ushape + λ × L_weighted_prefix
-    # L_weighted_prefix = Σ (2t/N) × BCE(p_t_agg, y)  — Noisy-OR cumulative
-    # λ = 0 → tắt auxiliary, trở về pure Focal U-shape
-    weighted_lambda: float = 0.3
 
     # Augmentation (Fix 02 from HSM-Net §03)
     truncate_aug: bool = True
@@ -39,12 +32,33 @@ class M1Config:
     batch_size: int = 8
     grad_accum_steps: int = 8  # effective batch = batch_size * grad_accum_steps
     use_grad_ckpt: bool = True
-    lr: float = 2e-5
     weight_decay: float = 1e-2
     grad_clip: float = 1.0
     warmup_ratio: float = 0.1  # % tổng steps dùng để warmup
     num_epochs: int = 10
-    unfreeze_epoch: int = 1    # epoch bắt đầu unfreeze encoder (lr * 0.1)
+
+    # ── Phase schedule ──────────────────────────────────────────
+    # Phase 1 (epoch 1 → phase2_epoch-1): encoder frozen, pure Noisy-OR Focal
+    #   → Mục tiêu: học phân biệt, chống báo scam hết, AUROC tăng
+    phase1_lr: float = 2e-5
+    phase1_harm_weight: float = 5.0
+    phase1_lambda_aux: float = 0.0     # tắt auxiliary
+
+    # Phase 2 (phase2_epoch → phase3_epoch-1): encoder frozen, thêm auxiliary nhẹ
+    #   → Mục tiêu: giữ false alarm, thêm early detection
+    phase2_epoch: int = 3
+    phase2_lr: float = 2e-5
+    phase2_harm_weight: float = 5.0
+    phase2_lambda_aux: float = 0.1
+
+    # Phase 3 (phase3_epoch → end): unfreeze last N layers, fine-tune
+    #   → Mục tiêu: squeeze thêm accuracy
+    phase3_epoch: int = 5
+    phase3_head_lr: float = 1e-5
+    phase3_encoder_lr: float = 5e-7
+    phase3_harm_weight: float = 4.5
+    phase3_lambda_aux: float = 0.1
+    phase3_unfreeze_layers: int = 2    # unfreeze last N transformer layers
 
     # Inference
     alert_thresh: float = 0.80
