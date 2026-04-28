@@ -366,8 +366,6 @@ def train(cfg: M1Config = None, dataset_option: str = None,
     os.makedirs(cfg.output_dir, exist_ok=True)
     best_val_loss = float("inf")
     best_epoch    = 0
-    no_improve    = 0
-    patience      = 3
     global_step   = 0
 
     for epoch in range(1, cfg.num_epochs + 1):
@@ -450,19 +448,8 @@ def train(cfg: M1Config = None, dataset_option: str = None,
         if val_metrics["loss"] < best_val_loss:
             best_val_loss = val_metrics["loss"]
             best_epoch    = epoch
-            no_improve    = 0
             _save_model(model, tokenizer, cfg, val_metrics)
             print(f"    * Best model saved (val_loss={best_val_loss:.4f})")
-            # if wandb_run is not None:
-            #     wandb_run.summary["best_val_loss"] = best_val_loss
-            #     wandb_run.summary["best_epoch"]    = best_epoch
-            #     wandb_run.summary["best_val_f1"]   = val_metrics["dialogue_f1"]
-        else:
-            no_improve += 1
-            print(f"    No improvement ({no_improve}/{patience})")
-            if no_improve >= patience:
-                print(f"\nEarly stopping at epoch {epoch}")
-                break
 
         if device.type == "cuda":
             torch.cuda.empty_cache()
