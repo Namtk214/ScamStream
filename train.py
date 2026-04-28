@@ -364,7 +364,7 @@ def train(cfg: M1Config = None, dataset_option: str = None,
 
     # ── Training loop ──
     os.makedirs(cfg.output_dir, exist_ok=True)
-    best_val_loss = float("inf")
+    best_val_acc  = 0.0
     best_epoch    = 0
     global_step   = 0
 
@@ -456,16 +456,17 @@ def train(cfg: M1Config = None, dataset_option: str = None,
         # Streaming preview
         _preview_stream(model, val_ds, val_dlg, device, cfg)
 
-        if val_metrics["loss"] < best_val_loss:
-            best_val_loss = val_metrics["loss"]
+        val_acc = val_metrics["dialogue_accuracy"]
+        if val_acc > best_val_acc:
+            best_val_acc  = val_acc
             best_epoch    = epoch
             _save_model(model, tokenizer, cfg, val_metrics)
-            print(f"    * Best model saved (val_loss={best_val_loss:.4f})")
+            print(f"    * Best model saved (val_acc={best_val_acc:.4f})")
 
         if device.type == "cuda":
             torch.cuda.empty_cache()
 
-    print(f"\nBest epoch: {best_epoch} | val_loss={best_val_loss:.4f}")
+    print(f"\nBest epoch: {best_epoch} | val_acc={best_val_acc:.4f}")
 
     # ── Final report trên val (test) set với best model ──
     best_pt = os.path.join(cfg.output_dir, "best_model", "model.pt")
