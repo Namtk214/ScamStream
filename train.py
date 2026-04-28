@@ -402,27 +402,38 @@ def train(cfg: M1Config = None, dataset_option: str = None,
             cfg.class_weight_harmless = cfg.phase3_harm_weight
             cfg.weighted_lambda = cfg.phase3_lambda_aux
 
-            # Unfreeze last N layers
-            model.unfreeze_last_n_layers(cfg.phase3_unfreeze_layers)
+            # Unfreeze last N layers (0 = keep frozen)
+            if cfg.phase3_unfreeze_layers > 0:
+                model.unfreeze_last_n_layers(cfg.phase3_unfreeze_layers)
 
             print(f"\n{'='*60}")
-            print(f"PHASE 3 (epoch {cfg.phase3_epoch}+): unfreeze last {cfg.phase3_unfreeze_layers} layers")
+            if cfg.phase3_unfreeze_layers > 0:
+                print(f"PHASE 3 (epoch {cfg.phase3_epoch}+): unfreeze last {cfg.phase3_unfreeze_layers} layers")
+            else:
+                print(f"PHASE 3 (epoch {cfg.phase3_epoch}+): encoder frozen, loss schedule only")
             print(f"{'='*60}")
             print(f"  harm_weight  = {cfg.class_weight_harmless}")
             print(f"  lambda_aux   = {cfg.weighted_lambda}")
             print(f"  head_lr      = {cfg.phase3_head_lr}")
-            print(f"  encoder_lr   = {cfg.phase3_encoder_lr}")
+            if cfg.phase3_unfreeze_layers > 0:
+                print(f"  encoder_lr   = {cfg.phase3_encoder_lr}")
             print(f"  Trainable params: {model.count_trainable_params():,}")
 
-            # Separate param groups: encoder layers vs head
-            encoder_params = [p for n, p in model.named_parameters()
-                              if p.requires_grad and 'encoder' in n]
-            head_params    = [p for n, p in model.named_parameters()
-                              if p.requires_grad and 'encoder' not in n]
-            optimizer = AdamW([
-                {"params": head_params,    "lr": cfg.phase3_head_lr},
-                {"params": encoder_params, "lr": cfg.phase3_encoder_lr},
-            ], weight_decay=cfg.weight_decay)
+            # Build optimizer
+            if cfg.phase3_unfreeze_layers > 0:
+                encoder_params = [p for n, p in model.named_parameters()
+                                  if p.requires_grad and 'encoder' in n]
+                head_params    = [p for n, p in model.named_parameters()
+                                  if p.requires_grad and 'encoder' not in n]
+                optimizer = AdamW([
+                    {"params": head_params,    "lr": cfg.phase3_head_lr},
+                    {"params": encoder_params, "lr": cfg.phase3_encoder_lr},
+                ], weight_decay=cfg.weight_decay)
+            else:
+                optimizer = AdamW(
+                    filter(lambda p: p.requires_grad, model.parameters()),
+                    lr=cfg.phase3_head_lr, weight_decay=cfg.weight_decay,
+                )
 
             remaining = cfg.num_epochs - cfg.phase3_epoch + 1
             phase3_total = steps_per_epoch * remaining
