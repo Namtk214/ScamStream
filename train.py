@@ -199,7 +199,7 @@ def _preview_stream(model, val_ds, val_dlg, device, cfg, max_samples=2):
         dlg   = val_dlg[idx]
         label = dlg["label"]
         turns = dlg["turns"]
-        n     = len(turns)
+        n     = min(len(turns), cfg.max_turns)  # model truncates to max_turns
 
         # Build full input for all turns at once
         item  = val_ds[idx]
