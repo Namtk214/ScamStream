@@ -22,6 +22,8 @@ class M1Config:
     # w(t,N) = (2t/N - 1)^2 * (1 - w_floor) + w_floor
     w_floor: float = 0.1              # minimum weight ở giữa dialogue
     focal_gamma: float = 2.0          # focusing: 0=BCE thuần, 2=focal chuẩn
+    class_weight_harmless: float = 5.0   # runtime default (overridden by phase schedule)
+    weighted_lambda: float = 0.0 
 
     # Augmentation (Fix 02 from HSM-Net §03)
     truncate_aug: bool = True
@@ -29,43 +31,43 @@ class M1Config:
     aug_min_turns: int = 2    # số turns tối thiểu sau truncate
 
     # Training
-    batch_size: int = 8
+    batch_size: int = 16
     grad_accum_steps: int = 8  # effective batch = batch_size * grad_accum_steps
     use_grad_ckpt: bool = True
     weight_decay: float = 1e-2
     grad_clip: float = 1.0
     warmup_ratio: float = 0.1  # % tổng steps dùng để warmup
-    num_epochs: int = 10
+    num_epochs: int = 15
 
     # ── Phase schedule ──────────────────────────────────────────
     # Phase 1 (epoch 1 → phase2_epoch-1): encoder frozen, pure Noisy-OR Focal
     #   → Mục tiêu: học phân biệt, chống báo scam hết, AUROC tăng
-    phase1_lr: float = 2e-5
-    phase1_harm_weight: float = 5.0
-    phase1_lambda_aux: float = 0.0     # tắt auxiliary
+    phase1_lr: float = 2e-4
+    phase1_harm_weight: float = 1.0
+    phase1_lambda_aux: float = 0.15     # tắt auxiliary
 
     # Phase 2 (phase2_epoch → phase3_epoch-1): encoder frozen, thêm auxiliary nhẹ
     #   → Mục tiêu: giữ false alarm, thêm early detection
-    phase2_epoch: int = 3
-    phase2_lr: float = 2e-5
-    phase2_harm_weight: float = 5.0
-    phase2_lambda_aux: float = 0.1
+    phase2_epoch: int = 5
+    phase2_lr: float = 2e-4
+    phase2_harm_weight: float = 2.0
+    phase2_lambda_aux: float = 0.3
 
     # Phase 3 (phase3_epoch → end): unfreeze last N layers, fine-tune
     #   → Mục tiêu: squeeze thêm accuracy
-    phase3_epoch: int = 5
-    phase3_head_lr: float = 1e-5
+    phase3_epoch: int = 9
+    phase3_head_lr: float = 5e-5
     phase3_encoder_lr: float = 5e-7
-    phase3_harm_weight: float = 4.5
-    phase3_lambda_aux: float = 0.1
-    phase3_unfreeze_layers: int = 2    # unfreeze last N transformer layers
+    phase3_harm_weight: float = 4.0
+    phase3_lambda_aux: float = 0.3
+    phase3_unfreeze_layers: int = 0    # unfreeze last N transformer layers
 
     # Inference
     alert_thresh: float = 0.80
     threshold: float = 0.5
     seed: int = 42
 
-    val_ratio: float = 0.15
+    val_ratio: float = 0.3
     test_ratio: float = 0.10
 
     # Paths
