@@ -22,7 +22,7 @@ class M1Config:
     # w(t,N) = (2t/N - 1)^2 * (1 - w_floor) + w_floor
     w_floor: float = 0.1              # minimum weight ở giữa dialogue
     focal_gamma: float = 2.0          # focusing: 0=BCE thuần, 2=focal chuẩn
-    class_weight_harmless: float = 4.0   # sample-level balance — 2× ratio to suppress FA
+    class_weight_harmless: float = 6.0   # sample-level balance — 2× ratio to suppress FA
 
     # Weighted Prefix auxiliary loss (from Streaming-Bert Noisy-OR)
     # L_total = L_focal_ushape + λ × L_weighted_prefix
@@ -31,8 +31,8 @@ class M1Config:
     weighted_lambda: float = 0.3
 
     # Augmentation (Fix 02 from HSM-Net §03)
-    truncate_aug: bool = False
-    aug_k: int = 3            # số bản truncate mỗi scam dialogue
+    truncate_aug: bool = True
+    aug_k: int = 2            # số bản truncate mỗi scam dialogue
     aug_min_turns: int = 2    # số turns tối thiểu sau truncate
 
     # Training
