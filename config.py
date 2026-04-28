@@ -22,7 +22,7 @@ class M1Config:
     # w(t,N) = (2t/N - 1)^2 * (1 - w_floor) + w_floor
     w_floor: float = 0.1              # minimum weight ở giữa dialogue
     focal_gamma: float = 2.0          # focusing: 0=BCE thuần, 2=focal chuẩn
-    class_weight_harmless: float = 8.0   # sample-level balance — 2× ratio to suppress FA
+    class_weight_harmless: float = 4.0   # sample-level balance — 2× ratio to suppress FA
 
     # Weighted Prefix auxiliary loss (from Streaming-Bert Noisy-OR)
     # L_total = L_focal_ushape + λ × L_weighted_prefix
@@ -44,7 +44,7 @@ class M1Config:
     grad_clip: float = 1.0
     warmup_ratio: float = 0.1  # % tổng steps dùng để warmup
     num_epochs: int = 10
-    unfreeze_epoch: int = 3    # epoch bắt đầu unfreeze encoder (lr * 0.1)
+    unfreeze_epoch: int = 1    # epoch bắt đầu unfreeze encoder (lr * 0.1)
 
     # Inference
     alert_thresh: float = 0.80
