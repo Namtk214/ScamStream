@@ -48,7 +48,7 @@ class M1Config:
 
     # Phase 2 (phase2_epoch → phase3_epoch-1): encoder frozen, thêm auxiliary nhẹ
     #   → Mục tiêu: giữ false alarm, thêm early detection
-    phase2_epoch: int = 5
+    phase2_epoch: int = 3
     phase2_lr: float = 2e-4
     phase2_harm_weight: float = 3.0
     phase2_lambda_aux: float = 0.4
