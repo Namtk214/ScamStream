@@ -1,15 +1,15 @@
 """
-Dataset cho M1 (HaLong + CrossTurnAttention).
+Dataset cho M1 Multi-Class (HaLong + CrossTurnAttention).
 
-Schema data mới (đơn giản):
-  {"label": "scam"|"harmless", "turns": ["text1", "text2", ...]}
+Schema data:
+  {"label": "scam"|"harmless", "scenario": "A"|"B"|"C"|"D"|None, "turns": ["text1", ...]}
 
-Khác baseline 1:
-  - turns là list string thẳng, không phải list dict
-  - label field là "label" (không phải "conversation_label")
-  - Padding tới max_turns cố định trong __getitem__
-  - Có truncated-conversation augmentation (Fix 02)
-  - Có split_data() để split train.json nếu chưa có val/test
+Multi-class mapping (dùng scenario field):
+  harmless (no scenario) → 0
+  scam + scenario A      → 1
+  scam + scenario B      → 2
+  scam + scenario C      → 3
+  scam + scenario D      → 4
 """
 
 import json
@@ -19,10 +19,20 @@ from typing import Dict, List, Tuple
 import torch
 from torch.utils.data import Dataset
 
+from config import SCENARIO_TO_IDX
+
 
 def load_json(path: str) -> List[Dict]:
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+def get_class_label(dlg: Dict) -> int:
+    """Extract multi-class label from dialogue dict."""
+    if dlg["label"] == "harmless":
+        return 0
+    scenario = dlg.get("scenario", "A")  # default A nếu scam mà thiếu scenario
+    return SCENARIO_TO_IDX.get(scenario, 1)
 
 
 def split_data(dialogues: List[Dict], val_ratio: float, test_ratio: float,
@@ -38,7 +48,8 @@ def split_data(dialogues: List[Dict], val_ratio: float, test_ratio: float,
 
 def truncate_augment(dialogues: List[Dict], k: int, min_turns: int) -> List[Dict]:
     """
-    Tạo k bản truncate của mỗi SCAM dialogue để buộc model học từ partial context.
+    Tạo k bản truncate của mỗi SCAM dialogue (bất kể scenario) để buộc model
+    học từ partial context.
     HARMLESS không augment để tránh imbalance thêm.
     """
     augmented = []
@@ -53,8 +64,9 @@ def truncate_augment(dialogues: List[Dict], k: int, min_turns: int) -> List[Dict
         lengths  = random.sample(possible, min(k, len(possible)))
         for trunc_len in sorted(lengths):
             augmented.append({
-                "label": dlg["label"],
-                "turns": dlg["turns"][:trunc_len],
+                "label":    dlg["label"],
+                "scenario": dlg.get("scenario"),
+                "turns":    dlg["turns"][:trunc_len],
             })
     return augmented
 
@@ -62,7 +74,7 @@ def truncate_augment(dialogues: List[Dict], k: int, min_turns: int) -> List[Dict
 class DialogueDataset(Dataset):
     """
     Mỗi sample = 1 dialogue, padded tới max_turns.
-    Dùng field `text` (raw text) — không cần word segmentation.
+    Multi-class label dựa trên scenario field.
     """
 
     def __init__(self, dialogues: List[Dict], tokenizer, max_turn_len: int, max_turns: int):
@@ -82,7 +94,7 @@ class DialogueDataset(Dataset):
         input_ids_list, attn_mask_list = [], []
         for turn in turns:
             enc = self.tok(
-                turn,                          # turn là string thẳng
+                turn,
                 max_length=self.max_turn_len,
                 padding="max_length",
                 truncation=True,
@@ -100,7 +112,7 @@ class DialogueDataset(Dataset):
         turn_mask = torch.zeros(self.max_turns, dtype=torch.bool)
         turn_mask[:n_real] = True
 
-        label = 1 if dlg["label"] == "scam" else 0
+        label = get_class_label(dlg)
         return {
             "input_ids":  torch.stack(input_ids_list),   # [max_turns, max_turn_len]
             "attn_masks": torch.stack(attn_mask_list),   # [max_turns, max_turn_len]

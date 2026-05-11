@@ -1,28 +1,34 @@
 """
-M1 Classifier — HaLong Embedding + Causal CrossTurnAttention
-              + Noisy-OR Focal Loss (adapted from Streaming-Bert).
+M1 Multi-Class Classifier — HaLong Embedding + Causal CrossTurnAttention
+              + Multi-Head Noisy-OR Focal Loss.
 
 Architecture:
   turn text → HaLong encoder ([CLS] token) → e_t [embed_dim]
             → Linear projection → h_t [hidden_dim]
             → CrossTurnAttention (causal: turn_t attends to h_0..h_{t-1})
-            → MLP head → sigmoid → q_t (per-turn evidence)
-            → Noisy-OR aggregation → p_agg (cumulative, monotonically non-decreasing)
+            → MLP head → C logits per turn
+            → softmax → q_t^c (per-turn, per-class evidence)
+            → Noisy-OR per-class → p_agg^c (cumulative, monotonically non-decreasing)
+
+Multi-class: 5 classes [harmless, A, B, C, D]
+  q_t^c  = softmax(logit_t)[c]           ← per-turn evidence cho class c
+  p_agg_t^c = 1 − ∏(1 − q_i^c)          ← Noisy-OR cumulative per class
+  Prediction = argmax(p_agg_final)
 
 Training Loss:
   L_total = L_main + λ × L_aux
 
-  1) Main: FocalBCE(p_agg_final, y) × class_weight
-     p_agg_final = Noisy-OR tại turn cuối (dialogue-level prediction)
-     Focal (1-p)^γ focus hard examples, class_weight cân bằng imbalance
+  1) Main: Focal CE(p_agg_final_normalized, y) × class_weight
+     p_agg_final = Noisy-OR tại turn cuối, normalize lại → pseudo-probabilities
+     Focal (1-p_t)^γ focus hard examples, class_weight cân bằng imbalance
 
-  2) Auxiliary: Σ (2t/N) × FocalBCE(p_t_agg, y)
-     Weighted prefix trên cumulative Noisy-OR tại mỗi prefix
-     Thúc đẩy model predict đúng sớm dần
+  2) Auxiliary: Σ w(t,N) × Focal CE(p_agg_t_normalized, y)
+     U-shape weighted prefix trên cumulative Noisy-OR tại mỗi prefix
+     Thúc đẩy model predict đúng class sớm dần
 
 Streaming inference:
-  Online Noisy-OR: p_agg_t = 1 − (1 − p_agg_{t-1}) × (1 − q_t)
-  O(1) per turn, monotonically non-decreasing.
+  Online Noisy-OR per class: p_agg_t^c = 1 − (1 − p_agg_{t-1}^c) × (1 − q_t^c)
+  O(1) per turn per class, monotonically non-decreasing per class.
 """
 
 import torch
@@ -32,100 +38,111 @@ from transformers import AutoModel
 
 
 # ─────────────────────────────────────────────────────────────────
-# Noisy-OR utilities
+# Noisy-OR utilities (multi-class)
 # ─────────────────────────────────────────────────────────────────
 
-def _compute_p_agg(turn_probs: torch.Tensor, turn_mask: torch.Tensor,
-                   eps: float = 1e-6) -> torch.Tensor:
+def _compute_p_agg_multiclass(turn_probs: torch.Tensor, turn_mask: torch.Tensor,
+                               eps: float = 1e-6) -> torch.Tensor:
     """
-    Tính Noisy-OR cumulative p_t_agg cho toàn batch.
+    Tính Noisy-OR cumulative p_agg cho toàn batch, per-class.
 
     Input:
-      turn_probs : [B, T]  — per-turn evidence q_t (sigmoid)
-      turn_mask  : [B, T]  — True = real turn
+      turn_probs : [B, T, C]  — per-turn evidence q_t^c (softmax)
+      turn_mask  : [B, T]     — True = real turn
     Output:
-      p_agg      : [B, T]  — cumulative Noisy-OR, padding giữ nguyên
+      p_agg      : [B, T, C]  — cumulative Noisy-OR per class, padding giữ nguyên
     """
-    q = turn_probs.clamp(eps, 1 - eps)
-    log_not_q = torch.log1p(-q) * turn_mask.float()    # zero padding trước cumsum
-    cumsum_log = torch.cumsum(log_not_q, dim=1)
-    p_agg = (1.0 - torch.exp(cumsum_log)).clamp(eps, 1 - eps)
+    q = turn_probs.clamp(eps, 1 - eps)                          # [B, T, C]
+    mask_3d = turn_mask.float().unsqueeze(-1)                   # [B, T, 1]
+    log_not_q = torch.log1p(-q) * mask_3d                      # zero padding
+    cumsum_log = torch.cumsum(log_not_q, dim=1)                 # [B, T, C]
+    p_agg = (1.0 - torch.exp(cumsum_log)).clamp(eps, 1 - eps)  # [B, T, C]
     return p_agg
 
 
-def _focal_bce(p: torch.Tensor, y: torch.Tensor,
-               gamma: float = 2.0, eps: float = 1e-6) -> torch.Tensor:
+def _normalize_p_agg(p_agg: torch.Tensor, eps: float = 1e-8) -> torch.Tensor:
     """
-    Focal Binary Cross-Entropy (element-wise, no reduction).
+    Normalize p_agg per-class thành probabilities (sum to 1).
+    p_agg: [B, T, C] hoặc [B, C]
+    """
+    return p_agg / (p_agg.sum(dim=-1, keepdim=True) + eps)
 
-    FocalBCE = -(1-p_t)^γ × log(p_t)  ×  (γ+1)
-    với p_t = xác suất của class đúng.
-    Nhân (γ+1) để normalize magnitude ~ BCE.
+
+def _focal_ce(p_norm: torch.Tensor, targets: torch.Tensor,
+              gamma: float = 2.0, eps: float = 1e-6) -> torch.Tensor:
     """
-    p = p.clamp(eps, 1 - eps)
-    p_t = torch.where(y.bool(), p, 1 - p)   # prob of correct class
+    Focal Cross-Entropy (element-wise, no reduction).
+
+    p_norm  : [..., C]  — normalized probabilities
+    targets : [...]     — class indices (long)
+    Returns : [...]     — focal CE per sample
+
+    FocalCE = -(1-p_t)^γ × log(p_t) × (γ+1)
+    với p_t = probability của class đúng.
+    """
+    p_norm = p_norm.clamp(eps, 1 - eps)
+    # Gather probability of correct class
+    p_t = p_norm.gather(dim=-1, index=targets.unsqueeze(-1)).squeeze(-1)
     focal_mod = (1 - p_t) ** gamma
-    bce = -torch.log(p_t)
-    return focal_mod * bce * (gamma + 1)
+    ce = -torch.log(p_t)
+    return focal_mod * ce * (gamma + 1)
 
 
 # ─────────────────────────────────────────────────────────────────
-# Loss functions
+# Loss functions (multi-class)
 # ─────────────────────────────────────────────────────────────────
 
-def noisy_or_focal_loss(turn_probs: torch.Tensor, labels: torch.Tensor,
-                        turn_mask: torch.Tensor, p_agg: torch.Tensor,
-                        gamma: float = 2.0,
-                        class_weight_harmless: float = 8.0,
-                        weighted_lambda: float = 0.5,
-                        w_floor: float = 0.1,
-                        eps: float = 1e-6) -> torch.Tensor:
+def noisy_or_focal_ce_loss(turn_probs: torch.Tensor, labels: torch.Tensor,
+                            turn_mask: torch.Tensor, p_agg: torch.Tensor,
+                            gamma: float = 2.0,
+                            class_weights: torch.Tensor = None,
+                            weighted_lambda: float = 0.5,
+                            w_floor: float = 0.1,
+                            eps: float = 1e-6) -> torch.Tensor:
     """
-    Noisy-OR Focal Loss (adapted from Streaming-Bert).
+    Multi-class Noisy-OR Focal CE Loss.
 
-    1) Main: FocalBCE(p_agg_final, y) × class_weight
-       → Focal modulation focus hard examples
-       → class_weight cân bằng scam/harmless imbalance
-
-    2) Auxiliary: Σ w(t,N) × FocalBCE(p_t_agg, y)
-       w(t,N) = (2t/N - 1)² × (1 - w_floor) + w_floor
-       → U-shape: lớn ở đầu/cuối dialogue, đáy ở giữa
-       → Phạt cả early miss lẫn late miss
+    1) Main: Focal CE(p_agg_final_normalized, y) × class_weight[y]
+    2) Auxiliary: Σ w(t,N) × Focal CE(p_agg_t_normalized, y)
 
     Total: L = L_main + λ × L_aux
     """
-    B, T = turn_probs.shape
-    y = labels.float()                                         # [B]
+    B, T, C = turn_probs.shape
+    y = labels.long()                                           # [B]
 
-    # ── 1) Main: FocalBCE trên p_agg_final (dialogue-level) ──
-    n_turns = turn_mask.sum(dim=1).long()                      # [B]
-    p_dialogue = torch.stack([
+    # ── 1) Main: Focal CE trên p_agg_final (dialogue-level) ──
+    n_turns = turn_mask.sum(dim=1).long()                       # [B]
+    p_agg_final = torch.stack([
         p_agg[b, n_turns[b] - 1] for b in range(B)
-    ])                                                         # [B]
+    ])                                                          # [B, C]
+    p_norm_final = _normalize_p_agg(p_agg_final)                # [B, C]
 
-    focal_main = _focal_bce(p_dialogue, y, gamma=gamma, eps=eps)  # [B]
+    focal_main = _focal_ce(p_norm_final, y, gamma=gamma, eps=eps)  # [B]
 
     # Class balance tại sample level
-    cw = torch.where(labels == 0,
-                     torch.full_like(focal_main, class_weight_harmless),
-                     torch.ones_like(focal_main))
+    if class_weights is not None:
+        cw = class_weights[y]                                   # [B]
+    else:
+        cw = torch.ones_like(focal_main)
     loss_main = (focal_main * cw).mean()
 
-    # ── 2) Auxiliary: U-shape Weighted Prefix FocalBCE ──
+    # ── 2) Auxiliary: U-shape Weighted Prefix Focal CE ──
     loss_aux = torch.tensor(0.0, device=turn_probs.device)
     if weighted_lambda > 0:
-        y_exp = y.unsqueeze(1).expand(B, T)                    # [B, T]
-        focal_prefix = _focal_bce(p_agg, y_exp, gamma=gamma, eps=eps)  # [B, T]
-        focal_prefix = focal_prefix * turn_mask.float()        # zero padding
+        # Normalize p_agg at every prefix
+        p_norm_all = _normalize_p_agg(p_agg)                    # [B, T, C]
+
+        y_exp = y.unsqueeze(1).expand(B, T)                     # [B, T]
+        focal_prefix = _focal_ce(p_norm_all, y_exp, gamma=gamma, eps=eps)  # [B, T]
+        focal_prefix = focal_prefix * turn_mask.float()         # zero padding
 
         # U-shape temporal weight: w(t,N) = (2t/N - 1)² × (1 - w_floor) + w_floor
-        # Lớn ở hai đầu (turn 0 và turn N), đáy ở giữa (turn N/2)
-        n = n_turns.float().clamp(min=1)                       # [B]
+        n = n_turns.float().clamp(min=1)                        # [B]
         t_idx = torch.arange(T, dtype=torch.float32,
-                             device=turn_probs.device)         # [T], 0-based
-        t_norm = t_idx.unsqueeze(0) / n.unsqueeze(1)           # [B, T]
+                             device=turn_probs.device)          # [T]
+        t_norm = t_idx.unsqueeze(0) / n.unsqueeze(1)            # [B, T]
         weights = (2 * t_norm - 1) ** 2 * (1 - w_floor) + w_floor  # [B, T]
-        weights = weights * turn_mask.float()                  # zero padding
+        weights = weights * turn_mask.float()                   # zero padding
 
         # Weighted avg (normalize bởi sum weights)
         loss_per_sample = (weights * focal_prefix).sum(dim=1) / weights.sum(dim=1).clamp(min=1e-8)
@@ -170,7 +187,7 @@ class CrossTurnAttention(nn.Module):
 
 
 class M1Classifier(nn.Module):
-    """HaLong per-turn encoder + causal CrossTurnAttention + Noisy-OR Focal head."""
+    """HaLong per-turn encoder + causal CrossTurnAttention + Multi-Head Noisy-OR head."""
 
     def __init__(self, cfg):
         super().__init__()
@@ -188,7 +205,7 @@ class M1Classifier(nn.Module):
             nn.Linear(d, d // 2),
             nn.GELU(),
             nn.Dropout(cfg.dropout),
-            nn.Linear(d // 2, 1),   # sigmoid output: q_t evidence
+            nn.Linear(d // 2, cfg.num_classes),   # C logits per turn
         )
 
     def unfreeze_encoder(self):
@@ -264,48 +281,58 @@ class M1Classifier(nn.Module):
         input_ids  : [B, T, L]
         attn_masks : [B, T, L]
         turn_mask  : [B, T] bool — True = real turn
-        labels     : [B] long — 0/1 dialogue label (training only)
+        labels     : [B] long — 0..C-1 class label (training only)
 
         Returns dict:
           loss           : scalar | None
-          turn_probs     : [B, T]  per-turn evidence q_t
-          p_agg          : [B, T]  Noisy-OR cumulative tại mỗi prefix
-          dialogue_probs : [B]     p_agg tại last real turn (= dialogue prediction)
+          turn_probs     : [B, T, C]  per-turn evidence q_t^c (softmax)
+          p_agg          : [B, T, C]  Noisy-OR cumulative per-class tại mỗi prefix
+          dialogue_probs : [B, C]     p_agg tại last real turn (normalized)
+          dialogue_preds : [B]        predicted class (argmax)
         """
         turn_mask = turn_mask.bool()
         B, T, L   = input_ids.shape
+        C         = self.cfg.num_classes
         n_turns   = turn_mask.sum(dim=1).long()    # [B]
 
         cls_seq = self._encode_turns(input_ids, attn_masks)   # [B, T, E]
         h_seq   = F.gelu(self.proj(cls_seq))                   # [B, T, D]
         h_ctx   = self.attn(h_seq, turn_mask)                  # [B, T, D]
-        logits  = self.head(h_ctx).squeeze(-1)                 # [B, T]
+        logits  = self.head(h_ctx)                             # [B, T, C]
 
-        turn_probs = torch.sigmoid(logits)                     # [B, T]  evidence q_t
+        # Per-turn evidence: softmax over classes
+        turn_probs = torch.softmax(logits, dim=-1)             # [B, T, C]
 
-        # ── Noisy-OR cumulative ──
-        p_agg = _compute_p_agg(turn_probs, turn_mask)          # [B, T]
+        # ── Noisy-OR cumulative per-class ──
+        p_agg = _compute_p_agg_multiclass(turn_probs, turn_mask)  # [B, T, C]
 
-        # dialogue_probs = p_agg tại last real turn
-        dialogue_probs = torch.stack([
+        # dialogue_probs = normalized p_agg tại last real turn
+        p_agg_final = torch.stack([
             p_agg[b, n_turns[b] - 1] for b in range(B)
-        ])                                                     # [B]
+        ])                                                     # [B, C]
+        dialogue_probs = _normalize_p_agg(p_agg_final)         # [B, C]
+        dialogue_preds = dialogue_probs.argmax(dim=-1)         # [B]
 
         loss = None
         if labels is not None:
-            loss = noisy_or_focal_loss(
+            # Build class_weights tensor
+            cw = torch.tensor(self.cfg.class_weights,
+                              dtype=torch.float32,
+                              device=input_ids.device)
+            loss = noisy_or_focal_ce_loss(
                 turn_probs, labels, turn_mask, p_agg,
                 gamma=self.cfg.focal_gamma,
-                class_weight_harmless=self.cfg.class_weight_harmless,
+                class_weights=cw,
                 weighted_lambda=self.cfg.weighted_lambda,
                 w_floor=self.cfg.w_floor,
             )
 
         return {
             "loss":           loss,
-            "turn_probs":     turn_probs,       # per-turn evidence q_t
-            "p_agg":          p_agg,             # Noisy-OR cumulative
-            "dialogue_probs": dialogue_probs,    # p_agg at last turn
+            "turn_probs":     turn_probs,       # [B, T, C] per-turn evidence
+            "p_agg":          p_agg,             # [B, T, C] Noisy-OR cumulative
+            "dialogue_probs": dialogue_probs,    # [B, C]    normalized p_agg at last turn
+            "dialogue_preds": dialogue_preds,    # [B]       predicted class
         }
 
     def count_trainable_params(self) -> int:
