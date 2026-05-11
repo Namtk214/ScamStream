@@ -55,7 +55,7 @@ class M1Config:
 
     # Phase 3 (phase3_epoch → end): unfreeze last N layers, fine-tune
     #   → Mục tiêu: squeeze thêm accuracy
-    phase3_epoch: int = 9
+    phase3_epoch: int = 5
     phase3_head_lr: float = 8e-5       # hơi cao hơn P2 drop, co-adapt với encoder mới unfreeze
     phase3_encoder_lr: float = 1e-5    # 8× nhỏ hơn head — discriminative fine-tuning chuẩn
     phase3_harm_weight: float = 4.0
