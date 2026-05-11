@@ -31,8 +31,8 @@ class M1Config:
     aug_min_turns: int = 2    # số turns tối thiểu sau truncate
 
     # Training
-    batch_size: int = 16
-    grad_accum_steps: int = 8  # effective batch = batch_size * grad_accum_steps
+    batch_size: int = 8
+    grad_accum_steps: int = 4  # effective batch = batch_size * grad_accum_steps
     use_grad_ckpt: bool = True
     weight_decay: float = 1e-2
     grad_clip: float = 1.0
@@ -43,24 +43,24 @@ class M1Config:
     # Phase 1 (epoch 1 → phase2_epoch-1): encoder frozen, pure Noisy-OR Focal
     #   → Mục tiêu: học phân biệt, chống báo scam hết, AUROC tăng
     phase1_lr: float = 2e-4
-    phase1_harm_weight: float = 1.0
-    phase1_lambda_aux: float = 0.15     # tắt auxiliary
+    phase1_harm_weight: float = 2.0
+    phase1_lambda_aux: float = 0.1     # tắt auxiliary
 
     # Phase 2 (phase2_epoch → phase3_epoch-1): encoder frozen, thêm auxiliary nhẹ
     #   → Mục tiêu: giữ false alarm, thêm early detection
     phase2_epoch: int = 5
     phase2_lr: float = 2e-4
-    phase2_harm_weight: float = 2.0
-    phase2_lambda_aux: float = 0.3
+    phase2_harm_weight: float = 3.0
+    phase2_lambda_aux: float = 0.4
 
     # Phase 3 (phase3_epoch → end): unfreeze last N layers, fine-tune
     #   → Mục tiêu: squeeze thêm accuracy
     phase3_epoch: int = 9
-    phase3_head_lr: float = 5e-5
-    phase3_encoder_lr: float = 5e-7
+    phase3_head_lr: float = 8e-5       # hơi cao hơn P2 drop, co-adapt với encoder mới unfreeze
+    phase3_encoder_lr: float = 1e-5    # 8× nhỏ hơn head — discriminative fine-tuning chuẩn
     phase3_harm_weight: float = 4.0
-    phase3_lambda_aux: float = 0.3
-    phase3_unfreeze_layers: int = 0    # unfreeze last N transformer layers
+    phase3_lambda_aux: float = 0.2
+    phase3_unfreeze_layers: int = 3    # unfreeze last N transformer layers
 
     # Inference
     alert_thresh: float = 0.80
