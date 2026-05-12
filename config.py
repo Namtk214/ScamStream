@@ -31,7 +31,7 @@ class M1Config:
     aug_min_turns: int = 2    # số turns tối thiểu sau truncate
 
     # Training — single schedule
-    batch_size: int = 8
+    batch_size: int = 16
     grad_accum_steps: int = 4  # effective batch = batch_size * grad_accum_steps
     use_grad_ckpt: bool = True
     weight_decay: float = 1e-2
