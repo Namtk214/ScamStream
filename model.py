@@ -134,6 +134,25 @@ def noisy_or_focal_loss(turn_probs: torch.Tensor, labels: torch.Tensor,
     return loss_main + weighted_lambda * loss_aux
 
 
+class ResidualMLPBlock(nn.Module):
+    """MLP block with residual connection: x + MLP(x)."""
+
+    def __init__(self, dim: int, expansion: int = 2, dropout: float = 0.2):
+        super().__init__()
+        hidden = dim * expansion
+        self.net = nn.Sequential(
+            nn.LayerNorm(dim),
+            nn.Linear(dim, hidden),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden, dim),
+            nn.Dropout(dropout),
+        )
+
+    def forward(self, x):
+        return x + self.net(x)
+
+
 class CrossTurnAttention(nn.Module):
     """Causal attention: turn_t attends to h_0..h_{t-1}."""
 
@@ -185,13 +204,8 @@ class M1Classifier(nn.Module):
         self.proj = nn.Linear(embed_dim, d)
         self.attn = CrossTurnAttention(d, cfg.attn_heads, cfg.dropout)
         self.head = nn.Sequential(
+            ResidualMLPBlock(d, expansion=2, dropout=cfg.dropout),
             nn.LayerNorm(d),
-            nn.Linear(d, d * 2),
-            nn.GELU(),
-            nn.Dropout(cfg.dropout),
-            nn.Linear(d * 2, d),
-            nn.GELU(),
-            nn.Dropout(cfg.dropout),
             nn.Linear(d, 1),   # sigmoid output: q_t evidence
         )
 
