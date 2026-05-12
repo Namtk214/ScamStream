@@ -185,10 +185,14 @@ class M1Classifier(nn.Module):
         self.proj = nn.Linear(embed_dim, d)
         self.attn = CrossTurnAttention(d, cfg.attn_heads, cfg.dropout)
         self.head = nn.Sequential(
-            nn.Linear(d, d // 2),
+            nn.LayerNorm(d),
+            nn.Linear(d, d * 2),
             nn.GELU(),
             nn.Dropout(cfg.dropout),
-            nn.Linear(d // 2, 1),   # sigmoid output: q_t evidence
+            nn.Linear(d * 2, d),
+            nn.GELU(),
+            nn.Dropout(cfg.dropout),
+            nn.Linear(d, 1),   # sigmoid output: q_t evidence
         )
 
     def unfreeze_encoder(self):
