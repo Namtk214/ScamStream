@@ -1,8 +1,8 @@
 """
-Training loop cho M1 (HaLong + CrossTurnAttention + Weighted CE).
+Training loop cho M1 (HaLong + CrossTurnAttention + Noisy-OR Focal Loss).
 
-- Val = test.json (dùng chung vì data hạn chế)
-- Wandb logging: train loss/lr per step, full val metrics per epoch
+- Binary classification: scam vs harmless
+- Single schedule + optional encoder unfreeze at unfreeze_epoch
 """
 
 import argparse
@@ -27,12 +27,6 @@ from config import M1Config
 from dataset import DialogueDataset, collate_fn, load_json, truncate_augment
 from model import M1Classifier
 from metrics import compute_streaming_metrics, print_streaming_report
-
-# WANDB_API_KEY = os.environ.get(
-#     "WANDB_API_KEY",
-#     "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",
-# )
-WANDB_API_KEY = None
 
 
 def set_seed(seed: int):
@@ -81,7 +75,7 @@ def evaluate(model, loader, device, threshold=0.5):
 
 # ── Training epoch ─────────────────────────────────────────────────
 
-def run_epoch(model, loader, optimizer, scheduler, device, cfg, global_step: int, wandb_run):
+def run_epoch(model, loader, optimizer, scheduler, device, cfg, global_step: int):
     model.train()
     total_loss, n_dlg = 0.0, 0
     optimizer.zero_grad()
@@ -103,15 +97,9 @@ def run_epoch(model, loader, optimizer, scheduler, device, cfg, global_step: int
         if (step + 1) % cfg.grad_accum_steps == 0 or (step + 1) == len(loader):
             torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip)
             optimizer.step()
-            scheduler.step()          # cosine+warmup: step per optimizer update
+            scheduler.step()
             optimizer.zero_grad()
             global_step += 1
-
-            # if wandb_run is not None:
-            #     wandb_run.log({
-            #         "train/loss": total_loss / max(n_dlg, 1),
-            #         "train/lr":   scheduler.get_last_lr()[0],
-            #     }, step=global_step)
 
         del output, loss
         if step % 20 == 0 and device.type == "cuda":
@@ -156,7 +144,6 @@ def _print_val_metrics(epoch, elapsed, tr_loss, m):
 
 
 def _dataset_overview(train_dlg, val_dlg):
-    """Print dataset overview before training."""
     print(f"\n{'='*60}")
     print(f"DATASET OVERVIEW")
     print(f"{'='*60}")
@@ -175,20 +162,17 @@ def _dataset_overview(train_dlg, val_dlg):
 
 @torch.no_grad()
 def _preview_stream(model, val_ds, val_dlg, device, cfg, max_samples=2):
-    """Streaming inference preview on random validation samples after each epoch."""
     model.eval()
     if len(val_dlg) == 0:
         return
 
-    # Try to pick 1 scam + 1 harmless
-    scam_indices    = [i for i, d in enumerate(val_dlg) if d["label"] == "scam"]
+    scam_indices     = [i for i, d in enumerate(val_dlg) if d["label"] == "scam"]
     harmless_indices = [i for i, d in enumerate(val_dlg) if d["label"] == "harmless"]
     selected = []
     if scam_indices:
         selected.append(random.choice(scam_indices))
     if harmless_indices:
         selected.append(random.choice(harmless_indices))
-    # Fill remaining slots
     while len(selected) < max_samples and len(val_dlg) > len(selected):
         idx = random.randint(0, len(val_dlg) - 1)
         if idx not in selected:
@@ -199,9 +183,8 @@ def _preview_stream(model, val_ds, val_dlg, device, cfg, max_samples=2):
         dlg   = val_dlg[idx]
         label = dlg["label"]
         turns = dlg["turns"]
-        n     = min(len(turns), cfg.max_turns)  # model truncates to max_turns
+        n     = min(len(turns), cfg.max_turns)
 
-        # Build full input for all turns at once
         item  = val_ds[idx]
         batch = {
             "input_ids":  item["input_ids"].unsqueeze(0).to(device),
@@ -209,9 +192,9 @@ def _preview_stream(model, val_ds, val_dlg, device, cfg, max_samples=2):
             "turn_mask":  item["turn_mask"].unsqueeze(0).to(device),
         }
         output = model(batch["input_ids"], batch["attn_masks"], batch["turn_mask"])
-        probs  = output["turn_probs"][0, :n].cpu().tolist()    # per-turn evidence q_t
-        p_agg_list = output["p_agg"][0, :n].cpu().tolist()      # Noisy-OR cumulative
-        d_prob = output["dialogue_probs"][0].item()             # = p_agg at last turn
+        probs  = output["turn_probs"][0, :n].cpu().tolist()
+        p_agg_list = output["p_agg"][0, :n].cpu().tolist()
+        d_prob = output["dialogue_probs"][0].item()
         pred   = "scam" if d_prob >= cfg.threshold else "harmless"
 
         status = "✓" if pred == label else "✗"
@@ -225,28 +208,31 @@ def _preview_stream(model, val_ds, val_dlg, device, cfg, max_samples=2):
         print()
 
 
-def _wandb_val_log(wandb_run, m, epoch, tr_loss):
-    pass
-    # if wandb_run is None:
-    #     return
-    # log = {
-    #     "epoch":                  epoch,
-    #     "train/loss_epoch":       tr_loss,
-    #     "val/loss":               m["loss"],
-    #     "val/f1":                 m["dialogue_f1"],
-    #     "val/accuracy":           m["dialogue_accuracy"],
-    #     "val/detection_rate":     m["detection_rate"],
-    #     "val/false_alarm_rate":   m["false_alarm_rate"],
-    # }
-    # if not np.isnan(m.get("auroc", float("nan"))):
-    #     log["val/auroc"] = m["auroc"]
-    # if not np.isnan(m["avg_detection_delay"]):
-    #     log["val/avg_turn"] = m["avg_detection_delay"]    # avg turn phát hiện scam
-    # if "alert_at_half" in m:
-    #     log["val/alert_at_half"] = m["alert_at_half"]
-    # if "median_lead_frac" in m:
-    #     log["val/median_lead_frac"] = m["median_lead_frac"]
-    # wandb_run.log(log)
+# ── Build optimizer ────────────────────────────────────────────────
+
+def _build_optimizer_and_scheduler(model, cfg, total_steps, with_encoder=False):
+    if with_encoder and cfg.unfreeze_layers > 0:
+        encoder_params = [p for n, p in model.named_parameters()
+                          if p.requires_grad and 'encoder' in n]
+        head_params    = [p for n, p in model.named_parameters()
+                          if p.requires_grad and 'encoder' not in n]
+        optimizer = AdamW([
+            {"params": head_params,    "lr": cfg.lr},
+            {"params": encoder_params, "lr": cfg.encoder_lr},
+        ], weight_decay=cfg.weight_decay)
+    else:
+        optimizer = AdamW(
+            filter(lambda p: p.requires_grad, model.parameters()),
+            lr=cfg.lr, weight_decay=cfg.weight_decay,
+        )
+
+    warmup_steps = max(1, int(total_steps * cfg.warmup_ratio))
+    scheduler = get_cosine_schedule_with_warmup(
+        optimizer,
+        num_warmup_steps=warmup_steps,
+        num_training_steps=total_steps,
+    )
+    return optimizer, scheduler
 
 
 # ── Dataset option mapping ─────────────────────────────────────────
@@ -275,14 +261,12 @@ def train(cfg: M1Config = None, dataset_option: str = None,
 
     # ── Load data ──
     if train_file and test_file:
-        # Direct file paths provided by user
         train_path = train_file
         val_path   = test_file
         print(f"\nUsing custom dataset paths:")
         print(f"  Train: {train_path}")
         print(f"  Test:  {val_path}")
     elif dataset_option and dataset_option in DATASET_OPTIONS:
-        # Use dataset/ directory with the selected option
         ds_files  = DATASET_OPTIONS[dataset_option]
         train_path = os.path.join(cfg.dataset_dir, ds_files["train"])
         val_path   = os.path.join(cfg.dataset_dir, ds_files["test"])
@@ -290,7 +274,6 @@ def train(cfg: M1Config = None, dataset_option: str = None,
         print(f"  Train: {ds_files['train']}")
         print(f"  Test:  {ds_files['test']}")
     else:
-        # Default: use data_dir/train.json + test.json (legacy behavior)
         train_path = os.path.join(cfg.data_dir, "train.json")
         val_path   = os.path.join(cfg.data_dir, "test.json")
         print(f"\nUsing default data from {cfg.data_dir}")
@@ -312,11 +295,8 @@ def train(cfg: M1Config = None, dataset_option: str = None,
         print(f"Truncate aug: {before} → {len(train_dlg)} (scam={scam_n}, harmless={harm_n})")
 
     print(f"Train: {len(train_dlg)} | Test: {len(val_dlg)}")
-
-    # ── Dataset overview ──
     _dataset_overview(train_dlg, val_dlg)
 
-    # ── Tokenizer ──
     print(f"\nLoading tokenizer: {cfg.model_name}")
     tokenizer = AutoTokenizer.from_pretrained(cfg.model_name)
 
@@ -328,132 +308,54 @@ def train(cfg: M1Config = None, dataset_option: str = None,
     val_loader   = DataLoader(val_ds, batch_size=cfg.batch_size, shuffle=False,
                               collate_fn=collate_fn, num_workers=2, pin_memory=True)
 
-    # ── Model ──
     print(f"\nLoading model: {cfg.model_name}")
     model = M1Classifier(cfg).to(device)
 
-    # Apply Phase 1 overrides to cfg (model reads cfg at forward time)
-    cfg.class_weight_harmless = cfg.phase1_harm_weight
-    cfg.weighted_lambda = cfg.phase1_lambda_aux
-    current_phase = 1
+    steps_per_epoch = max(1, len(train_loader) // cfg.grad_accum_steps)
+    total_steps = steps_per_epoch * cfg.num_epochs
 
     print(f"\n{'='*60}")
-    print(f"PHASE 1 (epoch 1-{cfg.phase2_epoch-1}): encoder frozen, pure Focal")
+    print(f"TRAINING CONFIG")
     print(f"{'='*60}")
-    print(f"  harm_weight = {cfg.class_weight_harmless}")
-    print(f"  lambda_aux  = {cfg.weighted_lambda}")
-    print(f"  lr          = {cfg.phase1_lr}")
+    print(f"  lr              = {cfg.lr}")
+    print(f"  harm_weight     = {cfg.class_weight_harmless}")
+    print(f"  lambda_aux      = {cfg.weighted_lambda}")
+    print(f"  unfreeze_epoch  = {cfg.unfreeze_epoch}")
+    print(f"  unfreeze_layers = {cfg.unfreeze_layers}")
+    print(f"  encoder_lr      = {cfg.encoder_lr}")
     print(f"  Trainable params: {model.count_trainable_params():,}")
 
-    optimizer = AdamW(
-        filter(lambda p: p.requires_grad, model.parameters()),
-        lr=cfg.phase1_lr, weight_decay=cfg.weight_decay,
-    )
+    optimizer, scheduler = _build_optimizer_and_scheduler(model, cfg, total_steps)
 
-    steps_per_epoch  = len(train_loader) // cfg.grad_accum_steps
-    phase1_total = steps_per_epoch * (cfg.phase2_epoch - 1)
-    warmup_steps = max(1, int(phase1_total * cfg.warmup_ratio))
-    scheduler = get_cosine_schedule_with_warmup(
-        optimizer,
-        num_warmup_steps=warmup_steps,
-        num_training_steps=phase1_total,
-    )
-
-    # ── Wandb ──
-    wandb_run = None
-
-    # ── Training loop ──
     os.makedirs(cfg.output_dir, exist_ok=True)
     best_val_acc  = 0.0
     best_epoch    = 0
     global_step   = 0
+    encoder_unfrozen = False
 
     for epoch in range(1, cfg.num_epochs + 1):
         t0 = time.time()
 
-        # ── Phase 2 transition ──
-        if epoch == cfg.phase2_epoch and current_phase < 2:
-            current_phase = 2
-            cfg.class_weight_harmless = cfg.phase2_harm_weight
-            cfg.weighted_lambda = cfg.phase2_lambda_aux
-
-            print(f"\n{'='*60}")
-            print(f"PHASE 2 (epoch {cfg.phase2_epoch}-{cfg.phase3_epoch-1}): frozen + auxiliary")
-            print(f"{'='*60}")
-            print(f"  harm_weight = {cfg.class_weight_harmless}")
-            print(f"  lambda_aux  = {cfg.weighted_lambda}")
-            print(f"  lr          = {cfg.phase2_lr}")
-
-            optimizer = AdamW(
-                filter(lambda p: p.requires_grad, model.parameters()),
-                lr=cfg.phase2_lr, weight_decay=cfg.weight_decay,
-            )
-            phase2_total = steps_per_epoch * (cfg.phase3_epoch - cfg.phase2_epoch)
-            warmup_steps = max(1, int(phase2_total * cfg.warmup_ratio))
-            scheduler = get_cosine_schedule_with_warmup(
-                optimizer,
-                num_warmup_steps=warmup_steps,
-                num_training_steps=phase2_total,
-            )
-
-        # ── Phase 3 transition ──
-        if epoch == cfg.phase3_epoch and current_phase < 3:
-            current_phase = 3
-            cfg.class_weight_harmless = cfg.phase3_harm_weight
-            cfg.weighted_lambda = cfg.phase3_lambda_aux
-
-            # Unfreeze last N layers (0 = keep frozen)
-            if cfg.phase3_unfreeze_layers > 0:
-                model.unfreeze_last_n_layers(cfg.phase3_unfreeze_layers)
-
-            print(f"\n{'='*60}")
-            if cfg.phase3_unfreeze_layers > 0:
-                print(f"PHASE 3 (epoch {cfg.phase3_epoch}+): unfreeze last {cfg.phase3_unfreeze_layers} layers")
-            else:
-                print(f"PHASE 3 (epoch {cfg.phase3_epoch}+): encoder frozen, loss schedule only")
-            print(f"{'='*60}")
-            print(f"  harm_weight  = {cfg.class_weight_harmless}")
-            print(f"  lambda_aux   = {cfg.weighted_lambda}")
-            print(f"  head_lr      = {cfg.phase3_head_lr}")
-            if cfg.phase3_unfreeze_layers > 0:
-                print(f"  encoder_lr   = {cfg.phase3_encoder_lr}")
+        # ── Unfreeze encoder ──
+        if (epoch == cfg.unfreeze_epoch and not encoder_unfrozen
+                and cfg.unfreeze_layers > 0):
+            encoder_unfrozen = True
+            model.unfreeze_last_n_layers(cfg.unfreeze_layers)
+            print(f"\n  *** Encoder unfrozen at epoch {epoch} ***")
             print(f"  Trainable params: {model.count_trainable_params():,}")
 
-            # Build optimizer
-            if cfg.phase3_unfreeze_layers > 0:
-                encoder_params = [p for n, p in model.named_parameters()
-                                  if p.requires_grad and 'encoder' in n]
-                head_params    = [p for n, p in model.named_parameters()
-                                  if p.requires_grad and 'encoder' not in n]
-                optimizer = AdamW([
-                    {"params": head_params,    "lr": cfg.phase3_head_lr},
-                    {"params": encoder_params, "lr": cfg.phase3_encoder_lr},
-                ], weight_decay=cfg.weight_decay)
-            else:
-                optimizer = AdamW(
-                    filter(lambda p: p.requires_grad, model.parameters()),
-                    lr=cfg.phase3_head_lr, weight_decay=cfg.weight_decay,
-                )
-
-            remaining = cfg.num_epochs - cfg.phase3_epoch + 1
-            phase3_total = steps_per_epoch * remaining
-            warmup_steps = max(1, int(phase3_total * cfg.warmup_ratio))
-            scheduler = get_cosine_schedule_with_warmup(
-                optimizer,
-                num_warmup_steps=warmup_steps,
-                num_training_steps=phase3_total,
+            remaining_steps = steps_per_epoch * (cfg.num_epochs - epoch + 1)
+            optimizer, scheduler = _build_optimizer_and_scheduler(
+                model, cfg, remaining_steps, with_encoder=True
             )
 
-        print(f"\nEpoch {epoch}/{cfg.num_epochs} [Phase {current_phase}]")
+        print(f"\nEpoch {epoch}/{cfg.num_epochs}")
         tr_loss, global_step = run_epoch(
-            model, train_loader, optimizer, scheduler, device, cfg, global_step, wandb_run
+            model, train_loader, optimizer, scheduler, device, cfg, global_step
         )
 
         val_metrics = evaluate(model, val_loader, device, cfg.threshold)
         _print_val_metrics(epoch, time.time() - t0, tr_loss, val_metrics)
-        _wandb_val_log(wandb_run, val_metrics, epoch, tr_loss)
-
-        # Streaming preview
         _preview_stream(model, val_ds, val_dlg, device, cfg)
 
         val_acc = val_metrics["dialogue_accuracy"]
@@ -468,25 +370,11 @@ def train(cfg: M1Config = None, dataset_option: str = None,
 
     print(f"\nBest epoch: {best_epoch} | val_acc={best_val_acc:.4f}")
 
-    # ── Final report trên val (test) set với best model ──
     best_pt = os.path.join(cfg.output_dir, "best_model", "model.pt")
     if os.path.exists(best_pt):
         model.load_state_dict(torch.load(best_pt, map_location=device, weights_only=True))
         final_metrics = evaluate(model, val_loader, device, cfg.threshold)
         print_streaming_report(final_metrics)
-        # if wandb_run is not None:
-        #     wandb_run.summary.update({
-        #         "final/loss":              final_metrics["loss"],
-        #         "final/f1":               final_metrics["dialogue_f1"],
-        #         "final/accuracy":         final_metrics["dialogue_accuracy"],
-        #         "final/avg_turn":         final_metrics.get("avg_detection_delay", float("nan")),
-        #         "final/auroc":            final_metrics.get("auroc", float("nan")),
-        #         "final/detection_rate":   final_metrics["detection_rate"],
-        #         "final/false_alarm_rate": final_metrics["false_alarm_rate"],
-        #     })
-
-    # if wandb_run is not None:
-    #     wandb_run.finish()
 
     return model
 
@@ -496,21 +384,12 @@ def train(cfg: M1Config = None, dataset_option: str = None,
 def parse_args():
     parser = argparse.ArgumentParser(description="Train M1: HaLong + CrossTurnAttention")
     parser.add_argument("--output-dir", default=None)
-    parser.add_argument("--run-name",   default=None, help="Wandb run name")
-    parser.add_argument("--train-file", default=None,
-                        help="Path to custom train JSON file")
-    parser.add_argument("--test-file",  default=None,
-                        help="Path to custom test JSON file")
+    parser.add_argument("--train-file", default=None)
+    parser.add_argument("--test-file",  default=None)
     parser.add_argument("--dataset",    default=None,
-                        choices=list(DATASET_OPTIONS.keys()),
-                        help="Dataset option: "
-                             "real (Real-1→Real-2), "
-                             "synthetic (Synthetic→Real-2), "
-                             "tele (Tele→Real-2), "
-                             "real_syn (Real-1+Synthetic→Real-2), "
-                             "real_tele (Real-1+Tele→Real-2)")
+                        choices=list(DATASET_OPTIONS.keys()))
     parser.add_argument("--debug",      action="store_true",
-                        help="2 epochs, batch_size=1, accum=4, no aug")
+                        help="2 epochs, batch_size=4, no aug")
     parser.add_argument("--small",      action="store_true",
                         help="5 epochs, batch_size=2")
     return parser.parse_args()
@@ -523,15 +402,15 @@ if __name__ == "__main__":
     if args.output_dir:
         cfg.output_dir = args.output_dir
     elif args.dataset:
-        # Auto-set output dir based on dataset option
         cfg.output_dir = os.path.join(_dir, "outputs", args.dataset)
 
     if args.debug:
         cfg.num_epochs       = 2
         cfg.batch_size       = 4
-        cfg.grad_accum_steps = 4    # effective batch = 16
-        cfg.warmup_ratio     = 0.03  # warmup ngắn hơn cho debug
+        cfg.grad_accum_steps = 4
+        cfg.warmup_ratio     = 0.03
         cfg.truncate_aug     = False
+        cfg.unfreeze_epoch   = 99  # never unfreeze in debug
         print("DEBUG MODE: 2 epochs, batch_size=4, no aug")
     if args.small:
         cfg.num_epochs = 5
