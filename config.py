@@ -26,7 +26,7 @@ class M1Config:
     weighted_lambda: float = 0.3      # auxiliary loss weight
 
     # Augmentation (Fix 02 from HSM-Net §03)
-    truncate_aug: bool = True
+    truncate_aug: bool = False
     aug_k: int = 2            # số bản truncate mỗi scam dialogue
     aug_min_turns: int = 2    # số turns tối thiểu sau truncate
 
